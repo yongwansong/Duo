@@ -1,0 +1,12 @@
+.section-store-message__inner{
+	background-color: var(--background-color);
+	color: var(--text-color);
+	padding: .6rem 0;
+	overflow: hidden;
+}
+.section-store-message__inner p{
+	margin-top: 0;
+}
+.section-store-message__inner p:last-child{
+	margin-bottom: 0;
+}

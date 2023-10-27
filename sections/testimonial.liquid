@@ -1,0 +1,464 @@
+<div class="content page-width">
+  <div class="left_content">
+    <h1 class="contnt">{{ section.settings.left_content }}</h1>
+  </div>
+  <ul class="page-width akash">
+    {% for block in section.blocks %}
+      <li class="list">
+        <!--
+          <div>
+             <h2 class="thetitle">{{block.settings.title}}</h2>
+          </div>
+        -->
+        <div class="thedescription">
+          <p>{{ block.settings.description }}</p>
+        </div>
+        <div class="theauthor">
+          <p>{{ block.settings.authorename }}</p>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+<script>
+  $('.akash').slick({
+    infinite: true,
+    autoplay: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+  });
+</script>
+<style>
+  button.slick-next.slick-arrow {
+    background-image: url('https://cdn.shopify.com/s/files/1/0553/3233/9879/files/Arrow_1.png?v=1640586246');
+    height: 50px;
+    width: 100px;
+    color: #fff;
+  }
+  button.slick-prev.slick-arrow {
+    background-image: url('https://cdn.shopify.com/s/files/1/0553/3233/9879/files/Arrow_2.png?v=1640586246');
+    height: 50px;
+    width: 100px;
+    color: #fff;
+  }
+  h2.thetitle {
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    text-align: center;
+    color: #000000;
+  }
+
+  .thedescription {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    color: #000000;
+    position: relative;
+    padding-top: 35px;
+  }
+
+  .thedescription:before {
+    content: '"';
+    font-size: 80px;
+    font-weight: 500;
+    font-style: normal;
+    position: absolute;
+    left: -2px;
+    top: -20px;
+  }
+
+  .theauthor {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    align-items: center;
+    color: #000000;
+  }
+
+  /* CSS Start   */
+
+  ul.page-width.akash.slick-initialized.slick-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 75%;
+    width: 100%;
+  }
+  div#shopify-section-template--15184443506855__16405835405ec1be77 {
+    padding: 22px 0px;
+  }
+
+  /*  slider Css Baseline  */
+  button.slick-prev.slick-arrow {
+    background-repeat: no-repeat;
+    background-size: 30px;
+    color: rgba(0, 0, 0, 0) !important;
+    background-position: center;
+    height: 38px !important;
+    width: 100px !important;
+    border: none;
+    display: none;
+    background-color: transparent;
+  }
+
+  button.slick-next.slick-arrow {
+    background-repeat: no-repeat;
+    background-size: 30px;
+    color: rgba(0, 0, 0, 0) !important;
+    background-position: center;
+    height: 38px !important;
+    width: 100px !important;
+    border: none;
+    background-color: transparent;
+    display: none;
+  }
+
+  .slick-slide li.list div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  body.gradient.rc_theme--dawn .slick-list.draggable {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1140px;
+  }
+
+  .thedescription p {
+    text-align: center;
+    padding: 0 20px;
+    line-height: 34px;
+    margin: 0px;
+  }
+
+  .left_content {
+    max-width: 25%;
+    width: 100%;
+  }
+
+  h1.contnt {
+    font-family: Lora;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.03em;
+    color: #000000;
+  }
+  .content.page-width {
+    display: flex;
+  }
+  ul.slick-dots {
+    display: flex;
+    bottom: 0px;
+    position: absolute;
+    left: 45%;
+    bottom: -7px;
+  }
+
+  ul.slick-dots button {
+    font-size: 0px;
+    color: #fff;
+    background: #000;
+    outline: none;
+    border: 1px solid #000;
+    /*   	width: 12px;
+  	height: 12px; */
+    margin-right: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 6px;
+  }
+
+  ul.slick-dots li {
+    list-style: none !important;
+  }
+
+  ul.slick-dots li.slick-active button {
+    background: #fff;
+  }
+  /* Ipad Media-Query */
+  @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+    /* Product Page   */
+
+    h2.thetitle {
+      font-size: 30px;
+    }
+
+    .thedescription {
+      font-size: 16px;
+    }
+
+    .theauthor {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 1500px) and (min-width: 1400px) {
+    h1.contnt {
+      font-size: 30px;
+      line-height: 42px;
+    }
+  }
+
+  @media (max-width: 1400px) and (min-width: 1300px) {
+    h1.contnt {
+      font-size: 30px;
+      line-height: 42px;
+    }
+  }
+
+  @media (max-width: 1300px) and (min-width: 1100px) {
+    h1.contnt {
+      font-size: 30px;
+      line-height: 42px;
+    }
+
+    .left_content {
+      max-width: 30%;
+    }
+
+    ul.page-width.akash.slick-initialized.slick-slider {
+      max-width: 70%;
+    }
+  }
+
+  @media (max-width: 1100px) and (min-width: 1000px) {
+    h1.contnt {
+      font-size: 28px;
+      line-height: 40px;
+    }
+
+    .left_content {
+      max-width: 30%;
+    }
+
+    ul.page-width.akash.slick-initialized.slick-slider {
+      max-width: 70%;
+    }
+
+    .thedescription p {
+      padding: 0 14px;
+      line-height: 30px;
+    }
+
+    .thedescription {
+      font-size: 20px;
+    }
+
+    .theauthor {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 1000px) and (min-width: 900px) {
+    h1.contnt {
+      font-size: 24px;
+      line-height: 38px;
+    }
+
+    .left_content {
+      max-width: 30%;
+    }
+
+    ul.page-width.akash.slick-initialized.slick-slider {
+      max-width: 70%;
+    }
+
+    .thedescription p {
+      padding: 0 12px;
+      line-height: 28px;
+    }
+
+    .thedescription {
+      font-size: 18px;
+    }
+
+    .theauthor {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 900px) and (min-width: 768px) {
+    h1.contnt {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    .left_content {
+      max-width: 30%;
+    }
+
+    ul.page-width.akash.slick-initialized.slick-slider {
+      max-width: 70%;
+    }
+
+    .thedescription p {
+      padding: 0 10px;
+      line-height: 25px;
+    }
+
+    .thedescription {
+      font-size: 15px;
+    }
+
+    .theauthor {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 767px) and (min-width: 550px) {
+    .content.page-width {
+      flex-direction: column;
+    }
+
+    div#shopify-section-template--15184443506855__16405835405ec1be77 {
+      padding: 0px;
+      margin-top: 0px;
+    }
+
+    .left_content {
+      max-width: 100%;
+    }
+
+    h1.contnt {
+      text-align: center;
+    }
+
+    ul.page-width.akash.slick-initialized.slick-slider {
+      max-width: 100%;
+    }
+
+    .theauthor p {
+      text-align: center;
+    }
+
+    ul.slick-dots {
+      left: 0;
+    }
+
+    ul.slick-dots {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      padding: 0px;
+      margin-left: 10px;
+    }
+
+    h1.contnt {
+      font-size: 35px;
+      line-height: 52px;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .content.page-width {
+      flex-direction: column;
+    }
+
+    div#shopify-section-template--15184443506855__16405835405ec1be77 {
+      padding: 0px;
+      margin-top: 0px;
+    }
+
+    .left_content {
+      max-width: 100%;
+    }
+
+    h1.contnt {
+      text-align: center;
+    }
+
+    ul.page-width.akash.slick-initialized.slick-slider {
+      max-width: 100%;
+    }
+
+    .theauthor p {
+      text-align: center;
+    }
+
+    ul.slick-dots {
+      left: 0;
+    }
+
+    ul.slick-dots {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      padding: 0px;
+    }
+
+    .thedescription p {
+      font-size: 20px;
+    }
+
+    .theauthor p {
+      font-size: 15px;
+    }
+
+    h1.contnt {
+      font-size: 25px;
+      line-height: 35px;
+    }
+
+    .slick-slide li.list div {
+      margin: 16px 0px;
+    }
+  }
+
+  /* CSS END   */
+</style>
+{% schema %}
+{
+  "name": "Testimonial",
+  "settings": [
+    {
+      "type": "text",
+      "id": "left_content",
+      "label": "Content"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Testimonial",
+      "name": "Testimonial ",
+      "settings": [
+        {
+          "type": "text",
+          "id": "left_content",
+          "label": "title"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "authorename",
+          "label": "Author"
+        }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Testimonial" }]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

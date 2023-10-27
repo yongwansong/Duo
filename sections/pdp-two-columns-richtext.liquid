@@ -1,0 +1,112 @@
+{{ 'section-pdp-two-columns-rich-text.css' | asset_url | stylesheet_tag }}
+{%- if section.settings.product_color != blank or section.settings.secondary_color != blank -%}
+  {%- style -%}
+    	.section-pdp-two-columns-rich-text{
+    	{% if section.settings.product_color != blank %}
+    		{%- assign product_color = section.settings.product_color  | color_modify: 'lightness', 90.4  -%}
+    		--product-color: {{ section.settings.product_color.red }}, {{ section.settings.product_color.green }}, {{ section.settings.product_color.blue }};
+    		--product-color-lighter: {{ product_color.red }}, {{ product_color.green }}, {{ product_color.blue }};
+    		{% endif %}
+    		{% if section.settings.secondary_color != blank %}
+    			--secondary-color: {{ section.settings.secondary_color.red }}, {{ section.settings.secondary_color.green }}, {{ section.settings.secondary_color.blue }};
+    	{% endif %}
+    }
+  {%- endstyle -%}
+{%- endif -%}
+<div class="pdp-two-columns-rich-text__wrapper">
+  <div class="grid grid--gapless grid--1-col grid--2-col-tablet">
+    {%- for block in section.blocks -%}
+      <div class="grid__item pdp-two-columns-rich-text__column{% if block.type == 'left_column' %} pdp-two-columns-rich-text__column--left{% else %} pdp-two-columns-rich-text__column--right{% endif %}">
+        <div class="pdp-two-columns-rich-text__column-inner">
+          {%- if block.settings.icon != blank -%}
+            <div class="pdp-two-columns-rich-text__icon">
+              {{
+                block.settings.icon
+                | image_url: width: 310
+                | image_tag:
+                  width: 155,
+                  widths: '115, 155, 230, 310, 345, 465',
+                  sizes: '(min-width: 750px) 155px, 115px',
+                  loading: 'lazy'
+              }}
+            </div>
+          {%- endif -%}
+          {%- if block.settings.heading != blank -%}
+            <h3 class="pdp-two-columns-rich-text__heading">
+              {{ block.settings.heading }}
+            </h3>
+          {%- endif -%}
+          {%- if block.settings.content != blank -%}
+            <div class="pdp-two-columns-rich-text__content rte">
+              {{ block.settings.content }}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "PDP - 2 Columns richtext",
+  "class": "section-pdp-two-columns-rich-text",
+  "tag": "section",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+      "type": "color",
+      "id": "product_color",
+      "label": "Product color"
+    },
+    {
+      "type": "color",
+      "id": "secondary_color",
+      "label": "Secondary color"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Left Column",
+      "type": "left_column",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    },
+    {
+      "name": "Right Column",
+      "type": "right_column",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Standard toothpaste"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "PDP - 2 Columns richtext"
+    }
+  ]
+}
+{% endschema %}

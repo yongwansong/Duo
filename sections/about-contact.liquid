@@ -1,0 +1,135 @@
+
+
+<section id="section3" class="formulated-contact">
+
+    <div class="cntact__us">
+    <div class="Contact-richtext">
+      {%if section.settings.contact_title!=blank%}
+      <h1 class="contact_heading">{{ section.settings.contact_title }}</h1>
+      {%endif%} 
+    </div>
+      
+      
+    <div class="desp-width-link">  
+    <div class="contact__desp">  
+     {%if section.settings.contact_text!=blank%}
+      <p class="contact_text">{{ section.settings.contact_text }}</p>
+     {%endif%}
+      </div>  
+
+    <div class="contact-link">
+      <div class="email-link">
+        {%if section.settings.contact_link_Name!=blank%}
+        <span class="email_link_name">
+         {{section.settings.contact_link_Name}}
+        </span>
+        {%endif%}
+        {%if section.settings.contact_Link!=blank%}
+        <span class="email_url"
+          ><a href="mailto:{{ section.settings.contact_Link }}">
+          {{section.settings.email_name}}</a>
+        </span
+        >
+        {%endif%}
+      </div>
+
+      <div class="social-link">
+        {%if section.settings.social_link_Name!=blank%}
+        <span class="social_link_name">
+          {{section.settings.social_link_Name}}
+        </span>
+        {%endif%}
+        {%if section.settings.social_Link!=blank%}
+        <span class="social_url">
+          {{section.settings.social_Link}}
+        </span>
+        {%endif%}
+      </div>
+
+      <div class="email-link">
+        {%if section.settings.contact_link_Name2%}
+        <span class="email_link_name">
+          {{section.settings.contact_link_Name2}}
+        </span>
+        {%endif%}
+        {%if section.settings.contact_Link2!=blank%}
+        <span class="email_url12"
+          ><a href="mailto:{{ section.settings.contact_Link2 }}">
+          {{section.settings.contact_Link2_name}}</a>
+        </span>
+        {%endif%}
+      </div>
+    </div>
+      </div>  
+    </div>  
+  </section>
+
+
+
+{% schema %}
+{
+  "name": "About contact",
+  "settings": [
+    
+    {
+      "type": "text",
+      "id": "contact_title",
+      "label": "Contact Title",
+      "default": "Talk about your brand"
+    },
+    {
+      "type": "richtext",
+      "id": "contact_text",
+      "label": "Contact Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+    {
+       "type": "richtext",
+        "id": "contact_link_Name",
+        "label": "Email Label"
+    },
+    {
+      "type": "text",
+      "id": "email_name",
+      "label": "Email Name"
+    },
+    {
+      "type": "url",
+      "id": "contact_Link",
+      "label": "Email Link"
+    },
+   {
+       "type": "richtext",
+        "id": "social_link_Name",
+        "label": "Social Link Name"
+    },
+    {
+      "type": "richtext",
+      "id": "social_Link",
+      "label": "social Link"
+    },
+    {
+       "type": "richtext",
+        "id": "contact_link_Name2",
+        "label": "Email Label"
+    },
+     {
+      "type": "text",
+      "id": "contact_Link2_name",
+      "label": "Email Name"
+    },
+    {
+      "type": "url",
+      "id": "contact_Link2",
+      "label": "Email Link"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "About contact",
+      "category": "text"
+    }
+  ]
+}
+{% endschema %}

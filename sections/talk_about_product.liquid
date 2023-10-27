@@ -1,0 +1,157 @@
+<style>
+      .bgclr_immunity{
+      background: #47eaba;
+
+      }
+      .bgclr_baseline{
+      background: #53bafb;
+
+      }
+
+      .bgclr_sleep{
+
+      background: #c964cf;
+      }
+
+      .bgclr_energy{
+      background: #feb12e;
+      }
+      .bg-color{
+        background: {{section.settings.txt}};
+      }
+      #about-product--{{ section.id }} .prod-about-main .text_about-prod p {
+    	width: auto !important;
+    	max-width: 53rem;
+      }
+      #about-product--{{ section.id }} .prod-about-main{
+    	padding-bottom: 3rem;
+     }
+     #about-product--{{ section.id }} .image_about-prod img {
+    	margin-bottom: -3rem;
+    }
+    @media (max-width: 767px){
+  #about-product--{{ section.id }} .prod-about-main{
+          padding-bottom: 0
+      }
+      #about-product--{{ section.id }} .image_about-prod{
+          margin-top: 5rem!important;
+          width: 100%!important;
+          min-height: initial!important;
+          max-width: 300px;
+          overflow: hidden;
+      }
+  	#about-product--{{ section.id }} .image_about-prod img{
+          margin-bottom: -6rem;
+      }
+  }
+</style>
+
+<div id="about-product--{{ section.id }}" class="about-product bg-color " id="productcolor">
+  <div class="page-width">
+    <div class="prod-about-main">
+      <div class="text_about-prod">
+        <!-- <img src="{{section.settings.imgs|img_url:'master'}}" class="text-about-img"> -->
+        <img
+          class="text-about-img"
+          srcset="
+            {%- if section.settings.imgs.width >= 375 -%}{{ section.settings.imgs | img_url: '375x' }} 375w,{%- endif -%}
+            {%- if section.settings.imgs.width >= 750 -%}{{ section.settings.imgs | img_url: '750x' }} 750w,{%- endif -%}
+            {%- if section.settings.imgs.width >= 1100 -%}{{ section.settings.imgs | img_url: '1100x' }} 1100w,{%- endif -%}
+            {%- if section.settings.imgs.width >= 1500 -%}{{ section.settings.imgs | img_url: '1500x' }} 1500w,{%- endif -%}
+            {%- if section.settings.imgs.width >= 1780 -%}{{ section.settings.imgs | img_url: '1780x' }} 1780w,{%- endif -%}
+            {%- if section.settings.imgs.width >= 2000 -%}{{ section.settings.imgs | img_url: '2000x' }} 2000w,{%- endif -%}
+            {%- if section.settings.imgs.width >= 3000 -%}{{ section.settings.imgs | img_url: '3000x' }} 3000w,{%- endif -%}
+            {%- if section.settings.imgs.width >= 3840 -%}{{ section.settings.imgs | img_url: '3840x' }} 3840w,{%- endif -%}
+            {{ section.settings.imgs | img_url: 'master' }} {{ section.settings.imgs.width }}w
+          "
+          sizes="auto"
+          src="{{ section.settings.imgs | img_url: '200x' }}"
+          loading="lazy"
+          alt="{{ section.settings.imgs.alt | escape }}"
+          width="auto"
+          height="auto"
+        >
+        <h2 class="title">{{ section.settings.title1 }}</h2>
+        <p class="nano-discription">{{ section.settings.txt1 }}</p>
+        <a href="{{section.settings.learnmore}}" class="learnmore_about">Learn more </a>
+      </div>
+
+      <div class="image_about-prod">
+        <!-- <img src="{{section.settings.about_image|img_url:'master'}}" class="about-img"> -->
+        <img
+          class="about-img"
+          srcset="
+            {%- if section.settings.about_image.width >= 375 -%}{{ section.settings.about_image | img_url: '375x' }} 375w,{%- endif -%}
+            {%- if section.settings.about_image.width >= 750 -%}{{ section.settings.about_image | img_url: '750x' }} 750w,{%- endif -%}
+            {%- if section.settings.about_image.width >= 1100 -%}{{ section.settings.about_image | img_url: '1100x' }} 1100w,{%- endif -%}
+            {%- if section.settings.about_image.width >= 1500 -%}{{ section.settings.about_image | img_url: '1500x' }} 1500w,{%- endif -%}
+            {%- if section.settings.about_image.width >= 1780 -%}{{ section.settings.about_image | img_url: '1780x' }} 1780w,{%- endif -%}
+            {%- if section.settings.about_image.width >= 2000 -%}{{ section.settings.about_image | img_url: '2000x' }} 2000w,{%- endif -%}
+            {%- if section.settings.about_image.width >= 3000 -%}{{ section.settings.about_image | img_url: '3000x' }} 3000w,{%- endif -%}
+            {%- if section.settings.about_image.width >= 3840 -%}{{ section.settings.about_image | img_url: '3840x' }} 3840w,{%- endif -%}
+            {{ section.settings.about_image | img_url: 'master' }} {{ section.settings.about_image.width }}w
+          "
+          sizes="auto"
+          src="{{ section.settings.about_image | img_url: '200x' }}"
+          loading="lazy"
+          alt="{{ section.settings.about_image.alt | escape }}"
+          width="auto"
+          height="auto"
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "talk about product",
+  "settings": [
+    {
+      "type": "color",
+      "id": "txt",
+      "label": "Background Color"
+    },
+    {
+      "type": "image_picker",
+      "id": "imgs",
+      "label": "About Image"
+    },
+    {
+      "type": "text",
+      "id": "title1",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "txt1",
+      "label": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "about_image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "learnmore",
+      "label": "Learn More Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "talk about product",
+      "category": "title"
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  $(document).ready(function () {
+    var loc = window.location.href;
+    loc = loc.lastIndexOf('/') == loc.length - 1 ? loc.substr(0, loc.length - 1) : loc.substr(1, loc.length - 1);
+    var targetValue = loc.substr(loc.lastIndexOf('/') + 1);
+    $('#productcolor').addClass('bgclr_' + targetValue);
+  });
+</script>

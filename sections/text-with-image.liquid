@@ -1,0 +1,181 @@
+{{ 'text-with-image.css' | asset_url | stylesheet_tag }}
+
+<div class="text-with-image-custom_wrapper">
+	<div class="text-with-image__image_col {{section.settings.image_position_desktop}} {{section.settings.image_position_mobile}}">
+		 <div class="text-with-image__image_asbg" style=" background-image: url('{{ section.settings.image | img_url: 'master'}}');"></div> 
+	</div>
+	<div class="text-with-image__card-information_col vertical_allign_{{ section.settings.text_box_position_vertical }}">
+		<div class="card-information_wrapper text__{{ section.settings.text_allignment }} mobile_text__{{ section.settings.mobile_text_allignment }}">
+			{% if section.settings.icon != blank %}
+			<div class="text__icon">
+				 <img src="{{ section.settings.icon | img_url: 'master'}}"> 
+			</div>
+			{% endif %}
+			{%- if section.settings.title !=  blank -%}
+		        <h3 class="text-with-image__title">
+		          {{ section.settings.title }}
+		        </h3>
+	        {% endif %}
+	        {% if section.settings.text != blank %}
+		        <div class="text-with-image__text">
+		          {{ section.settings.text }}
+		        </div>
+	        {% endif %}
+		</div>
+	</div>
+</div>
+
+<style>
+    #shopify-section-{{ section.id }}.text-with-image {
+        background-color: {{ section.settings.section_background_color }};
+        padding-top: 8rem;
+    }
+
+ 	@media screen and (max-width: 767px) {
+        #shopify-section-{{ section.id }}.text-with-image {
+            background-color: {{ section.settings.section_background_color }};
+            padding-top: 4rem;
+        }
+ 	}
+</style>
+
+{% schema %}
+	{
+	  "name": "Text with image",
+	  "tag": "section",
+	  "class": "text-with-image",
+	  "settings": [
+        {
+            "type": "color",
+            "id": "section_background_color",
+            "label": "Section background color",
+            "default": "#d9f3fe"
+        },
+	    {
+		      "type": "image_picker",
+		      "id": "image",
+		      "label": "Image"
+	    },
+	    {
+		    "type": "select",
+		    "id": "image_position_desktop",
+		    "label": "Image position",
+		    "default": "order__2",
+		    "options": [
+		      {
+		        "value": "order__1",
+		        "label": "Image on left"
+		      },
+		      {
+		        "value": "order__2",
+		        "label": "Image on right"
+		      }
+		    ]
+	  	},
+	  	{
+	        "type": "header",
+	        "content": "Content information"
+	  	},
+	  	{
+		      "type": "image_picker",
+		      "id": "icon",
+		      "label": "Icon"
+	    },
+	    {
+		  "type": "text",
+		  "id": "title",
+		  "label": "Title"
+	    },
+	    {
+	      "type": "richtext",
+	      "id": "text",
+	      "label": "Text"
+	    },
+		{
+	        "type": "select",
+	        "id": "text_box_position_vertical",
+	        "label": "Box position vertical",
+	        "default": "middle",
+	        "options": [
+	          {
+	            "value": "top",
+	            "label": "Top"
+	          },
+	          {
+	            "value": "middle",
+	            "label": "Middle"
+	          },
+	          {
+	            "value": "bottom",
+	            "label": "Bottom"
+	          }
+	        ]
+		},
+		{
+	        "type": "select",
+	        "id": "text_allignment",
+	        "label": "Text allignment",
+	        "default": "left",
+	        "options": [
+	          {
+	            "value": "left",
+	            "label": "Left"
+	          },
+	          {
+	            "value": "center",
+	            "label": "Center"
+	          },
+	          {
+	            "value": "right",
+	            "label": "Right"
+	          }
+	        ]
+		},
+		{
+	        "type": "header",
+	        "content": "Mobile settings"
+	  	},
+	  	{
+		    "type": "select",
+		    "id": "image_position_mobile",
+		    "label": "Mobile image position",
+		    "default": "mobile_order__2",
+		    "options": [
+		      {
+		        "value": "mobile_order__1",
+		        "label": "Image on top"
+		      },
+		      {
+		        "value": "mobile_order__2",
+		        "label": "Image on bottom"
+		      }
+		    ]
+	  	},
+	  	{
+	        "type": "select",
+	        "id": "mobile_text_allignment",
+	        "label": "Text allignment",
+	        "default": "left",
+	        "options": [
+	          {
+	            "value": "left",
+	            "label": "Left"
+	          },
+	          {
+	            "value": "center",
+	            "label": "Center"
+	          },
+	          {
+	            "value": "right",
+	            "label": "Right"
+	          }
+	        ]
+		}
+	  ],
+	  "presets": [
+	    {
+		  "name": "Text with image"
+	    }
+	  ]
+	}
+{% endschema %}

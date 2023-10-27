@@ -1,0 +1,60 @@
+{{ 'section-store-message.css' | asset_url | stylesheet_tag }}
+<div id="section-id-{{ section.id }}" class="section-store-message__inner">
+  {% style %}
+    #section-id-{{ section.id }} {
+    	--background-color: {{ section.settings.background_color | default: '#00126B' }};
+    	--text-color: {{ section.settings.text_color | default: '#FFFFFF' }};
+    }
+  {% endstyle %}
+  <div class="page-width center">
+    {{ section.settings.text }}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Store message",
+  "class": "section-store-message spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Store message"
+    },
+    {
+      "type": "paragraph",
+      "content": "This section is displayed under the header - great for promotions and notices."
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Content",
+      "default": "<p>Free shipping for all subscriptions.<\/p>"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#00126B"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#FFFFFF"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Store message"
+    }
+  ]
+}
+{% endschema %}

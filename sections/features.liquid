@@ -1,0 +1,92 @@
+{{ 'section-features.css' | asset_url | stylesheet_tag }}
+{%- if section.settings.background_color != blank or section.settings.text_color != blank -%}
+  {%- style -%}
+       #section-features-{{ section.id }}{
+       	{% if section.settings.text_color != blank %}
+       	background-color: {{ section.settings.background_color }};
+       	{% endif %}
+       	{% if section.settings.text_color != blank %}
+       		color: {{ section.settings.text_color }};
+       	{% endif %}
+       }
+    {% if section.settings.background_color != blank and section.settings.text_color != blank %}
+    	#section-features-{{ section.id }} .features-items li .icon{
+    		background-color: {{ section.settings.text_color }};
+    		color: {{ section.settings.background_color }};
+    	}
+    {% endif %}
+  {%- endstyle -%}
+{%- endif -%}
+<div id="section-features-{{ section.id }}" class="features-wrapper">
+  <div class="page-width">
+    <ul class="features-items">
+      {%- for block in section.blocks -%}
+        <li {{ block.shopify_attributes }}>
+          <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" fill="none">
+              <use xlink:href="#icon-check-{{ section.id }}">
+            </svg>
+          </span>
+          {{ block.settings.text }}
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+       <symbol id="icon-check-{{ section.id }}" viewBox="0 0 16 15">
+    	<path fill-rule="evenodd" clip-rule="evenodd" d="M15.192 0.744234C15.9961 1.34733 16.1591 2.48811 15.556 3.29223L7.75602 13.6922C7.43946 14.1143 6.95531 14.3783 6.42904 14.4157C5.90276 14.4531 5.38615 14.2602 5.01308 13.8872L1.11308 9.98717C0.402329 9.27641 0.402329 8.12405 1.11308 7.4133C1.82384 6.70255 2.9762 6.70255 3.68695 7.4133L6.1031 9.82945L12.644 1.10823C13.2471 0.304107 14.3879 0.141139 15.192 0.744234Z" fill="currentColor"/>
+    </symbol>
+  </svg>
+</div>
+
+{% schema %}
+{
+  "name": "Features",
+  "tag": "section",
+  "class": "section-features",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section Background Color",
+      "default": "#00126B"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Section Text Color",
+      "default": "#FFFFFF"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Feature",
+      "type": "feature",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Type your text here"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Features",
+      "blocks": [
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

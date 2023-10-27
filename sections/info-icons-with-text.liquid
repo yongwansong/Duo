@@ -1,0 +1,146 @@
+{{ 'info-icons-with-text.css' | asset_url | stylesheet_tag }}
+{%- if section.settings.section_bg_color != blank -%}
+  {% style %}
+    #shopify-section-{{ section.id }}{
+     background-color: {{ section.settings.section_bg_color }};
+    }
+  {% endstyle %}
+{%- endif -%}
+<div class="info-icons-with-text-section_wrapper">
+  <div class="info-icons-with-text_content">
+    {% if section.settings.title != blank %}
+      <div class="info-icons-with-text_content__title">
+        {{ section.settings.title }}
+      </div>
+    {% endif %}
+    {% if section.settings.sub_title != blank %}
+      <div class="info-icons-with-text_content__sub_title">
+        {{ section.settings.sub_title }}
+      </div>
+    {% endif %}
+    {% if section.settings.text != blank %}
+      <div class="info-icons-with-text_content__text">
+        {{ section.settings.text }}
+      </div>
+    {% endif %}
+  </div>
+  <div class="info-icons-with-text_products slider-info-icons">
+    {%- for block in section.blocks -%}
+      <div class="info-icons-with-text__products">
+        <div class="icon_title_text">
+          {% if block.settings.icon != blank %}
+            <span class="info-icons-with-text__icons">
+              <img
+                src="{{ block.settings.icon | img_url: '500x' }}"
+                alt="{{ block.settings.icon.alt }}"
+                width="500"
+                height="{{ 500 | divided_by: block.settings.icon.aspect_ratio | ceil }}"
+                loading="lazy"
+              >
+            </span>
+          {% endif %}
+          {% if block.settings.title != blank %}
+            <h3 class="info-icons-with-text_content__block_title">
+              {{ block.settings.title | newline_to_br }}
+            </h3>
+          {% endif %}
+          {% if block.settings.text != blank %}
+            <div class="info-icons-with-text_content__block_text">
+              {{ block.settings.text }}
+            </div>
+          {% endif %}
+        </div>
+        {% if block.settings.name != blank %}
+          <div class="info-icons-with-text_content__block_name">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/tick_mark.svg?v=1683045540"
+              width="32"
+              height="32"
+              loading="lazy"
+            >
+            {{ block.settings.name }}
+          </div>
+        {% endif %}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+<script>
+  mobileOnlySlider('.slider-info-icons', true, true, 767);
+  function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
+    var slider = $($slidername);
+    var settings = {
+      mobileFirst: true,
+      dots: $dots,
+      arrows: $arrows,
+      responsive: [
+        {
+          breakpoint: $breakpoint,
+          settings: 'unslick',
+        },
+      ],
+    };
+    slider.slick(settings);
+    $(window).on('resize', function () {
+      if ($(window).width() > $breakpoint) {
+        return;
+      }
+      if (!slider.hasClass('slick-initialized')) {
+        return slider.slick(settings);
+      }
+    });
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Info icons with text",
+  "class": "info-icons-with-text-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Services",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "icon"
+        },
+        {
+          "type": "textarea",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Info icons with text"
+    }
+  ]
+}
+{% endschema %}

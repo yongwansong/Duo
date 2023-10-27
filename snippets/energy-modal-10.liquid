@@ -1,0 +1,50 @@
+    <div class="modal modal_multi energy_content modal-68">
+
+           {%render 'energy_test'%}
+</div>
+
+
+<script>
+    var energy_slideIndex_10 = 1;
+    energy_showSlide_10(energy_slideIndex_10);
+
+    function energy_plusSlide_10(n) {
+        
+  
+
+      
+            energy_showSlide_10(energy_slideIndex_10 -= n);
+   
+
+
+    
+    }
+
+    function energy_currentSlide_10(n) {
+        energy_showSlide_10(energy_slideIndex_10 = n);
+    }
+
+    function energy_showSlide_10(n) {
+        var i;
+        var energy_slides_10 = document.getElementsByClassName("energy_Slider_10");
+        var energy_dots_10 = document.getElementsByClassName("energy_link10");
+
+        if (n > energy_slides_10.length) {
+            energy_slideIndex_10 = 1
+        }
+        if (n < 1) {
+            energy_slideIndex_10 = energy_slides_10.length
+        }
+      
+        for (i = 0; i < energy_slides_10.length; i++) {
+            energy_slides_10[i].style.display = "none";
+        }
+        for (i = 0; i < energy_dots_10.length; i++) {
+            energy_dots_10[i].className = energy_dots_10[i].className.replace(" active", "");
+        }
+        energy_slides_10[energy_slideIndex_10 - 1].style.display = "block";
+        energy_dots_10[energy_slideIndex_10 - 1].className += " active";
+
+    }
+</script>
+

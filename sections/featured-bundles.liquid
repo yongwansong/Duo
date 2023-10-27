@@ -1,0 +1,159 @@
+{% comment %} {{ 'featured-collection.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{{ 'featured-bundles.css' | asset_url | stylesheet_tag }}
+{%- assign products_to_display = section.blocks.size -%}
+<div class="page-width">
+  {%- unless section.settings.title == blank and section.settings.description == blank -%}
+    <div class="title-wrapper center">
+      {%- if section.settings.title != blank -%}
+        <h2 class="title">
+          {{ section.settings.title | escape }}
+        </h2>
+      {%- endif -%}
+      {%- if section.settings.description != blank -%}
+        <div class="section-description rte">
+          {{ section.settings.description }}
+        </div>
+      {%- endif -%}
+    </div>
+  {%- endunless -%}
+  <ul
+    class="grid grid--2-col product-grid{% if products_to_display == 4 %} grid--2-col-tablet grid--4-col-desktop{% else %} grid--3-col-tablet{% endif %}{% if products_to_display > 5 %} grid--one-third-max grid--4-col-desktop grid--quarter-max{% endif %}"
+    role="list"
+  >
+    {%- for block in section.blocks -%}
+      <li class="grid__item">
+        <div class="card-wrapper">
+          <div
+            class="media media--transparent media--adapt media--hover-effect"
+            style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;"
+          >
+            <img
+              srcset="
+                {%- if block.settings.image.width >= 165 -%}{{ block.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+                {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+                {%- if block.settings.image.width >= 533 -%}{{ block.settings.image | img_url: '533x' }} 533w,{%- endif -%}
+                {%- if block.settings.image.width >= 720 -%}{{ block.settings.image | img_url: '720x' }} 720w,{%- endif -%}
+                {%- if block.settings.image.width >= 940 -%}{{ block.settings.image | img_url: '940x' }} 940w,{%- endif -%}
+                {%- if block.settings.image.width >= 1066 -%}{{ block.settings.image | img_url: '1066x' }} 1066w,{%- endif -%}
+                {{ block.settings.image | img_url: 'master' }} {{ block.settings.image.width }}w
+              "
+              src="{{ block.settings.image | img_url: '533x' }}"
+              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+              alt="{{ block.settings.image.alt | escape }}"
+              loading="lazy"
+              width="{{ block.settings.image.width }}"
+              height="{{ block.settings.image.height }}"
+            >
+          </div>
+          <div class="card-information__wrapper center">
+            {%- if block.settings.title != blank -%}
+              <h3 class="card-information__text">
+                <a href="{{ block.settings.url | default: '#' }}" class="full-unstyled-link">
+                  {{ block.settings.title | escape }}
+                </a>
+              </h3>
+            {%- endif -%}
+            {%- if block.settings.description != blank -%}
+              <div class="card-information__description">
+                {{ block.settings.description }}
+              </div>
+            {%- endif -%}
+            {%- if block.settings.price_before_discount != blank or block.settings.price_after_discount != blank %}
+              <div class="card-information__price">
+                {%- if block.settings.price_before_discount != blank -%}
+                  <span class="sale_price">{{ block.settings.price_before_discount | escape }}</span>
+                {%- endif -%}
+                {%- if block.settings.price_after_discount != blank -%}
+                  <span>{{ block.settings.price_after_discount | escape }}</span>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+            {%- if block.settings.button_text != blank -%}
+              <div class="card__button-wrapper">
+                <a href="{{ block.settings.url }}" class="button button--secondary button--full-width">
+                  {{ block.settings.button_text }}
+                </a>
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      </li>
+    {%- else -%}
+      {%- for i in (1..3) -%}
+        <li class="grid__item">
+          {% render 'product-card-placeholder' %}
+        </li>
+      {%- endfor -%}
+    {%- endfor -%}
+  </ul>
+</div>
+{% schema %}
+{
+  "name": "Featured bundles",
+  "tag": "section",
+  "class": "featured-bundles spaced-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section heading",
+      "default": "Popular subscription picks"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "<p>Shop our most popular bundles.<\/p>"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Bundle",
+      "type": "bundle",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Original + Immunity Duo"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "price_before_discount",
+          "label": "Price before discount"
+        },
+        {
+          "type": "text",
+          "id": "price_after_discount",
+          "label": "Price after discount"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "Shop now"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Bundle URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured bundles"
+    }
+  ]
+}
+{% endschema %}

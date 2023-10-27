@@ -1,0 +1,91 @@
+{{ 'guaranteed-section.css' | asset_url | stylesheet_tag }}
+{%- if section.settings.section_bg_color != blank -%}
+  {% style %}
+    #shopify-section-{{ section.id }}{
+          background-color: {{ section.settings.section_bg_color }};
+         }
+  {% endstyle %}
+{%- endif -%}
+<div class="guaranteed-section_wrapper">
+  <div class="guaranteed-section_content">
+    <div class="guaranteed-section_content__button">
+      <a href="{{ section.settings.button_url }}">{{ section.settings.button_text }}</a>
+    </div>
+    <div class="guaranteed-section_content__wrapper">
+      {% if section.settings.icon != blank %}
+        <span class="guaranteed-section_content__icon">
+          <img
+            src="{{ section.settings.icon | image_url: width: 33 }}"
+            alt="{{ section.settings.icon.alt }}"
+            width="33"
+            height="{{ 33 | divided_by: section.settings.icon.aspect_ratio | ceil }}"
+            loading="lazy"
+          >
+        </span>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <span class="guaranteed-section_content__text">
+          {{ section.settings.text }}
+        </span>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const guaranteedSection = document.getElementById('shopify-section-{{ section.id }}');
+    const observer = new IntersectionObserver(
+      ([e]) => e.target.classList.toggle('guaranteed-section--is-pinned', !(e.intersectionRatio < 1)),
+      { rootMargin: '-1px 0px 0px 0px', threshold: [1] }
+    );
+    observer.observe(guaranteedSection);
+
+    const main = document.getElementById('MainContent');
+    const guaranteedSectionHeight = guaranteedSection.offsetHeight;
+    main.style.setProperty('--guaranteed-section-height', `${guaranteedSectionHeight}px`);
+    window.addEventListener('resize', function () {
+      main.style.setProperty('--guaranteed-section-height', `${guaranteedSectionHeight}px`);
+    });
+  });
+</script>
+{% schema %}
+{
+  "name": "Build Your Subscription",
+  "class": "guaranteed-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Section background color",
+      "default": "#00126B"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Build Your Subscription"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "url"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "100% guaranteed. Pause, skip or cancel anytime."
+    },
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "icon"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Build Your Subscription"
+    }
+  ]
+}
+{% endschema %}

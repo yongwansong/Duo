@@ -1,0 +1,551 @@
+{{ 'shop-all.css' | asset_url | stylesheet_tag }}
+<style>
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 95%;
+    left: 50%;
+    margin-left: -60px;
+    font-weight: 500;
+  }
+
+  .tooltip .tooltiptext::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #1e1e1e transparent transparent transparent;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  @media screen and (max-width: 799px) {
+    .tooltip .tooltiptext {
+      display: none;
+    }
+  }
+</style>
+<div class="all_collection">
+  <div class="page-width shop-container">
+    <div class="heading-section">
+      <div class="grid_section">
+        <!-- <a class="shop_url" href="/collections/shop">shop all</a> -->
+        <div class="product__heading0">
+          <h2 class="h2_heading white">
+            <span> shop tablets </span>
+          </h2>
+
+          <div class="ingredient__icons">
+            <a class="tooltip" href="/collections/all/#Immunity">
+              <img
+                class="product_icons nha_img-1"
+                style="background-color: {{product.metafields.my_fields.background_color}};"
+                src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/Group_101.svg?v=1657781231"
+                alt=""
+              >
+              <span class=" tooltiptext">Immunity</span>
+            </a>
+            <a class="tooltip" href="/collections/all/#Energy">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/Group_100.svg?v=1657781231"
+                alt=""
+                class="nha_img-2"
+              >
+              <span class=" tooltiptext">Energy</span>
+            </a>
+            <a class="tooltip" href="/collections/all/#Sleep">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/Group_102.svg?v=1657781231"
+                class="nha_img-3"
+              >
+              <span class=" tooltiptext">Sleep</span>
+            </a>
+            <a class="tooltip" href="/collections/all/#Original">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/Group_107.svg?v=1657803427"
+                class="nha_img-4"
+              >
+              <span class=" tooltiptext">Original</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+    <div class="page-width yellow-header">
+      <div class="full_container_section">
+        <a class="icon_redirect" href="/">
+          <p>Customize a subscription and save
+            <span class="svg-ion"><svg width="7" height="14" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 7L0.25 13.4952L0.250001 0.504809L7 7Z" fill="black"/>
+              </svg></span>
+          </p>
+        </a>
+      </div>
+    </div>
+  -->
+
+  <div class="collection-container">
+    <div class="collection__wrapper">
+      <div class="section_container">
+        {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+          <div class="product_width-details {{ product.title }}" id="{{product.title}}">
+            <div class="product_image_section">
+              {% comment %}
+                {% render 'product-card',
+                  product_card_product: product,
+                  media_size: section.settings.image_ratio,
+                  show_secondary_image: section.settings.show_secondary_image,
+                  add_image_padding: section.settings.add_image_padding,
+                  show_vendor: section.settings.show_vendor,
+                  show_image_outline: section.settings.show_image_outline,
+                  show_rating: section.settings.show_rating
+                %}
+              {% endcomment %}
+
+              <div class="product__wrapper">
+                <div class="product_image-wrapper">
+                  {% if product.featured_media.media_type == 'image' %}
+                    <a href="{{ product.url }}"
+                      ><img
+                        src="{{product.images[2] | image_url: width: 500, height: 500 }}"
+                        alt=""
+                        class="product__image first_img"
+                      >
+                      <img
+                        src="{{product.images[1] | image_url: width: 500, height: 500 }}"
+                        alt=""
+                        class="product__image second_img"
+                      >
+                    </a>
+                  {% endif %}
+                </div>
+              </div>
+
+              <div class="product_details__wrapper">
+                <div class="mutli_details">
+                  <div class="product__heading">
+                    <div class="heading_grid">
+                      <h2 class="heading_0">
+                        <a href="{{ product.url }}">
+                          <span class="products__heading">{{ product.title }}</span>
+                        </a>
+                      </h2>
+                      <h3>
+                        <span class="products__heading">{{ product.metafields.custom.custom_vendor_2 }}</span>
+                      </h3>
+                      {% comment %}
+                        <p class="">
+                          {% if product.metafields.my_fields.product_top_title != blank %}
+                          <span class="products__heading">
+                           {{ product.metafields.my_fields.product_top_title }}
+                           </span>
+                          {%endif%}
+                        </p>
+                      {% endcomment %}
+                      {%- if product.selected_or_first_available_variant.available -%}
+                        {%- assign product_form_id = 'quick-add-desktop-' | append: section.id | append: product.id -%}
+                        <product-form data-cart-type="{{ settings.cart_type }}">
+                          {%- form 'product',
+                            product,
+                            id: product_form_id,
+                            class: 'form',
+                            novalidate: 'novalidate',
+                            data-type: 'add-to-cart-form'
+                          -%}
+                            <div class="products__heading add-toCart">
+                              <input
+                                type="hidden"
+                                name="id"
+                                value="{{ product.selected_or_first_available_variant.id }}"
+                                disabled
+                              >
+                              <button
+                                id="{{ product_form_id }}-submit-desktop"
+                                type="submit"
+                                name="add"
+                                class="quick-add__submit cllctnadd"
+                                aria-haspopup="dialog"
+                                aria-labelledby="{{ product_form_id }}-submit-desktop title-{{ section.id }}-{{ product.id }}"
+                                aria-live="polite"
+                                {% if product.selected_or_first_available_variant.available == false %}
+                                  disabled
+                                {% endif %}
+                              >
+                                <span class="add-to-cart-message">
+                                  {%- if product.selected_or_first_available_variant.available -%}
+                                    {{ 'products.product.add_to_cart' | t }}
+                                  {%- else -%}
+                                    {{ 'products.product.sold_out' | t }}
+                                  {%- endif -%}
+                                  <b class="dash">-</b>
+                                  {{-
+                                    product.selected_or_first_available_variant.price
+                                    | money_without_trailing_zeros
+                                  -}}
+                                </span>
+                                <span class="added-message hidden">Added</span>
+                                <span class="sold-out-message hidden">
+                                  {{ 'products.product.sold_out' | t }}
+                                </span>
+                                <div class="loading-overlay__spinner hidden">
+                                  <svg
+                                    aria-hidden="true"
+                                    focusable="false"
+                                    role="presentation"
+                                    class="spinner"
+                                    viewBox="0 0 66 66"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                  </svg>
+                                </div>
+                              </button>
+                            </div>
+                          {%- endform -%}
+                        </product-form>
+                      {%- endif -%}
+                    </div>
+                  </div>
+
+                  <div class="product__heading-mobile">
+                    <div class="heading_grid">
+                      <h2 class="heading_0" id="title-{{ section.id }}-{{ product.id }}">
+                        <a href="{{ product.url }}">
+                          <span class="products__heading">{{ product.title }}</span>
+                        </a>
+                      </h2>
+                      {% comment %}
+                        <p class="mobile-text">
+                          {% if product.metafields.my_fields.product_top_title != blank %}
+                          <span class="products__heading">
+                           {{ product.metafields.my_fields.product_top_title }}
+                           </span>
+                          {%endif%}
+                        </p>
+                      {% endcomment %}
+                      <h3>
+                        <span class="products__heading">{{ product.metafields.custom.custom_vendor_2 }}</span>
+                      </h3>
+                    </div>
+                  </div>
+
+                  <div class="product_detail_width-addTocart">
+                    <div class="product-grid">
+                      <div class="tag__section">
+                        {% comment %}
+                          {%assign titl= product.title | downcase %}
+                          {% if product.metafields.my_fields.product_tag_one  %}
+                          <span><a href="https://duotoothpaste.com/pages/ingredients#{{titl}}">{{ product.metafields.my_fields.product_tag_one }}</a></span>
+                          {%endif%}
+                          {% if product.metafields.my_fields.product_tag_two %}
+                          {%assign titl= product.title | downcase %}
+                          <span><a href="https://duotoothpaste.com/pages/ingredients#{{titl}}">{{ product.metafields.my_fields.product_tag_two }}</a></span>
+                          {%endif%}
+                          {% if product.metafields.my_fields.product_tag_three %}
+                          {%assign titl= product.title | downcase %}
+                          <span><a href="https://duotoothpaste.com/pages/ingredients#{{titl}}">{{ product.metafields.my_fields.product_tag_three }}</a></span>
+                          {%endif%}
+                        {% endcomment %}
+
+                        {% if product.metafields.my_fields.product_tag_one %}
+                          <div class="shop popup_main">
+                            <button class="open_popup">{{ product.metafields.my_fields.product_tag_one }}</button>
+                            <div class="popup_body">
+                              <div class="popup_back"></div>
+                              <div class="popup_contain">
+                                <div class="popup_close">
+                                  <img
+                                    src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/close-button.png?v=1656928621"
+                                    class="cross"
+                                  >
+                                </div>
+                                {% if product.handle == 'baseline' %}
+                                  {% assign tag = product.metafields.my_fields.product_tag_one %}
+                                  {% assign title = product.title %}
+                                  {% assign title_down = product.handle | downcase %}
+                                  {% render 'shop-baseline-first-popup-content',
+                                    tag: tag,
+                                    title: title,
+                                    title_down: title_down
+                                  %}
+                                {% elsif product.handle == 'immunity' %}
+                                  {% assign tag = product.metafields.my_fields.product_tag_one %}
+                                  {% assign title = product.title %}
+                                  {% assign title_down = product.handle | downcase %}
+                                  {% render 'shop-immunity-first-popup-content',
+                                    tag: tag,
+                                    title: title,
+                                    title_down: title_down
+                                  %}
+                                {% elsif product.handle == 'energy' %}
+                                  {% assign tag = product.metafields.my_fields.product_tag_one %}
+                                  {% assign title = product.title %}
+                                  {% assign title_down = product.handle | downcase %}
+                                  {% include 'shop-energy-first-popup-content',
+                                    tag: tag,
+                                    title: title,
+                                    title_down: title_down
+                                  %}
+                                {% elsif product.handle == 'sleep' %}
+                                  {% assign tag = product.metafields.my_fields.product_tag_one %}
+                                  {% assign title = product.title %}
+                                  {% assign title_down = product.handle | downcase %}
+                                  {% include 'shop-sleep-first-popup-content',
+                                    tag: tag,
+                                    title: title,
+                                    title_down: title_down
+                                  %}
+                                {% endif %}
+                              </div>
+                            </div>
+                          </div>
+                        {% endif %}
+                        {% if product.metafields.my_fields.product_tag_two %}
+                          <div class="shop popup_main">
+                            <button class="open_popup">{{ product.metafields.my_fields.product_tag_two }}</button>
+                            <div class="popup_body">
+                              <div class="popup_back"></div>
+                              <div class="popup_contain">
+                                <div class="popup_close">
+                                  <img
+                                    src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/close-button.png?v=1656928621"
+                                    class="cross"
+                                  >
+                                </div>
+                                {% if product.handle == 'baseline' %}
+                                  {% assign tag = product.metafields.my_fields.product_tag_two %}
+                                  {% assign title = product.title %}
+                                  {% assign title_down = product.handle | downcase %}
+                                  {% render 'shop-baseline-second-popup-content',
+                                    tag: tag,
+                                    title: title,
+                                    title_down: title_down
+                                  %}
+                                {% elsif product.handle == 'immunity' %}
+                                  {% assign tag = product.metafields.my_fields.product_tag_two %}
+                                  {% assign title = product.title %}
+                                  {% assign title_down = product.handle | downcase %}
+                                  {% render 'shop-immunity-second-popup-content',
+                                    tag: tag,
+                                    title: title,
+                                    title_down: title_down
+                                  %}
+                                {% elsif product.handle == 'energy' %}
+                                  {% assign tag = product.metafields.my_fields.product_tag_two %}
+                                  {% assign title = product.title %}
+                                  {% assign title_down = product.handle | downcase %}
+                                  {% render 'shop-energy-second-popup-content',
+                                    tag: tag,
+                                    title: title,
+                                    title_down: title_down
+                                  %}
+                                {% elsif product.handle == 'sleep' %}
+                                  {% assign tag = product.metafields.my_fields.product_tag_two %}
+                                  {% assign title = product.title %}
+                                  {% assign title_down = product.handle | downcase %}
+                                  {% render 'shop-sleep-second-popup-content',
+                                    tag: tag,
+                                    title: title,
+                                    title_down: title_down
+                                  %}
+                                {% endif %}
+                              </div>
+                            </div>
+                          </div>
+                        {% endif %}
+                        {% if product.metafields.my_fields.product_tag_three %}
+                          <div class="shop popup_main">
+                            <button class="open_popup ">{{ product.metafields.my_fields.product_tag_three }}</button>
+                            <div class="popup_body">
+                              <div class="popup_back"></div>
+                              <div class="popup_contain">
+                                <div class="popup_close">
+                                  <img
+                                    src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/close-button.png?v=1656928621"
+                                    class="cross"
+                                  >
+                                </div>
+                                {% if product.handle == 'baseline' %}
+                                  {% assign tag = product.metafields.my_fields.product_tag_three %}
+                                  {% assign title = product.title %}
+                                  {% assign title_down = product.handle | downcase %}
+                                  {% render 'shop-baseline-third-popup-content',
+                                    tag: tag,
+                                    title: title,
+                                    title_down: title_down
+                                  %}
+                                {% elsif product.handle == 'immunity' %}
+                                  {% assign tag = product.metafields.my_fields.product_tag_three %}
+                                  {% assign title = product.title %}
+                                  {% assign title_down = product.handle | downcase %}
+                                  {% render 'shop-immunity-third-popup-content',
+                                    tag: tag,
+                                    title: title,
+                                    title_down: title_down
+                                  %}
+                                {% elsif product.handle == 'energy' %}
+                                  {% assign tag = product.metafields.my_fields.product_tag_three %}
+                                  {% assign title = product.title %}
+                                  {% assign title_down = product.handle | downcase %}
+                                  {% render 'shop-energy-third-popup-content',
+                                    tag: tag,
+                                    title: title,
+                                    title_down: title_down
+                                  %}
+                                {% elsif product.handle == 'sleep' %}
+                                  {% assign tag = product.metafields.my_fields.product_tag_three %}
+                                  {% assign title = product.title %}
+                                  {% assign title_down = product.handle | downcase %}
+                                  {% render 'shop-sleep-third-popup-content',
+                                    tag: tag,
+                                    title: title,
+                                    title_down: title_down
+                                  %}
+                                {% endif %}
+                              </div>
+                            </div>
+                          </div>
+                        {% endif %}
+                        {% comment %}
+                          {%for tag in product.tags%}
+                          {%unless tag contains 'subscription_combo'%}
+                          <span><a href="{{ product.url }}">{{tag}}</a></span>
+                          {%endunless%}
+                          {%endfor%}
+                        {% endcomment %}
+                      </div>
+                      {%- if product.selected_or_first_available_variant.available -%}
+                        {%- assign product_form_id = 'quick-add-mobile-' | append: section.id | append: product.id -%}
+                        <product-form data-cart-type="{{ settings.cart_type }}">
+                          {%- form 'product',
+                            product,
+                            id: product_form_id,
+                            class: 'form',
+                            novalidate: 'novalidate',
+                            data-type: 'add-to-cart-form'
+                          -%}
+                            <div class="products__heading add-toCart mobile_addtocart">
+                              <input
+                                type="hidden"
+                                name="id"
+                                value="{{ product.selected_or_first_available_variant.id }}"
+                                disabled
+                              >
+                              <button
+                                id="{{ product_form_id }}-submit-mobile"
+                                type="submit"
+                                name="add"
+                                class="quick-add__submit cllctnadd"
+                                aria-haspopup="dialog"
+                                aria-labelledby="{{ product_form_id }}-submit-mobile title-{{ section.id }}-{{ product.id }}"
+                                aria-live="polite"
+                                {% if product.selected_or_first_available_variant.available == false %}
+                                  disabled
+                                {% endif %}
+                              >
+                                <span class="add-to-cart-message">
+                                  {%- if product.selected_or_first_available_variant.available -%}
+                                    {{ 'products.product.add_to_cart' | t }}
+                                  {%- else -%}
+                                    {{ 'products.product.sold_out' | t }}
+                                  {%- endif -%}
+                                  <b class="dash">-</b>
+                                  {{-
+                                    product.selected_or_first_available_variant.price
+                                    | money_without_trailing_zeros
+                                  -}}
+                                </span>
+                                <span class="added-message hidden">Added</span>
+                                <span class="sold-out-message hidden">
+                                  {{ 'products.product.sold_out' | t }}
+                                </span>
+                                <div class="loading-overlay__spinner hidden">
+                                  <svg
+                                    aria-hidden="true"
+                                    focusable="false"
+                                    role="presentation"
+                                    class="spinner"
+                                    viewBox="0 0 66 66"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                  </svg>
+                                </div>
+                              </button>
+                            </div>
+                          {%- endform -%}
+                        </product-form>
+                      {%- endif -%}
+                      <div class="desp__section">
+                        {{ product.description }}
+                        <div class="button_grid">
+                          <div class="learn_more">
+                            <a href="{{ product.url }}">
+                              <span> Learn more</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $('.open_popup').click(function () {
+    $(this).parent('.popup_main').children('.popup_body').addClass('popup_body_show');
+  });
+  $('.popup_close').click(function () {
+    $('.popup_body').removeClass('popup_body_show');
+  });
+  $('.popup_back').click(function () {
+    $('.popup_body').removeClass('popup_body_show');
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Shop All",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:sections.featured-collection.settings.collection.label"
+    },
+    {
+      "type": "text",
+      "id": "collection_text",
+      "label": "Collection Title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shop All"
+    }
+  ]
+}
+{% endschema %}

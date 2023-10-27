@@ -1,0 +1,208 @@
+.how-it-works__wrapper{
+	--bg-color: #EFF2FF;
+	--text-color: #000;
+	--accent-color: #00126B;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	padding-top: 3rem;
+	padding-bottom: 4rem;
+}
+.how-it-works__heading{
+	font-size: 3.2rem;
+	text-wrap: balance;
+	text-transform: uppercase;
+	color: inherit;
+	font-weight: 700;
+	line-height: 1.8;
+	margin: 0 auto;
+	max-width: 15ch;
+}
+.how-it-works__slide__icon{
+	width: 80px;
+	height: 80px;
+}
+.how-it-works__slide__icon img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.how-it-works__slide__image{
+	margin-bottom: 3rem;
+}
+.how-it-works__slide__image img{
+	border: .8rem solid var(--accent-color);
+	width: 100%;
+	max-width: 250px;
+	margin: 0 auto;
+	height: auto;
+}
+.how-it-works__slide__content{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 2rem;
+}
+.how-it-works__slide__title{
+	color: var(--accent-color);
+	font-size: 4.6rem;
+	font-weight: 600;
+	margin: 0 0 1.6rem;
+	line-height: 1;
+}
+.how-it-works__slide__text{
+	font-size: 1.8rem;
+	line-height: 1.4;
+}
+
+.how-it-works__dots__wrapper{
+	margin-top: 4rem;
+}
+.how-it-works__dots .slick-dots{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+.how-it-works__dots .slick-dots button{
+	outline: none;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+	text-indent: -9999px;
+	background: #00126B;
+	border: 1px solid #00126B;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	display: block;
+}
+.how-it-works__dots .slick-dots .slick-active button{
+	background: #fff;
+}
+.how-it-works__slides__wrapper{
+	position: relative;
+}
+.how-it-works__arrows__wrapper{
+	display: none;
+}
+.how-it-works__arrows{
+	position: relative;
+}
+.how-it-works__slick-prev,
+.how-it-works__slick-next{
+	position: absolute;
+	top: calc( 50% + 4rem );
+	transform: translateY(-50%);
+	width: 21px;
+	height: 43px;
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	color: var(--accent-color);
+}
+.how-it-works__slick-prev svg,
+.how-it-works__slick-next svg{
+	width: 100%;
+	height: 100%;
+}
+.how-it-works__slick-prev.slick-disabled,
+.how-it-works__slick-next.slick-disabled{
+	opacity: 0.1;
+	cursor: not-allowed;
+}
+.how-it-works__slick-prev{
+	left: 0;
+}
+.how-it-works__slick-next{
+	right: 0;
+}
+.how-it-works__heading__wrapper{
+	text-align: center;
+	margin-bottom: 2rem;
+}
+.how-it-works__slide-inner{
+    transition: opacity  1s cubic-bezier(0.7, 0, 0.3, 1), transform  1s cubic-bezier(0.7, 0, 0.3, 1);
+    transform: scale(0.9);
+    opacity: 0
+}
+.slick-active .how-it-works__slide-inner {
+  transform: scale(1);
+  opacity: 1
+}
+
+.how-it-works__arrows__wrapper{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+@media screen and (min-width: 450px){
+	.how-it-works__heading{
+		max-width: initial;
+	}
+}
+@media screen and (min-width: 750px){
+	.how-it-works__slide-inner{
+		display: grid;
+		grid-template-columns: 40% 1fr;
+		align-items: center;
+		gap: 5rem
+	}
+	.how-it-works__slides__wrapper{
+		padding: 0 6rem;
+	}
+	.how-it-works__slide__image{
+		margin-bottom: 0;
+	}
+	.how-it-works__arrows__wrapper{
+		display: block;
+	}
+	.how-it-works__heading{
+		font-size:3.4rem;
+	}
+	.how-it-works__slide__text{
+		font-size: 2.2rem;
+	}
+	.how-it-works__heading__wrapper{
+		margin-bottom: 3.5rem;
+	}
+	.how-it-works__slide__content{
+		gap: 3rem;
+	}
+	.how-it-works__dots__wrapper{
+		margin-top: 6rem;
+	}
+	.how-it-works__wrapper{
+		padding-top: 4rem;
+		padding-bottom: 6rem;
+	}
+	.how-it-works__slide__title{
+		font-size: 5.8rem;
+	}
+	.how-it-works__slide__icon{
+		width: 102px;
+		height: 102px;
+	}
+	.how-it-works__slide__image img{
+		max-width: initial;
+	}
+}
+@media screen and (min-width: 990px){
+	.how-it-works__slides__wrapper{
+		padding: 0 10rem;
+	}
+	.how-it-works__slide__icon{
+		width: 140px;
+		height: 140px;
+	}
+	.how-it-works__heading__wrapper {
+		margin-bottom: 6rem;
+	}
+}

@@ -1,0 +1,39 @@
+<div class="text-with_image">
+<div class="content">
+    <div>
+      {% if product.metafields.my_fields.individual_title != blank %}
+     <h2 class="titl">{{product.metafields.my_fields.individual_title}}</h2>
+      {%endif%}
+  	</div>
+  	<div class="desc">
+      {% if product.metafields.my_fields.indivisual_description != blank %}
+    <p>{{product.metafields.my_fields.indivisual_description}}</p>
+      <a class="mobile-urllink" href="{{product.metafields.my_fields.description_bottom_button_url}}"> {{product.metafields.my_fields.description_bottom_button}}</a>
+      {%endif%}
+  	</div>
+  </div>
+  <div class="image-right">
+    <div class="image-e">
+      {% if product.metafields.my_fields.indivisual_image != blank %}
+      <img src="{{product.metafields.my_fields.indivisual_image | img_url:'master'}}">
+      <span class="mobile-image-caps">{{product.metafields.my_fields.image_bottom_text}}</span>
+   	  {%endif%}
+    </div>
+  </div>
+</div>  
+
+ <div class="image-bottom">
+   
+   	<div class="link_field">
+      {% if product.metafields.my_fields.indivisual_description != blank %}
+      <a class="urllinks" href="{{product.metafields.my_fields.description_bottom_button_url}}"> {{product.metafields.my_fields.description_bottom_button}}</a>
+      {%endif%}
+  	</div>
+    <div class="link_field">
+      {% if product.metafields.my_fields.indivisual_image != blank %}
+      <span class="image-capss">{{product.metafields.my_fields.image_bottom_text}}</span>
+   	  {%endif%}
+    </div>
+  </div>
+
+

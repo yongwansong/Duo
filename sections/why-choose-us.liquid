@@ -1,0 +1,131 @@
+{{ 'section-why-choose-us.css' | asset_url | stylesheet_tag }}
+<div class="why-choose-us__wrapper">
+  <div class="page-width">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="why-choose-us__heading center">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    {%- if section.blocks.size > 0 -%}
+      <div class="why-choose-us__blocks">
+        {%- for block in section.blocks -%}
+          {%- if block.settings.title != blank or block.settings.details != blank -%}
+            <div class="why-choose-us__block">
+              <div class="why-choose-us__block-icon">
+                <svg width="30" height="30">
+                  <use xlink:href="#icon-check-{{ section.id }}"></use>
+                </svg>
+              </div>
+              <div class="why-choose-us__block-content">
+                {%- if block.settings.title != blank -%}
+                  <h3 class="why-choose-us__block-title">{{ block.settings.title }}</h3>
+                {%- endif -%}
+                {%- if block.settings.details != blank -%}
+                  <div class="why-choose-us__block-details">{{ block.settings.details }}</div>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+        <symbol id="icon-check-{{ section.id }}" viewBox="0 0 36 36">
+        	<circle cx="18" cy="18" r="16.5" fill="#EFF2FF" stroke="#00126B" stroke-width="3"/>
+        	<path fill-rule="evenodd" clip-rule="evenodd" d="M25.3 11.6001C26.0732 12.18 26.2299 13.2769 25.65 14.0501L18.15 24.0501C17.8456 24.456 17.3801 24.7097 16.8741 24.7457C16.368 24.7817 15.8713 24.5963 15.5126 24.2375L11.7626 20.4875C11.0791 19.8041 11.0791 18.6961 11.7626 18.0127C12.446 17.3292 13.554 17.3292 14.2374 18.0127L16.5607 20.3359L22.85 11.9501C23.4299 11.1769 24.5268 11.0202 25.3 11.6001Z" fill="#00126B"/>
+        </symbol>
+      </svg>
+    {%- endif -%}
+    {%- if section.settings.button_label != blank -%}
+      <div class="why-choose-us__button">
+        <a
+          {% if section.settings.button_link != blank %}
+            href="{{ section.settings.button_link }}"
+          {% else %}
+            role="link" aria-disabled="true"
+          {% endif %}
+          class="button button--secondary"
+        >
+          {{- section.settings.button_label -}}
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Why Choose Us",
+  "class": "section-why-choose-us",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why choose Duo?"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Shop tablets"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Block",
+      "type": "block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "better for the planet"
+        },
+        {
+          "type": "text",
+          "id": "details",
+          "label": "Details",
+          "default": "Refillable glass bottles > plastic tube waste"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Why Choose Us",
+      "blocks": [
+        {
+          "type": "block",
+          "settings": {
+            "title": "better for the planet",
+            "details": "Refillable glass bottles > plastic tube waste"
+          }
+        },
+        {
+          "type": "block",
+          "settings": {
+            "title": "better brushing experience",
+            "details": "Delicious flavor and silky foam"
+          }
+        },
+        {
+          "type": "block",
+          "settings": {
+            "title": "better for your dental health",
+            "details": "Made with premium ingredients; created and recommended by dentists"
+          }
+        },
+        {
+          "type": "block",
+          "settings": {
+            "title": "better for you",
+            "details": "Whole-body benefits rapidly delivered through your gums"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

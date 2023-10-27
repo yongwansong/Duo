@@ -1,0 +1,33 @@
+.heading__section {
+    display: block;
+}
+.heading{
+    display: block;
+    margin: 50px 0 10px 0;
+}
+
+.heading__section .heading .section__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 60px;
+    color: #000000;
+    text-align: center;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+.heading__section .heading .section__title p{
+    margin: 0;
+}
+
+ 
+@media screen and (max-width: 767px) {
+    .heading{
+        display: block;
+        margin: 30px 0 10px 0;
+    }
+    .heading__section .heading .section__title{
+        font-size: 42px;
+        line-height: 52px;
+    }
+}

@@ -1,0 +1,114 @@
+{{ 'section-pdp-characteristics.css' | asset_url | stylesheet_tag }}
+<div class="pdp-characteristics__wrapper">
+  <div class="page-width">
+    {%- if section.settings.title != blank -%}
+      <h2 class="title center">
+        {{ section.settings.title | escape }}
+      </h2>
+    {%- endif -%}
+    <ul
+      class="pdp-characteristics__list grid grid--1-col{% if section.blocks.size > 3  %} grid--2-col-tablet grid--4-col-desktop{% else %} grid--{{ section.blocks.size }}-col-tablet{% endif %}"
+      role="list"
+    >
+      {%- for block in section.blocks -%}
+        <li class="pdp-characteristics__item grid__item center" {{ block.shopify_attributes }}>
+          <div class="pdp-characteristics__card">
+            {%- if block.settings.image != blank -%}
+              <div class="pdp-characteristics__card-image">
+                <div class="media media--transparent media--square">
+                  <img
+                    srcset="
+                      {%- if block.settings.image.width >= 275 -%}{{ block.settings.image | img_url: '275x' }} 275w,{%- endif -%}
+                      {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | img_url: '550x' }} 550w,{%- endif -%}
+                      {%- if block.settings.image.width >= 710 -%}{{ block.settings.image | img_url: '710x' }} 710w,{%- endif -%}
+                      {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | img_url: '1420x' }} 1420w,{%- endif -%}
+                      {{ block.settings.image | img_url: 'master' }} {{ block.settings.image.width }}w
+                    "
+                    src="{{ block.settings.image | img_url: '550x' }}"
+                    sizes="
+                      (min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %},
+                      (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %},
+                      calc(100vw - 30px)
+                    "
+                    alt="{{ block.settings.image.alt }}"
+                    height="{{ block.settings.image.height }}"
+                    width="{{ block.settings.image.width }}"
+                    loading="lazy"
+                  >
+                </div>
+              </div>
+            {%- endif -%}
+            <div class="pdp-characteristics__card-info">
+              {%- if block.settings.title != blank -%}
+                <h3>{{ block.settings.title | escape }}</h3>
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <div class="rte">{{ block.settings.text }}</div>
+              {%- endif -%}
+            </div>
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "PDP - Characteristics",
+  "class": "section-pdp-characteristics",
+  "tag": "section",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Dentist-formulated premium oral care",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Brightly whitens teeth",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "PDP - Characteristics",
+      "blocks": [
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

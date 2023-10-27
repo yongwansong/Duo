@@ -1,0 +1,127 @@
+<section class="accordion">
+  {%if section.settings.title!=blank%}
+  <h2>{{section.settings.title}}</h2>
+  {%endif%} 
+  {%- for block in section.blocks -%}
+    {%if block.settings.section_title!=blank%}
+  	<h3 class="accordion_heading">
+      {{block.settings.section_title}}
+    <i class="arrow up"></i>
+    </h3>
+    {%endif%}
+    {%if block.settings.text!=blank%}
+    <div class="accordion_text">
+      {{block.settings.text}}
+    </div>
+    {%endif%}
+  {%endfor%}
+</section>
+  
+
+<style type="text/css">
+.accordion{
+  margin:30px auto;
+  width: 500px;
+  line-height: 200%;
+}
+.accordion h3 {
+    background: #555555;
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+    font-size: 20px;
+    color:#fff;
+}
+.accordion_text{
+  background:#fff;
+  padding: 10px;
+  display:none;
+}
+.accordion h3 i{
+  float: right;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+i.arrow.up{
+  border: solid #FFF;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  width: 10px;
+  height: 10px;
+}
+
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+
+</style>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function (){
+    $(".accordion_text:first").addClass("open");	
+    $(".accordion_heading").click(function () {
+    $(this).next().slideToggle(500);
+    $(".accordion_text").not($(this).next()).slideUp(500);   
+  });
+  
+});
+</script>
+
+<style>
+.open{
+ display:block; 
+}
+</style>
+
+
+{% schema %}
+{
+  "name": "About Landing Page",
+  "class": "index-section",
+  "max_blocks": 10,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Logo list"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Richtext",
+      "name": "faq",
+      "settings": [
+        {
+          "type": "text",
+          "id": "section_title",
+          "label": "Title",
+          "default": "Talk about your brand"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Faq",
+      "blocks": [
+        {
+          "type": "Richtext"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

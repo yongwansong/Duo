@@ -1,0 +1,207 @@
+<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+{{ 'section-image-with-slider.css' | asset_url | stylesheet_tag }}
+<div class="text-slider{% if template.name == "product" %} text-slider--pdp{% endif %}">
+  <div class="image-with-text {% if section.settings.full_width %}image-with-text--full-width{% else %}page-width{% endif %} color-scheme-{{ section.settings.color_scheme }}">
+    <div class="image-with-text__grid color-{{ section.settings.color_scheme }} grid grid--gapless grid--2-col grid--2-col-tablet gradient{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
+      <div class="grid__item text-with">
+        <div
+          class="image-with-text__media image-with-text__media--{{ section.settings.height }} {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}"
+        >
+          <div class="image-with-text__text rte">
+            <div class="image-with-head-title">
+              {% if section.settings.icon != blank %}
+                <div class="image-with-head-title_icon">
+                  <img src="{{ section.settings.icon | img_url: '500x' }}">
+                </div>
+              {% endif %}
+              {{ section.settings.image }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid__item slider">
+        <div class="image-with-text__content image-with-text__content--{{ section.settings.height }}">
+          <div class="swiper-container">
+            <!-- swiper slides -->
+            <div class="swiper-wrapper">
+              {%- for block in section.blocks -%}
+                {% case block.type %}
+                  {%- when 'text' -%}
+                    <div class="swiper-slide">
+                      {% comment %}               <img src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/da21dde662a19a4b8a6e17048660983a.png?v=1657085879" class="comma"> {% endcomment %}
+                      {% assign imggg = 'https://cdn.shopify.com/s/files/1/0553/3233/9879/files/da21dde662a19a4b8a6e17048660983a.png?v=1657085879' %}
+                      <img
+                        class="comma"
+                        srcset="{{ imggg }}"
+                        sizes="auto"
+                        src="{{ imggg }}"
+                        loading="lazy"
+                        alt="{{ imggg.alt | escape }}"
+                        width="auto"
+                        height="auto"
+                      >
+                      <div class="image-with-text__text rte" {{ block.shopify_attributes }}>
+                        {{ block.settings.text }}
+                      </div>
+                      <div class="author">
+                        <p>{{ block.settings.author }}</p>
+                      </div>
+                    </div>
+                {%- endcase -%}
+              {%- endfor -%}
+            </div>
+            <!-- next / prev arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- !next / prev arrows -->
+
+            <!-- pagination dots -->
+            <div class="swiper-pagination"></div>
+            <!-- !pagination dots -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Text With Text Slider",
+  "class": "text-with-text-slider",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "Icon"
+    },
+    {
+      "type": "richtext",
+      "id": "image",
+      "label": "left Content"
+    },
+    {
+      "type": "url",
+      "id": "videoo",
+      "label": "Add video"
+    },
+    {
+      "type": "select",
+      "id": "height",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.image-with-text.settings.height.options__1.label"
+        },
+        {
+          "value": "small",
+          "label": "t:sections.image-with-text.settings.height.options__2.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.image-with-text.settings.height.options__3.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.image-with-text.settings.height.label"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "background-1",
+          "label": "t:sections.image-with-text.settings.color_scheme.options__1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.image-with-text.settings.color_scheme.options__2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.image-with-text.settings.color_scheme.options__3.label"
+        },
+        {
+          "value": "accent-1",
+          "label": "t:sections.image-with-text.settings.color_scheme.options__4.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.image-with-text.settings.color_scheme.options__5.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.image-with-text.settings.color_scheme.label"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "t:sections.image-with-text.settings.layout.options__1.label"
+        },
+        {
+          "value": "text_first",
+          "label": "t:sections.image-with-text.settings.layout.options__2.label"
+        }
+      ],
+      "default": "image_first",
+      "label": "t:sections.image-with-text.settings.layout.label",
+      "info": "t:sections.image-with-text.settings.layout.info"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "t:sections.image-with-text.blocks.text.name",
+      "limit": 12,
+      "settings": [
+        {
+          "type": "html",
+          "id": "text",
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+          "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text with Text Slider",
+      "blocks": [
+        {
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  var Swipes = new Swiper('.swiper-container', {
+    loop: true,
+    slidesPerView: 1,
+    autoHeight: false,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      767: {
+        slideToClickedSlide: false,
+      },
+    },
+  });
+</script>

@@ -1,0 +1,118 @@
+.section-multicolumn-images-text{
+	padding-top: 60px;
+	padding-bottom: 60px;
+	letter-spacing: 0;
+}
+.section-multicolumn-images-text .page-width{
+	max-width: 1080px;
+}
+.multicolumn-images-text__icon{
+	width: 120px;
+	height: 120px;
+	margin: 0 auto 2.5rem;
+}
+.multicolumn-images-text__icon img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.multicolumn-images-text__heading{
+	font-size: 3.6rem;
+	font-weight: 500;
+	line-height: 1.2;
+	margin: 0 auto 2.5rem;
+	text-wrap: balance;
+	max-width: 16ch;
+}
+.multicolumn-images-text__description{
+	font-size: 2.4rem;
+	line-height: 1.5;
+}
+.multicolumn-images-text__row {
+	margin: 3.5rem 0 0;
+	gap: 3rem;
+}
+.multicolumn-images-text__image {
+	line-height: 0;
+	margin-bottom: 1.2rem;
+}
+.multicolumn-images-text__image img{
+	width: 100%;
+	height: auto;
+}
+.multicolumn-images-text__row.grid--1-col .grid__item{
+	width: 100%;
+}
+.multicolumn-images-text__row.grid--2-col .grid__item{
+	width: calc( 50% - 3rem );
+}
+.multicolumn-images-text__text{
+	line-height: 1.5;
+	font-size: 1.4rem;
+}
+.multicolumn-images-text__text > a{
+	text-decoration: none;
+}
+.multicolumn-images-text__text > a:hover{
+	text-decoration: underline;
+}
+@media screen and (min-width: 750px){
+	.multicolumn-images-text__row {
+		gap: 1.5rem;
+	}
+	.multicolumn-images-text__text{
+		font-size: 1.2rem;
+	}
+	.multicolumn-images-text__heading{
+		font-size: 4.8rem;
+		max-width: initial;
+	}
+	body.template--product .multicolumn-images-text__heading{
+		font-size: 4rem;
+	}
+	.multicolumn-images-text__row.grid--4-col-tablet .grid__item{
+		width: calc( 25% - 3rem );
+	}
+	.multicolumn-images-text__row.grid--2-col-tablet .grid__item{
+		width: calc( 50% - 3rem );
+	}
+	.multicolumn-images-text__description p br:first-child{
+		display: none;
+	}
+}
+@media screen and (min-width: 890px){
+	.multicolumn-images-text__row {
+		gap: 3rem;
+	}
+	.multicolumn-images-text__text{
+		font-size: 1.4rem;
+	}
+}
+@media screen and (min-width: 990px){
+	.multicolumn-images-text__text{
+		font-size: 1.8rem;
+	}
+}
+@media only screen and (max-width: 550px){
+	.multicolumn-images-text__row {
+		display: flex;
+		gap: 1.5rem;
+	}
+	.multicolumn-images-text__text{
+		font-size: 1.2rem;
+	}
+	.multicolumn-images-text__heading br{
+		display: none
+	}
+	.multicolumn-images-text__heading{
+		font-size: 8vw;
+	}
+}
+@media only screen and (max-width: 345px){
+	.multicolumn-images-text__row {
+		gap: 1rem;
+	}
+	.multicolumn-images-text__text{
+		font-size: 1.1rem;
+	}
+}

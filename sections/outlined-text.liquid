@@ -1,0 +1,78 @@
+{{ 'section-outlined-text.css' | asset_url | stylesheet_tag }}
+{%- if section.settings.background_color != blank -%}
+  {%- style -%}
+    #section-outlined-text-{{ section.id }}{
+        background-color: {{ section.settings.background_color }};
+    }
+  {%- endstyle -%}
+{%- endif -%}
+{%- if section.blocks.size > 0 -%}
+  <div id="section-outlined-text-{{ section.id }}" class="outlined-text-wrapper">
+    <div class="page-width">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.image != blank -%}
+          {%- assign image_height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio -%}
+          <div class="outlined__image-wrapper" style="--transition-delay: {{ forloop.index | times: 0.3 }}s">
+            {{
+              block.settings.image
+              | image_url: width: 3840
+              | image_tag:
+                loading: 'lazy',
+                width: block.settings.image.width,
+                height: image_height,
+                sizes: '(min-width: 1200px) 1200px, 100vw',
+                widths: '375, 550, 750, 1100,  1200,  1500, 1780, 2000, 3000, 3840'
+            }}
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endif -%}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var section = document.getElementById('section-outlined-text-{{ section.id }}');
+    var image = section.querySelector('.outlined__image-wrapper:last-child');
+    var observer = new IntersectionObserver(
+      function (entries) {
+        if (entries[0].isIntersecting === true) {
+          section.classList.add('outlined__in-view');
+          observer.unobserve(section);
+        }
+      },
+      { threshold: [0], rootMargin: '0px 0px -200px 0px' }
+    );
+    observer.observe(section);
+  });
+</script>
+{% schema %}
+{
+  "name": "Outlined text",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section Background Color",
+      "default": "#00126B"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Outlined text"
+    }
+  ]
+}
+{% endschema %}

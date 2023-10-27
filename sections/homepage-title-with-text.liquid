@@ -1,0 +1,36 @@
+{%- style -%}
+  .section-heading {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+{%- endstyle -%}
+<div class="page-width">
+  <div class="homepage_title_txt">
+    <h2 class="title">{{ section.settings.title }}</h2>
+    <div class="homepage_desc">{{ section.settings.richtext | replace: 'award-winning', '<u>award-winning</u>' }}</div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Homepage title with text",
+  "class": "section-heading",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "richtext",
+      "label": "Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Homepage title with text",
+      "category": "title"
+    }
+  ]
+}
+{% endschema %}

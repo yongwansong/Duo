@@ -1,0 +1,129 @@
+<div class="page-width">
+  <div class="main" style="display:flex; align-items: stretch; justify-content: flex-end;">
+  <div class="imagAndText">
+    
+    <div data-aos="fade-right"
+      data-aos-offset="300"
+       data-aos-easing="linear"
+       data-aos-duration="500">
+          <div class="text_description">
+            <span class="number">1</span>
+            <h1>{{section.settings.title}}</h1>
+            <p>{{section.settings.paragraph}}</p>
+          </div>
+	</div>
+
+    <div data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="linear"
+        data-aos-duration="500">
+            <div class="text_description">
+                <span class="number">2</span>
+              <h1>{{section.settings.title1}}</h1>
+              <p>{{section.settings.paragraph1}}</p>
+            </div>
+    </div>
+
+   <div data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+           <div class="text_description">
+              <span class="number">3</span>
+            <h1>{{section.settings.title2}}</h1>
+            <p>{{section.settings.paragraph2}}</p>
+          </div>
+    </div>
+ 
+   <div data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="linear"
+        data-aos-duration="500">
+            <div class="text_description">
+                <span class="number">4</span>
+              <h1>{{section.settings.title3}}</h1>
+              <p>{{section.settings.paragraph3}}</p>
+            </div>
+    </div>
+
+  </div>
+  <div class="image_only">
+    <img src="{{product.metafields.my_fields.product_page_single_image | img_url:'master'}}">
+  </div>
+</div>
+  <div class="page-width last__item">
+        <div data-aos="fade-right"
+     		 data-aos-offset="200"
+     		 data-aos-easing="linear"
+     		 data-aos-duration="400">
+           <div class="lastText">
+               <span class="number">5</span>
+            <h1>{{product.metafields.my_fields.last_title_product_page}}</h1>
+            <p>{{product.metafields.my_fields.last_description_product_page}}</p>
+          </div>
+        </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Image with multiple text",
+    "settings": [{
+	"type":"text",	
+	"id":"title",
+	"label":"Add title"
+	},
+	{
+	"type":"text",	
+	"id":"paragraph",
+	"label":"Add paragraph"
+	},
+	{
+	"type":"text",	
+	"id":"title1",
+	"label":"Add title 1"
+	},
+	{
+	"type":"text",	
+	"id":"paragraph1",
+	"label":"Add paragraph 1"
+	},
+	{
+	"type":"text",	
+	"id":"title2",
+	"label":"Add title 2"
+	},
+	{
+	"type":"text",	
+	"id":"paragraph2",
+	"label":"Add paragraph 2"
+	},
+	{
+	"type":"text",	
+	"id":"title3",
+	"label":"Add title 3"
+	},
+	{
+	"type":"text",	
+	"id":"paragraph3",
+	"label":"Add paragraph 3"
+	},
+	{
+	"type":"text",	
+	"id":"title5",
+	"label":"Add title 5"
+	},
+	{
+	"type":"text",	
+	"id":"paragraph5",
+	"label":"Add paragraph 5"
+	}
+],
+	"presets":[{"name":"image with multiple text"}]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

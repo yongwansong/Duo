@@ -1,0 +1,919 @@
+/******************* About Us Page Css Start for Desktop ******************* */
+
+section#shopify-section-template--15347879641255__main {
+	display: none;
+}
+
+img.mobile_about-bnr.lazyload {
+	display: none !important;
+}
+
+section.Formulated-Dentists-page {
+	width: 100%;
+	position: relative;
+}
+
+div.about-us_content.page-width {
+	max-width: 1360px;
+	width: 100%;
+	padding: 4rem 10rem 0rem;
+	margin: 4rem auto 0rem;
+}
+
+section.section_guarntee {
+	background-color: #EDF0FF;
+}
+
+.section_guarnteediv {
+	max-width: 1360px;
+	padding: 7rem 10rem 7rem;
+	margin: 4rem auto 0;
+	width: 100%;
+}
+
+.formulated-richtext {
+	margin-bottom: 6rem;
+}
+
+.Formulated-Guarantee {
+	margin-bottom: 6rem;
+}
+
+.formulated-contact {
+	/* margin-bottom: 6rem; */
+}
+
+
+/****** About Us Banner CSS Start ******/
+section.Formulated-Banner {
+	position: relative;
+}
+
+.hero-image {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	padding-top: 92rem;
+}
+
+img.hero_img {
+	position: absolute;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+	min-width: 168rem;
+	min-height: 112rem;
+	object-position: center;
+	object-fit: cover;
+}
+
+
+span.email_link_name p {
+	font-weight: 600;
+	color: #fff;
+}
+
+span.email_link_name p strong {
+	font-weight: 600;
+	color: #fff;
+}
+
+.social-link span.social_link_name p {
+	color: #fff;
+	font-weight: 600;
+}
+
+/* Banner Text */
+.ingredients-banner {
+	position: absolute;
+	width: 100%;
+	max-width: 700px;
+	top: 65px;
+	left: 14rem;
+}
+
+.ingredients-banner .block-main-heading h1 {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 46.6667px;
+	line-height: 67px;
+	letter-spacing: 0.03em;
+	color: #000000;
+	margin: 2.4rem 0;
+}
+
+.Block-Title ul#Block_list li a.Block_Title {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 26.9874px;
+	line-height: 50px;
+	letter-spacing: 0.03em;
+	text-decoration-line: underline;
+	color: #000000;
+}
+
+.Block-Title ul#Block_list {
+	list-style: none;
+	padding-left: 2.6rem;
+	margin: 0px;
+}
+
+
+/* Formulated  */
+.formulated-Richtext-child {
+	width: 100%;
+	max-width: 700px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	margin: 3rem auto;
+}
+
+.formulated-Richtext-child img {
+	width: 115px;
+}
+
+h2.formulated-richtext-title {
+	font-size: 40px;
+	font-weight: 500;
+	line-height: 29px;
+	letter-spacing: -0.015em;
+	text-align: center;
+}
+
+.formulated-richtext_desp p {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 34px;
+	color: #000000;
+}
+
+.formulated-grid {
+	border: 3px solid #58B0FC;
+	box-sizing: border-box;
+	border-top-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+	padding: 2rem 6rem;
+}
+
+
+/* Text width Text */
+.text_width-text {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+
+
+}
+
+.right_accordion {
+	padding-left: 0px;
+	width: 70%;
+}
+
+section.accordion-Formulated button.accordion p {
+	margin: 10px auto;
+	width: 100%;
+	display: flex;
+}
+
+.formulated-grid {
+	border: 3px solid #58B0FC;
+	box-sizing: border-box;
+}
+
+.right_accordion.faq {
+	position: relative;
+    font-family: Poppins;
+}
+
+h2.accordion-heading p {
+	margin: 1rem 0;
+}
+
+.guarantee-richtext {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0px;
+}
+
+.guarantee__grid {
+	border: 3px solid #FECC41;
+	box-sizing: border-box;
+	border-top-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+	padding: 2rem 6rem;
+}
+
+h2.accordion-heading p {
+      font-family: Poppins;
+
+	font-style: normal;
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 49px;
+	color: #000000;
+}
+
+h3.accordion_heading {
+      font-family: Poppins;
+
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 34px;
+	display: flex;
+	align-items: center;
+	color: #000000;
+}
+
+.bottom_content p {
+      font-family: Poppins;
+
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 34px;
+	letter-spacing: 0;
+	text-align: left;
+	padding-top: 0;
+	margin-top: 0;
+}
+
+button.accordion.active svg {
+	transform: rotate(90deg);
+}
+
+/* button.accordion:before {
+   content: "";
+    position: absolute;
+    left: 5px;
+    top: 25px;
+    display: block;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    width: 11px;
+    height: 11px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+} */
+
+/* button.accordion.active:before {
+    transform: translate(-50%, -50%) rotate(44deg);
+} */
+
+
+section.formulated-contact {
+	background-color: #00126B;
+}
+
+
+h1.Guarantee_heading {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 51px;
+	text-align: center;
+	color: #000000;
+	margin: 1rem 0;
+}
+
+.guarantee-richtext p {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 34px;
+	/* or 169% */
+	color: #000000;
+}
+
+h1.contact_heading {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 29px;
+	letter-spacing: -0.015em;
+	color: #fff;
+	margin-top: 5px;
+}
+
+.contact__desp p {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	/*     line-height: 33px; */
+	color: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+.contact-link p {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	/*     line-height: 33px; */
+	color: #fff;
+}
+
+.contact-link span a {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	/*     line-height: 33px; */
+	color: #fff;
+	text-decoration: none;
+}
+
+.cntact__us {
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+	max-width: 1360px;
+	padding: 6rem 10rem 2rem;
+	margin: 0 auto 0;
+}
+
+.Contact-richtext {
+	width: 30%;
+}
+
+.guarantee-richtext p strong {
+	text-decoration: underline;
+	text-decoration-color: #63B0FB;
+	text-decoration-thickness: 4px;
+}
+
+.desp-width-link {
+	width: 85%;
+	padding: 0 5rem;
+}
+
+.contact-link p {
+	margin: 0;
+}
+
+.contact-link .email-link {
+	margin: 2rem 0;
+}
+
+h3.accordion_heading p {
+	margin: 5px 0px;
+}
+
+h2.accordion-heading {
+	margin: 0px;
+}
+
+section.Formulated-Dentists-page ul#Block_list p {
+	margin: 0px;
+}
+
+
+section.accordion-Formulated button.accordion {
+	font-size: 20px;
+	display: inline-flex;
+	align-items: center;
+}
+
+section.accordion-Formulated button.accordion p strong {
+  font-family: Poppins;	
+  font-weight: 600;
+	color: #000;
+	padding-left: 20px;
+}
+
+/****** About Us Banner CSS Start ******/
+
+
+
+/****** Responsive desgin CSS Start ******/
+
+@media(max-width: 1200px) and (min-width: 1100px) {
+
+	img.hero_img {
+		min-width: 138rem;
+	}
+
+	img.mobile_about-bnr.lazyload {
+		display: none;
+	}
+}
+
+@media(max-width: 1100px) and (min-width: 1000px) {
+	img.hero_img {
+		min-width: 120rem;
+	}
+
+	.ingredients-banner {
+		max-width: 500px;
+	}
+
+	img.mobile_about-bnr.lazyload {
+		display: none;
+	}
+
+}
+
+@media(max-width: 1000px) and (min-width: 900px) {
+
+	img.mobile_about-bnr.lazyload {
+		display: none;
+	}
+
+	img.hero_img {
+		min-width: 114rem;
+		min-height: 98rem;
+	}
+
+	.ingredients-banner {
+		max-width: 500px;
+	}
+
+	.hero-image {
+		padding-top: 80rem;
+	}
+
+
+
+}
+
+@media(max-width: 900px) and (min-width: 800px) {
+
+	img.hero_img {
+		min-width: 98rem;
+		min-height: 98rem;
+	}
+
+	.ingredients-banner {
+		max-width: 450px;
+		top: 40px;
+		left: 8rem;
+	}
+
+	.hero-image {
+		padding-top: 80rem;
+	}
+
+	.Block-Title ul#Block_list li a.Block_Title {
+		font-size: 22.9874px;
+		line-height: 45px;
+	}
+
+
+
+}
+
+@media(max-width: 800px) and (min-width: 700px) {
+	img.about-bnr.lazyload {
+		width: 100%;
+		display: none;
+	}
+
+	img.hero_img {
+		min-width: 98rem;
+		min-height: 98rem;
+	}
+
+	.ingredients-banner {
+		max-width: 450px;
+		top: 40px;
+		left: 8rem;
+	}
+
+	.hero-image {
+		padding-top: 80rem;
+	}
+
+	.Block-Title ul#Block_list li a.Block_Title {
+		font-size: 22.9874px;
+		line-height: 45px;
+	}
+
+	.formulated-Richtext-child img {
+		width: 100px;
+	}
+
+	h2.formulated-richtext-title {
+		font-size: 30px;
+		line-height: 25px;
+	}
+
+	.formulated-richtext_desp p {
+		font-size: 18px;
+		line-height: 30px;
+	}
+
+	h2.accordion-heading p {
+		font-size: 30px;
+		line-height: 40px;
+	}
+
+	.left_accordion {
+		margin-right: 2rem;
+	}
+
+	h3.accordion_heading {
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	h1.Guarantee_heading {
+		font-size: 30px;
+		line-height: 40px;
+		margin: 1rem 0;
+	}
+
+	.guarantee-richtext p {
+		font-size: 18px;
+		line-height: 30px;
+	}
+
+	h1.contact_heading {
+		font-size: 30px;
+		line-height: 28px;
+	}
+
+	.contact__desp p,
+	.contact-link p,
+	.contact-link span a {
+		font-size: 18px;
+		line-height: 30px;
+		text-decoration: none;
+	}
+
+	.contact-link .email-link {
+		margin: 2rem 0;
+	}
+
+}
+
+@media(max-width: 700px) and (min-width: 600px) {
+	.cntact__us {
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-around;
+		max-width: 100%;
+		padding: 6rem 3rem 2rem;
+		margin: 0 auto;
+	}
+
+	.section_guarnteediv {
+		max-width: 100%;
+		padding: 7rem 3rem;
+		margin: 4rem auto 0;
+		width: 100%;
+	}
+
+	div.about-us_content.page-width {
+		padding: 2rem 3rem 0rem;
+		margin: 2rem auto 0rem;
+	}
+
+	img.hero_img {
+		min-width: 85rem;
+		min-height: 82rem;
+	}
+
+	.ingredients-banner {
+		max-width: 425px;
+		top: 35px;
+		left: 4rem;
+	}
+
+	.hero-image {
+		padding-top: 70rem;
+	}
+
+	.Block-Title ul#Block_list li a.Block_Title {
+		font-size: 22.9874px;
+		line-height: 45px;
+	}
+
+	.formulated-Richtext-child img {
+		width: 80px;
+	}
+
+	h2.formulated-richtext-title {
+		font-size: 26px;
+		line-height: 22px;
+	}
+
+	.formulated-richtext_desp p {
+		font-size: 16px;
+		line-height: 28px;
+	}
+
+	h2.accordion-heading p {
+		font-size: 26px;
+		line-height: 35px;
+	}
+
+	.left_accordion {
+		margin-right: 2rem;
+	}
+
+	h3.accordion_heading {
+		font-size: 17px;
+		line-height: 20px;
+	}
+
+	h1.Guarantee_heading {
+		font-size: 26px;
+		line-height: 35px;
+		margin: 1rem 0;
+	}
+
+	.guarantee-richtext p {
+		font-size: 16px;
+		line-height: 28px;
+	}
+
+	h1.contact_heading {
+		font-size: 30px;
+		line-height: 28px;
+	}
+
+	.contact__desp p,
+	.contact-link p,
+	.contact-link span a {
+		font-size: 16px;
+		line-height: 30px;
+	}
+
+	.contact-link .email-link {
+		margin: 2rem 0;
+	}
+
+	h2.accordion-heading.mobile_about_head {
+		display: block !important;
+	}
+}
+
+/******  Responsive desgin CSS End ******/
+
+
+
+
+/****** Mobile CSS Start ******/
+@media(max-width: 600px) {
+	h2.accordion-heading.mobile_about_head {
+		display: block !important;
+	}
+
+	.cntact__us {
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-around;
+		max-width: 100%;
+		padding: 6rem 3rem 2rem;
+		margin: 0 auto;
+	}
+
+	.section_guarnteediv {
+		max-width: 100%;
+		padding: 7rem 3rem;
+		margin: 0rem auto 0;
+		width: 100%;
+	}
+
+	div.about-us_content.page-width {
+
+		padding: 2rem 1.5rem;
+		margin: 2rem auto 0rem;
+	}
+
+	img.hero_img {
+		min-width: 50rem;
+		min-height: 56rem;
+	}
+
+	.ingredients-banner .block-main-heading h1 {
+		font-size: 40.6667px;
+		line-height: 58px;
+		margin: 2rem 0;
+	}
+
+	.ingredients-banner {
+		max-width: 300px;
+		top: 35px;
+		left: 2rem;
+	}
+
+	.hero-image {
+		padding-top: 50rem;
+	}
+
+	.Block-Title ul#Block_list li a.Block_Title {
+		font-size: 20.9874px;
+		line-height: 40px;
+	}
+
+	.formulated-Richtext-child img {
+		width: 80px;
+	}
+
+	.formulated-Richtext-child {
+		max-width: 1000px;
+		justify-content: center;
+		margin: 2rem auto;
+		flex-direction: column;
+	}
+
+	.formulated-grid {
+		padding: 2rem 1.5rem;
+	}
+
+	h2.formulated-richtext-title {
+		font-size: 26px;
+		line-height: 22px;
+	}
+
+	.text_width-text {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0rem 2rem;
+		margin: 0rem auto 0;
+	}
+
+	section.accordion-Formulated {
+		margin: 0rem auto 0rem !important;
+		width: 100%;
+		line-height: normal;
+	}
+
+	section.section_guarntee h2.accordion-heading {
+		display: block !important;
+		text-align: left;
+		width: 100%;
+	}
+
+	.formulated-richtext_desp p {
+		font-size: 16px;
+		line-height: 28px;
+	}
+
+	h2.accordion-heading p {
+		font-size: 26px;
+		line-height: 35px;
+	}
+
+	.left_accordion {
+		margin-right: 2rem;
+	}
+
+	h3.accordion_heading {
+		font-size: 17px;
+		line-height: 20px;
+	}
+
+	h1.Guarantee_heading {
+		font-size: 26px;
+		line-height: 35px;
+		margin: 1rem 0;
+	}
+
+	.guarantee-richtext p {
+		font-size: 16px;
+		line-height: 28px;
+	}
+
+	h1.contact_heading {
+		font-size: 30px;
+		line-height: 28px;
+		text-align: left;
+		margin: 2rem 0;
+		padding-left: 2rem;
+	}
+
+	.contact__desp p,
+	.contact-link p,
+	.contact-link span a {
+		font-size: 16px;
+		line-height: 30px;
+	}
+
+	.contact-link .email-link {
+		margin: 2rem 0;
+	}
+
+	.formulated-richtext,
+	.Formulated-Guarantee {
+		margin-bottom: 1rem;
+	}
+
+	h2.accordion-heading {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		margin-bottom: 20px;
+	}
+
+	h2.accordion-heading p {
+		margin: 0px;
+	}
+
+	section.accordion-Formulated {
+		margin: 0rem auto 4rem;
+	}
+
+	.guarantee__grid {
+		padding: 2rem 1.5rem;
+	}
+
+	.cntact__us {
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 3rem 2rem;
+	}
+
+	.Contact-richtext {
+		width: 100%;
+	}
+
+	.desp-width-link {
+		width: 100%;
+		padding: 0 1.5rem;
+	}
+
+}
+
+.panel p {
+	color: #000;
+	font-size: 14px;
+	letter-spacing: 0;
+	padding-left: 30px;
+}
+
+
+@media(max-width: 767px) {
+
+	img.mobile_about-bnr.lazyload {
+		width: 100%;
+		display: block !important;
+	}
+
+	img.about-bnr.lazyload {
+		display: none;
+
+	}
+
+	section.accordion-Formulated .left_accordion {
+		width: 100%;
+	}
+
+	h2.accordion-heading.mobile_about_head {
+		display: block !important;
+		padding-left: 30px;
+	}
+
+	section.accordion-Formulated button.accordion {
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 500;
+		color: #000;
+	}
+
+	.panel p {
+		color: #000;
+	}
+
+	section.section_guarntee h2.accordion-heading {
+		display: block !important;
+
+	}
+
+	.section_guarnteediv {
+		max-width: 100%;
+		padding: 7rem 3rem;
+		margin: 4rem auto 0;
+		width: 100%;
+	}
+
+	h2.accordion-heading.desktop_about_head {
+		display: none !important;
+	}
+
+	section.accordion-Formulated button.accordion svg {
+		display: none;
+	}
+
+}
+
+/****** Mobile CSS End ******/
+
+
+/****** About Us Banner CSS Start ******/
+/****** About Us Banner CSS Start ******/
+/****** About Us Banner CSS Start ******/
+
+
+/******************* About Us Page Css End for Desktop ******************* */

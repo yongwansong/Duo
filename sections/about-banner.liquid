@@ -1,0 +1,188 @@
+{% if section.settings.enable_full_banner %}
+  <div
+    class="section--fullwidth-banner"
+    id="section--fullwidth-banner"
+    style="background-image: url('{{section.settings.img | img_url: 'master' }}')"
+  >
+    <div class="ingredients-banner">
+      <div class="block-main-heading">
+        {% if section.settings.block_main_heading != blank %}
+          <h1>{{ section.settings.block_main_heading }}</h1>
+        {% endif %}
+      </div>
+      <div class="Block-Title">
+        <ul class="Block-list" id="Block_list">
+          {% for block in section.blocks %}
+            {% if block.settings.Block_Title != blank %}
+              <li>
+                <a class="Block_Title" target="_blank" href="{{ block.settings.url }}">
+                  {{- block.settings.Block_Title -}}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <style>
+        .section--fullwidth-banner{
+          position: relative;
+          display: flex;
+          align-items: flex-start;
+          width: 100%;
+          height: 100%;
+          overflow: visible;
+          text-align: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        @media(min-width: 768px){
+
+          .section--fullwidth-banner{
+              min-width: 165rem;
+              min-height: 110rem;
+           }
+
+          .ingredients-banner {
+              width: 100%;
+              max-width: 85%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              margin: 10rem auto;
+          }
+
+          div#shopify-section-about-banner {
+              margin-bottom: 5rem;
+          }
+
+
+        }
+        .section--fullwidth-banner .title{
+
+          z-index: 1;
+          width: 100%;
+          font-weight: 600;
+          font-size: 170%;
+
+        }
+        .section--fullwidth-banner .title span{
+          display: inline-block;
+          padding: 10px 20px;
+          background: rgba(255,255,255,0.8);
+          color: #000;
+        }
+        {% comment %} .section--fullwidth-banner img{
+          position: absolute;
+          z-index: 0;
+          top: 0;
+          left: 0;
+          right: 0;
+        } {% endcomment %}
+
+
+        ul#Block_list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+          	padding-left: 16px;
+        }
+
+        a.Block_Title {
+            text-align: left;
+        }
+
+        ul#Block_list li {
+            margin: 5px 0px;
+        }
+
+        a.Block_Title {
+            color: #000;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 42px;
+        }
+
+        div#shopify-section-about-banner {
+        overflow: hidden;
+    }
+
+        @media(max-width: 600px){
+
+          div#section--fullwidth-banner .block-main-heading h1 {
+              text-align: initial;
+          }
+
+          .ingredients-banner {
+              padding-left: 3rem;
+          }
+
+        }
+  </style>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Full-width Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "block_main_heading",
+      "label": " Block Main Heading "
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_full_banner",
+      "label": "Enable Fullwidth Banner",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "img",
+      "label": "Default image"
+    },
+    {
+      "type": "number",
+      "id": "img_height",
+      "label": "Image height in px",
+      "default": 200
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Block Title",
+      "settings": [
+        {
+          "type": "text",
+          "id": "Block_Title",
+          "default": "Title",
+          "label": " Functions "
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "url"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Block Title",
+      "blocks": [
+        {
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

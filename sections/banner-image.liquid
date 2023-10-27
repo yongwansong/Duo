@@ -1,0 +1,117 @@
+{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+
+
+<style>
+  
+
+.image_banner {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    padding-bottom: 60rem;
+}
+
+img.middle__image {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+  
+  @media(min-width: 550px){
+  
+    .middle-banner.page-width {
+        margin: 3rem auto;
+        padding: 0;
+    } 
+  
+  }  
+  
+  @media(min-width: 750px){
+  
+    .middle-banner.page-width {
+        margin: 5rem auto;
+        padding: 0;
+    } 
+  
+  }
+  
+  @media(min-width: 990px){
+  
+    .middle-banner.page-width {
+        margin: 6rem auto;
+        padding: 0;
+    } 
+  
+  }
+
+  @media(max-width: 550px){
+  
+    .middle-banner.page-width {
+        margin: 2rem auto 0rem;
+        padding: 0;
+    }
+    
+    .image_banner {
+        padding-bottom: 26rem;
+    }
+
+    img.middle__image {
+        object-fit: contain;
+        object-position: center;
+    }
+  
+  }  
+
+
+</style>
+
+<div class="middle-banner page-width">
+	<div class="banner_media-image">
+      <div class="image_banner">
+        <img class="middle__image"
+
+           src="{{ product.images.last | product_img_url: 'master' }}"
+          alt="{{ product.images.last.alt | escape }}"
+        >
+      </div>
+
+    </div> 
+  {%comment%}
+    <div class="banner__content banner__content--{{ section.settings.heading }} page-width">
+      <div class="banner__box">
+              {% if section.settings.heading != blank %}
+              <h2 class="banner__heading middle_banner-heading">
+                <span>{{ section.settings.heading | escape }}</span>
+              </h2>
+              {% endif %}
+      </div>
+    </div>
+  {%endcomment%}
+</div>
+
+
+
+
+{% schema %}
+  {
+    "name": "Middle Banner",
+    "settings": [
+      {
+      "type":"text",	
+      "id":"heading",
+      "label":"Middle Banner Heading"
+      }
+	],
+	"presets":[{"name":"Middle Banner Heading"}]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

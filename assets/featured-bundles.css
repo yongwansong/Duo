@@ -1,0 +1,135 @@
+.featured-bundles {
+	--page-width-margin: 0rem;
+	padding-bottom: 7rem;
+}
+.featured-bundles .page-width {
+	max-width: 1080px;
+	padding: 0 1.5rem;
+}
+.featured-bundles .title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 87px;
+    text-align: center;
+    margin: 0 auto;
+}
+.featured-bundles .card-information__wrapper{
+    font-style: normal;
+    font-weight: 500;
+    color: #000;
+}
+.featured-bundles .section-description {
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+    color: #000000;
+    margin: 5px 0 40px 0;
+}
+.featured-bundles .grid{
+	margin-left: -1.5rem;
+	margin-right: -1.5rem;
+	row-gap:  2.5rem;
+}
+.featured-bundles .grid .grid__item{
+	padding: 0 1.5rem;
+}
+.featured-bundles .card-wrapper{
+	min-height: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 20px 20px 20px;
+    border: 1px solid #ddddddd1;
+    border-top-color: #fff;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.featured-bundles .card-information__wrapper{
+	padding: 2.5rem;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+.featured-bundles .card-information__text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 34px;
+    text-decoration: none;
+    text-align: center;
+    max-width: 260px;
+	margin: 0 auto;
+}
+.featured-bundles .card-information__description{
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    max-width: 90%;
+    margin: 1.5rem auto;
+}
+.featured-bundles .card-information__description *{
+	margin: 0;
+}
+.featured-bundles .card-information__price{
+	font-size: 18px;
+	line-height: 18px;
+	margin-bottom: 1.5rem;
+}
+.featured-bundles .card-information__price .sale_price {
+    text-decoration-line: line-through;
+    color: #979797;
+    padding: 0 10px;
+}
+.featured-bundles .card__button-wrapper{
+	margin-top: auto;
+	position: relative;
+	z-index: 1;
+}
+.featured-bundles .card__button-wrapper .button {
+	--color-button: 0, 0, 0;
+	--color-button-text: 0, 0, 0;
+	border-width: .2rem;
+	border-radius: 100px;
+	font-weight: 600;
+    font-size: 1.6rem;
+	text-transform: uppercase;
+	align-items: center;
+	min-height: 4.8rem;
+	padding: 1.35rem 3rem 1.1rem;
+}
+.featured-bundles .card__button-wrapper .button:hover {
+	--color-button: 0, 189, 253;
+	--color-button-text: 255, 255, 255;
+	--alpha-button-background: 1;
+}
+.featured-bundles .card-wrapper .full-unstyled-link:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+@media screen and (max-width: 1023px) {
+    .featured-bundles .title {
+        font-size: 46px;
+        line-height: initial;
+    }
+}
+@media screen and (max-width: 749px) {
+	.featured-bundles .grid__item + .grid__item{
+		margin-top: 4rem;
+	}
+    .featured-bundles .grid .grid__item {
+        width: 100%;
+        max-width: 100%;
+		padding: 0 2.5rem;
+    }
+	.featured-bundles .card-wrapper {
+		max-width: none!important;
+	}
+}

@@ -1,0 +1,101 @@
+  <section class="accordion">
+    
+    <div class="accordion-richtext">
+      {%if section.settings.section_title!=blank%}
+      <h1 class="accordion_heading">{{section.settings.section_title}}</h1>
+      {%endif%}
+    </div>
+    
+    {% for block in section.blocks %}
+    {%if block.settings.Heading!=blank%}
+    <h3 class="accordion_heading">{{block.settings.Heading}}</h3>
+    {%endif%}
+    <div class="accordion_text">
+    {%if block.settings.text!=blank%}  
+    {{block.settings.text}}
+    {%endif%}  
+    </div>
+    {%endfor%}
+  </section>
+
+
+<style type="text/css">
+.accordion{
+  margin:30px auto;
+  width: 500px;
+  font-family: tahoma;
+  line-height: 200%;
+}
+.accordion h3{
+  background: #36b0ed;
+  padding: 10px;
+  margin: 0;
+  cursor:pointer;
+}
+.accordion_text{
+  background:#cedde5;
+  padding: 10px;
+  display:none;
+}
+.accordion h3 i{
+  float: right;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+
+</style>
+
+
+
+
+{% schema %}
+  {
+    "name": "Faq",
+    "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Title",
+      "default": "Talk about your brand"
+    }
+  ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Faq",
+        "settings": [
+          {
+            "type": "text",
+            "id": "Heading",
+            "label": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+    {
+      "name": "Faq",
+      "category": "Text"
+    }
+  	]
+  }
+{% endschema %}
+

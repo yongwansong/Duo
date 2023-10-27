@@ -1,0 +1,126 @@
+{{ 'section-qualities.css' | asset_url | stylesheet_tag }}
+{%- unless product.metafields.qualities.enable == false -%}
+  <div class="pdp-qualities__wrapper center">
+    <div class="page-width">
+      {%- if section.settings.icon != blank -%}
+        <div class="pdp-qualities__icon">
+          {%- assign icon_alt = section.settings.icon.alt | default: section.settings.heading | escape -%}
+          {{
+            section.settings.icon
+            | image_url: width: 153
+            | image_tag:
+              widths: '120, 153, 240, 306, 360, 459',
+              width: 120,
+              alt: icon_alt,
+              sizes: '(min-width: 750px) 153px, 120px',
+              loading: 'lazy'
+          }}
+        </div>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="pdp-qualities__heading">{{ section.settings.heading | newline_to_br }}</h2>
+      {%- endif -%}
+      {%- if section.settings.description -%}
+        <div class="pdp-qualities__description rte">
+          {{ section.settings.description }}
+        </div>
+      {%- endif -%}
+      {%- if section.blocks.size > 0 -%}
+        {%- liquid
+          assign grid_columns = 'grid--1-col'
+          if section.blocks.size == 2
+            assign grid_columns = 'grid--1-col grid--2-col-tablet'
+          elsif section.blocks.size == 3
+            assign grid_columns = 'grid--1-col grid--3-col-tablet'
+          endif
+        -%}
+        <div class="pdp-qualities__row grid grid--gapless {{ grid_columns }}">
+          {%- for block in section.blocks -%}
+            <div class="grid__item">
+              {%- if block.settings.icon != blank -%}
+                <div class="pdp-qualities__item-icon">
+                  {{
+                    block.settings.icon
+                    | image_url: width: 156
+                    | image_tag:
+                      widths: '35, 52, 70, 104, 156',
+                      width: 52,
+                      sizes: '(min-width: 750px) 52px, 35',
+                      loading: 'lazy'
+                  }}
+                </div>
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <p class="pdp-qualities__item-text">
+                  {{ block.settings.text }}
+                </p>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+      {%- if section.settings.bottom_description != blank -%}
+        <div class="pdp-qualities__bottom-description rte">
+          {{ section.settings.bottom_description }}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endunless -%}
+{% schema %}
+{
+  "name": "PDP - Qualities",
+  "class": "section-pdp-qualities",
+  "max_blocks": 3,
+  "tag": "section",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "Icon"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "vitamins & supplements \nabsorbed as you brush"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "richtext",
+      "id": "bottom_description",
+      "label": "Bottom description"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Column",
+      "type": "column",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "PDP - Qualities"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,75 @@
+.section-why-choose-us{
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+.section-why-choose-us .page-width {
+    max-width: 1080px;
+}
+.why-choose-us__heading{
+	font-size: 3.4rem;
+	font-weight: 500;
+	margin-bottom: 4rem;
+	margin-top: 0;
+	display: none;
+}
+.why-choose-us__blocks{
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 3rem;
+}
+.why-choose-us__block{
+	display: flex;
+	gap: 2rem;
+}
+.why-choose-us__block-title{
+	font-size: 2.4rem;
+	font-weight: 500;
+	margin: 0;
+	text-wrap: balance;
+}
+.why-choose-us__block-details{
+	font-size: 1.4rem;
+	line-height: 1.4;
+	font-weight: 500;
+}
+.why-choose-us__button{
+	margin-top: 4rem;
+	text-align: center;
+}
+.why-choose-us__button .button{
+	font-size: 1.7962rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: -0.0269rem;
+	width: 100%;
+	min-width: initial;
+	max-width: 100%;
+	padding: 1.29rem 3.29rem;
+	border-radius: 100px;
+	box-shadow: 0 0 0 0.2rem #000;
+	transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.why-choose-us__button .button:hover {
+    background-color: #00126B;
+    color: #fff;
+    box-shadow: 0 0 0 0.2rem #00126B;
+}
+@media screen and (min-width: 768px){
+	.why-choose-us__heading{
+		display: block;
+	}
+	.why-choose-us__block-details{
+		font-size: 1.6rem;
+	}
+	.why-choose-us__blocks{
+		grid-template-columns: 1fr 1fr;
+	}
+	.why-choose-us__button .button{
+		width: 36rem;
+	}
+}
+@media screen and (min-width: 990px){
+	.why-choose-us__blocks{
+		column-gap: 10rem;
+	}
+}

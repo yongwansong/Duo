@@ -1,0 +1,42 @@
+{{ 'section-heading.css' | asset_url | stylesheet_tag }}
+
+<div class="heading">
+    {% if section.settings.title != blank %}
+        <div class="section__title">
+            {{ section.settings.title }}
+        </div>
+    {% endif %}
+</div>
+ 
+<style>
+    .product-with-text-section {
+        background-color: {{ section.settings.section_bg_color }};
+    }
+</style>
+ 
+{% schema %}
+  {
+    "name": "Heading",
+    "class": "heading__section",
+    "settings": [
+    {
+        "type": "color",
+        "id": "section_bg_color",
+        "label": "Section background color",
+        "default": "#fff"
+    },
+    {
+        "type": "richtext",
+        "id": "title",
+        "label": "Title"
+    } 
+    ],
+	"presets": [
+    {
+      "name": "Heading"
+    }
+  ]	
+  }
+ 
+{% endschema %}
+ 

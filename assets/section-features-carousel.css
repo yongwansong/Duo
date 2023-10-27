@@ -1,0 +1,130 @@
+.section-featured-carousel{
+	position: relative;
+	z-index: 1;
+	line-height: 1.4;
+	padding-bottom: 8rem;
+}
+.features-carousel__wrapper .slick-dots{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+.features-carousel__wrapper .slick-dots button{
+	outline: none;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+	text-indent: -9999px;
+	background: #00126B;
+	border: 1px solid #00126B;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	display: block;
+}
+.features-carousel__wrapper .slick-dots .slick-active button{
+	background: #fff;
+}
+.features-carousel__slick-prev,
+.features-carousel__slick-next{
+	position: absolute;
+	top: calc( 50% + 4rem );
+	transform: translateY(-50%);
+	width: 21px;
+	height: 43px;
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	color: #00126B;
+	display: none!important;
+}
+.features-carousel__slick-prev svg,
+.features-carousel__slick-next svg{
+	width: 100%;
+	height: 100%;
+}
+.features-carousel__slick-prev.slick-disabled,
+.features-carousel__slick-next.slick-disabled{
+	opacity: 0.1;
+	cursor: not-allowed;
+}
+.features-carousel__slick-prev{
+	left: 0;
+}
+.features-carousel__slick-next{
+	right: 0;
+}
+
+.features-carousel__slide{
+	padding: 5rem 3rem;
+	text-align: center;
+}
+.features-carousel__wrapper .slick-list{
+	margin-top: -8rem;
+}
+.features-carousel__slide-icon{
+	width: 5rem;
+	height: 5rem;
+	margin: 0 auto 0;
+}
+.features-carousel__slide-heading{
+	font-weight: 500;
+	font-size: 2.5rem;
+	margin: 4.2rem 0 1.4rem;
+	line-height: 1.1;
+}
+.features-carousel__slide-description{
+	font-size: 2rem;
+}
+.features-carousel__button{
+	margin-top: 4rem;
+	text-align: center;
+}
+.features-carousel__button .button{
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 1.7rem;
+	padding: 0.9rem 3rem 0.9rem;
+    min-height: 5rem;
+	min-width: initial;
+	width: 36rem;
+	max-width: 100%;
+	border-radius: 100px;
+	box-shadow: 0 0 0 0.2rem #000;
+	transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.features-carousel__button .button:hover{
+	background-color: #00126B;
+	color: #fff;
+	box-shadow: 0 0 0 0.2rem #00126B;
+}
+@media (min-width: 540px){
+	.features-carousel__slide-heading{
+		font-size: 3.6rem;
+	}
+	.features-carousel__slide-description{
+		font-size: 2.4rem;
+	}
+}
+@media (min-width: 767px){
+	.features-carousel__slide-heading{
+		font-size: 5.7rem;
+	}
+	.features-carousel__button{
+		margin-top: 5rem;
+	}
+	.features-carousel__slide-icon{
+		width: 6rem;
+		height: 6rem;
+	}
+	.features-carousel__slick-prev,
+	.features-carousel__slick-next{
+		display: block!important;
+	}
+}

@@ -1,0 +1,163 @@
+{{ 'splide.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'splide.js' | asset_url }}" defer="defer"></script>
+{{ 'our-services.css' | asset_url | stylesheet_tag }}
+{%- if section.settings.section_bg_color != blank -%}
+  {%- style -%}
+    #section--{{ section.id }}{
+    	background-color: {{ section.settings.section_bg_color }};
+    }
+  {%- endstyle -%}
+{%- endif -%}
+<div id="section--{{ section.id }}" class="splide our-services_wrapper" role="group" aria-label="Product Features">
+  <div class="splide__track">
+    <ul class="list list-unstyled splide__list our-services_icons">
+      {%- for block in section.blocks -%}
+        <li class="splide__slide">
+          <div class="our-services__icon">
+            {% if block.settings.icon != blank %}
+              <span class="our-services_icons__icon">
+                <img
+                  src="{{ block.settings.icon | img_url: '350x' }}"
+                  widget="30"
+                  height="30"
+                >
+              </span>
+            {% endif %}
+            {% if block.settings.title != blank %}
+              <span class="our-services_icons__text">{{ block.settings.title }}</span>
+            {% endif %}
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#section--{{ section.id }}', {
+      gap: '5rem',
+      arrows: false,
+      pagination: false,
+      type: 'loop',
+      drag: false,
+      focus: 'center',
+      autoWidth: true,
+      perPage: 1,
+      autoScroll: {
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        speed: 0.6,
+      },
+      breakpoints: {
+        749: { gap: '2rem' },
+      },
+    }).mount(window.splide.Extensions);
+  }); /*
+  // Swiper
+  /*document.addEventListener('DOMContentLoaded', function () {
+		let Swiper = new Swiper('#our-services--{{ section.id }}', {
+			spaceBetween: 0,
+			centeredSlides: true,
+			speed: 6000,
+			autoplay: {
+			  delay: 1,
+			},
+			loop: true,
+			slidesPerView:'auto',
+			allowTouchMove: false,
+			disableOnInteraction: true
+		});
+	});*/
+  /*$('.our-services_icons').slick({
+    arrows: false,
+    dots: false,
+    slidesToShow: 9,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 5000,
+    pauseOnHover: false,
+    cssEase: 'linear',
+    responsive: [
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 7,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 990,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2.5,
+        },
+      },
+      {
+        breakpoint: 360,
+        settings: {
+          slidesToShow: 1.5,
+        },
+      },
+    ],
+  });*/
+</script>
+
+{% schema %}
+{
+  "name": "Our services",
+  "class": "our-services-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Section background color",
+      "default": "#FECC41"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Services",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "url"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Our services",
+      "blocks": [
+        {
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

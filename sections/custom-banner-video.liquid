@@ -1,0 +1,169 @@
+{{ 'section-hero-banner.css' | asset_url | stylesheet_tag }}
+<div class="section-hero-banner">
+  <div class="hero-banner__video-wrapper">
+    {%- liquid
+      assign desktop_video = section.settings.video | default: section.settings.videomobile
+      assign mobile_video = section.settings.videomobile
+
+      assign desktop_poster = section.settings.videoimage | default: section.settings.videoimagemobile
+      assign mobile_poster = section.settings.videoimagemobile
+    -%}
+    {%- if desktop_video != blank -%}
+      <video
+        {% if mobile_video != blank %}
+          class="hero-banner__video--desktop"
+        {% endif %}
+        autoplay
+        muted
+        loop
+        playsinline
+        {% if desktop_poster != blank %}
+          poster="{{ desktop_poster | image_url }}"
+        {% endif %}
+      >
+        <source src="{{ desktop_video }}">
+      </video>
+    {%- endif -%}
+    {%- if mobile_video != blank -%}
+      <video
+        class="hero-banner__video--mobile"
+        autoplay
+        muted
+        loop
+        playsinline
+        {% if mobile_poster != blank %}
+          poster="{{ mobile_poster | image_url }}"
+        {% endif %}
+      >
+        <source src="{{ mobile_video }}">
+      </video>
+    {%- endif -%}
+  </div>
+
+  <div class="hero-banner__content page-width">
+    <div class="hero-banner__text">
+      {%- if section.settings.heading != blank -%}
+        <h2>{{ section.settings.heading | newline_to_br }}</h2>
+      {%- endif -%}
+      {%- if section.settings.subheading != blank -%}
+        <p>{{ section.settings.subheading }}</p>
+      {%- endif -%}
+    </div>
+    <div class="hero-banner__buttons">
+      {% if section.settings.button_link_1 != blank %}
+        <a
+          href="{{ section.settings.button_link_1 }}"
+          class="button{% if section.settings.button_style_text_link %} text_link_style{% else %} button--secondary{% endif %}"
+        >
+          {{- section.settings.button_label_1 -}}
+        </a>
+      {% endif %}
+      {% if section.settings.button_link_2 != blank %}
+        <a
+          href="{{ section.settings.button_link_2 }}"
+          class="button{% if section.settings.button2_style_text_link %} text_link_style{% else %} button--secondary{% endif %}"
+        >
+          {{- section.settings.button_label_2 -}}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Hero Banner",
+  "class": "video-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Media Settings"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop"
+    },
+    {
+      "type": "text",
+      "id": "video",
+      "label": "Video Link (desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "videoimage",
+      "label": "Video Poster Image (desktop)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "url",
+      "id": "videomobile",
+      "label": "Video Link (mobile)"
+    },
+    {
+      "type": "image_picker",
+      "id": "videoimagemobile",
+      "label": "Video Poster Image (mobile)"
+    },
+    {
+      "type": "header",
+      "content": "Content settings"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "the tablet toothpaste\nthat does both"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "get the toothpaste tablet that does both"
+    },
+    {
+      "type": "paragraph",
+      "content": "Buttons"
+    },
+    {
+      "type": "text",
+      "id": "button_label_1",
+      "label": "Primary Button Label"
+    },
+    {
+      "type": "url",
+      "id": "button_link_1",
+      "label": "Primary Button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_style_text_link",
+      "default": false,
+      "label": "Use text link style (Primary Button)"
+    },
+
+    {
+      "type": "text",
+      "id": "button_label_2",
+      "label": "Secondary Button Label"
+    },
+    {
+      "type": "url",
+      "id": "button_link_2",
+      "label": "Secondary Button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button2_style_text_link",
+      "default": false,
+      "label": "Use text link style (Secondary Button)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner"
+    }
+  ]
+}
+{% endschema %}

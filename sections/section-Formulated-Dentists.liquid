@@ -1,0 +1,481 @@
+{{ 'section-about_us.css' | asset_url | stylesheet_tag }}
+
+<!-- ----------Formulated Hero part--------------- -->
+<section class="Formulated-Dentists-page ">
+<section class="Formulated-Banner">
+  <div class="hero-image">
+    <img
+      class="hero_img"
+      src="{{ section.settings.banner_image | img_url: 'master' }}"
+    />
+  </div>
+  <div class="ingredients-banner">
+    <div class="block-main-heading">
+      {%if section.settings.hero_Heading!=blank%}
+      <h1>{{ section.settings.hero_Heading }}</h1>
+      {%endif%}
+    </div>
+    <div class="Block-Title">
+      <ul class="Block-list" id="Block_list">
+        {%if section.settings.section_title1!=blank%}
+        <li>
+          <a class="Block_Title" href="#section1">
+            {{section.settings.section_title1 | newline_to_br}}
+          </a>
+        </li>
+        {%endif%}
+        {%if section.settings.section_title2!=blank%}
+        <li>
+          <a class="Block_Title" href="#section2">
+            {{section.settings.section_title2}}
+          </a>
+        </li>
+        {%endif%}
+         {%if section.settings.section_title3!=blank%}
+        <li>
+          <a class="Block_Title" href="#section3">
+            {{section.settings.section_title3}}
+          </a>
+        </li>
+        {%endif%}
+        {%if section.settings.section_title4!=blank %}
+        <li>
+          <a class="Block_Title" href="#section4">
+            {{section.settings.section_title4}}
+          </a>
+        </li>
+        {%endif%}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ----------Formulated Richtext--------------- -->
+  
+<!--    -->
+<div class="about-us_content page-width">  
+
+<section id="section1" class="formulated-richtext">
+  <div class="formulated-grid">
+  <div class="formulated-Richtext-child">
+    {%if section.settings.logo_image !=blank%}
+    <img
+      class="about_logo"
+      src="{{ section.settings.logo_image | img_url: 'master' }}"
+    />
+    {%endif%}
+    {%if section.settings.Formulated_Richtext_title!=blank %}
+    <h2 class="formulated-richtext-title">
+      {{ section.settings.Formulated_Richtext_title }}
+    </h2>
+    {%endif%}
+    
+     {%if section.settings.Formulated_Richtext_title_mobile!=blank %}
+    <h2 class="formulated-richtext-title_mobile">
+      {{ section.settings.Formulated_Richtext_title_mobile }}
+    </h2>
+    {%endif%}
+    
+  </div>
+   {%if section.settings.Formulated_text!=blank %}
+  <div class="formulated-richtext_desp">
+    <p>{{ section.settings.Formulated_text }}</p>
+  </div>
+  {%endif%}
+  </div>  
+</section>
+
+<!-- -------------section accordion-------------- -->
+<section id="section2" class="accordion-Formulated ">
+  
+  <div class="text_width-text">
+    
+      <div class="left_accordion">  
+        {%if  section.settings.faq_title!=blank %}
+        <div class="accordion-heading">
+          <h2 class="accordion-heading">{{ section.settings.faq_title }}</h2>
+        </div>
+        {%endif%}
+      </div>
+    
+    
+    
+
+      <div class="right_accordion">
+          <div class="accordion-richtext">
+            {%if section.settings.section_title!=blank%}
+            <h1 class="accordion_heading">{{ section.settings.section_title }}</h1>
+            {%endif%}
+            {%if section.settings.faq_title_mobile!=blank%}
+            <h1 class="accordion_heading_mobile">{{ section.settings.faq_title_mobile }}</h1>
+            {%endif%}
+          </div>
+        {% for block in section.blocks %} 
+        <button class="accordion">
+          {%if block.settings.Heading!=blank%}
+          {{ block.settings.Heading }}
+          {%endif%}
+        </button>
+        <div class="panel">
+			{%if block.settings.text!=blank%}
+            {{ block.settings.text }}
+            {%endif%}        
+        </div>
+        {%endfor%}
+       
+        
+
+         {%comment%}         
+         {% for block in section.blocks %} {%if block.settings.Heading!=blank%}
+          <h3 class="accordion_heading">
+            {{ block.settings.Heading }}
+          </h3>
+          {%endif%}
+          <div class="accordion_text">
+            {%if block.settings.text!=blank%}
+            {{ block.settings.text }}
+            {%endif%}
+          </div>
+          {%endfor%}
+          {%endcomment%}
+        </div>  
+  </div>  
+</section>
+
+<!-- --------section Guarantee -------------- -->
+<section id="section4" class="Formulated-Guarantee">
+  <div class="guarantee__grid"> 
+  <div class="guarantee-richtext">
+    {%if section.settings.guarantee_title!=blank%}
+    <h1 class="Guarantee_heading">{{ section.settings.guarantee_title }}</h1>
+    {%endif%} 
+    {%if section.settings.guarantee_text!=blank%}
+    <p class="guarantee_text">{{ section.settings.guarantee_text }}</p>
+    {%endif%}
+  </div>
+  </div>  
+</section>
+
+<!-- ---------------section Contact Us--------------- -->
+  <section id="section3" class="formulated-contact">
+
+    <div class="cntact__us">
+    <div class="Contact-richtext">
+      {%if section.settings.contact_title!=blank%}
+      <h1 class="contact_heading">{{ section.settings.contact_title }}</h1>
+      {%endif%} 
+    </div>
+      
+      
+    <div class="desp-width-link">  
+    <div class="contact__desp">  
+     {%if section.settings.contact_text!=blank%}
+      <p class="contact_text">{{ section.settings.contact_text }}</p>
+     {%endif%}
+      </div>  
+
+    <div class="contact-link">
+      <div class="email-link">
+        {%if section.settings.contact_link_Name!=blank%}
+        <span class="email_link_name">
+         {{section.settings.contact_link_Name}}
+        </span>
+        {%endif%}
+        {%if section.settings.contact_Link!=blank%}
+        <span class="email_url"
+          ><a href="mailto:{{ section.settings.contact_Link }}">
+          {{section.settings.email_name}}</a>
+        </span
+        >
+        {%endif%}
+      </div>
+
+      <div class="social-link">
+        {%if section.settings.social_link_Name!=blank%}
+        <span class="social_link_name">
+          {{section.settings.social_link_Name}}
+        </span>
+        {%endif%}
+        {%if section.settings.social_Link!=blank%}
+        <span class="social_url"
+          ><a target="_blank" href="{{ section.settings.social_Link }}">
+          {{section.settings.social_Link}}</a>
+        </span
+        >
+        {%endif%}
+      </div>
+
+      <div class="email-link">
+        {%if section.settings.contact_link_Name2%}
+        <span class="email_link_name">
+          {{section.settings.contact_link_Name2}}
+        </span>
+        {%endif%}
+        {%if section.settings.contact_Link2!=blank%}
+        <span class="email_url12"
+          ><a href="mailto:{{ section.settings.contact_Link2 }}">
+          {{section.settings.contact_Link2_name}}</a>
+        </span>
+        {%endif%}
+      </div>
+    </div>
+      </div>  
+    </div>  
+  </section>
+  </div>
+</section>  
+  
+  
+  
+
+<style type="text/css">
+  section.accordion-Formulated {
+    margin: 0rem auto 6rem;
+    width: 100%;
+    font-family: tahoma;
+    line-height: 200%;
+  }
+  section.accordion-Formulated h3 {
+/*     background: #fff; */
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+  }
+  .accordion_text {
+/*     background: #cedde5; */
+    padding: 10px;
+    display: none;
+  }
+  .accordion h3 i {
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+  .arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  .accordion {
+  cursor: pointer;
+/*   padding: 18px; */
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+
+button.accordion.active{
+  background-color: #FFF;
+}
+button.accordion{
+  background-color: #FFF; 
+}
+.panel {
+/*   padding: 0 18px; */
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+  
+</style>
+<script>
+  $(".js-anchor-link").click(function (e) {
+    e.preventDefault();
+    var target = $($(this).attr("href"));
+    if (target.length) {
+      var scrollTo = target.offset().top;
+      $("body, html").animate({ scrollTop: scrollTo + "px" }, 800);
+    }
+  });
+</script>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+{% schema %}
+{
+  "name": "Formulated Dentists",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Hero Image"
+    },
+   
+    {
+      "type": "text",
+       "id": "hero_Heading",
+      "label": "Hero Heading "
+    },  
+    {
+      "type": "richtext",
+      "id": "section_title1",
+      "label": "1st Title"
+    },
+    {
+      "type": "text",
+      "id": "section_title2",
+      "label": "2nd Title",
+      "default": "Talk about your brand"
+    },
+    {
+      "type": "text",
+      "id": "section_title3",
+      "label": "3rd Title",
+      "default": "Talk about your brand"
+    },
+    {
+      "type": "text",
+      "id": "section_title4",
+      "label": "4th Title",
+      "default": "Talk about your brand"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Logo picker"
+    },
+     {
+      "type": "text",
+      "id": "Formulated_Richtext_title",
+      "label": "Formulated Title",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+      {
+      "type": "richtext",
+      "id": "Formulated_Richtext_title_mobile",
+      "label": "Formulated Heading Mobile"
+    },
+    {
+      "type": "richtext",
+      "id": "Formulated_text",
+      "label": "Formulated Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+     {
+      "type": "richtext",
+      "id": "faq_title_mobile",
+      "label": "Faq Heading Mobile"
+    },
+    {
+      "type": "richtext",
+      "id": "faq_title",
+      "label": "Faq Heading"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_title",
+      "label": "Guarantee Title",
+      "default": "Talk about your brand"
+    },
+    {
+      "type": "richtext",
+      "id": "guarantee_text",
+      "label": "Guarantee Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+    {
+      "type": "text",
+      "id": "contact_title",
+      "label": "Contact Title",
+      "default": "Talk about your brand"
+    },
+    {
+      "type": "richtext",
+      "id": "contact_text",
+      "label": "Contact Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+    {
+       "type": "richtext",
+        "id": "contact_link_Name",
+        "label": "Email Label"
+    },
+    {
+      "type": "text",
+      "id": "email_name",
+      "label": "Email Name"
+    },
+    {
+      "type": "url",
+      "id": "contact_Link",
+      "label": "Email Link"
+    },
+   {
+       "type": "richtext",
+        "id": "social_link_Name",
+        "label": "Social Link Name"
+    },
+    {
+      "type": "text",
+      "id": "social_Link",
+      "label": "social Link"
+    },
+    {
+       "type": "richtext",
+        "id": "contact_link_Name2",
+        "label": "Email Label"
+    },
+     {
+      "type": "text",
+      "id": "contact_Link2_name",
+      "label": "Email Name"
+    },
+    {
+      "type": "url",
+      "id": "contact_Link2",
+      "label": "Email Link"
+    }
+  ],
+  "blocks": [
+      {
+        "type": "text",
+        "name": "Faq",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "Heading",
+            "label": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+  "presets": [
+    {
+      "name": "Formulated Dentists",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}

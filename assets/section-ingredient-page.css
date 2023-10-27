@@ -1,0 +1,1545 @@
+/***************************** Ingredient Desktop-Page CSS Start *****************************/
+
+
+/*********** Page CSS Start ************/
+
+
+.page-container{
+min-width:100%;
+  width: 100%;
+  overflow-X: hidden;
+  font-family:"Poppins";
+  margin:0px;
+
+}
+
+.container {
+    max-width: 100%;
+}
+
+.banner_1:after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    transform: translate(-58px, -54px);
+    background-image: url("https://cdn.shopify.com/s/files/1/0553/3233/9879/files/nHa-Icon_K.svg?v=1688252355");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  	z-index: 1;
+    padding: 50px;
+}
+
+
+/******** Banner Section CSS Start ********/
+
+
+
+.duo-banner_content {
+    width: 100%;
+      margin:0px;
+
+}
+
+.banner_1 {
+    width: 100%;
+    position: relative;
+      margin:0px;
+
+}
+
+.banner-wrapper {
+      margin:0px;
+
+  width: 100%;
+  background-image: linear-gradient(rgba(255,255,255, .0), rgba(255,255,255, 0.0)), url("https://cdn.shopify.com/s/files/1/0553/3233/9879/files/ingredients_hero_dbc0bf6f-cab2-421d-9954-32f67ebea9e7.png?v=1690489243");
+ 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+
+
+.image-text {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+}
+
+.duo-banner_content {
+    margin-bottom: 2.5rem;
+}
+
+
+/** BannerHeading CSS Start **/
+
+.page-heading {
+  
+
+}
+
+.page-heading h2.headings {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 46.6667px;
+    color: #000000;
+}
+
+.item-list {
+    height:100%
+    display: inline-block;
+
+    margin-right: 15px;
+    margin-bottom: 10px;
+
+
+}
+.text-section button.item-list {
+    
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration:none;
+    color: #000000;
+    
+    display: inline-block;
+    padding: 6px 15px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 77.834px;
+    border: 2px solid #000;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color:transparent ;
+}
+
+
+
+
+.text-section button:hover{
+    padding: 6px 20px;
+      background-color:#ffffff;
+
+
+}
+
+  .text-section {
+
+/*
+      background-color: rgba(255,255,255,.8);
+      border-top-right-radius:25px;
+    border-bottom-left-radius:25px;
+
+    */
+
+  }
+
+  .list_mobile {
+    display:none;
+  }
+
+/** BannerHeading CSS End **/
+
+
+@media(min-width: 600px){
+  
+  .text-section {    
+    width: 100%;
+      max-width: 1020px;
+      padding: 2rem;
+          margin-top:12rem;
+
+  }
+  
+  img.full-banner_image {
+      min-width: 165rem;
+  }
+    
+  .page-heading h2.headings {
+	  margin: 1.8rem 0;
+    margin-bottom:0;
+  }
+
+}
+
+@media(min-width: 700px){
+  
+  .text-section {    width: 100%;
+      max-width: 1100px;
+      padding: 2rem;
+     margin-top:12rem;
+
+  }
+  
+  img.full-banner_image {
+      min-width: 165rem;
+  }
+  
+  .duo-banner_content {
+      margin-bottom: 2.5rem;
+  }
+
+}
+
+@media(min-width: 990px){
+  
+  .text-section {    width: 100%;
+      max-width: 1200px;
+      padding: 5rem;
+      margin-left: 10rem;
+      margin-top:12rem;
+  }
+
+}
+
+
+@media(min-width: 1280px){
+  
+
+
+    img.full-banner_image {
+      width: 100%;
+  }
+
+}
+
+@media(min-width: 1660px){
+  
+  .image-wrapper-1 {
+      padding-top: 60%;
+  }
+  
+
+  img.full-banner_image {
+      min-width: 180rem;
+      max-height: 110rem;
+  }
+
+}
+
+@media(min-width: 1800px){
+  
+  .image-wrapper-1 {
+      padding-top: 58%;
+  }
+  
+
+  img.full-banner_image {
+      min-width: 254rem;
+      max-height: 110rem;
+  }
+
+}
+
+
+@media(min-width: 2000px){
+  
+  .image-wrapper-1 {
+      padding-top: 58%;
+  }
+  
+
+  img.full-banner_image {
+      min-width: 506rem;
+      max-height: 110rem;
+  }
+
+}
+
+
+@media(max-width: 600px){
+
+  .image-wrapper-1 {
+      padding-top: 150%;
+  }
+  
+  img.full-banner_image {
+      min-width: 56rem;
+  }
+  
+  .text-section {
+      width: 100%;
+      margin: auto;
+      padding: .2rem;
+  }
+  
+  
+  .page-heading h2.headings {
+      font-size: 36.6667px;
+  }
+
+  .text-section li a.item-link {
+      font-size: 22.9874px;
+  }
+
+}
+
+@media(max-width: 360px){
+
+  .image-wrapper-1 {
+      padding-top: 140%;
+  }
+  
+  img.full-banner_image {
+      min-width: 50rem;
+  }
+
+}
+
+@media(max-width: 280px){
+
+  .image-wrapper-1 {
+      padding-top: 140%;
+  }
+  
+  img.full-banner_image {
+      min-width: 46rem;
+  }
+
+}
+
+/****** Banner Section CSS End ******/
+
+
+/****** Image width text Section common CSS Start ******/
+
+.text-width_image.page-width {
+    width: 100%;
+    max-width: 1600px;
+    padding: 0px;
+    margin: 5rem auto;
+}
+
+.section_grid {
+    width: 100%;
+    max-width: 100%;
+}
+
+.image-width_text {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+
+.image-division {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+img.image-item {
+    width: 100%;
+}
+
+
+img.image-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    object-fit: cover;
+}
+
+/* Text-Section Start */
+
+.block-details h2.image__heading{
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    color: #000000;
+}
+
+.block-details .image-content p{
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+}
+
+
+
+
+
+.block-details h2.image__heading span {
+    padding-bottom: 0.8rem;
+}
+
+.block-details h2.image__heading span.span-1 {
+    border-bottom: 6px solid #48BBFE;
+
+}
+
+
+.block-details h2.image__heading span.span-2 {
+    border-bottom: 6px solid #37E8B6;
+}
+
+.block-details h2.image__heading span.span-3 {
+    border-bottom: 6px solid #FFB32D;
+}
+
+.block-details h2.image__heading span.span-4 {
+    border-bottom: 6px solid #BC71D3;
+}
+
+.block-details p.image_sub-heading{
+   width:70%;
+}
+
+.image_para-section_m .image-para_m {
+      display: none;
+}
+.text-width_image .image_para-section {
+    position: relative;
+}
+
+.image-para .para {
+    margin: 0.6rem 0;
+    
+}
+
+.block-details {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+}
+
+.mobile-ingredients {
+    display: none;
+}
+
+
+/* Text-Section End */
+
+
+@media(min-width: 600px){
+
+
+  .para_span {
+    font-size:14px;
+    line-height:18px;
+  }
+  
+  .wrapper {
+      width: 50%;
+      position: relative;
+  }
+
+  .image-division {
+      padding-bottom: 60rem;
+  }
+
+  .image-content {
+      width: 50%;
+      max-width: 90%;
+      position: relative;
+      padding: 1rem 5rem;
+  }
+
+  img.image-item {
+      object-position: -400px;
+      min-width: 145rem;
+  }  
+
+
+}
+
+@media(min-width: 768px){
+  
+
+  .image-division {
+      padding-bottom: 60rem;
+  }
+
+  img.image-item {
+      object-position: -400px;
+      min-width: 145rem;
+  }
+
+}
+
+@media(min-width: 990px){
+  
+  .image-division {
+      padding-bottom: 60rem;
+  }
+
+  .para_span{
+  font-size: 16px;
+  line-height:20px;
+  font-style:italic;
+}
+
+  img.image-item {
+      object-position: -400px;
+      min-width: 145rem;
+  }
+
+}
+
+
+@media(min-width: 1280px){
+
+  .image-division {
+      padding-bottom: 60rem;
+  }
+
+  img.image-item {
+      object-position: -400px;
+      min-width: 145rem;
+  }
+
+}
+/****** Image width text Section common CSS End ******/
+
+
+/****** Image width text Section-1 CSS Start ******/
+@media(min-width: 600px){
+  .block-details {
+      flex-direction: row;
+  }
+  
+ .image_para-section .image-para {
+      position: absolute;
+      width: 120%;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      z-index: 4;
+      top: 4rem;
+      max-width: 55rem;
+      margin-left:-100px;
+      background-color:#ffffff;
+      padding: 0 1.8rem;
+
+   
+  }
+}  
+/****** Image width text Section-1 CSS End ******/
+
+
+
+
+
+/****** Banner Section CSS End ******/
+
+/****** Ingredient Items List Section CSS Start ******/
+.ingredients-details {
+    width: 100%;
+    max-width: 100%;
+    margin: 2rem 0rem;
+}
+
+.details-link {
+    width: 100%;
+}
+
+.details-link .grid {
+    margin-left: 0px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.base-section {
+    width: 20%;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+.second__item {
+  /*border-right: 4px solid #48BBFE;  */
+  
+  background-color: #48BBFE;
+}
+
+.third__item{
+     background-color: #ACD9FE;
+}
+
+.item2{
+     background-color: #37E8B6;
+}
+
+.item3{
+     background-color: #FEB12E;
+}
+
+.item4{
+     background-color:  #BC71D3;
+}
+
+.ingredients-list-section {
+    width: calc(80% - 2rem);
+    background-color: #F0F4F7;
+  	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+ul.ingrediants-lists {
+    padding: 2px 6px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px;
+}
+
+li.item_list-link .ingredients_link.btn-link{
+    font-family:"Poppins";
+    margin: 8px 0;
+    display: inline-block;    
+    padding: 0px 0;
+}
+
+button.ingredients_link.btn-link {
+    border: none;
+    background-color: transparent;
+  	cursor: pointer;
+}
+
+
+li.item_list-link .ingredients_link.btn-link span.link_text{
+    display: flex;
+    padding: 0rem 1.2rem;
+    border-right: 2px solid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.ingredients_link.btn-link:hover {
+    /* border-bottom: 4px solid #48BBFE; */
+/*     font-weight: 600; */
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+}
+
+.grid_base  .ingredients_link.btn-link:hover {
+    text-decoration-color: #48BBFE !important;
+}
+
+.grid_flavour .ingredients_link.btn-link:hover {
+    text-decoration-color: #ACD9FE !important;
+}
+
+.grid-immunity .ingredients_link.btn-link:hover {
+    text-decoration-color: #37E8B6 !important;
+}
+
+.grid_energy .ingredients_link.btn-link:hover {
+    text-decoration-color: #FEB12E !important;
+}
+
+.grid_sleep  .ingredients_link.btn-link:hover {
+    text-decoration-color: #BC71D3 !important;
+}
+
+
+h3.base-heading{
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+    text-align: left;
+  	width: 160px;
+  	margin: 8px 0;
+}
+
+.ingredients_link.btn-link{
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+}
+
+
+/****** Ingredient Items List Section CSS End ******/
+
+
+/****** Link Section CSS Start ******/
+.page-link {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.show_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.show_link a {
+  text-align: center;
+  display: inline-block;
+  
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  text-decoration-line: none;
+  color: #000000;	
+
+}
+
+span.arrow_link {
+    position: relative;
+    display: inline-block;
+}
+
+span.arrow_link:before {
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid #000;
+    width: 26px;
+    height: 100%;
+    top: -2px;
+    left: 0px;
+}
+
+
+span.arrow_link:after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -26px;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    transform: rotate(45deg);
+    width: 8px;
+    height: 8px;
+    z-index: 2;
+}
+
+
+span.link-title {
+    width: auto;
+    display: inline-block;
+    margin: 0.5rem 1rem;
+}
+
+#base .show_link a {
+    border-bottom: 2.5px solid #48BBFE;    
+}
+
+#immunity .show_link a  {
+    border-bottom: 2.5px solid #37E8B6;    
+}
+
+#energy .show_link a  {
+    border-bottom: 2.5px solid #FFB32D;    
+}
+
+#sleep .show_link a  {
+    border-bottom: 2.5px solid #BC71D3;    
+}
+
+
+
+/****** Link Section CSS End ******/
+
+/****** Banner Section CSS End ******/
+
+
+/****** Mobile Section CSS Start ******/
+.mobile-ingredients {
+    width: 100%;
+}
+
+.ingredients__items-list {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  width: 90%;
+}
+
+div#base .ingredients__items-list {
+   /* margin: 19.5rem auto 2rem;*/
+}
+
+div#immunity .ingredients__items-list {
+}
+
+div#energy .ingredients__items-list {
+}
+
+div#sleep .ingredients__items-list {
+}
+
+span.sub-1__block{
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: left;
+    color: #000000;
+}
+
+a.mobile__link {
+    text-decoration: none;
+    padding: 0 2px;
+}
+
+a.mobile__link span.span_link{
+
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: left;
+    color: #000000;
+  	text-decoration: underline;
+}
+
+a.mobile__link span.sub_link{
+
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: left;
+    color: #000000;
+  	padding-left: 4px;
+}	
+
+.mobile_circle span.circle_0 {
+    display: inline-block;
+    padding: 4rem;
+    border-radius: 50%;
+    
+}
+
+
+div#base .mobile_circle span.circle_0  {
+    background-color: #48BBFE;
+}
+
+div#immunity .mobile_circle span.circle_0  {
+    background-color: #37E8B6;
+}
+
+div#energy .mobile_circle span.circle_0 {
+    background-color: #FFB32D;
+}
+
+div#sleep .mobile_circle span.circle_0  {
+    background-color: #BC71D3;
+}
+
+.mobile_titles {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.circle_block {
+    width: 30%;
+}
+
+.supplement-block {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  	/*border-left: 3px solid rgba(0, 0, 0, 0.6);;*/
+    /*padding-left: 2.5rem;*/
+    margin-left: 2rem;
+}
+
+.link_block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+h3.title__01 {
+    margin: 0px;
+}
+
+h3.title__01 {
+    font-weight: 600;
+}
+
+.link_block a.mobile__link span {
+}
+
+.link_block {
+    /*margin: 8px  0 0;*/
+}
+
+.mobile_circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.mobile_heading-section {
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.ingredients__block {
+    text-align: left;
+}
+
+#base {
+  	/*border-bottom: 5px solid #48BBFE;*/
+
+}
+
+.disclaimer{
+	display: none;
+}
+
+p.disclaimer_para  {
+    
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: left;
+  	border: 1px solid #000;
+    margin: 0 3px 25px;
+    padding: 5px 4px;
+}
+
+
+
+/****** Mobile Section CSS End ******/
+
+
+/********** Page CSS End **********/
+
+/***************************** Ingredient Desktop-Page CSS End *****************************/
+
+
+
+/***************************** Ingredient Tablet And Mobile Page CSS Start *****************************/
+
+
+/*********** For Tabet CSS Start ***********/
+
+
+/*==* Ingredient page for max 1500 min 1400px  Start*==*/
+@media (min-width:1400px){
+  .image-wrapper-1 {
+      padding-top: 58%;
+  }
+  
+  img.full-banner_image {
+      min-width: 152rem;
+  }
+}
+
+/*==* Ingredient page for max 1500 min 1400px  End*==*/
+
+
+
+/*==* Ingredient page max 1400 min 1300px  Start*==*/
+@media(max-width: 1400px) and (min-width:1300px){
+  .image-wrapper-1 {
+      padding-top: 60%;
+  }
+  
+  img.full-banner_image {
+      min-width: 144rem;
+  }
+}
+
+/*==* Ingredient page max 1400 min 1300px End*==*/
+
+
+
+/*==* Ingredient page max 1300 min 1200px  Start*==*/
+@media(max-width: 1300px) and (min-width:1200px){
+  .image-wrapper-1 {
+      padding-top: 56%;
+  }
+  
+  img.full-banner_image {
+      min-width: 132rem;
+  }
+
+}
+
+/*==* Ingredient page max 1300 min 1200px End*==*/
+
+
+
+/*==* Ingredient page max 1200 min 1100px  Start*==*/
+@media(max-width: 1200px) and (min-width:1100px){
+  .image-wrapper-1 {
+      padding-top: 62%;
+  }
+  
+  img.full-banner_image {
+      min-width: 122rem;
+  }
+  
+  img.image-item {
+      object-position: -435px;
+      min-width: 136rem;
+  }
+  
+  .image-division {
+      padding-bottom: 55rem;
+  }
+
+}
+
+/*==* Ingredient page max 1200 min 1100px End*==*/
+
+
+
+/*==* Ingredient page max 1100 min 1000px  Start*==*/
+@media(max-width: 1100px) and (min-width:1000px){
+
+  .image-wrapper-1 {
+      padding-top: 68%;
+  }
+  
+  img.full-banner_image {
+      min-width: 115rem;
+  }
+  
+  .banner_1:after {
+      padding: 48px;
+  }
+  
+  img.image-item {
+      object-position: -435px;
+      min-width: 136rem;
+  }
+  
+  .image-division {
+      padding-bottom: 55rem;
+  }
+  
+  .block-details h2.image__heading {
+      font-size: 42px;
+  }
+  
+  .block-details .image-content p {
+      font-size: 20px;
+  }
+
+
+  
+  .image-content {
+      padding: 0.8rem 4rem;
+  }
+
+}
+
+/*==* Ingredient page max 1100 min 1000px End*==*/
+
+
+
+/*==* Ingredient page max 1000 min 900px  Start*==*/
+@media(max-width: 1000px) and (min-width:900px){
+
+  .image-wrapper-1 {
+      padding-top: 64%;
+  }
+  
+  img.full-banner_image {
+      min-width: 90rem;
+  }
+  
+  .banner_1:after {
+      padding: 45px;
+  }
+  
+  img.image-item {
+      object-position: -420px;
+      min-width: 126rem;
+  }
+  
+  .image-division {
+      padding-bottom: 50rem;
+  }
+  
+  .block-details h2.image__heading {
+      font-size: 38px;
+  }
+  
+  .block-details .image-content p {
+      font-size: 18px;
+  }
+  
+  .image-content {
+      padding: 0.6rem 3.5rem;
+  }
+  
+  .image_para-section .image-para{
+      min-width: 36rem;
+  }
+  
+
+
+}
+
+/*==* Ingredient page max 1000 min 900px End*==*/
+
+
+
+/*==* Ingredient page max 900 min 800px  Start*==*/
+@media(max-width: 900px) and (min-width:800px){
+
+  .image-wrapper-1 {
+      padding-top: 65%;
+  }
+  
+  img.full-banner_image {
+      min-width: 86rem;
+  }
+  
+  .banner_1:after {
+      padding: 42px;
+  }
+  
+  .page-heading h2.headings {
+      margin: 1.6rem 0;
+    margin-bottom:0;
+  }
+  
+  .page-heading h2.headings {
+      font-size: 42.6667px;
+  }
+  
+  .text-section li.item-list a.item-link {
+      font-size: 24.9874px;
+  }
+  
+  img.image-item {
+      object-position: -385px;
+      min-width: 116rem;
+  }
+  
+  .image-division {
+      padding-bottom: 45rem;
+  }
+  
+  .block-details h2.image__heading {
+      font-size: 35px;
+  }
+  
+  .block-details .image-content p {
+      font-size: 17px;
+  }
+  
+  .image-content {
+      padding: 0.6rem 3.5rem;
+  }
+  
+  .image_para-section .image-para{
+      min-width: 36rem;
+  }
+  
+
+
+}
+
+/*==* Ingredient page max 900 min 800px End*==*/
+
+
+
+/*==* Ingredient page max 800 min 700px  Start*==*/
+@media(max-width: 800px) and (min-width:700px){
+
+  .image-wrapper-1 {
+      padding-top: 65%;
+  }
+  
+  img.full-banner_image {
+      min-width: 78rem;
+  }
+  
+  .banner_1:after {
+      padding: 40px;
+  }
+
+
+  .page-heading h2.headings {
+      margin: 1.5rem 0;
+      margin-bottom:0;
+  }
+  
+  .page-heading h2.headings {
+      font-size: 40.6667px;
+  }
+  
+  .text-section li.item-list a.item-link {
+      font-size: 22.9874px;
+  }
+  
+  img.image-item {
+      object-position: -402px;
+      min-width: 118rem;
+  }
+  
+  .image-division {
+      padding-bottom: 45rem;
+  }
+  
+  .block-details h2.image__heading {
+      font-size: 35px;
+  }
+  
+  .block-details .image-content p {
+      font-size: 17px;
+  }
+  
+  .image-content {
+      padding: 0.6rem 3.5rem;
+  }
+  
+  .image_para-section .image-para{
+      min-width: 34rem;
+  }
+  
+
+
+}
+
+/*==* Ingredient page max 800 min 700px End*==*/
+
+
+
+/*==* Ingredient page max 700 min 600px  Start*==*/
+@media(max-width: 700px) and (min-width:600px){
+
+  .image-wrapper-1 {
+      padding-top: 75%;
+  }
+  
+  img.full-banner_image {
+      min-width: 76rem;
+  }
+  
+  .banner_1:after {
+      padding: 36px;
+  }
+  
+  .page-heading h2.headings {
+      margin: 1.5rem 0;
+    margin-bottom:0;
+  }
+  
+  .page-heading h2.headings {
+      font-size: 36.6667px;
+  }
+  
+  .text-section li.item-list a.item-link {
+      font-size: 20.9874px;
+  }
+  
+  img.image-item {
+      object-position: -375px;
+      min-width: 114rem;
+  }
+  
+  .image-division {
+      padding-bottom: 40rem;
+  }
+  
+  .block-details h2.image__heading {
+      font-size: 32px;
+  }
+  
+  .block-details .image-content p {
+      font-size: 15px;
+  }
+  
+  .image-content {
+      padding: 0.4rem 3rem;
+  }
+  
+  .image_para-section .image-para{
+      min-width: 33rem;
+  }
+  
+
+
+}
+
+/*==* Ingredient page max 700 min 600px End*==*/
+
+
+
+/*==* Ingredient page max media quary for ipad, ipad-mini tabelts  Start*==*/
+/* @media(max-width: 700px) and (min-width:600px){} */
+
+/*==* Ingredient page max media quary for ipad, ipad-mini tabelts  Start*==*/
+
+
+
+/*********** For Tabet CSS Start ***********/
+
+
+
+/*********** For Mobile CSS Start ***********/
+
+@media(max-width:600px){
+
+  .wrapper {
+      width: 100%;
+      display:block;
+  }
+
+
+
+
+  .text-section {
+      margin-top: 25rem;
+      width: 90%;
+      position:relative;
+      padding: 10px;
+      background-color: rgba(255,255,255,.8);
+      border-top-right-radius:25px;
+      border-bottom-left-radius:25px;
+      border-width: 1px;
+      border-style:solid;
+
+  }
+ .page-heading h2.headings {
+   font-weight:700;
+   margin:0px; 
+   margin-bottom:3rem;
+
+  }
+ .page-heading h3.headings {
+      font-weight:500;
+
+    margin-top:-3rem;
+    
+  }
+
+  .text-section .list {
+    display:none;
+    
+  }
+
+  
+
+
+
+.list_mobile button.item-list {
+    
+    font-family: "Poppins";
+    font-weight: 500;
+    text-decoration:none;
+    color: #000000;
+    
+    padding: 6px 15px;
+    border-radius: 77.834px;
+    border: 2px solid #000;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color:transparent ;
+    margin-left:.3rem;
+    margin-right:.3rem;
+    font-size: 1.3rem;
+}
+
+.list_mobile {
+    width:100%;
+    display:inline-block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+  
+  .image-division {
+      padding-top: 28rem;
+  }
+
+  .image-content {
+      width: 100%;
+      max-width: 90%;
+     position: relative;
+      padding: 0.4rem 0.8rem; 
+  }
+  
+  .block-details {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column-reverse;
+      align-content: center;
+  }
+  
+  div .image-division {
+      border-top: 1px solid #000;	
+      border-bottom: 1px solid #000;	
+
+  }
+  
+
+  
+  .ingredients-details {
+      display: none;
+  }
+  
+/*   .image-division img.image-item {
+      border: 1px solid #000;
+  } */
+  
+.image_para-section .image-para {
+      display: none;
+  }
+
+  .image_para-section_m .image-para_m {
+      display: block;
+      position:relative;
+      margin-left: auto;      
+      margin-right: auto;      
+      margin-top: -50px;
+      width: 90%;
+      box-shadow: 0px 4px 4px rgb(0 0 0 / 50%);
+      z-index: 4;
+      max-width: 55rem;
+      background: #fff;
+      padding: 1px 1.5rem 1px 1.5rem;
+      font-size: 14px;
+      line-height:20px;
+      font-style:italic;
+      text-align: center;
+  }
+
+
+span.flavor_title {
+
+  line-height: 25px; 
+      
+}
+
+  
+  .block-details h2.image__heading{   
+      font-size: 34.1818px;
+      text-align: center;
+  }
+
+
+
+  .block-details .image-content p{
+      font-size: 16px;
+
+
+
+  }
+
+  .para_span{
+    padding-top:3px;
+    padding-bottom:3px;
+  font-size: 14px;
+  display: block;
+
+  line-height:20px;
+  }
+
+    .block-details p.image_sub-heading{
+   width:100%;
+}
+  
+  .text-width_image.page-width {
+      padding: 0px;
+      margin: 2.5rem 0px 2.2rem;
+  }
+  
+img.image-item{
+      object-position: -15rem;
+      min-width: 68rem;
+  }
+  
+
+  
+  .mobile-ingredients {
+  	display: block;
+  }
+  
+  p.image_sub-heading {
+      text-align: center;
+  }
+
+
+  
+
+  
+  .banner_1:after {
+      display:none;
+      left: -60%;
+      transform: none;     
+      background-size: 80px;
+      padding: 58px;
+      top: 77%;
+  }
+
+    .banner_1:before {
+            display:none;
+
+      content: "made with:";
+      position: absolute;
+      top: 75%;
+      left: 7%;
+
+      padding: 8px;
+      width: fit-content;
+      font-size: 16px;
+      font-weight: 500;
+      z-index: 1;
+      font-style: normal;
+  }
+
+  
+  span.arrow_link:before {
+      top: -2px;
+  }
+
+  span.arrow_link:after {
+      top: -5px;
+  }
+  
+  .disclaimer{
+	  display: block;
+  }
+
+}
+
+/*********** For Mobile CSS Start ***********/
+
+/*==* Ingredient page max 600 min 500px  Start*==*/
+@media(max-width: 700px) and (min-width:600px){
+  
+  h3.base-heading {
+      font-size: 20px;
+  }
+
+
+}
+
+/*==* Ingredient page max 600 min 500px End*==*/
+
+
+
+/***************************** Ingredient Tablet And Mobile Page CSS Start *****************************/
+

@@ -1,0 +1,212 @@
+{% raw %}
+<script id="rebuy-cart-template" type="text/template">
+  <div id="rebuy-cart" class="rebuy-cart" v-cloak v-bind:class="[visible ? 'is-visible' : '', 'currency-' + currency() ]">
+    <div class="rebuy-cart__flyout">
+    
+      <div class="rebuy-cart__flyout-header">
+
+          <div id="marqueee" class="section-page-wecare__marquee">            
+            <div class="marquee overflow-hidden padding-vertical-6">
+              <span class="text-uppercase inline-block">
+          		FREE SHIPPING  
+              </span>
+              <span class="text-uppercase inline-block">
+          		FREE SHIPPING  
+              </span>              
+            </div>
+          </div>
+
+        
+  
+        <h4 class="rebuy-cart__flyout-title" v-html="settings.language.cart_title"></h4>
+        <button class="rebuy-cart__flyout-close" type="button" aria-label="Close Smart Cart" v-on:click="hide()">
+          <i class="fal fa-times"></i>
+        </button>
+  
+      </div>
+      <div class="rebuy-cart__flyout-body">
+        <div class="rebuy-cart__flyout-announcement-bar" id="rebuy-smart-cart-announcement-bar" v-if="announcementBarEnabled()">
+          <div class="rebuy-cart__flyout-announcement-bar-message" v-for="message in settings.announcement_bar.messages" v-html="message"></div>
+        </div>
+        <div class="rebuy-cart__flyout-shipping-bar" v-if="freeShippingEnabled()"
+          v-bind:class="[ freeShippingHelperMessage() ? 'has-helper' : '', hasFreeShipping() ? 'has-free-shipping': '' ]">
+          <div class="rebuy-cart__flyout-shipping-bar-message" v-if="!hasFreeShipping()" v-html="freeShippingRemainingMessage()"></div>
+          <div class="rebuy-cart__flyout-shipping-bar-message" v-if="hasFreeShipping()" v-html="freeShippingCompleteMessage()"></div>
+          <div class="rebuy-cart__flyout-shipping-bar-meter" v-bind:class="[hasFreeShippingProgress() ? 'has-progress' : 'no-progress']">
+            <div class="rebuy-cart__flyout-shipping-bar-meter-fill" v-bind:style="{ width: freeShippingPercentComplete() }">
+              <span class="rebuy-cart__flyout-shipping-bar-meter-fill-text" v-html="freeShippingPercentComplete()"></span>
+            </div>
+          </div>
+          <div class="rebuy-cart__flyout-shipping-bar-helper" v-if="freeShippingHelperMessage()" v-html="freeShippingHelperMessage()"></div>
+        </div>
+        <div class="rebuy-cart__flyout-content" v-bind:class="[ hasItems() ? 'has-items' : 'no-items' ]">
+          <div class="rebuy-cart__flyout-items" v-if="hasItems()">
+            <div class="rebuy-cart__flyout-item" v-for="item in items()" v-if="!isHiddenItem(item)"
+              v-bind:class="[ 'product-' + item.handle, itemProductTagsClasses(item), itemPropertyClasses(item) ]">
+              <div class="rebuy-cart__flyout-item-media">
+                <a v-bind:href="itemURL(item)">
+                  <img v-bind:src="sizeImage(item.image, '240x240')" v-bind:alt="'View ' + item.product_title" />
+                </a>
+              </div>
+              <div class="rebuy-cart__flyout-item-info">
+                <button class="rebuy-cart__flyout-item-remove" type="button"
+                  v-on:click="removeItem(item)" v-bind:alt="'Remove ' + item.product_title" v-bind:data-id="''+ item.product_title">
+                  <i class="far" v-bind:class="[(item.status == 'removing') ? 'fa-sync-alt fa-fast-spin' : 'fa-trash']"></i>
+                </button>
+                <a class="rebuy-cart__flyout-item-product-title" v-bind:href="itemURL(item)"
+                  v-html="item.product_title" v-bind:alt="'View ' + item.product_title"></a>
+                  
+                 <p v-if="item.selling_plan_allocation != null" class="rebuy-cart__flyout-item-product-plan" 
+                  v-html="item.selling_plan_allocation.selling_plan.name" ></p> 
+                  
+                <div class="rebuy-cart__flyout-item-variant-title" v-html="item.variant_title" v-if="item.variant_title"></div>
+                <div class="rebuy-cart__flyout-item-discount-message" v-if="hasLineItemDiscount(item)" v-html="lineItemDiscountMessage(item)"> </div>
+                <div class="rebuy-cart__flyout-item-properties" v-if="hasItemProperties(item)">
+                  <div class="rebuy-cart__flyout-item-property rebuy-cart__flyout-item-property--delivery-frequency"
+                    v-if="itemDeliveryFrequency(item)" v-html="itemDeliveryFrequency(item)"></div>
+                  <div class="rebuy-cart__flyout-item-property" v-for="property in itemProperties(item)"
+                    v-bind:class="[ itemPropertyKeyClass(property), itemPropertyValueClass(property) ]">
+                    <span class="rebuy-cart__flyout-item-property-name" v-html="property.key"></span>
+                    <span class="rebuy-cart__flyout-item-property-separator">:</span>
+                    <span class="rebuy-cart__flyout-item-property-value" v-html="property.value"></span>
+                  </div>
+                </div>
+                <div class="rebuy-cart__flyout-item-quantity">
+                  <div class="rebuy-cart__flyout-item-quantity-widget" v-if="hideQuantitySelectors && !hideQuantitySelectors(item)">
+                    <button class="rebuy-cart__flyout-item-quantity-widget-button"
+                      v-on:click="decreaseItem(item)" type="button"
+                      v-bind:alt="'Decrease quantity of ' + item.product_title">
+                      <i class="far" v-bind:class="[(item.status == 'decreasing') ? 'fa-sync-alt fa-fast-spin' : 'fa-chevron-down']"></i>
+                    </button>
+                    <span class="rebuy-cart__flyout-item-quantity-widget-label" v-html="item.quantity"></span>
+                    <button class="rebuy-cart__flyout-item-quantity-widget-button"
+                      v-on:click="increaseItem(item)" type="button" v-bind:alt="'Increase quantity of ' + item.product_title">
+                      <i class="far" v-bind:class="[(item.status == 'increasing') ? 'fa-sync-alt fa-fast-spin' : 'fa-chevron-up']"></i>
+                    </button>
+                     <p class="product-option" alt="+item.product_title+"></p>
+                       
+                  </div>
+                </div>
+                <div class="rebuy-cart__flyout-item-price">
+                  <div v-if="itemHasDiscount(item)">
+                    <span class="rebuy-money sale" v-html="formatMoney(itemPrice(item))"></span>
+                    <span class="rebuy-money compare-at" v-html="formatMoney(compareAtPrice(item))"></span>
+                  </div>
+                  <div v-if="!itemHasDiscount(item)">
+                    <span class="rebuy-money" v-html="formatMoney(itemPrice(item))"></span>
+                  </div>
+                </div>
+              </div>
+              
+              
+           
+              <div class="rebuy-cart__flyout-item-subscription" v-if="hasSwitchToSubscription(item)">
+                <button class="rebuy-button outline" v-if="!item.product.subscription || item.status == 'downgrading' || item.status == 'upgrading'"
+                  v-bind:alt="'Switch ' + item.product_title + ' to a Subscription'"
+                  v-bind:disabled="(item.status == 'downgrading' || item.status == 'upgrading')"
+                  v-on:click="updateItemDeliveryFrequency(item, item.product.subscription_frequencies[0])"
+                  type="button">
+                  <span v-html="switchToSubscriptionLabel(item)"></span>
+                </button>
+                <select class="rebuy-select muted" v-if="item.product.subscription && item.status != 'downgrading'"
+                  v-model="item.product.subscription_frequency" v-on:change="updateItemDeliveryFrequency(item)">
+                  <optgroup v-if="!item.product.is_subscription_only && !subscriptionDowngradeDisabled()" v-bind:label="onetimeOptionGroupLabel(item)">
+                    <option v-bind:value="'onetime'" v-html="onetimeOptionLabel(item)"></option>
+                  </optgroup>
+                  <optgroup v-bind:label="subscriptionOptionGroupLabel(item)">
+                    <option v-for="frequency in item.product.subscription_frequencies" v-bind:value="frequency"
+                      v-html="subscriptionOptionLabel(item, frequency, item.product.subscription_interval)"> </option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+             
+            <div class="rebuy-cart__flyout-note" v-if="notesEnabled()">
+              <label class="rebuy-cart__flyout-note-toggle">
+                <input class="rebuy-cart__flyout-note-toggle-input rebuy-checkbox" type="checkbox" v-model="notes.visible" v-on:click="notesToggle()" />
+                <span class="rebuy-cart__flyout-note-toggle-label" v-html="settings.language.notes_label"></span>
+              </label>
+              <div class="rebuy-cart__flyout-note-content" v-if="notesIsVisible()">
+                <textarea id="rebuy-cart-notes" class="rebuy-textarea rebuy-cart__flyout-note-textarea" v-model="notes.value"
+                  v-on:keyup="notesChange(event)" v-on:keydown="notesChange(event)" v-on:change="notesChange(event)"
+                  v-bind:placeholder="settings.language.notes_placeholder"></textarea>
+                <small id="rebuy-cart-characters-remaining" v-html="notesRemainingCharacters()"></small>
+              </div>
+            </div>
+          </div>
+          <div class="rebuy-cart__flyout-empty-cart" v-if="!hasItems()" v-html="emptyCartMessage()"></div>
+          <div class="upsellheading"><p>Add another bottle to round out your brushing routine.</p></div>
+          <div class="rebuy-cart__flyout-recommendations" v-if="hasCrossSells()">
+            <div v-for="widget_id in settings.cross_sells" v-bind:data-rebuy-id="widget_id"></div>
+          </div>
+        </div>
+      </div>
+      <div class="rebuy-cart__flyout-footer" v-if="hasItems()">
+        <div v-if="shouldShowDiscountInput && shouldShowDiscountInput()" class="rebuy-cart__flyout-discount">
+          <div class="rebuy-cart__flyout-discount-left">
+            <span class="rebuy-cart__flyout-label" v-html="settings.language.discount_code_label"></span>
+          </div> <div class="rebuy-cart__flyout-discount-right">
+            <div class="rebuy-cart__flyout-discount-input">
+              <input class="input" v-model="discount.inputValue" id="rebuy-discount-input" aria-label="Input Discount" autocomplete />
+              <span v-if="showInvalidMessage()" class="rebuy-cart__flyout-discount-message" v-html="settings.language.discount_invalid_message"> </span>
+            </div>
+            <button class="rebuy-button" v-on:click="applyDiscount()" v-bind:disabled="discount.loading" >
+              <span v-html="discountButtonLabel && discountButtonLabel()"></span>
+            </button>
+          </div>
+        </div>
+        <div v-if="shouldShowDiscountSubtotal && shouldShowDiscountSubtotal()" class="rebuy-cart__flyout-discount-amount rebuy-cart__flyout-discount--amount">
+          <div class="rebuy-cart__flyout-discount-left">
+            <span class="rebuy-cart__flyout-label" v-html="discountLabel && discountLabel()"></span>
+            <div class="rebuy-cart__flyout-tag" v-on:click="removeDiscount()">
+              <span>
+                <i class='fas fa-tags'></i>
+              </span>
+              <span v-html="discount.inputValue"></span>
+              <span class="rebuy-cart__flyout-tag-time">
+                <i class="fas fa-times"></i>
+              </span>
+            </div>
+          </div>
+          <div class="rebuy-cart__flyout-subtotal-amount rebuy-cart__flyout-discount-right" v-html="discountTotal && discountTotal()"> </div>
+        </div>
+        <div class="rebuy-cart__flyout-integration" v-if="settings.integrations && settings.integrations.enabled"></div>
+        <div class="rebuy-cart__flyout-apps"></div>
+        <div class="rebuy-cart__flyout-subtotal">
+<div class="sub-totl">
+            <div class="rebuy-cart__flyout-subtotal-label">
+            <span v-html="subtotalLabel()"></span>
+          </div>
+          <div class="rebuy-cart__flyout-subtotal-amount" v-html="subtotal()"></div>
+  </div>
+          
+          <div class="check-btn">
+                    <button v-if="hasCheckoutButton()" class="rebuy-button block" type="button" v-on:click="checkout()" v-bind:disabled="hasTermsEnabled() && !hasAcceptedTerms()">
+                      <span v-html="checkoutLabel()"></span>
+                    </button>
+                    <button v-if="hasViewCartButton()" class="rebuy-button block" v-bind:class="{'outline': hasCheckoutButton()}" type="button" v-on:click="viewCart()">
+                      <span v-html="viewCartLabel()"></span>
+                    </button>
+                    <button v-if="hasContinueShoppingButton()" class="rebuy-button block outline" type="button" v-on:click="hide()">
+                      <span v-html="continueShoppingLabel()"></span>
+                    </button>
+  		  </div>
+        </div>
+        <div class="rebuy-cart__flyout-actions">
+          <div v-if="settings.terms && settings.terms.enabled" class="rebuy-cart__flyout-terms">
+            <input class="rebuy-cart__flyout-terms-checkbox rebuy-checkbox" id="rebuy-terms-checkbox" name="rebuy-terms-checkbox"
+              type="checkbox" v-model="termsAccepted" v-on:click="updateTermsCheck()" />
+            <label class="rebuy-cart__flyout-terms-label" for="rebuy-terms-checkbox" v-html="settings.terms.disclaimer"></label>
+          </div>
+
+        </div>
+        <div class="rebuy-cart__flyout-installments" v-if="installmentsEnabled()" v-html="installmentsMessage()"></div>
+      </div>
+    </div>
+    <div class="rebuy-cart__background" v-on:click="hide()"></div>
+  </div>
+  
+</script>
+
+
+{% endraw %}

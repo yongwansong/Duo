@@ -1,0 +1,92 @@
+#MainContent{
+	--guaranteed-section-height: 180px;
+}
+.guaranteed-section {
+	position: relative;
+    display: flex;
+    min-height: var(--guaranteed-section-height);
+    align-items: center;
+	position: sticky;
+	top: calc(100vh - var(--guaranteed-section-height));
+	z-index: 99999;
+	padding: 20px 0;
+	background-color: #00126B;
+	transition: .3s margin-top ease;
+}
+
+.guaranteed-section.guaranteed-section--is-pinned{
+	margin-top: calc(-1 * var(--guaranteed-section-height));
+}
+#MainContent .shopify-section:last-child{
+	margin-bottom: var(--guaranteed-section-height);
+}
+.guaranteed-section_wrapper{
+	width: 100%;
+	background-color: #00126B;
+}
+.guaranteed-section_wrapper .guaranteed-section_content{
+    max-width: 632px;
+    margin: 0 auto;
+}
+.guaranteed-section_content__button a {
+    height: 54px;
+    border-radius: 101.332px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18.4239px;
+    line-height: 14px;
+    text-align: center;
+    color: #000000;
+    background-color: white;
+    text-decoration: none;
+    width: 100%;
+    transition: 0.5s opacity ease-in-out;
+	text-transform: uppercase;
+}
+
+.guaranteed-section_content__button a:hover {
+    opacity: 0.7;
+}
+
+.guaranteed-section_content {
+    width: 632px;
+    text-align: center;
+}
+
+.guaranteed-section_content__wrapper {
+    margin: 30px 0 0 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guaranteed-section_content__icon {
+    display: contents;
+}
+.guaranteed-section_content__icon img {
+    width: 33px;
+	height: auto;
+}
+
+.guaranteed-section_content__text {
+    padding: 0 5px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 33px;
+}
+ 
+@media screen and (max-width: 767px) {
+    .guaranteed-section_content {
+        width: 90%;
+        text-align: center;
+    }
+    .guaranteed-section_content__wrapper,
+    .guaranteed-section_content__icon{
+        display: block;
+    }
+}

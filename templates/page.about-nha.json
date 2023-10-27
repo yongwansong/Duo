@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "about-nha",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

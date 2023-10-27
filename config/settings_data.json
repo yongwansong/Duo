@@ -1,0 +1,364 @@
+{
+  "current": {
+    "colors_solid_button_labels": "#FFFFFF",
+    "colors_accent_1": "#121212",
+    "colors_accent_2": "#00126b",
+    "colors_text": "#121212",
+    "colors_outline_button_labels": "#121212",
+    "colors_background_1": "#FFFFFF",
+    "colors_background_2": "#F3F3F3",
+    "type_header_font": "poppins_n5",
+    "type_body_font": "poppins_n4",
+    "type_tertiary_font": "poppins_i5",
+    "type_quaternary_font": "poppins_i6",
+    "sale_badge_color_scheme": "accent-1",
+    "social_facebook_link": "",
+    "social_instagram_link": "http:\/\/instagram.com\/duotoothpaste",
+    "social_tiktok_link": "https:\/\/www.tiktok.com\/@duotoothpaste",
+    "favicon": "shopify:\/\/shop_images\/DuoAvatar_Blue.png",
+    "cart_type": "drawer",
+    "cart_drawer_collection": "shop",
+    "cart_drawer_collection_title": "Want to add more Duo?",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Duo-Logo-Tagline_Gray_Bold_UPDATED.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "medium",
+    "checkout_sidebar_background_color": "#eef1ff",
+    "checkout_heading_font": "Lato",
+    "checkout_body_font": "Lato",
+    "checkout_accent_color": "#185bb9",
+    "checkout_button_color": "#00126b",
+    "cart_drawer_collection_heading_empty": "Recommended for you",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "Welcome to our store",
+              "color_scheme": "background-1",
+              "link": ""
+            }
+          },
+          "1e71f7ea-ea2b-42f6-af3a-b502dd95aba8": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "Buy 4 or more bottles and get 30% off. Free shipping on all orders.",
+              "color_scheme": "background-1",
+              "link": ""
+            }
+          },
+          "84174252-7bb2-4fea-a4f8-b734defcb34c": {
+            "type": "announcement",
+            "settings": {
+              "text": "subscribe & save up to 33%",
+              "color_scheme": "background-1",
+              "link": "shopify:\/\/pages\/subscribe"
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-0",
+          "1e71f7ea-ea2b-42f6-af3a-b502dd95aba8",
+          "84174252-7bb2-4fea-a4f8-b734defcb34c"
+        ],
+        "settings": {
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "color_scheme": "background-1",
+          "logo": "shopify:\/\/shop_images\/image.png",
+          "pdp_logo": "shopify:\/\/shop_images\/small_logo_1.png",
+          "logo_width": 80,
+          "logo_position": "middle-left",
+          "menu": "left-header-menu",
+          "menu1": "main-menu",
+          "menumobile": "my-menu",
+          "show_line_separator": true,
+          "enable_sticky_header": true
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-1": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "heading": "",
+              "subtext": "<p>creators of the original dentaceutical<br\/>toothpaste + function<br\/>formulated in Seattle | compounded in New York<\/p>"
+            }
+          },
+          "dd4ff7d0-bc3a-4975-b0c2-b7091ad5243b": {
+            "type": "link_list",
+            "settings": {
+              "heading": "",
+              "menu": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "footer-1",
+          "dd4ff7d0-bc3a-4975-b0c2-b7091ad5243b"
+        ],
+        "settings": {
+          "color_scheme": "background-1",
+          "newsletter_enable": false,
+          "newsletter_heading": "sign up for updates",
+          "show_social": true,
+          "enable_country_selector": true,
+          "enable_language_selector": true,
+          "payment_enable": false
+        }
+      },
+      "base-ingredients": {
+        "type": "base-ingredients",
+        "blocks": {
+          "dcdd0323-de17-4033-b455-1742026466ec": {
+            "type": "text",
+            "settings": {
+              "title1": "Functional"
+            }
+          },
+          "57b06c0b-4150-4ed3-8571-65bb2c16cade": {
+            "type": "text",
+            "settings": {
+              "title1": "Functional"
+            }
+          },
+          "8f071c5c-0594-4a8e-a5d9-31d210a0b598": {
+            "type": "text",
+            "settings": {
+              "title1": "Functional"
+            }
+          }
+        },
+        "block_order": [
+          "dcdd0323-de17-4033-b455-1742026466ec",
+          "57b06c0b-4150-4ed3-8571-65bb2c16cade",
+          "8f071c5c-0594-4a8e-a5d9-31d210a0b598"
+        ],
+        "settings": {
+          "title": "Base Ingredient"
+        }
+      },
+      "base-ingredients-banner": {
+        "type": "base-ingredients-banner",
+        "blocks": {
+          "1eb3f509-d064-42ee-8512-252f90ebd19f": {
+            "type": "text",
+            "settings": {
+              "Block_Title": "Basline"
+            }
+          },
+          "118d0a77-377f-4cf9-b0d2-f0abaecaf72f": {
+            "type": "text",
+            "settings": {
+              "Block_Title": "immunity"
+            }
+          },
+          "23b864f6-f24e-4ed2-bc24-8c6de42793bd": {
+            "type": "text",
+            "settings": {
+              "Block_Title": "energy"
+            }
+          },
+          "a65b4376-14c3-461e-ac84-1e41a9e3ce00": {
+            "type": "text",
+            "settings": {
+              "Block_Title": "sleep"
+            }
+          }
+        },
+        "block_order": [
+          "1eb3f509-d064-42ee-8512-252f90ebd19f",
+          "118d0a77-377f-4cf9-b0d2-f0abaecaf72f",
+          "23b864f6-f24e-4ed2-bc24-8c6de42793bd",
+          "a65b4376-14c3-461e-ac84-1e41a9e3ce00"
+        ],
+        "settings": {
+          "block_main_heading": "Ingredients",
+          "enable_full_banner": true,
+          "img": "shopify:\/\/shop_images\/Group_1.jpg",
+          "img_height": 500
+        }
+      },
+      "about-banner": {
+        "type": "about-banner",
+        "blocks": {
+          "599891e8-6d18-45ac-ac23-1185941bbb97": {
+            "type": "text",
+            "settings": {
+              "Block_Title": "formulated by dentists",
+              "url": "shopify:\/\/pages\/formulated-by-dentists"
+            }
+          },
+          "7e82a1e3-fbf0-485d-8463-2fd0be68bfc0": {
+            "type": "text",
+            "settings": {
+              "Block_Title": "faq’s",
+              "url": "shopify:\/\/pages\/faqs"
+            }
+          },
+          "df909443-960f-4d92-a044-a47f68f32e97": {
+            "type": "text",
+            "settings": {
+              "Block_Title": "contact",
+              "url": "shopify:\/\/pages\/contact-us"
+            }
+          },
+          "b84c2c44-94b5-4598-8d09-07667a558419": {
+            "type": "text",
+            "settings": {
+              "Block_Title": "guarantee",
+              "url": "shopify:\/\/pages\/guarantee"
+            }
+          }
+        },
+        "block_order": [
+          "599891e8-6d18-45ac-ac23-1185941bbb97",
+          "7e82a1e3-fbf0-485d-8463-2fd0be68bfc0",
+          "df909443-960f-4d92-a044-a47f68f32e97",
+          "b84c2c44-94b5-4598-8d09-07667a558419"
+        ],
+        "settings": {
+          "block_main_heading": "About",
+          "enable_full_banner": true,
+          "img": "shopify:\/\/shop_images\/aboutduo.jpg",
+          "img_height": 500
+        }
+      },
+      "ingredient-page": {
+        "type": "ingredient-page",
+        "settings": {
+          "link": "shopify:\/\/products\/original",
+          "Immunity_link": "shopify:\/\/products\/immunity",
+          "energy_link": "shopify:\/\/products\/energy",
+          "sleep_link": "shopify:\/\/products\/sleep"
+        }
+      },
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/duologo_1.png",
+          "logo_max_width": 250,
+          "color_scheme": "background-1"
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "color_scheme": "accent-1"
+        }
+      },
+      "guaranteed-section": {
+        "type": "guaranteed-section",
+        "settings": {
+          "section_bg_color": "#00126B",
+          "button_text": "BUILD YOUR SUBSCRIPTION",
+          "button_url": "",
+          "text": "100% guaranteed. Pause, skip or cancel anytime."
+        }
+      },
+      "cart-drawer": {
+        "type": "cart-drawer",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "733389323033596483": {
+        "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/theme-settings\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "disabled": false,
+        "settings": {
+          "show_preview_data": true
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "1877152918344802950": {
+        "type": "shopify:\/\/apps\/intelligems-a-b-testing\/blocks\/intelligems-script\/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
+  },
+  "presets": {
+    "Default": {
+      "colors_solid_button_labels": "#FFFFFF",
+      "colors_accent_1": "#121212",
+      "colors_accent_2": "#334FB4",
+      "colors_text": "#121212",
+      "colors_outline_button_labels": "#121212",
+      "colors_background_1": "#FFFFFF",
+      "colors_background_2": "#F3F3F3",
+      "type_header_font": "assistant_n4",
+      "type_body_font": "assistant_n4",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "announcement-bar-0": {
+              "type": "announcement",
+              "settings": {
+                "color_scheme": "background-1"
+              }
+            }
+          },
+          "block_order": [
+            "announcement-bar-0"
+          ],
+          "settings": {
+          }
+        }
+      }
+    },
+    "Craft": {
+      "colors_solid_button_labels": "#EFECEC",
+      "colors_accent_1": "#2A332F",
+      "colors_accent_2": "#476154",
+      "colors_text": "#1C1A1A",
+      "colors_outline_button_labels": "#7B8382",
+      "colors_background_1": "#EFECEC",
+      "colors_background_2": "#C1BCAE",
+      "type_header_font": "americana_n4",
+      "type_body_font": "quattrocento_sans_n4",
+      "sections": {
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "menu": {
+              "type": "link_list",
+              "settings": {
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "menu",
+            "text"
+          ],
+          "settings": {
+            "color_scheme": "accent-1"
+          }
+        }
+      }
+    }
+  }
+}

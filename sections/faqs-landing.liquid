@@ -1,0 +1,226 @@
+{{ 'section-about_us.css' | asset_url | stylesheet_tag }}
+{{ 'faqs-landing-section.css' | asset_url | stylesheet_tag }}
+
+
+<!-- ----------Formulated Hero part--------------- -->
+<section class="Formulated-Dentists-page ">
+
+
+<!-- ----------Formulated Richtext--------------- -->
+  
+<!--    -->
+<!-- <div class="about-us_content page-width">   -->
+
+
+<!-- -------------section accordion-------------- -->
+  <div class="about-us_content page-width">
+<section id="section2" class="accordion-Formulated ">
+  <div class="text_width-text">
+      <div class="right_accordion faq">
+        {%if  section.settings.hero_Heading!=blank %}
+        <div class="accordion-heading">
+          <h2 class="accordion-heading desktop_about_head">{{ section.settings.hero_Heading }}</h2>
+        </div>
+        {%endif%}
+        {% for block in section.blocks %} 
+        <button class="accordion">
+          {%if block.settings.Heading!=blank%}
+          
+          <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 9L5 5L1 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+          
+          {{ block.settings.Heading }}
+          {%endif%}
+        </button>
+        <div class="course-panel panel">
+			{%if block.settings.text!=blank%}
+            {{ block.settings.text }}
+            {%endif%}        
+        </div>
+        {%endfor%}
+        </div>
+        {% if section.settings.see_all_faq_link != blank %}
+          <div class="see_all_faq_btn"><a href="{{ section.settings.see_all_faq_link }}">{{ section.settings.see_all_faq }}</a></div>
+        {% endif %}
+  </div>  
+</section>
+  </div> 
+  
+
+<style type="text/css">
+    .faqs-landing-section {
+        background-color: {{ section.settings.section_bg_color }};
+        padding-bottom: 10px;
+    }
+    div.course-panel {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    
+    section.accordion-Formulated {
+        margin: 0rem auto 11rem;
+        width: 100%;
+        font-family: tahoma;
+        line-height: 200%;
+    }
+    section.accordion-Formulated h3 {
+    /*     background: #fff; */
+        padding: 10px;
+        margin: 0;
+        cursor: pointer;
+    }
+    .accordion_text {
+    /*     background: #cedde5; */
+        padding: 10px;
+        display: none;
+    }
+    .accordion h3 i {
+        float: right;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    .arrow {
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+    }
+
+    .up {
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    .accordion {
+    cursor: pointer;
+    /*   padding: 18px; */
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    }
+
+
+    button.accordion.active{
+    background-color: #FFF;
+    }
+    button.accordion{
+    background-color: #FFF; 
+    }
+    .course-panel {
+    /*   padding: 0 18px; */  
+    background-color: white;
+    overflow: hidden;
+    }
+    
+    @media screen and (max-width: 1199px) {
+      section.accordion-Formulated {
+          margin: 0rem auto 8rem;
+      }
+    }
+  
+</style>
+
+<script>
+
+
+	//this is the button
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		//when one of the buttons are clicked run this function
+	  acc[i].onclick = function() {
+		//variables
+		var panel = this.nextElementSibling;
+		var coursePanel = document.getElementsByClassName("course-panel");
+		var courseAccordion = document.getElementsByClassName("accordion");
+		var courseAccordionActive = document.getElementsByClassName("accordion active");
+
+		/*if pannel is already open - minimize*/
+		if (panel.style.maxHeight){
+			//minifies current pannel if already open
+			panel.style.maxHeight = null;
+			//removes the 'active' class as toggle didnt work on browsers minus chrome
+			this.classList.remove("active");
+		} else { //pannel isnt open...
+			//goes through the buttons and removes the 'active' css (+ and -)
+			for (var ii = 0; ii < courseAccordionActive.length; ii++) {
+				courseAccordionActive[ii].classList.remove("active");
+			}
+			//Goes through and removes 'activ' from the css, also minifies any 'panels' that might be open
+			for (var iii = 0; iii < coursePanel.length; iii++) {
+			  // this.classList.remove("active");
+			  // coursePanel[iii].style.maxHeight = null;
+			}
+		  //opens the specified pannel
+		  panel.style.maxHeight = panel.scrollHeight + "px";
+		  //adds the 'active' addition to the css.
+		  this.classList.add("active");
+		} 
+	  }//closing to the acc onclick function
+	}//closing to the for loop.
+  
+</script>
+
+{% schema %}
+{
+  "name": "FAQ Landing",
+  "class": "faqs-landing-section",
+  "settings": [
+    {
+        "type": "color",
+        "id": "section_bg_color",
+        "label": "Section background color",
+        "default": "#00126B"
+    },
+    {
+      "type": "text",
+       "id": "hero_Heading",
+      "label": "Hero Heading"
+    },
+    {
+      "type": "text",
+       "id": "see_all_faq",
+      "label": "See all FAQs",
+      "default": "See all FAQs"
+    },
+    {
+      "type": "url",
+       "id": "see_all_faq_link",
+      "label": "Link"
+    }
+  ],
+  "blocks": [
+      {
+        "type": "text",
+        "name": "Faq",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "Heading",
+            "label": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+  "presets": [
+    {
+      "name": "FAQ Landing",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}

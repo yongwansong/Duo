@@ -1,0 +1,182 @@
+{{ 'slick.css' | asset_url | stylesheet_tag }}
+<!-- <div class="slider"> -->
+
+<div class="homeslider addbgcolor">
+  {%for block in section.blocks%}
+  <div class="img_slider slide-{{block.id}}" style="width:100%;">
+  <img class="desktop-slider" src="{{block.settings.image|img_url:'master'}}" />
+     <img class="mobile-slider" src="{{block.settings.mobile_image|img_url:'master'}}" />
+    <p class="short-title">made with...</p>  
+    <div class="img_tag">
+      <img class="image-label" src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/nHa-Icon_Black_4bf41983-3b89-43ac-900e-593731585570.png?v=1641880250">
+    </div>
+      <!--     <a href="section#shopify-section-template--15184443539623__featured_products"> -->
+      <div class="img_arrow-down">
+        <img class="image-arrow" src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/Arrow_1_1.png?v=1640239318">
+      </div>  
+<!--     </a> -->
+    <div class="titles__heading">
+    <div class="overlay-contents">
+      {% if block.settings.subheading != blank %}    
+      <p class="banner__subheading h0">
+        <span>{{ block.settings.subheading }}</span>
+      </p>  
+      {% endif %}    
+      {% if block.settings.heading != blank %}    
+      <h2 class="banner__heading h1">
+        <span>{{ block.settings.heading | escape }}</span>
+      </h2>  
+      {% endif %}  
+      {% if block.settings.button_link != blank %}  
+          <a class="button button--primary" href="{{block.settings.button_link}}">{{block.settings.button_label}}</a>
+      {% endif %}
+    </div>
+    </div>  
+  </div>
+  {%endfor%}
+</div>
+
+
+<!-- </div> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+<script src="{{ 'jquery.min.js' | asset_url }}" ></script>
+<script src="{{ 'slick.js' | asset_url }}" ></script>
+<script>
+  $(document).ready(function($) {
+    $('.homeslider').slick({
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: {% if section.settings.autorotate %}true{% else %}false{% endif %},
+      autoplaySpeed: {{section.settings.autorotate_speed | times: 1000}},
+      arrows: true,
+    });
+  });
+
+</script>
+
+{% schema %}
+{
+  "name": {
+    "en": "Slick Slideshow"
+  },
+  "class": "Slick-Slideshow",
+  "settings": [
+    
+    {
+      "type": "checkbox",
+      "id": "autorotate",
+      "label": {
+            "en": "Auto-rotate slides"
+      },
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autorotate_speed",
+      "label": {
+             "en": "Change slides every"
+      },
+      "max": 9,
+      "min": 3,
+      "step": 2,
+      "unit": {
+    
+        "en": " s"
+      },
+      "default": 3
+    }
+  ],
+  "blocks": [
+      {
+      "type": "image",
+      "name": {
+      
+        "en": "Image slide"
+      },
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+         "label": {
+            "en": "Image"
+          }
+        },
+		{
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": {
+         
+            "en": "Mobile Image"
+          }
+        },
+        
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": {
+                  "en": "Button label"
+          }
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": {
+               "en": "Button link"
+          }
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+           "en": "Banner Slideshow"
+      },
+      "category": {
+            "en": "Image"
+      },
+      "settings": {
+        "autorotate": false,
+        "autorotate_speed": 5
+      },
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+//   $(".image-arrow").on('click', function(event) {
+//     $('html, body').animate({
+//         scrollTop: $(hash).offset().top
+//       }, 800);
+//   });
+  $(".image-arrow").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".scroolcls").offset().top
+    }, 2000);
+});
+});
+</script>

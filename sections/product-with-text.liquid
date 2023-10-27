@@ -1,0 +1,264 @@
+{{ 'product-with-text.css' | asset_url | stylesheet_tag }}
+{{ 'lightbox.min.css' | asset_url | stylesheet_tag }}
+{%- if section.settings.section_bg_color != blank -%}
+  {% style %}
+    #shopify-section-{{ section.id }}{
+     background-color: {{ section.settings.section_bg_color }};
+    }
+  {% endstyle %}
+{%- endif -%}
+<div class="product-with-text-section_wrapper" id="better_living">
+  <div class="product-with-text_content">
+    {% if section.settings.title != blank %}
+      <div class="product-with-text_content__title">
+        {{ section.settings.title }}
+      </div>
+    {% endif %}
+    {% if section.settings.text != blank %}
+      <div class="product-with-text_content__text">
+        {{ section.settings.text }}
+      </div>
+    {% endif %}
+    {% if section.settings.sub_title != blank %}
+      <div class="product-with-text_content__sub_title" id="popup_images">
+        {{ section.settings.sub_title }}
+      </div>
+    {% endif %}
+    <div class="product-with-text_products">
+      {% assign counter = 0 %}
+      {%- for block in section.blocks -%}
+        {%- assign counter = counter | plus: 1 -%}
+        <div class="product-with-text__product_item product-with-text__product_item--{{ block.settings.title | handle }}">
+          {% if block.settings.product_image != blank %}
+            <a href="#{{ block.id }}" class="popup__trigger">
+              <img
+                src="{{ block.settings.product_image | image_url: width: 500 }}"
+                alt="{{ block.settings.product_image.alt }}"
+                width="500"
+                height="{{ 500 | divided_by: block.settings.product_image.aspect_ratio | ceil }}"
+                loading="lazy"
+              >
+            </a>
+          {% endif %}
+          {% if block.settings.title != blank %}
+            <div class="text__product_item_title">
+              {{ block.settings.title }}
+            </div>
+          {% endif %}
+          {% if block.settings.sub_title != blank %}
+            <div class="text__product_item_sub_title">
+              {{ block.settings.sub_title }}
+            </div>
+          {% endif %}
+        </div>
+        {% comment %} Popup {% endcomment %}
+        <div id="{{block.id}}" class="popup__overlay">
+          <div class="popup">
+            <a class="close popup_images__close" href="#popup_images">
+              &times;
+              <span class="visually-hidden">Close popup</span>
+            </a>
+            <div class="content">
+              <div class="regular_popup">
+                {% if block.settings.popup_image1 != blank %}
+                  <div class="popup_item">
+                    <img
+                      src="{{ block.settings.popup_image1 | image_url: width: 500 }}"
+                      alt="{{ block.settings.popup_image1.alt }}"
+                      width="500"
+                      height="{{ 500 | divided_by: block.settings.popup_image1.aspect_ratio | ceil }}"
+                      loading="lazy"
+                    >
+                  </div>
+                {% endif %}
+                {% if block.settings.popup_image2 != blank %}
+                  <div class="popup_item">
+                    <img
+                      src="{{ block.settings.popup_image2 | image_url: width: 500 }}"
+                      alt="{{ block.settings.popup_image2.alt }}"
+                      width="500"
+                      height="{{ 500 | divided_by: block.settings.popup_image2.aspect_ratio | ceil }}"
+                      loading="lazy"
+                    >
+                  </div>
+                {% endif %}
+                {% if block.settings.popup_image3 != blank %}
+                  <div class="popup_item">
+                    <img
+                      src="{{ block.settings.popup_image3 | image_url: width: 500 }}"
+                      alt="{{ block.settings.popup_image3.alt }}"
+                      width="500"
+                      height="{{ 500 | divided_by: block.settings.popup_image3.aspect_ratio | ceil }}"
+                      loading="lazy"
+                    >
+                  </div>
+                {% endif %}
+                {% if block.settings.popup_image4 != blank %}
+                  <div class="popup_item">
+                    <img
+                      src="{{ block.settings.popup_image4 | image_url: width: 500 }}"
+                      alt="{{ block.settings.popup_image4.alt }}"
+                      width="500"
+                      height="{{ 500 | divided_by: block.settings.popup_image4.aspect_ratio | ceil }}"
+                      loading="lazy"
+                    >
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+    <div class="product-with-text_bottom_icons">
+      {% if section.settings.bottom_icon1 != blank %}
+        <span class="product-with-text_bottom_icons__item">
+          <img
+            src="{{ section.settings.bottom_icon1 | image_url: width: 500 }}"
+            alt="{{ section.settings.bottom_icon1.alt }}"
+            width="500"
+            height="{{ 500 | divided_by: section.settings.bottom_icon1.aspect_ratio | ceil }}"
+            loading="lazy"
+          >
+        </span>
+      {% endif %}
+      {% if section.settings.bottom_icon2 != blank %}
+        <span class="product-with-text_bottom_icons__item">
+          <img
+            src="{{ section.settings.bottom_icon2 | image_url: width: 500 }}"
+            alt="{{ section.settings.bottom_icon2.alt }}"
+            width="500"
+            height="{{ 500 | divided_by: section.settings.bottom_icon2.aspect_ratio | ceil }}"
+            loading="lazy"
+          >
+        </span>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function ($) {
+    $('.regular_popup').slick({
+      dots: true,
+      arrows: true,
+      prevArrow:
+        '<button type="button" class="slick-prev"><span class="visually-hidden">Previous slide</span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" width="15" height="32" fill="none"><path stroke="#000" stroke-width="4" d="M13 2 3 16l10 14"/></svg></button>',
+      nextArrow:
+        '<button type="button" class="slick-next"><span class="visually-hidden">Next slide</span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" width="15" height="32" fill="none"><path stroke="#000" stroke-width="4" d="m2 2 10 14L2 30"/></svg></button>',
+      infinite: false,
+      speed: 1000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+    });
+    $('.popup__trigger').on('click', function (e) {
+      e.preventDefault();
+      var target = $(this).attr('href');
+      if (target.length) {
+        $('.popup__overlay').not(target).removeClass('popup__overlay--visible');
+        $(target).addClass('popup__overlay--visible');
+      }
+    });
+    $('.popup_images__close').on('click', function (e) {
+      e.preventDefault();
+      $(this).closest('.popup__overlay').removeClass('popup__overlay--visible');
+    });
+    $('.popup__overlay').on('mousedown', function (e) {
+      if (e.target === this) {
+        $(this).removeClass('popup__overlay--visible');
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Products with text",
+  "class": "product-with-text-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Section background color",
+      "default": "#00126B"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "label": "Sub title"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_icon1",
+      "label": "Bottom icon1"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_icon2",
+      "label": "Bottom icon2"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Services",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "product_image",
+          "label": "Product image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "sub_title",
+          "label": "Sub title"
+        },
+        {
+          "type": "header",
+          "content": "Popup data"
+        },
+        {
+          "type": "image_picker",
+          "id": "popup_image1",
+          "label": "Image 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "popup_image2",
+          "label": "Image 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "popup_image3",
+          "label": "Image 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "popup_image4",
+          "label": "Image 4"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Products with text"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,149 @@
+.regular {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+/************ Popup pure styling ************/
+.popup-wrrapper {
+	display: block;
+	text-align: center;
+	margin-top: 110px;
+}
+
+.popup-wrrapper a {
+	font-size: 40px;
+}
+
+.popup_btn {
+	font-size: 1em;
+	color: #000;
+	text-decoration: none;
+}
+
+.popup__overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	z-index: 99999;
+}
+.popup__overlay.popup__overlay--visible{
+	visibility: visible;
+	opacity: 1;
+	pointer-events: auto;
+}
+.popup {
+	margin: 70px auto;
+	padding: 0px;
+	background: #fff;
+	border-radius: 5px;
+	width: 100%;
+	max-width: 550px;
+	position: relative;
+	transition: all 0.2s ease-in-out;
+}
+
+.popup h2 {
+	margin-top: 0;
+	color: #333;
+	font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+	position: absolute;
+	top: 0px;
+	right: 15px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000;
+	z-index: 10;
+
+}
+
+.popup .close:hover {
+	color: #000;
+	opacity: 0.8;
+}
+
+.popup .content {
+	max-height: 30%;
+	overflow: auto;
+}
+
+.product-with-text-section .product-with-text-section_wrapper .popup_item img {
+	border: none;
+	border-radius: inherit;
+	padding: 0;
+}
+
+.product-with-text-section .product-with-text-section_wrapper .popup_item {
+	padding: 0;
+	margin: 0;
+}
+
+.regular_popup ul.slick-dots {
+	display: flex;
+	padding: 0;
+	justify-content: center;
+	column-gap: 5px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	z-index: 9999;
+}
+
+.regular_popup li {
+	list-style: none;
+}
+
+.regular_popup li button {
+	font-size: 0;
+	padding: 0;
+	border: 1px solid #141414;
+	background: transparent;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.regular_popup li.slick-active button {
+	background: #141414;
+}
+.popup__overlay .regular_popup .slick-prev,
+.popup__overlay .regular_popup .slick-next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 55px;
+	height: 85px;
+	border: 0;
+	padding: 0;
+	background: rgba(255, 255, 255, 0.1);
+	cursor: pointer;
+}
+.popup__overlay .regular_popup .slick-prev {
+	left: 0;
+	padding-left: 5px;
+}
+.popup__overlay .regular_popup .slick-next {
+	right: 0;
+	padding-right: 5px;
+}
+@media screen and (max-width: 767px) {
+	.box {
+		width: 70%;
+	}
+
+	.popup {
+		width: 70%;
+	}
+}

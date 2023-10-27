@@ -1,0 +1,85 @@
+{%- if section.blocks.size > 0 -%}
+  {{ 'splide.css' | asset_url | stylesheet_tag }}
+  {{ 'section-product-features.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'splide.js' | asset_url }}" defer="defer"></script>
+  {%- if section.settings.product_color != blank -%}
+    {%- style -%}
+        .product-features{
+      {%- assign product_color = section.settings.product_color  | color_modify: 'lightness', 90.4  -%}
+        	--product-color: {{ section.settings.product_color.red }}, {{ section.settings.product_color.green }}, {{ section.settings.product_color.blue }};
+        	--product-color-lighter: {{ product_color.red }}, {{ product_color.green }}, {{ product_color.blue }};
+        }
+    {%- endstyle -%}
+  {%- endif -%}
+  <div id="splide--{{ section.id }}" class="splide" role="group" aria-label="Product Features">
+    <div class="product-features splide__track">
+      <ul class="list list-unstyled splide__list">
+        {%- for block in section.blocks -%}
+          <li class="product-feature splide__slide">
+            <span class="product-feature__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" class="icon icon-check">
+                <use xlink:href="#icon-check-{{ section.id }}"></use>
+              </svg>
+            </span>
+            <p class="product-feature__text">
+              {{ block.settings.text }}
+            </p>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <symbol id="icon-check-{{ section.id }}" viewBox="0 0 27 28">
+    	<path d="M12.838 1.28094C13.1323 0.906352 13.699 0.906352 13.9933 1.28094L16.2083 4.10158C16.3925 4.33602 16.6997 4.43597 16.9863 4.35466L20.4342 3.37624C20.8922 3.24631 21.3508 3.57989 21.3688 4.05605L21.5049 7.64154C21.5163 7.93954 21.7061 8.20123 21.9858 8.30409L25.3496 9.54163C25.7963 9.70598 25.9716 10.2457 25.7066 10.6416L23.7117 13.6224C23.5459 13.8701 23.5459 14.1936 23.7117 14.4414L25.7066 17.4221C25.9716 17.818 25.7963 18.3577 25.3496 18.5221L21.9858 19.7597C21.7061 19.8625 21.5163 20.1242 21.5049 20.4222L21.3688 24.0076C21.3508 24.4838 20.8922 24.8174 20.4342 24.6875L16.9863 23.7091C16.6997 23.6277 16.3925 23.7277 16.2083 23.9622L13.9933 26.7828C13.699 27.1573 13.1323 27.1573 12.838 26.7828L10.623 23.9622C10.4389 23.7277 10.1316 23.6277 9.845 23.7091L6.39699 24.6875C5.93908 24.8174 5.48049 24.4838 5.46242 24.0076L5.32635 20.4222C5.31503 20.1242 5.12513 19.8625 4.84554 19.7597L1.48163 18.5221C1.03489 18.3577 0.859725 17.818 1.12466 17.4221L3.11957 14.4414C3.28538 14.1936 3.28538 13.8701 3.11957 13.6224L1.12466 10.6416C0.859725 10.2457 1.03489 9.70598 1.48163 9.54163L4.84555 8.30409C5.12513 8.20123 5.31503 7.93954 5.32635 7.64154L5.46242 4.05605C5.48049 3.57989 5.93908 3.24631 6.397 3.37624L9.845 4.35466C10.1316 4.43597 10.4389 4.33602 10.623 4.10158L12.838 1.28094Z" fill="rgb(var(--product-color))" stroke="black" stroke-width="1.30846"/>
+    	<path d="M9.74072 14.0317L12.1899 16.4837L17.0882 11.5796" stroke="black" stroke-width="1.83906" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#splide--{{ section.id }}', {
+        gap: '5rem',
+        arrows: false,
+        pagination: false,
+        type: 'loop',
+        drag: false,
+        focus: 'center',
+        autoWidth: true,
+        perPage: 1,
+        autoScroll: {
+          speed: 0.5,
+        },
+        breakpoints: {
+          749: { gap: '2rem' },
+        },
+      }).mount(window.splide.Extensions);
+    });
+  </script>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Product features",
+  "tag": "section",
+  "class": "product-section spaced-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "product_color",
+      "label": "Product color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,55 @@
+<style>
+
+img.about-bnr.lazyload {
+    width: 100%;
+}
+  
+  
+</style>
+
+
+{% if section.settings.hero_img != blank %}
+<div>
+  <div class="image">
+    <img src="{{section.settings.hero_img | img_url: 'master'}}" class="about-bnr lazyload">
+      <img src="{{section.settings.hero_img_mobile | img_url: 'master'}}" class="mobile_about-bnr lazyload">
+  </div>
+  {% if section.settings.hero_Heading != blank %}
+  <div class="banner-text">
+    <h3>{{section.settings.hero_Heading}}</h3>
+  </div>
+
+  
+  {% endif %}
+</div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "About Full Banner",
+  "settings": [
+    
+    {
+      "type": "richtext",
+       "id": "hero_Heading",
+      "label": "Hero Heading"
+    },
+    {
+      "type": "image_picker",
+       "id": "hero_img",
+      "label": "Hero Image"
+    },
+    {
+      "type": "image_picker",
+       "id": "hero_img_mobile",
+      "label": "Hero Image mobile"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Full Banner",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

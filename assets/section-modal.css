@@ -1,0 +1,889 @@
+
+
+/***************************** Modal Section CSS Start *****************************/
+
+/* Common Css For modal start */
+.modal {
+        display: none;
+        position: fixed;
+        z-index: 10;
+        padding-top: 14vh;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 90%;
+    }
+    
+    .close {
+        color: #01082B;
+        float: right;
+        font-size: 32px;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+.modal_section.grid {
+    width: 100%;
+    padding: 0rem 1.5rem;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.left__content {
+    width: 45%;
+}
+
+.right__content {
+    width: 45%;
+}
+
+.modal-content_1 {
+    position: relative;
+}
+
+.close_multi {
+    position: absolute;
+    top: -10px;
+    right: 12px;
+}
+
+.modal_section {
+    margin: 30px 0px 15px;
+}
+
+
+
+.item_circle_1 .circle {
+    display: inline-block;
+    padding: 3rem;
+    border-radius: 50%;
+
+}
+
+.modal_titles {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+
+}
+
+.item_circle_1 {
+    margin-right: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titles_0 {
+        border-left: 2px solid;
+
+    padding: 0 1.6rem;
+}
+
+h2.heading_0 {
+    margin: 0px;
+      margin-top: 7px;
+
+    font-family: "Gotham";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    color: #000000;
+}
+
+h4.sub__heading_0 {
+      margin: 0px;
+
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.ingredients__lists {
+    width: 80%;
+    margin: 1.5rem 0rem;
+}
+
+span.sub_block {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+    color: #000000;
+}
+
+a.item__link{
+	text-decoration: none;
+}
+
+a.item__link span {
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.ingredient-slider ul li .ingredient_slider-content {
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding: 0 2.5rem;
+}
+
+.baseline_content .modal-content_1 {
+    border: 4px solid #48BBFE;
+}
+
+.immunity_content .modal-content_1 {
+    border: 4px solid #37E8B6;
+}
+
+.energy_content .modal-content_1 {
+    border: 4px solid #FFB32D;
+}
+
+.sleep_content .modal-content_1 {
+    border: 4px solid #BC71D3;
+}
+
+h3.title_0 {
+    margin: 0px;
+    font-family: "Lora";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 7px;
+    color: #000000;
+}
+
+h5.sub_title {
+    margin: 14px 0px;
+  	background-color: #48BBFE;
+    width: 175px;
+/*     text-align: center; */
+    padding: 5px 8px;
+}
+
+h5.sub_title span{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+  	padding-top: 4px;
+}
+
+.ingredient-slider  p.slider_para{
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+}
+
+p.slider_description{
+    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+}
+
+.logo-0 {
+    width: 100%;
+}
+
+img.logo_img {
+    width: 80px;
+}
+
+p.bottom-desp{
+  
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 16px;
+  color: #000000;
+}
+.ingredient-slider {
+  	position: relative;
+}
+
+.ingredient-slider ul{
+  	list-style: none;
+}
+
+ul.ul_slider {
+    padding: 0px;
+    
+}
+
+.ingredient-slider ul li .ingredient_slider-content
+{
+  	height: 100%;
+    max-height: 100%;
+    min-height: 36rem;
+}
+
+li.item_list-link:last-child .ingredients_link.btn-link span.link_text {
+    border: none;
+/*     background-color: blue; */
+}
+
+/* Common Css For modal end */
+
+
+/******** BASELINE MODAL CSS START *********/
+.baseline_content .item_circle_1 .circle {
+    background-color: #48BBFE;;
+}
+
+.baseline_content .ingredient-slider ul li .ingredient_slider-content {
+    border: 3px solid #48BBFE;
+}
+/******** BASELINE MODAL CSS END *********/
+
+
+/******** IMMUNITY MODAL CSS START *********/
+.immunity_content .item_circle_1 .circle {
+    background-color: #37E8B6;
+}
+
+.immunity_content .ingredient-slider ul li .ingredient_slider-content{
+    border: 3px solid #37E8B6;
+}
+
+.supplement_title h3.box_title {
+    margin: 0px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 28px;
+    color: #000000;
+  	text-transform: capitalize;
+}
+/******** IMMUNITY MODAL CSS END *********/
+
+
+/******** ENERGY MODAL CSS START *********/
+.energy_content .item_circle_1 .circle {
+    background-color: #FFB32D;
+}
+
+.energy_content .ingredient-slider ul li .ingredient_slider-content {
+    border: 3px solid #FFB32D;
+}
+/******** ENERGY MODAL CSS END *********/
+
+
+/******** SLEEP MODAL CSS START *********/
+.sleep_content .item_circle_1 .circle {
+    background-color: #BC71D3;
+}
+
+.sleep_content .ingredient-slider ul li .ingredient_slider-content {
+    border: 3px solid #BC71D3;
+}
+/******** SLEEP MODAL CSS END *********/
+
+
+
+
+/******** base ingredients css start *********/
+
+/*
+ .baseline_content.modal-1 .ingredients__lists a.item__link:nth-child(2) span {
+    text-decoration: underline;
+    text-decoration-color: 48BBFE;
+    text-decoration-thickness: 2px;
+    font-weight: 600 !important;
+}
+*/
+
+/******** base ingredients css end *********/
+
+
+
+/******** functional css start *********/
+.modal__supplement-section {
+  	width: auto;
+  	/*max-width: 315px;*/
+    margin-top: 1.8rem;
+  	margin-left: 0px;
+      margin-right: 1.8rem;
+
+}
+
+.vitamins_box {
+    border: 1px solid #000;
+    padding: 1rem;
+}
+
+.titles_1 a.item__link span {
+    border: none !important;
+    padding: 0px !important;
+}
+
+.baseline_content h5.sub_title.functional {
+    background-color: #48BBFE !important;
+}
+
+.immunity_content h5.sub_title.functional {
+    background-color: #37E8B6 !important;
+}
+
+.energy_content h5.sub_title.functional {
+    background-color: #FFB32D !important;
+}
+
+.sleep_content h5.sub_title.functional {
+    background-color: #BC71D3 !important;
+}
+
+/*
+
+.immunity_content.modal-28 .vitamins_box .titles_1 a.item__link:nth-child(2) span {
+    text-decoration: underline;
+    text-decoration-color: 48BBFE;
+    text-decoration-thickness: 2px;
+    font-weight: 600 !important;
+}
+
+.energy_content.modal-61 .vitamins_box .titles_1 a.item__link:nth-child(3) span {
+    text-decoration: underline;
+    text-decoration-color: 48BBFE;
+    text-decoration-thickness: 2px;
+    font-weight: 600 !important;
+}
+
+.sleep_content.modal-96 .vitamins_box .titles_1 a.item__link:nth-child(2) span {
+    text-decoration: underline;
+    text-decoration-color: 48BBFE;
+    text-decoration-thickness: 2px;
+    font-weight: 600 !important;
+} */
+
+/* .energy_content.modal-32 .vitamins_box .titles_1 a.item__link:nth-child(3) span {
+    text-decoration: underline;
+    text-decoration-color: 48BBFE;
+    text-decoration-thickness: 2px;
+    font-weight: 600 !important;
+} */
+
+
+/******** functional css end *********/
+
+
+
+
+
+/******** flavour css start *********/
+.baseline_content h5.sub_title.flavour {
+    background: #ACD9FE;
+}
+
+.immunity_content h5.sub_title.flavour {
+    background: #ACD9FE;
+}
+
+.energy_content h5.sub_title.flavour {
+    background: #ACD9FE;
+}
+
+.sleep_content h5.sub_title.flavour {
+    background: #ACD9FE;
+}
+
+/*
+
+.baseline_content.modal-13 .ingredients__lists a.item__link:nth-child(14) span {
+    text-decoration: underline;
+    text-decoration-color: 48BBFE;
+    text-decoration-thickness: 2px;
+    font-weight: 600 !important;
+}
+
+.immunity_content.modal-42 .ingredients__lists > div:nth-child(2) a.item__link:nth-child(14) span {
+    text-decoration: underline;
+    text-decoration-color: 48BBFE;
+    text-decoration-thickness: 2px;
+    font-weight: 600 !important;
+}
+
+.energy_content.modal-74 .ingredients__lists > div:nth-child(2) a.item__link:nth-child(13) span {
+    text-decoration: underline;
+    text-decoration-color: 48BBFE;
+    text-decoration-thickness: 2px;
+    font-weight: 600 !important;
+}
+
+.energy_content.modal-75 .ingredients__lists > div:nth-child(2) a.item__link:nth-child(14) span {
+    text-decoration: underline;
+    text-decoration-color: 48BBFE;
+    text-decoration-thickness: 2px;
+    font-weight: 600 !important;
+}
+
+.energy_content.modal-76 .ingredients__lists > div:nth-child(2) a.item__link:nth-child(15) span {
+    text-decoration: underline;
+    text-decoration-color: 48BBFE;
+    text-decoration-thickness: 2px;
+    font-weight: 600 !important;
+} 
+
+*/
+
+
+/******** flavour css end *********/
+
+
+/* Sleep extra css start */
+.multi-sub_titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 25rem;
+}
+/* Sleep extra css end */
+
+
+/* slider Css for modal  start */
+
+/* Hide the images by default */
+.mySlide_1 {
+  display: none;
+}
+
+.mySlides_2 {
+  display: none;
+}
+
+.mySlides_3 {
+  display: none;
+}
+
+.mySlides_4 {
+  display: none;
+}
+
+.mySlides_5 {
+  display: none;
+}
+
+.mySlides_6 {
+  display: none;
+}
+
+.mySlides_7 {
+  display: none;
+}
+
+.mySlides_8 {
+  display: none;
+}
+
+.mySlides_9 {
+  display: none;
+}
+
+.mySlides_10 {
+  display: none;
+}
+
+.mySlides_11 {
+  display: none;
+}
+
+.mySlides_12 {
+  display: none;
+}
+
+.mySlides_13 {
+  display: none;
+}
+
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  width: auto;
+  padding: 16px;
+/*   margin-top: -10px; */
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: -60px;
+}
+  
+.prev {
+  left: -62px;
+/*   border-radius: 3px 0 0 3px; */
+}  
+  
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active span{
+  	text-decoration: underline !important;
+    text-decoration-thickness: 4px !important;
+ 	font-weight: 600 !important;
+}
+
+.baseline_content .active span{
+    text-decoration-color: #48BBFE !important;
+}
+
+.immunity_content .active span{
+    text-decoration-color: #47EABA !important;
+}
+
+.energy_content .active span{
+    text-decoration-color: #FFB32D !important;
+}
+
+.sleep_content .active span{
+    text-decoration-color: #BC71D3 !important;
+}
+
+ .class_1 span{
+  	text-decoration: underline !important;
+    text-decoration-color: 48BBFE !important;
+    text-decoration-thickness: 3px !important;
+ 	font-weight: 600 !important;
+} 
+  
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+ .right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+} 
+i.arrow.right {
+    width: 20px;
+    height: 20px;
+}
+i.arrow.left {
+    width: 20px;
+    height: 20px;
+}
+
+
+.modal_heading-section {
+    margin-left: 5px;
+}
+
+.modal_ingredients {
+    margin-left: 5px;
+}
+
+.below-content {
+    margin-left: 5px;
+}
+
+.logo-0 {
+    margin-left: 2px;
+}
+
+/* slider Css for modal  end */
+
+/***************************** Modal Section CSS End *****************************/
+
+
+/*********** IPAD CSS Start ***********/
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+  .modal__supplement-section {
+      max-width: 232px;
+  }
+  
+  .item_circle_1 .circle {
+      padding: 2.5rem;
+  }
+  
+  .titles_0 {
+      padding: 0 1.4rem;
+  }
+  
+  h2.heading_0 {
+      font-size: 20px;
+      line-height: 20px;
+      margin: 2px 0 4px;
+  }
+  
+  h4.sub__heading_0 {
+      font-size: 11px;
+      line-height: 15px;
+  }
+  
+  .modal {
+      padding-top: 8vh;
+  }
+  
+  .ingredient-slider ul li .ingredient_slider-content {
+      min-height: 45rem;
+  }
+}
+
+/*********** IPAD CSS End ***********/
+
+
+/*********** For Mobile CSS Start ***********/
+
+@media(max-width:1024px) and (min-width: 990px){
+
+  .ingredient-slider p.slider_para{
+      font-size: 15px;
+      line-height: 22px;
+  }
+
+}
+
+
+@media(max-width:990px) and (min-width: 768px){
+
+  .ingredient-slider p.slider_para{
+      font-size: 14px;
+      line-height: 20px;
+  }
+  
+  h3.base-heading {
+      padding: 0 2rem;
+  }
+
+}
+
+@media(max-width:700px) and (min-width: 600px){
+
+  .ingredient-slider p.slider_para{
+      font-size: 13px;
+      line-height: 18px;
+  }
+  
+  h3.base-heading {
+      padding: 0 2rem;
+  }
+  
+  h3.title_0 {
+      font-size: 18px;
+  }
+  
+  .left__content, .right__content {
+      width: 85%;
+      margin: 0 auto;	
+  }
+  
+/*   .modal_section.grid {
+      flex-direction: column;
+  } */
+  
+  .ingredients__lists {
+      width: 100%;
+      margin: 2rem 0rem;
+      padding:0;
+  }
+  
+  i.arrow.right, i.arrow.left {
+      width: 14px;
+      height: 14px;
+  }
+  
+  .prev {
+      left: -35px;
+  }
+  
+  .next {
+      right: -34px;
+  }
+  
+  h2.heading_0 {
+      font-size: 18px;
+      line-height: 18px;
+      margin: 3px 0 5px;
+  }
+  
+  .item_circle_1 {
+      margin-right: 1.5rem;
+  }
+  
+  .item_circle_1 .circle {
+      padding: 2.5rem;
+  }
+  
+  h4.sub__heading_0 {
+      font-size: 13px;
+      line-height: 16px;
+  }
+  
+  span.sub_block {
+      font-size: 14px;
+      line-height: 24px;
+  }
+  
+  a.item__link span {
+      font-size: 14px;
+      line-height: 20px;
+  }
+  
+  ul.ul_slider {
+      margin: 0;
+  }
+  
+  .modal {
+      padding-top: 12vh;
+  }
+  
+  .modal-content {
+      padding: 18px 15px;
+      width: 95%;
+  }
+  
+  .left__content {
+      padding-right: 4rem;
+  }
+  
+  .titles_0 {
+      padding: 0 1.2rem;
+  }
+
+}
+
+@media(max-width:600px){  
+  
+/*  Modal Css for Mobile Start  */
+  .left__content {
+      display: none;
+  }
+
+  .modal-content_1 {
+      width: 95%;
+      padding: 10px;
+      border: none;
+  }
+
+  .right__content {
+      width: 100%;
+  }
+
+  .modal_section.grid {
+      padding: 0rem;
+  }
+
+  .ingredient-slider p.slider_para {
+      font-size: 13px;
+      line-height: 18px;
+  } 
+  
+  .ingredient-slider {
+      height: 100%;
+      max-height: 100%;
+      min-height: 28rem;
+  }
+
+  h3.title_0 {
+      font-size: 20px;
+      line-height: 5px;
+  }
+  
+  .baseline_content .ingredient-slider {
+      border: 3px solid #48BBFE;
+/*       border: none; */
+  }
+  
+  .immunity_content .ingredient-slider {
+      border: 3px solid #37E8B6;
+/*     border: none; */
+  }
+  
+  .energy_content .ingredient-slider {
+      border: 3px solid #FFB32D;
+/*     border: none; */
+  }
+  
+  .sleep_content .ingredient-slider {
+      border: 3px solid #BC71D3;
+   
+  }
+  
+  .ingredient-slider  {
+      border-top-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+      padding: 0 2.5rem;
+  }
+
+
+}
+
+/* span.close.close_multi:before {
+    content: "";
+    border: 2px solid #000;
+    position: absolute;
+    width: 25px;
+    border-radius: 35px;
+    transform: rotate(-45deg);
+}
+
+span.close.close_multi:after {
+    content: "";
+    border: 2px solid #000;
+    position: absolute;
+    width: 25px;
+    border-radius: 35px;
+    transform: rotate(45deg);
+    left: 0;
+} */
+
+/*********** For Mobile CSS End ***********/
