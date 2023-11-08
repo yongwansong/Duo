@@ -674,6 +674,8 @@ class VariantSelects extends HTMLElement {
 
         if (atcDource) addToCartText = atcDource.innerText;
 
+        if (window.abtest) addToCartText = "Add to Cart"
+
         const price = document.getElementById(`price-${this.dataset.section}`);
 
         if (price) price.classList.remove('visibility-hidden');
