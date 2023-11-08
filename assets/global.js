@@ -668,11 +668,14 @@ class VariantSelects extends HTMLElement {
         const destination = document.getElementById(id);
         const source = html.getElementById(id);
         const atcDource = html.getElementById(`atc-content-${this.dataset.section}`);
+        const atcDourceWithoutPrice = html.getElementById(`atc-content-without-price-${this.dataset.section}`);
 		let addToCartText = window.variantStrings.addToCart;
 
         if (source && destination) destination.innerHTML = source.innerHTML;
 
         if (atcDource) addToCartText = atcDource.innerText;
+
+        if (window.abtest) addToCartText = atcDourceWithoutPrice.innerText
 
         const price = document.getElementById(`price-${this.dataset.section}`);
 
