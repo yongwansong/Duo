@@ -539,6 +539,13 @@
 									{{ 'products.product.sold_out' | t }}
 								{%- endif -%}
 							</div>
+              <div class="hidden" style="display:none" id="atc-content-without-price-{{ section.id }}">
+								{%- if product.selected_or_first_available_variant.available -%}
+									{{ 'products.product.add_to_cart' | t }}
+								{%- else -%}
+									{{ 'products.product.sold_out' | t }}
+								{%- endif -%}
+							</div>
                       </div>
                     {%- endform -%}
                   </product-form>
