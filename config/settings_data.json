@@ -52,6 +52,7 @@
           },
           "84174252-7bb2-4fea-a4f8-b734defcb34c": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "subscribe to duo & save up to 33%",
               "color_scheme": "background-1",
