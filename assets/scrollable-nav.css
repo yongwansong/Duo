@@ -1,6 +1,9 @@
 #shopify-section-scrollable-nav {
-    display: none;
     z-index: 2;
+}
+
+.section--scrollable-navigation.abtest {
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
