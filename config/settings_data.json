@@ -269,6 +269,79 @@
         "type": "cart-drawer",
         "settings": {
         }
+      },
+      "scrollable-nav": {
+        "type": "scrollable-nav",
+        "blocks": {
+          "5007a94b-f776-435b-a34b-be38beab28b3": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Original",
+              "image": "shopify:\/\/shop_images\/carousel1.png",
+              "url": "shopify:\/\/products\/original"
+            }
+          },
+          "375bd14f-9802-4d36-8dc4-6d70acd675c3": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Immunity",
+              "image": "shopify:\/\/shop_images\/carousel2.png",
+              "url": "shopify:\/\/products\/immunity"
+            }
+          },
+          "1668bc6d-e3ab-45a8-b513-998220f71dbf": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Energy",
+              "image": "shopify:\/\/shop_images\/carousel3.png",
+              "url": "shopify:\/\/products\/energy"
+            }
+          },
+          "1d585f2a-fca4-4dc8-8d60-61e4adbb374f": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Sleep",
+              "image": "shopify:\/\/shop_images\/carousel4.png",
+              "url": "shopify:\/\/products\/sleep"
+            }
+          },
+          "532b6856-04de-47bb-b96b-d5b8ec5cab82": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Bundles",
+              "image": "shopify:\/\/shop_images\/carousel5.png",
+              "url": "shopify:\/\/pages\/subscribe-save"
+            }
+          },
+          "014ea920-3cce-4cb1-b8a6-be011c4d5106": {
+            "type": "menu_item",
+            "settings": {
+              "title": "About",
+              "image": "shopify:\/\/shop_images\/carousel6.png",
+              "url": "shopify:\/\/pages\/about"
+            }
+          },
+          "56ca3bc7-0397-4758-b1a1-7956fc0522ae": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Shop All",
+              "image": "shopify:\/\/shop_images\/carousel7.png",
+              "url": "shopify:\/\/collections\/shop"
+            }
+          }
+        },
+        "block_order": [
+          "5007a94b-f776-435b-a34b-be38beab28b3",
+          "375bd14f-9802-4d36-8dc4-6d70acd675c3",
+          "1668bc6d-e3ab-45a8-b513-998220f71dbf",
+          "1d585f2a-fca4-4dc8-8d60-61e4adbb374f",
+          "532b6856-04de-47bb-b96b-d5b8ec5cab82",
+          "014ea920-3cce-4cb1-b8a6-be011c4d5106",
+          "56ca3bc7-0397-4758-b1a1-7956fc0522ae"
+        ],
+        "settings": {
+          "is_shown": true
+        }
       }
     },
     "content_for_index": [

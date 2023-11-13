@@ -278,6 +278,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {% section 'announcement-bar' %}
     {% section 'header' %}
 
+    {% if template == 'index' %}
+      {% section 'scrollable-nav' %}
+    {% endif %}
+
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {%- if request.path contains 'loop_subscriptions/bundle' -%}
         {% render 'loop_bundle_loader' %}

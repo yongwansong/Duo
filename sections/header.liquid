@@ -779,7 +779,10 @@
 
     connectedCallback() {
       this.header = document.getElementById('shopify-section-header');
+      this.scrollableNav = document.getElementById('shopify-section-scrollable-nav');
       this.headerBounds = {};
+
+      this.headerHeight = (window.innerWidth < 768 && window.abtest ? this.scrollableNav.offsetHeight : this.header.offsetHeight)
 
 	  this.setHeaderHeight();
 
