@@ -782,7 +782,7 @@
       this.scrollableNav = document.getElementById('shopify-section-scrollable-nav');
       this.headerBounds = {};
 
-      this.headerHeight = (window.innerWidth < 768 ? this.scrollableNav.offsetHeight : this.header.offsetHeight)
+      this.headerHeight = (window.innerWidth < 768 && window.abtest ? this.scrollableNav.offsetHeight : this.header.offsetHeight)
 
 	  this.setHeaderHeight();
 
