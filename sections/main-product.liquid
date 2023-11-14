@@ -532,20 +532,20 @@
                         {%- if block.settings.show_dynamic_checkout -%}
                           {{ form | payment_button }}
                         {%- endif -%}
-							<div class="hidden" style="display:none" id="atc-content-{{ section.id }}">
-								{%- if product.selected_or_first_available_variant.available -%}
-									{{ 'products.product.add_to_cart' | t }} - {{ product.selected_or_first_available_variant.price | money | strip_html }}
-								{%- else -%}
-									{{ 'products.product.sold_out' | t }}
-								{%- endif -%}
-							</div>
-              <div class="hidden" style="display:none" id="atc-content-without-price-{{ section.id }}">
-								{%- if product.selected_or_first_available_variant.available -%}
-									{{ 'products.product.add_to_cart' | t }}
-								{%- else -%}
-									{{ 'products.product.sold_out' | t }}
-								{%- endif -%}
-							</div>
+                        <div class="hidden" style="display:none" id="atc-content-{{ section.id }}">
+                          {%- if product.selected_or_first_available_variant.available -%}
+                            {{ 'products.product.add_to_cart' | t }} - {{ product.selected_or_first_available_variant.price | money | strip_html }}
+                          {%- else -%}
+                            {{ 'products.product.sold_out' | t }}
+                          {%- endif -%}
+                        </div>
+                        <div class="hidden" style="display:none" id="atc-content-without-price-{{ section.id }}">
+                          {%- if product.selected_or_first_available_variant.available -%}
+                            {{ 'products.product.add_to_cart' | t }}
+                          {%- else -%}
+                            {{ 'products.product.sold_out' | t }}
+                          {%- endif -%}
+                        </div>
                       </div>
                     {%- endform -%}
                   </product-form>

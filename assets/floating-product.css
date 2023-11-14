@@ -1,0 +1,98 @@
+/*
+*  PDP Floating ATC
+*/
+.product-floating{
+  border-top: 1px solid #3DE8B5;
+  border-bottom: 1px solid #E6E6E6;
+  display: none;
+  position: fixed;
+  z-index: 9;
+  transition: all 0.3s cubic-bezier(.17,.67,.83,.67);
+  background: #FFF;
+}
+.product-floating.no-show{
+  opacity: 0;
+  pointer-events: none;
+}
+.product-floating.no-show-ever{
+  display: none;
+}
+.product-floating .product-floating__wrapper{
+  padding: 8px 11px;
+  display: grid;
+  grid-template-columns: 44px 45% auto;
+  grid-template-rows: 19px 19px;
+  gap: 0 12px;
+  justify-items: center;
+  align-items: center;
+}
+.product-floating .product-floating__image{
+  height: 100%;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+.product-floating .product-floating__image img{
+  border-radius: 50%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.product-floating .product-floating__title{
+  width: 100%;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  color: #2D2D2D;
+  font-size: 16px;
+  font-weight: 700;
+}
+.product-floating .product-floating__variable{
+  font-size: 14px;
+}
+.product-floating .product-floating__price{
+  width: 100%;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 4px;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 700;
+}
+.product-floating .product-floating__price span{
+  color: #000;
+}
+.product-floating .product-floating__price s{
+  color: #595959;
+}
+.product-floating .product-form__wrapper{
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+}
+.product-floating .product-form__wrapper button{
+  margin: 0;
+  border-radius: 20px;
+  padding: 6px 16px;
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #FFF;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+@media only screen and (max-width: 738px) {
+  .product-floating{
+    top: 100%;
+    transform: translateY(-100%);
+    right: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 9999999999;
+    display: block;
+  }
+}
