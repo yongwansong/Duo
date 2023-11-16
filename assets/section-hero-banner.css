@@ -84,11 +84,7 @@
     box-shadow: none !important;
 }
 
-.button1{
 
-  background-color: #48BBFE;
-  
-}
 
 
 .section-hero-banner .text_link_style{
@@ -105,6 +101,13 @@
     text-underline-offset: 0.4rem;
     transition: text-decoration-thickness ease 0.4s;
 }
+
+.button1{
+
+  background-color: #48BBFE;
+  
+}
+
 .section-hero-banner .text_link_style:hover {
     text-decoration-thickness: 0.2rem;
   }
