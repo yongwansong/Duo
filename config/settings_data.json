@@ -58,12 +58,21 @@
               "color_scheme": "background-1",
               "link": "shopify:\/\/pages\/subscribe"
             }
+          },
+          "5a9ce058-a4df-4889-9b94-1c1feec09d1c": {
+            "type": "announcement-sticky",
+            "settings": {
+              "text": "suscribe & save up to 33%",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
           }
         },
         "block_order": [
           "announcement-bar-0",
           "1e71f7ea-ea2b-42f6-af3a-b502dd95aba8",
-          "84174252-7bb2-4fea-a4f8-b734defcb34c"
+          "84174252-7bb2-4fea-a4f8-b734defcb34c",
+          "5a9ce058-a4df-4889-9b94-1c1feec09d1c"
         ],
         "settings": {
         }
