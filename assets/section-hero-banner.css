@@ -60,7 +60,7 @@
 	margin: 0 auto 1.5rem;
 	font-size: 3.6rem;
 	font-weight: 600;
-	overflow: hidden;
+	overflow: visible;
 	letter-spacing: -0.015em;
 	max-width: 16ch;
 }
