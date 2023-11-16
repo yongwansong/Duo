@@ -317,7 +317,7 @@
           "532b6856-04de-47bb-b96b-d5b8ec5cab82": {
             "type": "menu_item",
             "settings": {
-              "title": "Bundles",
+              "title": "Bundle",
               "image": "shopify:\/\/shop_images\/bundle.png",
               "url": "shopify:\/\/pages\/build-bundle"
             }
