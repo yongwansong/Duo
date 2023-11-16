@@ -72,7 +72,7 @@
 	flex-direction: column;
 	gap: 1.5rem;
 }
-.hero-banner__buttons .button .button1{
+.hero-banner__buttons .button {
     background-color: transparent;
 	padding: 1.4rem 3rem 1.4rem;
 	min-height: 5rem;
@@ -87,6 +87,15 @@
 
 .hero-banner__buttons .button1{
     background-color: #ECEFFD;
+    padding: 1.4rem 3rem 1.4rem;
+	min-height: 5rem;
+	letter-spacing: -0.015em;
+	width: 100%;
+	max-width: 250px;
+	color: #000;
+    font-weight: 500;
+	font-size: 1.8rem;
+    box-shadow: none !important;
 }
 
 
