@@ -59,10 +59,10 @@
               "link": "shopify:\/\/pages\/subscribe"
             }
           },
-          "5a9ce058-a4df-4889-9b94-1c1feec09d1c": {
+          "f7786cea-8b27-4006-a242-55f97cc60fb2": {
             "type": "announcement-sticky",
             "settings": {
-              "text": "suscribe & save up to 33%",
+              "text": "Welcome to our store",
               "color_scheme": "accent-1",
               "link": ""
             }
@@ -72,7 +72,7 @@
           "announcement-bar-0",
           "1e71f7ea-ea2b-42f6-af3a-b502dd95aba8",
           "84174252-7bb2-4fea-a4f8-b734defcb34c",
-          "5a9ce058-a4df-4889-9b94-1c1feec09d1c"
+          "f7786cea-8b27-4006-a242-55f97cc60fb2"
         ],
         "settings": {
         }
