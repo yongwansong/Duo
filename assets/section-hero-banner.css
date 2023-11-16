@@ -47,6 +47,7 @@
 	line-height: 1.4;
 	margin-bottom: 1rem;
 	text-align: center;
+    overflow: visible;
 }
 .hero-banner__text p{
 	font-size: 2rem;
