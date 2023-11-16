@@ -673,9 +673,7 @@ class VariantSelects extends HTMLElement {
 
         if (source && destination) destination.innerHTML = source.innerHTML;
 
-        if (atcDource) addToCartText = atcDource.innerText;
-
-        if (window.abtest) addToCartText = atcDourceWithoutPrice.innerText
+        if (atcDourceWithoutPrice) addToCartText = atcDourceWithoutPrice.innerText
 
         const price = document.getElementById(`price-${this.dataset.section}`);
 
