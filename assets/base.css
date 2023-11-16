@@ -4705,4 +4705,9 @@ header {
 	}
 }
 
-
+@media screen and (min-width: 990px){
+.header--top-center>.header__search, .header:not(.header--top-center) *>.header__search {display: none !important;}
+.header:not(.header--middle-left) .header__inline-menu { display: none !important;}
+.header--top-center *>.header__search, .header:not(.header--top-center)>.header__search { display: inline-flex !important;}
+header-drawer {display: block !important;}
+}
