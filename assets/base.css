@@ -4704,3 +4704,58 @@ header {
 		font-size: 2.4rem;
 	}
 }
+
+@media (min-width: 990px) {
+	.header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.header .header__inline-menu {
+		display: none;
+	}
+
+	.header>*:nth-child(2) img {
+		max-width: 120px;
+		margin: 0 auto;
+		display: block;
+	}
+
+	.header__heading-link {
+		display: table;
+		margin: 0 auto;
+	}
+
+	.header>*:nth-child(4) {
+		order: 3;
+	}
+
+	header-drawer {
+		display: block !important;
+	}
+
+	/* Items' order */
+	.header>*:nth-child(1) {
+		order: 1;
+	}
+
+	.header> *:nth-child(2) {
+		order: 3;
+	}
+
+	/* Logo */
+	.header>.header__heading {
+		order: 2;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.header>*:nth-child(5) {
+		order: 5;
+	}
+
+	.header__icons .header__search {
+		display: block !important;
+	}
+}
