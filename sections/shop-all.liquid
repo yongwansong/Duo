@@ -195,11 +195,6 @@
                                   {%- else -%}
                                     {{ 'products.product.sold_out' | t }}
                                   {%- endif -%}
-                                  <b class="dash">-</b>
-                                  {{-
-                                    product.selected_or_first_available_variant.price
-                                    | money_without_trailing_zeros
-                                  -}}
                                 </span>
                                 <span class="added-message hidden">Added</span>
                                 <span class="sold-out-message hidden">
@@ -467,11 +462,6 @@
                                   {%- else -%}
                                     {{ 'products.product.sold_out' | t }}
                                   {%- endif -%}
-                                  <b class="dash">-</b>
-                                  {{-
-                                    product.selected_or_first_available_variant.price
-                                    | money_without_trailing_zeros
-                                  -}}
                                 </span>
                                 <span class="added-message hidden">Added</span>
                                 <span class="sold-out-message hidden">

@@ -511,7 +511,7 @@
                         >
                           <span>
                             {%- if product.selected_or_first_available_variant.available -%}
-                              {{ 'products.product.add_to_cart' | t }} - {{ product.selected_or_first_available_variant.price | money | strip_html }}
+                              {{ 'products.product.add_to_cart' | t }}
                             {%- else -%}
                               {{ 'products.product.sold_out' | t }}
                             {%- endif -%}
@@ -534,7 +534,7 @@
                         {%- endif -%}
                         <div class="hidden" style="display:none" id="atc-content-{{ section.id }}">
                           {%- if product.selected_or_first_available_variant.available -%}
-                            {{ 'products.product.add_to_cart' | t }} - {{ product.selected_or_first_available_variant.price | money | strip_html }}
+                            {{ 'products.product.add_to_cart' | t }}
                           {%- else -%}
                             {{ 'products.product.sold_out' | t }}
                           {%- endif -%}
