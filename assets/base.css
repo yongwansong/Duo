@@ -1904,13 +1904,15 @@ input[type='checkbox'] {
 	z-index: 3;
 }
 
-/* .shopify-section-header-sticky {
+.shopify-section-header-sticky {
   position: sticky;
-  top: 0;
-} */
+  top: 41px;
+	background-color: #8787BD;
+}
 
 .shopify-section-header-hidden {
 	transform: translateY(-100%);
+	top: 0px;
 }
 
 #shopify-section-header.animate {
