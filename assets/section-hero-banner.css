@@ -100,6 +100,7 @@
   }
 .section-hero-banner .button--secondary {
     border-radius: 30px;
+    border: 2px solid #000000;
     transition: border-color .4s ease-in-out, color .4s ease-in-out, background-color .4s ease-in-out;
 }
 .section-hero-banner .button--secondary:hover {
