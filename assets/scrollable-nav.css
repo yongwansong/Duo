@@ -1,0 +1,82 @@
+#shopify-section-scrollable-nav {
+    z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+    #shopify-section-header {
+        background: linear-gradient(90deg, rgba(126,130,180,1) 0%, rgba(143,141,197,1) 50%, rgba(126,130,180,1) 100%);
+    }
+    .scrollableNav-container {
+        background: linear-gradient(90deg, rgba(126,130,180,1) 0%, rgba(143,141,197,1) 50%, rgba(126,130,180,1) 100%);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #shopify-section-header {
+        background: linear-gradient(90deg, rgba(134,135,188,1) 0%, rgba(143,141,197,1) 50%, rgba(134,135,188,1) 100%);
+    }
+    .scrollableNav-container {
+        background: linear-gradient(90deg, rgba(134,135,188,1) 0%, rgba(143,141,197,1) 50%, rgba(134,135,188,1) 100%);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #shopify-section-header {
+        background: linear-gradient(90deg, rgba(138,138,193,1) 0%, rgba(143,141,197,1) 50%, rgba(138,138,193,1) 100%);
+    }
+    .scrollableNav-container {
+        background: linear-gradient(90deg, rgba(138,138,193,1) 0%, rgba(143,141,197,1) 50%, rgba(138,138,193,1) 100%);
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #shopify-section-header {
+        background: linear-gradient(90deg, rgba(139,139,195,1) 0%, rgba(143,141,197,1) 50%, rgba(139,139,195,1) 100%);
+    }
+    .scrollableNav-container {
+        background: linear-gradient(90deg, rgba(139,139,195,1) 0%, rgba(143,141,197,1) 50%, rgba(139,139,195,1) 100%);
+    }
+}
+
+.scrollableNav-container {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow-x: scroll;
+    padding: 8px 5px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    gap: 10px;
+}
+
+.scrollableNav-container::-webkit-scrollbar {
+    display: none;
+}
+  
+.scrollableNav-container .scrollableNav-item {
+    text-align: center;
+    min-width: 60px;
+}
+
+.scrollableNav-container a {
+    text-decoration: none;
+}
+
+.scrollableNav-container .scrollableNav-image img {
+    width: 100%
+}
+
+.scrollableNav-container .scrollableNav-title {
+    margin-top: -5px;
+    color: #000;
+    text-wrap: nowrap;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+@media screen and (min-width:768px) {
+    .scrollableNav-container {
+        display: none;
+    }
+}

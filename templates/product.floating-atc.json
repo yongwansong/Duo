@@ -701,12 +701,6 @@
         "color_scheme": "background-1",
         "full_width": true
       }
-    },
-    "c2b02396-0139-4a48-aa04-0b6b6a709ba3": {
-      "type": "floating-product",
-      "settings": {
-        "ab_test": true
-      }
     }
   },
   "order": [
@@ -733,7 +727,6 @@
     "1641972021db548570",
     "1644902450300a88ca",
     "16405835405ec1be77",
-    "1642574639a91db6e2",
-    "c2b02396-0139-4a48-aa04-0b6b6a709ba3"
+    "1642574639a91db6e2"
   ]
 }

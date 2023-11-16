@@ -52,17 +52,27 @@
           },
           "84174252-7bb2-4fea-a4f8-b734defcb34c": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
-              "text": "subscribe & save up to 33%",
+              "text": "subscribe to duo & save up to 33%",
               "color_scheme": "background-1",
               "link": "shopify:\/\/pages\/subscribe"
+            }
+          },
+          "f7786cea-8b27-4006-a242-55f97cc60fb2": {
+            "type": "announcement-sticky",
+            "settings": {
+              "text": "Welcome to our store",
+              "color_scheme": "accent-1",
+              "link": ""
             }
           }
         },
         "block_order": [
           "announcement-bar-0",
           "1e71f7ea-ea2b-42f6-af3a-b502dd95aba8",
-          "84174252-7bb2-4fea-a4f8-b734defcb34c"
+          "84174252-7bb2-4fea-a4f8-b734defcb34c",
+          "f7786cea-8b27-4006-a242-55f97cc60fb2"
         ],
         "settings": {
         }
@@ -267,6 +277,79 @@
       "cart-drawer": {
         "type": "cart-drawer",
         "settings": {
+        }
+      },
+      "scrollable-nav": {
+        "type": "scrollable-nav",
+        "blocks": {
+          "5007a94b-f776-435b-a34b-be38beab28b3": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Original",
+              "image": "shopify:\/\/shop_images\/original.png",
+              "url": "shopify:\/\/products\/original"
+            }
+          },
+          "375bd14f-9802-4d36-8dc4-6d70acd675c3": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Immunity",
+              "image": "shopify:\/\/shop_images\/immunity.png",
+              "url": "shopify:\/\/products\/immunity"
+            }
+          },
+          "1668bc6d-e3ab-45a8-b513-998220f71dbf": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Energy",
+              "image": "shopify:\/\/shop_images\/energy.png",
+              "url": "shopify:\/\/products\/energy"
+            }
+          },
+          "1d585f2a-fca4-4dc8-8d60-61e4adbb374f": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Sleep",
+              "image": "shopify:\/\/shop_images\/sleep.png",
+              "url": "shopify:\/\/products\/sleep"
+            }
+          },
+          "532b6856-04de-47bb-b96b-d5b8ec5cab82": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Bundles",
+              "image": "shopify:\/\/shop_images\/bundle.png",
+              "url": "shopify:\/\/pages\/build-bundle"
+            }
+          },
+          "014ea920-3cce-4cb1-b8a6-be011c4d5106": {
+            "type": "menu_item",
+            "settings": {
+              "title": "About",
+              "image": "shopify:\/\/shop_images\/about.png",
+              "url": "shopify:\/\/pages\/about"
+            }
+          },
+          "56ca3bc7-0397-4758-b1a1-7956fc0522ae": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Shop All",
+              "image": "shopify:\/\/shop_images\/shop.png",
+              "url": "shopify:\/\/collections\/shop"
+            }
+          }
+        },
+        "block_order": [
+          "5007a94b-f776-435b-a34b-be38beab28b3",
+          "375bd14f-9802-4d36-8dc4-6d70acd675c3",
+          "1668bc6d-e3ab-45a8-b513-998220f71dbf",
+          "1d585f2a-fca4-4dc8-8d60-61e4adbb374f",
+          "532b6856-04de-47bb-b96b-d5b8ec5cab82",
+          "014ea920-3cce-4cb1-b8a6-be011c4d5106",
+          "56ca3bc7-0397-4758-b1a1-7956fc0522ae"
+        ],
+        "settings": {
+          "is_shown": true
         }
       }
     },

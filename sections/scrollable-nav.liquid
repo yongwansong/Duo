@@ -1,0 +1,77 @@
+{% if section.settings.is_shown %}
+  
+    {{ 'scrollable-nav.css' | asset_url | stylesheet_tag }}
+    <div
+      class="section--scrollable-navigation"
+      id="section--scrollable-navigation"
+    >
+      <div class="scrollableNav-container">
+        {% for block in section.blocks %}
+          <div class="scrollableNav-item">
+            <a href="{{ block.settings.url }}">
+              <div class="scrollableNav-image">
+                <img loading="lazy" src="{{ block.settings.image | img_url:"100x" }}">
+              </div>
+              <div class="scrollableNav-title">{{ block.settings.title }}</div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  
+  {% endif %}
+  
+  {% schema %}
+  {
+    "name": "Mobile Scrollable Nav",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "is_shown",
+        "label": "Show mobile scrollable navigation?",
+        "default": true
+      }
+    ],
+    "blocks": [
+      {
+        "type": "menu_item",
+        "name": "Menu Item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "default": "Title",
+            "label": "Title"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Url"
+          }
+        ]
+      }
+    ],
+  
+    "presets": [
+      {
+        "name": "Mobile Scrollable Nav",
+        "blocks": [
+          {
+            "type": "menu_item"
+          },
+          {
+            "type": "menu_item"
+          },
+          {
+            "type": "menu_item"
+          }
+        ]
+      }
+    ]
+  }
+  {% endschema %}

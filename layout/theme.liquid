@@ -24,11 +24,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       gtag('config', 'AW-10984621771');
     </script>
-
-    <script>
-      window.abtest = false
-    </script>
-
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -278,6 +274,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {% section 'announcement-bar' %}
     {% section 'header' %}
 
+    {% if template == 'index' %}
+      {% section 'scrollable-nav' %}
+    {% endif %}
+
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {%- if request.path contains 'loop_subscriptions/bundle' -%}
         {% render 'loop_bundle_loader' %}
@@ -365,6 +365,7 @@ uid:"__INSERT_EMAIL_HERE__"
 </noscript>
 <!-- End Quantcast tag -->
     
+
 <!-- PF EDT START -->
 <script type='text/javascript'>
 {%- if content_for_header contains 'shopify-product-customizer' -%}
