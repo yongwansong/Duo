@@ -98,21 +98,7 @@
 }
 
 
-.section-hero-banner .text_link_style{
-        background-color: transparent;
 
-	border: 0;
-	padding: 0;
-    height: auto;
-    min-height: initial;
-    width: auto;
-    min-width: initial;
-	max-width: initial;
-	font-size: 1.8rem;
-    text-decoration: underline;
-    text-underline-offset: 0.4rem;
-    transition: text-decoration-thickness ease 0.4s;
-}
 
 /*#button1{
   background-color: #C6E8FF;
