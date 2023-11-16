@@ -114,9 +114,9 @@
     transition: text-decoration-thickness ease 0.4s;
 }
 
-#button1{
+/*#button1{
   background-color: #C6E8FF;
-}
+}*/
 
 .section-hero-banner .text_link_style:hover {
     text-decoration-thickness: 0.2rem;
