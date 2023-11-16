@@ -72,9 +72,7 @@
 	flex-direction: column;
 	gap: 1.5rem;
 }
-.hero-banner__buttons .button .button1{
-    background-color: transparent;
-
+.hero-banner__buttons .button{
 	padding: 1.4rem 3rem 1.4rem;
 	min-height: 5rem;
 	letter-spacing: -0.015em;
@@ -87,12 +85,10 @@
 }
 
 
-.hero-banner__buttons .button1{
-  background-color: #C6E8FF;
-} 
 
 
 .section-hero-banner .text_link_style{
+	background-color: transparent;
 	border: 0;
 	padding: 0;
     height: auto;
@@ -106,6 +102,9 @@
     transition: text-decoration-thickness ease 0.4s;
 }
 
+#button1{
+  background-color: #C6E8FF;
+}
 
 .section-hero-banner .text_link_style:hover {
     text-decoration-thickness: 0.2rem;
