@@ -3371,7 +3371,7 @@ span.var_img_title {
 }
 
 .text_about-prod h2.title {
-	font-size: 36px;
+    font-size: 8vw;
 	font-weight: 600;
 	line-height: 29px;
 	letter-spacing: 0em;
@@ -4217,7 +4217,7 @@ header {
 
 	summary.menu-drawer__menu-item.list-menu__item.link.link--text.focus-inset {
 		font-style: normal;
-		font-size: 8vw;
+		font-size: 22px;
 
 	}
 
