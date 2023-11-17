@@ -78,15 +78,19 @@
 	letter-spacing: -0.015em;
 	width: 100%;
 	max-width: 250px;
-	color: #fff;
+	color: #000;
     font-weight: 500;
 	font-size: 1.8rem;
     box-shadow: none !important;
+    border: 2px solid #000;
+
 }
 
 .hero-banner__buttons .button1{
     background-color: #00126B;
     color: #fff;
+    border: 2px solid #fff;
+
 }
 
 
@@ -95,7 +99,6 @@
   }
 .section-hero-banner .button--secondary {
     border-radius: 30px;
-    border: 2px solid #fff;
     transition: border-color .4s ease-in-out, color .4s ease-in-out, background-color .4s ease-in-out;
 }
 .section-hero-banner .button--secondary:hover {
