@@ -151,6 +151,7 @@
       "blocks": {
         "289f3d98-2430-406f-b47d-47e3724a1b05": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Energy_in_the_morning.jpg",
             "text": "<p><a href=\"\/products\/energy\" title=\"Energy\"><strong>Energy<\/strong><\/a><strong> <\/strong>in the morning<\/p>"
@@ -158,6 +159,7 @@
         },
         "48e5580d-e6bc-4e03-9f5e-3fa77cb9d7da": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Immunity_for_vit_D_levels.jpg",
             "text": "<p><a href=\"\/products\/immunity\" title=\"Immunity\"><strong>Immunity<\/strong><\/a><strong> <\/strong>for vit D levels<\/p>"
@@ -165,6 +167,7 @@
         },
         "4f56e8f3-94cb-4aaa-a70b-f60d90643207": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Energy_Sleep_for_travel.jpg",
             "text": "<p><a href=\"\/products\/energy\" title=\"Energy\"><strong>Energy<\/strong><\/a><strong> + <\/strong><a href=\"\/products\/sleep\" title=\"Sleep\"><strong>Sleep<\/strong><\/a> for travel<\/p>"
@@ -172,6 +175,7 @@
         },
         "588d10dd-ba00-475d-98a1-bbe399fbb3f0": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Sleep_routine_complete.jpg",
             "text": "<p><a href=\"\/products\/sleep\" title=\"Sleep\"><strong>Sleep<\/strong><\/a><strong> <\/strong>routine complete<\/p>"
@@ -187,7 +191,7 @@
       "settings": {
         "icon": "shopify:\/\/shop_images\/Group_346.svg",
         "heading": "vitamins & supplements \nabsorbed as you brush",
-        "description": "<p>Formulated by two dentists, Duo makes the first naturally whitening, earth-friendly tablet toothpaste infused with vitamins + supplements.<\/p><p>Customize your daily Duo to get more of what you need.<\/p>"
+        "description": "<p>Formulated by two dentists, Duo makes the first naturally whitening, earth-friendly tablet toothpaste infused with vitamins + supplements.<\/p>"
       }
     },
     "f7e18253-be89-48a9-b256-82f86a48c76f": {
@@ -232,7 +236,7 @@
     "featured_products": {
       "type": "featured-collection",
       "settings": {
-        "title": "toothpaste + [rotating_words]",
+        "title": "",
         "rotating_words": "energy,sleep,immunity",
         "description": "",
         "button_text": "",
