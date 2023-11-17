@@ -2,7 +2,7 @@
 	padding: 1rem 0;
 	margin: 0;
 	list-style: none;
-	font-size: 1.8rem;
+    font-size: 1.3rem;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -94,7 +94,6 @@
 }
   
 .section-features .features-items{
-		 font-size: 1.2rem;
           align-content: center;
           width:auto;
 
