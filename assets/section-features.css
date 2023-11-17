@@ -100,7 +100,7 @@
 	}
 
 	.section-features .features-items li{
-		padding: 0 0;
+		padding: 0.5em 2rem;
     }
 
 }
