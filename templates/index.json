@@ -220,7 +220,7 @@
         "collection": "shop",
         "products_to_show": 4,
         "show_view_all": true,
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "image_ratio": "square",
         "show_secondary_image": true,
         "add_image_padding": false,
