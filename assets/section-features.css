@@ -85,30 +85,13 @@
 	}
 }
 
-@media(max-width: 600px) and (min-width: 280px) {
-.section-features{
-          display:flex;
-          align-content: center;
-          justify-content:center;
+@media(max-width: 500px) and (min-width: 280px) {
 
-}
-  
 .section-features .features-items{
 		 font-size: 1.7rem;
-          align-content: center;
-          width:auto;
-
         `
 	}
 }
 
-	.section-features .features-items li .icon svg{
-		width: 1.2rem;
-		height: 1.1rem;
-	}
-
-	.section-features .features-items li{
-		padding: 0.5em 5rem;
-    }
 
 }
