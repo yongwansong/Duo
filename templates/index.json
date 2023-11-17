@@ -660,6 +660,7 @@
         "1057577b-7a17-46a7-bd3a-d1ee2957f0c4",
         "template--15806529732775__02200e95-3f6f-4ed5-a149-6e1fa306a8d6-168296332749933071-2"
       ],
+      "disabled": true,
       "custom_css": [
         ".main-banner-image-text .image-with-text__media img {object-position: center;}",
         "@media screen and (max-width: 767px) {.main-banner-image-text .image-with-text__content h2.image-with-text__heading.h3 {text-align: left; }}"
