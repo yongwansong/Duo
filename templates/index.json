@@ -619,28 +619,28 @@
         "template--15806529732775__02200e95-3f6f-4ed5-a149-6e1fa306a8d6-168296332749933071-1": {
           "type": "text",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/icon1.png",
+            "icon": "shopify:\/\/shop_images\/circlespike.svg",
             "text": "Save up to 33% with regular deliveries while minimizing your carbon footprint"
           }
         },
         "e91d2189-1013-4e58-b043-ea0e9e93a71e": {
           "type": "text",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/earth.svg",
+            "icon": "shopify:\/\/shop_images\/circlespike.svg",
             "text": "Recyclable glass bottles + compostable refill packets."
           }
         },
         "fd942a4b-6ce8-45ef-bbca-9be2a2d57314": {
           "type": "text",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/10686eba260a5f524d42990feea8d2f5.svg",
+            "icon": "shopify:\/\/shop_images\/circlespike.svg",
             "text": "Formulated by a pair of dentists with clean ingredients and premium supplements."
           }
         },
         "1057577b-7a17-46a7-bd3a-d1ee2957f0c4": {
           "type": "text",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/smil.svg",
+            "icon": "shopify:\/\/shop_images\/circlespike.svg",
             "text": "100% guaranteed— return for a full refund if you’re not satisfied."
           }
         },
@@ -755,7 +755,7 @@
     "165752148158d58046": {
       "type": "yellow-header",
       "settings": {
-        "txt": "#ffe5a7",
+        "txt": "#eceffd",
         "text_color": "#000000",
         "title1": "Shop all tablets",
         "learnmore": "shopify:\/\/collections\/shop",
