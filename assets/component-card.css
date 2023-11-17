@@ -394,7 +394,7 @@ p.metasubtitle-fp {
 }
 
 .card-wrapper {
-  width:25%;
+  width:50%;
 }
 
 @media(max-width: 1440px) and (min-width: 1321px) {
