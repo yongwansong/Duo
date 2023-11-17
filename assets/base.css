@@ -2467,10 +2467,7 @@ nav.header__inline-menu ul.list-menu .link {
 	text-decoration: none;
 }
 
-nav.header__inline-menu ul.list-menu .link:hover {
 
-	text-decoration: none;
-}
 
 a.header__icon--cart {
 	margin: 0px 5px;
@@ -4715,4 +4712,7 @@ header {
 	}
 }
 
+nav.header__inline-menu ul.list-menu .link:hover {
 
+	text-decoration: none;
+}
