@@ -88,11 +88,14 @@
 @media(max-width: 600px) and (min-width: 280px) {
 .section-features{
           display:flex;
+          align-content: center;
+
 }
   
 .section-features .features-items{
 		 font-size: 1.7rem;
-        
+          align-content: center;
+
         `
 	}
 }
