@@ -190,7 +190,7 @@
       ],
       "settings": {
         "icon": "shopify:\/\/shop_images\/Group_346.svg",
-        "heading": "Vitamins & supplements \nfor complete oral + systemic health",
+        "heading": "vitamins & supplements \nfor oral + systemic health",
         "description": "<p>Formulated by two dentists, Duo makes the first naturally whitening, earth-friendly tablet toothpaste infused with vitamins, supplements and antioxidants. You absorb them efficiently through your tongue, cheeks, and gums. No need to swallow.<\/p>"
       }
     },
@@ -514,7 +514,7 @@
       "settings": {
         "txt": "#9bd9ff",
         "imgs": "shopify:\/\/shop_images\/lets-talk-nha-icon.svg",
-        "title1": "Let’s talk about nHa.",
+        "title1": "let’s talk about nHa",
         "txt1": "<p>Nano-Hydroxyapatite (nHa) is a dentist-backed, non-toxic flouride alternative that remineralizes your teeth and keeps them strong. It’s been used in Japanese toothpaste for decades and is highly effective in restoring and strengthening enamel.<\/p>",
         "about_image": "shopify:\/\/shop_images\/Original_HandMask_new.png",
         "learnmore": "shopify:\/\/pages\/help"
@@ -749,7 +749,7 @@
       ],
       "settings": {
         "icon": "shopify:\/\/shop_images\/Group_302.svg",
-        "image": "<p>Loved and<br\/>recommended by<br\/>other dentists. <\/p>",
+        "image": "<p>loved and<br\/>recommended by<br\/>other dentists<\/p>",
         "videoo": "",
         "height": "adapt",
         "color_scheme": "accent-2",
