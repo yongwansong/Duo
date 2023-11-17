@@ -4406,7 +4406,8 @@ header {
 	}
 
 	.text_about-prod h2.title {
-		line-height: normal;
+		font-size: 8vw;
+        line-height: normal;
 		width: 100%;
 		margin: 3rem auto 3rem;
 	}
