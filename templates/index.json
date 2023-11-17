@@ -349,6 +349,7 @@
         "51a9f1f2-861e-45a7-868f-d8a942362709",
         "2d27566d-9caa-47fe-bd58-5f5cb8d9d700"
       ],
+      "disabled": true,
       "settings": {
         "background_color": "#00126b"
       }
@@ -440,6 +441,7 @@
         "template--15825814945959__c277bf13-51cb-4e4d-ab66-1c088b421510-1686670572629355b8-2",
         "b3545229-96c2-493c-8c74-734aef8aaa86"
       ],
+      "disabled": true,
       "settings": {
         "button_label": "SHOP TABLETS",
         "button_link": "#"
