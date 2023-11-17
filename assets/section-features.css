@@ -96,6 +96,7 @@
 .section-features .features-items{
 		 font-size: 1.7rem;
           align-content: center;
+          width:auto;
 
         `
 	}
