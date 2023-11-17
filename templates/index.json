@@ -146,6 +146,50 @@
         "swipe_on_mobile": false
       }
     },
+    "02db3e73-7c88-473c-8d03-7f3d448a6f84": {
+      "type": "multicolumn-text-images",
+      "blocks": {
+        "289f3d98-2430-406f-b47d-47e3724a1b05": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Energy_in_the_morning.jpg",
+            "text": "<p><a href=\"\/products\/energy\" title=\"Energy\"><strong>Energy<\/strong><\/a><strong> <\/strong>in the morning<\/p>"
+          }
+        },
+        "48e5580d-e6bc-4e03-9f5e-3fa77cb9d7da": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Immunity_for_vit_D_levels.jpg",
+            "text": "<p><a href=\"\/products\/immunity\" title=\"Immunity\"><strong>Immunity<\/strong><\/a><strong> <\/strong>for vit D levels<\/p>"
+          }
+        },
+        "4f56e8f3-94cb-4aaa-a70b-f60d90643207": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Energy_Sleep_for_travel.jpg",
+            "text": "<p><a href=\"\/products\/energy\" title=\"Energy\"><strong>Energy<\/strong><\/a><strong> + <\/strong><a href=\"\/products\/sleep\" title=\"Sleep\"><strong>Sleep<\/strong><\/a> for travel<\/p>"
+          }
+        },
+        "588d10dd-ba00-475d-98a1-bbe399fbb3f0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Sleep_routine_complete.jpg",
+            "text": "<p><a href=\"\/products\/sleep\" title=\"Sleep\"><strong>Sleep<\/strong><\/a><strong> <\/strong>routine complete<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "289f3d98-2430-406f-b47d-47e3724a1b05",
+        "48e5580d-e6bc-4e03-9f5e-3fa77cb9d7da",
+        "4f56e8f3-94cb-4aaa-a70b-f60d90643207",
+        "588d10dd-ba00-475d-98a1-bbe399fbb3f0"
+      ],
+      "settings": {
+        "icon": "shopify:\/\/shop_images\/Group_346.svg",
+        "heading": "vitamins & supplements \nabsorbed as you brush",
+        "description": "<p>Formulated by two dentists, Duo makes the first naturally whitening, earth-friendly tablet toothpaste infused with vitamins + supplements.<\/p><p>Customize your daily Duo to get more of what you need.<\/p>"
+      }
+    },
     "featured_products": {
       "type": "featured-collection",
       "settings": {
@@ -203,50 +247,6 @@
       "settings": {
         "background_color": "#00126b",
         "text_color": "#ffffff"
-      }
-    },
-    "02db3e73-7c88-473c-8d03-7f3d448a6f84": {
-      "type": "multicolumn-text-images",
-      "blocks": {
-        "289f3d98-2430-406f-b47d-47e3724a1b05": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Energy_in_the_morning.jpg",
-            "text": "<p><a href=\"\/products\/energy\" title=\"Energy\"><strong>Energy<\/strong><\/a><strong> <\/strong>in the morning<\/p>"
-          }
-        },
-        "48e5580d-e6bc-4e03-9f5e-3fa77cb9d7da": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Immunity_for_vit_D_levels.jpg",
-            "text": "<p><a href=\"\/products\/immunity\" title=\"Immunity\"><strong>Immunity<\/strong><\/a><strong> <\/strong>for vit D levels<\/p>"
-          }
-        },
-        "4f56e8f3-94cb-4aaa-a70b-f60d90643207": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Energy_Sleep_for_travel.jpg",
-            "text": "<p><a href=\"\/products\/energy\" title=\"Energy\"><strong>Energy<\/strong><\/a><strong> + <\/strong><a href=\"\/products\/sleep\" title=\"Sleep\"><strong>Sleep<\/strong><\/a> for travel<\/p>"
-          }
-        },
-        "588d10dd-ba00-475d-98a1-bbe399fbb3f0": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Sleep_routine_complete.jpg",
-            "text": "<p><a href=\"\/products\/sleep\" title=\"Sleep\"><strong>Sleep<\/strong><\/a><strong> <\/strong>routine complete<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "289f3d98-2430-406f-b47d-47e3724a1b05",
-        "48e5580d-e6bc-4e03-9f5e-3fa77cb9d7da",
-        "4f56e8f3-94cb-4aaa-a70b-f60d90643207",
-        "588d10dd-ba00-475d-98a1-bbe399fbb3f0"
-      ],
-      "settings": {
-        "icon": "shopify:\/\/shop_images\/Group_346.svg",
-        "heading": "vitamins & supplements \nabsorbed as you brush",
-        "description": "<p>Formulated by two dentists, Duo makes the first naturally whitening, earth-friendly tablet toothpaste infused with vitamins + supplements.<\/p><p>Customize your daily Duo to get more of what you need.<\/p>"
       }
     },
     "0a53150e-b5df-4f43-a1ac-81d9e08ffa86": {
@@ -796,9 +796,9 @@
     "164007982988b9d963",
     "image_banner",
     "1657530445881ed846",
+    "02db3e73-7c88-473c-8d03-7f3d448a6f84",
     "featured_products",
     "f7e18253-be89-48a9-b256-82f86a48c76f",
-    "02db3e73-7c88-473c-8d03-7f3d448a6f84",
     "0a53150e-b5df-4f43-a1ac-81d9e08ffa86",
     "bd4feeb6-8058-401f-91a7-917af56454a3",
     "b394700e-f5cf-4979-b654-9a250530749d",
