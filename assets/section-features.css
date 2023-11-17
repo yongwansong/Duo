@@ -89,6 +89,7 @@
 
 .section-features .features-items{
 		 font-size: 1.7rem;
+          display:flex;
         
         `
 	}
@@ -100,7 +101,7 @@
 	}
 
 	.section-features .features-items li{
-		padding: 0.5em 6rem;
+		padding: 0.5em 0rem;
     }
 
 }
