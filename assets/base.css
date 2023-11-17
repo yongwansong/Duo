@@ -1989,6 +1989,7 @@ input[type='checkbox'] {
 .header__heading,
 .header__heading-link {
 	grid-area: heading;
+	justify-self: start;
 }
 
 .header__heading-link {
@@ -4698,6 +4699,11 @@ header {
       display: none;
   }
 
+  .header__heading,
+	.header__heading-link {
+		text-align: center;
+	}
+
 }
 
 @media only screen and (min-width: 1250px){
@@ -4715,11 +4721,6 @@ header {
       /*     grid-template-columns: auto auto 1fr; */
       grid-template-columns: auto 1fr auto !important;
       column-gap: 1px;
-  }
-
-  .header__heading,
-  .header__heading-link {
-      justify-self: start;
   }
 
 }
