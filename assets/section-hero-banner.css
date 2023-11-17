@@ -3,7 +3,6 @@
 }
 .section-hero-banner{
 	margin-top: calc(-1 * var(--header-height));
-  padding-top:100px;
 	display: grid;
 }
 .hero-banner__content{
