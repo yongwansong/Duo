@@ -393,6 +393,10 @@ p.metasubtitle-fp {
     margin-top: 0px;
 }
 
+.card-wrapper {
+  width:50%;
+}
+
 @media(max-width: 1440px) and (min-width: 1321px) {
 	.label__image {
         bottom: 33px;
