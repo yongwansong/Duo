@@ -89,7 +89,8 @@
 
 .section-features .features-items{
 		 font-size: 1.7rem;
-  margin: 0 auto;
+        padding-left: 3rem;
+        `
 	}
 }
 
