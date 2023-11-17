@@ -8,7 +8,8 @@
 	padding-bottom: 4rem;
 }
 .how-it-works__heading{
-	font-size: 3.2rem;
+  	text-align: left;
+    font-size: 3.2rem;
 	text-wrap: balance;
 	text-transform: uppercase;
 	color: inherit;
