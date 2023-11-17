@@ -1989,7 +1989,7 @@ input[type='checkbox'] {
 .header__heading,
 .header__heading-link {
 	grid-area: heading;
-	justify-self: start;
+	justify-self: center;
 }
 
 .header__heading-link {
