@@ -89,7 +89,13 @@
 
 .section-features .features-items{
 		 font-size: 1.7rem;
+        `
 	}
 }
+
+	.section-features .features-items li .icon svg{
+		width: 1.2rem;
+		height: 1.1rem;
+	}
 
 }
