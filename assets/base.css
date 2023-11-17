@@ -3623,7 +3623,7 @@ section.shopify-section.feature-collection {
 }
 
 .first-div {
-	width: 33.3%;
+	height: 80%;
 }
 
 .second-div {
@@ -3633,7 +3633,7 @@ section.shopify-section.feature-collection {
 }
 
 .third-div {
-	width: 33.3%;
+	height: 80%;
 	display: flex;
 	justify-content: flex-end;
 }
