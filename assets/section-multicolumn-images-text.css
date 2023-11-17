@@ -26,6 +26,7 @@
 	max-width: 16ch;
 }
 .multicolumn-images-text__description{
+    padding: 0 20;
 	font-size: 2.4rem;
 	line-height: 1.5;
 }
