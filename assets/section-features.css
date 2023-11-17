@@ -86,11 +86,13 @@
 }
 
 @media(max-width: 600px) and (min-width: 280px) {
-
+.section-features{
+          display:flex;
+}
+  
 .section-features .features-items{
 		 font-size: 1.7rem;
-          display:flex;
-        
+        width:50%;
         `
 	}
 }
