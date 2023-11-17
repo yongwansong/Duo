@@ -90,12 +90,6 @@
 }
 
 
-
-
-/*#button1{
-  background-color: #C6E8FF;
-}*/
-
 .section-hero-banner .text_link_style:hover {
     text-decoration-thickness: 0.2rem;
   }
@@ -107,6 +101,7 @@
 .section-hero-banner .button--secondary:hover {
     border-color:transparent;
     background-color: #fff;
+    color: #000;
 }
 
 @media (min-width: 468px){
