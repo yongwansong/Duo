@@ -99,20 +99,12 @@
 		gap: 1.5rem;
 	}
 	.multicolumn-images-text__text{
-		font-size: .14pt;
+		font-size: 14pt;
 	}
 	.multicolumn-images-text__heading br{
 		display: none
 	}
 	.multicolumn-images-text__heading{
 		font-size: 8vw;
-	}
-}
-@media only screen and (max-width: 345px){
-	.multicolumn-images-text__row {
-		gap: 1rem;
-	}
-	.multicolumn-images-text__text{
-		font-size: 1.1rem;
 	}
 }
