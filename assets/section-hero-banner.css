@@ -39,11 +39,11 @@
 	display: none;
 }
 .hero-banner__content{
-	padding-top: 8rem;
+	padding-top: 16rem;
 	padding-bottom: 5rem;
 }
 .hero-banner__text{
-	letter-spacing: -0.015em;
+    letter-spacing: -0.015em;
 	line-height: 1.4;
 	margin-bottom: 1rem;
 	text-align: center;
