@@ -2,7 +2,7 @@
 	--header-height: 71px;
 }
 .section-hero-banner{
-	margin-top: ;
+	margin-top: calc(-1 * var(--header-height));
 	display: grid;
 }
 .hero-banner__content{
@@ -109,6 +109,9 @@
 }
 
 @media (min-width: 468px){
+  .section-hero-banner{
+	margin-top: 0;
+  }
 	.hero-banner__content {
 		padding-top: 12rem;
 	}
