@@ -773,6 +773,7 @@
     },
     "b876fe21-01ea-4132-9e2f-2988bb385a7c": {
       "type": "section-heading",
+      "disabled": true,
       "settings": {
         "section_bg_color": "#ffffff",
         "title": "<p>we love our <em>#duodiehard<\/em> community<\/p>"
