@@ -3642,8 +3642,8 @@ section.shopify-section.feature-collection {
 
 .subnewhader .first-div a.header__heading-link,
 .subnewhader .third-div a.header__heading-link span {
-	font-size: 14px;
-    font-weight:800;
+	font-size: 16px;
+    font-weight:600;
 	font-style: normal !important;
 	text-decoration: none;
 }
