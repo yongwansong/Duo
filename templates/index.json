@@ -306,7 +306,7 @@
         "template--15825814945959__bd4feeb6-8058-401f-91a7-917af56454a3-16873057685cba24f2-2"
       ],
       "settings": {
-        "heading": "",
+        "heading": "How to brush with duo",
         "background_color": "#eff2ff",
         "text_color": "#000000",
         "accent_color": "#00126b"
@@ -796,6 +796,48 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "15445ac8-6006-42b2-9b62-3a5c33ae91c1": {
+      "type": "collage",
+      "blocks": {
+        "template--15982369800359__15445ac8-6006-42b2-9b62-3a5c33ae91c1-collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "shop",
+            "image_padding": false,
+            "color_scheme": "accent-2"
+          }
+        },
+        "template--15982369800359__15445ac8-6006-42b2-9b62-3a5c33ae91c1-product-1": {
+          "type": "product",
+          "settings": {
+            "product": "energy",
+            "second_image": true,
+            "image_padding": false,
+            "secondary_background": false
+          }
+        },
+        "65fe5ae4-346a-4a6b-95b5-6c9226edc3d9": {
+          "type": "product",
+          "settings": {
+            "product": "energy-sleep-2-bottles",
+            "second_image": false,
+            "image_padding": false,
+            "secondary_background": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15982369800359__15445ac8-6006-42b2-9b62-3a5c33ae91c1-collection-1",
+        "template--15982369800359__15445ac8-6006-42b2-9b62-3a5c33ae91c1-product-1",
+        "65fe5ae4-346a-4a6b-95b5-6c9226edc3d9"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "desktop_layout": "left",
+        "mobile_layout": "collage"
+      }
     }
   },
   "order": [
@@ -819,6 +861,7 @@
     "165751574971a9f672",
     "165752148158d58046",
     "b876fe21-01ea-4132-9e2f-2988bb385a7c",
-    "1658542003ac523a3b"
+    "1658542003ac523a3b",
+    "15445ac8-6006-42b2-9b62-3a5c33ae91c1"
   ]
 }
