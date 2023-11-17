@@ -89,8 +89,7 @@
 
 .section-features .features-items{
 		 font-size: 1.7rem;
-        padding-left: 3rem;
-        text-align:center;
+        
         `
 	}
 }
@@ -99,5 +98,9 @@
 		width: 1.2rem;
 		height: 1.1rem;
 	}
+
+	.section-features .features-items li{
+		padding: 0 0;
+    }
 
 }
