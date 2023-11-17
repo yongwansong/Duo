@@ -103,8 +103,8 @@
 	}
 
 .multicolumn-images-text__description{
-      font-size:12pt;
-      padding:20px;
+      font-size:14pt;
+      padding:0px,10px;
   }
 	.multicolumn-images-text__heading br{
 		display: none
