@@ -89,7 +89,7 @@
 
 .section-features .features-items{
 		 font-size: 1.7rem;
-        align:center;        `
+  margin: 0 auto;
 	}
 }
 
