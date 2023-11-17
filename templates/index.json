@@ -194,6 +194,26 @@
         "description": "<p>Formulated by two dentists, Duo makes the first naturally whitening, earth-friendly tablet toothpaste infused with vitamins + supplements.<\/p>"
       }
     },
+    "featured_products": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "rotating_words": "energy,sleep,immunity",
+        "description": "",
+        "button_text": "",
+        "button_link": "#",
+        "collection": "shop",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
     "f7e18253-be89-48a9-b256-82f86a48c76f": {
       "type": "features",
       "blocks": {
@@ -231,26 +251,6 @@
       "settings": {
         "background_color": "#00126b",
         "text_color": "#ffffff"
-      }
-    },
-    "featured_products": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "",
-        "rotating_words": "energy,sleep,immunity",
-        "description": "",
-        "button_text": "",
-        "button_link": "#",
-        "collection": "shop",
-        "products_to_show": 4,
-        "show_view_all": true,
-        "swipe_on_mobile": false,
-        "image_ratio": "square",
-        "show_secondary_image": true,
-        "add_image_padding": false,
-        "show_image_outline": true,
-        "show_vendor": false,
-        "show_rating": false
       }
     },
     "0a53150e-b5df-4f43-a1ac-81d9e08ffa86": {
@@ -804,8 +804,8 @@
     "image_banner",
     "1657530445881ed846",
     "02db3e73-7c88-473c-8d03-7f3d448a6f84",
-    "f7e18253-be89-48a9-b256-82f86a48c76f",
     "featured_products",
+    "f7e18253-be89-48a9-b256-82f86a48c76f",
     "0a53150e-b5df-4f43-a1ac-81d9e08ffa86",
     "bd4feeb6-8058-401f-91a7-917af56454a3",
     "b394700e-f5cf-4979-b654-9a250530749d",
