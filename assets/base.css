@@ -2461,7 +2461,8 @@ details-disclosure>details {
 }
 
 nav.header__inline-menu ul.list-menu .link {
-	font-size: 18px;
+	font-size: 16px;
+    font-weight:600;
 	font-style: normal !important;
 	text-decoration: none;
 }
