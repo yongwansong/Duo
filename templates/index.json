@@ -190,8 +190,8 @@
       ],
       "settings": {
         "icon": "shopify:\/\/shop_images\/Group_346.svg",
-        "heading": "vitamins & supplements \nabsorbed as you brush",
-        "description": "<p>Formulated by two dentists, Duo makes the first naturally whitening, earth-friendly tablet toothpaste infused with vitamins + supplements.<\/p>"
+        "heading": "vitamins & supplements \nfor complete oral + systemic health",
+        "description": "<p>Formulated by two dentists, Duo makes the first naturally whitening, earth-friendly tablet toothpaste infused with vitamins + supplements. <\/p><p><\/p><p>As you brush with one of our functional toothpastes, you’re not just perfectly polishing your pearly whites—you’re efficiently absorbing nutrients and supplements through your tongue, cheeks, and gums via a process called mucosal absorption. No need to swallow.<\/p>"
       }
     },
     "featured_products": {
@@ -253,22 +253,6 @@
         "text_color": "#ffffff"
       }
     },
-    "0a53150e-b5df-4f43-a1ac-81d9e08ffa86": {
-      "type": "yellow-header",
-      "disabled": true,
-      "settings": {
-        "txt": "#00126b",
-        "text_color": "#ffffff",
-        "title1": "Learn more about how they are absorbed.",
-        "learnmore": "#",
-        "desktop_font_size": 20,
-        "mobile_font_size": 20,
-        "small_mobile_font_size": 20,
-        "arrow_icon": false,
-        "underline": true,
-        "uppercase": false
-      }
-    },
     "bd4feeb6-8058-401f-91a7-917af56454a3": {
       "type": "how-it-works",
       "blocks": {
@@ -305,6 +289,7 @@
         "template--15825814945959__bd4feeb6-8058-401f-91a7-917af56454a3-16873057685cba24f2-1",
         "template--15825814945959__bd4feeb6-8058-401f-91a7-917af56454a3-16873057685cba24f2-2"
       ],
+      "disabled": true,
       "settings": {
         "heading": "How to brush with duo",
         "background_color": "#eff2ff",
@@ -503,10 +488,36 @@
       "disabled": true,
       "settings": {
         "imgs": "shopify:\/\/shop_images\/Group_61_1.png",
-        "title1": "Brush. Absorb. Spit. Smile.",
-        "txt1": "<p>As you brush with one of our functional toothpastes, you’re not just perfectly polishing your pearly whites—you’re safely and efficiently absorbing nutrients and supplements through your tongue, cheeks, and gums via a process called mucosal absorption. No need to swallow.<\/p>",
+        "title1": "Brush. Absorb. Smile.",
+        "txt1": "<p>As you brush with one of our functional toothpastes, you’re not just perfectly polishing your pearly whites—you’re efficiently absorbing nutrients and supplements through your tongue, cheeks, and gums via a process called mucosal absorption. No need to swallow.<\/p>",
         "about_image": "shopify:\/\/shop_images\/colorswitcher1.png",
         "learnmore": "shopify:\/\/pages\/help"
+      }
+    },
+    "16575171476fcd49bf": {
+      "type": "talk_about_product",
+      "settings": {
+        "txt": "#9bd9ff",
+        "imgs": "shopify:\/\/shop_images\/lets-talk-nha-icon.svg",
+        "title1": "Let’s talk about nHa.",
+        "txt1": "<p>Nano-Hydroxyapatite (nHa) is a dentist-backed, non-toxic flouride alternative that remineralizes your teeth and keeps them strong. It’s been used in Japanese toothpaste for decades and is highly effective in restoring and strengthening enamel.<\/p>",
+        "about_image": "shopify:\/\/shop_images\/Original_HandMask_new.png",
+        "learnmore": "shopify:\/\/pages\/help"
+      }
+    },
+    "0a53150e-b5df-4f43-a1ac-81d9e08ffa86": {
+      "type": "yellow-header",
+      "settings": {
+        "txt": "#00126b",
+        "text_color": "#ffffff",
+        "title1": "Learn more about how they are absorbed.",
+        "learnmore": "#",
+        "desktop_font_size": 20,
+        "mobile_font_size": 20,
+        "small_mobile_font_size": 20,
+        "arrow_icon": false,
+        "underline": true,
+        "uppercase": false
       }
     },
     "8ba9dc3d-e63d-4ba8-aefc-ae93b79907c0": {
@@ -679,18 +690,6 @@
         "remove_margin": true
       }
     },
-    "16575171476fcd49bf": {
-      "type": "talk_about_product",
-      "disabled": true,
-      "settings": {
-        "txt": "#9bd9ff",
-        "imgs": "shopify:\/\/shop_images\/lets-talk-nha-icon.svg",
-        "title1": "Let’s talk about nHa.",
-        "txt1": "<p>Nano-Hydroxyapatite (nHa) is a dentist-backed, non-toxic flouride alternative that remineralizes your teeth and keeps them strong. It’s been used in Japanese toothpaste for decades and is highly effective in restoring and strengthening enamel.<\/p>",
-        "about_image": "shopify:\/\/shop_images\/Original_HandMask_new.png",
-        "learnmore": "shopify:\/\/pages\/help"
-      }
-    },
     "165751574971a9f672": {
       "type": "text-with-text-slider",
       "blocks": {
@@ -848,16 +847,16 @@
     "02db3e73-7c88-473c-8d03-7f3d448a6f84",
     "featured_products",
     "f7e18253-be89-48a9-b256-82f86a48c76f",
-    "0a53150e-b5df-4f43-a1ac-81d9e08ffa86",
     "bd4feeb6-8058-401f-91a7-917af56454a3",
     "b394700e-f5cf-4979-b654-9a250530749d",
     "ab958022-0ac6-4365-b6af-f54bda55793f",
     "c277bf13-51cb-4e4d-ab66-1c088b421510",
     "16420496762a0af4d3",
     "1657517229de85f1c6",
+    "16575171476fcd49bf",
+    "0a53150e-b5df-4f43-a1ac-81d9e08ffa86",
     "8ba9dc3d-e63d-4ba8-aefc-ae93b79907c0",
     "4152c7ff-11ce-4bb1-bcc9-416735132a29",
-    "16575171476fcd49bf",
     "165751574971a9f672",
     "165752148158d58046",
     "b876fe21-01ea-4132-9e2f-2988bb385a7c",
