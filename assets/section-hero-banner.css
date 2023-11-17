@@ -99,7 +99,7 @@
     transition: border-color .4s ease-in-out, color .4s ease-in-out, background-color .4s ease-in-out;
 }
 .section-hero-banner .button--secondary:hover {
-    border-color:transparent;
+    border-color:#000;
     background-color: #fff;
     color: #000;
 }
