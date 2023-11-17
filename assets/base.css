@@ -1,4 +1,11 @@
 :root,
+.header__inline-menu details[open]>.header__submenu {
+
+z-index: 3
+
+}
+
+ 
 .color-background-1 {
 	  --color-foreground: 0, 0, 0;
 	--color-background: var(--color-base-background-1);
