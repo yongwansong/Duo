@@ -30,9 +30,8 @@
     justify-self: start;
     margin-left: -0.2rem;
   }
-  
 
-  @media screen and (min-width: 1250px) {
+  @media screen and (min-width: 990px) {
     header-drawer {
       display: none;
     }
@@ -777,6 +776,7 @@
     constructor() {
       super();
     }
+
     connectedCallback() {
       this.header = document.getElementById('shopify-section-header');
       this.scrollableNav = document.getElementById('shopify-section-scrollable-nav');
@@ -819,7 +819,6 @@
 
     onScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      console.log(scrollTop, 'scrollTop')
 
       if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
 
