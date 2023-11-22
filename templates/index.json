@@ -761,9 +761,9 @@
       "settings": {
         "txt": "#eceffd",
         "text_color": "#000000",
-        "title1": "Shop all tablets",
-        "learnmore": "shopify:\/\/collections\/shop",
-        "desktop_font_size": 20,
+        "title1": "Shop Tablets",
+        "learnmore": "shopify:\/\/products\/original",
+        "desktop_font_size": 26,
         "mobile_font_size": 20,
         "small_mobile_font_size": 20,
         "arrow_icon": true,
