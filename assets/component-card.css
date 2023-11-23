@@ -393,6 +393,8 @@ p.metasubtitle-fp {
     margin-top: 0px;
 }
 
+
+
 @media(max-width: 1440px) and (min-width: 1321px) {
 	.label__image {
         bottom: 33px;
@@ -655,6 +657,10 @@ p.metasubtitle-fp {
 
 /* Mobile Screen Media quary End */   
 @media(max-width: 500px) and (min-width: 280px) {
+
+  .card-wrapper {
+  width:75%;
+}
   
 /*   slider-component.slider-mobile-gutter {
       margin-top: -90px;

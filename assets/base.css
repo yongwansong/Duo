@@ -1908,9 +1908,15 @@ input[type='checkbox'] {
 }
 
 .shopify-section-header-sticky {
-  position: sticky;
-  top: 37px;
-  background-color: #8787BD;
+	position: sticky;
+	top: 35px;
+	background-color: #FFF;
+}
+
+@media screen and (max-width: 768px) {
+	.shopify-section-header-sticky.homepage-color {
+		background-color: #8787BD;	
+	}	
 }
 
 .shopify-section-header-hidden {
@@ -3358,15 +3364,15 @@ span.var_img_title {
 }
 
 .text_about-prod h2.title {
-	font-size: 36px;
+    font-size: 4rem;
 	font-weight: 600;
-	line-height: 29px;
+	line-height: 90%;
 	letter-spacing: 0em;
 	text-align: center;
 }
 
 .prod-about-main .text_about-prod p {
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 	line-height: 25px;
 	letter-spacing: 0em;
 	text-align: center;
@@ -4209,7 +4215,7 @@ header {
 	}
 
 	.text_about-prod img.text-about-img {
-		width: 80px;
+		width: 120px;
 		margin: 0 auto;
 		display: flex;
 	}
@@ -4384,7 +4390,8 @@ header {
 	}
 
 	.text_about-prod h2.title {
-		line-height: normal;
+		font-size: 8vw;
+        line-height: normal;
 		width: 100%;
 		margin: 3rem auto 3rem;
 	}
