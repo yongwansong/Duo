@@ -66,22 +66,13 @@
               "color_scheme": "accent-1",
               "link": ""
             }
-          },
-          "f7786cea-8b27-4006-a242-55f97cc60fb2": {
-            "type": "announcement-sticky",
-            "settings": {
-              "text": "Use BLACKFRIDAY for 50% off subscriptions",
-              "color_scheme": "accent-1",
-              "link": "shopify:\/\/pages\/build-bundle"
-            }
           }
         },
         "block_order": [
           "announcement-bar-0",
           "1e71f7ea-ea2b-42f6-af3a-b502dd95aba8",
           "84174252-7bb2-4fea-a4f8-b734defcb34c",
-          "8c38bd63-74f2-4fb3-babe-cdb68f956b74",
-          "f7786cea-8b27-4006-a242-55f97cc60fb2"
+          "8c38bd63-74f2-4fb3-babe-cdb68f956b74"
         ],
         "settings": {
         }
