@@ -521,7 +521,8 @@ a.product__text {
 }
 .product__title+.product__text.subtitle,
 .product__title--with-icon+.product__text.subtitle,
-.product-form__wrapper + .product__text.subtitle{
+.product-form__wrapper + .product__text.subtitle
+.product-form__order-by + .product__text.subtitle{
 	margin-top: -1rem;
 	font-size: 1.153rem;
 	font-weight: 600;
@@ -571,7 +572,8 @@ a.product__text {
 	height: 100%;
 	object-fit: contain;
 }
-.product-form__wrapper + .product__text.subtitle{
+.product-form__wrapper + .product__text.subtitle,
+.product-form__order-by + .product__text.subtitle{
 	text-align: center;
 	font-size: 1.2rem;
 	margin-top: -0.5rem;
@@ -695,7 +697,8 @@ a.product__text {
 	.product__info-container .oke-sr-stars .oke-stars svg{
 		height: 1.9rem;
 	}
-	.product-form__wrapper + .product__text.subtitle{
+	.product-form__wrapper + .product__text.subtitle,
+	.product-form__order-by + .product__text.subtitle{
 		font-size: 1.4rem;
 	}
 	.product__pick-function__details{

@@ -52,6 +52,13 @@
             "show_dynamic_checkout": false
           }
         },
+        "7c0efd85-ff80-4479-8684-796aad9ce1fa": {
+          "type": "order-by-message",
+          "settings": {
+            "min_days": 5,
+            "max_days": 12
+          }
+        },
         "9b788f9f-1118-4d44-a096-5d5fd2ad8fb3": {
           "type": "text",
           "settings": {
@@ -68,6 +75,7 @@
         "ce90f502-2d3a-49ec-a41d-dd6ab562129c",
         "variant_picker",
         "buy_buttons",
+        "7c0efd85-ff80-4479-8684-796aad9ce1fa",
         "9b788f9f-1118-4d44-a096-5d5fd2ad8fb3"
       ],
       "settings": {

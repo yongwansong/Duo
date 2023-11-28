@@ -578,6 +578,8 @@
                   </pickup-availability>
 				  <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script> {% endcomment %}
                 </div>
+              {%- when 'order-by-message' -%}
+                {% render "order-by-message", order_by_message: block.settings.order_by_message, min_days: block.settings.min_days, max_days: block.settings.max_days %}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   {% liquid
@@ -1034,6 +1036,31 @@
           "id": "page",
           "type": "page",
           "label": "t:sections.main-product.blocks.popup.settings.page.label"
+        }
+      ]
+    },
+    {
+      "type": "order-by-message",
+      "name": "Order By Message",
+      "limit": 1,
+      "settings": [
+        {
+          "id": "min_days",
+          "type": "number",
+          "label": "Min days for receive by",
+          "default": 5
+        },
+        {
+          "id": "max_days",
+          "type": "number",
+          "label": "Max days for receive by",
+          "default": 12
+        },
+        {
+          "id": "order_by_message",
+          "type": "text",
+          "label": "Order by message",
+          "default": "Order today and receive by:"
         }
       ]
     },
