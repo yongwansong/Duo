@@ -411,7 +411,7 @@
         "id": "cart_drawer_scrolling_text",
         "label": "Drawer scrolling text",
         "info": "Separate each item with a new line.",
-        "default": "Try risk free\nFree returns and exchanges\nFree shipping on all orders"
+        "default": "Try risk free\nFree returns and exchanges\nFree shipping on $25+"
       },
       {
         "type": "collection",
