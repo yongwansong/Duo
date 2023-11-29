@@ -55,8 +55,9 @@
         "7c0efd85-ff80-4479-8684-796aad9ce1fa": {
           "type": "order-by-message",
           "settings": {
-            "min_days": 5,
-            "max_days": 12
+            "min_days": 3,
+            "max_days": 9,
+            "order_by_message": "Order today and receive by:"
           }
         },
         "9b788f9f-1118-4d44-a096-5d5fd2ad8fb3": {
