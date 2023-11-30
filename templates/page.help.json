@@ -105,12 +105,19 @@
     },
     "a79f53a7-a4c6-4199-b494-e0fd5db3ef75": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "How to Brush with Duo",
         "cover_image": "shopify:\/\/shop_images\/dui-362_Large_864e3e07-2454-4b12-9ed9-bb9f5f251d3d.png",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=LfOxs-dj2cI",
+        "video_url": "",
         "description": "",
         "full_width": false
+      }
+    },
+    "baf7b0d5-b6f0-47c0-8187-548af8d916ca": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }<\/style><div class='embed-container'><iframe src='https:\/\/www.youtube.com\/embed\/LfOxs-dj2cI' frameborder='0' allowfullscreen><\/iframe><\/div>"
       }
     },
     "e577f95a-36a7-4f25-94d4-7ab4c099b668": {
@@ -318,6 +325,7 @@
     "f9e23ace-3800-4511-baaf-27fe071c0431",
     "a1ac37ca-70e5-44e3-898d-ddd0192df3e5",
     "a79f53a7-a4c6-4199-b494-e0fd5db3ef75",
+    "baf7b0d5-b6f0-47c0-8187-548af8d916ca",
     "e577f95a-36a7-4f25-94d4-7ab4c099b668",
     "1658408388be7cff0b",
     "1658308325abb042fe",
