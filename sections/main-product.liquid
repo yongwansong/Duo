@@ -177,6 +177,8 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
+              {%- when 'social-proof-units' -%}
+                {% render "social-proof-units", social_proof_msg: block.settings.social_proof_msg %}
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
                   <div class="product__description rte">
@@ -1036,6 +1038,19 @@
           "id": "page",
           "type": "page",
           "label": "t:sections.main-product.blocks.popup.settings.page.label"
+        }
+      ]
+    },
+    {
+      "type": "social-proof-units",
+      "name": "Social Proof Units",
+      "limit": 1,
+      "settings": [
+        {
+          "id": "social_proof_msg",
+          "type": "text",
+          "label": "Social Proof Units message",
+          "default": "4,000+ bottles sold since launch!"
         }
       ]
     },
