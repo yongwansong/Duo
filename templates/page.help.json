@@ -80,7 +80,7 @@
         "template--15836966125735__a1ac37ca-70e5-44e3-898d-ddd0192df3e5-text-1": {
           "type": "text",
           "settings": {
-            "text": "<h3>We start with the three most common questions we get from talking to you. <\/h3><h3>Scroll down to see <strong>more FAQs<\/strong>, read our <strong>100% guarantee<\/strong> or to <strong>contact us<\/strong>. <\/h3>"
+            "text": "<h3>We start with a How-To-Duo video and then the three most common questions we get from talking to you. <\/h3><h3>Scroll down to see <strong>more FAQs<\/strong>, read our <strong>100% guarantee<\/strong> or to <strong>contact us<\/strong>. <\/h3>"
           }
         },
         "template--15836966125735__a1ac37ca-70e5-44e3-898d-ddd0192df3e5-button-1": {
@@ -101,6 +101,16 @@
       "settings": {
         "color_scheme": "background-1",
         "full_width": true
+      }
+    },
+    "a79f53a7-a4c6-4199-b494-e0fd5db3ef75": {
+      "type": "video",
+      "settings": {
+        "heading": "How to Brush with Duo",
+        "cover_image": "shopify:\/\/shop_images\/dui-362_Large_864e3e07-2454-4b12-9ed9-bb9f5f251d3d.png",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=LfOxs-dj2cI",
+        "description": "",
+        "full_width": false
       }
     },
     "e577f95a-36a7-4f25-94d4-7ab4c099b668": {
@@ -307,6 +317,7 @@
     "1658308828c1e2823b",
     "f9e23ace-3800-4511-baaf-27fe071c0431",
     "a1ac37ca-70e5-44e3-898d-ddd0192df3e5",
+    "a79f53a7-a4c6-4199-b494-e0fd5db3ef75",
     "e577f95a-36a7-4f25-94d4-7ab4c099b668",
     "1658408388be7cff0b",
     "1658308325abb042fe",
