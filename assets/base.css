@@ -2288,7 +2288,6 @@ details[open]>.header__icon--menu .icon-hamburger {
 .header__menu-item {
 	padding: 1.5rem;
 	text-decoration: none;
-	color: rgba(var(--color-foreground), 0.75);
 }
 
 .header__menu-item:hover {
