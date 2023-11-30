@@ -622,6 +622,10 @@ h6:empty {
 	color: rgba(var(--color-foreground), 0.75);
 }
 
+.header-wrapper .link--text:hover{
+	color: unset;
+}
+
 .link-with-icon {
 	display: inline-flex;
 	font-size: 1.4rem;
@@ -2296,7 +2300,6 @@ details[open]>.header__icon--menu .icon-hamburger {
 }
 
 .header__menu-item:hover span {
-	text-decoration: underline;
 	text-underline-offset: 0.3rem;
 }
 
