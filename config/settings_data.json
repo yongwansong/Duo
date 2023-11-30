@@ -80,9 +80,9 @@
           "c42be616-0004-48a0-be4c-d8d6cc447e22": {
             "type": "announcement-sticky",
             "settings": {
-              "text": "Welcome to our store",
-              "color_scheme": "accent-1",
-              "link": ""
+              "text": "subscribe to duo & save up to 33%",
+              "color_scheme": "background-1",
+              "link": "shopify:\/\/pages\/subscribe"
             }
           }
         },
