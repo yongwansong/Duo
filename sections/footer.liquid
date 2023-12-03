@@ -30,11 +30,24 @@
          <div class="footer-block--newsletter">
         {%- if section.settings.newsletter_enable -%}
           <div class="footer-block__newsletter">
+            {%- if section.settings.logo != blank -%}
+              <div class="logo">
+                <img
+                  srcset= "{{ section.settings.logo | img_url: 'master' }}"
+                  src="{{ section.settings.logo | img_url: '400x' }}"
+                  alt="{{ section.settings.logo.alt | escape }}"
+                  loading="lazy"
+                  width="{{ section.settings.logo.width }}"
+                  height="{{ section.settings.logo.height }}"
+                >
+              </div>
+              
+            {%- endif -%}
             {%- if section.settings.newsletter_heading != blank -%}
              <div class="footerhand">
             <h2 class="footer-block__heading">{{ section.settings.newsletter_heading | escape }}</h2>
 <!--               <img src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/5576a767eb7ff38f89c418e26ea9ce7f.svg?v=1658917424" class="handsvg"> -->
-              <img class="handsvg"
+              {% comment %} <img class="handsvg"
                   srcset="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/5576a767eb7ff38f89c418e26ea9ce7f.svg?v=1658917424"
                   sizes="auto"
                   src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/5576a767eb7ff38f89c418e26ea9ce7f.svg?v=1658917424"
@@ -42,7 +55,7 @@
                   alt="hand"
                   width="auto"
                   height="auto"
-                >
+                > {% endcomment %}
              </div>
             {%- endif -%}
             {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
@@ -70,10 +83,11 @@
                     required
                   >
                   <label class="field__label addname" for="NewsletterForm--{{ section.id }}">
-                        enter your email
+                        Your email
                   </label>
                   <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
-                    {% render 'icon-arrow' %}
+                    {% comment %} {% render 'icon-arrow' %} {% endcomment %}
+                    Send
                   </button>
                 </div>
                 {%- if form.errors -%}
@@ -108,11 +122,11 @@
                       </a>
                     </li>
                   {%- endif -%}
-                   <li class="list-social__item">
+                   {% comment %} <li class="list-social__item">
                       <a href="mailto:friends@duotoothpaste.com"  class="link list-social__link" >
                         {%- render 'icon-gmail' -%}                  
                       </a>
-                    </li>
+                    </li> {% endcomment %}
                   {%- if settings.social_pinterest_link != blank -%}
                     <li class="list-social__item">
                       <a href="{{ settings.social_pinterest_link }}" class="link list-social__link" >
@@ -172,7 +186,9 @@
                 </ul>
               {%- endif -%}
             </div>
-            
+            <h3 class="newsletter-description">
+              By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.
+            </h3>
             
           </div>
         {%- endif -%}
@@ -227,7 +243,22 @@
         </div>
       {%- endif -%}
      </div>
-  <div class="ul">
+     {%- if section.settings.back_to-top -%}
+        <div class="back_to-top">
+          <div class="button-wrapper">
+            <a href="javascript:;" class="back_button">
+              Back to top
+            </a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M10 15.8333V4.16663" stroke="#0C176A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4.16669 9.99996L10 4.16663L15.8334 9.99996" stroke="#0C176A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+     {%- endif -%}
+    <div class="social-with-text">
+      <h4 class="description">© 2023 Duo. All rights reserved.</h4>
+      <div class="ul">
       	{%- if section.settings.show_social -%}
           <ul class="footer__list-social list-unstyled list-social" role="list">
             {%- if settings.social_twitter_link != blank -%}
@@ -249,11 +280,11 @@
                 </a>
               </li>
             {%- endif -%}
-             <li class="list-social__item">
+             {% comment %} <li class="list-social__item">
                 <a href="mailto:friends@duotoothpaste.com"  class="link list-social__link" >
                   {%- render 'icon-gmail' -%}                  
                 </a>
-              </li>
+              </li> {% endcomment %}
             {%- if settings.social_pinterest_link != blank -%}
               <li class="list-social__item">
                 <a href="{{ settings.social_pinterest_link }}" class="link list-social__link" >
@@ -313,6 +344,8 @@
           </ul>
         {%- endif -%}
       </div>
+    </div>
+      
   {%- endif -%}
 
   <div class="footer__content-bottom">
@@ -475,6 +508,14 @@
   }
 
   customElements.define('localization-form', LocalizationForm);
+
+  var backButton = document.querySelector('.back_button');
+  backButton.addEventListener('click', function(){
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  })
 {% endjavascript %}
 
 {% schema %}
@@ -589,6 +630,17 @@
       ],
       "default": "background-1",
       "label": "t:sections.footer.settings.color_scheme.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "checkbox",
+      "id": "back_to-top",
+      "label": "Show Back To Top Button",
+      "default": true
     },
     {
       "type": "header",
