@@ -126,14 +126,30 @@
           "dd4ff7d0-bc3a-4975-b0c2-b7091ad5243b": {
             "type": "link_list",
             "settings": {
-              "heading": "here",
+              "heading": "Navigate",
+              "menu": "new-footer-menu"
+            }
+          },
+          "802fc684-ab7e-489f-9a59-6a9db437ca57": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Contact Us",
+              "menu": "contact"
+            }
+          },
+          "e672a2af-994b-4c2a-9e99-b37d3744a1c6": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Return and refund policy",
               "menu": "footer"
             }
           }
         },
         "block_order": [
           "footer-1",
-          "dd4ff7d0-bc3a-4975-b0c2-b7091ad5243b"
+          "dd4ff7d0-bc3a-4975-b0c2-b7091ad5243b",
+          "802fc684-ab7e-489f-9a59-6a9db437ca57",
+          "e672a2af-994b-4c2a-9e99-b37d3744a1c6"
         ],
         "settings": {
           "color_scheme": "background-1",
