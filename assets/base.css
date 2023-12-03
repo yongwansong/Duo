@@ -4798,6 +4798,7 @@ header {
 
 .policy-content.policy-terms strong{
   margin-bottom: 30px;
+  display: block;
 }
   
 
