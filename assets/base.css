@@ -4740,7 +4740,7 @@ header {
 }
 
 .shopify-policy__container .image-with-text{
-	display: flex;
+	display: none;
 }
 
 .shopify-policy__container .image-with-text .heading{
