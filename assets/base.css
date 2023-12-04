@@ -4800,5 +4800,26 @@ header {
   margin-bottom: 30px;
   display: block;
 }
-  
+
+@media (max-width: 767px){
+  .policy-content{
+    padding:0 20px;
+  }
+
+  .image-with-text{
+    flex-direction: column;
+  }
+
+  .shopify-policy__container .image-with-text .text{
+    width: 100%;
+  }
+
+  .shopify-policy__container .image-with-text .heading{
+    font-size: 26px;
+  }
+
+  .shopify-policy__container .image-with-text img{
+    width: 100%;
+  }
+}
 
