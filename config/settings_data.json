@@ -17,6 +17,7 @@
     "social_tiktok_link": "https:\/\/www.tiktok.com\/@duotoothpaste",
     "favicon": "shopify:\/\/shop_images\/DuoAvatar_Blue.png",
     "cart_type": "drawer",
+    "show_cart_note": true,
     "cart_drawer_collection": "shop",
     "cart_drawer_collection_title": "Want to add more Duo?",
     "checkout_logo_image": "shopify:\/\/shop_images\/Duo-Logo-Tagline_Gray_Bold_UPDATED.png",
@@ -153,6 +154,7 @@
         ],
         "settings": {
           "color_scheme": "background-1",
+          "back_to-top": true,
           "newsletter_enable": true,
           "newsletter_heading": "sign up for updates",
           "show_social": true,
