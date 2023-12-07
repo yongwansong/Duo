@@ -3491,6 +3491,12 @@ p.card.metasubtitle-fp {
 	text-align: center;
 }
 
+p.card.metasubtitle-price {
+	font-size: 1.8rem;
+	text-align: center;
+	font-weight: 600;
+}
+
 .homepage_title_txt {
 	text-align: center;
 }

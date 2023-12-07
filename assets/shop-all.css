@@ -87,8 +87,13 @@ span.svg-ion {
 }
 
 .product__heading .heading_grid h3 {
-	padding-bottom: 30px;
+	padding-bottom: 15px;
 	width: 60%;
+}
+
+.product__heading .heading_grid .products__price-above-atc {
+	padding-bottom: 15px;
+	font-weight: 600;
 }
 
 img.product__image.second_img {
@@ -140,6 +145,12 @@ img.product__image.first_img {
 
 .product_detail_width-addTocart .product-grid {
 	margin-top: 10px;
+}
+
+.product_detail_width-addTocart .product-grid .products__price-above-atc {
+	padding-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
 }
 
 h2.h2_heading.white {
@@ -1006,6 +1017,12 @@ h2.ingredient__details_tag {
 
 }
 
+@media(min-width: 768px) {
+	.products__price-above-atc.hide-desktop {
+		display: none;
+	}
+}
+
 
 @media(min-width: 600px) {
 
@@ -1486,7 +1503,6 @@ display: block;
 position: absolute;
 z-index: 9999;
 } */
-
 
 	.full_container_section p {
 		height: 39px;
