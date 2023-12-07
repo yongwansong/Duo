@@ -4,7 +4,6 @@
     font-size: 14px;
     display: flex;
     padding: 2px 8px;
-    display: none;
 }
 
 .product-form__order-by .pdp-estimated-delivery__date {
