@@ -77,7 +77,7 @@
               "link": ""
             }
           },
-          "cd9bbd2e-611e-4431-8b1c-620b27ca71fc": {
+          "c42be616-0004-48a0-be4c-d8d6cc447e22": {
             "type": "announcement-sticky",
             "settings": {
               "text": "subscribe to duo & save up to 33%",
@@ -92,7 +92,7 @@
           "84174252-7bb2-4fea-a4f8-b734defcb34c",
           "8c38bd63-74f2-4fb3-babe-cdb68f956b74",
           "6d87e26f-5e8d-4a1a-8e5b-589dbd2c81aa",
-          "cd9bbd2e-611e-4431-8b1c-620b27ca71fc"
+          "c42be616-0004-48a0-be4c-d8d6cc447e22"
         ],
         "settings": {
         }
@@ -126,22 +126,40 @@
           "dd4ff7d0-bc3a-4975-b0c2-b7091ad5243b": {
             "type": "link_list",
             "settings": {
-              "heading": "",
+              "heading": "Navigate",
+              "menu": "new-footer-menu"
+            }
+          },
+          "802fc684-ab7e-489f-9a59-6a9db437ca57": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Contact Us",
+              "menu": "contact"
+            }
+          },
+          "e672a2af-994b-4c2a-9e99-b37d3744a1c6": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Return and refund policy",
               "menu": "footer"
             }
           }
         },
         "block_order": [
           "footer-1",
-          "dd4ff7d0-bc3a-4975-b0c2-b7091ad5243b"
+          "dd4ff7d0-bc3a-4975-b0c2-b7091ad5243b",
+          "802fc684-ab7e-489f-9a59-6a9db437ca57",
+          "e672a2af-994b-4c2a-9e99-b37d3744a1c6"
         ],
         "settings": {
           "color_scheme": "background-1",
-          "newsletter_enable": false,
+          "logo": "shopify:\/\/shop_images\/Group_1.png",
+          "back_to-top": true,
+          "newsletter_enable": true,
           "newsletter_heading": "sign up for updates",
           "show_social": true,
-          "enable_country_selector": true,
-          "enable_language_selector": true,
+          "enable_country_selector": false,
+          "enable_language_selector": false,
           "payment_enable": false
         }
       },
