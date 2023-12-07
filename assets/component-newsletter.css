@@ -39,7 +39,14 @@
   .newsletter-form__message--success {
     position: absolute;
     left: 0;
-    bottom: 85%;
+    top: -20px;
+    margin: 0;
+  }
+}
+
+@media(max-width: 900px){
+  .footer__blocks-wrapper{
+    flex-wrap: wrap;
   }
 }
 

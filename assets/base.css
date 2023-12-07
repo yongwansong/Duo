@@ -1621,11 +1621,11 @@ details[open]>.share-button__fallback {
 	width: 2.5rem;
 }
 
-.field__input:-webkit-autofill~.field__button,
+/* .field__input:-webkit-autofill~.field__button,
 .field__input:-webkit-autofill~.field__label,
 .customer .field input:-webkit-autofill~label {
 	color: rgb(0, 0, 0);
-}
+} */
 
 /* Text area */
 
@@ -4800,5 +4800,26 @@ header {
   margin-bottom: 30px;
   display: block;
 }
-  
+
+@media (max-width: 767px){
+  .policy-content{
+    padding:0 20px;
+  }
+
+  .image-with-text{
+    flex-direction: column;
+  }
+
+  .shopify-policy__container .image-with-text .text{
+    width: 100%;
+  }
+
+  .shopify-policy__container .image-with-text .heading{
+    font-size: 26px;
+  }
+
+  .shopify-policy__container .image-with-text img{
+    width: 100%;
+  }
+}
 
