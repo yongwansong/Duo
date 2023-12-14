@@ -347,7 +347,7 @@
 								{{ block.shopify_attributes }}
 							>
 							{%- for option in product.options_with_values -%}
-								<fieldset class="js product-form__input product-form__input--radio variant-a">
+								<fieldset class="js product-form__input product-form__input--radio">
 									<legend class="form__label">{{ option.name }}:</legend>
 										{%- assign option_index = forloop.index0 -%}
 										{%- assign values = '' -%}
@@ -365,32 +365,25 @@
 														checked
 													{% endif %}
 												>
-												<label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-value="{{value}}">
+												<label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
 													<span class="variant-field__label">
-                            <span class="variant-field__image">
-                              <img src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/Tube_6.png?v=1702405021" alt="">
-                            </span>
-
-                            {%- if variant.compare_at_price > variant.price  -%}
-                              {%- assign discounted_amount = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | money_without_currency | times: 100 | round  -%}
-                              <span class="variant-field__sale" data-discounted="{{ discounted_amount }}">
-                                Save {{ discounted_amount }}%
-                              </span>
-                            {%- endif -%}
-														{% comment %} <span class="variant-field__radio-icon"></span> {% endcomment %}
-														
-														{% comment %} {%- if variant.metafields.duo.variant_details != blank -%}
+														<span class="variant-field__radio-icon"></span>
+														<span class="variant-field__name">{{ value }}</span>
+														{%- if variant.metafields.duo.variant_details != blank -%}
 															<span class="variant-field__details">{{ variant.metafields.duo.variant_details }}</span>
-														{%- endif -%} {% endcomment %}
+														{%- endif -%}
 													</span>
-                         
+													{%- if variant.compare_at_price > variant.price  -%}
+														{%- assign discounted_amount = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | money_without_currency | times: 100 | round  -%}
+														<span class="variant-field__sale" data-discounted="{{ discounted_amount }}">
+															Save {{ discounted_amount }}%
+														</span>
+													{%- endif -%}
 													<span class="variant-field__price">
-                            <span class="variant-field__name">{{ value }}</span>
-                            
-                            {%- if variant.compare_at_price > variant.price -%}
+														<span>{{ variant.price | money }}</span>
+														{%- if variant.compare_at_price > variant.price -%}
 															<s>{{ variant.compare_at_price | money }}</s>
 														{%- endif -%}
-														<span>{{ variant.price | money }}</span>
 													</span>
 												</label>
 										{%- endunless -%}
