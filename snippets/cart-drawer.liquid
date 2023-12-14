@@ -89,13 +89,13 @@
           class=" is-empty"
         {% endif %}
       >
-        {% comment %} 
-          <form
+        
+        <form
           action="{{ routes.cart_url }}"
           id="CartDrawer-Form"
           class="cart__contents cart-drawer__form"
           method="post"
-        > {% endcomment %}
+        >
           <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
             {%- if cart != empty -%}
               <div class="drawer__cart-items-wrapper">
@@ -381,7 +381,7 @@
           </div>
           <div id="CartDrawer-CartErrors" role="alert"></div>
 
-       {% comment %}  </form> {% endcomment %}
+       </form>
       </cart-drawer-items>
 
       {%- liquid
@@ -456,6 +456,7 @@
           </noscript>
 
           <button
+            type="submit"
             id="CartDrawer-Checkout"
             class="cart__checkout-button button"
             name="checkout"
