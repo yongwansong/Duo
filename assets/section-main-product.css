@@ -317,8 +317,9 @@ fieldset.product-form__input .form__label {
 	max-width: 100%;
 	min-width: initial;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	gap: 1.57rem;
+	margin-top: 40px;
 }
 .product-form__input.product-form__input--radio .form__label{
 	font-size: 1.6rem;
@@ -327,15 +328,17 @@ fieldset.product-form__input .form__label {
 }
 .product-form__input.product-form__input--radio label{
 	--borders-color: #DFDFDF;
-	border-radius: 10rem;
+	border-radius: 6px;
 	border: .1rem solid var(--borders-color);
-	padding: 1.4rem 1.63rem;
 	min-height: 6.4rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	cursor: pointer;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
 }
 .product-form__input.product-form__input--radio label.variant-field__best-value:after{
 	content: 'Best Value';
@@ -353,15 +356,29 @@ fieldset.product-form__input .form__label {
 }
 .product-form__input.product-form__input--radio .variant-field__label{
 	position: relative;
-	padding-left: 3.3613rem;
 	line-height: 1.2;
 }
 .product-form__input.product-form__input--radio .variant-field__name{
-	font-size: 1.6297rem;
+	font-size: 1.3rem;
 	font-weight: 700;
 	text-transform: capitalize;
 	display: block;
+	margin-bottom: 5px;
 }
+
+.product-form__input.product-form__input--radio .variant-field__image {
+	display: block;
+    max-width: 50px;
+    max-height: 69px;
+    overflow: hidden;
+}
+
+.product-form__input.product-form__input--radio .variant-field__image img{
+	object-fit: contain;
+	object-position: center;
+	width: 100%;
+}
+
 .product-form__input.product-form__input--radio .variant-field__details{
 	color: #505050;
 	font-size: 1rem;
@@ -400,19 +417,33 @@ fieldset.product-form__input .form__label {
 	display: none;
 }
 .product-form__input.product-form__input--radio .variant-field__price{
-	font-weight: 700;
-	font-size: 1.2223rem;
+	font-weight: 600;
+	font-size: 1.2rem !important;
 	line-height: 1.2;
+	text-align: center;
+	background-color: #EEE;
+	width: 100%;
+	padding: 8px;
 }
-.product-form__input.product-form__input--radio .variant-field__price > *{
-	display: block;
+.product-form__input.product-form__input--radio .variant-field__price > *:not(.variant-field__name){
+	display: inline-block;
+	margin-left: 5px;
 }
 .product-form__input.product-form__input--radio .variant-field__price s{
 	color: #505050;
 }
 .product-form__input.product-form__input--radio input[type='radio']:checked+label{
-	--borders-color: #000;
+	--borders-color: #70E6B8;
+	border-width: 2px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
+
+.product-form__input.product-form__input--radio input[type='radio']:checked+label .variant-field__price {
+	background-color: #DAF9EF;
+}
+
 .product-form__input.product-form__input--radio input[type='radio']:checked+label .variant-field__radio-icon:after{
 	background-color: var(--borders-color);
 }
@@ -1295,4 +1326,36 @@ a.product__text {
 	height: auto;
 	margin: 0;
 	width: 2.2rem;
+}
+
+[data-value="2 Bottles"] {
+    position: relative;
+}
+
+[data-value="2 Bottles"]::before {
+    content: "MOST POPULAR";
+    position: absolute;
+    top: -35px;
+    width: 100%;
+    background: #70E6B8;
+    border-radius: 124px;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 600;
+}
+
+[data-value="4 Bottles"] {
+    position: relative;
+}
+
+[data-value="4 Bottles"]::before {
+    content: "BEST VALUE";
+    position: absolute;
+    top: -35px;
+    width: 100%;
+    background: #8E92BA;
+    border-radius: 124px;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 600;
 }
