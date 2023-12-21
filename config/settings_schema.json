@@ -435,6 +435,11 @@
         "content": "Sidecart Gamification"
       },
       {
+        "type": "product",
+        "id": "gamification_free_gift",
+        "label": "Gamification Free Gift"
+      },
+      {
         "type": "text",
         "id": "first_goal_name",
         "label": "First Goal Name",

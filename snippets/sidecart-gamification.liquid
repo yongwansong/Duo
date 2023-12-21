@@ -1,0 +1,64 @@
+{%  liquid 
+    assign cartTotal = cart.total_price 
+    assign goal1 = settings.first_goal_price | times: 100 
+    assign goal2 = settings.second_goal_price | times: 100 
+    assign goal3 = settings.third_goal_price | times: 100 
+    assign barStatus = "0%"
+    
+    if cartTotal > 0 
+        assign barStatus = "7%"
+        assign moneyLeft = goal1 | minus: cartTotal | money_without_trailing_zeros 
+        assign title = "You are " | append: moneyLeft | append: " away from <b>" | append: settings.first_goal_name | append: "</b>"
+    endif
+    if cartTotal == goal1 
+        assign barStatus = "18%"
+        assign moneyLeft = goal2 | minus: cartTotal | money_without_trailing_zeros 
+        assign title = "You got " | append: settings.first_goal_name | append: "! <b>Add " | append: moneyLeft | append: " to get " | append: settings.second_goal_name | append:  "</b>"
+    endif
+    if cartTotal > goal1
+        assign barStatus = "35%"
+        assign moneyLeft = goal2 | minus: cartTotal | money_without_trailing_zeros 
+        assign title = "You got " | append: settings.first_goal_name | append: "! <b>Add " | append: moneyLeft | append: " to get " | append: settings.second_goal_name | append:  "</b>"
+    endif
+    if cartTotal == goal2 
+        assign barStatus = "50%"
+        assign moneyLeft = goal3 | minus: cartTotal | money_without_trailing_zeros 
+        assign title = "You got " | append: settings.first_goal_name | append: " + " | append: settings.second_goal_name | append: "! <b>Add " | append: moneyLeft | append: " to get " | append: settings.third_goal_name | append:  "</b>"
+    endif
+    if cartTotal > goal2
+        assign barStatus = "67%"
+        assign moneyLeft = goal3 | minus: cartTotal | money_without_trailing_zeros 
+        assign title = "You got " | append: settings.first_goal_name | append: " + " | append: settings.second_goal_name | append: "! <b>Add " | append: moneyLeft | append: " to get " | append: settings.third_goal_name | append:  "</b>"
+    endif
+    if cartTotal >= goal3 
+        assign barStatus = "100%"
+        assign title = "Congratulations! <b>You unlocked all offers!</b>"
+    endif
+%}
+
+<div class="cart-drawer__gamification">
+    <div class="gamification-title">{{ title }}</div>
+    <div class="gamification-content">
+        <div class="gamification-progress-bar">
+            <div class="gamification-progress-bar-status" style="width: {{ barStatus }}"></div>
+        </div>
+        <div class="gamification-goals">
+            <div class="gamification-goal">
+                <img src="{{ settings.first_goal_image | img_url: "45x" }}">
+                <span>{{ settings.first_goal_name }}</span>
+            </div>
+            <div class="gamification-goal">
+                <img src="{{ settings.second_goal_image | img_url: "45x" }}">
+                <span>{{ settings.second_goal_name }}</span>
+            </div><div class="gamification-goal">
+                <img src="{{ settings.third_goal_image | img_url: "45x" }}">
+                <span>{{ settings.third_goal_name }}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.freeGiftGoal = {{ settings.second_goal_price | times: 100 }}
+    window.freeGiftId = {{ settings.gamification_free_gift.selected_or_first_available_variant.id }}
+</script>

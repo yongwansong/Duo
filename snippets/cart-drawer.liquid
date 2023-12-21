@@ -84,6 +84,9 @@
           {% render 'icon-close' %}
         </button>
       </div>
+      {% unless cart == empty %}
+        {% render "sidecart-gamification", cart: cart%}
+      {% endunless %}
       <cart-drawer-items
         {% if cart == empty %}
           class=" is-empty"

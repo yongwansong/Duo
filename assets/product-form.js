@@ -53,6 +53,7 @@ if (!customElements.get('product-form')) {
 						return;
 					} else if (this.dataset.cartType == 'page') {
 						window.location = window.routes.cart_url;
+						console.log("asd3", response)
 						return;
 					}
 
@@ -72,6 +73,9 @@ if (!customElements.get('product-form')) {
 							atcMessage.classList.remove('hidden');
 						}, 1500);
 					}
+					
+					console.log("asd ",response)
+					
 					const quickAddModal = this.closest('quick-add-modal');
 					if (quickAddModal) {
 						document.body.addEventListener('modalClosed', () => {
