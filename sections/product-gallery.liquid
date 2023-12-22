@@ -1,0 +1,145 @@
+{{ 'component-product-gallery.css' | asset_url | stylesheet_tag }}
+
+<div class="product-gallery-wrapper">
+    {% for block in section.blocks %}
+        <div class="product-wrapper">
+            {% if block.settings.image != blank %}
+                <div class="image">
+                    <img
+                        src="{{ block.settings.image | img_url: '500x' }}"
+                        alt="{{ block.settings.image.alt }}"
+                        loading="lazy"
+                    >
+                </div>
+            {% endif %}
+            <div class="text-wrapper">
+                <h2 class="heading">{{ block.settings.heading }}</h2>
+                <div class="description">{{ block.settings.description }}</div>
+                <a class="button" href="{{ block.settings.btn_link }}">{{ block.settings.btn_label }}</a>
+            </div>
+            <div class="product-info">
+                {% assign product_card_product = block.settings.product %}
+                <div class="product-title">
+                    <p>{{ product_card_product.title }}</p>
+                    <p class="card metasubtitle-fp">{{ product_card_product.metafields.my_fields.feature_product_subtitle }}</p>
+                </div>
+                {%- if product_card_product.selected_or_first_available_variant.available -%}
+                    {%- assign product_form_id = 'quick-add-' | append: section.id | append: product_card_product.id -%}
+                    <product-form data-cart-type="{{ settings.cart_type }}">
+                        {%- form 'product',
+                            product_card_product,
+                            id: product_form_id,
+                            class: 'form',
+                            novalidate: 'novalidate',
+                            data-type: 'add-to-cart-form'
+                        -%}
+                        {% comment %} {% render 'loop-subscriptions' type: 'product-widget', product: product %} {% endcomment %}
+
+                            <div class="{{ product_card_product.title| downcase }} products__heading add-toCart">
+                                <input
+                                    type="hidden"
+                                    name="id"
+                                    value="{{ product_card_product.selected_or_first_available_variant.id }}"
+                                    disabled
+                                >
+                                <button
+                                    id="{{ product_form_id }}-submit"
+                                    type="submit"
+                                    name="add"
+                                    class="quick-add__submit cllctnadd"
+                                    aria-haspopup="dialog"
+                                    aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product_card_product.id }}"
+                                    aria-live="polite"
+                                    {% if product_card_product.selected_or_first_available_variant.available == false %}
+                                    disabled
+                                    {% endif %}
+                                >
+                                    <span class="add-to-cart-message">
+                                    {%- if product_card_product.selected_or_first_available_variant.available -%}
+                                        {{ 'products.product.add_to_cart' | t }}
+                                    {%- else -%}
+                                        {{ 'products.product.sold_out' | t }}
+                                    {%- endif -%}
+                                    </span>
+                                    <span class="added-message hidden">Added</span>
+                                    <span class="sold-out-message hidden">
+                                    {{ 'products.product.sold_out' | t }}
+                                    </span>
+                                    <div class="loading-overlay__spinner hidden">
+                                    <svg
+                                        aria-hidden="true"
+                                        focusable="false"
+                                        role="presentation"
+                                        class="spinner"
+                                        viewBox="0 0 66 66"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                    </svg>
+                                    </div>
+                                </button>
+                            </div>
+                        {%- endform -%}
+                    </product-form>
+                {%- endif -%}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% schema %}
+    {
+        "name": "product",
+        "class": "product",
+        "settings": [
+            
+        ],
+        "blocks": [
+            {
+                "type": "product",
+                "name": "product",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "Heading",
+                        "default": "Heading"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "description",
+                        "label": "Description",
+                        "default": "<p>Description</p>"
+                    },
+                    {
+                        "type": "url",
+                        "id": "btn_link",
+                        "label": "Button Link"
+                    },
+                    {
+                        "type": "text",
+                        "id": "btn_label",
+                        "label": "Button Label",
+                        "default": "Button"
+                    },
+                    {
+                        "type": "product",
+                        "id": "product",
+                        "label": "Product"
+                    }
+                ]
+            }
+        ],
+        "presets":[
+            {
+                "name":"product gallery"
+            }
+        ]
+        
+    }
+{% endschema %}
