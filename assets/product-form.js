@@ -52,8 +52,28 @@ if (!customElements.get('product-form')) {
 						this.error = true;
 						return;
 					} else if (this.dataset.cartType == 'page') {
-						window.location = window.routes.cart_url;
-						console.log("asd3 cartpage", response)
+						if (window.abtestvariant) {
+
+							fetch(`${routes.cart_url}.js`, {
+								method: 'GET'
+							})
+							.then((response) => response.json())
+							.then((response) => {
+								const ifExists = response.items.find((element) => element.id === window.freeGiftId)
+
+								console.log(ifExists, response.total_price, window.freeGiftGoal)
+	
+								if (response.total_price >= window.freeGiftGoal && !ifExists) {
+									this.addGiftPage(window.freeGiftId)
+								} else {
+									window.location = window.routes.cart_url;
+								}
+							})
+							.catch((error) => {
+								console.error('Error:', error);
+							});
+	
+						}
 						return;
 					}
 
@@ -84,20 +104,24 @@ if (!customElements.get('product-form')) {
 						this.cart.renderContents(response);
 					}
 
-					fetch(`${routes.cart_url}.js`, {
-						method: 'GET'
-					  })
-					  .then((response) => response.json())
-					  .then((response) => {
-						const ifExists = response.items.find((element) => element.id === window.freeGiftId)
+					if (window.abtestvariant) {
 
-						if (response.total_price >= window.freeGiftGoal && !ifExists) {
-							this.addGift(window.freeGiftId)
-						}
-					  })
-					  .catch((error) => {
-						console.error('Error:', error);
-					  });
+						fetch(`${routes.cart_url}.js`, {
+							method: 'GET'
+						})
+						.then((response) => response.json())
+						.then((response) => {
+							const ifExists = response.items.find((element) => element.id === window.freeGiftId)
+
+							if (response.total_price >= window.freeGiftGoal && !ifExists) {
+								this.addGiftSidecart(window.freeGiftId)
+							}
+						})
+						.catch((error) => {
+							console.error('Error:', error);
+						});
+
+					}
 
 				})
 				.catch((e) => {
@@ -111,7 +135,26 @@ if (!customElements.get('product-form')) {
 				});
 		}
 
-		addGift(giftId) {
+		addGiftPage(giftId) {
+			const config = fetchConfig('javascript');
+			config.headers['X-Requested-With'] = 'XMLHttpRequest';
+			delete config.headers['Content-Type'];
+			const formData = new FormData();
+			formData.append('id', giftId);
+			formData.append('quantity', 1);
+			config.body = formData;
+			
+			fetch(`${routes.cart_add_url}`, config)
+			.then((response) => response.json())
+			.then((response) => {
+				window.location = window.routes.cart_url;
+			})
+			.catch((e) => {
+				console.error(e);
+			})
+		}
+
+		addGiftSidecart(giftId) {
 			const config = fetchConfig('javascript');
 			config.headers['X-Requested-With'] = 'XMLHttpRequest';
 			delete config.headers['Content-Type'];
