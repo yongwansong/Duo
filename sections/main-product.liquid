@@ -391,6 +391,55 @@
 										{%- endunless -%}
 									{%- endfor -%}
 									</fieldset>
+								<fieldset class="js product-form__input product-form__input--radio variant-b hidden">
+									<legend class="form__label">{{ option.name }}:</legend>
+										{%- assign option_index = forloop.index0 -%}
+										{%- assign values = '' -%}
+										{%- for variant in product.variants -%}
+											{%- assign value = variant.options[option_index] %}
+											{%- unless values contains value -%}
+												{%- assign values = values | join: ',' | append: ',' | append: value | split: ',' -%}
+												<input
+													type="radio"
+													id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+													name="{{ option.name }}"
+													value="{{ value | escape }}"
+													form="{{ product_form_id }}"
+													{% if option.selected_value == value %}
+														checked
+													{% endif %}
+												>
+												<label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-value="{{value}}">
+													<span class="variant-field__label">
+                            <span class="variant-field__image">
+                              <img src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/Tube_6.png?v=1702405021" alt="">
+                            </span>
+
+                            {%- if variant.compare_at_price > variant.price  -%}
+                              {%- assign discounted_amount = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | money_without_currency | times: 100 | round  -%}
+                              <span class="variant-field__sale" data-discounted="{{ discounted_amount }}">
+                                Save {{ discounted_amount }}%
+                              </span>
+                            {%- endif -%}
+														{% comment %} <span class="variant-field__radio-icon"></span> {% endcomment %}
+														
+														{% comment %} {%- if variant.metafields.duo.variant_details != blank -%}
+															<span class="variant-field__details">{{ variant.metafields.duo.variant_details }}</span>
+														{%- endif -%} {% endcomment %}
+													</span>
+                         
+													<span class="variant-field__price">
+                            <span class="variant-field__name">{{ value }}</span>
+                            
+                            {%- if variant.compare_at_price > variant.price -%}
+															<s>{{ variant.compare_at_price | money }}</s>
+														{%- endif -%}
+														<span>{{ variant.price | money }}</span>
+													</span>
+												</label>
+										{%- endunless -%}
+									{%- endfor -%}
+									</fieldset>
 							{%- endfor -%}
 							<script type="application/json">
 								{{ product.variants | json }}
