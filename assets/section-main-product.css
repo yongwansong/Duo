@@ -931,7 +931,7 @@ a.product__text {
 		height: 100%;
 	}
 	.product-media__slides .slick-list .slick-slide .media>img{
-		object-fit: fill;
+		object-fit: contain;
 	}
 	.product-media__dots-wrapper{
 		min-height: 44.75px;
@@ -1335,6 +1335,8 @@ a.product__text {
 
 .variant-b.product-form__input.product-form__input--radio .variant-field__image {
 	display: block;
+	max-width: 60px;
+	max-height: 85px;
     overflow: hidden;
 	margin: 0 auto;
 }
@@ -1364,17 +1366,30 @@ a.product__text {
 }
 
 .variant-b.product-form__input.product-form__input--radio input[type='radio']:checked+label{
-	--borders-color: #000;
-	--borders-color: #70E6B8;
 	border-width: 2px;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 }
-
-.variant-b.product-form__input.product-form__input--radio input[type='radio']:checked+label .variant-field__price {
+.variant-b.product-form__input.product-form__input--radio input[type='radio'][value="Single Bottle"]:checked+label{
+	--borders-color: #0C176A;
+}
+.variant-b.product-form__input.product-form__input--radio input[type='radio'][value="4 Bottles"]:checked+label .variant-field__price {
+	background-color: #F6F7FF;
+}
+.variant-b.product-form__input.product-form__input--radio input[type='radio'][value="2 Bottles"]:checked+label{
+	--borders-color: #70E6B8;
+}
+.variant-b.product-form__input.product-form__input--radio input[type='radio'][value="2 Bottles"]:checked+label .variant-field__price {
 	background-color: #DAF9EF;
 }
+.variant-b.product-form__input.product-form__input--radio input[type='radio'][value="4 Bottles"]:checked+label{
+	--borders-color: #8E92BA;
+}
+.variant-b.product-form__input.product-form__input--radio input[type='radio'][value="4 Bottles"]:checked+label .variant-field__price {
+	background-color: #EBEDFF;
+}
+
 
 .variant-b.product-form__input.product-form__input--radio .variant-field__label {
 	padding-left: 0 !important;
