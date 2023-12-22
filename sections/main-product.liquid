@@ -391,7 +391,7 @@
 										{%- endunless -%}
 									{%- endfor -%}
 									</fieldset>
-								<fieldset class="js product-form__input product-form__input--radio variant-b hidden">
+								<fieldset class="js product-form__input product-form__input--radio variant-b ">
 									<legend class="form__label">{{ option.name }}:</legend>
 										{%- assign option_index = forloop.index0 -%}
 										{%- assign values = '' -%}
@@ -412,7 +412,16 @@
 												<label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-value="{{value}}">
 													<span class="variant-field__label">
                             <span class="variant-field__image">
-                              <img src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/Tube_6.png?v=1702405021" alt="">
+                              {% case  forloop.index0 %}
+                                {% when 0 %}
+                                  <img src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/Duo_Product-sleep_1.png?v=1703276421" width="76" height="64" alt="bundle 1">
+                                {% when 1 %}
+                                  <img src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/3_tubes_2.png?v=1703275926" width="86" height="72" alt="bundle 2">
+                                {% when 2 %}
+                                  <img src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/3_tubes_3.png?v=1703275926" width="86" height="72" alt="bundle 3">
+                                {% else %}
+                                  <img src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/Tube_6.png?v=1702405021" alt="bundle 0">
+                              {% endcase %}
                             </span>
 
                             {%- if variant.compare_at_price > variant.price  -%}
