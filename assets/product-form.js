@@ -53,7 +53,7 @@ if (!customElements.get('product-form')) {
 						return;
 					} else if (this.dataset.cartType == 'page') {
 						window.location = window.routes.cart_url;
-						console.log("asd3", response)
+						console.log("asd3 cartpage", response)
 						return;
 					}
 
@@ -74,8 +74,6 @@ if (!customElements.get('product-form')) {
 						}, 1500);
 					}
 					
-					console.log("asd ",response)
-					
 					const quickAddModal = this.closest('quick-add-modal');
 					if (quickAddModal) {
 						document.body.addEventListener('modalClosed', () => {
@@ -85,6 +83,22 @@ if (!customElements.get('product-form')) {
 					} else {
 						this.cart.renderContents(response);
 					}
+
+					fetch(`${routes.cart_url}.js`, {
+						method: 'GET'
+					  })
+					  .then((response) => response.json())
+					  .then((response) => {
+						const ifExists = response.items.find((element) => element.id === window.freeGiftId)
+
+						if (response.total_price >= window.freeGiftGoal && !ifExists) {
+							this.addGift(window.freeGiftId)
+						}
+					  })
+					  .catch((error) => {
+						console.error('Error:', error);
+					  });
+
 				})
 				.catch((e) => {
 					console.error(e);
@@ -95,6 +109,28 @@ if (!customElements.get('product-form')) {
 					if (!this.error) this.submitButton.removeAttribute('aria-disabled');
 					this.querySelector('.loading-overlay__spinner').classList.add('hidden');
 				});
+		}
+
+		addGift(giftId) {
+			const config = fetchConfig('javascript');
+			config.headers['X-Requested-With'] = 'XMLHttpRequest';
+			delete config.headers['Content-Type'];
+			
+			const formData = new FormData();
+			formData.append('id', giftId);
+			formData.append('quantity', 1);
+			formData.append('sections', this.cart.getSectionsToRender().map((section) => section.id));
+			formData.append('sections_url', window.location.pathname);
+			config.body = formData;
+			
+			fetch(`${routes.cart_add_url}`, config)
+			.then((response) => response.json())
+			.then((response) => {
+				this.cart.renderContents(response);
+			})
+			.catch((e) => {
+				console.error(e);
+			})
 		}
 
 		handleErrorMessage(errorMessage = false) {

@@ -58,7 +58,19 @@ class CartItems extends HTMLElement {
 				return response.text();
 			})
 			.then((state) => {
+
 				const parsedState = JSON.parse(state);
+				const ifExists = parsedState.items.find((element) => element.id === window.freeGiftId)
+				if (parsedState.total_price >= window.freeGiftGoal) {
+					if(!ifExists) {
+						this.addGift(window.freeGiftId);
+					}
+				} else {
+					if (ifExists) {
+						const lineGift = document.querySelector("[data-is-gift='true']").getAttribute("id").split("CartDrawer-Item-")[1]
+						this.updateQuantity(lineGift, 0)
+					}
+				}
 				this.classList.toggle('is-empty', parsedState.item_count === 0);
 				const cartDrawerWrapper = document.querySelector('cart-drawer');
 				const cartFooter = document.getElementById('main-cart-footer');
@@ -92,8 +104,6 @@ class CartItems extends HTMLElement {
 					trapFocus(cartDrawerWrapper, document.querySelector('.cart-item__name'))
 				}
 				this.disableLoading();
-				
-				console.log("asd 2",response)
 			}).catch(() => {
 				this.querySelectorAll('.loading-overlay').forEach((overlay) => overlay.classList.add('hidden'));
 				const errors = document.getElementById('cart-errors') || document.getElementById('CartDrawer-CartErrors');
@@ -102,6 +112,29 @@ class CartItems extends HTMLElement {
 			});
 	}
 
+	addGift(giftId) {
+		const config = fetchConfig('javascript');
+		config.headers['X-Requested-With'] = 'XMLHttpRequest';
+		delete config.headers['Content-Type'];
+		const cartRender = document.querySelector('cart-notification') || document.querySelector('cart-drawer') || document.querySelector('cart-items');
+		
+		const formData = new FormData();
+		formData.append('id', giftId);
+		formData.append('quantity', 1);
+		formData.append('sections', cartRender.getSectionsToRender().map((section) => section.id));
+		formData.append('sections_url', window.location.pathname);
+		config.body = formData;
+		
+		fetch(`${routes.cart_add_url}`, config)
+		.then((response) => response.json())
+		.then((response) => {
+			cartRender.renderContents(response);
+		})
+		.catch((e) => {
+			console.error(e);
+		})
+	}
+	
 	updateLiveRegions(line, itemCount) {
 		if (this.currentItemCount === itemCount) {
 			const lineItemError = document.getElementById(`Line-item-error-${line}`) || document.getElementById(`CartDrawer-LineItemError-${line}`);
