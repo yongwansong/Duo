@@ -151,6 +151,9 @@
                       <h3>
                         <span class="products__heading">{{ product.metafields.custom.custom_vendor_2 }}</span>
                       </h3>
+                      <div class="products__price-above-atc">
+                        <span>{{ product.price | money }}</span>
+                      </div>
                       {% comment %}
                         <p class="">
                           {% if product.metafields.my_fields.product_top_title != blank %}
@@ -426,6 +429,10 @@
                           {%endunless%}
                           {%endfor%}
                         {% endcomment %}
+                      </div>
+                      
+                      <div class="products__price-above-atc hide-desktop">
+                        <span>{{ product.price | money }}</span>
                       </div>
                       {%- if product.selected_or_first_available_variant.available -%}
                         {%- assign product_form_id = 'quick-add-mobile-' | append: section.id | append: product.id -%}

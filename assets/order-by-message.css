@@ -1,0 +1,11 @@
+.product-form__order-by {
+    gap: 5px;
+    border-radius: 40px;
+    font-size: 14px;
+    display: flex;
+    padding: 2px 8px;
+}
+
+.product-form__order-by .pdp-estimated-delivery__date {
+    font-weight: bold;
+}

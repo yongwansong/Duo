@@ -22,6 +22,12 @@
             "product": "{{product}}"
           }
         },
+        "18db48ee-d83d-4c27-8017-7e8d97a2009b": {
+          "type": "social-proof-units",
+          "settings": {
+            "social_proof_msg": "250,000+ Tablets Sold Since Launch!"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -52,6 +58,14 @@
             "show_dynamic_checkout": false
           }
         },
+        "7c0efd85-ff80-4479-8684-796aad9ce1fa": {
+          "type": "order-by-message",
+          "settings": {
+            "min_days": 4,
+            "max_days": 10,
+            "order_by_message": "Order today and receive by:"
+          }
+        },
         "9b788f9f-1118-4d44-a096-5d5fd2ad8fb3": {
           "type": "text",
           "settings": {
@@ -64,10 +78,12 @@
         "title",
         "subtitle",
         "180df9d7-f979-4be9-8420-83028105b17f",
+        "18db48ee-d83d-4c27-8017-7e8d97a2009b",
         "description",
         "ce90f502-2d3a-49ec-a41d-dd6ab562129c",
         "variant_picker",
         "buy_buttons",
+        "7c0efd85-ff80-4479-8684-796aad9ce1fa",
         "9b788f9f-1118-4d44-a096-5d5fd2ad8fb3"
       ],
       "settings": {

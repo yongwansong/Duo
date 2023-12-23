@@ -89,6 +89,7 @@
           class=" is-empty"
         {% endif %}
       >
+
         <form
           action="{{ routes.cart_url }}"
           id="CartDrawer-Form"
@@ -338,12 +339,12 @@
                               id="CartDrawer-Remove-{{ item.index | plus: 1 }}"
                               data-index="{{ item.index | plus: 1 }}"
                             >
-                              <button
+                              <span
                                 class="button button--tertiary"
                                 aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
                               >
                                 {% render 'icon-remove' %}
-                              </button>
+                              </span>
                             </cart-remove-button>
                           </div>
 
@@ -452,8 +453,8 @@
               {{ 'sections.cart.update' | t }}
             </button>
           </noscript>
-
-          <button
+          <button type="submit" disabled hidden aria-hidden="true" form="CartDrawer-Form"></button>
+          <button 
             type="submit"
             id="CartDrawer-Checkout"
             class="cart__checkout-button button"

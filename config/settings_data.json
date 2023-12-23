@@ -17,6 +17,7 @@
     "social_tiktok_link": "https:\/\/www.tiktok.com\/@duotoothpaste",
     "favicon": "shopify:\/\/shop_images\/DuoAvatar_Blue.png",
     "cart_type": "drawer",
+    "show_cart_note": true,
     "cart_drawer_collection": "shop",
     "cart_drawer_collection_title": "Want to add more Duo?",
     "checkout_logo_image": "shopify:\/\/shop_images\/Duo-Logo-Tagline_Gray_Bold_UPDATED.png",
@@ -59,12 +60,30 @@
               "link": "shopify:\/\/pages\/subscribe"
             }
           },
-          "f7786cea-8b27-4006-a242-55f97cc60fb2": {
+          "8c38bd63-74f2-4fb3-babe-cdb68f956b74": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "Use FRIDAY20 for 20% off site wide",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
+          },
+          "6d87e26f-5e8d-4a1a-8e5b-589dbd2c81aa": {
+            "type": "announcement-sticky",
+            "disabled": true,
+            "settings": {
+              "text": "free shipping on orders $25 and over",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
+          },
+          "c42be616-0004-48a0-be4c-d8d6cc447e22": {
             "type": "announcement-sticky",
             "settings": {
               "text": "subscribe to duo & save up to 33%",
-              "color_scheme": "accent-1",
-              "link": "shopify:\/\/pages\/build-bundle"
+              "color_scheme": "background-1",
+              "link": "shopify:\/\/pages\/subscribe"
             }
           }
         },
@@ -72,7 +91,9 @@
           "announcement-bar-0",
           "1e71f7ea-ea2b-42f6-af3a-b502dd95aba8",
           "84174252-7bb2-4fea-a4f8-b734defcb34c",
-          "f7786cea-8b27-4006-a242-55f97cc60fb2"
+          "8c38bd63-74f2-4fb3-babe-cdb68f956b74",
+          "6d87e26f-5e8d-4a1a-8e5b-589dbd2c81aa",
+          "c42be616-0004-48a0-be4c-d8d6cc447e22"
         ],
         "settings": {
         }
@@ -106,22 +127,39 @@
           "dd4ff7d0-bc3a-4975-b0c2-b7091ad5243b": {
             "type": "link_list",
             "settings": {
-              "heading": "",
+              "heading": "Navigate",
+              "menu": "new-footer-menu"
+            }
+          },
+          "802fc684-ab7e-489f-9a59-6a9db437ca57": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Contact Us",
+              "menu": "contact"
+            }
+          },
+          "e672a2af-994b-4c2a-9e99-b37d3744a1c6": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Return and refund policy",
               "menu": "footer"
             }
           }
         },
         "block_order": [
           "footer-1",
-          "dd4ff7d0-bc3a-4975-b0c2-b7091ad5243b"
+          "dd4ff7d0-bc3a-4975-b0c2-b7091ad5243b",
+          "802fc684-ab7e-489f-9a59-6a9db437ca57",
+          "e672a2af-994b-4c2a-9e99-b37d3744a1c6"
         ],
         "settings": {
           "color_scheme": "background-1",
-          "newsletter_enable": false,
+          "back_to-top": true,
+          "newsletter_enable": true,
           "newsletter_heading": "sign up for updates",
           "show_social": true,
-          "enable_country_selector": true,
-          "enable_language_selector": true,
+          "enable_country_selector": false,
+          "enable_language_selector": false,
           "payment_enable": false
         }
       },
@@ -357,13 +395,6 @@
 
     ],
     "blocks": {
-      "733389323033596483": {
-        "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/theme-settings\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-        "disabled": false,
-        "settings": {
-          "show_preview_data": true
-        }
-      },
       "855628211100114053": {
         "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
@@ -374,6 +405,25 @@
         "type": "shopify:\/\/apps\/intelligems-a-b-testing\/blocks\/intelligems-script\/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
         "disabled": true,
         "settings": {
+        }
+      },
+      "733389323033596483": {
+        "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/theme-settings\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "disabled": false,
+        "settings": {
+          "show_preview_data": false
+        }
+      },
+      "15683396631634586217": {
+        "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": true,
+        "settings": {
+          "button_color": "#00126b",
+          "button_icon": "chat_bubble",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "higher",
+          "button_text": "no_text",
+          "greeting_message": "👋 Hi, message us with any questions. We're happy to help!"
         }
       }
     }

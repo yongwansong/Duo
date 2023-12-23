@@ -11,7 +11,7 @@
         "videomobile": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/790f33d954db4c4eaa18b7b21d18788a.mp4",
         "videoimagemobile": "shopify:\/\/shop_images\/duolsizzle_mobile_1080x1080_Thumbnail.png",
         "heading": "Elevate Your <br> Brushing Routine",
-        "subheading": "Superior toothpaste tablets<br>with whole-body benefits.",
+        "subheading": "Toothpaste tablets<br>with whole-body benefits.",
         "button_label_1": "SHOP TABLETS",
         "button_link_1": "shopify:\/\/products\/immunity",
         "button_style_text_link": false,
@@ -190,8 +190,8 @@
       ],
       "settings": {
         "icon": "shopify:\/\/shop_images\/Group_346.svg",
-        "heading": "vitamins & supplements \nfor complete oral + systemic health",
-        "description": "<p>Formulated by two dentists, Duo makes the first naturally whitening, earth-friendly tablet toothpaste infused with vitamins + supplements. <\/p><p><\/p><p>As you brush with one of our functional toothpastes, you’re not just perfectly polishing your pearly whites—you’re efficiently absorbing nutrients and supplements through your tongue, cheeks, and gums via a process called mucosal absorption. No need to swallow.<\/p>"
+        "heading": "",
+        "description": "<p>Formulated by two dentists, Duo makes the first naturally whitening, earth-friendly tablet toothpaste infused with vitamins, supplements and antioxidants. You absorb them efficiently through your tongue, cheeks, and gums. No need to swallow.<\/p>"
       }
     },
     "0a53150e-b5df-4f43-a1ac-81d9e08ffa86": {
@@ -514,7 +514,7 @@
       "settings": {
         "txt": "#9bd9ff",
         "imgs": "shopify:\/\/shop_images\/lets-talk-nha-icon.svg",
-        "title1": "Let’s talk about nHa.",
+        "title1": "let’s talk about nHa",
         "txt1": "<p>Nano-Hydroxyapatite (nHa) is a dentist-backed, non-toxic flouride alternative that remineralizes your teeth and keeps them strong. It’s been used in Japanese toothpaste for decades and is highly effective in restoring and strengthening enamel.<\/p>",
         "about_image": "shopify:\/\/shop_images\/Original_HandMask_new.png",
         "learnmore": "shopify:\/\/pages\/the-science"
@@ -749,7 +749,7 @@
       ],
       "settings": {
         "icon": "shopify:\/\/shop_images\/Group_302.svg",
-        "image": "<p>Loved and<br\/>recommended by<br\/>other dentists. <\/p>",
+        "image": "<p>loved and<br\/>recommended by<br\/>other dentists<\/p>",
         "videoo": "",
         "height": "adapt",
         "color_scheme": "accent-2",
@@ -761,9 +761,9 @@
       "settings": {
         "txt": "#eceffd",
         "text_color": "#000000",
-        "title1": "Shop all tablets",
-        "learnmore": "shopify:\/\/collections\/shop",
-        "desktop_font_size": 20,
+        "title1": "Shop Tablets",
+        "learnmore": "shopify:\/\/products\/original",
+        "desktop_font_size": 26,
         "mobile_font_size": 20,
         "small_mobile_font_size": 20,
         "arrow_icon": true,
@@ -773,6 +773,7 @@
     },
     "b876fe21-01ea-4132-9e2f-2988bb385a7c": {
       "type": "section-heading",
+      "disabled": true,
       "settings": {
         "section_bg_color": "#ffffff",
         "title": "<p>we love our <em>#duodiehard<\/em> community<\/p>"
