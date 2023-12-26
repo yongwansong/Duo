@@ -405,9 +405,9 @@
 													name="{{ option.name }}"
 													value="{{ value | escape }}"
 													form="{{ product_form_id }}"
-													{% if option.selected_value == value %}
-														checked
-													{% endif %}
+                          {% if forloop.index == '1' %}
+                            checked
+                          {% endif  %}
 												>
 												<label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-value="{{value}}">
 													<span class="variant-field__label">
@@ -476,6 +476,16 @@
 								{{ product.variants | json }}
 							</script>
 							</variant-radios>
+
+              <script type="module">
+                document.addEventListener('DOMContentLoaded', () => {
+                  const selectorVariants = document.querySelectorAll('.product-form__input--radio');
+                  selectorVariants.forEach(e => {
+                    e.querySelectorAll('input')[1].checked = true;
+                  });
+                });
+              </script>
+
 						{%- else -%}
 							<variant-selects
 								class="no-js-hidden"
