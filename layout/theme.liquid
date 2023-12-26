@@ -318,7 +318,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         shareSuccess: `{{ 'general.share.success_message' | t }}`,
       };
 
-      window.abtestvariant = true
       window.freeGiftGoal = {{ settings.second_goal_price | times: 100 }}
       window.freeGiftId = {{ settings.gamification_free_gift.selected_or_first_available_variant.id }}
     </script>

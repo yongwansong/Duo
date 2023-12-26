@@ -62,11 +62,11 @@ class CartItems extends HTMLElement {
 				const parsedState = JSON.parse(state);
 				const ifExists = parsedState.items.find((element) => element.id === window.freeGiftId)
 				if (parsedState.total_price >= window.freeGiftGoal) {
-					if(!ifExists && window.abtestvariant) {
+					if(!ifExists) {
 						this.addGift(window.freeGiftId);
 					}
 				} else {
-					if (ifExists && window.abtestvariant) {
+					if (ifExists) {
 						const lineItem = document.querySelector(".cart-item[data-is-gift='true']").getAttribute("id")
 						const lineGift = (lineItem.includes("CartDrawer-Item-") ? lineItem.split("CartDrawer-Item-")[1] : lineItem.split("CartItem-")[1])
 						this.updateQuantity(lineGift, 0)

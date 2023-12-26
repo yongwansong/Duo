@@ -52,28 +52,24 @@ if (!customElements.get('product-form')) {
 						this.error = true;
 						return;
 					} else if (this.dataset.cartType == 'page') {
-						if (window.abtestvariant) {
+						fetch(`${routes.cart_url}.js`, {
+							method: 'GET'
+						})
+						.then((response) => response.json())
+						.then((response) => {
+							const ifExists = response.items.find((element) => element.id === window.freeGiftId)
 
-							fetch(`${routes.cart_url}.js`, {
-								method: 'GET'
-							})
-							.then((response) => response.json())
-							.then((response) => {
-								const ifExists = response.items.find((element) => element.id === window.freeGiftId)
+							console.log(ifExists, response.total_price, window.freeGiftGoal)
 
-								console.log(ifExists, response.total_price, window.freeGiftGoal)
-	
-								if (response.total_price >= window.freeGiftGoal && !ifExists) {
-									this.addGiftPage(window.freeGiftId)
-								} else {
-									window.location = window.routes.cart_url;
-								}
-							})
-							.catch((error) => {
-								console.error('Error:', error);
-							});
-	
-						}
+							if (response.total_price >= window.freeGiftGoal && !ifExists) {
+								this.addGiftPage(window.freeGiftId)
+							} else {
+								window.location = window.routes.cart_url;
+							}
+						})
+						.catch((error) => {
+							console.error('Error:', error);
+						});
 						return;
 					}
 
@@ -103,9 +99,6 @@ if (!customElements.get('product-form')) {
 					} else {
 						this.cart.renderContents(response);
 					}
-
-					if (window.abtestvariant) {
-
 						fetch(`${routes.cart_url}.js`, {
 							method: 'GET'
 						})
@@ -120,9 +113,6 @@ if (!customElements.get('product-form')) {
 						.catch((error) => {
 							console.error('Error:', error);
 						});
-
-					}
-
 				})
 				.catch((e) => {
 					console.error(e);
