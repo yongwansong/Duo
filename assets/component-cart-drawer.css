@@ -529,3 +529,29 @@ cart-drawer.is-empty .cart-drawer__recommendation{
 .drawer .cart-item.cart-item--bundle{
 	padding-bottom: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+
+    .drawer__header {
+        padding: 0.5rem 0;
+    }
+
+    .drawer__heading {
+        margin: 0;
+    }
+
+    .drawer__close svg {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .drawer__close {
+        min-width: 2.4rem;
+        min-height: 2.4rem;
+        right: 0px;
+		top: 6px;
+    }
+    .cart-drawer__recommendation{
+        max-height: 80px;
+    }
+}
