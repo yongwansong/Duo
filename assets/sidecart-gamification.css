@@ -46,6 +46,10 @@
     justify-items: center;
 }
 
+.gamification-goal img {
+    width: 40px;
+}
+
 .gamification-goal span {
     font-size: 14px;
     font-weight: 500;
