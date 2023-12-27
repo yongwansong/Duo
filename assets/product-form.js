@@ -129,7 +129,13 @@ if (!customElements.get('product-form')) {
 							return getDiscount
 						})
 						if (response.original_total_price >= window.discountGoal && !ifDiscount) {
-							fetch(`/discount/${window.discountCode}`)
+							fetch(`/discount/${window.discountCode}`).then(() => {
+								if(window.location.pathname === "/cart") {
+									window.location = window.routes.cart_url;
+								} else {
+									this.refreshSideCart()
+								}
+							})
 						}
 					})
 					.catch((error) => {
@@ -186,6 +192,23 @@ if (!customElements.get('product-form')) {
 			.catch((e) => {
 				console.error(e);
 			})
+		}
+
+		refreshSideCart(){
+			const cartDrawer = document.querySelector('cart-drawer');
+			if (cartDrawer) {
+				const innerCart = cartDrawer.querySelector('.drawer__inner');
+				fetch(window.Shopify.routes.root+"?section_id=cart-drawer")
+				.then((response) => {
+					return response.text();
+				}).then((response) => { 
+					const parser = new DOMParser(),
+					dom = parser.parseFromString(response, "text/html"),
+					domCartDrawer = dom.querySelector('cart-drawer'),
+					domInnerCart = domCartDrawer.querySelector('.drawer__inner');
+					innerCart.innerHTML = domInnerCart.innerHTML
+				});
+			}
 		}
 
 		handleErrorMessage(errorMessage = false) {

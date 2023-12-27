@@ -79,11 +79,23 @@ class CartItems extends HTMLElement {
 				})
 				if (parsedState.original_total_price >= window.discountGoal) {
 					if(!ifDiscount) {
-						fetch(`/discount/${window.discountCode}`)
+						fetch(`/discount/${window.discountCode}`).then(() => {
+							if(window.location.pathname === "/cart") {
+								window.location = window.routes.cart_url;
+							} else {
+								this.refreshSideCart()
+							}
+						})
 					}
 				}else {
 					if (ifDiscount) {
-						fetch(`/discount/clear`)
+						fetch(`/discount/clear`).then(() => {
+							if(window.location.pathname === "/cart") {
+								window.location = window.routes.cart_url;
+							} else {
+								this.refreshSideCart()
+							}
+						})
 					}
 				}
 				this.classList.toggle('is-empty', parsedState.item_count === 0);
@@ -184,6 +196,23 @@ class CartItems extends HTMLElement {
 		return new DOMParser()
 			.parseFromString(html, 'text/html')
 			.querySelector(selector).innerHTML;
+	}
+
+	refreshSideCart(){
+		const sideCartDrawer = document.querySelector('cart-drawer');
+		if (sideCartDrawer) {
+			const innerCart = sideCartDrawer.querySelector('.drawer__inner');
+			fetch(window.Shopify.routes.root+"?section_id=cart-drawer")
+			.then((response) => {
+				return response.text();
+			}).then((response) => { 
+				const parser = new DOMParser(),
+				dom = parser.parseFromString(response, "text/html"),
+				domCartDrawer = dom.querySelector('cart-drawer'),
+				domInnerCart = domCartDrawer.querySelector('.drawer__inner');
+				innerCart.innerHTML = domInnerCart.innerHTML
+			});
+		}
 	}
 
 	enableLoading(line) {
