@@ -52,21 +52,33 @@ if (!customElements.get('product-form')) {
 						this.error = true;
 						return;
 					} else if (this.dataset.cartType == 'page') {
+						//gamification goals on cart page
 						fetch(`${routes.cart_url}.js`, {
 							method: 'GET'
 						})
 						.then((response) => response.json())
 						.then((response) => {
 							const ifExists = response.items.find((element) => element.id === window.freeGiftId)
+							const ifDiscount = response.items.find((element) => {
+								const getDiscount = element.discounts.find((discount) => discount.title === window.discountCode)
+								return getDiscount
+							})
 
-							console.log(ifExists, response.total_price, window.freeGiftGoal)
-
-							if (response.total_price >= window.freeGiftGoal && !ifExists) {
-								this.addGiftPage(window.freeGiftId)
+							if (response.original_total_price >= window.discountGoal) {
+								if (!ifDiscount) {
+									fetch(`/discount/${window.discountCode}`).then(() => {
+										window.location = window.routes.cart_url;
+									})
+								}
+							} else if (response.original_total_price >= window.freeGiftGoal) {
+								if(!ifExists) {
+									this.addGiftPage(window.freeGiftId)
+								}
 							} else {
 								window.location = window.routes.cart_url;
 							}
-						})
+
+							})
 						.catch((error) => {
 							console.error('Error:', error);
 						});
@@ -99,20 +111,30 @@ if (!customElements.get('product-form')) {
 					} else {
 						this.cart.renderContents(response);
 					}
-						fetch(`${routes.cart_url}.js`, {
-							method: 'GET'
-						})
-						.then((response) => response.json())
-						.then((response) => {
-							const ifExists = response.items.find((element) => element.id === window.freeGiftId)
+					//gamification goals
+					fetch(`${routes.cart_url}.js`, {
+						method: 'GET'
+					})
+					.then((response) => response.json())
+					.then((response) => {
+						//first gamification goal
+						const ifExists = response.items.find((element) => element.id === window.freeGiftId)
 
-							if (response.total_price >= window.freeGiftGoal && !ifExists) {
-								this.addGiftSidecart(window.freeGiftId)
-							}
+						if (response.original_total_price >= window.freeGiftGoal && !ifExists) {
+							this.addGiftSidecart(window.freeGiftId)
+						}
+						//second gamification goal
+						const ifDiscount = response.items.find((element) => {
+							const getDiscount = element.discounts.find((discount) => discount.title === window.discountCode)
+							return getDiscount
 						})
-						.catch((error) => {
-							console.error('Error:', error);
-						});
+						if (response.original_total_price >= window.discountGoal && !ifDiscount) {
+							fetch(`/discount/${window.discountCode}`)
+						}
+					})
+					.catch((error) => {
+						console.error('Error:', error);
+					});					
 				})
 				.catch((e) => {
 					console.error(e);

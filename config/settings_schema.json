@@ -441,6 +441,12 @@
       },
       {
         "type": "text",
+        "id": "gamification_discount",
+        "label": "Gamification Discount Code",
+        "default": "BONBON10"
+      },
+      {
+        "type": "text",
         "id": "first_goal_name",
         "label": "First Goal Name",
         "default": "Free Shipping"

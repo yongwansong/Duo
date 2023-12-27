@@ -320,6 +320,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       window.freeGiftGoal = {{ settings.second_goal_price | times: 100 }}
       window.freeGiftId = {{ settings.gamification_free_gift.selected_or_first_available_variant.id }}
+      window.discountGoal = {{ settings.third_goal_price | times: 100 }}
+      window.discountCode = "{{ settings.gamification_discount }}"
     </script>
 
     {%- if settings.predictive_search_enabled -%}

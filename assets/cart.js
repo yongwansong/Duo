@@ -58,10 +58,10 @@ class CartItems extends HTMLElement {
 				return response.text();
 			})
 			.then((state) => {
-
+				//first gamification goal
 				const parsedState = JSON.parse(state);
 				const ifExists = parsedState.items.find((element) => element.id === window.freeGiftId)
-				if (parsedState.total_price >= window.freeGiftGoal) {
+				if (parsedState.original_total_price >= window.freeGiftGoal) {
 					if(!ifExists) {
 						this.addGift(window.freeGiftId);
 					}
@@ -70,6 +70,20 @@ class CartItems extends HTMLElement {
 						const lineItem = document.querySelector(".cart-item[data-is-gift='true']").getAttribute("id")
 						const lineGift = (lineItem.includes("CartDrawer-Item-") ? lineItem.split("CartDrawer-Item-")[1] : lineItem.split("CartItem-")[1])
 						this.updateQuantity(lineGift, 0)
+					}
+				}
+				//second gamification goal
+				const ifDiscount = parsedState.items.find((element) => {
+					const getDiscount = element.discounts.find((discount) => discount.title === window.discountCode)
+					return getDiscount
+				})
+				if (parsedState.original_total_price >= window.discountGoal) {
+					if(!ifDiscount) {
+						fetch(`/discount/${window.discountCode}`)
+					}
+				}else {
+					if (ifDiscount) {
+						fetch(`/discount/clear`)
 					}
 				}
 				this.classList.toggle('is-empty', parsedState.item_count === 0);
