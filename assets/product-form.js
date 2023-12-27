@@ -58,27 +58,26 @@ if (!customElements.get('product-form')) {
 						})
 						.then((response) => response.json())
 						.then((response) => {
+							//first goal
 							const ifExists = response.items.find((element) => element.id === window.freeGiftId)
+							if (response.original_total_price >= window.freeGiftGoal && !ifExists) {
+								this.addGiftPage(window.freeGiftId)
+							} else {
+								window.location = window.routes.cart_url;
+							}
+							//second goal
 							const ifDiscount = response.items.find((element) => {
 								const getDiscount = element.discounts.find((discount) => discount.title === window.discountCode)
 								return getDiscount
 							})
-
-							if (response.original_total_price >= window.discountGoal) {
-								if (!ifDiscount) {
-									fetch(`/discount/${window.discountCode}`).then(() => {
-										window.location = window.routes.cart_url;
-									})
-								}
-							} else if (response.original_total_price >= window.freeGiftGoal) {
-								if(!ifExists) {
-									this.addGiftPage(window.freeGiftId)
-								}
+							if (response.original_total_price >= window.discountGoal && !ifDiscount) {
+								fetch(`/discount/${window.discountCode}`).then(() => {
+									window.location = window.routes.cart_url;
+								})
 							} else {
 								window.location = window.routes.cart_url;
 							}
-
-							})
+						})
 						.catch((error) => {
 							console.error('Error:', error);
 						});

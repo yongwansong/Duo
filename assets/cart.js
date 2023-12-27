@@ -58,46 +58,51 @@ class CartItems extends HTMLElement {
 				return response.text();
 			})
 			.then((state) => {
-				//first gamification goal
 				const parsedState = JSON.parse(state);
-				const ifExists = parsedState.items.find((element) => element.id === window.freeGiftId)
-				if (parsedState.original_total_price >= window.freeGiftGoal) {
-					if(!ifExists) {
-						this.addGift(window.freeGiftId);
+				//first gamification goal
+				setTimeout(() => {
+					const ifExists = parsedState.items.find((element) => element.id === window.freeGiftId)
+					if (parsedState.original_total_price >= window.freeGiftGoal) {
+						if(!ifExists) {
+							this.addGift(window.freeGiftId);
+						}
+					} else {
+						if (ifExists) {
+							const lineItem = document.querySelector(".cart-item[data-is-gift='true']").getAttribute("id")
+							const lineGift = (lineItem.includes("CartDrawer-Item-") ? lineItem.split("CartDrawer-Item-")[1] : lineItem.split("CartItem-")[1])
+							this.updateQuantity(lineGift, 0)
+						}
 					}
-				} else {
-					if (ifExists) {
-						const lineItem = document.querySelector(".cart-item[data-is-gift='true']").getAttribute("id")
-						const lineGift = (lineItem.includes("CartDrawer-Item-") ? lineItem.split("CartDrawer-Item-")[1] : lineItem.split("CartItem-")[1])
-						this.updateQuantity(lineGift, 0)
-					}
-				}
+				}, 200)
 				//second gamification goal
-				const ifDiscount = parsedState.items.find((element) => {
-					const getDiscount = element.discounts.find((discount) => discount.title === window.discountCode)
-					return getDiscount
-				})
-				if (parsedState.original_total_price >= window.discountGoal) {
-					if(!ifDiscount) {
-						fetch(`/discount/${window.discountCode}`).then(() => {
-							if(window.location.pathname === "/cart") {
-								window.location = window.routes.cart_url;
-							} else {
-								this.refreshSideCart()
-							}
-						})
+				setTimeout(() => {
+					const ifDiscount = parsedState.items.find((element) => {
+						const getDiscount = element.discounts.find((discount) => discount.title === window.discountCode)
+						return getDiscount
+					})
+					if (parsedState.original_total_price >= window.discountGoal) {
+						if(!ifDiscount) {
+							fetch(`/discount/${window.discountCode}`).then(() => {
+								if(window.location.pathname === "/cart") {
+									window.location = window.routes.cart_url;
+								} else {
+									this.refreshSideCart();
+								}
+							})
+						}
+					}else {
+						if (ifDiscount) {
+							fetch(`/discount/clear`).then(() => {
+								if(window.location.pathname === "/cart") {
+									window.location = window.routes.cart_url;
+								} else {
+									this.refreshSideCart();
+								}
+							})
+						}
 					}
-				}else {
-					if (ifDiscount) {
-						fetch(`/discount/clear`).then(() => {
-							if(window.location.pathname === "/cart") {
-								window.location = window.routes.cart_url;
-							} else {
-								this.refreshSideCart()
-							}
-						})
-					}
-				}
+				}, 500)
+				
 				this.classList.toggle('is-empty', parsedState.item_count === 0);
 				const cartDrawerWrapper = document.querySelector('cart-drawer');
 				const cartFooter = document.getElementById('main-cart-footer');
@@ -226,11 +231,19 @@ class CartItems extends HTMLElement {
 
 		document.activeElement.blur();
 		this.lineItemStatusElement.setAttribute('aria-hidden', false);
+		const checkoutBtn = document.querySelector('button.cart__checkout-button')
+		if (checkoutBtn) {
+			checkoutBtn.setAttribute("disabled", "true")
+		}
 	}
 
 	disableLoading() {
 		const mainCartItems = document.getElementById('main-cart-items') || document.getElementById('CartDrawer-CartItems');
 		mainCartItems.classList.remove('cart__items--disabled');
+		const checkoutBtn = document.querySelector('button.cart__checkout-button')
+		if (checkoutBtn) {
+			checkoutBtn.removeAttribute("disabled")
+		}
 	}
 }
 
