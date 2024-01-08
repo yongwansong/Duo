@@ -443,7 +443,7 @@
         "type": "text",
         "id": "gamification_discount",
         "label": "Gamification Discount Code",
-        "default": "BONBON10"
+        "default": "10OFFGAMIFICATION"
       },
       {
         "type": "text",
