@@ -43,19 +43,31 @@
               </div>
               
             {%- endif -%}
+            <div class="images-wrapper">
+              {% for block in section.blocks %}
+                  {% if block.type == 'image' %}
+                    <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
+                      {%- if block.settings.image != blank -%}
+                        {%- assign image_size = block.settings.image_width | append: 'x' -%}
+                        <img
+                          srcset= "{{ block.settings.image | img_url: image_size }}, {{ block.settings.image | img_url: image_size, scale: 2 }} 2x"
+                          src="{{ block.settings.image | img_url: '400x' }}"
+                          alt="{{ block.settings.image.alt | escape }}"
+                          loading="lazy"
+                          width="{{ block.settings.image.width }}"
+                          height="{{ block.settings.image.height }}"
+                          style="max-width: min(100%, {{ block.settings.image_width }}px);"
+                        >
+                      {%- else -%}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                      {%- endif -%}
+                    </div>
+                  {% endif %}
+              {% endfor %}
+            </div>
             {%- if section.settings.newsletter_heading != blank -%}
              <div class="footerhand">
-            <h2 class="footer-block__heading">{{ section.settings.newsletter_heading | escape }}</h2>
-<!--               <img src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/5576a767eb7ff38f89c418e26ea9ce7f.svg?v=1658917424" class="handsvg"> -->
-              {% comment %} <img class="handsvg"
-                  srcset="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/5576a767eb7ff38f89c418e26ea9ce7f.svg?v=1658917424"
-                  sizes="auto"
-                  src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/5576a767eb7ff38f89c418e26ea9ce7f.svg?v=1658917424"
-                  loading="lazy"
-                  alt="hand"
-                  width="auto"
-                  height="auto"
-                > {% endcomment %}
+              <h2 class="footer-block__heading">{{ section.settings.newsletter_heading | escape }}</h2>
              </div>
             {%- endif -%}
             {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
@@ -83,11 +95,10 @@
                     required
                   >
                   <label class="field__label addname" for="NewsletterForm--{{ section.id }}">
-                        Your email
+                        Enter your email here
                   </label>
                   <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
-                    {% comment %} {% render 'icon-arrow' %} {% endcomment %}
-                    Send
+                    {% render 'icon-arrow' %}
                   </button>
                 </div>
                 {%- if form.errors -%}
@@ -186,9 +197,6 @@
                 </ul>
               {%- endif -%}
             </div>
-            <h3 class="newsletter-description">
-              By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.
-            </h3>
             
           </div>
         {%- endif -%}
@@ -197,50 +205,55 @@
 
         
       </div>
-          {%- for block in section.blocks -%}
-            <div class="footer-block grid__item{% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
-              {%- if block.settings.heading != blank -%}
-                <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
-              {%- endif -%}
+        <div class="footer-blocks-wrapper">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'link_list' -%}
+                <div class="footer-block grid__item{% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
+                {%- if block.settings.heading != blank -%}
+                  <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
+                {%- endif -%}
 
-              {%- case block.type -%}
-                {%- when 'text' -%}
-                  <div class="footer-block__details-content rte">
-                    {{ block.settings.subtext }}
-                  </div>
-                {%- when 'link_list' -%}
-                  {%- if block.settings.menu != blank and block.settings.heading != blank -%}
-                    <ul class="footer-block__details-content list-unstyled">
-                      {%- for link in block.settings.menu.links -%}
-                        <li>
-                          <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
-                            {{ link.title }}
-                          </a>
-                        </li>
-                      {%- endfor -%}
-                    </ul>
-                  {%- endif -%}
-                {%- when 'image' -%}
-                  <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
-                    {%- if block.settings.image != blank -%}
-                      {%- assign image_size = block.settings.image_width | append: 'x' -%}
-                      <img
-                        srcset= "{{ block.settings.image | img_url: image_size }}, {{ block.settings.image | img_url: image_size, scale: 2 }} 2x"
-                        src="{{ block.settings.image | img_url: '400x' }}"
-                        alt="{{ block.settings.image.alt | escape }}"
-                        loading="lazy"
-                        width="{{ block.settings.image.width }}"
-                        height="{{ block.settings.image.height }}"
-                        style="max-width: min(100%, {{ block.settings.image_width }}px);"
-                      >
-                    {%- else -%}
-                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                {%- case block.type -%}
+                  {%- when 'text' -%}
+                    <div class="footer-block__details-content rte">
+                      {{ block.settings.subtext }}
+                    </div>
+                  {%- when 'link_list' -%}
+                    {%- if block.settings.menu != blank and block.settings.heading != blank -%}
+                      <ul class="footer-block__details-content list-unstyled">
+                        {%- for link in block.settings.menu.links -%}
+                          <li>
+                            <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
+                              {{ link.title }}
+                            </a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
                     {%- endif -%}
-                  </div>
-                {%- endcase -%}
-            </div>
-          {%- endfor -%}
+                  {%- when 'image' -%}
+                    <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
+                      {%- if block.settings.image != blank -%}
+                        {%- assign image_size = block.settings.image_width | append: 'x' -%}
+                        <img
+                          srcset= "{{ block.settings.image | img_url: image_size }}, {{ block.settings.image | img_url: image_size, scale: 2 }} 2x"
+                          src="{{ block.settings.image | img_url: '400x' }}"
+                          alt="{{ block.settings.image.alt | escape }}"
+                          loading="lazy"
+                          width="{{ block.settings.image.width }}"
+                          height="{{ block.settings.image.height }}"
+                          style="max-width: min(100%, {{ block.settings.image_width }}px);"
+                        >
+                      {%- else -%}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                      {%- endif -%}
+                    </div>
+                  {%- endcase -%}
+              </div>
+              {%- endif -%}
+              
+            {%- endfor -%}
         </div>
+      </div>
       {%- endif -%}
      </div>
      {%- if section.settings.back_to-top -%}
@@ -257,8 +270,8 @@
         </div>
      {%- endif -%}
     <div class="social-with-text">
-      <h4 class="description">© 2023 Duo. All rights reserved.</h4>
-      <div class="ul">
+      <h4 class="description">@ 2023 Duo Dentaceuticals LLC</h4>
+      <div class="social-wrapper ul">
       	{%- if section.settings.show_social -%}
           <ul class="footer__list-social list-unstyled list-social" role="list">
             {%- if settings.social_twitter_link != blank -%}

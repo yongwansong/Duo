@@ -1,0 +1,201 @@
+.product-gallery-wrapper .product-wrapper img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.product-gallery-wrapper .product-wrapper{
+    position: relative;
+    padding-bottom: 37px;
+}
+
+.product-gallery-wrapper .product-wrapper .image{
+    position: relative;
+    height: 0;
+}
+
+.product-gallery-wrapper .product-wrapper .text-wrapper{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8%;
+    max-width: 400px;
+}
+
+.product-gallery-wrapper .product-wrapper .text-wrapper .heading{
+    color: #000;
+    font-family: "Schnyder-SLight";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 52px;
+    margin: 0 0 26px;
+}
+
+.product-gallery-wrapper .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0;
+}
+
+.product-gallery-wrapper .product-wrapper .button{
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    font-family: "OldschoolGrotesk-Regular";
+    min-height: 0;
+    line-height: 1;
+}
+
+.product-gallery-wrapper .product-wrapper .description p{
+    color: #000;
+    font-family: "OldschoolGrotesk-Regular";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 430;
+    line-height: 27px;
+    margin: 0 0 38px;
+}
+
+.product-gallery-wrapper .product-info{
+    position: absolute;
+    right: 70px;
+    max-width: 230px;
+    width: 100%;
+}
+
+.product-gallery-wrapper .product-info.middle{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.product-gallery-wrapper .product-info.bottom{
+    bottom: 50px;
+}
+
+.product-gallery-wrapper .product-info.top{
+    top: 20px;
+}
+
+.product-gallery-wrapper .product-info .product-title{
+    padding: 8px 0 7px 14px;
+    background: #ffffff;
+}
+
+.product-gallery-wrapper .product-info .product-title p{
+    margin: 0;
+    color: #259768;
+    font-family: "OldschoolGrotesk-Regular";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.product-gallery-wrapper .product-info .product-title p.card.metasubtitle-fp{
+    margin: 0;
+    color: #259768;
+    font-family: "OldschoolGrotesk-Regular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 430;
+    line-height: 28px;
+    letter-spacing: -0.24px;
+    text-align: left;
+}
+
+.product-gallery-wrapper product-form .products__heading{
+    background: #181818;
+    text-align: center;
+    margin-top: 7.17px;
+}
+
+.product-gallery-wrapper product-form .quick-add__submit{
+    color: #FFF;
+    text-align: center;
+    font-family: "OldschoolGrotesk-Regular";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 560;
+    line-height: 28px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.product-gallery-wrapper .loading-overlay__spinner svg .path{
+    stroke: #ffffff;
+}
+
+.product-gallery-wrapper .products__heading .product-price{
+    color: #FFF;
+    text-align: center;
+    font-family: "OldschoolGrotesk-Regular";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 560;
+    line-height: 28px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.product-gallery-wrapper .swiper-button-next, .product-gallery-wrapper .swiper-button-prev{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='62' height='59' viewBox='0 0 62 59' fill='none'%3E%3Cpath d='M61.0164 29.5C61.0164 45.6487 47.6068 58.75 31.0526 58.75C14.4984 58.75 1.08887 45.6487 1.08887 29.5C1.08887 13.3513 14.4984 0.25 31.0526 0.25C47.6068 0.25 61.0164 13.3513 61.0164 29.5Z' stroke='black' stroke-width='0.5'/%3E%3Cpath d='M44.2092 29.3536C44.4045 29.1583 44.4045 28.8417 44.2092 28.6464L41.0272 25.4645C40.832 25.2692 40.5154 25.2692 40.3201 25.4645C40.1248 25.6597 40.1248 25.9763 40.3201 26.1716L43.1485 29L40.3201 31.8284C40.1248 32.0237 40.1248 32.3403 40.3201 32.5355C40.5154 32.7308 40.832 32.7308 41.0272 32.5355L44.2092 29.3536ZM17.2266 29.5L43.8556 29.5L43.8556 28.5L17.2266 28.5L17.2266 29.5Z' fill='black'/%3E%3C/svg%3E");
+    background-size: 52px 52px;
+    width: 52px;
+    height: 52px;
+    position: relative;
+    margin: 0;
+    right: unset;
+    left: unset;
+}
+
+.product-gallery-wrapper .swiper-button-prev{
+    transform: rotate(180deg);
+}
+
+.product-gallery-wrapper .swiper-pagination-bullet{
+    background: #262222;
+    height: 3px;
+    border-radius: 0;
+    width: 25%;
+}
+
+.product-gallery-wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background-color: #000000;
+}
+
+.product-gallery-wrapper .swiper-container{
+    padding: 60px 0 37px;
+}
+
+.product-gallery-wrapper .swiper-button-wrapper{
+    position: absolute;
+    top: 0;
+    display: flex;
+    gap: 30px;
+    flex-direction: row-reverse;
+    right: 0;
+}
+
+@media (max-width: 767px) {
+    .product-gallery-wrapper .product-wrapper .text-wrapper{
+        position: relative;
+        top: unset;
+        left: unset;
+        max-width: 100%;
+        transform: unset;
+    }
+
+    .product-gallery-wrapper .product-info{
+        position: relative;
+        top: unset;
+        right: unset;
+    }
+
+    .product-gallery-wrapper .product-wrapper .button{
+        border: none;
+        box-shadow: unset;
+    }
+}

@@ -418,7 +418,6 @@
     },
     "0289457f-3b98-43fd-8fa0-a74d5bbf17c0": {
       "type": "featured-bundles",
-      "disabled": true,
       "blocks": {
         "b29cd6b5-d50a-4993-831a-b7c0ef628a36": {
           "type": "bundle",
@@ -462,6 +461,7 @@
         "8651b5a2-befa-4a27-8731-07467ae4dfd3",
         "ab7c4b57-60e3-4bd3-b9b6-afd2849aa35b"
       ],
+      "disabled": true,
       "settings": {
         "title": "Popular subscription picks",
         "description": "<p>Shop our most popular bundles.<\/p>"
@@ -529,7 +529,6 @@
     },
     "2062527a-b37d-4b95-a369-4e542ee5500b": {
       "type": "rich-text",
-      "disabled": true,
       "blocks": {
         "template--15806529732775__2062527a-b37d-4b95-a369-4e542ee5500b-16832106000bafc3dc-0": {
           "type": "heading",
@@ -542,6 +541,7 @@
       "block_order": [
         "template--15806529732775__2062527a-b37d-4b95-a369-4e542ee5500b-16832106000bafc3dc-0"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "background-1",
         "full_width": true

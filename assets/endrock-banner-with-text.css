@@ -1,0 +1,69 @@
+.endrock-banner-with-text .banner-with-text{
+    position: relative;
+    height: 0;
+}
+.endrock-banner-with-text .banner-with-text img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
+.endrock-banner-with-text .text-wrapper{
+    position: absolute;
+    left: 12%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.endrock-banner-with-text .text-wrapper h2{
+    padding-top: 0;
+    flex-shrink: 0;
+    color: #070606;
+    font-family: "Schnyder-SLight";
+    font-size: 56px;
+    font-style: normal;
+    line-height: 58px;
+    margin-top: 0;
+    margin-bottom: 29px;
+}
+.endrock-banner-with-text .text-wrapper .text-des p{
+    color: #000;
+    font-family: 'OldschoolGrotesk-ExtraLight';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 390;
+    line-height: 24px;
+    margin: 0 0 39px;
+}
+.endrock-banner-with-text .text-decoration{
+    color: #000;
+    font-family: "Schnyder-SLight";
+    font-size: 84px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 58px;
+
+}
+.endrock-banner-with-text .text-wrapper .text-info{
+    color: #000;
+    width: 151px;
+    font-family: "OldschoolGrotesk-Medium";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 560;
+    line-height: 24px;
+    margin: 0px;
+}
+.endrock-banner-with-text .text-wrapper .decoration{
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    align-items: center;
+   margin-bottom: 37px;
+}
+
+.endrock-banner-with-text .text-wrapper a{
+    padding: 10px 57px;
+    font-family: "OldschoolGrotesk-Medium";
+    min-height: 0;
+    line-height: 1;
+}

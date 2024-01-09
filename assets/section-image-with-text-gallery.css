@@ -1,0 +1,178 @@
+.image-with-text__gallery-container .gallery-list{
+    display: flex;
+    gap: 10%;
+}
+
+.image-with-text__gallery-container .gallery-info{
+    margin-top: 70px;
+}
+
+.image-with-text__gallery-container .gallery-info .prefix_heading{
+    color: #000;
+    font-family: "OldschoolGrotesk-Medium";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 2.25px;
+    margin: 0 0 54px;
+}
+
+.image-with-text__gallery-container .gallery-info  .heading{
+    color: #000;
+    font-family: "Schnyder-SLight";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 55px;
+    letter-spacing: -0.72px;
+    margin: 0 0 16px;
+}
+
+.image-with-text__gallery-container .gallery-info .description p{
+    color: #000;
+    font-family: "OldschoolGrotesk-Regular";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 390;
+    line-height: 26px;
+    margin: 0 0 40px;
+}
+
+.image-with-text__gallery-container .gallery-info a{
+    width: fit-content;
+    font-family: "OldschoolGrotesk-Medium";
+    min-height: 0;
+}
+
+.image-with-text__gallery-container .swiper-button-next{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='62' height='59' viewBox='0 0 62 59' fill='none'%3E%3Cpath d='M61.0164 29.5C61.0164 45.6487 47.6068 58.75 31.0526 58.75C14.4984 58.75 1.08887 45.6487 1.08887 29.5C1.08887 13.3513 14.4984 0.25 31.0526 0.25C47.6068 0.25 61.0164 13.3513 61.0164 29.5Z' stroke='black' stroke-width='0.5'/%3E%3Cpath d='M44.2092 29.3536C44.4045 29.1583 44.4045 28.8417 44.2092 28.6464L41.0272 25.4645C40.832 25.2692 40.5154 25.2692 40.3201 25.4645C40.1248 25.6597 40.1248 25.9763 40.3201 26.1716L43.1485 29L40.3201 31.8284C40.1248 32.0237 40.1248 32.3403 40.3201 32.5355C40.5154 32.7308 40.832 32.7308 41.0272 32.5355L44.2092 29.3536ZM17.2266 29.5L43.8556 29.5L43.8556 28.5L17.2266 28.5L17.2266 29.5Z' fill='black'/%3E%3C/svg%3E");
+    background-size: 60px 60px;
+    width: 60px;
+    height: 60px;
+    right: 4%
+}
+
+.image-with-text__gallery-container .swiper-pagination-bullet-active{
+    background-color: #73CCEA !important;
+}
+
+.image-with-text__gallery-container .swiper-pagination-bullet{
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    color: #B2B5BE;
+    opacity: 1;
+    background: transparent;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 1px solid #000000;
+    font-family: "OldschoolGrotesk-Medium";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    color: #000000;
+    margin: 0 !important;
+}
+
+.image-with-text__gallery-container .swiper-pagination{
+    display: flex;
+    top: 65px;
+    right: 5%;
+    gap: 21px;
+    bottom: unset;
+    left: unset;
+    width: auto;
+}
+
+.image-with-text__gallery-container .gallery_image-wrapper{
+    width: 40%;
+}
+
+.image-with-text__gallery-container .gallery_image-wrapper.only--desktop{
+    display: block!important;
+}
+
+.image-with-text__gallery-container .gallery_image-wrapper.only--mobile{
+    display: none!important;
+}
+
+.image-with-text__gallery-container .gallery_image{
+    position: relative;
+    height: 0;
+}
+
+.image-with-text__gallery-container .gallery_image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: contain;
+}
+
+@media (max-width:767px) {
+    .image-with-text__gallery-container .gallery-list{
+        flex-direction: column;
+    }
+
+    .image-with-text__gallery-container .gallery_image-wrapper.only--desktop{
+        display: none !important;
+    }
+
+    .image-with-text__gallery-container .gallery_image-wrapper.only--mobile{
+        display: block !important;
+    }
+
+    .image-with-text__gallery-container .gallery_image-wrapper{
+        width: 100%;
+    }
+
+    .gallery_mobile_image img{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .image-with-text__gallery-container .gallery-info{
+        margin-top: 24px;
+        padding: 0 24px
+    }
+
+    .image-with-text__gallery-container .gallery-info .prefix_heading{
+        font-family: "OldschoolGrotesk-Regular";
+        margin: 0 0 100px;
+        font-weight: 500;
+    }
+
+    .image-with-text__gallery-container .gallery-info .heading{
+        font-size: 40px;
+        margin: 0 0 11px;
+        line-height: 48px;
+    }
+
+    .gallery-info .mobile_description{
+        color: #000;
+        font-family: 'OldschoolGrotesk-Regular';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        margin: 0 0 50px;
+    }
+
+    .image-with-text__gallery-container .swiper-button-next{
+        display: none;
+    }
+
+    .image-with-text__gallery-container .swiper-pagination{
+        top: 59.5%;
+        right: unset;
+        left: 24px;
+        gap: 32px;
+        transform: translateY(-50%);
+    }
+}

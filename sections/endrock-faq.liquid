@@ -1,0 +1,126 @@
+{{ 'section-endrock-faq.css' | asset_url | stylesheet_tag }}
+
+<style>
+    #section--{{ section.id }}{
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+        background: {{ section.settings.bg_color }};
+    }
+
+    @media (max-width: 767px){
+        #section--{{ section.id }}{
+            padding-top: {{ section.settings.mobile_padding_top }}px;
+            padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+        }
+    }
+</style>
+
+<div id="section--{{ section.id }}">
+    <div class="endrock-faq {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">
+        <div class="faq-container">
+            <h2 class="heading">{{ section.settings.heading }}</h2>
+            <div class="faq-wrapper">
+                {%- for block in section.blocks -%}
+                    <div class="faq-drawer">
+                        <input class="faq-drawer__trigger" id="faq-drawer--{{ block.id }}" type="checkbox" />
+                        <label class="faq-drawer__title" for="faq-drawer--{{ block.id }}">{{ block.settings.title }}</label>
+                        <div class="faq-drawer__content-wrapper">
+                            <div class="faq-drawer__content">
+                                {{ block.settings.description }}
+                            </div>
+                        </div>
+                    </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "endrock-faq",
+        "class": "Endrock Faq",
+        "settings": [
+            {
+                "type": "range",
+                "id": "padding_top",
+                "label": "Padding Top",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "label": "Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "mobile_padding_top",
+                "label": "Mobile Padding Top",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "mobile_padding_bottom",
+                "label": "Mobile Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "checkbox",
+                "id": "full_width",
+                "label": "Full Width"
+            },
+            {
+                "type": "color",
+                "id": "bg_color",
+                "label": "Background Color"
+            },
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "faq",
+                "name": "faq",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "description",
+                        "label": "Description"
+                    }
+                ]
+            }
+        ],
+
+        "presets":[
+            {
+                "name": "Endrock Faq"
+            }
+        ]
+        
+    }
+{% endschema %}

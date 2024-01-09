@@ -1,0 +1,157 @@
+{{ 'section-industry-icons.css' | asset_url | stylesheet_tag }}
+
+<style>
+    #section--{{ section.id }}{
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+        background: {{ section.settings.bg_color }};
+    }
+
+    @media (max-width: 767px){
+        #section--{{ section.id }}{
+            padding-top: {{ section.settings.mobile_padding_top }}px;
+            padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+        }
+    }
+</style>
+
+<div id="section--{{ section.id }}">
+    <div class="industry-icons {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">
+        <div class="industry-icons_container">
+            <div class="heading only--desktop">{{ section.settings.heading }}</div>
+            <p class="mobile_heading only--mobile">{{ section.settings.mobile_heading }}</p>
+            <div class="icons-wrapper only--desktop">
+                {%- for block in section.blocks -%}
+                    {%- if block.settings.icon -%}
+                        <div class="icon-list">
+                            <img
+                                src="{{ block.settings.icon | img_url: 'medium' }}"
+                                alt="{{ block.settings.icon.alt }}"
+                                loading="lazy">
+                        </div>
+                    {%- endif -%}
+                {%- endfor -%}
+            </div>
+            <div class="swiper-container only--mobile">
+                <div class="icons-mobile__wrapper swiper-wrapper">
+                    {%- for block in section.blocks -%}
+                        {%- if block.settings.icon -%}
+                            <div class="icon-mobile__list swiper-slide">
+                                <img
+                                    src="{{ block.settings.icon | img_url: 'medium' }}"
+                                    alt="{{ block.settings.icon.alt }}"
+                                    loading="lazy">
+                            </div>
+                        {%- endif -%}
+                    {%- endfor -%}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const iconSwiper = new Swiper('.industry-icons_container .swiper-container', {
+        direction: 'horizontal',
+        slidesPerView: 2,
+        loop: true,
+        spaceBetween: 36,
+        centeredSlides: true,
+    });
+
+    function handleFocus(e, i) {
+        iconSliders.slideTo(i);
+    }
+
+    const iconSliders = document.querySelectorAll('.industry-icons_container .swiper-container .swiper-slide');
+    iconSliders.forEach((slide, i) => slide.addEventListener('focusin', (e) => handleFocus(e, i)));
+
+</script>
+
+{% schema %}
+    {
+        "name": "Industry Icons",
+        "class": "endrock-industry-icons",
+        "settings": [
+            {
+                "type": "range",
+                "id": "padding_top",
+                "label": "Padding Top",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "label": "Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "mobile_padding_top",
+                "label": "Mobile Padding Top",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "mobile_padding_bottom",
+                "label": "Mobile Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "checkbox",
+                "id": "full_width",
+                "label": "Full Width"
+            },
+            {
+                "type": "color",
+                "id": "bg_color",
+                "label": "Background Color"
+            },
+            {
+                "type": "richtext",
+                "id": "heading",
+                "label": "Heading"
+            },
+            {
+                "type": "text",
+                "id": "mobile_heading",
+                "label": "Mobile Heading"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "icon",
+                "name": "Icon",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "icon",
+                        "label": "Icon"
+                    }
+                ]
+            }
+        ],
+        "presets":[
+            {
+                "name":"Industry Icons"
+            }
+        ]
+        
+    }
+{% endschema %}

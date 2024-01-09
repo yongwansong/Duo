@@ -1,0 +1,61 @@
+.industry-icons_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons-mobile__wrapper .icon-mobile__list img{
+    width: 100%;
+    height: 50px;
+    object-fit: contain;
+}
+
+.industry-icons_container .icons-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    justify-content: space-between;
+}
+
+.industry-icons_container .heading p{
+    color: #000;
+    font-family: "Schnyder-SLight";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: -0.48px;
+    margin: 0;
+}
+
+.industry-icons_container .icons-wrapper .icon-list img{
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .industry-icons_container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .industry-icons_container .mobile_heading{
+        color: #000;
+        font-family: 'Schnyder-SLight';
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 36px;
+        margin: 0 0 24px;
+    }
+
+    .industry-icons_container .icons-wrapper{
+        flex-wrap: wrap;
+    }
+
+    .industry-icons_container .icons-wrapper .icon-list{
+        width: 25%;
+    }
+
+    .industry-icons_container .heading{
+        margin-bottom: 30px;
+    }
+}

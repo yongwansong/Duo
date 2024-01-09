@@ -1,0 +1,153 @@
+{{ 'section-our-dentists.css' | asset_url | stylesheet_tag }}
+
+<style>
+    #section--{{ section.id }}{
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+        background: {{ section.settings.bg_color }};
+    }
+
+    @media (max-width: 767px){
+        #section--{{ section.id }}{
+            padding-top: {{ section.settings.mobile_padding_top }}px;
+            padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+        }
+    }
+</style>
+
+<div id="section--{{ section.id }}">
+    <div class="our-dentists {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">
+        <div class="dentists-container">
+            <div class="dentists-info">
+                <div class="heading">{{ section.settings.heading }}</div>
+                <div class="description">{{ section.settings.description }}</div>
+                <a href="{{ section.settings.btn_link }}" class="meeting_link">{{ section.settings.btn_label }}</a>
+            </div>
+            <div class="dentists-wrapper">
+                {% for block in section.blocks %}
+                    <div class="dentist-list">
+                        {% if block.settings.dentist_image != blank %}
+                            <div class="dentist_image" style="padding-bottom: {{ 100 | divided_by: block.settings.dentist_image.aspect_ratio }}%">
+                                <img
+                                    src="{{ block.settings.dentist_image | img_url: 'master' }}"
+                                    alt="{{ block.settings.dentist_image.alt }}"
+                                    loading="lazy"
+                                >
+                            </div>
+                        {% endif %}
+                        <div class="dentist_name">{{ block.settings.dentist_name }}</div>
+                        <div class="dentist_description">{{ block.settings.dentist_description }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Our Dentist",
+        "class": "section-our-dentist",
+        "settings": [
+            {
+                "type": "range",
+                "id": "padding_top",
+                "label": "Padding Top",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "label": "Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "mobile_padding_top",
+                "label": "Mobile Padding Top",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "mobile_padding_bottom",
+                "label": "Mobile Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "checkbox",
+                "id": "full_width",
+                "label": "Full Width"
+            },
+            {
+                "type": "color",
+                "id": "bg_color",
+                "label": "Background Color"
+            },
+            {
+                "type": "richtext",
+                "id": "heading",
+                "label": "Heading"
+            },
+            {
+                "type": "richtext",
+                "id": "description",
+                "label": "Description"
+            },
+            {
+                "type": "url",
+                "id": "btn_link",
+                "label": "Button Link"
+            },
+            {
+                "type": "text",
+                "id": "btn_label",
+                "label": "Button Label"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "dentist",
+                "name": "dentist",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "dentist_image",
+                        "label": "Dentist Image"
+                    },
+                    {
+                        "type": "html",
+                        "id": "dentist_name",
+                        "label": "Dentist Name"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "dentist_description",
+                        "label": "Dentist Description"
+                    }
+                ]
+            }
+        ],
+        "presets":[
+            {
+                "name": "Our Dentists"
+            }
+        ]
+        
+    }
+{% endschema %}

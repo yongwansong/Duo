@@ -35,10 +35,10 @@ if (!customElements.get('product-form')) {
 				this.cart.setActiveElement(document.activeElement);
 			}
 			config.body = formData;
-
 			fetch(`${routes.cart_add_url}`, config)
 				.then((response) => response.json())
 				.then((response) => {
+					console.log(response, 'response');
 					if (response.status) {
 						this.handleErrorMessage(response.description);
 
@@ -60,6 +60,7 @@ if (!customElements.get('product-form')) {
 
 					const addedMessage = this.submitButton.querySelector('.added-message');
 					const atcMessage = this.submitButton.querySelector('.add-to-cart-message');
+					const productPrice = this.submitButton.querySelector('.product-price');
 					if (addedMessage && atcMessage) {
 						this.submitButton.querySelectorAll('span').forEach((span) => {
 							span.classList.add('hidden');
@@ -70,6 +71,7 @@ if (!customElements.get('product-form')) {
 								span.classList.add('hidden');
 							});
 							atcMessage.classList.remove('hidden');
+							productPrice.classList.remove('hidden');
 						}, 1500);
 					}
 					const quickAddModal = this.closest('quick-add-modal');

@@ -1,867 +1,456 @@
 {
   "sections": {
-    "1657524179237930c7": {
-      "type": "custom-banner-video",
-      "custom_css": [
-
-      ],
+    "158ed8f9-7b68-4533-8268-440e430fdf06": {
+      "type": "endrock-hero-image",
       "settings": {
-        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b75e7a6e96344d3f8bb1e0f7fc3938ae.mp4",
-        "videoimage": "shopify:\/\/shop_images\/Duo_sizzlevideo_2800x1080_DT_thumbnail.png",
-        "videomobile": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/790f33d954db4c4eaa18b7b21d18788a.mp4",
-        "videoimagemobile": "shopify:\/\/shop_images\/duolsizzle_mobile_1080x1080_Thumbnail.png",
-        "heading": "Elevate Your <br> Brushing Routine",
-        "subheading": "Toothpaste tablets<br>with whole-body benefits.",
-        "button_label_1": "SHOP TABLETS",
-        "button_link_1": "shopify:\/\/products\/immunity",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0,
+        "video": "",
+        "desktop_image": "shopify:\/\/shop_images\/Duo-Brand_Shoot-Edited-585_1.png",
+        "videomobile": "",
+        "heading": "The Future <br>of Brushing",
+        "subheading": "Better toothpaste tablets for oral<br> and systemic health",
+        "button_label_1": "SHOP NOW",
+        "button_link_1": "#",
         "button_style_text_link": false,
-        "button_label_2": "HOW IT WORKS",
-        "button_link_2": "shopify:\/\/pages\/the-science",
-        "button2_style_text_link": false
+        "button_label_2": "What makes us different?",
+        "button_link_2": "#",
+        "button2_style_text_link": true
       }
     },
-    "164007982988b9d963": {
-      "type": "home-slider",
+    "e4f1e0b3-76de-4093-93a8-1be887473974": {
+      "type": "product-gallery",
       "blocks": {
-        "16400798295e531ac9-0": {
-          "type": "image",
+        "0b9a2f64-fbeb-4dca-bf08-43d27d176a4b": {
+          "type": "product",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hero_0307_tran_1.png",
-            "mobile_image": "shopify:\/\/shop_images\/Duo-001.png",
-            "heading": "+ function",
-            "subheading": "toothpaste",
-            "button_label": "SHOP TABLETS",
-            "button_link": "shopify:\/\/collections\/shop"
+            "image": "shopify:\/\/shop_images\/Duo_Product-0687-Edit_1.png",
+            "heading": "Leave the \u2028paste<br> behind",
+            "description": "<p>Plastic-free for the planet.<br\/>Science-backed ingredients infused with <br\/>vitamins & supplements for whole body support.<\/p>",
+            "btn_link": "#",
+            "btn_label": "SHOP BEST SELLERS",
+            "btn_type": "button--primary",
+            "product": ""
           }
         },
-        "16400798295e531ac9-1": {
-          "type": "image",
+        "b1a187dc-7fbd-44d0-93d6-74b1eecccba8": {
+          "type": "product",
           "settings": {
-            "heading": "",
-            "subheading": "",
-            "button_label": "",
-            "button_link": ""
+            "image": "shopify:\/\/shop_images\/Duo_Product-0687-Edit_1_2.png",
+            "heading": "Bundle and save",
+            "description": "<p>Start your plastic-free routine (for less) <br\/>with bundled jars and compostable <br\/>refills.<\/p>",
+            "btn_link": "#",
+            "btn_label": "SHOP BUNDLES",
+            "btn_type": "button--primary",
+            "product": ""
           }
         }
       },
       "block_order": [
-        "16400798295e531ac9-0",
-        "16400798295e531ac9-1"
+        "0b9a2f64-fbeb-4dca-bf08-43d27d176a4b",
+        "b1a187dc-7fbd-44d0-93d6-74b1eecccba8"
       ],
-      "disabled": true,
       "settings": {
-        "autorotate": true,
-        "autorotate_speed": 3
+        "padding_top": 50,
+        "padding_bottom": 45,
+        "mobile_padding_top": 50,
+        "mobile_padding_bottom": 25,
+        "full_width": false,
+        "bg_color": ""
       }
     },
-    "image_banner": {
-      "type": "image-banner",
+    "48cf5648-e874-42ba-b25d-d5d73c67c9ac": {
+      "type": "why-duo",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "a7ffaa90-a481-481c-8296-64e7b3759283": {
+          "type": "left",
           "settings": {
-            "heading": "toothpaste + function",
-            "heading_size": "medium"
+            "property_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"53\" height=\"53\" viewbox=\"0 0 53 53\" fill=\"none\">\n  <path d=\"M44.3949 26.0599C39.6102 26.0599 35.2603 24.1059 32.1061 20.9573C28.9519 17.8088 26.9944 13.4667 26.9944 8.69048V8.24093H26.0928V8.69048C26.0928 9.89184 25.9703 11.0613 25.7373 12.1878C25.4966 13.3495 25.1403 14.4691 24.6796 15.5327C24.0239 17.0467 23.1543 18.4573 22.1043 19.725C21.0535 20.9944 19.825 22.1165 18.4541 23.0492C17.0349 24.0155 15.4673 24.7785 13.7962 25.2943C12.1828 25.7921 10.4686 26.0599 8.69219 26.0599H8.24184V26.9599H8.69219C13.4769 26.9599 17.8269 28.9139 20.9811 32.0625C24.1352 35.211 26.0928 39.5531 26.0928 44.3293V44.7789H26.9944V44.3293C26.9944 42.4407 27.2998 40.6202 27.8649 38.915C28.4507 37.1452 29.3143 35.5004 30.4022 34.0329C31.0587 33.1476 31.7955 32.3269 32.6004 31.5845C33.4028 30.8439 34.2776 30.1756 35.2145 29.5908C36.5716 28.7434 38.0521 28.0777 39.6223 27.6273C41.1398 27.1924 42.7411 26.959 44.3958 26.959H44.8462V26.0591H44.3949V26.0599ZM38.9235 26.7541C37.33 27.2105 35.8271 27.8865 34.4501 28.7469C33.508 29.3351 32.6203 30.0145 31.7989 30.7724C30.9793 31.5294 30.2313 32.3604 29.5696 33.2535C28.4627 34.7459 27.5853 36.4149 26.9918 38.208C26.8175 38.735 26.6674 39.2724 26.5423 39.8201C25.7926 36.5235 24.1102 33.5696 21.7903 31.2529C19.4695 28.9363 16.5095 27.257 13.206 26.5086C13.6426 26.4096 14.0731 26.2942 14.4976 26.1633C16.1963 25.6388 17.7872 24.8655 19.2262 23.8854C20.6178 22.9381 21.8636 21.8005 22.9283 20.5147C23.9886 19.2332 24.8711 17.8011 25.5389 16.2595C25.9634 15.2795 26.3007 14.2547 26.5414 13.1954C27.2911 16.4929 28.9726 19.4477 31.2942 21.7652C33.615 24.0818 36.5734 25.7602 39.8768 26.5086C39.5558 26.5827 39.2384 26.6636 38.9235 26.7541ZM10.5341 42.4829C9.32458 41.2755 8.57399 39.6108 8.57399 37.7791H7.67243C7.67243 39.61 6.92185 41.2755 5.71229 42.4829C4.50272 43.6903 2.83505 44.4396 1 44.4396V45.3395C2.83418 45.3395 4.50272 46.0888 5.71229 47.2962C6.92185 48.5036 7.67243 50.1682 7.67243 52H8.57399C8.57399 50.1691 9.32458 48.5036 10.5341 47.2962C11.7437 46.0888 13.4114 45.3395 15.2464 45.3395V44.4396C13.4114 44.4396 11.7437 43.6903 10.5341 42.4829ZM9.89657 46.6606C9.11752 47.4382 8.50584 48.3838 8.12278 49.4371C7.73972 48.3838 7.12804 47.4382 6.34899 46.6606C5.56993 45.8829 4.62178 45.2723 3.56751 44.89C4.62178 44.5076 5.56993 43.897 6.34899 43.1194C7.12804 42.3417 7.73972 41.3952 8.12278 40.3429C8.50584 41.3952 9.11752 42.3417 9.89657 43.1194C10.6756 43.897 11.6238 44.5076 12.678 44.89C11.6238 45.2715 10.6765 45.8821 9.89657 46.6606ZM43.3726 6.02508C42.1121 6.02508 40.9664 5.51008 40.1356 4.68075C39.3048 3.85142 38.7889 2.70775 38.7889 1.44954V1H37.8873V1.44954C37.8873 2.70775 37.3714 3.85142 36.5406 4.68075C35.7097 5.51008 34.564 6.02508 33.3036 6.02508H32.8532V6.92503H33.3036C34.564 6.92503 35.7097 7.44002 36.5406 8.26935C37.3714 9.09868 37.8873 10.2424 37.8873 11.5006V11.9501H38.7889V11.5006C38.7889 10.2424 39.3048 9.09868 40.1356 8.26935C40.9664 7.44002 42.1121 6.92503 43.3726 6.92503H43.823V6.02508H43.3726ZM39.4989 7.63293C39.0123 8.11864 38.6163 8.69392 38.3385 9.33207C38.0607 8.69392 37.6647 8.11864 37.1781 7.63293C36.6915 7.14721 36.1152 6.75192 35.4759 6.47462C36.1152 6.19731 36.6924 5.80203 37.1781 5.31631C37.6647 4.8306 38.0607 4.25532 38.3385 3.61717C38.6163 4.25532 39.0123 4.8306 39.4989 5.31631C39.9855 5.80203 40.5618 6.19731 41.2011 6.47462C40.5618 6.75192 39.9855 7.14721 39.4989 7.63293ZM51.5497 35.7484C49.9398 35.7484 48.4757 35.0904 47.4137 34.0303C46.3516 32.9702 45.6934 31.5087 45.6934 29.9017V29.4522H44.7918V29.9017C44.7918 31.5087 44.1327 32.9702 43.0706 34.0303C42.0086 35.0904 40.5445 35.7484 38.9347 35.7484H38.4843V36.6483H38.9347C40.5445 36.6483 42.0086 37.3063 43.0706 38.3664C44.1327 39.4265 44.7918 40.888 44.7918 42.495V42.9445H45.6934V42.495C45.6934 40.888 46.3525 39.4265 47.4137 38.3664C48.4757 37.3063 49.9398 36.6483 51.5497 36.6483H52V35.7484H51.5497ZM46.777 37.73C46.1135 38.3923 45.5864 39.1906 45.243 40.0785C44.8997 39.1906 44.3725 38.3923 43.7091 37.73C43.0456 37.0677 42.2459 36.5415 41.3564 36.1988C42.2459 35.856 43.0456 35.3298 43.7091 34.6676C44.3725 34.0053 44.8997 33.207 45.243 32.3191C45.5864 33.207 46.1135 34.0053 46.777 34.6676C47.4404 35.3298 48.2402 35.856 49.1297 36.1988C48.2402 36.5415 47.4404 37.0677 46.777 37.73Z\" fill=\"black\" stroke=\"black\" stroke-width=\"0.5\" stroke-miterlimit=\"10\"><\/path>\n<\/svg>",
+            "property_description": "<p><strong>Whitens Naturally<\/strong>. Without<br\/> peroxides and chemicals that<br\/> strip enamel.<\/p>",
+            "property_description_margin": true
           }
         },
-        "button": {
-          "type": "buttons",
+        "b55e9408-d54b-40f4-b1ac-6f4c0db79328": {
+          "type": "left",
           "settings": {
-            "button_label_1": "Shop tablets",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "property_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"49\" height=\"61\" viewbox=\"0 0 49 61\" fill=\"none\">\n  <path d=\"M19.4626 27.8693C19.2053 27.5357 18.7192 27.4785 18.3951 27.7359C17.8709 28.1457 17.442 28.67 17.1274 29.2514C17.1274 29.2514 17.1274 29.2609 17.1179 29.2609C16.9273 29.6326 17.0703 30.0996 17.4515 30.2903C17.8232 30.4809 18.2903 30.3379 18.4809 29.9567C18.6906 29.5564 18.986 29.2037 19.3387 28.9273C19.6628 28.6795 19.7199 28.2029 19.4626 27.8693ZM44.1581 43.4148C43.9388 42.1948 43.1859 41.1464 42.1184 40.5364C42.5092 34.6079 35.6657 30.8907 30.9096 34.5793C30.881 34.5984 30.8524 34.627 30.8238 34.6556L31.9009 35.7326C34.2742 33.9503 37.6387 34.3982 39.4592 36.7525C40.3646 37.9248 40.7554 39.4117 40.5362 40.8795C40.4885 41.2321 40.6792 41.5657 41.0128 41.6992C42.0326 42.0995 42.6998 43.0812 42.6998 44.1773C42.6998 44.5967 43.0429 44.9398 43.4623 44.9398H46.3121V43.4148H44.1581ZM7.93932 43.4148C6.99572 39.04 9.54057 35.6087 13.4388 35.0178C14.3348 36.9907 15.936 38.5539 17.9281 39.4021L18.4809 37.982C17.3371 37.4864 16.3459 36.6953 15.5929 35.6945C12.0949 30.9956 15.4976 24.3523 21.2926 24.3523C24.8001 24.3428 27.7834 26.8971 28.3076 30.3665C25.0765 30.519 22.5221 33.1687 22.484 36.3998H24.009C24.0376 33.8931 26.1249 31.6723 29.0701 31.9106C29.4895 31.9582 29.8612 31.6532 29.9088 31.2339C29.9088 31.1957 29.9088 31.1576 29.9088 31.1195C29.7278 26.4873 25.9248 22.8273 21.2926 22.8273C15.6978 22.8273 11.5612 28.0981 12.9242 33.5595C8.44447 34.3982 5.49932 38.3346 6.38572 43.4148H3.06885V44.9398H37.429V43.4148H7.93932ZM36.5045 10.0554C32.082 10.0554 28.4982 13.6392 28.4982 18.0617C28.4982 20.149 29.3084 22.1506 30.7667 23.6375L31.796 22.5128C30.6142 21.2642 30.0232 19.6629 30.0232 18.0617C30.0232 16.4032 30.6523 14.7448 31.9199 13.4771C34.4553 10.9418 38.5537 10.9418 41.089 13.4771C43.6243 16.0125 43.6243 20.1109 41.089 22.6462C39.9262 23.809 38.3726 24.4857 36.7332 24.5429L36.8953 26.0679C41.1367 25.8582 44.5107 22.3603 44.5012 18.0712C44.5107 13.6392 40.927 10.0554 36.5045 10.0554ZM35.8182 14.7067C35.6467 14.3254 35.1987 14.1539 34.8174 14.3254C34.0835 14.659 33.4545 15.2023 33.0256 15.8885C32.8063 16.2412 32.9112 16.7178 33.2638 16.937C33.626 17.1562 34.0931 17.0514 34.3123 16.6892C34.5792 16.2603 34.9699 15.9171 35.437 15.7075C35.8278 15.5359 35.9898 15.0879 35.8182 14.7067ZM22.9701 3.86011C20.1774 3.86011 17.9185 6.11901 17.9185 8.91167C17.9185 11.6185 20.0535 13.8298 22.7318 13.9537V12.4287C20.9018 12.3048 19.4435 10.7798 19.4435 8.91167C19.4435 6.9673 21.0257 5.38511 22.9701 5.38511C24.8859 5.38511 26.449 6.91011 26.4967 8.81636H28.0217C27.974 6.07136 25.7246 3.86011 22.9701 3.86011Z\" fill=\"black\"><\/path>\n<\/svg>",
+            "property_description": "<p><strong>Hydrating Foam.<\/strong> Free from SLS<br\/> and drying agents for healthy<br\/> balance. <\/p>",
+            "property_description_margin": true
+          }
+        },
+        "7c9056a5-2a1f-45de-9456-86be7050b0e2": {
+          "type": "right",
+          "settings": {
+            "property_icon": "<svg version=\"1.2\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 100 72\" width=\"100\" height=\"72\">\n\t<title>noun-snow-flake-160535 1<\/title>\n\t<defs>\n\t\t<image width=\"42\" height=\"42\" id=\"img1\" href=\"data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAMAAADyHTlpAAAAAXNSR0IB2cksfwAAAEVQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3Orq9wAAABd0Uk5TAP8gcBCAn99PQL+vMH\/vb2Bfj1A\/zy+BBugpAAABdElEQVR4nKWV23KDIBCG+QlyFJKq7fs\/ahdQ0A4QM90LB\/Bz2bOMNQRonTblFsofBRUTH6ISSmfUKNixVgVIDggH2PmNCR4gPCA8b5hLCknl2NBDXsDXe2pZBTuCtfr+zZxxBFbQABHPWqRSfM0ByqiFjmdNFMrBV9TD0VFHLXm+VdTQtk2KNUZpruhMW7deWG5Nui5JUpPQdAnJEtcyf+HxTc812GWbs3ERjab\/bN4GqgmmkHMnFEoEeWIJ5cUjCvQEtb83CPzCAvzsO+31sZaneotQrJiT7w6yOh9OSc\/unMjXscFt+QTd7xwaEETZSLiRW7a+pmSPgxVg9mVKgeilgOQBJY4FS4n15k9iZzPlxNo9n7kWll65RGi+diXXrSLUgjUkqTEV7Zd2bpilov2G+aANYyOLa3PzTnMn8bqgQi9drMi9QRTtsDGa7sZ4m2heprk5vQHNN41iQeUiezEtYqG2MuDlEOW+Ds3nnWn87\/\/WL6tiCt2+nZ2mAAAAAElFTkSuQmCC\"><\/image>\n\t<\/defs>\n\t<style>\n\t<\/style>\n\t<use id=\"Background\" href=\"#img1\" x=\"29\" y=\"17\"><\/use>\n<\/svg>",
+            "property_description": "<p><strong>Decreases Sensitivity.<\/strong> \u2028<br\/>Core ingredients, like nHA, close teeth <br\/>pores and insulate nerves.<\/p>",
+            "property_description_margin": false
+          }
+        },
+        "bc2bc04a-39d0-4dfa-b45e-58022b28c064": {
+          "type": "right",
+          "settings": {
+            "property_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"61\" height=\"61\" viewbox=\"0 0 61 61\" fill=\"none\">\n  <path d=\"M17.2236 23.1082H43.7766\" stroke=\"black\" stroke-width=\"1.7\"><\/path>\n  <path d=\"M30.5 22.893V12.9177\" stroke=\"black\" stroke-width=\"1.7\"><\/path>\n  <path d=\"M41.0495 35.0212C41.0495 40.8342 36.313 45.5707 30.5001 45.5707C24.6872 45.5707 19.9507 40.8342 19.9507 35.0212C19.9507 29.2083 25.6201 23.1801 30.5001 23.1801C35.5236 23.1083 41.0495 29.2083 41.0495 35.0212Z\" stroke=\"black\" stroke-width=\"1.7\"><\/path>\n  <path d=\"M36.7434 33.1554C36.7434 29.5671 33.0834 28.1318 30.4281 28.1318C28.1316 28.1318 24.2563 29.5671 24.2563 33.1554H36.7434Z\" stroke=\"black\" stroke-width=\"1.7\" stroke-linejoin=\"round\"><\/path>\n  <path d=\"M17.0083 37.8918H19.8071\" stroke=\"black\" stroke-width=\"1.7\"><\/path>\n  <path d=\"M1.14844 37.8918H5.38255\" stroke=\"black\" stroke-width=\"1.7\"><\/path>\n  <path d=\"M11.1239 44.4942C12.9471 44.4942 14.4251 43.0162 14.4251 41.193C14.4251 39.3698 12.9471 37.8918 11.1239 37.8918C9.30074 37.8918 7.82275 39.3698 7.82275 41.193C7.82275 43.0162 9.30074 44.4942 11.1239 44.4942Z\" stroke=\"black\" stroke-width=\"1.7\"><\/path>\n  <path d=\"M41.1934 37.8918H43.9922\" stroke=\"black\" stroke-width=\"1.7\"><\/path>\n  <path d=\"M55.6182 37.8918H59.8523\" stroke=\"black\" stroke-width=\"1.7\"><\/path>\n  <path d=\"M49.8769 44.4942C51.7 44.4942 53.178 43.0162 53.178 41.193C53.178 39.3698 51.7 37.8918 49.8769 37.8918C48.0537 37.8918 46.5757 39.3698 46.5757 41.193C46.5757 43.0162 48.0537 44.4942 49.8769 44.4942Z\" stroke=\"black\" stroke-width=\"1.7\"><\/path>\n<\/svg>",
+            "property_description": "<p><strong>Travel-Ready.<\/strong> TSA-compliant and <br\/>mess-free convenience. <\/p>",
+            "property_description_margin": true
+          }
+        },
+        "56357af4-6f4f-4074-a122-d0c4109a579d": {
+          "type": "right",
+          "settings": {
+            "property_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"84\" height=\"84\" viewbox=\"0 0 84 84\" fill=\"none\">\n  <g clip-path=\"url(#clip0_2445_354)\">\n    <path d=\"M66.0504 53.0527C66.0504 53.0527 65.962 53.0527 65.962 52.9643V45.1833C65.962 44.3875 65.5199 43.6801 64.901 43.3264H36.6947C35.722 43.4148 34.9262 43.9454 34.8378 44.6527C34.8378 44.7412 34.8378 44.8296 34.7494 44.918C34.7494 45.0064 34.7494 45.0948 34.7494 45.1833V52.0801H31.301C31.301 52.0801 29.7094 51.9917 28.2062 51.5496L21.0441 49.5159C20.6905 49.4275 11.5831 46.598 3.7136 46.598H-49.7811C-53.8485 46.598 -57.2085 49.958 -57.2085 54.0254C-57.2085 58.0927 -53.8485 61.4527 -49.7811 61.4527H3.7136C3.80202 61.4527 11.5831 61.2759 18.8336 59.1538C18.922 59.1538 25.9073 58.0043 31.8315 59.5075C32.0968 59.5959 38.8168 61.8948 49.4273 62.1601H50.0462C52.6105 62.1601 62.602 61.8948 65.962 58.6233C66.7578 57.8275 67.1999 56.8548 67.1115 55.8822C67.1115 55.7938 67.1999 54.2022 66.0504 53.0527ZM62.9557 45.2717C62.9557 44.8296 63.3094 44.4759 63.7515 44.4759C64.1936 44.4759 64.5473 44.8296 64.5473 45.2717V52.2569C64.1936 52.1685 63.8399 52.0801 63.4862 52.0801H62.9557V45.2717ZM59.9494 45.2717C59.9494 44.8296 60.3031 44.4759 60.7452 44.4759C61.1873 44.4759 61.541 44.8296 61.541 45.2717V52.1685H59.9494V45.2717ZM57.0315 45.2717C57.0315 44.8296 57.3852 44.4759 57.8273 44.4759C58.2694 44.4759 58.6231 44.8296 58.6231 45.2717V52.1685H57.0315V45.2717ZM54.0252 45.2717C54.0252 44.8296 54.3789 44.4759 54.821 44.4759C55.2631 44.4759 55.6168 44.8296 55.6168 45.2717V52.1685H54.0252V45.2717ZM51.1073 45.2717C51.1073 44.8296 51.461 44.4759 51.9031 44.4759C52.3452 44.4759 52.6989 44.8296 52.6989 45.2717V52.1685H51.1073V45.2717ZM48.101 45.2717C48.101 44.8296 48.4547 44.4759 48.8968 44.4759C49.3389 44.4759 49.6926 44.8296 49.6926 45.2717V52.1685H48.101V45.2717ZM45.0947 45.2717C45.0947 44.8296 45.4483 44.4759 45.8904 44.4759C46.3326 44.4759 46.6862 44.8296 46.6862 45.2717V52.1685H45.0947V45.2717ZM42.1768 45.2717C42.1768 44.8296 42.5304 44.4759 42.9725 44.4759C43.4147 44.4759 43.7683 44.8296 43.7683 45.2717V52.1685H42.1768V45.2717ZM39.1704 45.2717C39.1704 44.8296 39.5241 44.4759 39.9662 44.4759C40.4083 44.4759 40.762 44.8296 40.762 45.2717V52.1685H39.1704V45.2717ZM36.1641 45.2717C36.1641 44.8296 36.5178 44.5643 36.9599 44.4759H37.0483C37.4904 44.4759 37.8441 44.8296 37.8441 45.2717V52.1685H36.2526L36.1641 45.2717ZM10.1683 59.5075C6.45466 60.038 3.7136 60.038 3.7136 60.038H-49.7811C-53.1411 60.038 -55.7938 57.2969 -55.7938 54.0254C-55.7938 50.6654 -53.0527 48.0127 -49.7811 48.0127H3.7136C5.83571 48.0127 8.04624 48.278 10.1683 48.5433V59.5075ZM33.5999 58.1812C33.6883 58.358 33.7768 58.5348 33.8652 58.7117C32.8926 58.4464 32.362 58.2696 32.2736 58.2696C29.7978 57.6506 27.1452 57.4738 24.8462 57.4738C21.4862 57.4738 18.8336 57.9159 18.6568 57.9159C16.2694 58.6233 13.7936 59.0654 11.6715 59.419V48.8085C16.6231 49.6043 20.6904 50.9306 20.7789 50.9306L28.0294 53.0527C29.7094 53.4948 31.301 53.5833 31.4778 53.5833H34.042C33.2462 55.3517 33.0694 56.8548 33.5999 58.1812ZM64.9894 57.6506C61.6294 61.0106 49.6041 60.8338 49.5157 60.8338C43.9452 60.6569 39.5241 59.9496 36.5178 59.3306C35.722 58.9769 35.1915 58.4464 34.9262 57.739C34.5726 56.678 34.7494 55.2633 35.4568 53.5833H63.5747C64.282 53.5833 64.8126 53.7601 65.1662 54.1138C65.8736 54.8212 65.7852 55.8822 65.7852 55.9706C65.7852 56.5012 65.5199 57.1201 64.9894 57.6506Z\" fill=\"black\"><\/path>\n    <path d=\"M59.3306 41.4694C59.3306 42.2652 55.44 42.8842 50.5769 42.8842C45.7137 42.8842 41.9116 42.2652 41.9116 41.4694V39.4357C41.9116 38.6399 45.8021 38.021 50.5769 38.021C55.3516 38.021 59.3306 38.6399 59.3306 39.4357C59.3306 39.4357 59.419 41.381 59.3306 41.4694Z\" stroke=\"black\" stroke-width=\"1.5777\" stroke-miterlimit=\"10\"><\/path>\n    <path d=\"M37.137 29.002C36.2528 27.6757 35.7223 25.8188 35.7223 23.7852H35.1034C35.1034 25.8188 34.5728 27.6757 33.6886 29.002C32.8044 30.3283 31.6549 31.2125 30.3286 31.2125V32.1852C31.6549 32.1852 32.8044 32.9809 33.6886 34.3957C34.5728 35.722 35.1034 37.5788 35.1034 39.6125H35.7223C35.7223 37.5788 36.2528 35.722 37.137 34.3957C38.0212 33.0694 39.1707 32.1852 40.497 32.1852V31.2125C39.1707 31.2125 38.0212 30.4167 37.137 29.002ZM36.6949 33.6883C36.1644 34.5725 35.7223 35.6336 35.457 36.783C35.1918 35.6336 34.7497 34.5725 34.2191 33.6883C33.6886 32.8041 32.9812 32.0967 32.2739 31.7431C32.9812 31.3009 33.6886 30.5936 34.2191 29.7978C34.7497 28.9136 35.1918 27.8525 35.457 26.7031C35.7223 27.8525 36.1644 28.9136 36.6949 29.7978C37.2255 30.682 37.9328 31.3894 38.6402 31.7431C37.9328 32.0967 37.2255 32.8041 36.6949 33.6883Z\" fill=\"black\" stroke=\"black\" stroke-width=\"0.5\" stroke-miterlimit=\"10\"><\/path>\n    <path d=\"M54.4673 15.1201C53.8483 14.059 53.4062 12.6443 53.4062 11.1411H52.9641C52.9641 12.7327 52.522 14.1474 51.9031 15.1201C51.2841 16.1811 50.3115 16.8001 49.3389 16.8001V17.5958C50.3115 17.5958 51.1957 18.2148 51.9031 19.2758C52.522 20.3369 52.9641 21.7516 52.9641 23.2548H53.4062C53.4062 21.6632 53.8483 20.2485 54.4673 19.2758C55.0862 18.2148 56.0589 17.5958 57.0315 17.5958V16.8001C55.9704 16.7116 55.0862 16.0927 54.4673 15.1201ZM54.1136 18.6569C53.6715 19.2758 53.4062 20.1601 53.141 21.0443C52.9641 20.1601 52.6104 19.3643 52.1683 18.6569C51.7262 18.038 51.1957 17.5074 50.6652 17.1537C51.1957 16.8001 51.7262 16.2695 52.1683 15.6506C52.6104 15.0316 52.8757 14.1474 53.141 13.2632C53.3178 14.1474 53.6715 14.9432 54.1136 15.6506C54.5557 16.2695 55.0862 16.8001 55.6168 17.1537C55.0862 17.419 54.5557 17.9495 54.1136 18.6569Z\" fill=\"black\" stroke=\"black\" stroke-width=\"0.5\" stroke-miterlimit=\"10\"><\/path>\n    <path d=\"M63.0444 23.8737C62.4255 22.8127 61.9834 21.3979 61.9834 19.8948H61.5413C61.5413 21.4864 61.0992 22.9011 60.4802 23.8737C59.8613 24.9348 58.8886 25.5537 57.916 25.5537V26.3495C58.8886 26.3495 59.7729 26.9685 60.4802 28.0295C61.0992 29.0906 61.5413 30.5053 61.5413 32.0085H61.9834C61.9834 30.4169 62.4255 29.0021 63.0444 28.0295C63.6634 26.9685 64.636 26.3495 65.6086 26.3495V25.5537C64.636 25.5537 63.7518 24.9348 63.0444 23.8737ZM62.6908 27.4106C62.2486 28.0295 61.9834 28.9137 61.7181 29.7979C61.5413 28.9137 61.1876 28.1179 60.7455 27.4106C60.3034 26.7916 59.7729 26.2611 59.2423 25.9074C59.7729 25.5537 60.3034 25.0232 60.7455 24.4042C61.1876 23.7853 61.4529 22.9011 61.7181 22.0169C61.895 22.9011 62.2486 23.6969 62.6908 24.4042C63.1329 25.0232 63.6634 25.5537 64.1939 25.9074C63.6634 26.2611 63.1329 26.7916 62.6908 27.4106Z\" fill=\"black\" stroke=\"black\" stroke-width=\"0.5\" stroke-miterlimit=\"10\"><\/path>\n  <\/g>\n  <defs>\n    <clippath id=\"clip0_2445_354\">\n      <rect width=\"84\" height=\"84\" fill=\"white\"><\/rect>\n    <\/clippath>\n  <\/defs>\n<\/svg>",
+            "property_description": "<p><strong>Happy Brushing <\/strong>. All-natural<br\/> flavors and satisfying foam <br\/>for a feel-good routine.<\/p>",
+            "property_description_margin": false
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "a7ffaa90-a481-481c-8296-64e7b3759283",
+        "b55e9408-d54b-40f4-b1ac-6f4c0db79328",
+        "7c9056a5-2a1f-45de-9456-86be7050b0e2",
+        "bc2bc04a-39d0-4dfa-b45e-58022b28c064",
+        "56357af4-6f4f-4074-a122-d0c4109a579d"
       ],
-      "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/Group_1.jpg",
-        "image_2": "shopify:\/\/shop_images\/Group_1.jpg",
+        "padding_top": 45,
+        "padding_bottom": 70,
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20,
+        "full_width": true,
+        "image": "shopify:\/\/shop_images\/Image_12.png",
+        "heading": "Why Duo?",
+        "description": "<p>Better-for-you \u2028<br\/>toothpaste tablets<\/p>"
+      }
+    },
+    "daa23bb1-15db-433f-981a-e416d3bcfdb4": {
+      "type": "endrock-featured-collection",
+      "blocks": {
+        "767ba903-3399-4e8f-8696-8b77e4c621cb": {
+          "type": "product",
+          "settings": {
+            "featured_product": "original",
+            "custom_product_image": "shopify:\/\/shop_images\/Rectangle_228.png",
+            "hover_image": "shopify:\/\/shop_images\/Original_hover_state.png"
+          }
+        },
+        "c9ce3ad8-d62f-4ed1-866a-6c32c3729406": {
+          "type": "product",
+          "settings": {
+            "featured_product": "energy",
+            "custom_product_image": "shopify:\/\/shop_images\/duo-pro-1.png",
+            "hover_image": "shopify:\/\/shop_images\/Energy_hover_state.jpg"
+          }
+        },
+        "51bf7b6e-4df4-46f1-95cc-af4735742f17": {
+          "type": "product",
+          "settings": {
+            "featured_product": "sleep",
+            "custom_product_image": "shopify:\/\/shop_images\/duo-pro-2.png",
+            "hover_image": "shopify:\/\/shop_images\/Sleep_hover_state.png"
+          }
+        },
+        "98c119ba-a537-4ed6-8310-ec3ee7c26183": {
+          "type": "product",
+          "settings": {
+            "featured_product": "immunity",
+            "custom_product_image": "shopify:\/\/shop_images\/Rectangle_231_41639709-f55a-415e-8b31-abf73775fadf.png",
+            "hover_image": "shopify:\/\/shop_images\/Immuity_hover_state.png"
+          }
+        }
+      },
+      "block_order": [
+        "767ba903-3399-4e8f-8696-8b77e4c621cb",
+        "c9ce3ad8-d62f-4ed1-866a-6c32c3729406",
+        "51bf7b6e-4df4-46f1-95cc-af4735742f17",
+        "98c119ba-a537-4ed6-8310-ec3ee7c26183"
+      ],
+      "settings": {
+        "heading": "Shop Duo",
+        "padding_top": 70,
+        "padding_bottom": 50,
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 50,
+        "full_width": false,
+        "products_to_show": 4,
+        "swipe_on_mobile": true,
+        "show_secondary_image": true
+      }
+    },
+    "1cfcb8ec-260e-41d5-98c2-a59352667d13": {
+      "type": "endrock-image-banner",
+      "blocks": {
+        "e7eefa49-cee4-4b7e-acf9-051ffbea96db": {
+          "type": "slider-text",
+          "settings": {
+            "slider_text": "Slider Text"
+          }
+        },
+        "262ae0b0-aac0-49b9-94f5-27deaee5419b": {
+          "type": "slider-text",
+          "settings": {
+            "slider_text": "Slider Text"
+          }
+        },
+        "2a886c05-b4af-4c45-9e63-b5c839e4512e": {
+          "type": "slider-text",
+          "settings": {
+            "slider_text": "Slider Text"
+          }
+        }
+      },
+      "block_order": [
+        "e7eefa49-cee4-4b7e-acf9-051ffbea96db",
+        "262ae0b0-aac0-49b9-94f5-27deaee5419b",
+        "2a886c05-b4af-4c45-9e63-b5c839e4512e"
+      ],
+      "settings": {
+        "padding_top": 50,
+        "padding_bottom": 25,
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20,
+        "full_width": true,
+        "bg_color": "",
+        "image": "shopify:\/\/shop_images\/Duo_Product-0951-Edit_1.png",
+        "enable_swiper": true,
         "image_height": "medium",
         "adapt_height_first_image": false,
-        "desktop_text_box_position": "flex-end",
-        "show_text_box": true,
+        "desktop_text_box_position": "center",
+        "show_text_box": false,
         "image_overlay_opacity": 0,
         "color_scheme": "background-1",
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
     },
-    "1657530445881ed846": {
-      "type": "multicolumn",
+    "2d4fff50-b228-4782-9362-f78e19e6b6e0": {
+      "type": "our-dentists",
       "blocks": {
-        "1657530444c9230cdc-0": {
-          "type": "column",
+        "71deb6dc-44e0-4ebc-b103-d761dc609c23": {
+          "type": "dentist",
           "settings": {
-            "image": "shopify:\/\/shop_images\/nHa_badge_5d9ed775-0bbd-4904-a113-6a57d79cae17.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "dentist_image": "shopify:\/\/shop_images\/women-1.png",
+            "dentist_name": "<h3>Dr. Stevie Ames Roberts, <span>DMD<\/span>\n<\/h3>",
+            "dentist_description": "<p>Founder of the dental practice Dentiste Kirkland in Seattle, WA, Dr. Roberts co-founded Duo toothpaste to bring better, science-backed ingredients to toothpaste tablets that work.<\/p>"
           }
         },
-        "1657530444c9230cdc-1": {
-          "type": "column",
+        "ff399016-7927-4201-8b05-eb4cc5963e1a": {
+          "type": "dentist",
           "settings": {
-            "image": "shopify:\/\/shop_images\/nHa_badge_1.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "1657530444c9230cdc-2": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "dentist_image": "shopify:\/\/shop_images\/Rectangle_232.png",
+            "dentist_name": "<h3>Dr. Robert E. Johnson, <span>DMD, MD<\/span>\n<\/h3>",
+            "dentist_description": "<p>A resident in the Department of Oral and Maxillofacial Surgery at the University of Washington, Seattle, WA, Dr. Johnson co-founded Duo with a commitment to oral and whole-body health.<\/p>"
           }
         }
       },
       "block_order": [
-        "1657530444c9230cdc-0",
-        "1657530444c9230cdc-1",
-        "1657530444c9230cdc-2"
+        "71deb6dc-44e0-4ebc-b103-d761dc609c23",
+        "ff399016-7927-4201-8b05-eb4cc5963e1a"
       ],
-      "disabled": true,
       "settings": {
-        "add_cls": "home-multicolum",
-        "title": "",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false
+        "padding_top": 25,
+        "padding_bottom": 50,
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20,
+        "full_width": false,
+        "bg_color": "#f1f1f1",
+        "heading": "<p>Developed \u2028<br\/>by Dentists.<\/p>",
+        "description": "<p>Good oral health impacts all major systems in the body. Duo tablets are created by experts, rigorously tested, and vetted by the industry.<\/p>",
+        "btn_link": "#",
+        "btn_label": "Meet the Duo Team"
       }
     },
-    "02db3e73-7c88-473c-8d03-7f3d448a6f84": {
-      "type": "multicolumn-text-images",
+    "52681364-094a-4fcc-b399-622d7fa07a12": {
+      "type": "endrock-industry-icons",
       "blocks": {
-        "289f3d98-2430-406f-b47d-47e3724a1b05": {
-          "type": "column",
-          "disabled": true,
+        "1f3bf7fb-8e5e-497a-a1f8-e5f7a8e5caaf": {
+          "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Energy_in_the_morning.jpg",
-            "text": "<p><a href=\"\/products\/energy\" title=\"Energy\"><strong>Energy<\/strong><\/a><strong> <\/strong>in the morning<\/p>"
+            "icon": "shopify:\/\/shop_images\/Group_65.png"
           }
         },
-        "48e5580d-e6bc-4e03-9f5e-3fa77cb9d7da": {
-          "type": "column",
-          "disabled": true,
+        "9fe51b99-c1b7-4ef2-af66-7c4f656144e1": {
+          "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Immunity_for_vit_D_levels.jpg",
-            "text": "<p><a href=\"\/products\/immunity\" title=\"Immunity\"><strong>Immunity<\/strong><\/a><strong> <\/strong>for vit D levels<\/p>"
+            "icon": "shopify:\/\/shop_images\/RDHLogo_blk_1.png"
           }
         },
-        "4f56e8f3-94cb-4aaa-a70b-f60d90643207": {
-          "type": "column",
-          "disabled": true,
+        "1afd394a-b9fd-4e48-aa1f-22e5611cc099": {
+          "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Energy_Sleep_for_travel.jpg",
-            "text": "<p><a href=\"\/products\/energy\" title=\"Energy\"><strong>Energy<\/strong><\/a><strong> + <\/strong><a href=\"\/products\/sleep\" title=\"Sleep\"><strong>Sleep<\/strong><\/a> for travel<\/p>"
+            "icon": "shopify:\/\/shop_images\/Group_449.png"
           }
         },
-        "588d10dd-ba00-475d-98a1-bbe399fbb3f0": {
-          "type": "column",
-          "disabled": true,
+        "ffb36b6f-454f-4f63-a16c-65033908bdc5": {
+          "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Sleep_routine_complete.jpg",
-            "text": "<p><a href=\"\/products\/sleep\" title=\"Sleep\"><strong>Sleep<\/strong><\/a><strong> <\/strong>routine complete<\/p>"
+            "icon": "shopify:\/\/shop_images\/Group_450.png"
+          }
+        },
+        "376f08aa-b555-442c-a6c2-76747809aabf": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/image_1.png"
           }
         }
       },
       "block_order": [
-        "289f3d98-2430-406f-b47d-47e3724a1b05",
-        "48e5580d-e6bc-4e03-9f5e-3fa77cb9d7da",
-        "4f56e8f3-94cb-4aaa-a70b-f60d90643207",
-        "588d10dd-ba00-475d-98a1-bbe399fbb3f0"
+        "1f3bf7fb-8e5e-497a-a1f8-e5f7a8e5caaf",
+        "9fe51b99-c1b7-4ef2-af66-7c4f656144e1",
+        "1afd394a-b9fd-4e48-aa1f-22e5611cc099",
+        "ffb36b6f-454f-4f63-a16c-65033908bdc5",
+        "376f08aa-b555-442c-a6c2-76747809aabf"
       ],
       "settings": {
-        "icon": "shopify:\/\/shop_images\/Group_346.svg",
-        "heading": "",
-        "description": "<p>Formulated by two dentists, Duo makes the first naturally whitening, earth-friendly tablet toothpaste infused with vitamins, supplements and antioxidants. You absorb them efficiently through your tongue, cheeks, and gums. No need to swallow.<\/p>"
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20,
+        "full_width": false,
+        "bg_color": "#f1f1f1",
+        "heading": "<p>Trusted by \u2028<br\/>the industry<\/p>"
       }
     },
-    "0a53150e-b5df-4f43-a1ac-81d9e08ffa86": {
-      "type": "yellow-header",
-      "settings": {
-        "txt": "#00126b",
-        "text_color": "#ffffff",
-        "title1": "Learn more about how it works.",
-        "learnmore": "shopify:\/\/pages\/the-science",
-        "desktop_font_size": 20,
-        "mobile_font_size": 20,
-        "small_mobile_font_size": 20,
-        "arrow_icon": false,
-        "underline": true,
-        "uppercase": false
-      }
-    },
-    "featured_products": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "",
-        "rotating_words": "energy,sleep,immunity",
-        "description": "",
-        "button_text": "",
-        "button_link": "#",
-        "collection": "shop",
-        "products_to_show": 4,
-        "show_view_all": true,
-        "swipe_on_mobile": false,
-        "image_ratio": "square",
-        "show_secondary_image": true,
-        "add_image_padding": false,
-        "show_image_outline": true,
-        "show_vendor": false,
-        "show_rating": false
-      }
-    },
-    "f7e18253-be89-48a9-b256-82f86a48c76f": {
-      "type": "features",
+    "412b5406-62a6-4367-b33f-5b55dff53fc8": {
+      "type": "image-with-text-gallery",
       "blocks": {
-        "0b1c11db-166b-4d24-8219-e4ec3e1f824e": {
-          "type": "feature",
-          "settings": {
-            "text": "naturally-whitening"
-          }
-        },
-        "1728c638-4155-4dde-919b-cf15947871c2": {
-          "type": "feature",
-          "settings": {
-            "text": "dentist-made"
-          }
-        },
-        "2ecde169-dfc2-406e-9388-1d177667002c": {
-          "type": "feature",
-          "settings": {
-            "text": "earth-friendly"
-          }
-        },
-        "29f6c2fc-21ea-4e5d-9865-d2c0710b099a": {
-          "type": "feature",
-          "settings": {
-            "text": "travel-ready"
-          }
-        }
-      },
-      "block_order": [
-        "0b1c11db-166b-4d24-8219-e4ec3e1f824e",
-        "1728c638-4155-4dde-919b-cf15947871c2",
-        "2ecde169-dfc2-406e-9388-1d177667002c",
-        "29f6c2fc-21ea-4e5d-9865-d2c0710b099a"
-      ],
-      "settings": {
-        "background_color": "#00126b",
-        "text_color": "#ffffff"
-      }
-    },
-    "bd4feeb6-8058-401f-91a7-917af56454a3": {
-      "type": "how-it-works",
-      "blocks": {
-        "template--15825814945959__bd4feeb6-8058-401f-91a7-917af56454a3-16873057685cba24f2-0": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/crush.jpg",
-            "icon": "shopify:\/\/shop_images\/icon-crush-1.svg",
-            "title": "crush",
-            "text": "<p>Pop a tablet and <br\/>chew to break down.<\/p>"
-          }
-        },
-        "template--15825814945959__bd4feeb6-8058-401f-91a7-917af56454a3-16873057685cba24f2-1": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/brush.jpg",
-            "icon": "shopify:\/\/shop_images\/icon-brush-1.svg",
-            "title": "brush",
-            "text": "<p>Wet your toothbrush, and<br\/>brush to activate foam.<\/p>"
-          }
-        },
-        "template--15825814945959__bd4feeb6-8058-401f-91a7-917af56454a3-16873057685cba24f2-2": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/smile.jpg",
-            "icon": "shopify:\/\/shop_images\/icon-smile-1.svg",
-            "title": "smile",
-            "text": "<p>Rinse and smile.<br\/>No need to swallow.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--15825814945959__bd4feeb6-8058-401f-91a7-917af56454a3-16873057685cba24f2-0",
-        "template--15825814945959__bd4feeb6-8058-401f-91a7-917af56454a3-16873057685cba24f2-1",
-        "template--15825814945959__bd4feeb6-8058-401f-91a7-917af56454a3-16873057685cba24f2-2"
-      ],
-      "disabled": true,
-      "settings": {
-        "heading": "How to brush with duo",
-        "background_color": "#eff2ff",
-        "text_color": "#000000",
-        "accent_color": "#00126b"
-      }
-    },
-    "b394700e-f5cf-4979-b654-9a250530749d": {
-      "type": "outlined-text",
-      "blocks": {
-        "80968006-7f99-4ad1-8bca-2fc9763c0f3d": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/better_living_through_toothpaste_5.svg"
-          }
-        },
-        "e121a764-eaa6-4652-9fef-79b6c94ffdd9": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/better_living_through_toothpaste_6.svg"
-          }
-        },
-        "142b98d3-c7c4-4d9f-b3b7-455e9a239cbc": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/better_living_through_toothpaste_7.svg"
-          }
-        },
-        "51a9f1f2-861e-45a7-868f-d8a942362709": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/better_living_through_toothpaste_8.svg"
-          }
-        },
-        "2d27566d-9caa-47fe-bd58-5f5cb8d9d700": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/better_living_through_toothpaste_9.svg"
-          }
-        }
-      },
-      "block_order": [
-        "80968006-7f99-4ad1-8bca-2fc9763c0f3d",
-        "e121a764-eaa6-4652-9fef-79b6c94ffdd9",
-        "142b98d3-c7c4-4d9f-b3b7-455e9a239cbc",
-        "51a9f1f2-861e-45a7-868f-d8a942362709",
-        "2d27566d-9caa-47fe-bd58-5f5cb8d9d700"
-      ],
-      "disabled": true,
-      "settings": {
-        "background_color": "#00126b"
-      }
-    },
-    "ab958022-0ac6-4365-b6af-f54bda55793f": {
-      "type": "why-choose-us",
-      "blocks": {
-        "template--15825814945959__ab958022-0ac6-4365-b6af-f54bda55793f-1687556313b451265f-0": {
+        "1c7234a7-4c5b-494b-a568-585736638b9e": {
           "type": "block",
           "settings": {
-            "title": "better for the planet",
-            "details": "Refillable glass bottles > plastic tube waste"
+            "gallery_image": "shopify:\/\/shop_images\/Rectangle_206.png",
+            "prefix_heading": "THE DUO DIFFERENCE",
+            "heading": "Game-changing <br>ingredients",
+            "description": "<p>Nano-hydroxyapatite, or nHa, is the dentist-backed fluoride<br\/> alternative in Duo that remineralizes enamel, removes plaque, <br\/>whitens, and blocks sensitivity.<br\/><\/p>",
+            "btn_link": "#",
+            "btn_label": "EXPLORE THE SCIENCE",
+            "btn_type": "button--primary"
           }
         },
-        "template--15825814945959__ab958022-0ac6-4365-b6af-f54bda55793f-1687556313b451265f-1": {
+        "51128ef4-7019-4c92-a175-f792404b2788": {
           "type": "block",
           "settings": {
-            "title": "better brushing experience",
-            "details": "Delicious flavor and silky foam"
+            "gallery_image": "shopify:\/\/shop_images\/Rectangle_206_2.png",
+            "prefix_heading": "THE DUO DIFFERENCE",
+            "heading": "About mucosal<br>absorption",
+            "description": "<p>Our mouths absorb nutrients directly into the bloodstream.<br\/> That’s the key to the efficient bio-availability of the vitamins<br\/> and supplements in Duo, added for convenience and health.<\/p>",
+            "btn_link": "#",
+            "btn_label": "EXPLORE THE SCIENCE",
+            "btn_type": "button--primary"
           }
         },
-        "template--15825814945959__ab958022-0ac6-4365-b6af-f54bda55793f-1687556313b451265f-2": {
+        "bc7d4a03-40b1-4823-b5db-87adb7560001": {
           "type": "block",
           "settings": {
-            "title": "better for your dental health",
-            "details": "Made with premium ingredients; created and recommended by dentists"
-          }
-        },
-        "template--15825814945959__ab958022-0ac6-4365-b6af-f54bda55793f-1687556313b451265f-3": {
-          "type": "block",
-          "settings": {
-            "title": "better for you",
-            "details": "Whole-body benefits rapidly delivered through your gums"
+            "gallery_image": "shopify:\/\/shop_images\/Rectangle_206_1.png",
+            "prefix_heading": "THE DUO DIFFERENCE",
+            "heading": "Balancing the oral<br>microbiome",
+            "description": "<p>The mouth is the gateway to whole-body health. Duo is<br\/> packed with science-backed ingredients to support and<br\/> nourish the oral microbiome, preventing systemic diseases.<\/p>",
+            "btn_link": "#",
+            "btn_label": "EXPLORE THE SCIENCE",
+            "btn_type": "button--primary"
           }
         }
       },
       "block_order": [
-        "template--15825814945959__ab958022-0ac6-4365-b6af-f54bda55793f-1687556313b451265f-0",
-        "template--15825814945959__ab958022-0ac6-4365-b6af-f54bda55793f-1687556313b451265f-1",
-        "template--15825814945959__ab958022-0ac6-4365-b6af-f54bda55793f-1687556313b451265f-2",
-        "template--15825814945959__ab958022-0ac6-4365-b6af-f54bda55793f-1687556313b451265f-3"
+        "1c7234a7-4c5b-494b-a568-585736638b9e",
+        "51128ef4-7019-4c92-a175-f792404b2788",
+        "bc7d4a03-40b1-4823-b5db-87adb7560001"
       ],
-      "disabled": true,
       "settings": {
-        "heading": "Why choose Duo?",
-        "button_label": "Shop tablets",
-        "button_link": "\/collections\/all"
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0,
+        "full_width": true,
+        "bg_color": ""
       }
     },
-    "c277bf13-51cb-4e4d-ab66-1c088b421510": {
-      "type": "features-carousel",
+    "fa6deac0-1cb4-47da-b4cb-2bd586d9019b": {
+      "type": "endrock-banner-with-text",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0,
+        "full_width": true,
+        "bg_color": "",
+        "banner": "shopify:\/\/shop_images\/Rectangle_209.png",
+        "heading": "Better for you <br>and the planet",
+        "description": "<p>A plastic-free upgrade to your daily routine that actually <br\/>makes a difference. Duo is delivered in apothecary-<br\/>grade, recyclable glass bottles with compostable refill <br\/>pouches. It’s the future of toothpaste and better for us all.<\/p>",
+        "decoration": "500 yrs",
+        "info": "to break down a single plastic toothpaste tube",
+        "btn_link": "#",
+        "btn_text": "SHOP NOW",
+        "btn_type": "button--primary"
+      }
+    },
+    "d2bc7562-d635-4ca1-825b-8f3ccc6d6546": {
+      "type": "endrock-faq",
       "blocks": {
-        "template--15825814945959__c277bf13-51cb-4e4d-ab66-1c088b421510-1686670572629355b8-0": {
-          "type": "slide",
+        "e37990ac-d808-468f-bdfb-da882d4bda07": {
+          "type": "faq",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/globe.png",
-            "heading": "better for the planet",
-            "description": "<p>Refillable glass bottles &gt; plastic tube waste <\/p>"
+            "title": "How do I brush with a toothpaste tablet?",
+            "description": "<p>Wet your toothbrush and pop a tablet in your mouth. Crunch to break it up into tiny bits. You may feel some bits as you start brushing, and that’s okay. Our natural silk foam will build and reach its peak in about 30 seconds. Brush for at least two minutes. Spit. Rinse if you’d like.<\/p>"
           }
         },
-        "template--15825814945959__c277bf13-51cb-4e4d-ab66-1c088b421510-1686670572629355b8-1": {
-          "type": "slide",
+        "de2db3cc-17cb-4ae0-97cf-4fa10946c87b": {
+          "type": "faq",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/brush_d281167f-dd5a-4e61-a4e9-e4a601f134f4.png",
-            "heading": "better brushing experience",
-            "description": "<p>Delicious flavor and silky foam keep a good habit going<\/p>"
+            "title": "What's nHa? And don't I need fluoride?",
+            "description": "<p>We use a dentist-backed fluoride alternative called nano-hydroxyapatite (nHa), the natural mineral in your teeth and bones that combines with calcium and phosphate to make them strong. Decades of research have proven that nano-Hydroxyapatite is just as effective as fluoride.<\/p>"
           }
         },
-        "template--15825814945959__c277bf13-51cb-4e4d-ab66-1c088b421510-1686670572629355b8-2": {
-          "type": "slide",
+        "0aa23874-da30-4faa-8e42-92f0a81aed60": {
+          "type": "faq",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/better_for_your_dental_health.png",
-            "heading": "better for your dental health",
-            "description": "<p>Made with premium ingredients; created and recommended by dentists<\/p>"
+            "title": "Do Duo tablets foam?",
+            "description": "<p>Glad you asked. We’re proud of our healthy, satisfying foam. It’s made without the traditional toothpaste detergents and sudsing agents (that cause dry mouth) and naturally activates during the brushing process. The longer you brush the foamier it gets.<\/p>"
           }
         },
-        "b3545229-96c2-493c-8c74-734aef8aaa86": {
-          "type": "slide",
+        "c9e8788f-2914-414d-a291-d4105d6e9ff5": {
+          "type": "faq",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/smile.png",
-            "heading": "better for you",
-            "description": "<p>Whole-body  benefits rapidly delivered through your gums <\/p>"
+            "title": "Do I need to swallow? How do Duo supplements work?",
+            "description": "<p>Nope! Supplements like vitamin D, vitamin B12, melatonin, and caffeine are absorbed when they come into contact with the tissues in your mouth. This is called mucosal absorption. When you brush with Duo, these supplements efficiently reach your system without needing to be swallowed.<\/p>"
+          }
+        },
+        "e176f464-1697-47e1-9612-4b6c1d5ce4f5": {
+          "type": "faq",
+          "settings": {
+            "title": "How do subscriptions work?",
+            "description": "<p>TBD<\/p>"
           }
         }
       },
       "block_order": [
-        "template--15825814945959__c277bf13-51cb-4e4d-ab66-1c088b421510-1686670572629355b8-0",
-        "template--15825814945959__c277bf13-51cb-4e4d-ab66-1c088b421510-1686670572629355b8-1",
-        "template--15825814945959__c277bf13-51cb-4e4d-ab66-1c088b421510-1686670572629355b8-2",
-        "b3545229-96c2-493c-8c74-734aef8aaa86"
-      ],
-      "disabled": true,
-      "settings": {
-        "button_label": "SHOP TABLETS",
-        "button_link": "#"
-      }
-    },
-    "16420496762a0af4d3": {
-      "type": "image-with-text",
-      "blocks": {
-        "16420496760039a4e4-0": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "",
-            "heading2": "",
-            "heading3": ""
-          }
-        },
-        "16420496760039a4e4-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Introducing the<\/p> <p>original <b class=\"add \">dentist-made<\/b><\/p>\n<p>whitening toothpaste<\/p>\n<p><b class=\"add_1\">delightfully dosed<\/b> with<\/p>\n<p><u class=\"add_3 \">vitamins<\/u> and \n <u class=\"add_4\">supplements<\/u>.<\/p>"
-          }
-        },
-        "16420496760039a4e4-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "learn about our ingredients",
-            "button_link": "shopify:\/\/collections\/all"
-          }
-        },
-        "bf239a23-4770-4756-8a60-28c1182fbaf4": {
-          "type": "button",
-          "settings": {
-            "button_label": "shop our tablets",
-            "button_link": "shopify:\/\/collections\/all"
-          }
-        }
-      },
-      "block_order": [
-        "16420496760039a4e4-0",
-        "16420496760039a4e4-1",
-        "16420496760039a4e4-2",
-        "bf239a23-4770-4756-8a60-28c1182fbaf4"
-      ],
-      "disabled": true,
-      "settings": {
-        "videoo": "https:\/\/cdn.shopify.com\/s\/files\/1\/0407\/4160\/1438\/files\/Duo_Zoom_HighRes_PLACEHOLDER_1_1.mp4?v=1640089525",
-        "height": "adapt",
-        "color_scheme": "background-1",
-        "layout": "text_first"
-      }
-    },
-    "1657517229de85f1c6": {
-      "type": "talk_about_product_img",
-      "disabled": true,
-      "settings": {
-        "imgs": "shopify:\/\/shop_images\/Group_61_1.png",
-        "title1": "Brush. Absorb. Smile.",
-        "txt1": "<p>As you brush with one of our functional toothpastes, you’re not just perfectly polishing your pearly whites—you’re efficiently absorbing nutrients and supplements through your tongue, cheeks, and gums via a process called mucosal absorption. No need to swallow.<\/p>",
-        "about_image": "shopify:\/\/shop_images\/colorswitcher1.png",
-        "learnmore": "shopify:\/\/pages\/help"
-      }
-    },
-    "16575171476fcd49bf": {
-      "type": "talk_about_product",
-      "settings": {
-        "txt": "#9bd9ff",
-        "imgs": "shopify:\/\/shop_images\/lets-talk-nha-icon.svg",
-        "title1": "let’s talk about nHa",
-        "txt1": "<p>Nano-Hydroxyapatite (nHa) is a dentist-backed, non-toxic flouride alternative that remineralizes your teeth and keeps them strong. It’s been used in Japanese toothpaste for decades and is highly effective in restoring and strengthening enamel.<\/p>",
-        "about_image": "shopify:\/\/shop_images\/Original_HandMask_new.png",
-        "learnmore": "shopify:\/\/pages\/the-science"
-      }
-    },
-    "8ba9dc3d-e63d-4ba8-aefc-ae93b79907c0": {
-      "type": "our-services",
-      "blocks": {
-        "template--15806529732775__4189d7ea-5f80-4e84-8716-10dc241ab496-1682967589d91b0447-0": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/All-natural.png",
-            "title": "All-natural",
-            "url": ""
-          }
-        },
-        "d9b95b2c-5b1f-4387-8255-79177a1bca19": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/dentis_made.png",
-            "title": "Dentist-made",
-            "url": ""
-          }
-        },
-        "98a7d336-2cf1-4dea-9647-7edc6b14da66": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/earth.svg",
-            "title": "Earth-friendly",
-            "url": ""
-          }
-        },
-        "6d5327e2-0a38-4a92-b47f-d7142fccbfe2": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/travel.png",
-            "title": "Travel-ready",
-            "url": ""
-          }
-        },
-        "b3ea86c3-7f2f-4e41-beb5-e81b2f023e8e": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/10686eba260a5f524d42990feea8d2f5.svg",
-            "title": "Whitening",
-            "url": ""
-          }
-        },
-        "a4dfd1bc-6394-472a-86ab-ec812a2fc4fa": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/All-natural.png",
-            "title": "All-natural",
-            "url": ""
-          }
-        },
-        "e63f9528-0db4-4a62-8d20-0ce607457fcd": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/dentis_made.png",
-            "title": "Dentist-made",
-            "url": ""
-          }
-        },
-        "10270ac4-d27e-45a5-8b43-b509bc16de56": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/earth.svg",
-            "title": "Earth-friendly",
-            "url": ""
-          }
-        },
-        "f12b89bd-6b34-4de2-9b1c-4345b2f74232": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/travel.png",
-            "title": "Travel-ready",
-            "url": ""
-          }
-        },
-        "519c9b95-1714-4bdf-ba93-1abd0ebc213c": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/10686eba260a5f524d42990feea8d2f5.svg",
-            "title": "Whitening",
-            "url": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--15806529732775__4189d7ea-5f80-4e84-8716-10dc241ab496-1682967589d91b0447-0",
-        "d9b95b2c-5b1f-4387-8255-79177a1bca19",
-        "98a7d336-2cf1-4dea-9647-7edc6b14da66",
-        "6d5327e2-0a38-4a92-b47f-d7142fccbfe2",
-        "b3ea86c3-7f2f-4e41-beb5-e81b2f023e8e",
-        "a4dfd1bc-6394-472a-86ab-ec812a2fc4fa",
-        "e63f9528-0db4-4a62-8d20-0ce607457fcd",
-        "10270ac4-d27e-45a5-8b43-b509bc16de56",
-        "f12b89bd-6b34-4de2-9b1c-4345b2f74232",
-        "519c9b95-1714-4bdf-ba93-1abd0ebc213c"
+        "e37990ac-d808-468f-bdfb-da882d4bda07",
+        "de2db3cc-17cb-4ae0-97cf-4fa10946c87b",
+        "0aa23874-da30-4faa-8e42-92f0a81aed60",
+        "c9e8788f-2914-414d-a291-d4105d6e9ff5",
+        "e176f464-1697-47e1-9612-4b6c1d5ce4f5"
       ],
       "settings": {
-        "section_bg_color": "#d3fff1"
-      }
-    },
-    "4152c7ff-11ce-4bb1-bcc9-416735132a29": {
-      "type": "main-banner-image-text",
-      "blocks": {
-        "template--15806529732775__02200e95-3f6f-4ed5-a149-6e1fa306a8d6-168296332749933071-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Build your routine + save."
-          }
-        },
-        "template--15806529732775__02200e95-3f6f-4ed5-a149-6e1fa306a8d6-168296332749933071-1": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/circlespike.svg",
-            "text": "Save up to 33% with regular deliveries while minimizing your carbon footprint"
-          }
-        },
-        "e91d2189-1013-4e58-b043-ea0e9e93a71e": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/circlespike.svg",
-            "text": "Recyclable glass bottles + compostable refill packets."
-          }
-        },
-        "fd942a4b-6ce8-45ef-bbca-9be2a2d57314": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/circlespike.svg",
-            "text": "Formulated by a pair of dentists with clean ingredients and premium supplements."
-          }
-        },
-        "1057577b-7a17-46a7-bd3a-d1ee2957f0c4": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/circlespike.svg",
-            "text": "100% guaranteed— return for a full refund if you’re not satisfied."
-          }
-        },
-        "template--15806529732775__02200e95-3f6f-4ed5-a149-6e1fa306a8d6-168296332749933071-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "CUSTOMIZE MY SUBSCRIPTION",
-            "button_link": "https:\/\/duotoothpaste.com\/a\/loop_subscriptions\/bundle\/a975c058b85e458d93c1a86d4f0fe35e"
-          }
-        }
-      },
-      "block_order": [
-        "template--15806529732775__02200e95-3f6f-4ed5-a149-6e1fa306a8d6-168296332749933071-0",
-        "template--15806529732775__02200e95-3f6f-4ed5-a149-6e1fa306a8d6-168296332749933071-1",
-        "e91d2189-1013-4e58-b043-ea0e9e93a71e",
-        "fd942a4b-6ce8-45ef-bbca-9be2a2d57314",
-        "1057577b-7a17-46a7-bd3a-d1ee2957f0c4",
-        "template--15806529732775__02200e95-3f6f-4ed5-a149-6e1fa306a8d6-168296332749933071-2"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".main-banner-image-text .image-with-text__media img {object-position: center;}",
-        "@media screen and (max-width: 767px) {.main-banner-image-text .image-with-text__content h2.image-with-text__heading.h3 {text-align: left; }}"
-      ],
-      "settings": {
-        "section_bg_color": "#eef1ff",
-        "image": "shopify:\/\/shop_images\/Group_317_1.png",
-        "height": "adapt",
-        "layout": "image_first",
-        "mobile_layout": "image_first",
-        "full_height": false,
-        "remove_margin": true
-      }
-    },
-    "165751574971a9f672": {
-      "type": "text-with-text-slider",
-      "blocks": {
-        "c9b41731-6266-4f37-92cb-0fb18d6b2ec8": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Plenty of foamy action, leaving your teeth feeling clean, fresh and  polished all with the peace of mind of safe natural ingredients and a boosted benefit of vitamins and minerals. This is a tremendous product for all.<\/p>",
-            "author": "Kendra Melody, RDH"
-          }
-        },
-        "165751574914143ff5-0": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Duo is exciting for many reasons! nHA rebuilds, restores, and protects the enamel, while offering an alternative to traditional fluoride that also whitens and fights sensitivity.<\/p>",
-            "author": "Kelly Barbera, DMD"
-          }
-        },
-        "6a22e3cc-ba7c-45db-a0a4-e7bcf4abbd30": {
-          "type": "text",
-          "settings": {
-            "text": "<p>The Duo purpose of preventing cavities and sensitivity while simultaneously delivering functional ingredients through mucosal absorption is genius.<\/p>",
-            "author": "Hayley Sacks, DMD"
-          }
-        },
-        "64d2d7e6-f9a8-4bca-9b2d-74cfec5fd02a": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Duo has me excited about brushing again. Thanks to the caffeine and melatonin, I have consolidated my morning and evening routines.<\/p>",
-            "author": "C. Johnston, DMD"
-          }
-        },
-        "b81c2ae4-1538-4eda-b407-45ab2324aa9a": {
-          "type": "text",
-          "settings": {
-            "text": "<p>The addition of vitamins and minerals is a unique idea that feels so intuitive for oral health! I am excited that each blend benefits my patients in a unique way!<\/p>",
-            "author": "Samantha Ward, DMD"
-          }
-        },
-        "9472917c-287e-4c1e-b470-32cced48d959": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Duo’s tablets are a quick, easy, and refreshing way to strengthen AND whiten my teeth.<\/p>",
-            "author": "Abby Yazback, DMD"
-          }
-        }
-      },
-      "block_order": [
-        "c9b41731-6266-4f37-92cb-0fb18d6b2ec8",
-        "165751574914143ff5-0",
-        "6a22e3cc-ba7c-45db-a0a4-e7bcf4abbd30",
-        "64d2d7e6-f9a8-4bca-9b2d-74cfec5fd02a",
-        "b81c2ae4-1538-4eda-b407-45ab2324aa9a",
-        "9472917c-287e-4c1e-b470-32cced48d959"
-      ],
-      "custom_css": [
-        ".text-with-text-slider {background-color: #00126b; color: #fff;}"
-      ],
-      "settings": {
-        "icon": "shopify:\/\/shop_images\/Group_302.svg",
-        "image": "<p>loved and<br\/>recommended by<br\/>other dentists<\/p>",
-        "videoo": "",
-        "height": "adapt",
-        "color_scheme": "accent-2",
-        "layout": "image_first"
-      }
-    },
-    "165752148158d58046": {
-      "type": "yellow-header",
-      "settings": {
-        "txt": "#eceffd",
-        "text_color": "#000000",
-        "title1": "Shop Tablets",
-        "learnmore": "shopify:\/\/products\/original",
-        "desktop_font_size": 26,
-        "mobile_font_size": 20,
-        "small_mobile_font_size": 20,
-        "arrow_icon": true,
-        "underline": false,
-        "uppercase": false
-      }
-    },
-    "b876fe21-01ea-4132-9e2f-2988bb385a7c": {
-      "type": "section-heading",
-      "disabled": true,
-      "settings": {
-        "section_bg_color": "#ffffff",
-        "title": "<p>we love our <em>#duodiehard<\/em> community<\/p>"
-      }
-    },
-    "1658542003ac523a3b": {
-      "type": "apps",
-      "blocks": {
-        "f04524c0-4d56-4fea-a0a8-1766674a72f5": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "",
-            "widget_type": "reviews_widget"
-          }
-        }
-      },
-      "block_order": [
-        "f04524c0-4d56-4fea-a0a8-1766674a72f5"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "15445ac8-6006-42b2-9b62-3a5c33ae91c1": {
-      "type": "collage",
-      "blocks": {
-        "template--15982369800359__15445ac8-6006-42b2-9b62-3a5c33ae91c1-collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "shop",
-            "image_padding": false,
-            "color_scheme": "accent-2"
-          }
-        },
-        "template--15982369800359__15445ac8-6006-42b2-9b62-3a5c33ae91c1-product-1": {
-          "type": "product",
-          "settings": {
-            "product": "energy",
-            "second_image": true,
-            "image_padding": false,
-            "secondary_background": false
-          }
-        },
-        "65fe5ae4-346a-4a6b-95b5-6c9226edc3d9": {
-          "type": "product",
-          "settings": {
-            "product": "energy-sleep-2-bottles",
-            "second_image": false,
-            "image_padding": false,
-            "secondary_background": false
-          }
-        }
-      },
-      "block_order": [
-        "template--15982369800359__15445ac8-6006-42b2-9b62-3a5c33ae91c1-collection-1",
-        "template--15982369800359__15445ac8-6006-42b2-9b62-3a5c33ae91c1-product-1",
-        "65fe5ae4-346a-4a6b-95b5-6c9226edc3d9"
-      ],
-      "disabled": true,
-      "settings": {
-        "heading": "",
-        "desktop_layout": "left",
-        "mobile_layout": "collage"
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "mobile_padding_top": 25,
+        "mobile_padding_bottom": 50,
+        "full_width": false,
+        "bg_color": "#f1f1f1",
+        "heading": "FAQs"
       }
     }
   },
   "order": [
-    "1657524179237930c7",
-    "164007982988b9d963",
-    "image_banner",
-    "1657530445881ed846",
-    "02db3e73-7c88-473c-8d03-7f3d448a6f84",
-    "0a53150e-b5df-4f43-a1ac-81d9e08ffa86",
-    "featured_products",
-    "f7e18253-be89-48a9-b256-82f86a48c76f",
-    "bd4feeb6-8058-401f-91a7-917af56454a3",
-    "b394700e-f5cf-4979-b654-9a250530749d",
-    "ab958022-0ac6-4365-b6af-f54bda55793f",
-    "c277bf13-51cb-4e4d-ab66-1c088b421510",
-    "16420496762a0af4d3",
-    "1657517229de85f1c6",
-    "16575171476fcd49bf",
-    "8ba9dc3d-e63d-4ba8-aefc-ae93b79907c0",
-    "4152c7ff-11ce-4bb1-bcc9-416735132a29",
-    "165751574971a9f672",
-    "165752148158d58046",
-    "b876fe21-01ea-4132-9e2f-2988bb385a7c",
-    "1658542003ac523a3b",
-    "15445ac8-6006-42b2-9b62-3a5c33ae91c1"
+    "158ed8f9-7b68-4533-8268-440e430fdf06",
+    "e4f1e0b3-76de-4093-93a8-1be887473974",
+    "48cf5648-e874-42ba-b25d-d5d73c67c9ac",
+    "daa23bb1-15db-433f-981a-e416d3bcfdb4",
+    "1cfcb8ec-260e-41d5-98c2-a59352667d13",
+    "2d4fff50-b228-4782-9362-f78e19e6b6e0",
+    "52681364-094a-4fcc-b399-622d7fa07a12",
+    "412b5406-62a6-4367-b33f-5b55dff53fc8",
+    "fa6deac0-1cb4-47da-b4cb-2bd586d9019b",
+    "d2bc7562-d635-4ca1-825b-8f3ccc6d6546"
   ]
 }
