@@ -45,10 +45,11 @@ img.motion-reduce {
   display: none;
 }
 .cart-drawer {
-  background: white;
+  background: white;    
+  padding: 10px 0;
 }
 .recommendation__heading {
-  margin: 0 0 0rem!important;
+  margin: 1rem 0 1rem!important;
 }
 .cart-drawer__recommendation-wrapper {
   background: #EFF2FF;
@@ -56,12 +57,10 @@ img.motion-reduce {
   margin-right: 0!important;
   padding-left: 0.5rem!important;
   padding-right: 0.5rem!important;
-  width: -webkit-fill-available;
-  position: absolute;
-  bottom: 105px;
+  margin-top: -5PX;
 }
 .recommendation-product__wrapper+.recommendation-product__wrapper {
-  margin-top: 0rem!important;
+  margin-top: 0.1rem!important;
 }
 .cart-drawer .cart-items td {
   padding-top: 1rem!important;
@@ -72,11 +71,31 @@ img.motion-reduce {
 .cart-drawer__footer{
 padding: 10px 15px 0px 15px;
 }
+.cart-drawer-fix{
+  position: absolute;
+  width: -webkit-fill-available;
+  bottom: 130px;
+  background: white;
+}
+
+.Details-CartDrawer
+{
+  border-bottom: 2px solid rgba(0,0,0,.1);
+  margin: 0px 30px;
+  padding-bottom: 5px;
+  border-top: 2px solid rgba(0,0,0,.1);
+  line-height: 2;
+
+}
+
 </style>
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
 
   
   <div id="CartDrawer" class="cart-drawer">
+
+
+    
     <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
     {%- if settings.cart_drawer_scrolling_text != blank -%}
       <style>
@@ -448,11 +467,6 @@ padding: 10px 15px 0px 15px;
         
   
 
-        <!-- Start blocks -->
-        <
-
-        <!-- CTAs -->
- 
       
       </div><div class="cart-drawer__footer" {{ block.shopify_attributes }}>
         <div class="totals" role="status">
@@ -488,12 +502,37 @@ padding: 10px 15px 0px 15px;
       </div>
     </div>
 
+    <div class="cart-drawer-fix">
     {%- liquid
       if settings.cart_drawer_collection != blank
         render 'drawer-recommendation'
       endif
     -%} 
 
+        <!-- Start blocks -->
+        {%- if settings.show_cart_note -%}
+          <details id="Details-CartDrawer" class="Details-CartDrawer">
+            <summary>
+              <span class="summary__title">
+                {{ 'sections.cart.note' | t }}
+                {% render 'icon-caret' %}
+              </span>
+            </summary>
+            <cart-note class="cart__note field">
+              <label class="visually-hidden" for="CartDrawer-Note">{{ 'sections.cart.note' | t }}</label>
+              <textarea
+                id="CartDrawer-Note"
+                class="text-area text-area--resize-vertical field__input"
+                name="note"
+                placeholder="{{ 'sections.cart.note' | t }}"
+              >{{ cart.note }}</textarea>
+            </cart-note>
+          </details>
+        {%- endif -%}
+  </div>
+
+        <!-- CTAs -->
+ 
     
     <div class="cart__ctas" {{ block.shopify_attributes }}>
       <noscript>
