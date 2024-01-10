@@ -1,3 +1,184 @@
+
+<style>
+  .slider-container {
+    max-width: 33rem;
+    margin: 0 auto;
+    position: relative;
+  }
+  .recommendation-product__wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+  .recommendation-product__wrapper {
+    display: flex !important;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 2px solid #C3C3C3;
+    background: #FFF;
+    width: 320px;
+    height: 95px;margin: 0 5px;
+}
+.cart__ctas {
+    padding: 0 20px;
+}
+.drawer__inner {
+
+    border:none;
+  
+}
+.cart-drawer__footer>*+* {
+    margin-top: 0rem!important;
+}
+
+.drawer__header {
+    padding: 0.5rem 0!important;
+}
+.drawer.active .drawer__inner {
+    border: 0;
+}
+.cart-drawer .tax-note {
+    margin: 0.2rem 0 0rem auto!important;
+}
+.drawer__scroll-text .swiper-slide {
+  
+    height: 20px!important;
+}
+img.motion-reduce {
+    border: 2px solid #fff;
+}
+.cart-drawer__footer>*+* {
+    margin-top: -1rem;
+}
+.cart-drawer .cart-items, .cart-drawer tbody {
+ 
+    margin-bottom: 150px;
+}
+
+.recommendation-product__atc .text__with-icon {
+
+    font-weight: 800;    color: #0C176A;
+
+}.recommendation-product__atc .button {
+  
+    border: 2px solid #0C176A!important;
+    box-shadow: none!important;
+}
+.recommendation-product__image img {
+	width: 85px!important;
+    height: 80px!important;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px!important;
+}
+  .custom-arrow {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.quantity-control-btn
+{    background: transparent;border:none}
+
+.quantity-input
+{text-align: center;border:none}
+
+.titleinfo
+{
+	margin: 5px;
+}
+.drawer__footer {
+    border-top: none!important
+}
+  .custom-prev-arrow {
+    left: -45px;
+    transform: rotate(180deg);
+    margin-top: -15px;
+  }
+
+  .custom-next-arrow {
+    right: -45px; /* Adjust the position */
+  }
+  .recommendation-product__atc {
+    display: flex;
+}
+.priceinfo
+	{
+		position: absolute;
+		float: left;
+		margin-left: -130px;
+		top: 5px;
+	}
+
+	.price .price-item {
+		margin: 0 1rem 0 0;
+		font-weight: 700;
+	}
+	.full-unstyled-link {		color: currentColor;
+	
+		font-weight: 700;
+	}
+
+.quantity-controls
+{   display: flex;
+    position: absolute;
+    bottom: 7px;
+    margin-left: -130px;
+    border: 0.2rem solid rgba(var(--color-base-text),.08);
+    border-radius: 5px;
+    padding: 3px 0px;}
+
+	.recommendation-product__atc .text__with-icon .icon {
+    width: 18px;
+    height: 18px;
+    display: none;
+}
+</style>
+<script>
+	$(document).ready(function($) {
+		$(document).ready(function($) {
+			$('.recommendation-slider').slick({
+			  dots: false,
+			  infinite: true,
+			  speed: 1000,
+			  slidesToShow: 1,
+			  slidesToScroll: 1,
+			  autoplay: false,
+			  autoplaySpeed: 300000,
+			  arrows: true,
+			  prevArrow: '<div class="custom-arrow custom-prev-arrow">' +
+							'<svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+							  '<path d="M2 16.5L9.5 9L2 1.5" stroke="#0C176A" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round"/>' +
+							'</svg>' +
+						  '</div>',
+			  nextArrow: '<div class="custom-arrow custom-next-arrow">' +
+							'<svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+							  '<path d="M2 16.5L9.5 9L2 1.5" stroke="#0C176A" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round"/>' +
+							'</svg>' +
+						  '</div>',
+			});
+		  });
+  
+	  // Manejar eventos de incremento y decremento
+	  $('.quantity-controls').on('click', '.quantity-control-btn', function() {
+		var input = $(this).closest('.quantity-controls').find('.quantity-input');
+		var action = $(this).data('action');
+		var currentValue = parseInt(input.val());
+  
+		if (action === 'increment') {
+		  input.val(currentValue + 1);
+		} else if (action === 'decrement' && currentValue > 1) {
+		  input.val(currentValue - 1);
+		}
+	  });
+	});
+  </script>
 {%- capture recommended_products -%}
 {%- liquid
 	assign products_in_cart = ''
@@ -9,11 +190,20 @@
 	endfor
 	assign products_in_cart = products_in_cart | split: ','
   -%}
+
+
+
+
+
+
+  
+  <div class="slider-container">
+  <ul class="recommendation-slider">
   {%- for product in settings.cart_drawer_collection.products limit: 4 -%}
 	{% comment %} {%- assign product_id = product.id | append: '' -%}
 	{%- unless products_in_cart contains product_id -%}
 	{%- endunless -%} {% endcomment %}
-	  <li class="recommendation-product__wrapper">
+	<li class="recommendation-product__wrapper">
 		<div class="recommendation-product__image">
 		  <img
 			srcset="
@@ -34,79 +224,102 @@
 			height="{{ product.featured_media.height }}"
 		  >
 		</div>
+	
+
 		<div class="recommendation-product__info">
-		  <h3 id="title-{{ section.id }}-{{ product.id }}">
-			<a href="{{ product.url | default: '#' }}" class="full-unstyled-link">
-			  {{ product.title }}
-			</a>
-		  </h3>
-		  {% render 'price-drawer', product: product, use_variant: true %}
+			
+		  </div>
+		  
+		  <div class="recommendation-product__atc">
+
+		  <div class="priceinfo">
+			<h3 id="title-{{ section.id }}-{{ product.id }}" class="titleinfo"> 
+			  <a href="{{ product.url | default: '#' }}" class="full-unstyled-link">
+				{{ product.title }}
+			  </a>
+			</h3>
+			{% render 'price-drawer', product: product, use_variant: true %}
+
 		</div>
-		<div class="recommendation-product__atc">
-		  {%- if product.selected_or_first_available_variant.available -%}
-			{%- assign product_form_id = 'quick-add-' | append: section.id | append: product.id -%}
-			<product-form data-cart-type="{{ settings.cart_type }}">
-			  {%- form 'product',
-				product,
-				id: product_form_id,
-				class: 'form',
-				novalidate: 'novalidate',
-				data-type: 'add-to-cart-form'
-			  -%}
-				<input
-				  type="hidden"
-				  name="id"
-				  value="{{ product.selected_or_first_available_variant.id }}"
-				  disabled
-				>
-				<button
-				  id="{{ product_form_id }}-submit"
-				  type="submit"
-				  name="add"
-				  class="quick-add__submit button button--secondary"
-				  aria-haspopup="dialog"
-				  aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}"
-				  aria-live="polite"
-				  {% if product.selected_or_first_available_variant.available == false %}
+			{%- if product.selected_or_first_available_variant.available -%}
+			  {%- assign product_form_id = 'quick-add-' | append: section.id | append: product.id -%}
+			  <product-form data-cart-type="{{ settings.cart_type }}">
+				{%- form 'product',
+				  product,
+				  id: product_form_id,
+				  class: 'form',
+				  novalidate: 'novalidate',
+				  data-type: 'add-to-cart-form'
+				-%}
+				  <input
+					type="hidden"
+					name="id"
+					value="{{ product.selected_or_first_available_variant.id }}"
 					disabled
-				  {% endif %}
-				>
-				  <span>
-					{%- if product.selected_or_first_available_variant.available -%}
-					  <span class="text__with-icon">
-						{%- render 'icon-cart' -%}
-						Add
-					  </span>
-					{%- else -%}
-					  {{ 'products.product.sold_out' | t }}
-					{%- endif -%}
-				  </span>
-				  <span class="sold-out-message hidden">
-					{{ 'products.product.sold_out' | t }}
-				  </span>
-				  <div class="loading-overlay__spinner hidden">
-					<svg
-					  aria-hidden="true"
-					  focusable="false"
-					  role="presentation"
-					  class="spinner"
-					  viewBox="0 0 66 66"
-					  xmlns="http://www.w3.org/2000/svg"
-					>
-					  <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-					</svg>
+				  >
+				  <div class="quantity-controls" style="
+					display: flex;
+				"> 
+					<button type="button" class="quantity-control-btn" data-action="decrement">-</button>
+					<input type="number" name="quantity" class="quantity-input quantity__input" value="1" min="1" max="99">
+					<button type="button" class="quantity-control-btn" data-action="increment">+</button>
 				  </div>
-				</button>
-			  {%- endform -%}
-			</product-form>
-		  {%- endif -%}
-		</div>
+		  
+				  <button
+					id="{{ product_form_id }}-submit"
+					type="submit"
+					name="add"
+					class="quick-add__submit button button--secondary"
+					aria-haspopup="dialog"
+					aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}"
+					aria-live="polite"
+					{% if product.selected_or_first_available_variant.available == false %}
+					  disabled
+					{% endif %}
+				  >
+					<span>
+					  {%- if product.selected_or_first_available_variant.available -%}
+						<span class="text__with-icon">
+						  {%- render 'icon-cart' -%}
+						  Add
+						</span>
+					  {%- else -%}
+						{{ 'products.product.sold_out' | t }}
+					  {%- endif -%}
+					</span>
+					<span class="sold-out-message hidden">
+					  {{ 'products.product.sold_out' | t }}
+					</span>
+					<div class="loading-overlay__spinner hidden">
+					  <svg
+						aria-hidden="true"
+						focusable="false"
+						role="presentation"
+						class="spinner"
+						viewBox="0 0 66 66"
+						xmlns="http://www.w3.org/2000/svg"
+					  >
+						<circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+					  </svg>
+					</div>
+				  </button>
+				{%- endform -%}
+			  </product-form>
+			{%- endif -%}
+		  </div>
+		  
+		
 	  </li>
+	  
   {%- endfor -%}
+</ul></div>
+
+
+
 {%- endcapture -%}
 {%- if recommended_products != empty -%}
   <div class="cart-drawer__recommendation-wrapper">
-    <div class="cart-drawer__recommendation">
+    <div class="cart-drawer__recommendation" > 
       <h2 class="recommendation__heading">
         {%- if cart == empty -%}
           {{ settings.cart_drawer_collection_title_empty }}
