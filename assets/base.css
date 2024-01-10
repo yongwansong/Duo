@@ -184,20 +184,20 @@ body .button--secondary{
 
 @font-face {
 	font-family: 'OldschoolGrotesk-ExtraLight';
-	src: url('https://cdn.shopify.com/s/files/1/0553/3233/9879/files/OldschoolGrotesk-ExtraLight.ttf?v=1703835126') format('truetype'),
-	url('https://cdn.shopify.com/s/files/1/0553/3233/9879/files/OldschoolGrotesk-ExtraLight.ttf?v=1703835126') format('truetype'),
+	src: url('https://cdn.shopify.com/s/files/1/0553/3233/9879/files/OldschoolGrotesk-ExtraLight_b8a0615d-0b0a-455b-b263-4aacc1f7114f.ttf?v=1704818982') format('truetype'),
+	url('https://cdn.shopify.com/s/files/1/0553/3233/9879/files/OldschoolGrotesk-ExtraLight_b8a0615d-0b0a-455b-b263-4aacc1f7114f.ttf?v=1704818982') format('truetype'),
 }
 
-@font-face {
+/* @font-face {
 	font-family: 'OldschoolGrotesk-Medium';
-	src: url('https://cdn.shopify.com/s/files/1/0553/3233/9879/files/OldschoolGrotesk-Medium.ttf?v=1703835126') format('truetype'),
-	url('https://cdn.shopify.com/s/files/1/0553/3233/9879/files/OldschoolGrotesk-ExtraLight.ttf?v=1703835126') format('truetype')
-}
+	src: url('https://cdn.shopify.com/s/files/1/0553/3233/9879/files/OldschoolGrotesk-Medium_8d124a90-4b17-4dc3-9091-5c791638126a.ttf?v=1704818223') format('truetype'),
+	url('https://cdn.shopify.com/s/files/1/0553/3233/9879/files/OldschoolGrotesk-Medium_8d124a90-4b17-4dc3-9091-5c791638126a.ttf?v=1704818223') format('truetype')
+} */
 
 @font-face {
 	font-family: 'OldschoolGrotesk-Regular';
-	src: url('https://cdn.shopify.com/s/files/1/0553/3233/9879/files/OldschoolGrotesk-Medium.ttf?v=1703835126') format('truetype'),
-	url('https://cdn.shopify.com/s/files/1/0553/3233/9879/files/OldschoolGrotesk-ExtraLight.ttf?v=1703835126') format('truetype')
+	src: url('https://cdn.shopify.com/s/files/1/0553/3233/9879/files/OldschoolGrotesk-Regular_2c8d816d-93f3-4618-9b0d-b66c031ebbf8.ttf?v=1704818515') format('truetype'),
+	url('https://cdn.shopify.com/s/files/1/0553/3233/9879/files/OldschoolGrotesk-Regular_2c8d816d-93f3-4618-9b0d-b66c031ebbf8.ttf?v=1704818515') format('truetype')
 }
 
 @font-face {
@@ -2129,6 +2129,20 @@ input[type='checkbox'] {
 	align-items: center;
 }
 
+.header__icons .header__icon--account{
+	width: 21px;
+    height: auto;
+	margin-right: 25px;
+	padding: 0!important;
+}
+
+.header__icons .header__icon--cart{
+	width: 21px;
+    height: auto;
+	margin: 0;
+	padding: 0 !important;
+}
+
 .header__icon:not(.header__icon--summary),
 .header__icon span {
 	display: flex;
@@ -2163,8 +2177,8 @@ input[type='checkbox'] {
 
 .header__icon,
 .header__icon--cart .icon {
-	height: 4.4rem;
-	width: 4.4rem;
+	height: auto;
+	width: 100%;
 	padding: 0;
 }
 
@@ -2297,6 +2311,7 @@ details[open] .modal-overlay::after {
 .header__icon--menu .icon {
 	display: block;
 	position: absolute;
+	left: 24px;
 	opacity: 1;
 	transform: scale(1);
 	transition: transform 150ms ease, opacity 150ms ease;
@@ -2369,6 +2384,15 @@ details[open]>.header__icon--menu .icon-hamburger {
 
 .header__menu-item span {
 	transition: text-decoration var(--duration-short) ease;
+	color: #000;
+    text-align: center;
+    font-family: "OldschoolGrotesk-Regular";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
 }
 
 .header__menu-item:hover span {
@@ -2525,7 +2549,7 @@ details-disclosure>details {
 /*--- === ---  Header Css Start --- === ---*/
 
 .header__menu-item {
-	padding: 20px !important;
+	padding: 20px 25px 20px 0!important;
 }
 
 nav.header__inline-menu ul.list-menu .link {
@@ -2552,7 +2576,7 @@ a.header__icon--cart img {
 }
 
 a.header__icon.header__icon--account img {
-	width: 30px;
+	width: 100%;
 	height: auto;
 }
 
@@ -3710,7 +3734,7 @@ section.shopify-section.feature-collection {
 .second-div {
 	height: 80%;
 	text-align: center;
-	padding-bottom: 6px;
+	padding-bottom: 16px;
 }
 
 .third-div {
@@ -4759,6 +4783,10 @@ header {
 @media screen and (max-width: 750px) {
 	.button__spacing a.button {
 		margin-bottom: 10px;
+	}
+
+	.header__icons .header__icon--account{
+		margin-right: 16px;
 	}
 }
 

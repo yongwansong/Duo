@@ -21,6 +21,10 @@
     display: block;
 }
 
+.custom_product_image:hover .product_info{
+    display: block;
+}
+
 .custom_product_image:hover .first_image{
     display: none;
 }
@@ -40,9 +44,27 @@
     object-fit: cover;
 }
 
+.custom_product_image .product_info p {
+    font-family: "OldschoolGrotesk-regular";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px;
+    margin: 0;
+}
+
+.custom_product_image .product_info p strong{
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+.custom_product_image .product_info{
+    display: none;
+}
+
 .endrock-featured-collection .heading{
     color: #000;
-    font-family: "OldschoolGrotesk-Regular";
+    font-family: "OldschoolGrotesk-Extralight";
     font-size: 48px;
     font-style: normal;
     font-weight: 430;
@@ -91,7 +113,7 @@
 
 .endrock-featured-collection .product_property{
     color: #000;
-    font-family: "OldschoolGrotesk-Regular";
+    font-family: "OldschoolGrotesk-Extralight";
     font-size: 14px;
     font-style: normal;
     font-weight: 430;
@@ -108,7 +130,7 @@
 .endrock-featured-collection .title-with-price .product-price{
     color: #000;
     text-align: center;
-    font-family: "OldschoolGrotesk-Regular";
+    font-family: "OldschoolGrotesk-Extralight";
     font-size: 18px;
     font-style: normal;
     font-weight: 430;
@@ -141,6 +163,11 @@
 
     .endrock-featured-collection .heading{
         line-height: 48px;
+        margin-bottom: 16px;
+        font-family: "OldschoolGrotesk-Regular";
+    }
+
+    .custom-product_form{
         margin-bottom: 16px;
     }
 }
