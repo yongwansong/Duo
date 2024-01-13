@@ -18,64 +18,8 @@
   .drawer {
     visibility: hidden;
   }
-  .drawer.active .drawer__inner {
-    transform: translate(0);    overflow: hidden;
-    height: calc(100% - 80px) !important;
-}
-@media screen and (max-height: 650px){
-cart-drawer-items {
-  overflow: auto!important;
-  flex: 1;
-}
-img.motion-reduce {
-  border: 0px solid #fff!important;
-}
-.cart-drawer__recommendation {
-  padding: 1rem 0.5rem!important;
-}
-.cart-items th {
-  padding-bottom: 0.8rem!important;
-}
-.cart__ctas {
-  text-align: center;
-  padding: 0px 20px;
-}
-}
-.cart-drawer__overlay:empty {
-  display: none;
-}
-.cart-drawer {
-  background: white;
-}
-.recommendation__heading {
-  margin: 0 0 0rem!important;
-}
-.cart-drawer__recommendation-wrapper {
-  background: #EFF2FF;
-  margin-left: 0!important;
-  margin-right: 0!important;
-  padding-left: 0.5rem!important;
-  padding-right: 0.5rem!important;
-  width: 440px;
-  position: absolute;
-  bottom: 105px;
-}
-.recommendation-product__wrapper+.recommendation-product__wrapper {
-  margin-top: 0rem!important;
-}
-.cart-drawer .cart-items td {
-  padding-top: 1rem!important;
-}
-.cart-drawer__overlay:empty {
-  display: none!important;
-}
-.cart-drawer__footer{
-padding: 10px 15px 0px 15px;
-}
 </style>
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
-
-  
   <div id="CartDrawer" class="cart-drawer">
     <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
     {%- if settings.cart_drawer_scrolling_text != blank -%}
@@ -85,7 +29,7 @@ padding: 10px 15px 0px 15px;
         }
       </style>
       {%- assign text_lines = settings.cart_drawer_scrolling_text | newline_to_br | split: '<br />' -%}
-     <div class="drawer__scroll-text">
+      <div class="drawer__scroll-text">
         <div class="swiper-container">
           <div class="swiper-wrapper">
             {%- for text in text_lines -%}
@@ -95,10 +39,6 @@ padding: 10px 15px 0px 15px;
         </div>
       </div>
     {%- endif -%}
-     
-
-
-
     <div
       class="drawer__inner"
       role="dialog"
@@ -441,85 +381,95 @@ padding: 10px 15px 0px 15px;
           </div>
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
-      </cart-drawer-items>
-
-      
+      </cart-drawer-items>     
+      {%- liquid
+        if settings.cart_drawer_collection != blank
+          render 'drawer-recommendation'
+        endif
+      -%}
       <div class="drawer__footer">
-        
-  
+        {%- if settings.show_cart_note -%}
+          <details id="Details-CartDrawer">
+            <summary>
+              <span class="summary__title">
+                {{ 'sections.cart.note' | t }}
+                {% render 'icon-caret' %}
+              </span>
+            </summary>
+            <cart-note class="cart__note field">
+              <label class="visually-hidden" for="CartDrawer-Note">{{ 'sections.cart.note' | t }}</label>
+              <textarea
+                id="CartDrawer-Note"
+                class="text-area text-area--resize-vertical field__input"
+                name="note"
+                placeholder="{{ 'sections.cart.note' | t }}"
+              >{{ cart.note }}</textarea>
+            </cart-note>
+          </details>
+        {%- endif -%}
 
         <!-- Start blocks -->
-        <
+        <!-- Subtotals -->
+
+        <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
+          <div class="totals" role="status">
+            <h3 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h3>
+            <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+          </div>
+
+          <div>
+            {%- if cart.cart_level_discount_applications.size > 0 -%}
+              <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                {%- for discount in cart.cart_level_discount_applications -%}
+                  <li class="discounts__discount discounts__discount--end">
+                    {%- render 'icon-discount' -%}
+                    {{ discount.title }}
+                    (-{{ discount.total_allocated_amount | money }})
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+          </div>
+
+          <small class="tax-note caption-large rte">
+            {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+              {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
+            {%- elsif cart.taxes_included -%}
+              {{ 'sections.cart.taxes_included_but_shipping_at_checkout' | t }}
+            {%- elsif shop.shipping_policy.body != blank -%}
+              {{ 'sections.cart.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
+            {%- else -%}
+              {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
+            {%- endif -%}
+          </small>
+        </div>
 
         <!-- CTAs -->
- 
-      
-      </div><div class="cart-drawer__footer" {{ block.shopify_attributes }}>
-        <div class="totals" role="status">
-          <h3 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h3>
-          <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+
+        <div class="cart__ctas" {{ block.shopify_attributes }}>
+          <noscript>
+            <button type="submit" class="cart__update-button button button--secondary" form="CartDrawer-Form">
+              {{ 'sections.cart.update' | t }}
+            </button>
+          </noscript>
+          <button type="submit" disabled hidden aria-hidden="true" form="CartDrawer-Form"></button>
+          <button 
+            type="submit"
+            id="CartDrawer-Checkout"
+            class="cart__checkout-button button"
+            name="checkout"
+            form="CartDrawer-Form"
+            {% if cart == empty %}
+              disabled
+            {% endif %}
+          >
+            {{ 'sections.cart.checkout' | t }}
+          </button>
         </div>
-  
-        <div>
-          {%- if cart.cart_level_discount_applications.size > 0 -%}
-            <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
-              {%- for discount in cart.cart_level_discount_applications -%}
-                <li class="discounts__discount discounts__discount--end">
-                  {%- render 'icon-discount' -%}
-                  {{ discount.title }}
-                  (-{{ discount.total_allocated_amount | money }})
-                </li>
-              {%- endfor -%}
-            </ul>
-          {%- endif -%}
-        </div>
-  
-        <small class="tax-note caption-large rte">
-          {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
-            {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
-          {%- elsif cart.taxes_included -%}
-            {{ 'sections.cart.taxes_included_but_shipping_at_checkout' | t }}
-          {%- elsif shop.shipping_policy.body != blank -%}
-            {{ 'sections.cart.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
-          {%- else -%}
-            {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
-          {%- endif -%}
-        </small>
       </div>
-    </div>
-
-    {%- liquid
-      if settings.cart_drawer_collection != blank
-        render 'drawer-recommendation'
-      endif
-    -%} 
-
-    
-    <div class="cart__ctas" {{ block.shopify_attributes }}>
-      <noscript>
-        <button type="submit" class="cart__update-button button button--secondary" form="CartDrawer-Form">
-          {{ 'sections.cart.update' | t }}
-        </button>
-      </noscript>
-      <button type="submit" disabled hidden aria-hidden="true" form="CartDrawer-Form"></button>
-      <button 
-        type="submit"
-        id="CartDrawer-Checkout"
-        class="cart__checkout-button button"
-        name="checkout"
-        form="CartDrawer-Form"
-        {% if cart == empty %}
-          disabled
-        {% endif %}
-      >
-        {{ 'sections.cart.checkout' | t }}
-      </button>
     </div>
   </div>
 </cart-drawer>
-
-
-
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     function isIE() {
