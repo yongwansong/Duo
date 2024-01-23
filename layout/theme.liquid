@@ -259,7 +259,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </script>
   
   </head>
-  <body class="gradient template--{{ template.name }} {% unless template contains 'index' %}sub-bg{% endunless %} {% if template contains 'index' %} home_page{%endif%} bg-main-color {% if collection.handle == 'all' %} collection_all{%endif%} {% if collection.handle == 'products' %} collection_all{%endif%} {% if template contains 'subscriptions-landing' %}subscriptions-landing-page {%endif%}{% if template.name == 'product' %} template-product--{{ product.handle }}{% endif %}">
+  <body 
+    class="gradient template--{{ template.name }} 
+    {% unless template contains 'index' %}sub-bg{% endunless %} 
+    {% if template contains 'index' %} home_page{% endif %}
+    bg-main-color 
+    {% if collection.handle == 'all' %} collection_all{%endif %} 
+    {% if collection.handle == 'products' %} collection_all{% endif %} 
+    {% if template contains 'subscriptions-landing' %}subscriptions-landing-page {%endif %}
+    {% if template.name == 'product' %} template-product--{{ product.handle }}{% endif %}">
+      
     <!-- Google Tag Manager (noscript) -->
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GW2X6LN"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -388,5 +397,32 @@ uid:"__INSERT_EMAIL_HERE__"
 {%- endif -%}
 </script>
 <!-- PF EDT END -->
+
+{% if product %}
+  <script type="text/javascript"> 
+  var _learnq = _learnq || []; 
+  var item = {
+      Name: {{ product.title|json }},
+      ProductID: {{ product.id|json }},
+      Categories: {{ product.collections|map:'title'|json }},
+      ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+      URL: window.location.href,
+      Brand: {{ product.vendor|json }},
+      Price: {{ product.price|divided_by:100.0|json }},
+      CompareAtPrice: {{ product.compare_at_price_max|money|json }} };
+    _learnq.push(['track', 'Viewed Product', item]);
+    _learnq.push(['trackViewedItem', {
+      Title: item.Name,
+      ItemId: item.ProductID,
+      Categories: item.Categories,
+      ImageUrl: item.ImageURL,
+      Url: item.URL,
+      Metadata: {
+        Brand: item.Brand,
+        Price: item.Price,
+        CompareAtPrice: item.CompareAtPrice
+      } }]); 
+  </script>
+{% endif %}
 </body>
 </html>
