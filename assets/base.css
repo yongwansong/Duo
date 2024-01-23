@@ -188,11 +188,11 @@ body .button--secondary{
 	url('https://cdn.shopify.com/s/files/1/0553/3233/9879/files/OldschoolGrotesk-ExtraLight_b8a0615d-0b0a-455b-b263-4aacc1f7114f.ttf?v=1704818982') format('truetype'),
 }
 
-/* @font-face {
+@font-face {
 	font-family: 'OldschoolGrotesk-Medium';
 	src: url('https://cdn.shopify.com/s/files/1/0553/3233/9879/files/OldschoolGrotesk-Medium_8d124a90-4b17-4dc3-9091-5c791638126a.ttf?v=1704818223') format('truetype'),
 	url('https://cdn.shopify.com/s/files/1/0553/3233/9879/files/OldschoolGrotesk-Medium_8d124a90-4b17-4dc3-9091-5c791638126a.ttf?v=1704818223') format('truetype')
-} */
+}
 
 @font-face {
 	font-family: 'OldschoolGrotesk-Regular';
@@ -216,12 +216,12 @@ body .button--secondary{
 	margin: 0 auto;
 	padding: 0 1.5rem;
 	/* max-width: var(--page-width); */
-	max-width: 130rem;
+	max-width: 1680px;
 }
 
 @media (max-width:767px) {
 	.page-width{
-		padding: 0 24px;
+		padding: 0 24px !important;
 	}
 }
 
@@ -1996,7 +1996,7 @@ input[type='checkbox'] {
 }
 
 .shopify-section-header-hidden {
-	transform: translateY(-100%);
+	/* transform: translateY(-100%); */
 	top: 0px;
 }
 
@@ -2790,6 +2790,7 @@ a.button.button--primary {
     font-weight: 500;
     line-height: normal;
     letter-spacing: 1.505px;
+	padding: 12.972px 32.93px 11px;
 }
 
 a.button.button--primary:hover {

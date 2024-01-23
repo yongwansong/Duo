@@ -23,7 +23,7 @@
         <div class="why-duo_wrapper">
             <div class="content-container only--mobile">
                 <h2 class="left-content__heading">{{ section.settings.heading }}</h2>
-                <div class="left-content__description">{{ section.settings.description }}</div>
+                <div class="left-content__description">{{ section.settings.mobile_description }}</div>
                 <div class="content-wrapper">
                     {% for block in section.blocks %}
                         <div class="property-list_wrapper">
@@ -157,6 +157,11 @@
                 "type": "richtext",
                 "id": "description",
                 "label": "Description"
+            },
+            {
+                "type": "richtext",
+                "id": "mobile_description",
+                "label": "Mobile Description"
             }
         ],
         "blocks": [

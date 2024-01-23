@@ -127,7 +127,7 @@
             {{ section.settings.mobile_image | img_url: 'master' }} {{ section.settings.mobile_image.width }}w"
           sizes="{% if section.settings.image != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image != blank %}50vw{% else %}100vw{% endif %}"
           src="{{ section.settings.mobile_image | img_url: '1500x' }}"
-          class="only--mobile"
+          class="only--mobile endrock-mobile__image-banner"
           loading="lazy"
           alt="{{ section.settings.mobile_image.alt | escape }}"
           width="{{ section.settings.mobile_image.width }}"
@@ -199,6 +199,7 @@ function handleFocus(e, i) {
 
 const testSlides = document.querySelectorAll('.endrock-iamge-banner .swiper-container .swiper-slide');
 testSlides.forEach((slide, i) => slide.addEventListener('focusin', (e) => handleFocus(e, i)));
+
 </script>
 
 {% schema %}

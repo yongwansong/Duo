@@ -15,7 +15,7 @@
     cursor: pointer;
     display: block;
     color: #000;
-    font-family: "OldschoolGrotesk-Regular";
+    font-family: "OldschoolGrotesk-Medium";
     font-size: 22px;
     font-style: normal;
     font-weight: 500;
@@ -28,7 +28,7 @@
 
 .endrock-faq .faq-drawer__content p{
     color: #000;
-    font-family: 'OldschoolGrotesk-ExtraLight';
+    font-family: 'OldschoolGrotesk-Regular';
     font-size: 16px;
     font-style: normal;
     font-weight: 390;
@@ -84,7 +84,7 @@ input[type="checkbox"] {
 
 .endrock-faq .heading{
     color: #000;
-    font-family: "OldschoolGrotesk-Regular";
+    font-family: "OldschoolGrotesk-Medium";
     font-size: 64px;
     font-style: normal;
     font-weight: 500;
@@ -104,6 +104,7 @@ input[type="checkbox"] {
     padding-top: 16px;
     padding-bottom: 16px;
     font-size: 16px; 
+    padding-right: 10%;
   }
 
   .endrock-faq .faq-drawer__content p{

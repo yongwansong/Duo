@@ -207,7 +207,7 @@ div:empty {
 	.swiper-container-horizontal>.swiper-pagination-bullets,
 	.swiper-pagination-custom,
 	.swiper-pagination-fraction {
-		bottom: 20px;
+		bottom: 0;
 		left: 0;
 		width: 100%;
 	}

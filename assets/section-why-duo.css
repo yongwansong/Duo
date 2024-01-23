@@ -34,7 +34,7 @@
 
 .why-duo_wrapper .left-content__description p{
     color: #000;
-    font-family: "OldschoolGrotesk-ExtraLight";
+    font-family: "OldschoolGrotesk-Regular";
     font-size: 24px;
     font-style: normal;
     font-weight: 390;
@@ -59,7 +59,7 @@
     line-height: 24px;
     letter-spacing: -.24px;
     margin: 0;
-    font-family: 'OldschoolGrotesk-Extralight';
+    font-family: 'OldschoolGrotesk-Regular';
     font-weight: 390;
 }
 
@@ -86,10 +86,6 @@
 .right-content .property-list_wrapper:first-of-type .property-icon svg{
     width: 42px;
     height: auto;
-}
-
-.right-content .property-list_wrapper:last-of-type .property-icon svg{
-    width: 60px;
 }
 
 .property-icon svg{
@@ -137,6 +133,10 @@
 
     .property-icon svg{
         width: 32px;
+    }
+    
+    .content-wrapper .property-list_wrapper:nth-child(3) .property-icon svg{
+        width: 28px;
     }
 
     .property-description.enable_margin p{

@@ -38,8 +38,8 @@
 .section-endrock-hero-image .hero-banner__text p{
     color: #000;
     text-align: center;
-    font-family: 'OldschoolGrotesk-ExtraLight';
-    font-size: 18px;
+    font-family: 'OldschoolGrotesk-Regular';
+    font-size: 22px;
     font-style: normal;
     font-weight: 430;
     line-height: 27px;
@@ -55,13 +55,13 @@
 
 .section-endrock-hero-image .hero-banner__buttons .custom_button.button--secondary{
     color: #FFF;
-    font-family: "OldschoolGrotesk-Regular";
+    font-family: "OldschoolGrotesk-Medium";
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     letter-spacing: -0.24px;
-    padding: 12.972px 32.93px;
+    padding: 12.972px 32.93px 11px;
     justify-content: center;
     align-items: center;
     gap: 9.979px;
@@ -74,7 +74,7 @@
 
 .section-endrock-hero-image .hero-banner__buttons .custom_button{
     color: #000;
-    font-family: 'OldschoolGrotesk-Extralight';
+    font-family: 'OldschoolGrotesk-Medium';
     font-size: 12px;
     font-style: normal;
     font-weight: 560;
@@ -129,6 +129,8 @@
     .section-endrock-hero-image .hero-banner__text p{
         margin-bottom: 24px;
         font-family: 'OldschoolGrotesk-Regular';
+        font-size: 18px;
+        line-height: 27px;
     }
 
     .section-endrock-hero-image .hero-banner__buttons{
@@ -141,7 +143,4 @@
         width: 100%;
     }
 
-    .section-endrock-hero-image .hero-banner__buttons .custom_button{
-        font-family: 'OldschoolGrotesk-Regular';
-    }
 }

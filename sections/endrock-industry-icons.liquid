@@ -18,7 +18,7 @@
 <div id="section--{{ section.id }}">
     <div class="industry-icons {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">
         <div class="industry-icons_container">
-            <div class="heading only--desktop">{{ section.settings.heading }}</div>
+            <p class="heading only--desktop">{{ section.settings.heading }}</p>
             <p class="mobile_heading only--mobile">{{ section.settings.mobile_heading }}</p>
             <div class="icons-wrapper only--desktop">
                 {%- for block in section.blocks -%}
@@ -57,6 +57,10 @@
         loop: true,
         spaceBetween: 36,
         centeredSlides: true,
+        autoplay: {
+            delay: 1000,
+            disableOnInteraction: true,
+        },
     });
 
     function handleFocus(e, i) {
@@ -124,7 +128,7 @@
                 "label": "Background Color"
             },
             {
-                "type": "richtext",
+                "type": "text",
                 "id": "heading",
                 "label": "Heading"
             },

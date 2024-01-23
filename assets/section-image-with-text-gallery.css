@@ -1,15 +1,16 @@
 .image-with-text__gallery-container .gallery-list{
     display: flex;
-    gap: 10%;
+    justify-content: space-between;
 }
 
 .image-with-text__gallery-container .gallery-info{
-    margin-top: 70px;
+    margin: auto 0;
+    width: calc(50% - 60px);
 }
 
 .image-with-text__gallery-container .gallery-info .prefix_heading{
     color: #000;
-    font-family: "OldschoolGrotesk-Extralight";
+    font-family: "OldschoolGrotesk-Medium";
     font-size: 15px;
     font-style: normal;
     font-weight: 700;
@@ -31,7 +32,7 @@
 
 .image-with-text__gallery-container .gallery-info .description p{
     color: #000;
-    font-family: "OldschoolGrotesk-Extralight";
+    font-family: "OldschoolGrotesk-Regular";
     font-size: 15px;
     font-style: normal;
     font-weight: 390;
@@ -90,7 +91,7 @@
 }
 
 .image-with-text__gallery-container .gallery_image-wrapper{
-    width: 40%;
+    width: 50%;
 }
 
 .image-with-text__gallery-container .gallery_image-wrapper.only--desktop{
@@ -111,7 +112,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
 }
 
 @media (max-width:767px) {
@@ -139,19 +141,20 @@
 
     .image-with-text__gallery-container .gallery-info{
         margin-top: 24px;
-        padding: 0 24px
+        width: 100%;
     }
 
     .image-with-text__gallery-container .gallery-info .prefix_heading{
-        font-family: "OldschoolGrotesk-Regular";
         margin: 0 0 100px;
         font-weight: 500;
+        padding-left: 24px;
     }
 
     .image-with-text__gallery-container .gallery-info .heading{
         font-size: 40px;
         margin: 0 0 11px;
         line-height: 48px;
+        padding-left: 24px;
     }
 
     .gallery-info .mobile_description{
@@ -162,6 +165,7 @@
         font-weight: 400;
         line-height: 24px;
         margin: 0 0 50px;
+        padding: 0 24px;
     }
 
     .image-with-text__gallery-container .swiper-button-next{
@@ -169,10 +173,15 @@
     }
 
     .image-with-text__gallery-container .swiper-pagination{
-        top: 59.5%;
+        top: 58.5%;
         right: unset;
         left: 24px;
         gap: 32px;
         transform: translateY(-50%);
+    }
+
+    .image-with-text__gallery-container .gallery-info a{
+        margin-left: 24px;
+        padding: 11px 15px;
     }
 }

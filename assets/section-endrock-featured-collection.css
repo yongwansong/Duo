@@ -3,8 +3,6 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        max-width: 1060px;
-        margin: 0 auto;
     }
 
     .endrock-featured-collection .products_wrapper .product-list{
@@ -61,10 +59,14 @@
 .custom_product_image .product_info{
     display: none;
 }
+.endrock-featured-collection__wrapper{
+    max-width: 1060px;
+    margin: 0 auto;
+}
 
 .endrock-featured-collection .heading{
     color: #000;
-    font-family: "OldschoolGrotesk-Extralight";
+    font-family: "OldschoolGrotesk-Regular";
     font-size: 48px;
     font-style: normal;
     font-weight: 430;
@@ -95,14 +97,16 @@
 
 .endrock-featured-collection .add-toCart span{
     color: #ffffff;
+    padding: 12.972px 32.93px 11px;
+    line-height: 1;
 }
 
 .custom-product_form{
-    margin-bottom: 23px;
+    margin-bottom: 16px;
 }
 
 .endrock-featured-collection .product_title{
-    margin: 0 0 5px;
+    margin: 0px;
     color: #000;
     font-family: "OldschoolGrotesk-Regular";
     font-size: 24px;
@@ -113,7 +117,7 @@
 
 .endrock-featured-collection .product_property{
     color: #000;
-    font-family: "OldschoolGrotesk-Extralight";
+    font-family: "OldschoolGrotesk-Regular";
     font-size: 14px;
     font-style: normal;
     font-weight: 430;
@@ -130,7 +134,7 @@
 .endrock-featured-collection .title-with-price .product-price{
     color: #000;
     text-align: center;
-    font-family: "OldschoolGrotesk-Extralight";
+    font-family: "OldschoolGrotesk-Regular";
     font-size: 18px;
     font-style: normal;
     font-weight: 430;
@@ -143,6 +147,18 @@
     .endrock-featured-collection .products_wrapper:not(.swiper-wrapper) .product-list{
         width: calc( 50% - 12px );
         margin-bottom: 32px;
+    }
+
+    .endrock-featured-collection .hover_image{
+        display: none!important;
+    }
+
+    .custom_product_image .product_info{
+        display: none!important;
+    }
+
+    .custom_product_image img{
+        display: block!important;
     }
 
     .endrock-featured-collection .products_wrapper:not(.swiper-wrapper){
@@ -169,5 +185,9 @@
 
     .custom-product_form{
         margin-bottom: 16px;
+    }
+
+    .endrock-featured-collection .add-toCart span{
+        padding: 8px;
     }
 }

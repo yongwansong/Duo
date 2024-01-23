@@ -1,21 +1,24 @@
 {{'endrock-banner-with-text.css' | asset_url| stylesheet_tag}}
 
 <style>
-    #section--{{ section.id }}{
+    #section--{{section.id }}{
         padding-top: {{ section.settings.padding_top }}px;
         padding-bottom: {{ section.settings.padding_bottom }}px;
-        background: {{ section.settings.bg_color }};
     }
 
     @media (max-width: 767px){
-        #section--{{ section.id }}{
+        #section--{{section.id }}{
             padding-top: {{ section.settings.mobile_padding_top }}px;
             padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+        }
+
+        .endrock-banner-with-text .text-wrapper{
+            background: {{ section.settings.bg_color }};
         }
     }
 </style>
 
-<div id="#section--{{section.id }}" class="endrock-banner-with-text {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">
+<div id="section--{{section.id }}" class="endrock-banner-with-text {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">
     <div class="banner-with-text only--desktop" style="padding-bottom: {{ 100 | divided_by: section.settings.banner.aspect_ratio }}%">
         {%- if section.settings.banner != blank -%}
             <img src="{{section.settings.banner | img_url: 'master' }}" alt="{{ block.settings.banner.alt }}" loading="lazy">
@@ -33,7 +36,7 @@
     <div class="mobile-banner-with-text only--mobile">
         <div class="text-wrapper">
             <h2>{{section.settings.heading | newline_to_br}}</h2>
-            <div class="text-des">{{ section.settings.description}}</div>
+            <p class="text-des">{{ section.settings.mobile_description}}</p>
         </div>
         <div class="iamge-with-text">
             {%- if section.settings.mobile_banner != blank -%}
@@ -126,6 +129,11 @@
                 "id": "description",
                 "label": "Description",
                 "default": "<p>Text</p>"
+            },
+            {
+                "type": "text",
+                "id": "mobile_description",
+                "label": "Mobile Description"
             },
             {
                 "type": "text",

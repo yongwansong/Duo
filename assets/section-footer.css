@@ -199,6 +199,7 @@ button.accordion:after{
   box-shadow: none;
   font-family: "OldschoolGrotesk-ExtraLight";
   left: 0;
+  color: #000;
 }
 
 .footer-block__newsletter .ul-list{
@@ -228,7 +229,7 @@ button.accordion:after{
 
 .footer-block__heading {
   color: #000;
-  font-family: "OldschoolGrotesk-Medium";
+  font-family: "OldschoolGrotesk-Regular";
   font-size: 14px !important;
   font-style: normal;
   font-weight: 700;
@@ -239,7 +240,7 @@ button.accordion:after{
 }
 
 .footer-block__newsletter .footer-block__heading{
-  font-family: "OldschoolGrotesk-Regular";
+  font-family: "OldschoolGrotesk-Medium";
   font-size: 18px !important;
   font-style: normal;
   font-weight: 500;
@@ -577,8 +578,8 @@ noscript .localization-selector.link {
 }
 
 .footer-block__details-content li a{
-  color: #000;
-  font-family: "OldschoolGrotesk-Extralight";
+  color: #000000 !important;
+  font-family: "OldschoolGrotesk-Regular";
   font-size: 14px;
   font-style: normal;
   font-weight: 390;
@@ -648,6 +649,10 @@ noscript .localization-selector.link {
   .footer-block-image {
     text-align: center;
   }
+}
+
+.footer-block__details-content{
+  margin-bottom: 24px;
 }
 
 .footer-block-image > img {
@@ -784,8 +789,8 @@ button.accordion.is-open:after {
 
 @media screen and (max-width: 750px) {
   footer.footer.color-background-1.gradient{
-    background-color: #eef1ff !important;
-    padding: 48px 0;
+    background-color: #ffffff !important;
+    padding: 64px 0 0;
   }
 
   .footer__content-top{
@@ -811,6 +816,7 @@ button.accordion.is-open:after {
     margin-bottom: 20px;
     font-size: 16px !important;
     margin-bottom: 24px;
+    text-align: left;
   }
   .footer__blocks-wrapper .footer-block.grid__item{
     padding-left: 0px;
@@ -819,6 +825,7 @@ button.accordion.is-open:after {
   .footer-block__heading{
     line-height: normal;
     margin-bottom: 20px;
+    font-family: 'OldschoolGrotesk-Medium';
   }
 
   .back_to-top{
@@ -841,7 +848,6 @@ button.accordion.is-open:after {
   }
 
   .footer-block__details-content li a{
-    font-family: "OldschoolGrotesk-Medium";
     font-weight: 400;
     word-wrap: break-word;
     display: block;
@@ -857,8 +863,6 @@ button.accordion.is-open:after {
 
   .footer-block__heading{
     margin-bottom: 16px;
-    font-weight: 500;
-    font-family: "OldschoolGrotesk-Regular";
   }
 
   .images-wrapper{

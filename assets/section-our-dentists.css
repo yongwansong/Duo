@@ -1,8 +1,6 @@
 .dentists-container{
     display: flex;
     justify-content: space-between;
-    max-width: 1084px;
-    margin: 0 auto;
 }
 
 .dentists-container .dentists-info{
@@ -58,7 +56,7 @@
 
 .dentists-container .dentists-info .description p{
     color: #000;
-    font-family: 'OldschoolGrotesk-ExtraLight';
+    font-family: 'OldschoolGrotesk-Regular';
     font-size: 16px;
     font-style: normal;
     font-weight: 390;
@@ -69,7 +67,7 @@
 
 .dentists-container .dentists-info .meeting_link{
     color: #000;
-    font-family: "OldschoolGrotesk-Extralight";
+    font-family: "OldschoolGrotesk-Medium";
     font-size: 12px;
     font-style: normal;
     font-weight: 560;
@@ -82,7 +80,7 @@
 
 .dentist-list .dentist_name h3{
     color: #000;
-    font-family: "OldschoolGrotesk-Regular";
+    font-family: "OldschoolGrotesk-Medium";
     font-size: 21px;
     font-style: normal;
     font-weight: 500;
@@ -101,7 +99,7 @@
 
 .dentist-list .dentist_description p{
     color: #000;
-    font-family: 'OldschoolGrotesk-extralight';
+    font-family: 'OldschoolGrotesk-Regular';
     font-size: 14px;
     font-style: normal;
     font-weight: 430;
@@ -117,11 +115,17 @@
 }
 
 @media (max-width: 767px) {
+
+    .dentists-container .dentists-info .heading{
+        text-align: left;
+        display: flex;
+        justify-content: center;
+    }
+
     .dentists-container .dentists-info .heading p{
         font-size: 45px;
         line-height: 48px;
         margin: 0 0 16px;
-        text-align: center;
     }
 
     .dentists-container .dentists-info .description p{

@@ -4,7 +4,6 @@
     #section--{{ section.id }}{
         padding-top: {{ section.settings.padding_top }}px;
         padding-bottom: {{ section.settings.padding_bottom }}px;
-        background: {{ section.settings.bg_color }};
     }
 
     @media (max-width: 767px){
@@ -12,6 +11,16 @@
             padding-top: {{ section.settings.mobile_padding_top }}px;
             padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
         }
+
+        {% for block in section.blocks %}
+            #block--{{ block.id }} .text-wrapper{
+                background: {{ block.settings.bg_color }};
+            }
+
+            #block--{{ block.id }} .mobile_button{
+                background: {{ block.settings.bg_color }};
+            }
+        {% endfor %}
     }
 </style>
 
@@ -21,7 +30,13 @@
             <!-- swiper slides -->
             <div class="swiper-wrapper">
                 {% for block in section.blocks %}
-                    <div class="product-wrapper swiper-slide">
+                    <div id="block--{{ block.id }}" class="product-wrapper swiper-slide">
+                        <div class="text-wrapper only--mobile">
+                            <div class="text-wrapper__container">
+                                <div class="heading">{{ block.settings.mobile_heading }}</div>
+                                <p class="description">{{ block.settings.mobile_description}}</p>
+                            </div>
+                        </div>
                         {% if block.settings.image != blank %}
                             <div class="image only--desktop" style="padding-bottom: {{ 100 | divided_by: block.settings.image.aspect_ratio }}%">
                                 <img
@@ -38,14 +53,76 @@
                                     alt="{{ block.settings.mobile_image.alt }}"
                                     loading="lazy"
                                 >
+
+                                <div class="product-info only--mobile {{ block.settings.product_info_position }} {{ block.settings.product_info_mobile_position }}">
+                                    {% assign product_card_product = block.settings.product %}
+                                    <div class="product-title">
+                                        <p>{{ product_card_product.title }}</p>
+                                        <p class="card metasubtitle-fp">{{ product_card_product.metafields.my_fields.feature_product_subtitle }}</p>
+                                    </div>
+                                    {%- if product_card_product.selected_or_first_available_variant.available -%}
+                                        {%- assign product_form_id = 'quick-add-' | append: section.id | append: product_card_product.id -%}
+                                        <product-form data-cart-type="{{ settings.cart_type }}">
+                                            {%- form 'product',
+                                                product_card_product,
+                                                id: product_form_id,
+                                                class: 'form',
+                                                novalidate: 'novalidate',
+                                                data-type: 'add-to-cart-form'
+                                            -%}
+                                            {% comment %} {% render 'loop-subscriptions' type: 'product-widget', product: product %} {% endcomment %}
+
+                                                <div class="{{ product_card_product.title| downcase }} products__heading">
+                                                    <input
+                                                        type="hidden"
+                                                        name="id"
+                                                        value="{{ product_card_product.selected_or_first_available_variant.id }}"
+                                                        disabled
+                                                    >
+                                                        
+                                                    <span class="product-price">{{ product_card_product.price | money | remove: '.00' }} | </span>
+                                                        <span class="add-to-cart-message">
+                                                        {%- if product_card_product.selected_or_first_available_variant.available -%}
+                                                            {{ 'products.product.add_to_cart' | t }}
+                                                        {%- else -%}
+                                                            {{ 'products.product.sold_out' | t }}
+                                                        {%- endif -%}
+                                                        </span>
+                                                        <span class="added-message hidden">Added</span>
+                                                        <span class="sold-out-message hidden">
+                                                        {{ 'products.product.sold_out' | t }}
+                                                        </span>
+                                                        <div class="loading-overlay__spinner hidden">
+                                                        <svg
+                                                            aria-hidden="true"
+                                                            focusable="false"
+                                                            role="presentation"
+                                                            class="spinner"
+                                                            viewBox="0 0 66 66"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                                        </svg>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            {%- endform -%}
+                                        </product-form>
+                                    {%- endif -%}
+                                </div>
                             </div>
                         {% endif %}
-                        <div class="text-wrapper">
-                            <h2 class="heading">{{ block.settings.heading | newline_to_br }}</h2>
-                            <div class="description">{{ block.settings.description | newline_to_br}}</div>
-                            <a class="button {{ block.settings.btn_type }}" href="{{ block.settings.btn_link }}">{{ block.settings.btn_label }}</a>
+                        <div class="mobile_button">
+                            <a class="button only--mobile {{ block.settings.btn_type }}" href="{{ block.settings.btn_link }}">{{ block.settings.btn_label }}</a>
                         </div>
-                        <div class="product-info {{ block.settings.product_info_position }} {{ block.settings.product_info_mobile_position }}">
+                        <div class="text-wrapper only--desktop">
+                            <div class="text-wrapper__container">
+                                <h2 class="heading">{{ block.settings.heading | newline_to_br }}</h2>
+                                <div class="description">{{ block.settings.description | newline_to_br}}</div>
+                                <a class="button {{ block.settings.btn_type }}" href="{{ block.settings.btn_link }}">{{ block.settings.btn_label }}</a>
+                            </div>
+                        </div>
+                        <div class="product-info only--desktop {{ block.settings.product_info_position }} {{ block.settings.product_info_mobile_position }}">
                             {% assign product_card_product = block.settings.product %}
                             <div class="product-title">
                                 <p>{{ product_card_product.title }}</p>
@@ -205,11 +282,6 @@
                 "type": "checkbox",
                 "id": "full_width",
                 "label": "Full Width"
-            },
-            {
-                "type": "color",
-                "id": "bg_color",
-                "label": "Background Color"
             }
         ],
         "blocks": [
@@ -217,6 +289,11 @@
                 "type": "product",
                 "name": "product",
                 "settings": [
+                    {
+                        "type": "color",
+                        "id": "bg_color",
+                        "label": "Background Color"
+                    },
                     {
                         "type": "image_picker",
                         "id": "image",
@@ -235,9 +312,20 @@
                     },
                     {
                         "type": "richtext",
+                        "id": "mobile_heading",
+                        "label": "Mobile Heading",
+                        "default": "<p>Heading</p>"
+                    },
+                    {
+                        "type": "richtext",
                         "id": "description",
                         "label": "Description",
                         "default": "<p>Description</p>"
+                    },
+                    {
+                        "type": "text",
+                        "id": "mobile_description",
+                        "label": "Mobile Description"
                     },
                     {
                         "type": "url",
