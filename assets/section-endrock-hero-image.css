@@ -25,7 +25,7 @@
 
 .section-endrock-hero-image .hero-banner__text h2{
     color: #000;
-    text-align: center;
+    text-align: left;
     font-family: "OldschoolGrotesk-Regular";
     font-size: 72px;
     font-style: normal;
@@ -37,11 +37,11 @@
 
 .section-endrock-hero-image .hero-banner__text p{
     color: #000;
-    text-align: center;
+    text-align: left;
     font-family: 'OldschoolGrotesk-Regular';
-    font-size: 22px;
+    font-size: 21px;
     font-style: normal;
-    font-weight: 430;
+    font-weight: 400;
     line-height: 27px;
     margin: 0;
     margin-bottom: 41px;
@@ -61,7 +61,7 @@
     font-weight: 500;
     line-height: normal;
     letter-spacing: -0.24px;
-    padding: 12.972px 32.93px 11px;
+    padding: 12.972px 0 11px;
     justify-content: center;
     align-items: center;
     gap: 9.979px;

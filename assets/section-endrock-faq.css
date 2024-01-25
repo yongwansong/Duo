@@ -82,6 +82,11 @@ input[type="checkbox"] {
   display: none;
 }
 
+.endrock-faq{
+  max-width: 1076px;
+  margin: 0 auto;
+}
+
 .endrock-faq .heading{
     color: #000;
     font-family: "OldschoolGrotesk-Medium";

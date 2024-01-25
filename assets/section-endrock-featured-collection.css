@@ -6,7 +6,7 @@
     }
 
     .endrock-featured-collection .products_wrapper .product-list{
-        width: calc( 25% - 9px );
+        width: calc( 25% - 23px );
         max-width: 256px;
     }
 }
@@ -59,9 +59,14 @@
 .custom_product_image .product_info{
     display: none;
 }
+
+.endrock-featured-collection__container{
+    background-color: #ffffff;
+}
 .endrock-featured-collection__wrapper{
-    max-width: 1060px;
+    max-width: 1166px;
     margin: 0 auto;
+    padding: 69px 0 87px;
 }
 
 .endrock-featured-collection .heading{
@@ -108,7 +113,7 @@
 .endrock-featured-collection .product_title{
     margin: 0px;
     color: #000;
-    font-family: "OldschoolGrotesk-Regular";
+    font-family: "OldschoolGrotesk-Medium";
     font-size: 24px;
     font-style: normal;
     font-weight: 500;

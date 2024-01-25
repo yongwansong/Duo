@@ -1,6 +1,8 @@
 .dentists-container{
     display: flex;
     justify-content: space-between;
+    max-width: 1165px;
+    margin: 0 auto;
 }
 
 .dentists-container .dentists-info{
@@ -15,16 +17,16 @@
 }
 
 .dentists-container .dentists-wrapper .dentist-list{
-    width: 50.2%;
-    padding: 22px 24px 22px 25px;
+    width: 50%;
+    padding: 22px 24px;
     background: #ffffff;
     display: flex;
     flex-direction: column;
 }
 
 .dentists-container .dentists-wrapper .dentist-list:last-of-type{
-    width: 47.1%;
-    padding: 22px 21px 22px 21px;
+    width: 50%;
+    padding: 22px 24px;
     background: #ffffff;
     display: flex;
     flex-direction: column;

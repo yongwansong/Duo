@@ -44,7 +44,15 @@
                             </div>
                         {%- endif -%}
                         <div class="gallery-info">
-                            <h3 class="prefix_heading">{{ block.settings.prefix_heading }}</h3>
+                            <div class="prefix-with-dots">
+                                <h3 class="prefix_heading">{{ block.settings.prefix_heading }}</h3>
+                                <div class="dots-wrapper">
+                                    {% for block in section.blocks %}
+                                        <span class="dot-item {% if forloop.first %}active{% endif %}" data-number="{{ forloop.index }}">{{ forloop.index }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            
                             <h2 class="heading">{{ block.settings.heading | newline_to_br }}</h2>
                             <div class="description only--desktop">{{ block.settings.description }}</div>
                             <p class="mobile_description only--mobile">{{ block.settings.mobile_description }}</p>
@@ -57,7 +65,12 @@
             <div class="swiper-pagination"></div>
             
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-next__wrapper gallery_swiper_buttons">
+                <div class="swiper-button-next swiper_button-item"></div>
+            </div>
+            <div class="swiper-button-prev__wrapper gallery_swiper_buttons">
+                <div class="swiper-button-prev swiper_button-item"></div>
+            </div>
         </div>
     </div>
 </div>
@@ -71,11 +84,12 @@ const gallerySwiper = new Swiper('.image-with-text__gallery .swiper-container', 
         el: ".swiper-pagination",
         clickable: true, 
         renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + "</span>";
+            return '<span class="' + className + '" data-index="'+(index + 1)+'">' + (index + 1) + "</span>";
         },
     },
     navigation: {
-      nextEl: '.swiper-button-next'
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     }
 });
 
@@ -85,6 +99,35 @@ function handleFocus(e, i) {
 
 const gallerySlides = document.querySelectorAll('.endrock-iamge-banner .swiper-container .swiper-slide');
 gallerySlides.forEach((slide, i) => slide.addEventListener('focusin', (e) => handleFocus(e, i)));
+
+document.querySelectorAll('.dots-wrapper').forEach(dotsWrapper => {
+    dotsWrapper.querySelectorAll('.dot-item').forEach(dot=> {
+        dot.addEventListener('click', function(){
+            document.querySelectorAll('.dot-item').forEach(element => {
+                element.classList.remove('active');
+            })
+
+            let number = dot.dataset.number;
+            document.querySelectorAll(`[data-number="${number}"]`).forEach(selectedDot => {
+                selectedDot.classList.add('active');
+            })
+            document.querySelector(`[data-index="${number}"]`).click();
+        })
+    })
+})
+
+document.querySelectorAll('.gallery_swiper_buttons .swiper_button-item').forEach(button => {
+    button.addEventListener('click', function(){
+        document.querySelectorAll('.dot-item').forEach(element => {
+            element.classList.remove('active');
+        })
+        let index = document.querySelector('.image-with-text__gallery .swiper-pagination-bullet-active').dataset.index;
+        document.querySelectorAll(`[data-number="${index}"]`).forEach(selectedDot => {
+            selectedDot.classList.add('active');
+        })
+    })
+})
+
 </script>
 
 {% schema %}

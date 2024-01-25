@@ -1,6 +1,8 @@
 .industry-icons_container{
     display: flex;
     justify-content: space-between;
+    max-width: 1165px;
+    margin: 0 auto;
 }
 
 .icons-mobile__wrapper .icon-mobile__list img{

@@ -8,7 +8,6 @@
 
 .product-gallery-wrapper .product-wrapper{
     position: relative;
-    margin-bottom: 37px;
 }
 
 .product-gallery-wrapper .product-wrapper .image{
@@ -27,11 +26,11 @@
 .product-gallery-wrapper .product-wrapper .text-wrapper .heading{
     color: #000;
     font-family: "Schnyder-SLight";
-    font-size: 48px;
+    font-size: 56px;
     font-style: normal;
     font-weight: 300;
-    line-height: 52px;
-    margin: 0 0 26px;
+    line-height: 60px;
+    margin: 0 0 23px;
 }
 
 .product-gallery-wrapper .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
@@ -52,14 +51,14 @@
     font-family: "OldschoolGrotesk-Regular";
     font-size: 18px;
     font-style: normal;
-    font-weight: 430;
+    font-weight: 400;
     line-height: 27px;
-    margin: 0 0 38px;
+    margin: 0 0 32px;
 }
 
 .product-gallery-wrapper .product-info{
     position: absolute;
-    right: 70px;
+    right: 10%;
     max-width: 230px;
     width: 100%;
     display: flex;
@@ -144,18 +143,33 @@
 }
 
 .product-gallery-wrapper .swiper-button-next, .product-gallery-wrapper .swiper-button-prev{
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='62' height='59' viewBox='0 0 62 59' fill='none'%3E%3Cpath d='M61.0164 29.5C61.0164 45.6487 47.6068 58.75 31.0526 58.75C14.4984 58.75 1.08887 45.6487 1.08887 29.5C1.08887 13.3513 14.4984 0.25 31.0526 0.25C47.6068 0.25 61.0164 13.3513 61.0164 29.5Z' stroke='black' stroke-width='0.5'/%3E%3Cpath d='M44.2092 29.3536C44.4045 29.1583 44.4045 28.8417 44.2092 28.6464L41.0272 25.4645C40.832 25.2692 40.5154 25.2692 40.3201 25.4645C40.1248 25.6597 40.1248 25.9763 40.3201 26.1716L43.1485 29L40.3201 31.8284C40.1248 32.0237 40.1248 32.3403 40.3201 32.5355C40.5154 32.7308 40.832 32.7308 41.0272 32.5355L44.2092 29.3536ZM17.2266 29.5L43.8556 29.5L43.8556 28.5L17.2266 28.5L17.2266 29.5Z' fill='black'/%3E%3C/svg%3E");
-    background-size: 52px 52px;
-    width: 52px;
-    height: 52px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='51' height='51' viewBox='0 0 51 51' fill='none'%3E%3Cpath d='M50.6405 25.078C50.6405 38.7899 39.516 49.9059 25.7929 49.9059C12.0698 49.9059 0.945312 38.7899 0.945312 25.078C0.945312 11.366 12.0698 0.25 25.7929 0.25C39.516 0.25 50.6405 11.366 50.6405 25.078Z' stroke='black' stroke-width='0.5'/%3E%3Cpath d='M36.782 25.0069C36.9773 24.8116 36.9773 24.495 36.782 24.2998L33.6001 21.1178C33.4048 20.9225 33.0882 20.9225 32.893 21.1178C32.6977 21.3131 32.6977 21.6296 32.893 21.8249L35.7214 24.6533L32.893 27.4817C32.6977 27.677 32.6977 27.9936 32.893 28.1889C33.0882 28.3841 33.4048 28.3841 33.6001 28.1889L36.782 25.0069ZM14.3086 25.1533L36.4285 25.1533L36.4285 24.1533L14.3086 24.1533L14.3086 25.1533Z' fill='black'/%3E%3C/svg%3E");
+    background-size: 50px 50px;
     position: relative;
+    width: 50px;
+    height: 50px;
     margin: 0;
-    right: unset;
     left: unset;
+    right: unset;
 }
 
 .product-gallery-wrapper .swiper-button-prev{
     transform: rotate(180deg);
+}
+
+.swiper_buttons{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+.swiper-button-next__wrapper{
+    right: 2%;
+}
+
+.swiper-button-prev__wrapper{
+    left: 2%;
 }
 
 .product-gallery-wrapper .swiper-pagination-bullet{
@@ -170,16 +184,7 @@
 }
 
 .product-gallery-wrapper .swiper-container{
-    padding: 60px 0 37px;
-}
-
-.product-gallery-wrapper .swiper-button-wrapper{
-    position: absolute;
-    top: 0;
-    display: flex;
-    gap: 30px;
-    flex-direction: row-reverse;
-    right: 0;
+    padding: 0;
 }
 
 @media (max-width: 767px) {

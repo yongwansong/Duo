@@ -1,0 +1,24 @@
+.icon-with-text__wrapper{
+    max-width: 1160px;
+    margin: 21px auto 18px;
+    display: flex;
+    gap: 21px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.icon-with-text__wrapper .iwt-item{
+    display: flex;
+    gap: 21px;
+}
+
+.icon-with-text__wrapper .iwt-item__heading{
+    color: #000;
+    font-family: "OldschoolGrotesk-Medium";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+}
