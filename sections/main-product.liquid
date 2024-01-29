@@ -349,7 +349,9 @@
 								{{ block.shopify_attributes }}
 							>
 							{%- for option in product.options_with_values -%}
-								<fieldset class="js product-form__input product-form__input--radio">
+                  {% comment %}
+                    // AB test Most Popular https://app.clickup.com/t/86dqr26c5
+   								<fieldset class="js product-form__input product-form__input--radio">
 									<legend class="form__label">{{ option.name }}:</legend>
 										{%- assign option_index = forloop.index0 -%}
 										{%- assign values = '' -%}
@@ -391,7 +393,8 @@
 										{%- endunless -%}
 									{%- endfor -%}
 									</fieldset>
-								<template class="js product-form__input product-form__input--radio variant-b">
+                {% endcomment %}
+								<fieldset class="js product-form__input product-form__input--radio variant-b">
 									<legend class="form__label">{{ option.name }}:</legend>
 										{%- assign option_index = forloop.index0 -%}
 										{%- assign values = '' -%}
@@ -470,7 +473,7 @@
 												</label>
 										{%- endunless -%}
 									{%- endfor -%}
-									</template>
+									</fieldset>
 							{%- endfor -%}
 							<script type="application/json">
 								{{ product.variants | json }}
@@ -488,40 +491,7 @@
                     });
                   }
                   selectTwoOption();
-                  let stopVariant = 0
-                  function searchAndExecute() {
-                    const searchedDiv = document.querySelector('#container-fieldset'); // Replace with the actual ID of your div
-                    if (searchedDiv) {
-                      // Get the <template> tag
-                      const template = document.querySelector('.variant-b');
-                      
-                      // Clone the content of the template
-                      const content = document.importNode(template.content, true);
-                      
-                      // Create a new fieldset
-                      const fieldset = document.createElement('fieldset');
-                      fieldset.classList.add('js', 'product-form__input', 'product-form__input--radio', 'variant-b');
-                      
-                      // Add the cloned content to the fieldset
-                      fieldset.appendChild(content);
-                      
-                      // Insert the fieldset into the DOM wherever you need it
-                      document.querySelector('#container-fieldset').appendChild(fieldset);
-                      selectTwoOption()
-                      clearInterval(interval); // Stop searching once the div is found
-                    } else if (stopVariant === 15){
-                      clearInterval(interval);
-                    } else {
-                      console.log('Div variant found yet.');
-                      stopVariant = stopVariant + 1;
-                    }
-                  }
-                  // Set the search at regular intervals (e.g., every second)
-                  const interval = setInterval(searchAndExecute, 1000);
                 });
-
-
-
               </script>
 
 						{%- else -%}
