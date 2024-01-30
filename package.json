@@ -1,0 +1,11 @@
+{
+  "name": "duo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "shopify theme dev --store duo-dentaceuticals --theme-editor-sync --ignore *.json *.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
