@@ -2588,12 +2588,24 @@ async function dispatchLoopAddCartEvent(
     switchContainer.addEventListener('change', updateLegends);
   });
   
-  // Segundo bloque de código
   function simulateOneTimePurchaseClick() {
     document.querySelector('.loop-one-time-purchase-option-radio').click();
-  }
+
+    // Selecciona todos los elementos con la clase .loop-full-width y asigna el estilo
+    const loopFullWidthElements = document.querySelectorAll('.loop-full-width');
+    loopFullWidthElements.forEach(element => {
+        element.style.setProperty('display', 'none', 'important');
+    });
+}
+
   
   function simulateSubscriptionClick() {
-    document.querySelector('.loop-subscription-group-radio').click();
-  }
-  
+    document.querySelector('.loop-subscription-group-label').click();
+
+    const loopFullWidthElements = document.querySelectorAll('.loop-full-width');
+    loopFullWidthElements.forEach(element => {
+        element.style.setProperty('display', 'flex', 'important');
+    });
+
+    console.log("Elemento con clase 'loop-subscription-group-radio' no encontrado");
+}
