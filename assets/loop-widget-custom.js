@@ -2557,55 +2557,57 @@ async function dispatchLoopAddCartEvent(
 /**
  **************** Bundle Functions Ends ****************
  */
+
+ 
  document.addEventListener('DOMContentLoaded', function () {
-    // JavaScript para actualizar las leyendas
+    
     const switchContainer = document.querySelector('.switches-container');
     const legendLeft = document.querySelector('.legend-left');
     const legendRight = document.querySelector('.legend-right');
   
+   
     // Función para actualizar las leyendas
     const updateLegends = () => {
-      const isSwitchOnLeft = document.getElementById('switchMonthly').checked;
+      const isSwitchOnLeft = document.getElementById('onetimeselect').checked;
       legendLeft.style.display = isSwitchOnLeft ? 'block' : 'none';
       legendRight.style.display = isSwitchOnLeft ? 'none' : 'block';
+      if (isSwitchOnLeft) {
+        OneTimePurchaseClick();
+      } else {
+        SubscriptionClick();
+      }
     };
   
+
   
-    // Agrega un evento de clic al documento
   document.addEventListener('click', function(event) {
-    // Verifica si el elemento clicado tiene el atributo name con el valor 'Bottles'
-    if (event.target.getAttribute('name') === 'Bottles') {
-      // Ejecuta el código cuando se hace clic en un elemento con name="Bottles"
+   if (event.target.getAttribute('name') === 'Bottles') {
       document.querySelector('.onetimego').click();
+      OneTimePurchaseClick()
     }
   });
-  
-    
-    // Llamar a la función al cargar la página para establecer el estado inicial
-    updateLegends();
-  
-    // Escuchar cambios en el switch
-    switchContainer.addEventListener('change', updateLegends);
+        updateLegends();
+      switchContainer.addEventListener('change', updateLegends);
   });
+
   
-  function simulateOneTimePurchaseClick() {
+
+  function OneTimePurchaseClick() {
     document.querySelector('.loop-one-time-purchase-option-radio').click();
 
-    // Selecciona todos los elementos con la clase .loop-full-width y asigna el estilo
     const loopFullWidthElements = document.querySelectorAll('.loop-full-width');
     loopFullWidthElements.forEach(element => {
         element.style.setProperty('display', 'none', 'important');
     });
 }
 
-  
-  function simulateSubscriptionClick() {
+
+  function SubscriptionClick() {
     document.querySelector('.loop-subscription-group-label').click();
 
     const loopFullWidthElements = document.querySelectorAll('.loop-full-width');
     loopFullWidthElements.forEach(element => {
         element.style.setProperty('display', 'flex', 'important');
     });
-
-    console.log("Elemento con clase 'loop-subscription-group-radio' no encontrado");
 }
+

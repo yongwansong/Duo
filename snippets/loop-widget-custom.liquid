@@ -47,6 +47,7 @@ span {
     margin-block-end: 0.3em;
 }
 
+
 .item_include {
     flex: 0 0 48%;
     margin: 0px!important;
@@ -80,25 +81,7 @@ span {
 .loop-selling-plan-selector {
   font-family: var(--font-body-family)!important;
 }
-.loop-one-time-purchase-option {
-  display: none;
-}
-
-.loop-subscription-group-radio {
-  display: none;
-}
-
-.loop-subscription-group-text {
-  display: none;
-}
-
-  
-  .loop-full-width
-{
-  display: none !important;
-}
-
-
+ 
 .loop-subscription-container {
   margin-top: -30px;
 }
@@ -200,6 +183,17 @@ span {
   background: #0C176A !important;
 }
 
+.loop-one-time-purchase-option {
+  display: none;
+}
+
+.loop-subscription-group-radio {
+  display: none;
+}
+
+.loop-subscription-group-text {
+  display: none;
+}
 
 
 .item_include {
@@ -271,10 +265,10 @@ span {
 
   <div class="container">
   <div class="switches-container">
-    <input type="radio" id="switchMonthly" name="switchPlan" value="Monthly"  checked="checked" />
-    <input type="radio" id="switchYearly" name="switchPlan" value="Yearly" />
-    <label for="switchMonthly" class="onetimego" onclick="simulateOneTimePurchaseClick()"><span class="selectstyle">One Time Purchase</span></label>
-    <label for="switchYearly" onclick="simulateSubscriptionClick()"><span class="selectstyle">Subscribe & save</span></label>
+    <input type="radio" id="onetimeselect" name="switchPlan"   checked="checked" />
+    <input type="radio" id="substimselect" name="switchPlan"  />
+    <label for="onetimeselect" class="onetimego"  ><span class="selectstyle">One Time Purchase</span></label>
+    <label for="substimselect" class="subsgo"  ><span class="selectstyle">Subscribe & save</span></label>
     <div class="switch-wrapper">
       <div class="switch">
         <div  > <span class="selectstyle">One Time Purchase</span></div>
