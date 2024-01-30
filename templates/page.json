@@ -4,43 +4,9 @@
       "type": "main-page",
       "settings": {
       }
-    },
-    "16461164508f7609d7": {
-      "type": "faq",
-      "blocks": {
-        "f2f8a4cc-7bd3-4471-9c7a-9422809ed328": {
-          "type": "text",
-          "settings": {
-            "Heading": "Lorem ipsum dolor",
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing <\/p>"
-          }
-        },
-        "e02e839e-fdf3-4c43-a898-42a3df3b44ec": {
-          "type": "text",
-          "settings": {
-            "Heading": "Lorem ipsum amet,",
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing<\/p>"
-          }
-        },
-        "0fbc11a5-2aad-4873-a497-0416ac94752f": {
-          "type": "text",
-          "settings": {
-            "Heading": "Lorem ipsum dolor.",
-            "text": "<p>Lorem ipsum dolor sit amet, <\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "f2f8a4cc-7bd3-4471-9c7a-9422809ed328",
-        "e02e839e-fdf3-4c43-a898-42a3df3b44ec",
-        "0fbc11a5-2aad-4873-a497-0416ac94752f"
-      ],
-      "settings": {
-      }
     }
   },
   "order": [
-    "main",
-    "16461164508f7609d7"
+    "main"
   ]
 }

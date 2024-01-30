@@ -1,0 +1,94 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-0": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Duo Toothpaste",
+            "menu": "toothpaste"
+          }
+        },
+        "footer-1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Resources",
+            "menu": "resources"
+          }
+        },
+        "link_list_Tqk4L4": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Info",
+            "menu": "info"
+          }
+        },
+        "link_list_i3Jk87": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Social",
+            "menu": "social"
+          }
+        },
+        "image_FKWw66": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fda_compliant.png",
+            "image_width": 100,
+            "alignment": "center"
+          }
+        },
+        "image_GiMpnM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vegan.png",
+            "image_width": 100,
+            "alignment": "center"
+          }
+        },
+        "image_4ckD7g": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Made_in_USA.png",
+            "image_width": 100,
+            "alignment": "center"
+          }
+        },
+        "image_TmpQHM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_3_1.png",
+            "image_width": 100,
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "footer-0",
+        "footer-1",
+        "link_list_Tqk4L4",
+        "link_list_i3Jk87",
+        "image_FKWw66",
+        "image_GiMpnM",
+        "image_4ckD7g",
+        "image_TmpQHM"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "back_to-top": false,
+        "newsletter_enable": true,
+        "newsletter_heading": "A perfectly dosed amount of dental news? Join our newsletter!",
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": true
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

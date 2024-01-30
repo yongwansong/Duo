@@ -26,33 +26,24 @@
       "settings": {
       }
     },
-    "featured-products": {
+    "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Anything more before you go?",
-        "collection": "shop",
+        "title": "Featured collection",
+        "collection": "all",
         "products_to_show": 4,
         "show_view_all": true,
         "swipe_on_mobile": false,
         "image_ratio": "square",
         "show_secondary_image": false,
-        "add_image_padding": false,
-        "show_image_outline": true,
         "show_vendor": false,
         "show_rating": false
-      }
-    },
-    "1652261042e15a58f2": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true
       }
     }
   },
   "order": [
     "cart-items",
     "cart-footer",
-    "featured-products",
-    "1652261042e15a58f2"
+    "featured-collection"
   ]
 }

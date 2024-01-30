@@ -99,12 +99,14 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const main = document.getElementById('MainContent');
-      const headerHeight = document.getElementById('shopify-section-header')
-        ? document.getElementById('shopify-section-header').offsetHeight
+      const headerHeight = document.querySelector('.endrock-header')
+        ? document.querySelector('.endrock-header').offsetHeight
         : 0;
-      const announcementHeight = document.getElementById('shopify-section-announcement-bar')
-        ? document.getElementById('shopify-section-announcement-bar').offsetHeight
+      const announcementHeight = document.querySelector('.endrock-announcement-bar')
+        ? document.querySelector('.endrock-announcement-bar').offsetHeight
         : 0;
+
+      console.log(announcementHeight);
       const storeMessageHeight = document.querySelector('.section-store-message')
         ? document.querySelector('.section-store-message').offsetHeight
         : 0;

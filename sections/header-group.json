@@ -1,0 +1,43 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_sticky_YD6tc3": {
+          "type": "announcement-sticky",
+          "settings": {
+            "text": "subscribe to duo & save up to 33%",
+            "color_scheme": "accent-1",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_sticky_YD6tc3"
+      ],
+      "settings": {
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "logo": "shopify:\/\/shop_images\/image.png",
+        "pdp_logo": "shopify:\/\/shop_images\/small_logo_1.png",
+        "logo_width": 100,
+        "logo_position": "middle-left",
+        "menu": "endrock-left-menu",
+        "menu1": "main-menu",
+        "menumobile": "my-menu",
+        "show_line_separator": true,
+        "enable_sticky_header": true
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

@@ -182,7 +182,7 @@ button.accordion:after{
   justify-content: flex-start;
 }
 
-.footer-block--newsletter #NewsletterForm--footer{
+.newsletter-form__field-wrapper .field__input{
   border: none;
   padding: 12px 12px 12px 0;
   height: 4rem!important;

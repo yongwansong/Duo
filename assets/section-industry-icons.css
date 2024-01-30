@@ -34,6 +34,14 @@
     width: 100%;
 }
 
+.industry-icons_container .icons-wrapper .icon-list:nth-child(2){
+  width: 92px;
+}
+
+.industry-icons_container .icons-wrapper .icon-list:last-of-type{
+  width: 133px;
+}
+
 @media (max-width: 1200px) {
     .industry-icons_container{
         padding: 0 60px;

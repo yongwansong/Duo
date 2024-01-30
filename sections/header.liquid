@@ -780,7 +780,7 @@
     }
 
     connectedCallback() {
-      this.header = document.getElementById('shopify-section-header');
+      this.header = document.querySelector('.endrock-header');
       this.scrollableNav = document.getElementById('shopify-section-scrollable-nav');
       this.headerBounds = {};
 
@@ -919,6 +919,7 @@
 {% schema %}
 {
   "name": "t:sections.header.name",
+  "class": "endrock-header",
   "settings": [
     {
       "type": "select",
