@@ -10,6 +10,10 @@
 <style scoped>
   .row__item {
     display: flex;
+     width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
   }
 
 .product-form__wrapper
@@ -17,38 +21,33 @@
   margin-top: 50px;
 }
 
-.row__item {
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-}
-    @media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1100px) {
 .switches-container
 {
   line-height: 1.5rem!important;
 }
-    .selectstyle{
+
+.selectstyle{
  max-width: 100px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+ display: block;
+ margin-left: auto;
+margin-right: auto;
 
-}
-    }
+} }
 
-  @media only screen and (max-width: 768px) {
-
-
-  .row__item {
+@media only screen and (max-width: 768px) {
+.row__item {
     flex-wrap: wrap;
     justify-content: space-between;
       padding: 10px;
   }
-p {
+  
+span {
     margin-block-start: 0.3em;
     margin-block-end: 0.3em;
 }
-  .item_include {
+
+.item_include {
     flex: 0 0 48%;
     margin: 0px!important;
   }
@@ -68,9 +67,6 @@ p {
     padding: 10px!important;
 }
 }
-
-
-   
 
 :root {
   --switches-bg-color: white;
@@ -225,9 +221,6 @@ p {
 .loop-subscription-group {
   padding: 0 !important;
 }
-
-
-  
 </style>
 
 
@@ -276,7 +269,7 @@ p {
             </div>
 
 
-            <div class="container">
+  <div class="container">
   <div class="switches-container">
     <input type="radio" id="switchMonthly" name="switchPlan" value="Monthly"  checked="checked" />
     <input type="radio" id="switchYearly" name="switchPlan" value="Yearly" />
@@ -294,76 +287,64 @@ p {
          <div class="row row__item">
   
   <div class="item_include">
-          <p ><svg class="svgico" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <span><svg class="svgico" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M10.25 1.75L1.75 10.25M1.75 1.75L10.25 10.25" stroke="#D32727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>10% Off</p>
+</svg>10% Off</span>
         </div>
 
           <div class="item_include">
-          <p ><svg class="svgico" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <span><svg class="svgico" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M10.25 1.75L1.75 10.25M1.75 1.75L10.25 10.25" stroke="#D32727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>Compostable Refills</p>
+</svg>Compostable Refills</span>
         </div>
 
           <div class="item_include">
-          <p ><svg class="svgico" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <span><svg class="svgico" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M10.25 1.75L1.75 10.25M1.75 1.75L10.25 10.25" stroke="#D32727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>Free Gifts</p>
+</svg>Free Gifts</span>
         </div>
 
           <div class="item_include">
-          <p ><svg class="svgico" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <span><svg class="svgico" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M10.25 1.75L1.75 10.25M1.75 1.75L10.25 10.25" stroke="#D32727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>Free Shipping</p>
-        </div>
-
-          
-  </div>
-    
+</svg>Free Shipping</span>
+        </div>      
+  </div> 
     </div>
     <div class="legend-right">
       
       
-      <div class="row row__item">
+           <div class="row row__item">
   
   <div class="item_include">
-          <p ><svg class="svgico" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <span ><svg class="svgico" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 0.045542C11.4537 0.0719249 9.91283 1.83366 8.07587 3.96047C6.23888 6.08729 4.7036 7.85511 4.66411 7.88898C4.58486 7.95694 4.44967 7.97002 4.35611 7.91876C4.32393 7.90113 3.78657 7.41058 3.16199 6.82861C2.53742 6.24668 1.9768 5.73649 1.91617 5.69492C1.56624 5.45481 1.09256 5.42256 0.69856 5.61198C0.476026 5.71897 0.229728 5.97262 0.112353 6.21572C0.0236183 6.39952 0.0119103 6.44886 0.00199725 6.68123C-0.0110772 6.98741 0.039747 7.22035 0.163097 7.41943C0.311203 7.6585 3.5429 11.6869 3.65288 11.7695C4.12439 12.1238 4.77763 12.064 5.18714 11.629C5.29634 11.513 6.15481 10.118 8.66602 5.97622C11.6409 1.06973 11.9999 0.465667 12 0.367787C12.0001 0.227041 11.9246 0.101379 11.8051 0.043348C11.6848 -0.0150949 11.6053 -0.0145189 11.5 0.045542Z" fill="#6CC870"/>
-</svg>10% Off</p>
+</svg>10% Off</span>
         </div>
 
           <div class="item_include">
-          <p ><svg class="svgico" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <span><svg class="svgico" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 0.045542C11.4537 0.0719249 9.91283 1.83366 8.07587 3.96047C6.23888 6.08729 4.7036 7.85511 4.66411 7.88898C4.58486 7.95694 4.44967 7.97002 4.35611 7.91876C4.32393 7.90113 3.78657 7.41058 3.16199 6.82861C2.53742 6.24668 1.9768 5.73649 1.91617 5.69492C1.56624 5.45481 1.09256 5.42256 0.69856 5.61198C0.476026 5.71897 0.229728 5.97262 0.112353 6.21572C0.0236183 6.39952 0.0119103 6.44886 0.00199725 6.68123C-0.0110772 6.98741 0.039747 7.22035 0.163097 7.41943C0.311203 7.6585 3.5429 11.6869 3.65288 11.7695C4.12439 12.1238 4.77763 12.064 5.18714 11.629C5.29634 11.513 6.15481 10.118 8.66602 5.97622C11.6409 1.06973 11.9999 0.465667 12 0.367787C12.0001 0.227041 11.9246 0.101379 11.8051 0.043348C11.6848 -0.0150949 11.6053 -0.0145189 11.5 0.045542Z" fill="#6CC870"/>
-</svg>Compostable Refills</p>
+</svg>Compostable Refills</span>
         </div>
 
           <div class="item_include">
-          <p ><svg class="svgico" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <span><svg class="svgico" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 0.045542C11.4537 0.0719249 9.91283 1.83366 8.07587 3.96047C6.23888 6.08729 4.7036 7.85511 4.66411 7.88898C4.58486 7.95694 4.44967 7.97002 4.35611 7.91876C4.32393 7.90113 3.78657 7.41058 3.16199 6.82861C2.53742 6.24668 1.9768 5.73649 1.91617 5.69492C1.56624 5.45481 1.09256 5.42256 0.69856 5.61198C0.476026 5.71897 0.229728 5.97262 0.112353 6.21572C0.0236183 6.39952 0.0119103 6.44886 0.00199725 6.68123C-0.0110772 6.98741 0.039747 7.22035 0.163097 7.41943C0.311203 7.6585 3.5429 11.6869 3.65288 11.7695C4.12439 12.1238 4.77763 12.064 5.18714 11.629C5.29634 11.513 6.15481 10.118 8.66602 5.97622C11.6409 1.06973 11.9999 0.465667 12 0.367787C12.0001 0.227041 11.9246 0.101379 11.8051 0.043348C11.6848 -0.0150949 11.6053 -0.0145189 11.5 0.045542Z" fill="#6CC870"/>
-</svg>Free Gifts</p>
+</svg>Free Gifts</span>
         </div>
 
           <div class="item_include">
-          <p ><svg class="svgico" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <span><svg class="svgico" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 0.045542C11.4537 0.0719249 9.91283 1.83366 8.07587 3.96047C6.23888 6.08729 4.7036 7.85511 4.66411 7.88898C4.58486 7.95694 4.44967 7.97002 4.35611 7.91876C4.32393 7.90113 3.78657 7.41058 3.16199 6.82861C2.53742 6.24668 1.9768 5.73649 1.91617 5.69492C1.56624 5.45481 1.09256 5.42256 0.69856 5.61198C0.476026 5.71897 0.229728 5.97262 0.112353 6.21572C0.0236183 6.39952 0.0119103 6.44886 0.00199725 6.68123C-0.0110772 6.98741 0.039747 7.22035 0.163097 7.41943C0.311203 7.6585 3.5429 11.6869 3.65288 11.7695C4.12439 12.1238 4.77763 12.064 5.18714 11.629C5.29634 11.513 6.15481 10.118 8.66602 5.97622C11.6409 1.06973 11.9999 0.465667 12 0.367787C12.0001 0.227041 11.9246 0.101379 11.8051 0.043348C11.6848 -0.0150949 11.6053 -0.0145189 11.5 0.045542Z" fill="#6CC870"/>
-</svg>Free Shipping</p>
+</svg>Free Shipping</span>
         </div>
 
           
   </div>
 </div>
-
-     
-
-      
   </div>
 </div>
-
-
-
-
-
             {% endunless %}
             {% for variant in product.variants %}
                 <div id="loop-product-variant-{{ variant.id }}">
@@ -403,11 +384,8 @@ p {
                         {% endunless %}
                     {% break %}{% endfor %}
                 </div>
-                
-            {% endfor %}
 
-
-            
+            {% endfor %}     
             {% unless product.requires_selling_plan %}
                 <div class="loop-one-time-purchase-option-position" id="loop-one-time-purchase-option-at-bottom">
                 </div>
@@ -458,6 +436,4 @@ p {
         });
     </script>
     {%- endif -%}
-    
-
     
