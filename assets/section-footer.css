@@ -166,7 +166,8 @@ button.accordion:after{
   align-items: center;
   justify-content: center;
   gap: 47px;
-  margin-bottom: 15px;
+  margin-bottom: 0;
+  margin-left: 30px
 }
 
 .footer-block--newsletter {
@@ -653,7 +654,7 @@ noscript .localization-selector.link {
 }
 
 .footer-block__details-content{
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .footer-block-image > img {

@@ -227,6 +227,7 @@ body .button--secondary{
 
 .full-width{
 	max-width: 100%;
+	max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -1950,7 +1951,7 @@ input[type='checkbox'] {
 .announcement-bar__link {
 	display: block;
 	width: 100%;
-	padding: 1rem 2rem;
+	padding: 12px 2rem 10px;
 	text-decoration: none;
 }
 
@@ -2590,8 +2591,8 @@ a.header__icon.header__icon--account img {
 
 @media (min-width: 769px) {
 	.header {
-		padding-top: 2px !important;
-		padding-bottom: 2px !important;
+		padding-top: 16px !important;
+		padding-bottom: 16px !important;
 	}
 
 	.header.page-width {
@@ -3760,7 +3761,7 @@ section.shopify-section.feature-collection {
 .second-div {
 	height: 80%;
 	text-align: center;
-	margin-right: 19px;
+	margin-right: 10%;
 	margin-left: auto;
 }
 

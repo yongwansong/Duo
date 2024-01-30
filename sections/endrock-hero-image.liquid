@@ -14,7 +14,7 @@
     }
 </style>
 
-<div id="section--{{ section.id }}" class="section-endrock-hero-image">
+<div id="section--{{ section.id }}" class="section-endrock-hero-image {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">
   <div class="hero-banner__video-wrapper">
     {%- liquid
       assign desktop_video = section.settings.video | default: section.settings.videomobile
@@ -176,6 +176,12 @@
         "default": 50
     },
     {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full Width",
+        "default": true
+    },
+    {
       "type": "header",
       "content": "Media Settings"
     },
@@ -224,8 +230,7 @@
     {
       "type": "textarea",
       "id": "heading",
-      "label": "Heading",
-      "default": "the tablet toothpaste\nthat does both"
+      "label": "Heading"
     },
     {
       "type": "textarea",

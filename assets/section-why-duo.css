@@ -19,7 +19,7 @@
 .why-duo_wrapper .left-content{
     position: absolute;
     top: 7%;
-    left: 7%;
+    left: 137px;
 }
 
 .why-duo_wrapper .left-content__heading{
@@ -93,12 +93,21 @@
     height: auto;
 }
 
+.right-content__properties .property-list_wrapper:last-of-type .property-icon svg{
+    width: 57px;
+}
+
 .right-content .property-list_wrapper{
     margin-bottom: 52px;
 }
 
 .right-content .right-content__properties .property-list_wrapper:last-of-type{
     margin: 0 0 0 81px;
+}
+@media (max-width: 1200px) {
+    .why-duo_wrapper .left-content{
+        left: 87px;
+    }
 }
 
 @media (max-width:767px) {

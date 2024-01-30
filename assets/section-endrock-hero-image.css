@@ -1,6 +1,7 @@
 .section-endrock-hero-image .desktop_image{
     position: relative;
     height: 0;
+    margin-top: -10px;
 }
 
 .section-endrock-hero-image .desktop_image img{
@@ -17,7 +18,7 @@
 }
 
 .section-endrock-hero-image .hero-banner__content {
-    padding-left: 100px;
+    left: 137px;
     position: absolute;
     top: 50%;
     transform: translate(0,-50%);
@@ -96,6 +97,12 @@
     object-fit: cover;
     width: 100%;
     border: none !important;
+}
+
+@media (max-width: 1200px) {
+    .section-endrock-hero-image .hero-banner__content{
+        left: 87px;
+    }
 }
 
 @media (max-width: 767px) {

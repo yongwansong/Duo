@@ -19,11 +19,11 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 8%;
+    left: 117px;
     max-width: 400px;
 }
 
-.product-gallery-wrapper .product-wrapper .text-wrapper .heading{
+.product-gallery-wrapper .product-wrapper .text-wrapper .heading p{
     color: #000;
     font-family: "Schnyder-SLight";
     font-size: 56px;
@@ -185,6 +185,12 @@
 
 .product-gallery-wrapper .swiper-container{
     padding: 0;
+}
+
+@media (max-width: 1200px) {
+    .product-gallery-wrapper .product-wrapper .text-wrapper{
+        left: 87px;
+    }
 }
 
 @media (max-width: 767px) {

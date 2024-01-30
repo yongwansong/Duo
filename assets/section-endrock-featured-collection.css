@@ -64,9 +64,8 @@
     background-color: #ffffff;
 }
 .endrock-featured-collection__wrapper{
-    max-width: 1166px;
     margin: 0 auto;
-    padding: 69px 0 87px;
+    padding: 69px 110px 87px;
 }
 
 .endrock-featured-collection .heading{
@@ -146,6 +145,12 @@
     line-height: 28px;
     letter-spacing: -0.27px;
     margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .endrock-featured-collection__wrapper{
+        padding: 69px 60px 87px
+    }
 }
 
 @media (max-width: 767px) {

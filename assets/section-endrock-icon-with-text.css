@@ -10,6 +10,7 @@
 .icon-with-text__wrapper .iwt-item{
     display: flex;
     gap: 21px;
+    align-items: center;
 }
 
 .icon-with-text__wrapper .iwt-item__heading{
@@ -21,4 +22,15 @@
     line-height: 24px;
     letter-spacing: 0.42px;
     text-transform: uppercase;
+}
+
+@keyframes changeColor {
+  25% { fill: #FFC200; }
+  50% { fill:#C375DB; }
+  75% { fill:#6DCDB2; }
+  100% { fill: #00ABE0; }
+}
+
+.iwt-item__icon svg circle {
+  animation: changeColor 10s infinite;
 }

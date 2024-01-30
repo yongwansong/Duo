@@ -117,7 +117,7 @@
                         </div>
                         <div class="text-wrapper only--desktop">
                             <div class="text-wrapper__container">
-                                <h2 class="heading">{{ block.settings.heading | newline_to_br }}</h2>
+                                <div class="heading">{{ block.settings.heading }}</div>
                                 <div class="description">{{ block.settings.description | newline_to_br}}</div>
                                 <a class="button {{ block.settings.btn_type }}" href="{{ block.settings.btn_link }}">{{ block.settings.btn_label }}</a>
                             </div>
@@ -310,10 +310,9 @@
                         "label": "Mobile Image"
                     },
                     {
-                        "type": "text",
+                        "type": "richtext",
                         "id": "heading",
-                        "label": "Heading",
-                        "default": "Heading"
+                        "label": "Heading"
                     },
                     {
                         "type": "richtext",

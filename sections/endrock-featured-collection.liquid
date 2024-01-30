@@ -163,7 +163,7 @@
                             {%- assign featured_media_aspect_ratio = endrock_featured_product.featured_media.aspect_ratio -%}
                             <div class="product-list {% if section.settings.swipe_on_mobile %}swiper-slide{% endif %}">
                                 {%- if block.settings.custom_product_image != blank -%}
-                                    <div class="custom_product_image" id="block--{{ block.id }}" style="padding-bottom: 130%;">
+                                    <div class="custom_product_image" id="block--{{ block.id }}" style="padding-bottom: {{ 100 | divided_by: block.settings.custom_product_image.aspect_ratio }}%">
                                         <img
                                             src="{{ block.settings.custom_product_image | img_url: 'master' }}"
                                             class="first_image"
