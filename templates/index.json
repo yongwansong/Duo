@@ -324,7 +324,7 @@
         "padding_top": 0,
         "padding_bottom": 0,
         "mobile_padding_top": 65,
-        "mobile_padding_bottom": 65,
+        "mobile_padding_bottom": 0,
         "full_width": false,
         "bg_color": "#e2ebf2",
         "products_to_show": 4,
