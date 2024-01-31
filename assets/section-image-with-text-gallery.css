@@ -209,6 +209,7 @@
         margin: 0 0 100px;
         font-weight: 500;
         padding-left: 24px;
+        margin-bottom: 20px;
     }
 
     .image-with-text__gallery-container .gallery-info .heading{
@@ -244,5 +245,10 @@
     .image-with-text__gallery-container .gallery-info a{
         margin-left: 24px;
         padding: 11px 15px;
+    }
+
+    .prefix-with-dots{
+        flex-direction: column;
+        margin-bottom: 20px;
     }
 }

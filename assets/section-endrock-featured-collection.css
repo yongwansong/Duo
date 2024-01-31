@@ -171,6 +171,10 @@
         display: block!important;
     }
 
+    .endrock-featured-collection__wrapper{
+        padding: 69px 10px 87px;
+    }
+
     .endrock-featured-collection .products_wrapper:not(.swiper-wrapper){
         display: flex;
         flex-wrap: wrap;
@@ -199,5 +203,9 @@
 
     .endrock-featured-collection .add-toCart span{
         padding: 8px;
+    }
+
+    .endrock-featured-collection__container{
+        background-color: transparent;
     }
 }

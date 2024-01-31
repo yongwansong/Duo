@@ -796,7 +796,7 @@ button.accordion.is-open:after {
   }
 
   .footer__content-top{
-    padding: 0 20px;
+    padding: 64px 0 32px!important
   }
 
   .footer__blocks-wrapper{

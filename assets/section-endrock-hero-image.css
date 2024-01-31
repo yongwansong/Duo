@@ -118,6 +118,7 @@
         transform: unset;
         top: unset;
         padding: 0 43px;
+        left: 0;
     }
 
     .section-endrock-hero-image{
@@ -130,6 +131,7 @@
         line-height: 48px;
         font-size: 48px;
         margin-bottom: 12px;
+        text-align: center;
     }
 
     .section-endrock-hero-image .hero-banner__text p{
@@ -137,6 +139,7 @@
         font-family: 'OldschoolGrotesk-Regular';
         font-size: 18px;
         line-height: 27px;
+        text-align: center;
     }
 
     .section-endrock-hero-image .hero-banner__buttons{

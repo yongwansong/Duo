@@ -150,6 +150,7 @@
 
     .dentists-container{
         flex-direction: column;
+        padding: 0;
     }
 
     .dentists-container .dentists-wrapper .dentist-list{
