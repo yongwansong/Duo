@@ -24,6 +24,7 @@
         },
         "18db48ee-d83d-4c27-8017-7e8d97a2009b": {
           "type": "social-proof-units",
+          "disabled": true,
           "settings": {
             "social_proof_msg": "250,000+ Tablets Sold Since Launch!"
           }

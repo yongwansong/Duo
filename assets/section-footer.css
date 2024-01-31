@@ -168,6 +168,10 @@ button.accordion:after{
   line-height: 150%;
 }
 
+.klaviyo-form button{
+  width: 70% !important;
+}
+
 .footer-block__newsletter .ul-list{
   display: none;
 }

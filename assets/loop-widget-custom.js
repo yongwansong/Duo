@@ -27,6 +27,9 @@ const productDataClass = "loopProductQuickJson",
 
 const useCompareAtPrice = true; //change this to false to use price instead of compare_at_price
 
+// populate this object if you want to change the standard settings coming from loop admin portal
+let customSettings = {};
+
 /**
  * start application
  */
@@ -144,6 +147,7 @@ async function setLoopUIProperties(shopifyDomain) {
     const loopUIProps = await fetchLoopUIProperties(shopifyDomain);
     window.loopPropsUI = {
         ...loopUIProps,
+        ...customSettings,
     };
 }
 
@@ -338,15 +342,11 @@ function defaultSelectFirstSellingPlanLoop(variant, productId) {
         ) || [];
 
     let isFirstOption = true;
-    const { selling_plan_allocations } = variant;
-    const spgIds =
-        selling_plan_allocations?.map((spg) => spg.selling_plan_group_id) || [];
 
     loopPurchaseOptions.forEach((element) => {
         if (
             Number(element.dataset.variantId) === Number(variant.id) &&
-            (window.loopProps[productId].previousSPGId &&
-            spgIds.includes(window.loopProps[productId].previousSPGId)
+            (window.loopProps[productId].previousSPGId
                 ? element.dataset.id ==
                   window.loopProps[productId].previousSPGId
                 : isFirstOption)
@@ -2159,7 +2159,7 @@ function applyBundleDiscount(productId) {
     }
 
     const originaPriceOnetime = useCompareAtPrice
-        ? variant.compare_at_price || variant.price
+        ? compare_at_price || variant.price
         : variant.price;
     const bundlePriceOnetimeDiscounted =
         productBundleData?.productVariantsFinalValues?.[selectedVariantId]?.[
@@ -2467,7 +2467,7 @@ async function createAddToCartPayload(
                 properties: {
                     _bundleId: bundleTransactionId,
                     _isPresetBundleProduct: true,
-                    _bundleName: bundleData?.loopBundleName ?? "",
+                    bundleName: bundleData?.loopBundleName ?? "",
                 },
             });
         });
@@ -2553,9 +2553,61 @@ async function dispatchLoopAddCartEvent(
     document.dispatchEvent(addToCartEvent);
 }
 
+
 /**
  **************** Bundle Functions Ends ****************
  */
 
-
  
+ document.addEventListener('DOMContentLoaded', function () {
+    
+    const switchContainer = document.querySelector('.switches-container');
+    const legendLeft = document.querySelector('.legend-left');
+    const legendRight = document.querySelector('.legend-right');
+  
+   
+    // Función para actualizar las leyendas
+    const updateLegends = () => {
+      const isSwitchOnLeft = document.getElementById('onetimeselect').checked;
+      legendLeft.style.display = isSwitchOnLeft ? 'block' : 'none';
+      legendRight.style.display = isSwitchOnLeft ? 'none' : 'block';
+      if (isSwitchOnLeft) {
+        OneTimePurchaseClick();
+      } else {
+        SubscriptionClick();
+      }
+    };
+  
+
+  
+  document.addEventListener('click', function(event) {
+   if (event.target.getAttribute('name') === 'Bottles') {
+      document.querySelector('.onetimego').click();
+      OneTimePurchaseClick()
+    }
+  });
+        updateLegends();
+      switchContainer.addEventListener('change', updateLegends);
+  });
+
+  
+
+  function OneTimePurchaseClick() {
+    document.querySelector('.loop-one-time-purchase-option-radio').click();
+
+    const loopFullWidthElements = document.querySelectorAll('.loop-full-width');
+    loopFullWidthElements.forEach(element => {
+        element.style.setProperty('display', 'none', 'important');
+    });
+}
+
+
+  function SubscriptionClick() {
+    document.querySelector('.loop-subscription-group-label').click();
+
+    const loopFullWidthElements = document.querySelectorAll('.loop-full-width');
+    loopFullWidthElements.forEach(element => {
+        element.style.setProperty('display', 'flex', 'important');
+    });
+}
+

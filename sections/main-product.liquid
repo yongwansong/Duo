@@ -349,7 +349,9 @@
 								{{ block.shopify_attributes }}
 							>
 							{%- for option in product.options_with_values -%}
-								<fieldset class="js product-form__input product-form__input--radio">
+                  {% comment %}
+                    // AB test Most Popular https://app.clickup.com/t/86dqr26c5
+   								<fieldset class="js product-form__input product-form__input--radio">
 									<legend class="form__label">{{ option.name }}:</legend>
 										{%- assign option_index = forloop.index0 -%}
 										{%- assign values = '' -%}
@@ -391,11 +393,107 @@
 										{%- endunless -%}
 									{%- endfor -%}
 									</fieldset>
+                {% endcomment %}
+								<fieldset class="js product-form__input product-form__input--radio variant-b">
+									<legend class="form__label">{{ option.name }}:</legend>
+										{%- assign option_index = forloop.index0 -%}
+										{%- assign values = '' -%}
+										{%- for variant in product.variants -%}
+											{%- assign value = variant.options[option_index] %}
+											{%- unless values contains value -%}
+												{%- assign values = values | join: ',' | append: ',' | append: value | split: ',' -%}
+												<input
+													type="radio"
+													id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+													name="{{ option.name }}"
+													value="{{ value | escape }}"
+													form="{{ product_form_id }}"
+                          {% if forloop.index == '1' %}
+                            checked
+                          {% endif  %}
+												>
+												<label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-value="{{value}}">
+													<span class="variant-field__label">
+                            <span class="variant-field__image">
+                              {% case  product.title %}
+                                {% when 'Energy' %}
+                                  {%  assign image-bundle-1 = 'https://cdn.shopify.com/s/files/1/0553/3233/9879/files/Duo_Product-energy_1.png?v=1703281895' %}
+                                  {%  assign image-bundle-2 = 'https://cdn.shopify.com/s/files/1/0553/3233/9879/files/3_tubes_6.png?v=1703281895' %}
+                                  {%  assign image-bundle-3 = 'https://cdn.shopify.com/s/files/1/0553/3233/9879/files/3_tubes_7.png?v=1703281895' %}
+                                {% when 'Original' %}
+                                  {%  assign image-bundle-1 = 'https://cdn.shopify.com/s/files/1/0553/3233/9879/files/original_s_1.png?v=1703647540' %}
+                                  {%  assign image-bundle-2 = 'https://cdn.shopify.com/s/files/1/0553/3233/9879/files/3_tubes_8.png?v=1703647610' %}
+                                  {%  assign image-bundle-3 = 'https://cdn.shopify.com/s/files/1/0553/3233/9879/files/4_tubes.png?v=1703647659' %}
+                                {% when 'Immunity' %}
+                                  {%  assign image-bundle-1 = 'https://cdn.shopify.com/s/files/1/0553/3233/9879/files/Duo_Product-0857_1_1.png?v=1703281477' %}
+                                  {%  assign image-bundle-2 = 'https://cdn.shopify.com/s/files/1/0553/3233/9879/files/3_tubes_4.png?v=1703281477' %}
+                                  {%  assign image-bundle-3 = 'https://cdn.shopify.com/s/files/1/0553/3233/9879/files/3_tubes_5.png?v=1703281477' %} 
+                                {% when 'Sleep' %}
+                                  {%  assign image-bundle-1 = 'https://cdn.shopify.com/s/files/1/0553/3233/9879/files/Duo_Product-sleep_1.png?v=1703276421' %}
+                                  {%  assign image-bundle-2 = 'https://cdn.shopify.com/s/files/1/0553/3233/9879/files/3_tubes_2.png?v=1703275926' %}
+                                  {%  assign image-bundle-3 = 'https://cdn.shopify.com/s/files/1/0553/3233/9879/files/3_tubes_3.png?v=1703275926' %}
+                                {%  else %}
+                                  {%  assign image-bundle-1 = 'https://cdn.shopify.com/s/files/1/0553/3233/9879/files/Duo_Product-sleep_1.png?v=1703276421' %}
+                                  {%  assign image-bundle-2 = 'https://cdn.shopify.com/s/files/1/0553/3233/9879/files/3_tubes_2.png?v=1703275926' %}
+                                  {%  assign image-bundle-3 = 'https://cdn.shopify.com/s/files/1/0553/3233/9879/files/3_tubes_3.png?v=1703275926' %}
+                              {% endcase %}
+                              {% case  forloop.index0 %}
+                                {% when 0 %}
+                                  <img src="{{ image-bundle-1 }}" width="76" height="64" alt="bundle 1">
+                                {% when 1 %}
+                                  <img src="{{ image-bundle-2 }}" width="86" height="72" alt="bundle 2">
+                                {% when 2 %}
+                                  <img src="{{ image-bundle-3 }}" width="86" height="72" alt="bundle 3">
+                                {% else %}
+                                  <img src="{{ image-bundle-1 }}" alt="bundle 0">
+                              {% endcase %}
+                            </span>
+
+                            {%- if variant.compare_at_price > variant.price  -%}
+                              {%- assign discounted_amount = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | money_without_currency | times: 100 | round  -%}
+                              <span class="variant-field__sale" data-discounted="{{ discounted_amount }}">
+                                Save {{ discounted_amount }}%
+                              </span>
+                            {%- endif -%}
+														{% comment %} <span class="variant-field__radio-icon"></span> {% endcomment %}
+														
+														{% comment %} {%- if variant.metafields.duo.variant_details != blank -%}
+															<span class="variant-field__details">{{ variant.metafields.duo.variant_details }}</span>
+														{%- endif -%} {% endcomment %}
+													</span>
+                         
+													<span class="variant-field__price">
+                            <span class="variant-field__name">{{ value }}</span>
+                            
+                            {%- if variant.compare_at_price > variant.price -%}
+															<s>{{ variant.compare_at_price | money }}</s>
+														{%- endif -%}
+														<span>{{ variant.price | money }}</span>
+													</span>
+												</label>
+										{%- endunless -%}
+									{%- endfor -%}
+									</fieldset>
 							{%- endfor -%}
 							<script type="application/json">
 								{{ product.variants | json }}
 							</script>
 							</variant-radios>
+
+              <script type="module">
+                document.addEventListener('DOMContentLoaded', () => {
+                  function selectTwoOption() {
+                    const selectorVariants = document.querySelectorAll('.product-form__input--radio');
+                    selectorVariants.forEach(e => {
+                      if(e.querySelectorAll('input').length !== 0){
+                        e.querySelectorAll('input')[1].checked = true;
+                      }
+                    });
+                  }
+                  selectTwoOption();
+                });
+              </script>
+
 						{%- else -%}
 							<variant-selects
 								class="no-js-hidden"
@@ -490,69 +588,91 @@
                         <span class="product-form__error-message"></span>
                       </div>
 
-                      {%- form 'product',
-                        product,
-                        id: product_form_id,
-                        class: 'form',
-                        novalidate: 'novalidate',
-                        data-type: 'add-to-cart-form'
-                      -%}
-                        <input
-                          type="hidden"
-                          name="id"
-                          value="{{ product.selected_or_first_available_variant.id }}"
-                          disabled
+                    {%- form 'product',
+                      product,
+                      id: product_form_id,
+                      class: 'form',
+                      novalidate: 'novalidate',
+                      data-type: 'add-to-cart-form'
+                     ,data-loop-product-id:product.id -%}
+{% comment %}
+  DO NOT modify this source code
+  LOOP WIDGET CODE STARTS
+{% endcomment %}
+{% assign template_exists = false %}
+{% capture template_content %}
+    {% render 'loop-subscriptions', type: 'product-widget', product: product %}
+{% endcapture %}
+
+{% if template_content contains 'Rendering loop-subscriptions' %}
+  {% assign template_exists = true %}
+{% endif %}
+
+{% if template_exists %}
+  {% render 'loop-subscriptions', type: 'product-widget', product: product %}
+{% endif %}
+{% comment %}
+  LOOP WIDGET CODE ENDS
+{% endcomment %}
+                      <input
+                        type="hidden"
+                        name="id"
+                        {% comment %}  
+                        value="{{ product.selected_or_first_available_variant.id }}"
+                        {% endcomment %}
+                        value="{{ product.variants[1].id }}"
+                        disabled
+                      >
+                      <div class="product-form__buttons">
+                        <button
+                          type="submit"
+                          name="add"
+                          class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                          {% if product.selected_or_first_available_variant.available == false %}
+                            disabled
+                          {% endif %}
                         >
-                        <div class="product-form__buttons">
-                          <button
-                            type="submit"
-                            name="add"
-                            class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
-                            {% if product.selected_or_first_available_variant.available == false %}
-                              disabled
-                            {% endif %}
-                          >
-                            <span>
-                              {%- if product.selected_or_first_available_variant.available -%}
-                                {{ 'products.product.add_to_cart' | t }}
-                              {%- else -%}
-                                {{ 'products.product.sold_out' | t }}
-                              {%- endif -%}
-                            </span>
-                            <div class="loading-overlay__spinner hidden">
-                              <svg
-                                aria-hidden="true"
-                                focusable="false"
-                                role="presentation"
-                                class="spinner"
-                                viewBox="0 0 66 66"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                              </svg>
-                            </div>
-                          </button>
-                          {%- if block.settings.show_dynamic_checkout -%}
-                            {{ form | payment_button }}
+                          <span>
+                            {%- if product.selected_or_first_available_variant.available -%}
+                              {{ 'products.product.add_to_cart' | t }}
+                            {%- else -%}
+                              {{ 'products.product.sold_out' | t }}
+                            {%- endif -%}
+                          </span>
+                          <div class="loading-overlay__spinner hidden">
+                            <svg
+                              aria-hidden="true"
+                              focusable="false"
+                              role="presentation"
+                              class="spinner"
+                              viewBox="0 0 66 66"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                            </svg>
+                          </div>
+                        </button>
+                        {%- if block.settings.show_dynamic_checkout -%}
+                          {{ form | payment_button }}
+                        {%- endif -%}
+                        <div class="hidden" style="display:none" id="atc-content-{{ section.id }}">
+                          {%- if product.selected_or_first_available_variant.available -%}
+                            {{ 'products.product.add_to_cart' | t }}
+                          {%- else -%}
+                            {{ 'products.product.sold_out' | t }}
                           {%- endif -%}
-                          <div class="hidden" style="display:none" id="atc-content-{{ section.id }}">
-                            {%- if product.selected_or_first_available_variant.available -%}
-                              {{ 'products.product.add_to_cart' | t }}
-                            {%- else -%}
-                              {{ 'products.product.sold_out' | t }}
-                            {%- endif -%}
-                          </div>
-                          <div class="hidden" style="display:none" id="atc-content-without-price-{{ section.id }}">
-                            {%- if product.selected_or_first_available_variant.available -%}
-                              {{ 'products.product.add_to_cart' | t }}
-                            {%- else -%}
-                              {{ 'products.product.sold_out' | t }}
-                            {%- endif -%}
-                          </div>
                         </div>
-                      {%- endform -%}
-                    </product-form>
-                    {% comment %} {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
+                        <div class="hidden" style="display:none" id="atc-content-without-price-{{ section.id }}">
+                          {%- if product.selected_or_first_available_variant.available -%}
+                            {{ 'products.product.add_to_cart' | t }}
+                          {%- else -%}
+                            {{ 'products.product.sold_out' | t }}
+                          {%- endif -%}
+                        </div>
+                      </div>
+                    {%- endform -%}
+                  </product-form>
+                  {% comment %} {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
 
                     {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities
                       | where: 'pick_up_enabled', true
