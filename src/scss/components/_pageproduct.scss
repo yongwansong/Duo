@@ -57,6 +57,23 @@
           text-transform: uppercase;
         }
       }
+
+      .product__accordion {
+        margin-top: 12px;
+      }
+    }
+
+    product-form {
+      margin-bottom: 0;
+    }
+
+    .info-shipping, .info-shipping p {
+      margin: 0;
+    }
+    .link-custom {
+      display: flex;
+      align-items: center;
+      margin: 12px 0 0;
     }
   }
 
@@ -67,6 +84,8 @@
   .product-gallery {
     .swiper-container {
       margin: initial;
+      position: sticky;
+      top: 60px;
     }
     .arrow-swiper {
       display: none;
@@ -124,6 +143,7 @@
     }
     
   }
+  
   
 }
 
