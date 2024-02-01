@@ -251,6 +251,14 @@ body .button--secondary{
   background-color: #E2EBF2;
 }
 
+.shopify-section-header-hidden .newheader{
+  background-color: transparent;
+}
+
+.shopify-section-header-hidden .header-wrapper{
+   background-color: transparent !important;
+}
+
 .page-width-desktop {
 	padding: 0;
 	margin: 0 auto;
@@ -1988,12 +1996,12 @@ input[type='checkbox'] {
 /* section-header */
 .endrock-header {
 	z-index: 3;
+    background-color: #E2EBF2
 }
 
 .shopify-section-header-sticky {
 	position: sticky;
 	top: 35px;
-	background-color: #FFF;
 }
 
 @media screen and (max-width: 768px) {
@@ -2005,6 +2013,7 @@ input[type='checkbox'] {
 .shopify-section-header-hidden {
 	/* transform: translateY(-100%); */
 	top: 0px;
+    background: transparent;
 }
 
 #shopify-section-header.animate {
@@ -2017,6 +2026,7 @@ input[type='checkbox'] {
 	position: relative;
 	background: #f2f2f2 !important;
 	border: none !important;
+    margin-top: 18px
 }
 
 .header-wrapper--border-bottom {
@@ -2798,6 +2808,12 @@ a.button.button--primary {
     line-height: normal;
     letter-spacing: 1.505px;
 	padding: 12.972px 21px 11px;
+    background-color: #000;
+    color: #fff;
+}
+
+a.button.button--primary:hover{
+  color: #000
 }
 
 a.button.button--primary:hover {
@@ -4844,11 +4860,20 @@ header {
 
 @media only screen and (max-width: 1250px){
   .header {
-      display: grid !important;
+    display: grid !important;
+	padding: 21px 36px 21px 24px!important;
   }
 
   .newheader {
       display: none;
+  }
+
+  .shopify-section-header-hidden .header-wrapper{
+	background-color: #f2f2f2!important
+  }
+
+  .header-wrapper{
+	margin: 0;
   }
 
 

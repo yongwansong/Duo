@@ -781,7 +781,7 @@
 
     connectedCallback() {
       this.header = document.querySelector('.endrock-header');
-      this.scrollableNav = document.getElementById('shopify-section-scrollable-nav');
+      this.scrollableNav = document.querySelector('.endrock-announcement-bar');
       this.headerBounds = {};
 
       this.headerHeight = (window.innerWidth < 768 ? this.scrollableNav.offsetHeight : this.header.offsetHeight)

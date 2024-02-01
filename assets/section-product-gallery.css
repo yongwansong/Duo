@@ -44,6 +44,11 @@
     min-height: 0;
     line-height: 1;
     color: #ffffff;
+    background: #000;
+}
+
+.product-gallery-wrapper .product-wrapper .button:hover{
+  color: #000;
 }
 
 .product-gallery-wrapper .product-wrapper .description p{
@@ -201,6 +206,7 @@
         background: transparent;
         z-index: 1;
         right: 50px;
+        left: 30px;
         transform: unset;
     }
 
@@ -232,10 +238,7 @@
 
     .product-gallery-wrapper .swiper-button-wrapper{
         gap: 16px;
-    }
-
-    .product-gallery-wrapper .swiper-container{
-        padding-top: 64px;
+        display: none;
     }
 
     .product-gallery-wrapper .swiper-button-next, .product-gallery-wrapper .swiper-button-prev{

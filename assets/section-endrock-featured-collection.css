@@ -159,6 +159,10 @@
         margin-bottom: 32px;
     }
 
+    .endrock-featured-collection__wrapper{
+        padding: 0;
+    }
+
     .endrock-featured-collection .hover_image{
         display: none!important;
     }
@@ -169,10 +173,6 @@
 
     .custom_product_image img{
         display: block!important;
-    }
-
-    .endrock-featured-collection__wrapper{
-        padding: 0 10px 64px;
     }
 
     .endrock-featured-collection .products_wrapper:not(.swiper-wrapper){

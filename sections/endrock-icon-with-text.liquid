@@ -17,18 +17,42 @@
 
 <div id="section--{{ section.id }}">
     <div class="endrock-icon-with-text {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">
-        <div class="icon-with-text__wrapper">
-            {% for block in section.blocks %}
-                <div class="iwt-item">
-                    <span class="iwt-item__heading">{{ block.settings.heading }}</span>
-                    {%- if block.settings.icon != blank -%}
-                        <div class="iwt-item__icon">{{ block.settings.icon }}</div>
-                    {%- endif -%}
-                </div>
-            {% endfor %}
+        <div class="swiper-container endrock-icon-with-text-wrapper">
+            <div class="swiper-wrapper icon-with-text__wrapper">
+                {% for block in section.blocks %}
+                    <div class="iwt-item swiper-slide">
+                        <span class="iwt-item__heading">{{ block.settings.heading }}</span>
+                        {%- if block.settings.icon != blank -%}
+                            <div class="iwt-item__icon">{{ block.settings.icon }}</div>
+                        {%- endif -%}
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
+
+<script>
+    if(window.screen.width < 767){
+        const iconsSwiper = new Swiper('.endrock-icon-with-text .endrock-icon-with-text-wrapper', {
+            direction: 'horizontal',
+            slidesPerView:2,
+            loop: true,
+            loopedSlides: 2,
+            speed: 1000,
+            autoplay: {
+                delay: 0,
+            },
+        });
+
+        function handleFocus(e, i) {
+            iconsSwiper.slideTo(i);
+        }
+
+        const iconsSliders = document.querySelectorAll('.endrock-icon-with-text .swiper-container .swiper-slide');
+        iconsSliders.forEach((slide, i) => slide.addEventListener('focusin', (e) => handleFocus(e, i)));
+    }
+</script>
 
 {% schema %}
     {

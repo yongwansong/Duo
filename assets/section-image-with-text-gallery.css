@@ -249,6 +249,19 @@
 
     .prefix-with-dots{
         flex-direction: column;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
+        align-items: baseline;
+    }
+
+    .gallery_swiper_buttons{
+        display: none;
+    }
+
+    .image-with-text__gallery{
+        padding: 0!important;
+    }
+
+    .prefix-with-dots .dots-wrapper{
+        padding-left: 27px;
     }
 }
