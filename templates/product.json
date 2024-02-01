@@ -37,6 +37,20 @@
             "show_dynamic_checkout": false
           }
         },
+        "options_shipping_H4DGYX": {
+          "type": "options_shipping",
+          "settings": {
+            "returned_info": "+ 100% Guaranteed - return for full refund if not satisfied",
+            "free_shipping_info": "+ Free shipping on orders over $25",
+            "show_time_delivery": true
+          }
+        },
+        "link_customization_KqLxw6": {
+          "type": "link_customization",
+          "settings": {
+            "link_custom": "<p>Do you want to create your own Duo combination?<\/p>"
+          }
+        },
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
@@ -63,6 +77,8 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "options_shipping_H4DGYX",
+        "link_customization_KqLxw6",
         "collapsible-row-0",
         "collapsible-row-1"
       ],
