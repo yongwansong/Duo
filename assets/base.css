@@ -2005,6 +2005,7 @@ input[type='checkbox'] {
 .shopify-section-header-hidden {
 	/* transform: translateY(-100%); */
 	top: 0px;
+    background: transparent;
 }
 
 #shopify-section-header.animate {
