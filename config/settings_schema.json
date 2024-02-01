@@ -429,6 +429,72 @@
         "id": "cart_drawer_collection_title_empty",
         "label": "Recommendation title when cart is empty",
         "default": "Recommended for you"
+      },
+      {
+        "type": "header",
+        "content": "Sidecart Gamification"
+      },
+      {
+        "type": "product",
+        "id": "gamification_free_gift",
+        "label": "Gamification Free Gift"
+      },
+      {
+        "type": "text",
+        "id": "gamification_discount",
+        "label": "Gamification Discount Code",
+        "default": "10OFFGAMIFICATION"
+      },
+      {
+        "type": "text",
+        "id": "first_goal_name",
+        "label": "First Goal Name",
+        "default": "Free Shipping"
+      },
+      {
+        "type": "text",
+        "id": "second_goal_name",
+        "label": "Second Goal Name",
+        "default": "Free Gift"
+      },
+      {
+        "type": "text",
+        "id": "third_goal_name",
+        "label": "Third Goal Name",
+        "default": "10% Off"
+      },
+      {
+        "type": "image_picker",
+        "id": "first_goal_image",
+        "label": "First Goal Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "second_goal_image",
+        "label": "Second Goal Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "third_goal_image",
+        "label": "Third Goal Image"
+      },
+      {
+        "type": "number",
+        "id": "first_goal_price",
+        "label": "First Goal Price",
+        "default": 20
+      },
+      {
+        "type": "number",
+        "id": "second_goal_price",
+        "label": "Second Goal Price",
+        "default": 50
+      },
+      {
+        "type": "number",
+        "id": "third_goal_price",
+        "label": "Third Goal Price",
+        "default": 90
       }
     ]
   }

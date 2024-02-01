@@ -59,6 +59,7 @@
         {%- assign product_to_be_added_to_cart = section.settings.product_to_be_added_to_cart -%}
         {%- if product_to_be_added_to_cart != blank
           and product_to_be_added_to_cart.selected_or_first_available_variant.available
+          and product_to_be_added_to_cart.id != settings.gamification_free_gift.id
         -%}
           <div class="pdp-attributes__atc">
             {%- assign product_form_id = 'product-add-'
