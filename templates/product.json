@@ -54,24 +54,6 @@
             "page": "",
             "icon": "truck"
           }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Dimensions",
-            "content": "",
-            "page": "",
-            "icon": "ruler"
-          }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Care Instructions",
-            "content": "",
-            "page": "",
-            "icon": "heart"
-          }
         }
       },
       "block_order": [
@@ -82,9 +64,7 @@
         "quantity_selector",
         "buy_buttons",
         "collapsible-row-0",
-        "collapsible-row-1",
-        "collapsible-row-2",
-        "collapsible-row-3"
+        "collapsible-row-1"
       ],
       "settings": {
         "product_color": "",
