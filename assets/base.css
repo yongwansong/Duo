@@ -2808,6 +2808,12 @@ a.button.button--primary {
     line-height: normal;
     letter-spacing: 1.505px;
 	padding: 12.972px 21px 11px;
+    background-color: #000;
+    color: #fff;
+}
+
+a.button.button--primary:hover{
+  color: #ffffff
 }
 
 a.button.button--primary:hover {
