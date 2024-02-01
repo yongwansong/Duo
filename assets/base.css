@@ -2017,6 +2017,7 @@ input[type='checkbox'] {
 	position: relative;
 	background: #f2f2f2 !important;
 	border: none !important;
+    margin-top: 18px
 }
 
 .header-wrapper--border-bottom {
