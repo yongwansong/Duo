@@ -5,10 +5,13 @@
 {{ 'component-rte.css' | asset_url | stylesheet_tag }}
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{{ 'endrock.styles-product.css' | asset_url | stylesheet_tag }}
 
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+{% render 'head-fonts' %}
 
 {%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
 {%- if first_3d_model -%}
@@ -39,87 +42,11 @@
 {%- endif -%}
 <section class="main-product">
   <div class="page-width">
+    {% render 'breadcrumbs' %}
     <div class="product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
-      <div class="grid__item product__media-wrapper" id="product__media-{{ section.id }}">
-        <div class="product-media__slides-wrapper">
-          <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
-            {{ 'accessibility.skip_to_product_info' | t }}
-          </a>
-          <div
-            class="product-media__slides product__media-list slick-slider"
-          >
-            {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
-			{%- liquid
-				assign media_offset = 0
-				if product.handle == 'original' or product.handle == 'energy' or product.handle == 'immunity' or product.handle == 'sleep'
-					assign media_offset = 3
-					assign media_ratio = 135.7
-				endif
-
-				if product.handle == 'immunity'
-					assign media_ratio = 130.5
-				endif
-			-%}
-            {%- for media in product.media offset: media_offset -%}
-              {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
-                <div
-                  class="slick-slide product__media-item {% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}"
-                  data-media-id="{{ section.id }}-{{ media.id }}"
-                >
-                  <div
-                    class="product__media media media--transparent"
-                    style="padding-top: {% if media_ratio != blank %}{{ media_ratio }}{% else %}{{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}{% endif %}%;"
-                  >
-					{%- capture sizes -%}
-					(min-width: 1205px) {{ 1205 | times: 0.532 | round }}px, (min-width: 845px) calc((100vw - 8rem) / 2), (min-width: 750px) calc(100vw - 10rem), calc(100vw - 4rem)
-					{%- endcapture -%}
-					{%- liquid
-						assign crop_top = 24
-						assign crop_left = 24
-						unless forloop.first
-							assign lazy_load = 'lazy'
-							assign crop_top = 24
-							assign crop_left = 110
-						endunless
-					-%}
-					{%- if media_offset == 3  -%}
-						{{ media.preview_image | image_url: width: 1851, crop: 'region', crop_width: 1851, crop_height: 2480, crop_top: crop_top, crop_left: crop_left | image_tag:
-							loading: lazy_load,
-							sizes: sizes,
-							widths: '246, 493, 642, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1851'
-						}}
-					{%- else -%}
-						{{ media.preview_image | image_url: width: 1851 | image_tag:
-							loading: lazy_load,
-							sizes: sizes,
-							widths: '246, 493, 642, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1851'
-						}}
-					{%- endif -%}
-                  </div>
-                </div>
-              {%- endunless -%}
-            {%- endfor -%}
-          </div>
-          <div class="product-media__arrows"></div>
-        </div>
-        <div class="product-media__dots-wrapper">
-          <p>Swipe for ingredients</p>
-          <div class="product-media__dots"></div>
-        </div>
-        {%- if first_3d_model -%}
-          <button
-            class="button button--full-width product__xr-button"
-            type="button"
-            aria-label="{{ 'products.product.xr_button_label' | t }}"
-            data-shopify-xr
-            data-shopify-model3d-id="{{ first_3d_model.id }}"
-            data-shopify-title="{{ product.title | escape }}"
-            data-shopify-xr-hidden
-          >
-            {% render 'icon-3d-model' %}
-            {{ 'products.product.xr_button' | t }}
-          </button>
-        {%- endif -%}
+      <div class="grid__item product__media-wrapper product-gallery" id="product__media-{{ section.id }}">
+        {% comment %} product media {% endcomment %}
+        {% render 'product-medias' %}
       </div>
       <div class="product__info-wrapper grid__item">
         <div
@@ -134,8 +61,8 @@
                 {% render block %}
               {%- when 'text' -%}
 					<p
-					class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
-					{{ block.shopify_attributes }}
+					  class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+					  {{ block.shopify_attributes }}
 					>
 					{{- block.settings.text -}}
 					</p>
@@ -763,7 +690,7 @@
 {
   "name": "t:sections.main-product.name",
   "tag": "section",
-  "class": "product-section spaced-section",
+  "class": "product-section spaced-section endrock-product",
   "blocks": [
     {
       "type": "@app"
