@@ -44,6 +44,7 @@
     min-height: 0;
     line-height: 1;
     color: #ffffff;
+    background: #000;
 }
 
 .product-gallery-wrapper .product-wrapper .description p{
