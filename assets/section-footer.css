@@ -92,6 +92,10 @@ button.accordion:after{
     display: none;
   }
 
+  .footer {
+    padding: 29px 0 45px;
+  }
+
   .footer__content-bottom-wrapper {
     flex-wrap: wrap;
     row-gap: 1.5rem;
