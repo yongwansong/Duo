@@ -256,7 +256,7 @@ body .button--secondary{
 }
 
 .shopify-section-header-hidden .header-wrapper{
-   background-color: transparent;
+   background-color: transparent !important;
 }
 
 .page-width-desktop {
