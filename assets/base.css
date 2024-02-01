@@ -251,6 +251,10 @@ body .button--secondary{
   background-color: #E2EBF2;
 }
 
+.shopify-section-header-hidden .newheader{
+  background-color: transparent;
+}
+
 .page-width-desktop {
 	padding: 0;
 	margin: 0 auto;
