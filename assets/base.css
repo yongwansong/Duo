@@ -4855,6 +4855,7 @@ header {
 @media only screen and (max-width: 1250px){
   .header {
       display: grid !important;
+      background-color: #ffffff;
   }
 
   .newheader {
