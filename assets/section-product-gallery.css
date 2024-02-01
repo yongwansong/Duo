@@ -47,6 +47,10 @@
     background: #000;
 }
 
+.product-gallery-wrapper .product-wrapper .button:hover{
+  color: #000;
+}
+
 .product-gallery-wrapper .product-wrapper .description p{
     color: #000;
     font-family: "OldschoolGrotesk-Regular";
