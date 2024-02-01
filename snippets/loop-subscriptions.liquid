@@ -7,6 +7,8 @@
 	If you need to make change, please do it using our standard widget design settings or create a custom widget design in LOOP SUBSCRIPTIONS app.
 {% endcomment %}
 
+<div class='loop-display-none'>Rendering loop-subscriptions</div>
+
 {%- if type contains 'product-widget' -%}
 	{%- if content_for_header contains 'loop_snippets' -%}
 		{% render 'loop-widget-standard' type: 'product-widget', product: product %}
@@ -26,3 +28,5 @@
 		<button class="btn" style="padding: 10px 20px;margin:0 0 20px 0">My Subscriptions</button>
 	</a>
 {%- endif -%}
+<style class="loop-style"> {% render 'loop-widget.css.liquid' %} </style>
+
