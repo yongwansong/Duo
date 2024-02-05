@@ -26,11 +26,6 @@
             "picker_type": "button"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -75,7 +70,6 @@
         "caption",
         "description",
         "variant_picker",
-        "quantity_selector",
         "buy_buttons",
         "options_shipping_H4DGYX",
         "link_customization_KqLxw6",
