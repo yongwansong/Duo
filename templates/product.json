@@ -70,7 +70,7 @@
         "collapsible-row-1"
       ],
       "settings": {
-        "product_color": "",
+        "product_color": "{{ product.metafields.duo.product_color.value }}",
         "enable_sticky_info": true,
         "hide_variants": true,
         "enable_video_looping": false,
