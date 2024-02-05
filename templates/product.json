@@ -20,12 +20,6 @@
           "settings": {
           }
         },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -69,7 +63,6 @@
         "title",
         "caption",
         "description",
-        "variant_picker",
         "buy_buttons",
         "options_shipping_H4DGYX",
         "link_customization_KqLxw6",
