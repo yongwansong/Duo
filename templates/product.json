@@ -191,18 +191,29 @@
             "heading": "How to brush with Duo"
           }
         },
+        "steps_mcdxHq": {
+          "type": "steps",
+          "settings": {
+            "title_step": "How to brush with Duo",
+            "step1": "Crush a tablet between your teeth",
+            "step2": "Wet your toothbrush",
+            "step3": "Brush to activate foam",
+            "step4": "Rinse and smile"
+          }
+        },
         "button_AmLq7L": {
           "type": "button",
           "settings": {
             "button_label": "",
             "button_link": "",
-            "text_link_extra": "explore bundles",
+            "text_link_extra": "watch explainer video",
             "link_extra": "shopify:\/\/products\/energy"
           }
         }
       },
       "block_order": [
         "heading_Bx4JpP",
+        "steps_mcdxHq",
         "button_AmLq7L"
       ],
       "settings": {
