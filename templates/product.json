@@ -221,12 +221,48 @@
         "height": "adapt",
         "layout": "image_first"
       }
+    },
+    "dual_section_C4yyiR": {
+      "type": "dual-section",
+      "blocks": {
+        "heading_Fm9xfn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Plastic-free made easy"
+          }
+        },
+        "text_ery7AF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Save up to 33% and lower your carbon footprint with subscription refills (in compostable pouches) delivered right on time.<\/p>"
+          }
+        },
+        "button_aGdDgy": {
+          "type": "button",
+          "settings": {
+            "button_label": "ORDER YOUR REFILL",
+            "button_link": "shopify:\/\/products\/energy",
+            "text_link_extra": "explore bundles",
+            "link_extra": "shopify:\/\/pages\/about-nha"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Fm9xfn",
+        "text_ery7AF",
+        "button_aGdDgy"
+      ],
+      "settings": {
+        "height": "adapt",
+        "layout": "image_first"
+      }
     }
   },
   "order": [
     "main",
     "related-products",
     "dual_section_Db4edk",
-    "dual_section_c7rdPc"
+    "dual_section_c7rdPc",
+    "dual_section_C4yyiR"
   ]
 }
