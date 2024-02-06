@@ -254,8 +254,9 @@
         "button_aGdDgy"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/6cf0501f28a4555cc7e25e6629d46abe.jpg",
         "height": "adapt",
-        "layout": "image_first"
+        "layout": "text_first"
       }
     }
   },
