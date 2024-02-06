@@ -30,8 +30,15 @@
           "type": "options_shipping",
           "settings": {
             "returned_info": "+ 100% Guaranteed - return for full refund if not satisfied",
-            "free_shipping_info": "+ Free shipping on orders over $25",
-            "show_time_delivery": true
+            "free_shipping_info": "+ Free shipping on orders over $25"
+          }
+        },
+        "order_by_message_gFTdHq": {
+          "type": "order-by-message",
+          "settings": {
+            "min_days": 5,
+            "max_days": 12,
+            "order_by_message": "Order today and receive by:"
           }
         },
         "link_customization_KqLxw6": {
@@ -65,6 +72,7 @@
         "description",
         "buy_buttons",
         "options_shipping_H4DGYX",
+        "order_by_message_gFTdHq",
         "link_customization_KqLxw6",
         "collapsible-row-0",
         "collapsible-row-1"
