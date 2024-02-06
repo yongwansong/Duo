@@ -1,5 +1,66 @@
 .dual-section-endrock {
-  .steps-container {
-    border: 1px solid red;
+
+  .image-with-text__content {
+    gap: 0;
+    padding: 40px 120px;
+    .steps-container {
+    }
+  
+  
+    .image-with-text__text.rte {
+  
+      margin-top: 15px;
+      p {
+        color: #000;
+        font-family: "OldschoolGrotesk-Regular";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        text-align: left;
+      }
+    }
+
+    .product__accordion {
+      width: 100%;
+    }
+
+    .link_button-page {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+
+      .button-er {
+        color: #fff;
+        font-family: 'OldschoolGrotesk-Medium';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -.24px;
+        padding: 12.972px 0 11px;
+        justify-content: center;
+        align-items: center;
+        gap: 9.979px;
+        display: flex;
+        background: #000;
+        text-decoration: none;
+        width: 50%;
+        line-height: 1;
+      }
+  
+      .link-er {
+        color: #000;
+        font-family: OldschoolGrotesk-Medium;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 560;
+        line-height: 24px;
+        letter-spacing: -.18px;
+        width: 50%;
+      }
+    }
+    
   }
+  
 }

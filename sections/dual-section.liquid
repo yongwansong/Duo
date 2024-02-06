@@ -1,6 +1,6 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 
-<div class="image-with-text {% if section.settings.full_width %}image-with-text--full-width{% else %}page-width{% endif %}">
+<div class="image-with-text image-with-text--full-width">
   <div class="image-with-text__grid grid grid--gapless grid--1-col grid--2-col-tablet gradient{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
     <div class="grid__item">
       <div class="image-with-text__media image-with-text__media--{{ section.settings.height }} {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}"
@@ -29,16 +29,19 @@
           {% case block.type %}
             {%- when 'heading' -%}
               <h2 class="image-with-text__heading h1" {{ block.shopify_attributes }}>
+                {% if block.settings.icon_title %}
+                  <img src="{{ block.settings.icon_title | image_url }}" alt="">
+                {% endif %}
                 {{ block.settings.heading | escape }}
               </h2>
             {%- when 'text' -%}
               <div class="image-with-text__text rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
             {% when 'steps' %}
               <div class="steps-container">
-                {{ block.settings.step1 | escape }}
-                {{ block.settings.step2 | escape }}
-                {{ block.settings.step3 | escape }}
-                {{ block.settings.step4 | escape }}
+                1 - {{ block.settings.step1 | escape }}
+                2 - {{ block.settings.step2 | escape }}
+                3 - {{ block.settings.step3 | escape }}
+                4 - {{ block.settings.step4 | escape }}
               </div>
             {%- when 'collapsible_tab' -%}
               <div class="product__accordion accordion" {{ block.shopify_attributes }}>
@@ -87,13 +90,13 @@
               {%- when 'button' -%}
                 <div class="link_button-page">	
                     {%- if block.settings.button_label != blank -%}
-                      <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button-custom button--primary" {{ block.shopify_attributes }}>
+                      <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button-er custom_button  button--secondary" {{ block.shopify_attributes }}>
                         {{ block.settings.button_label | escape }}
                       </a>
                     {%- endif -%}
 
                     {% if block.settings.text_link_extra != blank and block.settings.link_extra %}
-                      <a href="{{ block.settings.link_extra }}">{{ block.settings.text_link_extra }}</a>
+                      <a href="{{ block.settings.link_extra }}" class="link-er custom_button button--primary">{{ block.settings.text_link_extra }}</a>
                     {% endif %}
                   </div>  
             {%- endcase -%}
@@ -165,6 +168,11 @@
           "id": "heading",
           "default": "Image with text",
           "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_title",
+          "label": "Icon title"
         }
       ]
     },
