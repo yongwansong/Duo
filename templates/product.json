@@ -144,13 +144,25 @@
             "page": "",
             "icon": "none"
           }
+        },
+        "collapsible_tab_XMamqm": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible tab3",
+            "content": "",
+            "content_comparation_duo": "",
+            "content_comparation_suplement": "",
+            "page": "",
+            "icon": "none"
+          }
         }
       },
       "block_order": [
         "heading_PUXr4L",
         "text_mN3DBR",
         "collapsible_tab_AieTix",
-        "collapsible_tab_fp4GqX"
+        "collapsible_tab_fp4GqX",
+        "collapsible_tab_XMamqm"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/cc346525cc563de04de5e321261e8eb6.jpg",
