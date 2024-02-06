@@ -180,6 +180,23 @@
                           <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
                             {{ block.settings.content }}
                             {{ block.settings.page.content }}
+
+                            {% if block.settings.content_comparation_duo != blank or block.settings.content_comparation_suplement != blank %}
+                              <div class="comparation-dropdown">
+                                <div class="comparation-dropdown__container-duo">
+                                  duo
+                                  <div class="comparation-dropdown__list-duo">
+                                    {{ block.settings.content_comparation_duo }}
+                                  </div>
+                                </div>
+                                <div class="comparation-dropdown__conatiner-suplement">
+                                  Standard Supplement Pills
+                                  <div class="comparation-dropdown__list-suplement">
+                                    {{ block.settings.content_comparation_suplement }}
+                                  </div>
+                                </div>
+                              </div>
+                            {% endif %}
                           </div>
                         </details>
                       </div>
@@ -914,6 +931,16 @@
           "type": "richtext",
           "id": "content",
           "label": "t:sections.main-product.blocks.collapsible_tab.settings.content.label"
+        },
+        {
+          "type": "richtext",
+          "id": "content_comparation_duo",
+          "label": "Comparation duo"
+        },
+        {
+          "type": "richtext",
+          "id": "content_comparation_suplement",
+          "label": "Comparation suplement"
         },
         {
           "type": "page",
