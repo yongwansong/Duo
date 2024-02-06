@@ -50,8 +50,10 @@
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Inside the tablet",
-            "content": "<p>cognitive performanceDNA synthesis and cellular energy productioncalms the nervesremineralizes teethpromotes saliva productionnatural polishnatural polishprovides structure to tabletsprotects against dry mouthvegetable-derived powder lubricantnatural polish cooling, soothing sensationnatural flavoranti-inflammatory and antioxidantprevent gingivitis and oral cancercavity-fighting plant extract<\/p>",
+            "heading": "{{ product.metafields.dropdown.dropdown_table_title.value }}",
+            "content": "<p>{{ product.metafields.dropdown.dropdown_table_list | metafield_tag }}<\/p>",
+            "content_comparation_duo": "",
+            "content_comparation_suplement": "",
             "page": "",
             "icon": "none"
           }
@@ -61,6 +63,8 @@
           "settings": {
             "heading": "How Duo supplements work",
             "content": "<p>Our mouths absorb nutrients directly into the bloodstream. That’s the key to the efficient bio-availability of the vitamins and supplements in Duo, added for convenience and health.<\/p>",
+            "content_comparation_duo": "",
+            "content_comparation_suplement": "",
             "page": "",
             "icon": "none"
           }
