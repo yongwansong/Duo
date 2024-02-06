@@ -114,13 +114,18 @@
         "heading_PUXr4L": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text"
+            "heading": "Clean Ingredients"
           }
         },
-        "text_ezLJCB": {
-          "type": "text",
+        "collapsible_tab_AieTix": {
+          "type": "collapsible_tab",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            "heading": "Collapsible tab",
+            "content": "<p>awdawdawd waadwdawdawda<\/p>",
+            "content_comparation_duo": "",
+            "content_comparation_suplement": "",
+            "page": "",
+            "icon": "check_mark"
           }
         },
         "button_N4aUX6": {
@@ -135,7 +140,7 @@
       },
       "block_order": [
         "heading_PUXr4L",
-        "text_ezLJCB",
+        "collapsible_tab_AieTix",
         "button_N4aUX6"
       ],
       "settings": {
