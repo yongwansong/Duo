@@ -149,6 +149,17 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Collapsible tab3",
+            "content": "<p>dawdawd awdaw dawdaw awdawdwadaw dawdaw<\/p>",
+            "content_comparation_duo": "",
+            "content_comparation_suplement": "",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "collapsible_tab_xLp9aC": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible tab",
             "content": "",
             "content_comparation_duo": "",
             "content_comparation_suplement": "",
@@ -162,7 +173,8 @@
         "text_mN3DBR",
         "collapsible_tab_AieTix",
         "collapsible_tab_fp4GqX",
-        "collapsible_tab_XMamqm"
+        "collapsible_tab_XMamqm",
+        "collapsible_tab_xLp9aC"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/cc346525cc563de04de5e321261e8eb6.jpg",
