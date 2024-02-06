@@ -790,7 +790,7 @@ a.product__text {
 	}
 }
 .product__accordion .accordion__content {
-	padding: 0 1rem;
+	/* padding: 0 1rem; */
 }
 
 .product .price {
