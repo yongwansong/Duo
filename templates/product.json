@@ -61,10 +61,10 @@
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "How Duo supplements work",
-            "content": "<p>Our mouths absorb nutrients directly into the bloodstream. That’s the key to the efficient bio-availability of the vitamins and supplements in Duo, added for convenience and health.<\/p>",
-            "content_comparation_duo": "",
-            "content_comparation_suplement": "",
+            "heading": "{{ product.metafields.dropdown.dropdown_standard_comparation_title.value }}",
+            "content": "<p>{{ product.metafields.dropdown.dropdown_standard_comparation_title.value }}<\/p>",
+            "content_comparation_duo": "<p>{{ product.metafields.dropdown.dropdown_standard_comparation_list_duo | metafield_tag }}<\/p>",
+            "content_comparation_suplement": "<p>{{ product.metafields.dropdown.dropdown_standard_comparation_list_suplement | metafield_tag }}<\/p>",
             "page": "",
             "icon": "none"
           }
