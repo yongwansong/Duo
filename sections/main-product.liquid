@@ -609,12 +609,6 @@
                 <div class="info-shipping">
                   <p> {{ block.settings.returned_info }}</p>
                   <p> {{ block.settings.free_shipping_info }}</p>
-
-                  {% if block.settings.show_time_delivery %}
-                    <div class="show-delivery-time">
-                      Order today and receive by January 13 - 16
-                    </div>
-                  {% endif %}
                 </div>
               {%- when 'link_customization' -%}
                 <div class="link-custom">
@@ -1136,12 +1130,6 @@
           "label": "Info free shipping",
           "id": "free_shipping_info",
           "default": "+ Free shipping on orders over $25"
-        },
-        {
-          "type": "checkbox",
-          "label": "Show time delivery",
-          "id": "show_time_delivery",
-          "default": true
         }
       ]
     },
