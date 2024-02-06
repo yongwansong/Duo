@@ -181,11 +181,40 @@
         "height": "adapt",
         "layout": "text_first"
       }
+    },
+    "dual_section_c7rdPc": {
+      "type": "dual-section",
+      "blocks": {
+        "heading_Bx4JpP": {
+          "type": "heading",
+          "settings": {
+            "heading": "How to brush with Duo"
+          }
+        },
+        "button_AmLq7L": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "text_link_extra": "explore bundles",
+            "link_extra": "shopify:\/\/products\/energy"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Bx4JpP",
+        "button_AmLq7L"
+      ],
+      "settings": {
+        "height": "adapt",
+        "layout": "image_first"
+      }
     }
   },
   "order": [
     "main",
     "related-products",
-    "dual_section_Db4edk"
+    "dual_section_Db4edk",
+    "dual_section_c7rdPc"
   ]
 }
