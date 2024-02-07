@@ -64,42 +64,45 @@
                 </div>
               </div>
             {%- when 'collapsible_tab' -%}
-              <div class="product__accordion accordion" {{ block.shopify_attributes }}>
-                <details id="Details-{{ block.id }}-{{ section.id }}">
-                  <summary>
-                    <div class="summary__title">
-                      {% render 'icon-accordion', icon: block.settings.icon %}
-                      <h2 class="h4 accordion__title">
-                        {{ block.settings.heading | default: block.settings.page.title }}
-                      </h2>
-                    </div>
-                    {% render 'icon-caret' %}
-                  </summary>
-                  <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                    {% assign content = block.settings.content | strip_html %}
-                    {% if content contains '|' %}
-                      {% render 'list-content'
-                        content: content
-                      %}
-                    {% elsif  content contains '/' %}
-                      {% render 'list-content-check'
-                        content: content
-                      %}
-                    {% else %}
-                      <div class="description-dorpdown">
-                        {{ block.settings.content }}
+              {% if block.settings.heading != blank or block.settings.content != blank %}
+                 <div class="product__accordion accordion" {{ block.shopify_attributes }}>
+                  <details id="Details-{{ block.id }}-{{ section.id }}">
+                    <summary>
+                      <div class="summary__title">
+                        {% render 'icon-accordion', icon: block.settings.icon %}
+                        <h2 class="h4 accordion__title">
+                          {{ block.settings.heading | default: block.settings.page.title }}
+                        </h2>
                       </div>
-                    {% endif %}
-                    {{ block.settings.page.content }}
+                      {% render 'icon-caret' %}
+                    </summary>
+                    <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                      {% assign content = block.settings.content | strip_html %}
+                      {% if content contains '|' %}
+                        {% render 'list-content'
+                          content: content
+                        %}
+                      {% elsif  content contains '/' %}
+                        {% render 'list-content-check'
+                          content: content
+                        %}
+                      {% else %}
+                        <div class="description-dorpdown">
+                          {{ block.settings.content }}
+                        </div>
+                      {% endif %}
+                      {{ block.settings.page.content }}
 
-                    {% if block.settings.content_comparation_duo != blank or block.settings.content_comparation_suplement != blank %}
-                      {% render 'content-comparation'
-                        block: block
-                      %}
-                    {% endif %}
-                  </div>
-                </details>
-              </div>
+                      {% if block.settings.content_comparation_duo != blank or block.settings.content_comparation_suplement != blank %}
+                        {% render 'content-comparation'
+                          block: block
+                        %}
+                      {% endif %}
+                    </div>
+                  </details>
+                </div>
+              {% endif %}
+             
               
           {%- endcase -%}
         {%- endfor -%}

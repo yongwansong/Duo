@@ -1,0 +1,58 @@
+.image-banner-product {
+  max-height: 460px;
+  height: 100%;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 140px;
+    height: 100%;
+    padding-bottom: 62px;
+    padding-top: 62px;
+    position: relative;
+  }
+
+  &__title {
+    font-family: "OldschoolGrotesk-Regular";
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 60px; /* 107.143% */
+    letter-spacing: -0.84px;
+  }
+  &__description p {
+    font-family: "OldschoolGrotesk-Regular";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 173.333% */
+  }
+
+  &__logos-aditional {
+    position: absolute;
+    right: 0;
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+
+    .text-sign {
+      display: flex;
+      position: absolute;
+      bottom: 5px;
+      width: 100%;
+      justify-content: space-around;
+      p {
+        color: #000;
+        text-align: center;
+        font-family: 'OldschoolGrotesk-Regular';
+        font-size: 8px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.16px;
+      }
+    }
+  }
+}
