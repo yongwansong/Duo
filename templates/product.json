@@ -131,6 +131,14 @@
             "row_icon_description": "",
             "row_icon_image": "shopify:\/\/shop_images\/3365979_basil_bay_leaves_herbal_herbs_mint_icon_1.svg"
           }
+        },
+        "icon_yNdEJH": {
+          "type": "icon",
+          "settings": {
+            "heading": "Fluoride-free",
+            "row_icon_description": "",
+            "row_icon_image": "shopify:\/\/shop_images\/Fluroid_Free_Icon_9f88b4cf-9282-43c9-bbfb-0f61f16f4ae9.svg"
+          }
         }
       },
       "block_order": [
@@ -138,7 +146,8 @@
         "icon_mgKz4P",
         "icon_DUTxUJ",
         "icon_tBfrzf",
-        "icon_zFdBqq"
+        "icon_zFdBqq",
+        "icon_yNdEJH"
       ],
       "settings": {
         "heading": "",
