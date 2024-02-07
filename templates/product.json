@@ -127,8 +127,9 @@
         "icon_zFdBqq": {
           "type": "icon",
           "settings": {
-            "heading": "Icon",
-            "row_icon_description": "<p>Lorem ipsum letto<\/p>"
+            "heading": "Non-Toxic",
+            "row_icon_description": "",
+            "row_icon_image": "shopify:\/\/shop_images\/3365979_basil_bay_leaves_herbal_herbs_mint_icon_1.svg"
           }
         }
       },
