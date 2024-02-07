@@ -148,8 +148,8 @@
         "collapsible_tab_XMamqm": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible tab3",
-            "content": "<p>dawdawd awdaw dawdaw awdawdwadaw dawdaw<\/p>",
+            "heading": "{{ product.metafields.dual.section_ingredients_question3.value }}",
+            "content": "{{ product.metafields.dual.section_ingredients_response3 | metafield_tag }}",
             "content_comparation_duo": "",
             "content_comparation_suplement": "",
             "page": "",
