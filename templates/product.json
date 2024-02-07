@@ -89,6 +89,52 @@
         "product_cta": ""
       }
     },
+    "icon_rows_endrock_8hFeaR": {
+      "type": "icon-rows-endrock",
+      "blocks": {
+        "icon_mgKz4P": {
+          "type": "icon",
+          "settings": {
+            "heading": "Icon",
+            "row_icon_description": "<p>Lorem ipsum letto<\/p>"
+          }
+        },
+        "icon_DUTxUJ": {
+          "type": "icon",
+          "settings": {
+            "heading": "Icon",
+            "row_icon_description": "<p>Lorem ipsum letto<\/p>"
+          }
+        },
+        "icon_tBfrzf": {
+          "type": "icon",
+          "settings": {
+            "heading": "Icon",
+            "row_icon_description": "<p>Lorem ipsum letto<\/p>"
+          }
+        },
+        "icon_zFdBqq": {
+          "type": "icon",
+          "settings": {
+            "heading": "Icon",
+            "row_icon_description": "<p>Lorem ipsum letto<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "icon_mgKz4P",
+        "icon_DUTxUJ",
+        "icon_tBfrzf",
+        "icon_zFdBqq"
+      ],
+      "settings": {
+        "heading": "",
+        "footer_text": "Doux pour la peaux, doux pour la planète",
+        "slider_mobile": false,
+        "section_margin": true,
+        "width_section": "full-width"
+      }
+    },
     "image_banner_endrock_ANjnMy": {
       "type": "image-banner-endrock",
       "settings": {
@@ -273,6 +319,7 @@
   },
   "order": [
     "main",
+    "icon_rows_endrock_8hFeaR",
     "image_banner_endrock_ANjnMy",
     "related-products",
     "dual_section_Db4edk",
