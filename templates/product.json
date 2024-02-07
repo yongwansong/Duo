@@ -103,8 +103,9 @@
         "icon_mgKz4P": {
           "type": "icon",
           "settings": {
-            "heading": "Icon",
-            "row_icon_description": "<p>Lorem ipsum letto<\/p>"
+            "heading": "SLS-Free",
+            "row_icon_description": "",
+            "row_icon_image": "shopify:\/\/shop_images\/SLS_Free.svg"
           }
         },
         "icon_DUTxUJ": {
