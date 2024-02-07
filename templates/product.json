@@ -89,6 +89,17 @@
         "product_cta": ""
       }
     },
+    "image_banner_endrock_ANjnMy": {
+      "type": "image-banner-endrock",
+      "settings": {
+        "title": "“What you brush \u2028with matters.”",
+        "description": "<p>Tooth enamel cannot repair itself from within, which means your toothpaste has an important job to do. We packed Duo with proven ingredients like nHa to remineralize teeth and promote vibrant oral health. Developed by dentists, better for everyone.<\/p>",
+        "background_image": "{{ product.metafields.banner.image_banner_product.value }}",
+        "aditional_logo_sign": "shopify:\/\/shop_images\/Artboard_1_4x_1.png",
+        "sign_1": "Dr. Stevie Roberts, DMD",
+        "sign_2": "Dr. Robert Johnson, DMD, MD"
+      }
+    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -262,6 +273,7 @@
   },
   "order": [
     "main",
+    "image_banner_endrock_ANjnMy",
     "related-products",
     "dual_section_Db4edk",
     "dual_section_c7rdPc",
