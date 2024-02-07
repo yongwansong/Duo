@@ -254,7 +254,7 @@
         "button_aGdDgy"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/6cf0501f28a4555cc7e25e6629d46abe.jpg",
+        "image": "{{ product.metafields.dual.section_offer_image.value }}",
         "height": "adapt",
         "layout": "text_first"
       }
