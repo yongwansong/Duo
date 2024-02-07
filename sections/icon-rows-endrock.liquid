@@ -13,7 +13,7 @@
   assign slider_mobile = section.settings.slider_mobile
 %}
 
-<div class="{{ section.settings.width_section }}">
+<div class="{{ section.settings.width_section }} page-width">
   {% if section.settings.heading != blank %}
     {{ section.settings.heading }}
   {% endif %}
@@ -54,9 +54,12 @@
       {% endif %}
     {% endfor %}
   </div>
-  <h3 class="footer-description">
-    {{ section.settings.footer_text }}
-  </h3>
+
+  {% if section.settings.footer_text != blank %}
+    <h3 class="footer-description">
+      {{ section.settings.footer_text }}
+    </h3>
+  {% endif %}
 </div>
 
 {% if section.settings.section_margin %}
@@ -66,7 +69,7 @@
 {% schema %}
   {
     "name": "Row icons",
-    "class": "row-icons wrapper page-width",
+    "class": "row-icons wrapper",
     "tag": "div",
     "settings": [
       {
