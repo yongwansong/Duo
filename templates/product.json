@@ -119,8 +119,9 @@
         "icon_tBfrzf": {
           "type": "icon",
           "settings": {
-            "heading": "Icon",
-            "row_icon_description": "<p>Lorem ipsum letto<\/p>"
+            "heading": "Cruelty-free",
+            "row_icon_description": "",
+            "row_icon_image": "shopify:\/\/shop_images\/Rabbit.svg"
           }
         },
         "icon_zFdBqq": {
