@@ -235,7 +235,7 @@
         "text_ery7AF": {
           "type": "text",
           "settings": {
-            "text": "<p>Save up to 33% and lower your carbon footprint with subscription refills (in compostable pouches) delivered right on time.<\/p>"
+            "text": "{{ product.metafields.dual.section_offer_description | metafield_tag }}"
           }
         },
         "button_aGdDgy": {
