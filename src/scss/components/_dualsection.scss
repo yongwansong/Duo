@@ -1,9 +1,50 @@
 .dual-section-endrock {
 
+  .image-with-text {
+    margin-bottom: 0px !important;
+  }
+
   .image-with-text__content {
     gap: 0;
-    padding: 40px 120px;
+    padding: 40px 96px;
+
+
+    .image-with-text__heading {
+      color: #000;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 55px; /* 114.583% */
+      letter-spacing: -0.72px;
+    }
     .steps-container {
+      display: flex;
+      column-gap: 25px;
+
+      .item-step {
+        max-width: 110px;
+
+        label {
+          border: 1px solid;
+          border-radius: 100%;
+          text-align: center;
+          font-family: "OldschoolGrotesk-Medium";
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 500;
+          width: 29.6px;
+          height: 27px;
+          display: block;
+        }
+
+        p {
+          font-family: "OldschoolGrotesk-Medium";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 20px;
+        }
+      }
     }
   
   
@@ -23,17 +64,39 @@
 
     .product__accordion {
       width: 100%;
+      border-color: #000;
+
+      .accordion__title {
+        color: #000;
+        font-family: "OldschoolGrotesk-Regular";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      .description-dorpdown {
+        margin-left: 40px;
+
+        p {
+          color: #746F6F;
+          font-family: "OldschoolGrotesk-Regular";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+        }
+      }
     }
 
     .link_button-page {
       display: flex;
       align-items: center;
-      column-gap: 10px;
+      column-gap: 15px;
 
       .button-er {
         color: #fff;
         font-family: 'OldschoolGrotesk-Medium';
-        font-size: 16px;
+        font-size: 15px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -45,7 +108,7 @@
         display: flex;
         background: #000;
         text-decoration: none;
-        width: 50%;
+        width: 40%;
         line-height: 1;
       }
   
