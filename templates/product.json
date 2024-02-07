@@ -120,14 +120,14 @@
         "text_mN3DBR": {
           "type": "text",
           "settings": {
-            "text": "<p>Restore and whiten enamel, soothe sensitivity, and balance the oral microbiome with a gentle boost to start the day.<\/p>"
+            "text": "{{ product.metafields.dual.section_ingredients_description | metafield_tag }}"
           }
         },
         "collapsible_tab_AieTix": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible tab1",
-            "content": "<p>awdawdawd waadwdawdawda<\/p>",
+            "heading": "{{ product.metafields.dual.section_ingredients_question1.value }}",
+            "content": "{{ product.metafields.dual.section_ingredients_response1 | metafield_tag }}",
             "content_comparation_duo": "",
             "content_comparation_suplement": "",
             "page": "",
@@ -177,7 +177,7 @@
         "collapsible_tab_xLp9aC"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/cc346525cc563de04de5e321261e8eb6.jpg",
+        "image": "{{ product.metafields.dual.section_ingredients_image.value }}",
         "height": "adapt",
         "layout": "text_first"
       }
