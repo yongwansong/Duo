@@ -100,7 +100,8 @@
 
 .gallery_swiper_buttons{
     position: absolute;
-    top: 24%;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 9;
 }
 
@@ -268,5 +269,11 @@
 
     .swiper-button-prev__wrapper{
         left: 4%;
+    }
+
+    .gallery_swiper_buttons{
+        position: absolute;
+        top: 24%;
+        z-index: 9;
     }
 }
