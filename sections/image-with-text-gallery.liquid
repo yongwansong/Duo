@@ -92,6 +92,7 @@ const gallerySwiper = new Swiper('.image-with-text__gallery .swiper-container', 
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     }
+    
 });
 
 function handleFocus(e, i) {
@@ -128,6 +129,20 @@ document.querySelectorAll('.gallery_swiper_buttons .swiper_button-item').forEach
         })
     })
 })
+
+gallerySwiper.on('slideChange', function () {
+  let index = document.querySelector('.image-with-text__gallery .swiper-pagination-bullet-active').dataset.index;
+    document.querySelectorAll('.dots-wrapper').forEach(element =>{
+        element.querySelectorAll('.dot-item').forEach(item =>{
+            item.classList.remove('active');
+        })
+
+        document.querySelectorAll(`[data-number="${index}"]`).forEach(selectedDot => {
+            selectedDot.classList.add('active');
+        })
+    })
+});
+
 
 </script>
 
