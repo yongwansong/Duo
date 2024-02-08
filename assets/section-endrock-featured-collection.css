@@ -7,7 +7,6 @@
 
     .endrock-featured-collection .products_wrapper .product-list{
         width: calc( 25% - 23px );
-        max-width: 256px;
     }
 }
 
@@ -66,6 +65,18 @@
 .endrock-featured-collection__wrapper{
     margin: 0 auto;
     padding: 69px 110px 87px;
+}
+
+@media (min-width:1000px) {
+    .endrock-featured-collection__wrapper{
+        padding: 69px 104px 87px;
+    }
+}
+
+@media (min-width:1250px) {
+    .endrock-featured-collection__wrapper{
+        padding: 69px 90px 87px;
+    }
 }
 
 .endrock-featured-collection .heading{
@@ -159,6 +170,10 @@
         margin-bottom: 32px;
     }
 
+    .endrock-featured-collection__wrapper{
+        padding: 0;
+    }
+
     .endrock-featured-collection .hover_image{
         display: none!important;
     }
@@ -199,5 +214,9 @@
 
     .endrock-featured-collection .add-toCart span{
         padding: 8px;
+    }
+
+    .endrock-featured-collection__container{
+        background-color: transparent;
     }
 }

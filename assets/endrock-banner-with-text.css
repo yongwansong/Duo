@@ -6,13 +6,36 @@
     position: absolute;
     top: 0;
     width: 100%;
+    height: 100%;
     left: 0;
 }
+
+@media (max-width: 920px) {
+    .endrock-banner-with-text .banner-with-text{
+        padding-bottom: 54.53125% !important;
+    }
+    .endrock-banner-with-text .text-decoration{
+        font-size: 64px!important;
+    }
+}
+
 .endrock-banner-with-text .text-wrapper{
     position: absolute;
     left: 145px;
     top: 50%;
     transform: translateY(-50%);
+}
+
+@media (min-width:1000px) {
+    .endrock-banner-with-text .text-wrapper{
+        left: 137px;
+    }
+}
+
+@media (min-width:1250px) {
+    .endrock-banner-with-text .text-wrapper{
+        left: 118px;
+    }
 }
 .endrock-banner-with-text .text-wrapper h2{
     padding-top: 0;
@@ -73,6 +96,12 @@
         left: 85px;
     }
 }
+@media (max-width:1000px) {
+    .endrock-banner-with-text .text-wrapper h2{
+        font-size: 36px;
+        line-height: 38px;
+    }
+}
 @media (max-width: 767px) {
     .endrock-banner-with-text .text-wrapper{
         position: absolute;
@@ -131,10 +160,13 @@
     .endrock-banner-with-text .text-decoration{
         font-size: 40px;
         line-height: 48px;
+        margin-bottom: 20px;
     }
 
     .endrock-banner-with-text .mobile-banner-with-text .decoration{
         margin-top: 51px;
+        display: flex;
+        flex-direction: column;
     }
 
     .endrock-banner-with-text .mobile-banner-with-text .text-info{

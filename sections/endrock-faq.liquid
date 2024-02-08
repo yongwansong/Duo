@@ -36,6 +36,21 @@
     </div>
 </div>
 
+<script>
+    document.querySelectorAll('.faq-drawer__trigger').forEach(radio => {
+        radio.addEventListener('click', function(){
+            if(radio.checked){
+                document.querySelectorAll('.faq-drawer__trigger').forEach(element => {
+                    element.checked = false;
+                })
+                radio.checked = true;
+            }else{
+                radio.checked = false;
+            }
+        })
+    })
+</script>
+
 {% schema %}
     {
         "name": "endrock-faq",

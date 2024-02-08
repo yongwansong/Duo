@@ -43,9 +43,9 @@
                 <img src="{{section.settings.mobile_banner | img_url: 'master' }}" alt="{{ block.settings.mobile_banner.alt }}" loading="lazy">
             {%- endif -%}
             <div class="button-with-text">
-                <a href="{{section.settings.btn_link}}" class="button {{ section.settings.btn_type }}">{{section.settings.btn_text}}</a>
                 <div class="decoration">
                     <span class="text-decoration">{{section.settings.decoration}}</span>
+                     <a href="{{section.settings.btn_link}}" class="button {{ section.settings.btn_type }}">{{section.settings.btn_text}}</a>
                     <p class="text-info">{{section.settings.info}}</p>
                 </div>
             </div>

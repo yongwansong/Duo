@@ -9,7 +9,7 @@
         "mobile_padding_bottom": 0,
         "full_width": true,
         "video": "",
-        "desktop_image": "shopify:\/\/shop_images\/Hero_Image3x_1780x_2c3dbac1-83ec-4941-96db-e1eda2cfec2b.png",
+        "desktop_image": "shopify:\/\/shop_images\/new-hp-banner.png",
         "mobile_image": "shopify:\/\/shop_images\/Duo-Brand_Shoot-Edited-585_1_3c146333-05d6-4246-8ae5-a09cd6c430ea.png",
         "videomobile": "",
         "heading": "The Future <br>of Brushing",
@@ -147,7 +147,7 @@
       "settings": {
         "padding_top": 0,
         "padding_bottom": 25,
-        "mobile_padding_top": 50,
+        "mobile_padding_top": 0,
         "mobile_padding_bottom": 25,
         "full_width": false
       }
@@ -211,7 +211,7 @@
         "bg_color": "#e2ebf2",
         "full_width": true,
         "image": "shopify:\/\/shop_images\/Christine_Landing_Page_Imagex3_1.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/Image_8_81e91471-69f7-4e17-ada2-0470ebbf43bc.png",
+        "mobile_image": "shopify:\/\/shop_images\/Christine_Landing_Page_Imagex3_1.jpg",
         "heading": "Why Duo?",
         "description": "<p>Better-for-you \u2028<br\/>toothpaste tablets<\/p>",
         "mobile_description": "<p>Better-for-you toothpaste tablets<\/p>"
@@ -324,7 +324,7 @@
         "padding_top": 0,
         "padding_bottom": 0,
         "mobile_padding_top": 65,
-        "mobile_padding_bottom": 65,
+        "mobile_padding_bottom": 30,
         "full_width": false,
         "bg_color": "#e2ebf2",
         "products_to_show": 4,
@@ -422,31 +422,36 @@
         "1f3bf7fb-8e5e-497a-a1f8-e5f7a8e5caaf": {
           "type": "icon",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Tufts_fd17f5d5-439a-41b3-a738-cfee68f0ba34.png"
+            "image": "shopify:\/\/shop_images\/Tufts_d71eeccb-dbfe-4945-85a8-99dab8b85410.png",
+            "icon": ""
           }
         },
         "9fe51b99-c1b7-4ef2-af66-7c4f656144e1": {
           "type": "icon",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/RDHLogo_blk_1x3_7d93c19b-1284-46cd-9a22-436cc3e083b4.png"
+            "image": "shopify:\/\/shop_images\/RDHLogo_blk_1_48c13f61-82a6-4d74-a174-97b08cbf4f1f.png",
+            "icon": ""
           }
         },
         "1afd394a-b9fd-4e48-aa1f-22e5611cc099": {
           "type": "icon",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Dentaltown_logo_9ad0d880-9d30-4ff0-a337-2a39305b42fc.png"
+            "image": "shopify:\/\/shop_images\/Group_449_fd26b7f4-d28f-4fb9-b930-0962335b056a.png",
+            "icon": ""
           }
         },
-        "ffb36b6f-454f-4f63-a16c-65033908bdc5": {
+        "icon_efj97A": {
           "type": "icon",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/DentalEconomics_logo_668b34f0-57d1-4ed5-b48e-1318a2f2e404.png"
+            "image": "shopify:\/\/shop_images\/Group_450_b68383aa-6b61-4ee5-809b-88ddedfc3d37.png",
+            "icon": ""
           }
         },
-        "376f08aa-b555-442c-a6c2-76747809aabf": {
+        "icon_AtMMGj": {
           "type": "icon",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/MyDentalAdvocatex3.png"
+            "image": "shopify:\/\/shop_images\/image_1_5593f5ed-74f3-417f-b818-f7cd48209b34.png",
+            "icon": ""
           }
         }
       },
@@ -454,8 +459,8 @@
         "1f3bf7fb-8e5e-497a-a1f8-e5f7a8e5caaf",
         "9fe51b99-c1b7-4ef2-af66-7c4f656144e1",
         "1afd394a-b9fd-4e48-aa1f-22e5611cc099",
-        "ffb36b6f-454f-4f63-a16c-65033908bdc5",
-        "376f08aa-b555-442c-a6c2-76747809aabf"
+        "icon_efj97A",
+        "icon_AtMMGj"
       ],
       "settings": {
         "padding_top": 35,

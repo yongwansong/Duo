@@ -212,15 +212,31 @@ body .button--secondary{
 	url('https://cdn.shopify.com/s/files/1/0553/3233/9879/files/Schnyder-SLight.otf?v=1703836836') format('truetype')
 }
 
-.page-width {
-	margin: 0 auto;
+.page-width{
 	padding: 0 27px;
-	/* max-width: var(--page-width); */
 }
 
-@media (max-width:767px) {
+@media screen and (max-width: 1440px) {
 	.page-width{
-		padding: 0 24px !important;
+		padding: 0 54px!important;
+	}
+}
+
+@media (max-width: 1250px) {
+	.page-width{
+		padding: 0 33px !important;
+	}
+}
+
+@media (max-width: 1000px){
+	.page-width{
+		padding: 0 27px!important;
+	}
+}
+
+@media (max-width: 768px){
+	.page-width{
+		padding: 0 24px!important;
 	}
 }
 
@@ -249,6 +265,14 @@ body .button--secondary{
 
 .newheader{
   background-color: #E2EBF2;
+}
+
+.shopify-section-header-hidden .newheader{
+  background-color: transparent;
+}
+
+.shopify-section-header-hidden .header-wrapper{
+   background-color: transparent !important;
 }
 
 .page-width-desktop {
@@ -288,9 +312,6 @@ img.handsvg {
 
 
 @media screen and (min-width: 750px) {
-	.page-width {
-		padding: 0 27px;
-	}
 
 	.page-width--narrow {
 		padding: 0 9rem;
@@ -1988,12 +2009,12 @@ input[type='checkbox'] {
 /* section-header */
 .endrock-header {
 	z-index: 3;
+    background-color: #E2EBF2
 }
 
 .shopify-section-header-sticky {
 	position: sticky;
 	top: 35px;
-	background-color: #FFF;
 }
 
 @media screen and (max-width: 768px) {
@@ -2005,6 +2026,7 @@ input[type='checkbox'] {
 .shopify-section-header-hidden {
 	/* transform: translateY(-100%); */
 	top: 0px;
+    background: transparent;
 }
 
 #shopify-section-header.animate {
@@ -2017,6 +2039,7 @@ input[type='checkbox'] {
 	position: relative;
 	background: #f2f2f2 !important;
 	border: none !important;
+    margin-top: 18px
 }
 
 .header-wrapper--border-bottom {
@@ -2798,6 +2821,12 @@ a.button.button--primary {
     line-height: normal;
     letter-spacing: 1.505px;
 	padding: 12.972px 21px 11px;
+    background-color: #000;
+    color: #fff;
+}
+
+a.button.button--primary:hover{
+  color: #000
 }
 
 a.button.button--primary:hover {
@@ -4844,11 +4873,20 @@ header {
 
 @media only screen and (max-width: 1250px){
   .header {
-      display: grid !important;
+    display: grid !important;
+	padding: 21px 36px 21px 24px!important;
   }
 
   .newheader {
       display: none;
+  }
+
+  .shopify-section-header-hidden .header-wrapper{
+	background-color: #f2f2f2!important
+  }
+
+  .header-wrapper{
+	margin: 0;
   }
 
 
