@@ -5,6 +5,7 @@
 
 .hero-banner__video-wrapper{
     margin-top: -100px;
+    position: relative;
 }
 
 @media (max-width: 1000px) {
@@ -31,6 +32,18 @@
     position: absolute;
     top: 50%;
     transform: translate(0,-50%);
+}
+
+@media (min-width:1000px) {
+    .section-endrock-hero-image .hero-banner__content{
+        left: 93px;
+    }
+}
+
+@media (min-width:1250px) {
+    .section-endrock-hero-image .hero-banner__content{
+        left: 150px;
+    }
 }
 
 .section-endrock-hero-image .hero-banner__text h2{
@@ -108,11 +121,6 @@
     border: none !important;
 }
 
-@media (max-width: 1200px) {
-    .section-endrock-hero-image .hero-banner__content{
-        left: 87px;
-    }
-}
 
 @media (max-width: 767px) {
     .section-endrock-hero-image .mobile_image img{
@@ -133,6 +141,7 @@
         top: unset;
         padding: 0 43px;
         left: 0;
+        margin-top: 30px;
     }
 
     .section-endrock-hero-image{
@@ -164,6 +173,10 @@
     .section-endrock-hero-image .hero-banner__buttons .custom_button.button--secondary{
         max-width: 220px;
         width: 100%;
+    }
+
+    .section-endrock-hero-image{
+        margin-top: -60px;
     }
 
 }

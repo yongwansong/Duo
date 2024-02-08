@@ -149,10 +149,13 @@
     .endrock-banner-with-text .text-decoration{
         font-size: 40px;
         line-height: 48px;
+        margin-bottom: 20px;
     }
 
     .endrock-banner-with-text .mobile-banner-with-text .decoration{
         margin-top: 51px;
+        display: flex;
+        flex-direction: column;
     }
 
     .endrock-banner-with-text .mobile-banner-with-text .text-info{

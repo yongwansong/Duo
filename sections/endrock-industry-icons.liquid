@@ -25,15 +25,12 @@
                 {%- for block in section.blocks -%}
                     {%- if block.settings.image != blank -%}
                         <div class="icon-list">
-                            <img
+                            <a href="{{ block.settings.link }}">
+                                <img
                                 src="{{ block.settings.image | img_url: 'medium' }}"
                                 alt="{{ block.settings.image.alt }}"
                                 loading="lazy">
-                        </div>
-                    {%- endif -%}
-                    {%- if block.settings.icon != blank -%}
-                        <div class="icon-list">
-                            {{ block.settings.icon }}
+                            </a>
                         </div>
                     {%- endif -%}
                 {%- endfor -%}
@@ -43,15 +40,12 @@
                     {%- for block in section.blocks -%}
                         {%- if block.settings.image != blank -%}
                             <div class="icon-mobile__list swiper-slide">
-                                <img
+                                <a href="{{ block.settings.link }}">
+                                    <img
                                     src="{{ block.settings.image | img_url: 'medium' }}"
                                     alt="{{ block.settings.image.alt }}"
                                     loading="lazy">
-                            </div>
-                        {%- endif -%}
-                        {%- if block.settings.icon != blank -%}
-                            <div class="icon-mobile__list swiper-slide">
-                                {{ block.settings.icon }}
+                                </a>
                             </div>
                         {%- endif -%}
                     {%- endfor -%}

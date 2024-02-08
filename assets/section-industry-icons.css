@@ -47,6 +47,11 @@
     width: 100%;
 }
 
+.industry-icons_container .icons-wrapper .icon-list a{
+    display: block;
+    cursor: pointer;
+}
+
 .industry-icons_container .icons-wrapper .icon-list:first-of-type{
     width: 108px;
     height: auto;

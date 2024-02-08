@@ -872,7 +872,7 @@ button.accordion.is-open:after {
   }
 
   .images-wrapper{
-    display: none;
+    margin: 0;
   }
 }
 
