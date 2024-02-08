@@ -422,25 +422,29 @@
         "1f3bf7fb-8e5e-497a-a1f8-e5f7a8e5caaf": {
           "type": "icon",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Tufts_fd17f5d5-439a-41b3-a738-cfee68f0ba34.png"
+            "image": "shopify:\/\/shop_images\/Tufts_d71eeccb-dbfe-4945-85a8-99dab8b85410.png",
+            "icon": ""
           }
         },
         "9fe51b99-c1b7-4ef2-af66-7c4f656144e1": {
           "type": "icon",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/RDHLogo_blk_1x3_7d93c19b-1284-46cd-9a22-436cc3e083b4.png"
+            "image": "shopify:\/\/shop_images\/RDHLogo_blk_1_48c13f61-82a6-4d74-a174-97b08cbf4f1f.png",
+            "icon": ""
           }
         },
         "1afd394a-b9fd-4e48-aa1f-22e5611cc099": {
           "type": "icon",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Dentaltown_logo_9ad0d880-9d30-4ff0-a337-2a39305b42fc.png"
+            "image": "shopify:\/\/shop_images\/Group_449_fd26b7f4-d28f-4fb9-b930-0962335b056a.png",
+            "icon": ""
           }
         },
-        "ffb36b6f-454f-4f63-a16c-65033908bdc5": {
+        "icon_efj97A": {
           "type": "icon",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/DentalEconomics_logo_668b34f0-57d1-4ed5-b48e-1318a2f2e404.png"
+            "image": "shopify:\/\/shop_images\/Group_450_b68383aa-6b61-4ee5-809b-88ddedfc3d37.png",
+            "icon": ""
           }
         },
         "376f08aa-b555-442c-a6c2-76747809aabf": {
@@ -448,14 +452,22 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/MyDentalAdvocatex3.png"
           }
+        },
+        "icon_AtMMGj": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_1_5593f5ed-74f3-417f-b818-f7cd48209b34.png",
+            "icon": ""
+          }
         }
       },
       "block_order": [
         "1f3bf7fb-8e5e-497a-a1f8-e5f7a8e5caaf",
         "9fe51b99-c1b7-4ef2-af66-7c4f656144e1",
         "1afd394a-b9fd-4e48-aa1f-22e5611cc099",
-        "ffb36b6f-454f-4f63-a16c-65033908bdc5",
-        "376f08aa-b555-442c-a6c2-76747809aabf"
+        "icon_efj97A",
+        "376f08aa-b555-442c-a6c2-76747809aabf",
+        "icon_AtMMGj"
       ],
       "settings": {
         "padding_top": 35,
