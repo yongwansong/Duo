@@ -4,6 +4,7 @@
     #section--{{ section.id }}{
         padding-top: {{ section.settings.padding_top }}px;
         padding-bottom: {{ section.settings.padding_bottom }}px;
+        border-top: 1px solid #ffffff;
         background: {{ section.settings.bg_color }};
     }
 
@@ -22,12 +23,17 @@
             <p class="mobile_heading only--mobile">{{ section.settings.mobile_heading }}</p>
             <div class="icons-wrapper only--desktop">
                 {%- for block in section.blocks -%}
-                    {%- if block.settings.icon -%}
+                    {%- if block.settings.image != blank -%}
                         <div class="icon-list">
                             <img
-                                src="{{ block.settings.icon | img_url: 'medium' }}"
-                                alt="{{ block.settings.icon.alt }}"
+                                src="{{ block.settings.image | img_url: 'medium' }}"
+                                alt="{{ block.settings.image.alt }}"
                                 loading="lazy">
+                        </div>
+                    {%- endif -%}
+                    {%- if block.settings.icon != blank -%}
+                        <div class="icon-list">
+                            {{ block.settings.icon }}
                         </div>
                     {%- endif -%}
                 {%- endfor -%}
@@ -35,12 +41,17 @@
             <div class="swiper-container only--mobile">
                 <div class="icons-mobile__wrapper swiper-wrapper">
                     {%- for block in section.blocks -%}
-                        {%- if block.settings.icon -%}
+                        {%- if block.settings.image != blank -%}
                             <div class="icon-mobile__list swiper-slide">
                                 <img
-                                    src="{{ block.settings.icon | img_url: 'medium' }}"
-                                    alt="{{ block.settings.icon.alt }}"
+                                    src="{{ block.settings.image | img_url: 'medium' }}"
+                                    alt="{{ block.settings.image.alt }}"
                                     loading="lazy">
+                            </div>
+                        {%- endif -%}
+                        {%- if block.settings.icon != blank -%}
+                            <div class="icon-mobile__list swiper-slide">
+                                {{ block.settings.icon }}
                             </div>
                         {%- endif -%}
                     {%- endfor -%}
@@ -145,8 +156,13 @@
                 "settings": [
                     {
                         "type": "image_picker",
+                        "id": "image",
+                        "label": "image"
+                    },
+                    {
+                        "type": "html",
                         "id": "icon",
-                        "label": "Icon"
+                        "label": "icon"
                     }
                 ]
             }

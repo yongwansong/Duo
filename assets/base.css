@@ -212,15 +212,31 @@ body .button--secondary{
 	url('https://cdn.shopify.com/s/files/1/0553/3233/9879/files/Schnyder-SLight.otf?v=1703836836') format('truetype')
 }
 
-.page-width {
-	margin: 0 auto;
+.page-width{
 	padding: 0 27px;
-	/* max-width: var(--page-width); */
 }
 
-@media (max-width:767px) {
+@media screen and (max-width: 1440px) {
 	.page-width{
-		padding: 0 24px !important;
+		padding: 0 54px!important;
+	}
+}
+
+@media (max-width: 1250px) {
+	.page-width{
+		padding: 0 33px !important;
+	}
+}
+
+@media (max-width: 1000px){
+	.page-width{
+		padding: 0 27px!important;
+	}
+}
+
+@media (max-width: 768px){
+	.page-width{
+		padding: 0 24px!important;
 	}
 }
 
@@ -296,9 +312,6 @@ img.handsvg {
 
 
 @media screen and (min-width: 750px) {
-	.page-width {
-		padding: 0 27px;
-	}
 
 	.page-width--narrow {
 		padding: 0 9rem;

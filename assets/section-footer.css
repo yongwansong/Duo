@@ -171,7 +171,7 @@ button.accordion:after{
   justify-content: center;
   gap: 47px;
   margin-bottom: 0;
-  margin-left: 30px
+  margin: 0 75px;
 }
 
 .footer-block--newsletter {

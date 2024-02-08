@@ -23,6 +23,19 @@
     max-width: 400px;
 }
 
+@media (min-width:1000px) {
+    .product-gallery-wrapper .product-wrapper .text-wrapper{
+        left: 110px;
+    }
+}
+
+@media (min-width:1250px) {
+    .product-gallery-wrapper .product-wrapper .text-wrapper{
+        left: 90px;
+    }
+}
+
+
 .product-gallery-wrapper .product-wrapper .text-wrapper .heading p{
     color: #000;
     font-family: "Schnyder-SLight";

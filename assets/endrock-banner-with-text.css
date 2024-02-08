@@ -14,6 +14,18 @@
     top: 50%;
     transform: translateY(-50%);
 }
+
+@media (min-width:1000px) {
+    .endrock-banner-with-text .text-wrapper{
+        left: 137px;
+    }
+}
+
+@media (min-width:1250px) {
+    .endrock-banner-with-text .text-wrapper{
+        left: 118px;
+    }
+}
 .endrock-banner-with-text .text-wrapper h2{
     padding-top: 0;
     flex-shrink: 0;
@@ -71,6 +83,12 @@
 @media (max-width: 1200px) {
     .endrock-banner-with-text .text-wrapper{
         left: 85px;
+    }
+}
+@media (max-width:1000px) {
+    .endrock-banner-with-text .text-wrapper h2{
+        font-size: 36px;
+        line-height: 38px;
     }
 }
 @media (max-width: 767px) {

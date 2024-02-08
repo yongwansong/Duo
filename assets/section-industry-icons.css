@@ -1,9 +1,22 @@
 .industry-icons_container{
     display: flex;
+    gap: 36px;
     justify-content: space-between;
     padding: 0 110px;
     margin: 0 auto;
     align-items: center;
+}
+
+@media (min-width:1000px) {
+    .industry-icons_container{
+        padding: 0 104px;
+    }
+}
+
+@media (min-width:1250px) {
+    .industry-icons_container{
+        padding: 0 90px;
+    }
 }
 
 .icons-mobile__wrapper .icon-mobile__list img{
@@ -34,8 +47,18 @@
     width: 100%;
 }
 
+.industry-icons_container .icons-wrapper .icon-list:first-of-type{
+    width: 108px;
+    height: auto;
+    object-fit: cover;
+}
+
 .industry-icons_container .icons-wrapper .icon-list:nth-child(2){
   width: 92px;
+}
+
+.industry-icons_container .icons-wrapper .icon-list:nth-child(4){
+  width: 60px;
 }
 
 .industry-icons_container .icons-wrapper .icon-list:last-of-type{

@@ -5,6 +5,18 @@
     margin: 0 auto;
 }
 
+@media (min-width:1000px) {
+    .dentists-container{
+        padding: 0 104px;
+    }
+}
+
+@media (min-width:1250px) {
+    .dentists-container{
+        padding: 0 90px;
+    }
+}
+
 .dentists-container .dentists-info{
     width: 29.4%;
 }
