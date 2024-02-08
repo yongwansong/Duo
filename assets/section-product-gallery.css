@@ -52,6 +52,16 @@
     }
 }
 
+@media (min-width: 1440px) {
+    .product-gallery-wrapper .product-wrapper .text-wrapper{
+        left: 140px;
+    }
+
+    .product-gallery-wrapper .product-info{
+        right: 140px !important;
+    }
+}
+
 
 
 .product-gallery-wrapper .product-wrapper .text-wrapper .heading p{

@@ -37,6 +37,12 @@
         left: 118px;
     }
 }
+
+@media (min-width:1440px) {
+    .endrock-banner-with-text .text-wrapper{
+        left: 226px;
+    }
+}
 .endrock-banner-with-text .text-wrapper h2{
     padding-top: 0;
     flex-shrink: 0;

@@ -108,7 +108,7 @@
 .right-content{
     position: absolute;
     top: 20%;
-    right: 2%;
+    right: 98px;
 }
 
 .right-content .property-list_wrapper:first-of-type .property-icon svg{

@@ -18,6 +18,12 @@
     }
 }
 
+@media (min-width:1440px) {
+    .dentists-container{
+        padding: 0 180px;
+    }
+}
+
 .dentists-container .dentists-info{
     width: 29.4%;
 }
