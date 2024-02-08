@@ -122,26 +122,27 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-  var galleryTop = new Swiper('.gallery-top', {
+ 
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      direction: 'vertical',
+      spaceBetween: 15,
+      slidesPerView: 6,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+
+    var galleryTop = new Swiper('.gallery-top', {
 			slidesPerView: 1,  
-      loop: true,
       spaceBetween: 2,
-      loopedSlides: 50,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      thumbs: {
+        swiper: galleryThumbs,
+      },
     });
-    var galleryThumbs = new Swiper('.gallery-thumbs', {
-      direction: 'vertical',
-      slidesPerView: 6,
-      slideToClickedSlide: true,
-      spaceBetween: 15,
-      loopedSlides: 50,
-      loop: true,
-    });
-    galleryTop.controller.control = galleryThumbs;
-    galleryThumbs.controller.control = galleryTop;
+
 
 </script>
      

@@ -75,6 +75,22 @@
       padding-top: 0.5rem;
     }
   }
+
+  {%  if template.name == 'product' %}
+
+
+    .endrock-header, .newheader {
+      background-color: rgb(255, 255, 255);
+    }
+
+    .subnewhader {
+      background-color: #e2ebf2;
+    }
+
+    .shopify-section-header-hidden .newheader, .shopify-section-header-hidden.endrock-header {
+        background-color: transparent !important;
+    }
+  {% endif %} 
 </style>
 
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
