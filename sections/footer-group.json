@@ -36,32 +36,32 @@
         "image_FKWw66": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/fda_compliant.png",
-            "image_width": 100,
+            "image": "shopify:\/\/shop_images\/fda-logo-svg-vector_1_7c5d2872-5efd-406e-b642-bee6a3c3e582.png",
+            "image_width": 85,
             "alignment": "center"
           }
         },
         "image_GiMpnM": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Vegan.png",
-            "image_width": 100,
+            "image": "shopify:\/\/shop_images\/Group_456_ba97a77c-4ea2-4f54-bf93-f37fe053818d.png",
+            "image_width": 50,
             "alignment": "center"
           }
         },
         "image_4ckD7g": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Made_in_USA.png",
-            "image_width": 100,
+            "image": "shopify:\/\/shop_images\/Made_in_USA_c480ac6c-5053-43b7-bfa8-db2991c9ba01.png",
+            "image_width": 60,
             "alignment": "center"
           }
         },
         "image_TmpQHM": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_3_1.png",
-            "image_width": 100,
+            "image": "shopify:\/\/shop_images\/image_3_1_bb245174-6cec-4e8a-8c4b-29a9bf8841b3.png",
+            "image_width": 60,
             "alignment": "center"
           }
         }
