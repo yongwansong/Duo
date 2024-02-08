@@ -86,7 +86,7 @@
     .industry-icons_container{
         flex-wrap: wrap;
         justify-content: center;
-        padding: 0;
+        padding: 0 !important;
     }
 
     .industry-icons_container .mobile_heading{
