@@ -18,6 +18,12 @@
         padding: 0 90px;
     }
 }
+@media (max-width: 920px) {
+    .industry-icons_container{
+        padding: 0 37px !important;
+    }
+}
+
 
 .icons-mobile__wrapper .icon-mobile__list img{
     width: 100%;

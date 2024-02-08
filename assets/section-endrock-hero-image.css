@@ -121,6 +121,12 @@
     border: none !important;
 }
 
+@media (max-width: 920px) {
+    .section-endrock-hero-image .hero-banner__content{
+        left: 37px;
+    }
+}
+
 
 @media (max-width: 767px) {
     .section-endrock-hero-image .mobile_image img{

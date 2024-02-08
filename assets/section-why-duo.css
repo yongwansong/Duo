@@ -34,6 +34,21 @@
     }
 }
 
+@media (max-width: 920px) {
+    .why-duo_wrapper .left-content{
+        left: 37px;
+    }
+
+    .why-duo_wrapper .left-content__description p{
+        margin-bottom: 37px;
+    }
+
+    .left-content__properties .property-list_wrapper{
+        margin-bottom: 21px;
+    }
+}
+
+
 
 .why-duo_wrapper .left-content__heading{
     color: #000;
