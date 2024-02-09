@@ -481,22 +481,24 @@
   DO NOT modify this source code
   LOOP WIDGET CODE STARTS
 {% endcomment %}
+
+{% assign block_star = section.blocks | where: 'type', 'star_subcription' %}
 {% assign template_exists = false %}
 {% capture template_content %}
-    {% render 'loop-subscriptions', type: 'product-widget', product: product %}
+    {% render 'loop-subscriptions'
+      type: 'product-widget',
+      product: product,
+      block_star: block_star
+    %}
 {% endcapture %}
 
-
-<script>
-  console.log({{ template_content | json }})
-</script>
 
 {% if template_content contains 'Rendering loop-subscriptions' %}
   {% assign template_exists = true %}
 {% endif %}
 
 {% if template_exists %}
-  {% render 'loop-subscriptions', type: 'product-widget', product: product %}
+  {% render 'loop-subscriptions', type: 'product-widget', product: product, block_star: block_star %}
 {% endif %}
 {% comment %}
   LOOP WIDGET CODE ENDS
@@ -1159,6 +1161,32 @@
           "label": "Info free shipping",
           "id": "free_shipping_info",
           "default": "+ Free shipping on orders over $25"
+        }
+      ]
+    },
+    {
+      "type": "star_subcription",
+      "name": "Star subcription",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Star 1",
+          "id": "star1"
+        },
+        {
+          "type": "text",
+          "label": "Star 2",
+          "id": "star2"
+        },
+        {
+          "type": "text",
+          "label": "Star 3",
+          "id": "star3"
+        },
+        {
+          "type": "text",
+          "label": "Star 4",
+          "id": "star4"
         }
       ]
     },

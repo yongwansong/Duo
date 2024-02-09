@@ -531,22 +531,24 @@ span {
                 {% endunless %}
                 <p class="aditional-info-subscription">Modify, Skip or Cancel Anytime!</p>
                 <div class="item_include">
-                  <div class="icon-info">
-                    <div class="icon">{% render 'start-subscription' %}</div>
-                    <div class="text">Stay consistent</div>
-                  </div>
-                  <div class="icon-info">
-                    <div class="icon">{% render 'start-subscription' %}</div>
-                    <div class="text">Build healthy routine</div>
-                  </div>
-                  <div class="icon-info">
-                    <div class="icon">{% render 'start-subscription' %}</div>
-                    <div class="text">Free Gifts</div>
-                  </div>
-                  <div class="icon-info">
-                    <div class="icon">{% render 'start-subscription' %}</div>
-                    <div class="text">Exclusive Access</div>
-                  </div>
+                  {%- for block in block_star -%}
+                    <div class="icon-info">
+                      <div class="icon">{% render 'start-subscription' %}</div>
+                      <div class="text">{{  block.settings.star1 }}</div>
+                    </div>
+                    <div class="icon-info">
+                      <div class="icon">{% render 'start-subscription' %}</div>
+                      <div class="text">{{  block.settings.star2 }}</div>
+                    </div>
+                    <div class="icon-info">
+                      <div class="icon">{% render 'start-subscription' %}</div>
+                      <div class="text">{{  block.settings.star3 }}</div>
+                    </div>
+                    <div class="icon-info">
+                      <div class="icon">{% render 'start-subscription' %}</div>
+                      <div class="text">{{  block.settings.star4 }}</div>
+                    </div>
+                  {% endfor %}
                 </div>
               </div>
             </div>
