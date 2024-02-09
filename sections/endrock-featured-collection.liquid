@@ -165,6 +165,7 @@
                             <div class="product-list {% if section.settings.swipe_on_mobile %}swiper-slide{% endif %}">
                                 {%- if block.settings.custom_product_image != blank -%}
                                     <div class="custom_product_image" id="block--{{ block.id }}" style="padding-bottom: {{ 100 | divided_by: block.settings.custom_product_image.aspect_ratio }}%">
+                                        <a href="{{  product.url }}">
                                         <img
                                             src="{{ block.settings.custom_product_image | img_url: 'master' }}"
                                             class="first_image"
@@ -177,6 +178,7 @@
                                             alt="{{ block.settings.hover_image.alt }}"
                                             loading="lazy"
                                         >
+                                        </a>
                                         <div class="product_info_1 product_info">{{ block.settings.info_1 }}</div>
                                         <div class="product_info_2 product_info">{{ block.settings.info_2 }}</div>
                                         <div class="product_info_3 product_info">{{ block.settings.info_3 }}</div>
@@ -293,10 +295,12 @@
                                         </product-form>
                                     {%- endif -%}
                                 </div>
-                                <div class="title-with-price">
-                                    <h3 class="product_title">{{ endrock_featured_product.title }}</h3>
-                                    <p class="product-price">{{ endrock_featured_product.price | money | remove: '.00' }}</p>
-                                </div>
+                                <a href="{{ product.url }}">
+                                    <div class="title-with-price">
+                                        <h3 class="product_title">{{ endrock_featured_product.title }}</h3>
+                                        <p class="product-price">{{ endrock_featured_product.price | money | remove: '.00' }}</p>
+                                    </div>
+                                </a>
                                 <p class="product_property">{{ endrock_featured_product.metafields.my_fields.feature_product_subtitle }}</p>
                             </div>
                         {%- endfor -%}
