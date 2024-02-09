@@ -539,14 +539,9 @@ a.product__text {
 	letter-spacing: -0.0185rem;
 	text-decoration-line: underline;
 }
-.product__info-container .oke-sr-count-number:before{
-	content: "(";
-}
-.product__info-container .oke-sr-count-number:after{
-	content: ")"
-}
+
 .product__info-container .oke-sr-label-text{
-	display: none;
+	font-weight: 600;
 }
 .product__info-container .oke-sr-stars .oke-stars svg{
 	height: 1.6586rem;
