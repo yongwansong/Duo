@@ -165,7 +165,7 @@
                             <div class="product-list {% if section.settings.swipe_on_mobile %}swiper-slide{% endif %}">
                                 {%- if block.settings.custom_product_image != blank -%}
                                     <div class="custom_product_image" id="block--{{ block.id }}" style="padding-bottom: {{ 100 | divided_by: block.settings.custom_product_image.aspect_ratio }}%">
-                                        <a href="{{  product.url }}">
+                                        <a href="{{  endrock_featured_product.url }}">
                                         <img
                                             src="{{ block.settings.custom_product_image | img_url: 'master' }}"
                                             class="first_image"
@@ -295,7 +295,7 @@
                                         </product-form>
                                     {%- endif -%}
                                 </div>
-                                <a href="{{ product.url }}">
+                                <a href="{{ endrock_featured_product.url }}">
                                     <div class="title-with-price">
                                         <h3 class="product_title">{{ endrock_featured_product.title }}</h3>
                                         <p class="product-price">{{ endrock_featured_product.price | money | remove: '.00' }}</p>
