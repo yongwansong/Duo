@@ -216,7 +216,7 @@ body .button--secondary{
 	padding: 0 27px;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 1251px) {
 	.page-width{
 		padding: 0 54px!important;
 	}

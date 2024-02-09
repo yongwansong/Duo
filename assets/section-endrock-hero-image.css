@@ -42,7 +42,13 @@
 
 @media (min-width:1250px) {
     .section-endrock-hero-image .hero-banner__content{
-        left: 150px;
+        left: 164px;
+    }
+}
+
+@media (min-width:1440px) {
+    .section-endrock-hero-image .hero-banner__content{
+        left: 194px;
     }
 }
 
