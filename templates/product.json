@@ -11,7 +11,7 @@
         "caption": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text": "WHITENING TOOTHPASTE",
             "text_style": "subtitle"
           }
         },
