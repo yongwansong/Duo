@@ -79,6 +79,12 @@
     }
 }
 
+@media (min-width:1440px) {
+    .endrock-featured-collection__wrapper{
+        padding: 69px 140px 87px;
+    }
+}
+
 .endrock-featured-collection .heading{
     color: #000;
     font-family: "OldschoolGrotesk-Regular";
