@@ -1,0 +1,303 @@
+{{ 'section-endrock-hero-image.css' | asset_url | stylesheet_tag }}
+{{ 'section-endrock-hero-shop-all.css' | asset_url | stylesheet_tag }}
+
+
+
+<style>
+
+
+
+
+    #section--{{ section.id }}{
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    @media (max-width: 767px){
+        #section--{{ section.id }}{
+            padding-top: {{ section.settings.mobile_padding_top }}px;
+            padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+        }
+    }
+</style>
+
+<div id="section--{{ section.id }}" class="section-endrock-hero-image {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">
+  <div class="hero-banner__video-wrapper">
+    {%- liquid
+      assign desktop_video = section.settings.video | default: section.settings.videomobile
+      assign mobile_video = section.settings.videomobile
+
+      assign desktop_poster = section.settings.videoimage | default: section.settings.videoimagemobile
+      assign mobile_poster = section.settings.videoimagemobile
+    -%}
+    {%- if desktop_video != blank -%}
+      <video
+        {% if mobile_video != blank %}
+          class="hero-banner__video--desktop"
+        {% endif %}
+        autoplay
+        muted
+        loop
+        playsinline
+        {% if desktop_poster != blank %}
+          poster="{{ desktop_poster | image_url }}"
+        {% endif %}
+      >
+        <source src="{{ desktop_video }}">
+      </video>
+    {%- endif -%}
+    {%- if mobile_video != blank -%}
+      <video
+        class="hero-banner__video--mobile"
+        autoplay
+        muted
+        loop
+        playsinline
+        {% if mobile_poster != blank %}
+          poster="{{ mobile_poster | image_url }}"
+        {% endif %}
+      >
+        <source src="{{ mobile_video }}">
+      </video>
+    {%- endif -%}
+    {%- if desktop_video == blank and section.settings.desktop_image != blank -%}
+      <div class="desktop_image only--desktop" style="padding-bottom: {{ 100 | divided_by: section.settings.desktop_image.aspect_ratio }}%">
+        <img
+          srcset="{%- if section.settings.desktop_image.width >= 375 -%}{{ section.settings.desktop_image | img_url: '375x' }} 375w,{%- endif -%}
+            {%- if section.settings.desktop_image.width >= 750 -%}{{ section.settings.desktop_image | img_url: '750x' }} 750w,{%- endif -%}
+            {%- if section.settings.desktop_image.width >= 1100 -%}{{ section.settings.desktop_image | img_url: '1100x' }} 1100w,{%- endif -%}
+            {%- if section.settings.desktop_image.width >= 1500 -%}{{ section.settings.desktop_image | img_url: '1500x' }} 1500w,{%- endif -%}
+            {%- if section.settings.desktop_image.width >= 1780 -%}{{ section.settings.desktop_image | img_url: '1780x' }} 1780w,{%- endif -%}
+            {%- if section.settings.desktop_image.width >= 2000 -%}{{ section.settings.desktop_image | img_url: '2000x' }} 2000w,{%- endif -%}
+            {%- if section.settings.desktop_image.width >= 3000 -%}{{ section.settings.desktop_image | img_url: '3000x' }} 3000w,{%- endif -%}
+            {%- if section.settings.desktop_image.width >= 3840 -%}{{ section.settings.desktop_image | img_url: '3840x' }} 3840w,{%- endif -%}
+            {{ section.settings.desktop_image | img_url: 'master' }} {{ section.settings.desktop_image.width }}w"
+          sizes="{% if section.settings.image != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image != blank %}50vw{% else %}100vw{% endif %}"
+          src="{{ section.settings.desktop_image | img_url: '1500x' }}"
+          loading="lazy"
+          alt="{{ section.settings.desktop_image.alt | escape }}"
+          width="{{ section.settings.desktop_image.width }}"
+          height="{{ section.settings.desktop_image.width | divided_by: section.settings.desktop_image.aspect_ratio }}"
+          {% if section.settings.image != blank %}class="banner__media-image-half"{% endif %}
+        >
+      </div>
+      
+    {%- endif -%}
+    
+    
+  <div class="hero-banner__content">
+    <div class="hero-banner__text">
+      {%- if section.settings.heading != blank -%}
+        <h2>{{ section.settings.heading | newline_to_br }}</h2>
+      {%- endif -%}
+      {%- if section.settings.subheading != blank -%}
+        <p>{{ section.settings.subheading }}</p>
+      {%- endif -%}
+    </div>
+
+
+
+
+
+
+
+    cccccccccccccccc
+    <div class="hero-banner__buttons">
+        {% if section.settings.button_link_1 != blank %}
+          <a
+            href="{{ section.settings.button_link_1 }}"
+            class="custom_button {% if section.settings.button_style_text_link %} button--primary{% else %} button--secondary{% endif %}"
+          >
+            {{- section.settings.button_label_1 -}}
+          </a>
+        {% endif %}
+        {% if section.settings.button_link_2 != blank %}
+          <a
+            href="{{ section.settings.button_link_2 }}"
+            class="custom_button{% if section.settings.button2_style_text_link %} button--primary{% else %} button--secondary{% endif %}"
+          >
+            {{- section.settings.button_label_2 -}}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {%- if desktop_video == blank and section.settings.mobile_image != blank -%}
+    <div class="mobile_image only--mobile">
+      <img
+        srcset="{%- if section.settings.mobile_image.width >= 375 -%}{{ section.settings.mobile_image | img_url: '375x' }} 375w,{%- endif -%}
+          {%- if section.settings.mobile_image.width >= 750 -%}{{ section.settings.mobile_image | img_url: '750x' }} 750w,{%- endif -%}
+          {%- if section.settings.mobile_image.width >= 1100 -%}{{ section.settings.mobile_image | img_url: '1100x' }} 1100w,{%- endif -%}
+          {%- if section.settings.mobile_image.width >= 1500 -%}{{ section.settings.mobile_image | img_url: '1500x' }} 1500w,{%- endif -%}
+          {%- if section.settings.mobile_image.width >= 1780 -%}{{ section.settings.mobile_image | img_url: '1780x' }} 1780w,{%- endif -%}
+          {%- if section.settings.mobile_image.width >= 2000 -%}{{ section.settings.mobile_image | img_url: '2000x' }} 2000w,{%- endif -%}
+          {%- if section.settings.mobile_image.width >= 3000 -%}{{ section.settings.mobile_image | img_url: '3000x' }} 3000w,{%- endif -%}
+          {%- if section.settings.mobile_image.width >= 3840 -%}{{ section.settings.mobile_image | img_url: '3840x' }} 3840w,{%- endif -%}
+          {{ section.settings.mobile_image | img_url: 'master' }} {{ section.settings.mobile_image.width }}w"
+        sizes="{% if section.settings.image != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image != blank %}50vw{% else %}100vw{% endif %}"
+        src="{{ section.settings.mobile_image | img_url: '1500x' }}"
+        loading="lazy"
+        alt="{{ section.settings.mobile_image.alt | escape }}"
+        width="{{ section.settings.mobile_image.width }}"
+        height="{{ section.settings.mobile_image.width | divided_by: section.settings.mobile_image.aspect_ratio }}"
+        {% if section.settings.image != blank %}class="banner__media-image-half"{% endif %}
+      >
+    </div>
+    
+  {%- endif -%}
+
+
+</div>
+{% schema %}
+{
+  "name": "Endrock Hero Image",
+  "class": "hero-image",
+  "settings": [
+    {
+        "type": "range",
+        "id": "padding_top",
+        "label": "Padding Top",
+        "min": 0,
+        "max": 100,
+        "unit": "px",
+        "step": 5,
+        "default": 50
+    },
+    {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "unit": "px",
+        "step": 5,
+        "default": 50
+    },
+    {
+        "type": "range",
+        "id": "mobile_padding_top",
+        "label": "Mobile Padding Top",
+        "min": 0,
+        "max": 100,
+        "unit": "px",
+        "step": 5,
+        "default": 50
+    },
+    {
+        "type": "range",
+        "id": "mobile_padding_bottom",
+        "label": "Mobile Padding Bottom",
+        "min": 0,
+        "max": 100,
+        "unit": "px",
+        "step": 5,
+        "default": 50
+    },
+    {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full Width",
+        "default": true
+    },
+    {
+      "type": "header",
+      "content": "Media Settings"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop"
+    },
+    {
+      "type": "text",
+      "id": "video",
+      "label": "Video Link (desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "videoimage",
+      "label": "Video Poster Image (desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "url",
+      "id": "videomobile",
+      "label": "Video Link (mobile)"
+    },
+    {
+      "type": "image_picker",
+      "id": "videoimagemobile",
+      "label": "Video Poster Image (mobile)"
+    },
+    {
+      "type": "header",
+      "content": "Content settings"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "get the toothpaste tablet that does both"
+    },
+    {
+      "type": "paragraph",
+      "content": "Buttons"
+    },
+    {
+      "type": "text",
+      "id": "button_label_1",
+      "label": "Primary Button Label"
+    },
+    {
+      "type": "url",
+      "id": "button_link_1",
+      "label": "Primary Button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_style_text_link",
+      "default": false,
+      "label": "Use text link style (Primary Button)"
+    },
+
+    {
+      "type": "text",
+      "id": "button_label_2",
+      "label": "Secondary Button Label"
+    },
+    {
+      "type": "url",
+      "id": "button_link_2",
+      "label": "Secondary Button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button2_style_text_link",
+      "default": true,
+      "label": "Use text link style (Secondary Button)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Endrock Hero Image"
+    }
+  ]
+}
+{% endschema %}
