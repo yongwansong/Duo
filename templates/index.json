@@ -15,10 +15,10 @@
         "heading": "The Future <br>of Brushing",
         "subheading": "Better toothpaste tablets for oral<br> and systemic health",
         "button_label_1": "SHOP NOW",
-        "button_link_1": "#",
+        "button_link_1": "shopify:\/\/pages\/about",
         "button_style_text_link": false,
         "button_label_2": "What makes us different?",
-        "button_link_2": "#",
+        "button_link_2": "shopify:\/\/pages\/the-science",
         "button2_style_text_link": true
       }
     },
@@ -113,7 +113,7 @@
             "mobile_heading": "<p>Leave the<br\/>paste behind<\/p>",
             "description": "<p>Plastic-free for the planet.<br\/>Science-backed ingredients infused with <br\/>vitamins & supplements for whole body support.<\/p>",
             "mobile_description": "Plastic-free for the planet. \u2028Science-backed ingredients infused with vitamins & supplements for whole body support.",
-            "btn_link": "#",
+            "btn_link": "shopify:\/\/collections\/all",
             "btn_label": "SHOP BEST SELLERS",
             "btn_type": "button--primary",
             "product": "immunity",
@@ -131,7 +131,7 @@
             "mobile_heading": "<p>Bundle<br\/>and Save<\/p>",
             "description": "<p>Start your plastic-free routine (for less) <br\/>with bundled jars and compostable <br\/>refills.<\/p>",
             "mobile_description": "Start your plastic-free routine (for less) with bundled jars and compostable refills.",
-            "btn_link": "#",
+            "btn_link": "shopify:\/\/pages\/build-bundle",
             "btn_label": "SHOP BUNDLES",
             "btn_type": "button--primary",
             "product": "original",
@@ -412,7 +412,7 @@
         "bg_color": "#e2ebf2",
         "heading": "<p>Developed<br\/>by Dentists<\/p>",
         "description": "<p>Good oral health impacts all major systems in the body. Duo tablets are created by experts, rigorously tested, and vetted by the industry.<\/p>",
-        "btn_link": "#",
+        "btn_link": "shopify:\/\/pages\/about",
         "btn_label": "Meet the Duo Team"
       }
     },
@@ -485,7 +485,7 @@
             "heading": "Game-changing <br>ingredients",
             "description": "<p>Nano-hydroxyapatite, or nHa, is the dentist-backed fluoride<br\/> alternative in Duo that remineralizes enamel, removes plaque, <br\/>whitens, and blocks sensitivity.<br\/><\/p>",
             "mobile_description": "Nano-hydroxyapatite, or nHa, is the dentist-backed fluoride alternative in Duo that remineralizes enamel, removes plaque, whitens, and blocks sensitivity.",
-            "btn_link": "#",
+            "btn_link": "shopify:\/\/pages\/the-science",
             "btn_label": "EXPLORE THE SCIENCE",
             "btn_type": "button--primary"
           }
@@ -499,7 +499,7 @@
             "heading": "About mucosal<br>absorption",
             "description": "<p>Our mouths absorb nutrients directly into the bloodstream.<br\/> That’s the key to the efficient bio-availability of the vitamins<br\/> and supplements in Duo, added for convenience and health.<\/p>",
             "mobile_description": "Our mouths absorb nutrients directly into the bloodstream. That’s the key to the efficient bio-availability of the vitamins and supplements in Duo, added for convenience and health.",
-            "btn_link": "#",
+            "btn_link": "shopify:\/\/pages\/the-science",
             "btn_label": "EXPLORE THE SCIENCE",
             "btn_type": "button--primary"
           }
@@ -513,7 +513,7 @@
             "heading": "Balancing the oral<br>microbiome",
             "description": "<p>The mouth is the gateway to whole-body health. Duo is<br\/> packed with science-backed ingredients to support and<br\/> nourish the oral microbiome, preventing systemic diseases.<\/p>",
             "mobile_description": "The mouth is the gateway to whole-body health. Duo is packed with science-backed ingredients to support and nourish the oral microbiome, preventing systemic diseases.",
-            "btn_link": "#",
+            "btn_link": "shopify:\/\/pages\/the-science",
             "btn_label": "EXPLORE THE SCIENCE",
             "btn_type": "button--primary"
           }
@@ -549,7 +549,7 @@
         "mobile_description": "A plastic-free upgrade to your daily routine that actually makes a difference. Duo is delivered in apothecary-grade, recyclable glass bottles with compostable refill pouches. It’s the future of toothpaste and better for us all.",
         "decoration": "500 yrs",
         "info": "to break down a single plastic toothpaste tube",
-        "btn_link": "#",
+        "btn_link": "shopify:\/\/collections\/shop-all",
         "btn_text": "SHOP NOW",
         "btn_type": "button--primary"
       }
