@@ -412,7 +412,7 @@
         "bg_color": "#e2ebf2",
         "heading": "<p>Developed<br\/>by Dentists<\/p>",
         "description": "<p>Good oral health impacts all major systems in the body. Duo tablets are created by experts, rigorously tested, and vetted by the industry.<\/p>",
-        "btn_link": "#",
+        "btn_link": "shopify:\/\/pages\/about",
         "btn_label": "Meet the Duo Team"
       }
     },
@@ -549,7 +549,7 @@
         "mobile_description": "A plastic-free upgrade to your daily routine that actually makes a difference. Duo is delivered in apothecary-grade, recyclable glass bottles with compostable refill pouches. It’s the future of toothpaste and better for us all.",
         "decoration": "500 yrs",
         "info": "to break down a single plastic toothpaste tube",
-        "btn_link": "#",
+        "btn_link": "shopify:\/\/collections\/shop-all",
         "btn_text": "SHOP NOW",
         "btn_type": "button--primary"
       }
