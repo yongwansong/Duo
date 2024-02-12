@@ -5,9 +5,16 @@
 
 <style>
 
+.footer {
+    padding: 0!important;  
+    
 
+}
 
+.section-endrock-hero-image .hero-banner__text h2 {
 
+  margin: 140px 0 27px!important;
+}
     #section--{{ section.id }}{
         padding-top: {{ section.settings.padding_top }}px;
         padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -101,26 +108,7 @@
 
 
 
-    cccccccccccccccc
-    <div class="hero-banner__buttons">
-        {% if section.settings.button_link_1 != blank %}
-          <a
-            href="{{ section.settings.button_link_1 }}"
-            class="custom_button {% if section.settings.button_style_text_link %} button--primary{% else %} button--secondary{% endif %}"
-          >
-            {{- section.settings.button_label_1 -}}
-          </a>
-        {% endif %}
-        {% if section.settings.button_link_2 != blank %}
-          <a
-            href="{{ section.settings.button_link_2 }}"
-            class="custom_button{% if section.settings.button2_style_text_link %} button--primary{% else %} button--secondary{% endif %}"
-          >
-            {{- section.settings.button_label_2 -}}
-          </a>
-        {% endif %}
-      </div>
-    </div>
+    
   </div>
   {%- if desktop_video == blank and section.settings.mobile_image != blank -%}
     <div class="mobile_image only--mobile">

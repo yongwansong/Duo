@@ -1,0 +1,83 @@
+<style>
+  .shop-all {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    max-width: fit-content;
+    gap: 10px;
+    margin: auto;
+  }
+
+  .item {
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 0px;
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .endrock-featured-collection__container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .shop-container {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .section-content {
+    padding: 20px;
+    border: 2px solid #000;
+    margin-top: 20px;
+  }
+</style>
+
+<script>
+
+function scrollToSection(section) {
+  const elements = document.querySelectorAll("." + section);
+  if (elements.length > 0) {
+    const offset = -110;
+    window.scrollTo({
+      top: elements[0].offsetTop + offset,
+      behavior: "smooth"
+    });
+  }
+}
+
+function handleItemClick(section) {
+  scrollToSection(section);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".item");
+  items.forEach(function (item) {
+    item.addEventListener("click", function () {
+      const section = item.getAttribute("data-section");
+      handleItemClick(section);
+    });
+  });
+});
+
+</script>
+
+<div class="endrock-featured-collection__container">
+  <h3 class="shop-container">
+    Filter By
+  </h3>
+  <section class="shop-all">
+
+    <!-- Agrega el contenido de tu sección Shop All aquí -->
+    <div class="item" data-section="all">Shop all</div>
+    <div class="item" data-section="singles">Singles</div>
+    <div class="item" data-section="bundles">Bundles</div>
+    <div class="item" data-section="starter-pack">Starter Pack</div>
+    <div class="item" data-section="toothbrushes">Toothbrushes</div>
+
+    <!-- Agrega más elementos según tus necesidades -->
+  </section>
+</div>

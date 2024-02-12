@@ -1,6 +1,6 @@
 {
   "sections": {
-    "158ed8f9-7b68-4533-8268-440e430fdf06": {
+    "all-hero-img": {
       "type": "all-hero-image",
       "settings": {
         "padding_top": 0,
@@ -9,21 +9,26 @@
         "mobile_padding_bottom": 0,
         "full_width": true,
         "video": "",
-        "desktop_image": "shopify:\/\/shop_images\/new-hp-banner.png",
-        "mobile_image": "shopify:\/\/shop_images\/Duo-Brand_Shoot-Edited-585_1_3c146333-05d6-4246-8ae5-a09cd6c430ea.png",
+        "desktop_image": "shopify:\/\/shop_images\/Duo_Product-0868_2.png",
+        "mobile_image": "shopify:\/\/shop_images\/Duo_Product-0868_2.png",
         "videomobile": "",
-        "heading": "The Future <br>of Brushing",
-        "subheading": "Better toothpaste tablets for oral<br> and systemic health",
+        "heading": "Shop all",
+        "subheading": "",
         "button_label_1": "SHOP NOW",
         "button_link_1": "#",
         "button_style_text_link": false,
-        "button_label_2": "What makes us different?",
+        "button_label_2": "",
         "button_link_2": "shopify:\/\/pages\/the-science",
         "button2_style_text_link": true
       }
     },
-    "daa23bb1-15db-433f-981a-e416d3bcfdb4": {
-      "type": "endrock-featured-collection",
+    "all-pivot": {
+      "type": "all-filter-pivot",
+      "settings": {
+      }
+    },
+    "all-feat-coll-one": {
+      "type": "all-endrock-featured-collection",
       "blocks": {
         "767ba903-3399-4e8f-8696-8b77e4c621cb": {
           "type": "product",
@@ -125,16 +130,391 @@
         "98c119ba-a537-4ed6-8310-ec3ee7c26183"
       ],
       "settings": {
-        "heading": "Shop Duo",
+        "heading": "",
+        "id_section_pivot": "singles",
         "padding_top": 0,
         "padding_bottom": 0,
         "mobile_padding_top": 65,
         "mobile_padding_bottom": 30,
         "full_width": false,
-        "bg_color": "#e2ebf2",
+        "bg_color": "#ffffff",
         "products_to_show": 4,
         "swipe_on_mobile": false,
-        "show_secondary_image": true
+        "show_secondary_image": false,
+        "card_one_title": "",
+        "card_one_subtitle": "",
+        "card_link_one": "",
+        "card_two_title": "",
+        "card_two_subtitle": "",
+        "card_link_two": ""
+      }
+    },
+    "all-feat-coll-two": {
+      "type": "all-endrock-featured-collection",
+      "blocks": {
+        "767ba903-3399-4e8f-8696-8b77e4c621cb": {
+          "type": "product",
+          "settings": {
+            "featured_product": "original",
+            "custom_product_image": "shopify:\/\/shop_images\/Originalx3.jpg",
+            "hover_image": "shopify:\/\/shop_images\/Original_Hover_Imagex3.jpg",
+            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
+            "info_1_top_position": "27%",
+            "info_1_right_position": "",
+            "info_1_left_position": "7%",
+            "info_1_bottom_position": "",
+            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
+            "info_2_top_position": "",
+            "info_2_right_position": "",
+            "info_2_left_position": "7%",
+            "info_2_bottom_position": "25%",
+            "info_3": "",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "",
+            "info_3_bottom_position": ""
+          }
+        },
+        "c9ce3ad8-d62f-4ed1-866a-6c32c3729406": {
+          "type": "product",
+          "settings": {
+            "featured_product": "energy",
+            "custom_product_image": "shopify:\/\/shop_images\/Energyx3-orange.jpg",
+            "hover_image": "shopify:\/\/shop_images\/Energy_Hover_Imagex3.jpg",
+            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
+            "info_1_top_position": "8%",
+            "info_1_right_position": "",
+            "info_1_left_position": "7%",
+            "info_1_bottom_position": "",
+            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
+            "info_2_top_position": "33%",
+            "info_2_right_position": "",
+            "info_2_left_position": "7%",
+            "info_2_bottom_position": "",
+            "info_3": "<p><strong>Caffeine <\/strong>+ \u2028<br\/>vitamin B12 + \u2028<br\/>L-theanine \u2028<br\/>for vitality and mood<\/p>",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "7%",
+            "info_3_bottom_position": "26%"
+          }
+        },
+        "51bf7b6e-4df4-46f1-95cc-af4735742f17": {
+          "type": "product",
+          "settings": {
+            "featured_product": "sleep",
+            "custom_product_image": "shopify:\/\/shop_images\/Sleepx3.jpg",
+            "hover_image": "shopify:\/\/shop_images\/Sleep_Hover_Imagex3.jpg",
+            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
+            "info_1_top_position": "7%",
+            "info_1_right_position": "",
+            "info_1_left_position": "7%",
+            "info_1_bottom_position": "",
+            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
+            "info_2_top_position": "42%",
+            "info_2_right_position": "15%",
+            "info_2_left_position": "",
+            "info_2_bottom_position": "",
+            "info_3": "<p><strong>Melatonin <\/strong>+ \u2028<br\/><strong>L-theanine<\/strong> for \u2028<br\/>sleep hygiene<\/p>",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "7%",
+            "info_3_bottom_position": "7%"
+          }
+        },
+        "98c119ba-a537-4ed6-8310-ec3ee7c26183": {
+          "type": "product",
+          "settings": {
+            "featured_product": "immunity",
+            "custom_product_image": "shopify:\/\/shop_images\/Immunityx3.jpg",
+            "hover_image": "shopify:\/\/shop_images\/Immunity_IngredientsWeb_1x3_83302865-e68a-41b6-9d24-5f17b11b2817.jpg",
+            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
+            "info_1_top_position": "7%",
+            "info_1_right_position": "",
+            "info_1_left_position": "7%",
+            "info_1_bottom_position": "",
+            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
+            "info_2_top_position": "46%",
+            "info_2_right_position": "9%",
+            "info_2_left_position": "",
+            "info_2_bottom_position": "",
+            "info_3": "<p><strong>Vitamins D3<\/strong> + <strong>B12 <\/strong><br\/><strong>for optimal \u2028<\/strong><br\/>immune function<\/p>",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "7%",
+            "info_3_bottom_position": "10%"
+          }
+        }
+      },
+      "block_order": [
+        "767ba903-3399-4e8f-8696-8b77e4c621cb",
+        "c9ce3ad8-d62f-4ed1-866a-6c32c3729406",
+        "51bf7b6e-4df4-46f1-95cc-af4735742f17",
+        "98c119ba-a537-4ed6-8310-ec3ee7c26183"
+      ],
+      "settings": {
+        "heading": "",
+        "id_section_pivot": "bundles",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "mobile_padding_top": 65,
+        "mobile_padding_bottom": 30,
+        "full_width": false,
+        "bg_color": "#ffffff",
+        "products_to_show": 3,
+        "swipe_on_mobile": false,
+        "show_secondary_image": true,
+        "image_card_one": "shopify:\/\/shop_images\/Rectangle_646.png",
+        "card_one_title": "Let’s talk about nHa",
+        "card_one_subtitle": "Learn more",
+        "card_link_one": "#",
+        "card_two_title": "",
+        "card_two_subtitle": "",
+        "card_link_two": ""
+      }
+    },
+    "all-feat-coll-three": {
+      "type": "all-endrock-featured-collection",
+      "blocks": {
+        "767ba903-3399-4e8f-8696-8b77e4c621cb": {
+          "type": "product",
+          "settings": {
+            "featured_product": "original",
+            "custom_product_image": "shopify:\/\/shop_images\/Originalx3.jpg",
+            "hover_image": "shopify:\/\/shop_images\/Original_Hover_Imagex3.jpg",
+            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
+            "info_1_top_position": "27%",
+            "info_1_right_position": "",
+            "info_1_left_position": "7%",
+            "info_1_bottom_position": "",
+            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
+            "info_2_top_position": "",
+            "info_2_right_position": "",
+            "info_2_left_position": "7%",
+            "info_2_bottom_position": "25%",
+            "info_3": "",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "",
+            "info_3_bottom_position": ""
+          }
+        },
+        "c9ce3ad8-d62f-4ed1-866a-6c32c3729406": {
+          "type": "product",
+          "settings": {
+            "featured_product": "energy",
+            "custom_product_image": "shopify:\/\/shop_images\/Energyx3-orange.jpg",
+            "hover_image": "shopify:\/\/shop_images\/Energy_Hover_Imagex3.jpg",
+            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
+            "info_1_top_position": "8%",
+            "info_1_right_position": "",
+            "info_1_left_position": "7%",
+            "info_1_bottom_position": "",
+            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
+            "info_2_top_position": "33%",
+            "info_2_right_position": "",
+            "info_2_left_position": "7%",
+            "info_2_bottom_position": "",
+            "info_3": "<p><strong>Caffeine <\/strong>+ \u2028<br\/>vitamin B12 + \u2028<br\/>L-theanine \u2028<br\/>for vitality and mood<\/p>",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "7%",
+            "info_3_bottom_position": "26%"
+          }
+        },
+        "51bf7b6e-4df4-46f1-95cc-af4735742f17": {
+          "type": "product",
+          "settings": {
+            "featured_product": "sleep",
+            "custom_product_image": "shopify:\/\/shop_images\/Sleepx3.jpg",
+            "hover_image": "shopify:\/\/shop_images\/Sleep_Hover_Imagex3.jpg",
+            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
+            "info_1_top_position": "7%",
+            "info_1_right_position": "",
+            "info_1_left_position": "7%",
+            "info_1_bottom_position": "",
+            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
+            "info_2_top_position": "42%",
+            "info_2_right_position": "15%",
+            "info_2_left_position": "",
+            "info_2_bottom_position": "",
+            "info_3": "<p><strong>Melatonin <\/strong>+ \u2028<br\/><strong>L-theanine<\/strong> for \u2028<br\/>sleep hygiene<\/p>",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "7%",
+            "info_3_bottom_position": "7%"
+          }
+        },
+        "98c119ba-a537-4ed6-8310-ec3ee7c26183": {
+          "type": "product",
+          "settings": {
+            "featured_product": "immunity",
+            "custom_product_image": "shopify:\/\/shop_images\/Immunityx3.jpg",
+            "hover_image": "shopify:\/\/shop_images\/Immunity_IngredientsWeb_1x3_83302865-e68a-41b6-9d24-5f17b11b2817.jpg",
+            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
+            "info_1_top_position": "7%",
+            "info_1_right_position": "",
+            "info_1_left_position": "7%",
+            "info_1_bottom_position": "",
+            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
+            "info_2_top_position": "46%",
+            "info_2_right_position": "9%",
+            "info_2_left_position": "",
+            "info_2_bottom_position": "",
+            "info_3": "<p><strong>Vitamins D3<\/strong> + <strong>B12 <\/strong><br\/><strong>for optimal \u2028<\/strong><br\/>immune function<\/p>",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "7%",
+            "info_3_bottom_position": "10%"
+          }
+        }
+      },
+      "block_order": [
+        "767ba903-3399-4e8f-8696-8b77e4c621cb",
+        "c9ce3ad8-d62f-4ed1-866a-6c32c3729406",
+        "51bf7b6e-4df4-46f1-95cc-af4735742f17",
+        "98c119ba-a537-4ed6-8310-ec3ee7c26183"
+      ],
+      "settings": {
+        "heading": "",
+        "id_section_pivot": "starter-pack",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "mobile_padding_top": 65,
+        "mobile_padding_bottom": 30,
+        "full_width": false,
+        "bg_color": "#ffffff",
+        "products_to_show": 3,
+        "swipe_on_mobile": false,
+        "show_secondary_image": true,
+        "card_one_title": "",
+        "card_one_subtitle": "",
+        "card_link_one": "",
+        "image_card_two": "shopify:\/\/shop_images\/Rectangle_647.png",
+        "card_two_title": "Want to customize your own bundle?",
+        "card_two_subtitle": "Learn more",
+        "card_link_two": ""
+      }
+    },
+    "all-feat-coll-four": {
+      "type": "all-endrock-featured-collection",
+      "blocks": {
+        "767ba903-3399-4e8f-8696-8b77e4c621cb": {
+          "type": "product",
+          "settings": {
+            "featured_product": "original",
+            "custom_product_image": "shopify:\/\/shop_images\/Originalx3.jpg",
+            "hover_image": "shopify:\/\/shop_images\/Original_Hover_Imagex3.jpg",
+            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
+            "info_1_top_position": "27%",
+            "info_1_right_position": "",
+            "info_1_left_position": "7%",
+            "info_1_bottom_position": "",
+            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
+            "info_2_top_position": "",
+            "info_2_right_position": "",
+            "info_2_left_position": "7%",
+            "info_2_bottom_position": "25%",
+            "info_3": "",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "",
+            "info_3_bottom_position": ""
+          }
+        },
+        "c9ce3ad8-d62f-4ed1-866a-6c32c3729406": {
+          "type": "product",
+          "settings": {
+            "featured_product": "energy",
+            "custom_product_image": "shopify:\/\/shop_images\/Energyx3-orange.jpg",
+            "hover_image": "shopify:\/\/shop_images\/Energy_Hover_Imagex3.jpg",
+            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
+            "info_1_top_position": "8%",
+            "info_1_right_position": "",
+            "info_1_left_position": "7%",
+            "info_1_bottom_position": "",
+            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
+            "info_2_top_position": "33%",
+            "info_2_right_position": "",
+            "info_2_left_position": "7%",
+            "info_2_bottom_position": "",
+            "info_3": "<p><strong>Caffeine <\/strong>+ \u2028<br\/>vitamin B12 + \u2028<br\/>L-theanine \u2028<br\/>for vitality and mood<\/p>",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "7%",
+            "info_3_bottom_position": "26%"
+          }
+        },
+        "51bf7b6e-4df4-46f1-95cc-af4735742f17": {
+          "type": "product",
+          "settings": {
+            "featured_product": "sleep",
+            "custom_product_image": "shopify:\/\/shop_images\/Sleepx3.jpg",
+            "hover_image": "shopify:\/\/shop_images\/Sleep_Hover_Imagex3.jpg",
+            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
+            "info_1_top_position": "7%",
+            "info_1_right_position": "",
+            "info_1_left_position": "7%",
+            "info_1_bottom_position": "",
+            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
+            "info_2_top_position": "42%",
+            "info_2_right_position": "15%",
+            "info_2_left_position": "",
+            "info_2_bottom_position": "",
+            "info_3": "<p><strong>Melatonin <\/strong>+ \u2028<br\/><strong>L-theanine<\/strong> for \u2028<br\/>sleep hygiene<\/p>",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "7%",
+            "info_3_bottom_position": "7%"
+          }
+        },
+        "98c119ba-a537-4ed6-8310-ec3ee7c26183": {
+          "type": "product",
+          "settings": {
+            "featured_product": "immunity",
+            "custom_product_image": "shopify:\/\/shop_images\/Immunityx3.jpg",
+            "hover_image": "shopify:\/\/shop_images\/Immunity_IngredientsWeb_1x3_83302865-e68a-41b6-9d24-5f17b11b2817.jpg",
+            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
+            "info_1_top_position": "7%",
+            "info_1_right_position": "",
+            "info_1_left_position": "7%",
+            "info_1_bottom_position": "",
+            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
+            "info_2_top_position": "46%",
+            "info_2_right_position": "9%",
+            "info_2_left_position": "",
+            "info_2_bottom_position": "",
+            "info_3": "<p><strong>Vitamins D3<\/strong> + <strong>B12 <\/strong><br\/><strong>for optimal \u2028<\/strong><br\/>immune function<\/p>",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "7%",
+            "info_3_bottom_position": "10%"
+          }
+        }
+      },
+      "block_order": [
+        "767ba903-3399-4e8f-8696-8b77e4c621cb",
+        "c9ce3ad8-d62f-4ed1-866a-6c32c3729406",
+        "51bf7b6e-4df4-46f1-95cc-af4735742f17",
+        "98c119ba-a537-4ed6-8310-ec3ee7c26183"
+      ],
+      "settings": {
+        "heading": "",
+        "id_section_pivot": "toothbrushes",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "mobile_padding_top": 65,
+        "mobile_padding_bottom": 30,
+        "full_width": false,
+        "bg_color": "#ffffff",
+        "products_to_show": 4,
+        "swipe_on_mobile": false,
+        "show_secondary_image": true,
+        "card_one_title": "",
+        "card_one_subtitle": "",
+        "card_link_one": "",
+        "card_two_title": "",
+        "card_two_subtitle": "",
+        "card_link_two": ""
       }
     },
     "endrock_icon_with_text_tTL9yd": {
@@ -215,7 +595,7 @@
         "full_width": false
       }
     },
-    "48cf5648-e874-42ba-b25d-d5d73c67c9ac": {
+    "all-why-duo": {
       "type": "why-duo",
       "blocks": {
         "a7ffaa90-a481-481c-8296-64e7b3759283": {
@@ -282,9 +662,13 @@
     }
   },
   "order": [
-    "158ed8f9-7b68-4533-8268-440e430fdf06",
-    "daa23bb1-15db-433f-981a-e416d3bcfdb4",
+    "all-hero-img",
+    "all-pivot",
+    "all-feat-coll-one",
+    "all-feat-coll-two",
+    "all-feat-coll-three",
+    "all-feat-coll-four",
     "endrock_icon_with_text_tTL9yd",
-    "48cf5648-e874-42ba-b25d-d5d73c67c9ac"
+    "all-why-duo"
   ]
 }
