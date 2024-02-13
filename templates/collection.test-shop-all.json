@@ -5,7 +5,7 @@
       "settings": {
         "padding_top": 0,
         "padding_bottom": 0,
-        "mobile_padding_top": 80,
+        "mobile_padding_top": 15,
         "mobile_padding_bottom": 0,
         "full_width": true,
         "video": "",
@@ -28,7 +28,7 @@
       }
     },
     "all-feat-coll-one": {
-      "type": "all-endrock-featured-collection",
+      "type": "all-endrock-featured-collection-single",
       "blocks": {
         "767ba903-3399-4e8f-8696-8b77e4c621cb": {
           "type": "product",
@@ -134,8 +134,8 @@
         "id_section_pivot": "singles",
         "padding_top": 0,
         "padding_bottom": 0,
-        "mobile_padding_top": 65,
-        "mobile_padding_bottom": 30,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0,
         "full_width": false,
         "bg_color": "#ffffff",
         "products_to_show": 4,
@@ -146,7 +146,10 @@
         "card_link_one": "",
         "card_two_title": "",
         "card_two_subtitle": "",
-        "card_link_two": ""
+        "card_link_two": "",
+        "card_three_title": "",
+        "card_three_subtitle": "",
+        "card_link_three": ""
       }
     },
     "all-feat-coll-two": {
@@ -256,8 +259,8 @@
         "id_section_pivot": "bundles",
         "padding_top": 0,
         "padding_bottom": 0,
-        "mobile_padding_top": 65,
-        "mobile_padding_bottom": 30,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0,
         "full_width": false,
         "bg_color": "#ffffff",
         "products_to_show": 3,
@@ -269,7 +272,10 @@
         "card_link_one": "#",
         "card_two_title": "",
         "card_two_subtitle": "",
-        "card_link_two": ""
+        "card_link_two": "",
+        "card_three_title": "",
+        "card_three_subtitle": "",
+        "card_link_three": ""
       }
     },
     "all-feat-coll-three": {
@@ -379,8 +385,8 @@
         "id_section_pivot": "starter-pack",
         "padding_top": 0,
         "padding_bottom": 0,
-        "mobile_padding_top": 65,
-        "mobile_padding_bottom": 30,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0,
         "full_width": false,
         "bg_color": "#ffffff",
         "products_to_show": 3,
@@ -392,41 +398,23 @@
         "image_card_two": "shopify:\/\/shop_images\/Rectangle_647.png",
         "card_two_title": "Want to customize your own bundle?",
         "card_two_subtitle": "Learn more",
-        "card_link_two": ""
+        "card_link_two": "",
+        "card_three_title": "",
+        "card_three_subtitle": "",
+        "card_link_three": ""
       }
     },
     "all-feat-coll-four": {
-      "type": "all-endrock-featured-collection",
+      "type": "all-endrock-featured-collection-pack",
       "blocks": {
-        "767ba903-3399-4e8f-8696-8b77e4c621cb": {
-          "type": "product",
-          "settings": {
-            "featured_product": "original",
-            "custom_product_image": "shopify:\/\/shop_images\/Originalx3.jpg",
-            "hover_image": "shopify:\/\/shop_images\/Original_Hover_Imagex3.jpg",
-            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
-            "info_1_top_position": "27%",
-            "info_1_right_position": "",
-            "info_1_left_position": "7%",
-            "info_1_bottom_position": "",
-            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
-            "info_2_top_position": "",
-            "info_2_right_position": "",
-            "info_2_left_position": "7%",
-            "info_2_bottom_position": "25%",
-            "info_3": "",
-            "info_3_top_position": "",
-            "info_3_right_position": "",
-            "info_3_left_position": "",
-            "info_3_bottom_position": ""
-          }
-        },
         "c9ce3ad8-d62f-4ed1-866a-6c32c3729406": {
           "type": "product",
           "settings": {
-            "featured_product": "energy",
-            "custom_product_image": "shopify:\/\/shop_images\/Energyx3-orange.jpg",
-            "hover_image": "shopify:\/\/shop_images\/Energy_Hover_Imagex3.jpg",
+            "featured_product": "original",
+            "featured_product_two": "immunity",
+            "featured_product_three": "energy",
+            "featured_product_four": "sleep",
+            "custom_product_image": "shopify:\/\/shop_images\/Rectangle_224_1.png",
             "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
             "info_1_top_position": "8%",
             "info_1_right_position": "",
@@ -444,69 +432,45 @@
             "info_3_bottom_position": "26%"
           }
         },
-        "51bf7b6e-4df4-46f1-95cc-af4735742f17": {
-          "type": "product",
-          "settings": {
-            "featured_product": "sleep",
-            "custom_product_image": "shopify:\/\/shop_images\/Sleepx3.jpg",
-            "hover_image": "shopify:\/\/shop_images\/Sleep_Hover_Imagex3.jpg",
-            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
-            "info_1_top_position": "7%",
-            "info_1_right_position": "",
-            "info_1_left_position": "7%",
-            "info_1_bottom_position": "",
-            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
-            "info_2_top_position": "42%",
-            "info_2_right_position": "15%",
-            "info_2_left_position": "",
-            "info_2_bottom_position": "",
-            "info_3": "<p><strong>Melatonin <\/strong>+ \u2028<br\/><strong>L-theanine<\/strong> for \u2028<br\/>sleep hygiene<\/p>",
-            "info_3_top_position": "",
-            "info_3_right_position": "",
-            "info_3_left_position": "7%",
-            "info_3_bottom_position": "7%"
-          }
-        },
-        "98c119ba-a537-4ed6-8310-ec3ee7c26183": {
+        "product_7h9bEq": {
           "type": "product",
           "settings": {
             "featured_product": "immunity",
-            "custom_product_image": "shopify:\/\/shop_images\/Immunityx3.jpg",
-            "hover_image": "shopify:\/\/shop_images\/Immunity_IngredientsWeb_1x3_83302865-e68a-41b6-9d24-5f17b11b2817.jpg",
-            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
-            "info_1_top_position": "7%",
+            "featured_product_two": "",
+            "featured_product_three": "",
+            "featured_product_four": "",
+            "info_1": "",
+            "info_1_top_position": "",
             "info_1_right_position": "",
-            "info_1_left_position": "7%",
+            "info_1_left_position": "",
             "info_1_bottom_position": "",
-            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
-            "info_2_top_position": "46%",
-            "info_2_right_position": "9%",
+            "info_2": "",
+            "info_2_top_position": "",
+            "info_2_right_position": "",
             "info_2_left_position": "",
             "info_2_bottom_position": "",
-            "info_3": "<p><strong>Vitamins D3<\/strong> + <strong>B12 <\/strong><br\/><strong>for optimal \u2028<\/strong><br\/>immune function<\/p>",
+            "info_3": "",
             "info_3_top_position": "",
             "info_3_right_position": "",
-            "info_3_left_position": "7%",
-            "info_3_bottom_position": "10%"
+            "info_3_left_position": "",
+            "info_3_bottom_position": ""
           }
         }
       },
       "block_order": [
-        "767ba903-3399-4e8f-8696-8b77e4c621cb",
         "c9ce3ad8-d62f-4ed1-866a-6c32c3729406",
-        "51bf7b6e-4df4-46f1-95cc-af4735742f17",
-        "98c119ba-a537-4ed6-8310-ec3ee7c26183"
+        "product_7h9bEq"
       ],
       "settings": {
         "heading": "",
         "id_section_pivot": "toothbrushes",
         "padding_top": 0,
         "padding_bottom": 0,
-        "mobile_padding_top": 65,
-        "mobile_padding_bottom": 30,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0,
         "full_width": false,
         "bg_color": "#ffffff",
-        "products_to_show": 4,
+        "products_to_show": 2,
         "swipe_on_mobile": false,
         "show_secondary_image": true,
         "card_one_title": "",
@@ -514,7 +478,11 @@
         "card_link_one": "",
         "card_two_title": "",
         "card_two_subtitle": "",
-        "card_link_two": ""
+        "card_link_two": "",
+        "image_card_three": "shopify:\/\/shop_images\/Rectangle_649.png",
+        "card_three_title": "Mucosal Absorption",
+        "card_three_subtitle": "Our mouths absorb nutrients directly into the bloodstream. That’s the key to the efficient bio-availability of the vitamins and supplements in Duo, added for convenience and health.",
+        "card_link_three": "#"
       }
     },
     "endrock_icon_with_text_tTL9yd": {
@@ -654,7 +622,7 @@
         "bg_color": "#e2ebf2",
         "full_width": true,
         "image": "shopify:\/\/shop_images\/Duo_Product-0951-Edit_1_227251e0-b0fb-45d7-8f54-00eb2d9a7a3e.png",
-        "mobile_image": "shopify:\/\/shop_images\/Duo_Product-0951-Edit_1_227251e0-b0fb-45d7-8f54-00eb2d9a7a3e.png",
+        "mobile_image": "shopify:\/\/shop_images\/079ae4f163b54ce6a59fc4166d8ce74d.jpg",
         "heading": "Why Duo?",
         "description": "<p>Better-for-you \u2028<br\/>toothpaste tablets<\/p>",
         "mobile_description": "<p>Better-for-you toothpaste tablets<\/p>"
