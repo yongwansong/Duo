@@ -485,6 +485,24 @@
             "text": {
               "label": "Text"
             },
+            "color_scheme": {
+              "label": "Color scheme",
+              "options__1": {
+                "label": "Background 1"
+              },
+              "options__2": {
+                "label": "Background 2"
+              },
+              "options__3": {
+                "label": "Inverse"
+              },
+              "options__4": {
+                "label": "Accent 1"
+              },
+              "options__5": {
+                "label": "Accent 2"
+              }
+            },
             "text_alignment": {
               "label": "Text alignment",
               "options__1": {
