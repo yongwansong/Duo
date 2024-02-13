@@ -1100,6 +1100,31 @@
             "label": "Middle center"
           }
         },
+        "color_scheme": {
+          "options__1": {
+            "label": "Accent 1"
+          },
+          "options__2": {
+            "label": "Accent 2"
+          },
+          "options__3": {
+            "label": "Background 1"
+          },
+          "options__4": {
+            "label": "Background 2"
+          },
+          "options__5": {
+            "label": "Inverse"
+          },
+          "label": "Color scheme"
+        },
+        "logo": {
+          "label": "Logo image"
+        },
+        "logo_width": {
+          "unit": "px",
+          "label": "Custom logo width"
+        },
         "menu": {
           "label": "Menu"
         },
@@ -1115,6 +1140,10 @@
           "options__3": {
             "label": "Drawer"
           }
+        },
+        "enable_sticky_header": {
+          "label": "Enable sticky header",
+          "info": "Header shows on the screen as customers scroll up."
         },
         "show_line_separator": {
           "label": "Show separator line"
