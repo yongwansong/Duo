@@ -1,4 +1,63 @@
 {{ 'section-endrock-featured-collection.css' | asset_url | stylesheet_tag }}
+
+<!-- Include jQuery and Slick carousel libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
+<script>
+    $(document).ready(function(){
+      $('.slider').slick({
+        infinite: true,
+        dots: true,
+        arrows: false,
+        autoplay: false,
+        autoplaySpeed: 3000,
+        fadeSpeed: 1000
+      });
+    });
+  </script>
+  <style>
+    .slider {
+      width: 10rem;
+    }
+  
+    .slide img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  
+    /* Styling the default Slick dots */
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 1rem 0;
+      list-style-type: none;
+    }
+  
+    .slick-dots li {
+      margin: 0 0.25rem;
+    }
+  
+    .slick-dots button {
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      padding: 0;
+      border: none;
+      border-radius: 100%;
+      background-color: blue;
+      text-indent: -9999px;
+    }
+  
+    .slick-dots li.slick-active button {
+      background-color: red;
+    }
+  </style>
+  
+
+  
 <style>
     #section--{{ section.id }}{
         padding-top: {{ section.settings.padding_top }}px;
@@ -11,6 +70,7 @@
             position: absolute;
             top: {{ block.settings.info_1_top_position }};
             left: {{ block.settings.info_1_left_position }};
+            bottom: {{ block.settings.info_1_bottom_position }};
             right: {{ block.settings.info_1_right_position }};
         }
 
@@ -142,9 +202,6 @@
         {%- endif -%}
     {% endfor %}
 
-    .color_info{
-
-    }
     @media (max-width: 767px){
         #section--{{ section.id }}{
             padding-top: {{ section.settings.mobile_padding_top }}px;
@@ -154,210 +211,34 @@
     }
 </style>
 
+
+
 <div id="section--{{ section.id }}">
     <div class="endrock-featured-collection {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">
         <div class="endrock-featured-collection__container">
             <div class="endrock-featured-collection__wrapper">
                 <h2 class="heading">{{ section.settings.heading }}</h2>
                 <div class="swiper-container">
+
+
+
+                
                     <div class="products_wrapper {% if section.settings.swipe_on_mobile %}swiper-wrapper{% endif %}">
                         {%- for block in section.blocks limit: section.settings.products_to_show -%}
+                            
+                          
+                       
+                              
+                             
+                            
+                            
                             {%- assign endrock_featured_product = block.settings.featured_product -%}
                             {%- assign featured_media_aspect_ratio = endrock_featured_product.featured_media.aspect_ratio -%}
-                            <div class="product-list {% if section.settings.swipe_on_mobile %}swiper-slide{% endif %}">
-                            
-                             
-                             
-                             
-                             
-                             
-                             
-                             
-                             
-                             
-                             
-                             
-                             
+                           
+                        <div class="product-list {% if section.settings.swipe_on_mobile %}swiper-slide{% endif %}">
                                 {%- if block.settings.custom_product_image != blank -%}
                                     <div class="custom_product_image" id="block--{{ block.id }}" style="padding-bottom: {{ 100 | divided_by: block.settings.custom_product_image.aspect_ratio }}%">
                                         <a href="{{  endrock_featured_product.url }}">
-
-
-                                        
-    <style>
-        /* Estilo opcional para ocultar el texto inicialmente */
-        .textoOculto {
-          display: none;
-          z-index: 2;
-  position: absolute;
-  width: 100%;height: 100%;background: #F4F4E8;
-        }
-    
-        /* Estilo para el switch con dos botones a la izquierda y derecha */
-        .switch {
-          display: flex;
-          align-items: center;
-          width: 30px; /* Ancho total del switch */
-          height: 15px;
-          border-radius: 17px; /* Hace que el área del switch sea redondeada */
-          overflow: hidden; /* Oculta el contenido que desborda el contenedor */
-          position: absolute;
-  z-index: 9;
-  float: right;
-  right: 0;
-  margin: 10px;
-        }
-    
-        .switch input {
-          opacity: 0;
-          width: 0;
-          height: 0;
-          position: absolute;
-        }
-    
-        .slider {
-          flex: 1;
-          height: 100%;
-          display: flex;
-          justify-content: space-between;
-          gap: 3px;
-        }
-    
-        .slider span {
-          flex: 1;
-          border-radius: 17px; /* Hace que el botón sea redondeado */
-          -webkit-transition: background-color 0.4s;
-          transition: background-color 0.4s;
-        }
-    
-        .slider span:first-child {
-          background-color: black; /* Color inicial del botón izquierdo (negro) */
-        }
-    
-        .slider span:last-child {
-          background-color: #808080; /* Color inicial del botón derecho (gris) */
-        }
-    
-        .switch input:checked + .slider span:first-child {
-          background-color: #808080; /* Color del botón izquierdo cuando está activado (gris) */
-        }
-    
-        .switch input:checked + .slider span:last-child {
-          background-color: black; /* Color del botón derecho cuando está activado (negro) */
-        }
-    
-        /* Muestra u oculta el texto según el estado del switch */
-        .switch input:checked ~ .slider span:first-child ~ .textoOculto,
-        .switch input:not(:checked) ~ .slider span:last-child ~ .textoOculto {
-          display: block;
-        }
-    
-        .switch input:checked ~ .slider span:last-child ~ .textoOculto,
-        .switch input:not(:checked) ~ .slider span:first-child ~ .textoOculto {
-          display: none;
-        }
-
-        .img_front {
-  position: relative!important;
-
-  height: 160px!important;
-
-}
-
-.info_1{
-    
-background: {{ block.settings.info_1_bottom_position }};
-  border-radius: 25px;
-  font-size: 12px;
-  padding: 0px 5px;
-  line-height: 30px;
-  color: black;
-  font-weight: 600;
-  width: 50%;
-}
-.info_2{
-    background: {{ block.settings.info_1_bottom_position }};
-  border-radius: 25px;
-  font-size: 12px;
-  padding: 0px 5px;
-  line-height: 30px;
-  color: black;
-  font-weight: 600;
-  width: 50%;
-}
-
-.info_3{
-
-font-size: 12px;
-  line-height: 14px;
-  color: black;
-  font-weight: 500;
-  padding: 0px 10px;background: transparent !important;
-}
-
-.container-info
-{padding: 10px;
-  display: flex;
-  width: 90%;
-  gap: 5px;
-  margin: auto;
-    margin-bottom: auto;
-  margin-bottom: 0;
-}
-.main-info{
-    
-    text-align: center;
-
-}
-
-
-.cardhide{
-    display: none;
-    }
-@media (max-width: 767px) {
-.cardhide{
-    display: block!important;
-    }
-}
-      </style>
-      <!-- Elemento 1 -->
-      
-      <label class="switch cardhide">
-        <input type="checkbox" class="switchInput" onchange="toggleText(this)">
-        <div class="slider">
-          <span></span>
-          <span></span>
-        </div>
-      </label>
-      <span class="textoOculto">
-        <div class="main-info">
-      <img
-                                            src="{{ block.settings.hover_image | img_url: 'master' }}"
-                                            class="img_front"
-                                            alt="{{ block.settings.hover_image.alt }}"
-                                            loading="lazy"
-                                        >
-                                      <div><div class="container-info"><div class="info_1 color_info" style="background: {{ block.settings.info_1_bottom_position }}!important";>{{ block.settings.info_1 }}</div>
-                                     <div class="info_2 color_info" style="background: {{ block.settings.info_1_bottom_position }}!important";>{{ block.settings.info_2 }}</div>
-                                     
-                                     </div>
-                                     <div class="info_3" >{{ block.settings.info_3 }}</div>
-
-                                     </div>
-                                        
-                                        </div>
-                                        </span>
-    
-      
-    
-      <script>
-        function toggleText(element) {
-          const textoOculto = element.parentElement.nextElementSibling;
-          textoOculto.style.display = textoOculto.style.display === 'none' || textoOculto.style.display === '' ? 'block' : 'none';
-        }
-      </script>
-
-
                                         <img
                                             src="{{ block.settings.custom_product_image | img_url: 'master' }}"
                                             class="first_image"
@@ -365,13 +246,15 @@ font-size: 12px;
                                             loading="lazy"
                                         >
                                         <img
-                                            src="{{ block.settings.custom_product_image | img_url: 'master' }}"
+                                            src="{{ block.settings.hover_image | img_url: 'master' }}"
                                             class="hover_image"
-                                            alt="{{ block.settings.custom_product_image.alt }}"
+                                            alt="{{ block.settings.hover_image.alt }}"
                                             loading="lazy"
                                         >
                                         </a>
-                                        
+                                        <div class="product_info_1 product_info">{{ block.settings.info_1 }}</div>
+                                        <div class="product_info_2 product_info">{{ block.settings.info_2 }}</div>
+                                        <div class="product_info_3 product_info">{{ block.settings.info_3 }}</div>
                                     </div>
                                 {%- endif -%}
                                 
@@ -666,7 +549,7 @@ font-size: 12px;
                 "label": "Hover Image"
             },
             {
-                "type": "text",
+                "type": "richtext",
                 "id": "info_1",
                 "label": "Product Info 1"
             },
@@ -691,7 +574,7 @@ font-size: 12px;
                 "label": "Product Info 1 Bottom Position"
             },
             {
-                "type": "text",
+                "type": "richtext",
                 "id": "info_2",
                 "label": "Product Info 2"
             },
@@ -716,7 +599,7 @@ font-size: 12px;
                 "label": "Product Info 2 Bottom Position"
             },
             {
-                "type": "text",
+                "type": "richtext",
                 "id": "info_3",
                 "label": "Product Info 3"
             },
