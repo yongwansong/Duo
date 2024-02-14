@@ -41,6 +41,10 @@
     margin-top: 40px;
 }
 
+.hero-banner__text a{
+  text-decoration: none;
+}
+
 @media (min-width:1000px) {
     .section-endrock-hero-image .hero-banner__content{
         left: 93px;
