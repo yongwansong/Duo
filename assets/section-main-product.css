@@ -1409,33 +1409,11 @@ a.product__text {
     position: relative;
 }
 
-[data-value="2 Bottles"]::before {
-    content: "MOST POPULAR";
-    position: absolute;
-    top: -35px;
-    width: 100%;
-    background: #70E6B8;
-    border-radius: 124px;
-    font-size: 13px;
-    text-align: center;
-    font-weight: 600;
-}
 
 [data-value="4 Bottles"] {
     position: relative;
 }
 
-[data-value="4 Bottles"]::before {
-    content: "BEST VALUE";
-    position: absolute;
-    top: -35px;
-    width: 100%;
-    background: #8E92BA;
-    border-radius: 124px;
-    font-size: 13px;
-    text-align: center;
-    font-weight: 600;
-} 
 .product-form__input.product-form__input--radio.variant-b label.variant-field__best-value:after{
 	display: none;
 }
