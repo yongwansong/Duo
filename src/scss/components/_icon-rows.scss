@@ -1,0 +1,146 @@
+
+
+$margin-icon: 20px;
+
+.row-icons {
+  background: #E2EBF2;
+  h2, h1, h3, h4, p {
+    text-align: center;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+  .medium-width {
+    max-width: 685px;
+    margin: 0 auto;
+  }
+
+  .footer-description {
+    font-family: 'OldschoolGrotesk-Regular';
+    line-height: 124%;
+    color: #000;
+  }
+
+  &__elements {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;;
+    justify-content: space-between;
+
+    &.flex>:not(:last-of-type) {
+      margin-right: 0;
+    }
+
+    @media screen and (max-width: 850px) {
+      flex-wrap: wrap;
+      --gap-flex: 0;
+    }
+
+    @media screen and (max-width: 650px) {
+      &.slider-mobile {
+        --justify: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        margin-left: -1rem;
+        margin-right: -1rem;
+
+
+        .row-icons__element {
+          flex-shrink: 0;
+          width: auto;
+          padding: 0 20px;
+        }
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__description {
+
+    h3 {
+      margin-bottom: 0 !important;
+      font-family: "OldschoolGrotesk-Regular";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+      letter-spacing: -0.24px;
+      text-transform: uppercase;
+    }
+    & > div {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+
+      strong {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__element {
+    width: 160px;
+    padding: 0;
+    margin-top: $margin-icon;
+    margin-bottom: $margin-icon;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 73px;
+      height: 73px;
+    }
+
+    @media screen and (max-width: 850px) {
+      width: 45%;
+    }
+
+    @media screen and (max-width: 425px) {
+      padding: 0 20px;
+
+      &.position__left {
+        justify-content: center;
+      }
+    }
+
+    h3 {
+      margin: 10px 0;
+    }
+
+    &.position__left {
+      justify-content: space-around;
+
+      img {
+        margin-right: $margin-icon;
+        width: 120px;
+        height: 110px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+    }
+
+    &.position__top {
+      justify-content: center;
+      flex-direction: column;
+
+      h3 {
+        font-size: 16px;
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+}

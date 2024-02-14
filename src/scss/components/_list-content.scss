@@ -1,0 +1,145 @@
+.content-table {
+
+  .title {
+    margin: 0;
+    margin-right: 3px;
+    color: #000;
+    font-family: "OldschoolGrotesk-Regular";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.21px;
+  }
+
+  .content {
+    margin-left: 3px;
+    color: #000;
+    text-align: right;
+    font-family: "OldschoolGrotesk-ExtraLight";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.21px;
+  }
+
+  .table-rows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  .dots {
+    flex: 1;
+  }
+  
+  .dots::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px dashed black;
+  }
+}
+
+.description-dorpdown {
+  color: #000;
+  font-family: "OldschoolGrotesk-Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+    p {
+      margin: 0;
+    }
+
+  }
+  .comparation-dropdown {
+    display: flex;
+    margin-top: 20px;
+    column-gap: 3px;
+
+    .comparation-dropdown__container-duo {
+      width: 45%;
+      .icon-duo {
+        margin-top: 6px;
+      }
+
+      .comparation-dropdown__list-duo {
+        ul {
+          li {
+            border: 0.5px dashed #73CCEA;
+            color: #00497E;
+            
+          }
+        }
+      }
+    }
+
+    .comparation-dropdown__list-suplement {
+      ul {
+        li {
+          border: 0.5px dashed #505050;
+          color: #505050;
+        }
+      }
+    }
+
+    .comparation-dropdown__container-suplement {
+      color: #505050;
+      font-family: "OldschoolGrotesk-Medium";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 40px;
+
+    }
+
+    ul {
+      padding-left: 0 !important;
+      li {
+        list-style: none;
+        font-family: "OldschoolGrotesk-Regular";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        margin-bottom: 2px;
+        padding: 14px 5px;
+
+        svg {
+          margin-top: 0;
+          margin-right: 8px;
+        }
+      }
+    }
+
+    
+  }
+.content-check {
+  display: flex;
+  flex-wrap: wrap;
+
+  .content-check--item {
+    font-family: "OldschoolGrotesk-Regular";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+    padding: 10px 5px;
+    width: 50%;
+    color: #00497E;
+
+
+    svg {
+      margin-top: 0;
+      margin-right: 8px;
+    }
+  }
+}

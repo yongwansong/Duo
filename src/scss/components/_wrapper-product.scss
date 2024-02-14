@@ -1,0 +1,13 @@
+.page-width {
+  padding-left: 141px !important;
+  padding-right: 141px !important;
+  max-width: 1440px !important;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 995px) {
+  .page-width {
+    padding-left: 90px !important;
+    padding-right: 90px !important;
+  }
+}

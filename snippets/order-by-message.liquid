@@ -1,16 +1,9 @@
 <script src="{{ 'order-by-message.js' | asset_url }}" defer="defer"></script>
-{{ 'order-by-message.css' | asset_url | stylesheet_tag }}
 
 {% assign bg-color = product.metafields.custom.order_by_background_color | default: "#DAF9EF" %}
 {% assign border-color = product.metafields.duo.product_color | default: "#70E6B8" %}
 
-<style>
-    .product-form__order-by {
-        background: {{ bg-color }};
-        border: 1px solid {{ border-color }};
-    }
-</style>
 
-<div class="product-form__order-by" data-message="{{ order_by_message }}" data-min-days="{{ min_days }}" data-max-days="{{ max_days }}">
+<div class="product-form__order-by show-delivery-time" data-message="{{ order_by_message }}" data-min-days="{{ min_days }}" data-max-days="{{ max_days }}">
 </div>
 

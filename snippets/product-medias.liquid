@@ -1,0 +1,148 @@
+
+
+  <div class="swiper-container gallery-thumbs">
+    <div class="swiper-wrapper">
+      {%- for media in product.media offset: media_offset -%}
+        {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+          <div
+            class="product__media-item swiper-slide {% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}"
+            data-media-id="{{ section.id }}-{{ media.id }}"
+          >
+            <div
+              class="product__media media media--transparent"
+              style="padding-top: {% if media_ratio != blank %}{{ media_ratio }}{% else %}{{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}{% endif %}%;"
+            >
+            {%- capture sizes -%}
+              (min-width: 1205px) {{ 1205 | times: 0.532 | round }}px, (min-width: 845px) calc((100vw - 8rem) / 2), (min-width: 750px) calc(100vw - 10rem), calc(100vw - 4rem)
+              {%- endcapture -%}
+              {%- liquid
+                assign crop_top = 24
+                assign crop_left = 24
+                unless forloop.first
+                  assign lazy_load = 'lazy'
+                  assign crop_top = 24
+                  assign crop_left = 110
+                endunless
+              -%}
+              {%- if media_offset == 3  -%}
+                {{ media.preview_image | image_url: width: 1851, crop: 'region', crop_width: 1851, crop_height: 2480, crop_top: crop_top, crop_left: crop_left | image_tag:
+                  loading: lazy_load,
+                  sizes: sizes,
+                  widths: '246, 493, 642, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1851'
+                }}
+              {%- else -%}
+                {{ media.preview_image | image_url: width: 1851 | image_tag:
+                  loading: lazy_load,
+                  sizes: sizes,
+                  widths: '246, 493, 642, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1851'
+                }}
+            {%- endif -%}
+            </div>
+          </div>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="swiper-container gallery-top">
+    <div class="swiper-wrapper">
+      {%- for media in product.media offset: media_offset -%}
+        {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+          <div
+            class="product__media-item swiper-slide {% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}"
+            data-media-id="{{ section.id }}-{{ media.id }}"
+          >
+            <div
+              class="product__media media media--transparent"
+              style="padding-top: {% if media_ratio != blank %}{{ media_ratio }}{% else %}{{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}{% endif %}%;"
+            >
+            {%- capture sizes -%}
+              (min-width: 1205px) {{ 1205 | times: 0.532 | round }}px, (min-width: 845px) calc((100vw - 8rem) / 2), (min-width: 750px) calc(100vw - 10rem), calc(100vw - 4rem)
+              {%- endcapture -%}
+              {%- liquid
+                assign crop_top = 24
+                assign crop_left = 24
+                unless forloop.first
+                  assign lazy_load = 'lazy'
+                  assign crop_top = 24
+                  assign crop_left = 110
+                endunless
+              -%}
+              {%- if media_offset == 3 -%}
+                {{ media.preview_image | image_url: width: 1851, crop: 'region', crop_width: 1851, crop_height: 2480, crop_top: crop_top, crop_left: crop_left | image_tag:
+                  loading: lazy_load,
+                  sizes: sizes,
+                  widths: '246, 493, 642, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1851'
+                }}
+              {%- else -%}
+                {{ media.preview_image | image_url: width: 1851 | image_tag:
+                  loading: lazy_load,
+                  sizes: sizes,
+                  widths: '246, 493, 642, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1851'
+                }}
+            {%- endif -%}
+            </div>
+          </div>
+        {% endunless %}
+      {% endfor %}
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next arrow-swiper"></div>
+    <div class="swiper-button-prev arrow-swiper"></div>
+  </div>
+
+
+    {%- if first_3d_model -%}
+      <button
+        class="button button--full-width product__xr-button"
+        type="button"
+        aria-label="{{ 'products.product.xr_button_label' | t }}"
+        data-shopify-xr
+        data-shopify-model3d-id="{{ first_3d_model.id }}"
+        data-shopify-title="{{ product.title | escape }}"
+        data-shopify-xr-hidden
+      >
+        {% render 'icon-3d-model' %}
+        {{ 'products.product.xr_button' | t }}
+      </button>
+    {%- endif -%}
+
+
+    {% comment %} <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css"
+    />
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+ {% endcomment %}
+
+ <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+ 
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      direction: 'vertical',
+      spaceBetween: 15,
+      slidesPerView: 6,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+
+    var galleryTop = new Swiper('.gallery-top', {
+			slidesPerView: 1,  
+      spaceBetween: 2,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      thumbs: {
+        swiper: galleryThumbs,
+      },
+    });
+
+
+</script>
+     
