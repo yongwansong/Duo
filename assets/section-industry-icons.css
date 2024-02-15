@@ -56,6 +56,12 @@
     margin: 0;
 }
 
+@media (max-width: 1000px){
+  .industry-icons_container p{
+    font-size: 30px;
+  }
+}
+
 .industry-icons_container .icons-wrapper .icon-list img{
     width: 100%;
 }
