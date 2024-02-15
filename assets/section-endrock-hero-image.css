@@ -112,11 +112,6 @@
     line-height: 1;
 }
 
-.section-endrock-hero-image .hero-banner__buttons .custom_button.button--secondary:hover{
-  color: #000;
-  background: #fff;
-}
-
 .section-endrock-hero-image .hero-banner__buttons .custom_button{
     color: #000;
     font-family: 'OldschoolGrotesk-Medium';
