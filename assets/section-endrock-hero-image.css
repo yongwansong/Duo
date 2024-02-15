@@ -169,8 +169,8 @@
 
     .section-endrock-hero-image{
         display: flex;
-        flex-direction: column-reverse;
-        background: #F1F1F1;
+        flex-direction: column;
+        background: #E2EBF2;
     }
 
     .section-endrock-hero-image .hero-banner__text h2{
