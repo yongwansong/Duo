@@ -435,6 +435,7 @@ padding: 0px;
 }
 
 .right-content {
+  position: absolute;
   top: 30%!important;
 }
   </style>
@@ -783,9 +784,9 @@ padding: 0px;
                                     {%- if block.settings.custom_product_image != blank -%}
                                         <div class="custom_product_image" id="block--{{ block.id }}" style="padding-bottom: {{ 100 | divided_by: block.settings.custom_product_image.aspect_ratio }}%">
                                             <a href="{{ endrock_featured_product.url }}">
-                                                <img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
+                                                <img src="{{ block.settings.custom_product_image2 | img_url: 'master' }}"
                                                     class="first_image"
-                                                    alt="{{ block.settings.custom_product_image.alt }}"
+                                                    alt="{{ block.settings.custom_product_image2.alt }}"
                                                     loading="lazy"
                                                 >
                                                 <img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
@@ -944,9 +945,9 @@ padding: 0px;
                                     {%- if block.settings.custom_product_image != blank -%}
                                         <div class="custom_product_image" id="block--{{ block.id }}" style="padding-bottom: {{ 100 | divided_by: block.settings.custom_product_image.aspect_ratio }}%">
                                             <a href="{{ endrock_featured_product.url }}">
-                                                <img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
+                                                <img src="{{ block.settings.custom_product_image3 | img_url: 'master' }}"
                                                     class="first_image"
-                                                    alt="{{ block.settings.custom_product_image.alt }}"
+                                                    alt="{{ block.settings.custom_product_image3.alt }}"
                                                     loading="lazy"
                                                 >
                                                 <img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
@@ -1102,9 +1103,9 @@ padding: 0px;
                                     {%- if block.settings.custom_product_image != blank -%}
                                         <div class="custom_product_image" id="block--{{ block.id }}" style="padding-bottom: {{ 100 | divided_by: block.settings.custom_product_image.aspect_ratio }}%">
                                             <a href="{{ endrock_featured_product.url }}">
-                                                <img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
+                                                <img src="{{ block.settings.custom_product_image4 | img_url: 'master' }}"
                                                     class="first_image"
-                                                    alt="{{ block.settings.custom_product_image.alt }}"
+                                                    alt="{{ block.settings.custom_product_image4.alt }}"
                                                     loading="lazy"
                                                 >
                                                 <img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
@@ -1578,6 +1579,21 @@ padding: 0px;
             {
                 "type": "image_picker",
                 "id":"custom_product_image",
+                "label": "Custom Product Image"
+            },
+            {
+                "type": "image_picker",
+                "id":"custom_product_image2",
+                "label": "Custom Product Image"
+            },
+            {
+                "type": "image_picker",
+                "id":"custom_product_image3",
+                "label": "Custom Product Image"
+            },
+            {
+                "type": "image_picker",
+                "id":"custom_product_image4",
                 "label": "Custom Product Image"
             },
             {
