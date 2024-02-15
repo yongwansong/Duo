@@ -97,7 +97,11 @@
   }
 
   .property-description strong{
-    font-size: 13px;
+    font-size: 13px !important;
+  }
+
+  .right-content .property-list_wrapper{
+    justify-content: flex-end
   }
 }
 
