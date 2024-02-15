@@ -592,6 +592,20 @@
             "title": "How do subscriptions work?",
             "description": "<p>TBD<\/p>"
           }
+        },
+        "faq_8cUT3V": {
+          "type": "faq",
+          "settings": {
+            "title": "Where is Duo made?",
+            "description": "<p>Duo tablets are manufactured using vegan ingredients in an FDA-registered facility in New York State. Our manufacturing facility is cGMP-certified and every Duo tablet is meticulously screened for quality and safety.<\/p>"
+          }
+        },
+        "faq_BcwXLj": {
+          "type": "faq",
+          "settings": {
+            "title": "How do subscriptions work?",
+            "description": "<p>Select your bottles and frequency—we’ll do the rest! Subscribing saves you up to 33% and reduces your carbon footprint with consolidated shipments. After your first delivery, refills will arrive in compostable pouches. You can pause, skip, or cancel anytime.<\/p>"
+          }
         }
       },
       "block_order": [
@@ -599,7 +613,9 @@
         "de2db3cc-17cb-4ae0-97cf-4fa10946c87b",
         "0aa23874-da30-4faa-8e42-92f0a81aed60",
         "c9e8788f-2914-414d-a291-d4105d6e9ff5",
-        "e176f464-1697-47e1-9612-4b6c1d5ce4f5"
+        "e176f464-1697-47e1-9612-4b6c1d5ce4f5",
+        "faq_8cUT3V",
+        "faq_BcwXLj"
       ],
       "settings": {
         "padding_top": 90,
