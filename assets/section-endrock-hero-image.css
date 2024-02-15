@@ -173,6 +173,10 @@
         background: #E2EBF2;
     }
 
+    .section-endrock-hero-image .hero-banner__buttons .custom_button{
+      display: none;
+    }
+
     .section-endrock-hero-image .hero-banner__text h2{
         line-height: 48px;
         font-size: 48px;
