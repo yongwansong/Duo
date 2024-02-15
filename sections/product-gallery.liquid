@@ -57,8 +57,10 @@
                                 <div class="product-info only--mobile {{ block.settings.product_info_position }} {{ block.settings.product_info_mobile_position }}">
                                     {% assign product_card_product = block.settings.product %}
                                     <div class="product-title">
-                                        <p>{{ product_card_product.title }}</p>
-                                        <p class="card metasubtitle-fp">{{ product_card_product.metafields.my_fields.feature_product_subtitle }}</p>
+                                        <a href="{{ product_card_product.url }}">
+                                            <p>{{ product_card_product.title }}</p>
+                                            <p class="card metasubtitle-fp">{{ product_card_product.metafields.my_fields.feature_product_subtitle }}</p>
+                                        </a>
                                     </div>
                                     {%- if product_card_product.selected_or_first_available_variant.available -%}
                                         {%- assign product_form_id = 'quick-add-' | append: section.id | append: product_card_product.id -%}
@@ -125,8 +127,10 @@
                         <div class="product-info only--desktop {{ block.settings.product_info_position }} {{ block.settings.product_info_mobile_position }}">
                             {% assign product_card_product = block.settings.product %}
                             <div class="product-title">
-                                <p>{{ product_card_product.title }}</p>
-                                <p class="card metasubtitle-fp">{{ product_card_product.metafields.my_fields.feature_product_subtitle }}</p>
+                                <a href="{{ product_card_product.url }}">
+                                    <p>{{ product_card_product.title }}</p>
+                                    <p class="card metasubtitle-fp">{{ product_card_product.metafields.my_fields.feature_product_subtitle }}</p>
+                                </a>
                             </div>
                             {%- if product_card_product.selected_or_first_available_variant.available -%}
                                 {%- assign product_form_id = 'quick-add-' | append: section.id | append: product_card_product.id -%}
