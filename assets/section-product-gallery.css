@@ -181,6 +181,10 @@
   transition: 1s;
 }
 
+.product-gallery-wrapper product-form .products__heading:hover .product-gallery-wrapper product-form .quick-add__submit{
+  color: #000;
+}
+
 .product-gallery-wrapper .loading-overlay__spinner svg .path{
     stroke: #ffffff;
 }
