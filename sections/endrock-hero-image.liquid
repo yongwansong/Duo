@@ -93,7 +93,7 @@
         {% if section.settings.button_link_1 != blank %}
           <a
             href="{{ section.settings.button_link_1 }}"
-            class="custom_button {% if section.settings.button_style_text_link %} button--primary{% else %} button--secondary{% endif %}"
+            class="custom_button button button--primary {% if section.settings.button_style_text_link %} button--primary{% else %} button--secondary{% endif %}"
           >
             {{- section.settings.button_label_1 -}}
           </a>
