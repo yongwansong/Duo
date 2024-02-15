@@ -19,6 +19,12 @@
   }
 }
 
+@media (max-width: 950px){
+  .icon-with-text__wrapper .iwt-item{
+    gap: 5px;
+  }
+}
+
 @media (min-width: 768px) {
   .icon-with-text__wrapper .swiper-slide{
     width: auto;
