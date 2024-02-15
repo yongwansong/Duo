@@ -64,7 +64,7 @@
     margin: 0 0 39px;
 }
 
-@media (max-width: 900px){
+@media (max-width: 1000px){
   .endrock-banner-with-text .text-wrapper .text-des p{
     font-size: 12px;
   }
