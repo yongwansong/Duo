@@ -23,6 +23,10 @@
   .icon-with-text__wrapper .iwt-item{
     gap: 5px;
   }
+
+  .icon-with-text__wrapper .iwt-item__heading{
+    font-size: 12px
+  }
 }
 
 @media (min-width: 768px) {
