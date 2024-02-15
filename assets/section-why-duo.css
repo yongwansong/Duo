@@ -91,6 +91,12 @@
     font-weight: 390;
 }
 
+@media (max-width: 1350px){
+  .property-description p{
+    font-size: 13px;
+  }
+}
+
 .property-description  strong{
     color: #000;
     font-size: 16px;
