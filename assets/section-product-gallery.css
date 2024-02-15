@@ -175,7 +175,7 @@
     line-height: 1;
 }
 
-.product-gallery-wrapper product-form .quick-add__submit:hover{
+.product-gallery-wrapper product-form .products__heading:hover{
   color: #000;
   background: #fff;
   transition: 1s;
