@@ -4344,6 +4344,10 @@ header {
 		min-height: 100% !important;
 	}
 
+    .header{
+      border-bottom: 0.5px solid #000000;
+    }
+
 	.spashIcon {
 		text-align: right;
 		display: none !important;
