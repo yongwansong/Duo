@@ -181,7 +181,7 @@
   transition: 1s;
 }
 
-.product-gallery-wrapper product-form .products__heading:hover .quick-add__submit{
+.product-gallery-wrapper product-form .products__heading:hover *{
   color: #000;
 }
 
