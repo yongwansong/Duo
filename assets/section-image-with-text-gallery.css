@@ -94,6 +94,12 @@
   }
 }
 
+@media(max-width: 800px){
+  .image-with-text__gallery-container .gallery-info .description p{
+    font-size:9px;
+  }
+}
+
 .image-with-text__gallery-container .gallery-info a{
     width: fit-content;
     font-family: "OldschoolGrotesk-Medium";
