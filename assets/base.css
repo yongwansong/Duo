@@ -4879,6 +4879,7 @@ header {
   .header {
     display: grid !important;
 	padding: 21px 36px 21px 24px!important;
+    border-bottom: 0.5px solid #000000;
   }
 
   .newheader {
