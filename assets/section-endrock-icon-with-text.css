@@ -25,7 +25,7 @@
   }
 
   .icon-with-text__wrapper .iwt-item__heading{
-    font-size: 12px
+    font-size: 12px!important
   }
 }
 
