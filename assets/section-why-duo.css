@@ -105,6 +105,16 @@
   }
 }
 
+@media (max-width: 1185px){
+  .property-description p{
+    font-size: 10px;
+  }
+
+  .property-description strong{
+    font-size: 10px !important;
+  }
+}
+
 .property-description  strong{
     color: #000;
     font-size: 16px;
