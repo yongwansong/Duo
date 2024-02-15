@@ -129,6 +129,10 @@
     background: #ffffff;
 }
 
+.product-gallery-wrapper .product-info .product-title a{
+  text-decoration: none;
+}
+
 .product-gallery-wrapper .product-info .product-title p{
     margin: 0;
     color: #000000;
