@@ -100,7 +100,7 @@
   }
 
   .image-with-text__gallery-container .gallery_image{
-    padding-bottom: 127%;
+    padding-bottom: 127% !important;
   }
 }
 
