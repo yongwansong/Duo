@@ -175,6 +175,12 @@
     line-height: 1;
 }
 
+.product-gallery-wrapper product-form .quick-add__submit:hover{
+  color: #000;
+  background: #fff;
+  transition: 1s;
+}
+
 .product-gallery-wrapper .loading-overlay__spinner svg .path{
     stroke: #ffffff;
 }
