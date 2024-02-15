@@ -2,8 +2,7 @@
     max-width: 1160px;
     margin: 21px auto 18px;
     display: flex;
-    gap: 21px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
@@ -17,10 +16,6 @@
 @media (min-width: 768px) {
   .icon-with-text__wrapper .swiper-slide{
     width: auto;
-  }
-
-  .icon-with-text__wrapper {
-      flex-wrap: wrap;
   }
 }
 
