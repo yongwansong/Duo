@@ -98,6 +98,10 @@
   .image-with-text__gallery-container .gallery-info .description p{
     font-size:9px;
   }
+
+  .image-with-text__gallery-container .gallery_image{
+    padding-bottom: 127%;
+  }
 }
 
 .image-with-text__gallery-container .gallery-info a{
