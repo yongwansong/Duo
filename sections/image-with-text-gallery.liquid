@@ -24,7 +24,7 @@
                     <div class="gallery-list swiper-slide">
                         {%- if block.settings.gallery_image != blank -%}
                             <div class="gallery_image-wrapper only--desktop">
-                                <div class="gallery_image" style="padding-bottom: 107%">
+                                <div class="gallery_image" style="padding-bottom: {{ 100 | divided_by: section.settings.gallery_image.aspect_ratio }}%">
                                     <img
                                         src="{{ block.settings.gallery_image | img_url: 'master' }}"
                                         alt="{{ block.settings.gallery_image.alt }}"
