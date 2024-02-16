@@ -51,25 +51,25 @@
                     >
                 </div>
             {%- endif -%}
-            <div>
-            <div class="left-content only--desktop">
-                <div class="left-content__properties-wrapper">
-                    <h2 class="left-content__heading">{{ section.settings.heading }}</h2>
-                    <div class="left-content__description">{{ section.settings.description }}</div>
-                    <div class="left-content__properties">
-                        {% for block in section.blocks %}
-                            {% if block.type == 'left' %}
-                                <div class="property-list_wrapper">
-                                    <div class="property-icon">{{ block.settings.property_icon }}</div>
-                                    <div class="property-description {% if block.settings.property_description_margin %}enable_margin{% endif %}">{{ block.settings.property_description }}</div>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
+            <div class="contents-wrapper">
+              <div class="left-content only--desktop">
+                  <div class="left-content__properties-wrapper">
+                      <h2 class="left-content__heading">{{ section.settings.heading }}</h2>
+                      <div class="left-content__description">{{ section.settings.description }}</div>
+                      <div class="left-content__properties">
+                          {% for block in section.blocks %}
+                              {% if block.type == 'left' %}
+                                  <div class="property-list_wrapper">
+                                      <div class="property-icon">{{ block.settings.property_icon }}</div>
+                                      <div class="property-description {% if block.settings.property_description_margin %}enable_margin{% endif %}">{{ block.settings.property_description }}</div>
+                                  </div>
+                              {% endif %}
+                          {% endfor %}
+                      </div>
+                  </div>
+              </div>
               <div></div>
-            <div class="right-content only--desktop">
+              <div class="right-content only--desktop">
                 <div class="right-content__properties">
                     {% for block in section.blocks %}
                         {% if block.type == 'right' %}
