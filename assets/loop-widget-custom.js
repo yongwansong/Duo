@@ -2581,6 +2581,7 @@ async function dispatchLoopAddCartEvent(
 
   
   document.addEventListener('click', function(event) {
+    console.log('click--------');
    if (event.target.getAttribute('name') === 'Bottles') {
       document.querySelector('.onetimego').click();
       OneTimePurchaseClick()

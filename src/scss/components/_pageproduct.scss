@@ -21,6 +21,29 @@
 
   }
 
+  @media screen and (max-width: 700px) {
+    .main-product {
+      padding-top: 0;
+
+      .page-width {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      .product__media {
+        img {
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 550px) {
+    .grid {
+      display: flex;
+    }
+  }
+
+
 
   /* product info */
   .product__info-wrapper {
@@ -125,6 +148,15 @@
     .accordion {
       border-color: #000;
     }
+
+    @media screen and (max-width: 700px) {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+
+      .product__title {
+        margin-top: 30px;
+      }
+    }
   }
 
 
@@ -195,6 +227,20 @@
   }
   
   
+
+  /* variants */
+  .variants_wrapper {
+    variant-radios {
+      .variant-field__price {
+        font-family: 'OldschoolGrotesk-Medium';
+      }
+  
+      .product-form__input--radio {
+        gap: 0.57rem;
+      }
+    }
+    
+  }
 }
 
 

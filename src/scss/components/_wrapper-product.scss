@@ -11,3 +11,15 @@
     padding-right: 90px !important;
   }
 }
+
+@media screen and (max-width: 700px) {
+  .page-width {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+
+    &--mobil-none {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  }
+}

@@ -41,6 +41,12 @@
     width: 100%;
     border-bottom: 1px dashed black;
   }
+
+  @media screen and (max-width: 700px) {
+    .title, .content {
+      font-size: 12px;
+    }
+  }
 }
 
 .description-dorpdown {
@@ -61,7 +67,7 @@
     column-gap: 3px;
 
     .comparation-dropdown__container-duo {
-      width: 45%;
+      width: 39%;
       .icon-duo {
         margin-top: 6px;
       }
@@ -78,6 +84,7 @@
     }
 
     .comparation-dropdown__list-suplement {
+      
       ul {
         li {
           border: 0.5px dashed #505050;
@@ -87,6 +94,7 @@
     }
 
     .comparation-dropdown__container-suplement {
+      width: 60%;
       color: #505050;
       font-family: "OldschoolGrotesk-Medium";
       font-size: 16px;
@@ -113,6 +121,17 @@
         svg {
           margin-top: 0;
           margin-right: 8px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      .comparation-dropdown__container-suplement {
+        font-size: 14px;
+      }
+      ul {
+        li {
+          font-size: 12px;
         }
       }
     }

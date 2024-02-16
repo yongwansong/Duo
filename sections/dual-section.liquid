@@ -2,6 +2,11 @@
 
 {% include 'head-fonts' %}
 
+<style>
+  #shopify-section-{{ section.id }} {
+    background: #E2EBF2;
+  }
+</style>
 <div class="image-with-text image-with-text--full-width">
   <div class="image-with-text__grid grid grid--gapless grid--1-col grid--2-col-tablet gradient{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
     <div class="grid__item">

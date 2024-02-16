@@ -39,7 +39,7 @@
 		--product-color-lighter: {{ product_color_lighter.red }}, {{ product_color_lighter.green }}, {{ product_color_lighter.blue }};
     }
 
-    [data-value="2 Bottles"]::before {
+    [data-value="2 Bottles"]::before, [data-value="4 Bottles"]::before {
       content: "MOST POPULAR";
       position: absolute;
       top: -35px;
@@ -60,6 +60,13 @@
       text-align: center;
       font-weight: 600;
     } 
+
+    @media screen and (max-width: 700px) {
+     
+      [data-value="2 Bottles"]::before, [data-value="4 Bottles"]::before {
+        font-size: 12px;
+      }
+    }
   {%- endstyle -%}
 {%- endif -%}
 <section class="main-product">

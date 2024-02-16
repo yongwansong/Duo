@@ -33,7 +33,7 @@ $margin-icon: 20px;
     }
 
     @media screen and (max-width: 850px) {
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       --gap-flex: 0;
     }
 
@@ -100,11 +100,16 @@ $margin-icon: 20px;
     }
 
     @media screen and (max-width: 850px) {
-      width: 45%;
+      width: 15%;
+
+      img {
+        width: 33px;
+        height: 33px;
+      }
     }
 
     @media screen and (max-width: 425px) {
-      padding: 0 20px;
+      padding: 0;
 
       &.position__left {
         justify-content: center;
@@ -140,6 +145,15 @@ $margin-icon: 20px;
 
       p {
         text-align: center;
+      }
+
+      @media screen and (max-width: 850px) {
+        h3 {
+          font-size: 12px;
+          line-height: normal; /* 150% */
+          letter-spacing: normal;
+  
+        }
       }
     }
   }
