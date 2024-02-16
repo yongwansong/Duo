@@ -31,7 +31,7 @@
 }
 
 
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
     .product-gallery-wrapper .product-wrapper .text-wrapper{
         left: 70px;
     }
