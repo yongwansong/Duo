@@ -182,6 +182,14 @@
     }
 }
 
+}
+@media (max-width: 900px) {
+
+    .why-duo__media{
+        padding-bottom: 62%!important;
+    }
+}
+
 @media (max-width:767px) {
     .content-wrapper{
         margin-bottom: 11px;
