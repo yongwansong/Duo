@@ -123,6 +123,12 @@
     width: 50%;
 }
 
+@media (max-width: 850px){
+  .section-endrock-hero-image .hero-banner__buttons .custom_button{
+     font-size: 9px;
+  }
+}
+
 .section-endrock-hero-image .custom_button.button--primary{
     text-decoration: none;
     border-bottom: 1px solid;
