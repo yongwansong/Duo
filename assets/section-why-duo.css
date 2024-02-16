@@ -55,6 +55,10 @@
   .why-duo_wrapper .left-content__description p{
     margin-bottom: 27px;
   }
+
+  .left-content__properties .property-list_wrapper{
+    margin-bottom: 21px;
+  }
 }
 
 
