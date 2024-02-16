@@ -132,6 +132,10 @@
     font-size" 52px;
     line-height: 54px;
   }
+
+  .section-endrock-hero-image .hero-banner__text p{
+    font-size: 11px;
+  }
 }
 
 .section-endrock-hero-image .custom_button.button--primary{
