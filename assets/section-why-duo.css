@@ -95,6 +95,16 @@
   justify-content: flex-end
 }
 
+.contents-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 33px;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    height: auto;
+}
+
 @media (max-width: 1350px){
   .property-description p{
     font-size: 13px;
