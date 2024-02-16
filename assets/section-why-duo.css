@@ -16,27 +16,22 @@
     position: relative;
 }
 
-.why-duo_wrapper .left-content{
-    position: absolute;
-    top: 7%;
-    left: 137px;
-}
 
 @media (min-width: 1000px) {
-    .why-duo_wrapper .left-content{
-        left: 93px;
+    .why-duo_wrapper .contents-wrapper{
+        padding: 0 93px;
     }
 }
 
 @media (min-width: 1250px) {
-    .why-duo_wrapper .left-content{
-        left: 154px;
+    .why-duo_wrapper .contents-wrapper{
+        padding: 0 154px;
     }
 }
 
 @media (max-width: 920px) {
-    .why-duo_wrapper .left-content{
-        left: 37px;
+    .why-duo_wrapper .contents-wrapper{
+        padding:0 37px;
     }
 
     .why-duo_wrapper .left-content__description p{
@@ -46,6 +41,24 @@
     .left-content__properties .property-list_wrapper{
         margin-bottom: 21px;
     }
+}
+
+@media(max-width: 800px){
+  .why-duo_wrapper .contents-wrapper{
+    padding:0 7px;
+  }
+
+  .right-content .property-list_wrapper{
+    margin-bottom: 22px !important;
+  }
+
+  .why-duo_wrapper .left-content__description p{
+    margin-bottom: 27px!important;
+  }
+
+  .left-content__properties .property-list_wrapper{
+    margin-bottom: 21px!important;
+  }
 }
 
 
@@ -95,6 +108,16 @@
   justify-content: flex-end
 }
 
+.contents-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 33px;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    height: auto;
+}
+
 @media (max-width: 1350px){
   .property-description p{
     font-size: 13px;
@@ -108,6 +131,10 @@
 @media (max-width: 1185px){
   .property-description p{
     font-size: 10px;
+  }
+
+  .why-duo_wrapper .left-content__heading{
+    font-size: 54px;
   }
 
   .property-description strong{
@@ -144,11 +171,6 @@
     margin: 11px 0 0;
 }
 
-.right-content{
-    position: absolute;
-    top: 20%;
-    right: 98px;
-}
 
 .right-content .property-list_wrapper:first-of-type .property-icon svg{
     width: 42px;
@@ -175,6 +197,13 @@
 
     .why-duo__media{
         padding-bottom: 52%!important;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .why-duo__media{
+        padding-bottom: 62%!important;
     }
 }
 

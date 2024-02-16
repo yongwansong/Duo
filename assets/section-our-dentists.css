@@ -75,7 +75,7 @@
     margin: 0 0 30px;
 }
 
-@media (max-width:1000px) {
+@media (max-width:1024px) {
     .dentists-container .dentists-info .heading p{
         font-size: 38px;
         line-height: 46px;
@@ -144,7 +144,11 @@
 
 @media (max-width: 950px) {
     .dentists-container .dentists-info .heading p{
-        font-size: 40px;
+        font-size: 30px;
+    }
+
+    .industry-icons_container .icons-wrapper{
+      gap: 35px;
     }
 }
 

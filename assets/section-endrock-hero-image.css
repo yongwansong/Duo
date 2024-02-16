@@ -123,6 +123,21 @@
     width: 50%;
 }
 
+@media (max-width: 850px){
+  .section-endrock-hero-image .hero-banner__buttons .custom_button{
+     font-size: 9px;
+  }
+
+  .section-endrock-hero-image .hero-banner__text h2{
+    font-size: 52px;
+    line-height: 54px;
+  }
+
+  .section-endrock-hero-image .hero-banner__text p{
+    font-size: 11px;
+  }
+}
+
 .section-endrock-hero-image .custom_button.button--primary{
     text-decoration: none;
     border-bottom: 1px solid;
@@ -138,7 +153,7 @@
     border: none !important;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 999px) {
     .section-endrock-hero-image .hero-banner__content{
         left: 37px;
     }
