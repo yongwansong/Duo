@@ -16,11 +16,6 @@
     position: relative;
 }
 
-.why-duo_wrapper .left-content{
-    position: absolute;
-    top: 7%;
-    left: 137px;
-}
 
 @media (min-width: 1000px) {
     .why-duo_wrapper .left-content{
