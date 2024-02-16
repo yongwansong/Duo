@@ -18,20 +18,20 @@
 
 
 @media (min-width: 1000px) {
-    .why-duo_wrapper .left-content{
-        left: 93px;
+    .why-duo_wrapper .contents-wrapper{
+        padding: 0 93px;
     }
 }
 
 @media (min-width: 1250px) {
-    .why-duo_wrapper .left-content{
-        left: 154px;
+    .why-duo_wrapper .contents-wrapper{
+        padding: 0 154px;
     }
 }
 
 @media (max-width: 920px) {
-    .why-duo_wrapper .left-content{
-        left: 37px;
+    .why-duo_wrapper .contents-wrapper{
+        padding:0 37px;
     }
 
     .why-duo_wrapper .left-content__description p{
