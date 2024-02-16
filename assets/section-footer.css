@@ -804,7 +804,7 @@ button.accordion.is-open:after {
   }
 
   .footer__content-top{
-    padding: 64px 24px 32px!important
+    padding: 0px 24px 32px!important
   }
 
   .footer__blocks-wrapper{
