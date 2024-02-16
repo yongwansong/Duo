@@ -6,7 +6,10 @@
 
 .endrock-image-banner{
   position: relative;
-  height: 0;
+}
+
+.endrock-iamge-banner .swiper-container{
+  height: 100px;
 }
 
 .endrock-image-banner img{
@@ -16,7 +19,6 @@
   top: 0;
   object-fit: cover;
 }
-
 
 @media screen and (max-width: 749px) {
   .banner--small.banner--mobile-bottom:not(.banner--adapt) > .banner__media,
