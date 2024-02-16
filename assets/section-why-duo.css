@@ -49,15 +49,15 @@
   }
 
   .right-content .property-list_wrapper{
-    margin-bottom: 22px;
+    margin-bottom: 22px !important;
   }
 
   .why-duo_wrapper .left-content__description p{
-    margin-bottom: 27px;
+    margin-bottom: 27px!important;
   }
 
   .left-content__properties .property-list_wrapper{
-    margin-bottom: 21px;
+    margin-bottom: 21px!important;
   }
 }
 
