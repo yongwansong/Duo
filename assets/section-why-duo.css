@@ -43,6 +43,12 @@
     }
 }
 
+@media(max-width: 800px){
+  .why-duo_wrapper .contents-wrapper{
+    padding:0 7px;
+  }
+}
+
 
 
 .why-duo_wrapper .left-content__heading{
