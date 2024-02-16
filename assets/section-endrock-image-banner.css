@@ -4,12 +4,8 @@
   flex-direction: column;
 }
 
-.endrock-iamge-banner{
+.endrock-image-banner{
   position: relative;
-}
-
-.endrock-iamge-banner .swiper-container{
-  height: 100px;
 }
 
 @media screen and (max-width: 749px) {
