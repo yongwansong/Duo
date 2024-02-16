@@ -37,36 +37,9 @@
 		{%- assign product_color_lighter = section.settings.product_color  | color_modify: 'lightness', 90.4  -%}
 		--product-color: {{ section.settings.product_color.red }}, {{ section.settings.product_color.green }}, {{ section.settings.product_color.blue }};
 		--product-color-lighter: {{ product_color_lighter.red }}, {{ product_color_lighter.green }}, {{ product_color_lighter.blue }};
+    --product-color-solid: {{ section.settings.product_color }};
     }
-
-    [data-value="2 Bottles"]::before, [data-value="4 Bottles"]::before {
-      content: "MOST POPULAR";
-      position: absolute;
-      top: -35px;
-      width: 100%;
-      background: {{  section.settings.product_color }};
-      font-size: 13px;
-      text-align: center;
-      font-weight: 600;
-    }
-
-    [data-value="4 Bottles"]::before {
-      content: "BEST VALUE";
-      position: absolute;
-      top: -35px;
-      width: 100%;
-      background:  {{  section.settings.product_color }};;
-      font-size: 13px;
-      text-align: center;
-      font-weight: 600;
-    } 
-
-    @media screen and (max-width: 700px) {
-     
-      [data-value="2 Bottles"]::before, [data-value="4 Bottles"]::before {
-        font-size: 12px;
-      }
-    }
+  
   {%- endstyle -%}
 {%- endif -%}
 <section class="main-product">

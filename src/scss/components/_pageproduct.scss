@@ -233,10 +233,50 @@
     variant-radios {
       .variant-field__price {
         font-family: 'OldschoolGrotesk-Medium';
+        padding: 14px;
+        background-color: #fff;
       }
   
       .product-form__input--radio {
         gap: 0.57rem;
+        flex-direction: column;
+        margin-top: 14px;
+
+        label {
+          border-radius: 0;
+          min-height: initial;
+
+          > span {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+
+            .variant-field__sale {
+              display: flex;
+              height: 27px;
+              font-size: 12px!important;
+              display: flex!important;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              padding: 5px 15px 1px;
+              line-height: normal;
+              position: absolute;
+              bottom: 50%;
+              right: 50%;
+              transform: translate(50%, 50%);
+            }
+
+            span {
+              margin-bottom: 0;
+            }
+
+            s {
+              font-weight: 400;
+              margin-right: 5px;
+            }
+          }
+        }
       }
     }
     
