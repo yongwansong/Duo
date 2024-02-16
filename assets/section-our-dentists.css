@@ -146,6 +146,10 @@
     .dentists-container .dentists-info .heading p{
         font-size: 30px;
     }
+
+    .industry-icons_container .icons-wrapper{
+      gap: 35px;
+    }
 }
 
 @media (max-width: 767px) {
