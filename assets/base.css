@@ -2826,11 +2826,11 @@ a.button.button--primary {
 }
 
 a.button.button--primary:hover{
-  color: #000
+  color: #000!important;
 }
 
 a.button.button--primary:hover {
-	background-color: #fff;
+	background-color: #fff !important;
 	border: 1px solid #fff !important;
 }
 
