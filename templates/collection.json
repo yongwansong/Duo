@@ -35,13 +35,13 @@
           "settings": {
             "featured_product": "original",
             "custom_product_image": "shopify:\/\/shop_images\/Originalx3.jpg",
-            "hover_image": "shopify:\/\/shop_images\/Original_Hover_Imagex3.jpg",
-            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
-            "info_1_top_position": "27%",
+            "hover_image": "shopify:\/\/shop_images\/Original_hover_state_096fa34b-ff5e-475c-add1-b99866d8e456.png",
+            "info_1": "",
+            "info_1_top_position": "",
             "info_1_right_position": "",
-            "info_1_left_position": "7%",
+            "info_1_left_position": "",
             "info_1_bottom_position": "",
-            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
+            "info_2": "",
             "info_2_top_position": "",
             "info_2_right_position": "",
             "info_2_left_position": "7%",
@@ -58,18 +58,18 @@
           "settings": {
             "featured_product": "energy",
             "custom_product_image": "shopify:\/\/shop_images\/Energyx3-orange.jpg",
-            "hover_image": "shopify:\/\/shop_images\/Energy_Hover_Imagex3.jpg",
-            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
+            "hover_image": "shopify:\/\/shop_images\/Energy_hover_state_95bbc0f6-e178-4c26-b2f3-f4d3aa3a0496.jpg",
+            "info_1": "",
             "info_1_top_position": "8%",
             "info_1_right_position": "",
             "info_1_left_position": "7%",
             "info_1_bottom_position": "",
-            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
+            "info_2": "",
             "info_2_top_position": "33%",
             "info_2_right_position": "",
             "info_2_left_position": "7%",
             "info_2_bottom_position": "",
-            "info_3": "<p><strong>Caffeine <\/strong>+ \u2028<br\/>vitamin B12 + \u2028<br\/>L-theanine \u2028<br\/>for vitality and mood<\/p>",
+            "info_3": "",
             "info_3_top_position": "",
             "info_3_right_position": "",
             "info_3_left_position": "7%",
@@ -81,18 +81,18 @@
           "settings": {
             "featured_product": "sleep",
             "custom_product_image": "shopify:\/\/shop_images\/Sleepx3.jpg",
-            "hover_image": "shopify:\/\/shop_images\/Sleep_Hover_Imagex3.jpg",
-            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
+            "hover_image": "shopify:\/\/shop_images\/Sleep_hover_state_95992a16-0efc-4f97-85cf-5dac5b377f89.png",
+            "info_1": "",
             "info_1_top_position": "7%",
             "info_1_right_position": "",
             "info_1_left_position": "7%",
             "info_1_bottom_position": "",
-            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
+            "info_2": "",
             "info_2_top_position": "42%",
             "info_2_right_position": "15%",
             "info_2_left_position": "",
             "info_2_bottom_position": "",
-            "info_3": "<p><strong>Melatonin <\/strong>+ \u2028<br\/><strong>L-theanine<\/strong> for \u2028<br\/>sleep hygiene<\/p>",
+            "info_3": "",
             "info_3_top_position": "",
             "info_3_right_position": "",
             "info_3_left_position": "7%",
@@ -104,18 +104,18 @@
           "settings": {
             "featured_product": "immunity",
             "custom_product_image": "shopify:\/\/shop_images\/Immunityx3.jpg",
-            "hover_image": "shopify:\/\/shop_images\/Immunity_IngredientsWeb_1x3_83302865-e68a-41b6-9d24-5f17b11b2817.jpg",
-            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
+            "hover_image": "shopify:\/\/shop_images\/Immuity_hover_state_ab573a7b-a174-451f-84e3-07176a8a1417.png",
+            "info_1": "",
             "info_1_top_position": "7%",
             "info_1_right_position": "",
             "info_1_left_position": "7%",
             "info_1_bottom_position": "",
-            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
+            "info_2": "",
             "info_2_top_position": "46%",
             "info_2_right_position": "9%",
             "info_2_left_position": "",
             "info_2_bottom_position": "",
-            "info_3": "<p><strong>Vitamins D3<\/strong> + <strong>B12 <\/strong><br\/><strong>for optimal \u2028<\/strong><br\/>immune function<\/p>",
+            "info_3": "",
             "info_3_top_position": "",
             "info_3_right_position": "",
             "info_3_left_position": "7%",
@@ -432,6 +432,16 @@
         "card_link_three": "#"
       }
     },
+
+
+    "all-feature-duo": {
+      "type": "all-feature-footer",
+      "blocks": {}
+    },
+
+
+
+
     "endrock_icon_with_text_tTL9yd": {
       "type": "endrock-icon-with-text",
       "blocks": {
@@ -583,6 +593,7 @@
     "all-feat-coll-two",
     "all-feat-coll-three",
     "all-feat-coll-four",
+    "all-feature-duo",    
     "endrock_icon_with_text_tTL9yd",
     "all-why-duo"
   ]

@@ -261,6 +261,87 @@ color: #000;
 
 </style>
 
+<style>
+    /* Estilo opcional para ocultar el texto inicialmente */
+    .textoOculto {
+      display: none;
+      position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+    }
+
+
+    @media (min-width: 767px) {
+        .switch {
+        display: none !important
+    }
+}
+    /* Estilo para el switch con dos botones a la izquierda y derecha */
+    .switch {
+        display: flex;
+  align-items: center;
+  width: 29px;
+  height: 12px;
+  background-color: #f0f0f0;
+  border-radius: 17px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  margin: 5px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      position: absolute;
+    }
+
+    .slider {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 5px;
+    }
+
+    .slider span {
+      flex: 1;
+      border-radius: 17px; /* Hace que el botón sea redondeado */
+      -webkit-transition: background-color 0.4s;
+      transition: background-color 0.4s;
+    }
+
+    .slider span:first-child {
+      background-color: black; /* Color inicial del botón izquierdo (negro) */
+    }
+
+    .slider span:last-child {
+      background-color: #808080; /* Color inicial del botón derecho (gris) */
+    }
+
+    .switch input:checked + .slider span:first-child {
+      background-color: #808080; /* Color del botón izquierdo cuando está activado (gris) */
+    }
+
+    .switch input:checked + .slider span:last-child {
+      background-color: black; /* Color del botón derecho cuando está activado (negro) */
+    }
+
+    /* Muestra u oculta el texto según el estado del switch */
+    .switch input:checked ~ .slider span:first-child ~ .textoOculto,
+    .switch input:not(:checked) ~ .slider span:last-child ~ .textoOculto {
+      display: block;
+    }
+
+    .switch input:checked ~ .slider span:last-child ~ .textoOculto,
+    .switch input:not(:checked) ~ .slider span:first-child ~ .textoOculto {
+      display: none;
+    }
+  </style>
+
 <div id="section--{{ section.id }}" class="{{ section.settings.id_section_pivot }}">
     <div class="endrock-featured-collection {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">
         <div class="endrock-featured-collection__container_">
@@ -287,12 +368,33 @@ color: #000;
                             {%- assign endrock_featured_product = block.settings.featured_product -%}
                             {%- assign featured_media_aspect_ratio = endrock_featured_product.featured_media.aspect_ratio -%}
                             
+   
+
+ 
+
+
+
                         
-                        
-                        <div class="product-list {% if section.settings.swipe_on_mobile %}swiper-slide{% endif %}">
+                        <div class="product-list ">
                                 {%- if block.settings.custom_product_image != blank -%}
                                     <div class="custom_product_image" id="block--{{ block.id }}" style="padding-bottom: {{ 100 | divided_by: block.settings.custom_product_image.aspect_ratio }}%">
                                         <a href="{{ endrock_featured_product.url }}">
+                                                                   <!-- Elemento 1 -->
+  <label class="switch">
+    <input type="checkbox" class="switchInput" onchange="toggleText(this)">
+    <div class="slider">
+      <span></span>
+      <span></span>
+    </div>
+  </label>
+  <div class="textoOculto"> <img src="{{ block.settings.hover_image | img_url: 'master' }}"
+  class="hover_image_"
+  alt="{{ block.settings.hover_image.alt }}"
+  loading="lazy"
+></div>
+
+
+
                                             <img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
                                                 class="first_image"
                                                 alt="{{ block.settings.custom_product_image.alt }}"
@@ -478,6 +580,12 @@ color: #000;
     </div>
 </div>
 
+<script>
+    function toggleText(element) {
+      const textoOculto = element.parentElement.nextElementSibling;
+      textoOculto.style.display = textoOculto.style.display === 'none' || textoOculto.style.display === '' ? 'block' : 'none';
+    }
+  </script>
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
 

@@ -182,6 +182,20 @@
                                 {%- if block.settings.custom_product_image != blank -%}
                                     <div class="custom_product_image" id="block--{{ block.id }}" style="padding-bottom: {{ 100 | divided_by: block.settings.custom_product_image.aspect_ratio }}%">
                                         <a href="{{  endrock_featured_product.url }}">
+
+                                        <label class="switch">
+                                            <input type="checkbox" class="switchInput" onchange="toggleText(this)">
+                                            <div class="slider">
+                                              <span></span>
+                                              <span></span>
+                                            </div>
+                                          </label>
+                                          <div class="textoOculto"> <img src="{{ block.settings.hover_image | img_url: 'master' }}"
+                                          class="hover_image_"
+                                          alt="{{ block.settings.hover_image.alt }}"
+                                          loading="lazy"
+                                        ></div>
+                                        
                                         <img
                                             src="{{ block.settings.custom_product_image | img_url: 'master' }}"
                                             class="first_image"
