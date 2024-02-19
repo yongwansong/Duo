@@ -323,7 +323,7 @@
       "settings": {
         "heading": "Shop Duo",
         "padding_top": 0,
-        "padding_bottom": 0,
+        "padding_bottom": 25,
         "mobile_padding_top": 65,
         "mobile_padding_bottom": 30,
         "full_width": false,
