@@ -132,7 +132,7 @@
             "mobile_heading": "<p>Bundle<br\/>and Save<\/p>",
             "description": "<p>Start your plastic-free routine (for less) <br\/>with bundled jars and compostable <br\/>refills.<\/p>",
             "mobile_description": "Start your plastic-free routine (for less) with bundled jars and compostable refills.",
-            "btn_link": "shopify:\/\/pages\/build-bundle",
+            "btn_link": "shopify:\/\/collections\/shop-all",
             "btn_label": "SHOP BUNDLES",
             "btn_type": "button--primary",
             "product": "original",
@@ -370,7 +370,6 @@
         "image": "shopify:\/\/shop_images\/Duo_Product-0951-Edit_1x3_ad58752e-6926-4556-bee3-05ec2cda26d1.jpg",
         "mobile_image": "shopify:\/\/shop_images\/Duo_Product-0951-Edit_1_e107c082-f5e8-4f34-836e-c7d47e44a70f.png",
         "enable_swiper": true,
-        "image_height": "medium",
         "adapt_height_first_image": false,
         "desktop_text_box_position": "center",
         "show_text_box": false,
@@ -480,7 +479,7 @@
         "1c7234a7-4c5b-494b-a568-585736638b9e": {
           "type": "block",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Rectangle_206.png",
+            "gallery_image": "shopify:\/\/shop_images\/Duo_Difference_1_1920px_x_2060.jpg",
             "gallery_mobile_image": "shopify:\/\/shop_images\/duodifference_1_375x376_5589ed9e-f049-40b6-a20f-8ae14ea0fcbb.png",
             "prefix_heading": "THE DUO DIFFERENCE",
             "heading": "Game-changing <br>ingredients",
@@ -494,7 +493,7 @@
         "51128ef4-7019-4c92-a175-f792404b2788": {
           "type": "block",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Carousel2x3.jpg",
+            "gallery_image": "shopify:\/\/shop_images\/Duo_Difference_2v_1920px_x_2060.jpg",
             "gallery_mobile_image": "shopify:\/\/shop_images\/duodifference_2_375x376_29b628d6-8caf-406f-b183-9aa66545b0e7.png",
             "prefix_heading": "THE DUO DIFFERENCE",
             "heading": "About mucosal<br>absorption",
@@ -508,7 +507,7 @@
         "bc7d4a03-40b1-4823-b5db-87adb7560001": {
           "type": "block",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Carousel3x3.png",
+            "gallery_image": "shopify:\/\/shop_images\/Duo_Difference_3_1920px_x_2060_copy.jpg",
             "gallery_mobile_image": "shopify:\/\/shop_images\/duodifference_3_375x376_c40525a6-c67d-4901-bfc0-d3470f83143a.png",
             "prefix_heading": "THE DUO DIFFERENCE",
             "heading": "Balancing the oral<br>microbiome",
@@ -592,6 +591,20 @@
             "title": "How do subscriptions work?",
             "description": "<p>TBD<\/p>"
           }
+        },
+        "faq_8cUT3V": {
+          "type": "faq",
+          "settings": {
+            "title": "Where is Duo made?",
+            "description": "<p>Duo tablets are manufactured using vegan ingredients in an FDA-registered facility in New York State. Our manufacturing facility is cGMP-certified and every Duo tablet is meticulously screened for quality and safety.<\/p>"
+          }
+        },
+        "faq_BcwXLj": {
+          "type": "faq",
+          "settings": {
+            "title": "How do subscriptions work?",
+            "description": "<p>Select your bottles and frequency—we’ll do the rest! Subscribing saves you up to 33% and reduces your carbon footprint with consolidated shipments. After your first delivery, refills will arrive in compostable pouches. You can pause, skip, or cancel anytime.<\/p>"
+          }
         }
       },
       "block_order": [
@@ -599,7 +612,9 @@
         "de2db3cc-17cb-4ae0-97cf-4fa10946c87b",
         "0aa23874-da30-4faa-8e42-92f0a81aed60",
         "c9e8788f-2914-414d-a291-d4105d6e9ff5",
-        "e176f464-1697-47e1-9612-4b6c1d5ce4f5"
+        "e176f464-1697-47e1-9612-4b6c1d5ce4f5",
+        "faq_8cUT3V",
+        "faq_BcwXLj"
       ],
       "settings": {
         "padding_top": 90,

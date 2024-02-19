@@ -123,6 +123,21 @@
     width: 50%;
 }
 
+@media (max-width: 850px){
+  .section-endrock-hero-image .hero-banner__buttons .custom_button{
+     font-size: 9px;
+  }
+
+  .section-endrock-hero-image .hero-banner__text h2{
+    font-size: 52px;
+    line-height: 54px;
+  }
+
+  .section-endrock-hero-image .hero-banner__text p{
+    font-size: 11px;
+  }
+}
+
 .section-endrock-hero-image .custom_button.button--primary{
     text-decoration: none;
     border-bottom: 1px solid;
@@ -138,7 +153,7 @@
     border: none !important;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 999px) {
     .section-endrock-hero-image .hero-banner__content{
         left: 37px;
     }
@@ -169,8 +184,12 @@
 
     .section-endrock-hero-image{
         display: flex;
-        flex-direction: column-reverse;
-        background: #F1F1F1;
+        flex-direction: column;
+        background: #E2EBF2;
+    }
+
+    .section-endrock-hero-image .hero-banner__buttons .custom_button{
+      display: none;
     }
 
     .section-endrock-hero-image .hero-banner__text h2{
@@ -199,7 +218,7 @@
     }
 
     .section-endrock-hero-image{
-        margin-top: -60px;
+        margin-top: -90px;
     }
 
 }

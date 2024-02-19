@@ -2037,7 +2037,7 @@ input[type='checkbox'] {
 .header-wrapper {
 	display: block;
 	position: relative;
-	background: #f2f2f2 !important;
+	background: #E2EBF4 !important;
 	border: none !important;
     margin-top: 18px
 }
@@ -2826,11 +2826,11 @@ a.button.button--primary {
 }
 
 a.button.button--primary:hover{
-  color: #000
+  color: #000!important;
 }
 
 a.button.button--primary:hover {
-	background-color: #fff;
+	background-color: #fff !important;
 	border: 1px solid #fff !important;
 }
 
@@ -4344,6 +4344,10 @@ header {
 		min-height: 100% !important;
 	}
 
+    .header{
+      border-bottom: 0.5px solid #000000;
+    }
+
 	.spashIcon {
 		text-align: right;
 		display: none !important;
@@ -4875,6 +4879,7 @@ header {
   .header {
     display: grid !important;
 	padding: 21px 36px 21px 24px!important;
+    border-bottom: 0.5px solid #000000;
   }
 
   .newheader {
@@ -4882,7 +4887,7 @@ header {
   }
 
   .shopify-section-header-hidden .header-wrapper{
-	background-color: #f2f2f2!important
+	background-color: #e2ebf4!important
   }
 
   .header-wrapper{

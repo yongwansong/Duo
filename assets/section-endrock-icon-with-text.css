@@ -2,8 +2,7 @@
     max-width: 1160px;
     margin: 21px auto 18px;
     display: flex;
-    gap: 21px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
@@ -14,13 +13,25 @@
     align-items: center;
 }
 
+@media (max-width: 1100px){
+  .icon-with-text__wrapper .iwt-item{
+    gap: 11px;
+  }
+}
+
+@media (max-width: 950px){
+  .icon-with-text__wrapper .iwt-item{
+    gap: 5px;
+  }
+
+  .icon-with-text__wrapper .iwt-item__heading{
+    font-size: 12px!important
+  }
+}
+
 @media (min-width: 768px) {
   .icon-with-text__wrapper .swiper-slide{
     width: auto;
-  }
-
-  .icon-with-text__wrapper {
-      flex-wrap: wrap;
   }
 }
 
