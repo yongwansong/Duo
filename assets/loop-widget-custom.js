@@ -91,6 +91,7 @@ function setupDomListeners(productId) {
     }
 
     for (const option of sellingPlanGroupOptions) {
+
         option.addEventListener("click", clickOnSellingPlanGroupContainer);
     }
 
@@ -336,6 +337,7 @@ function defaultSelectFirstSellingPlanLoop(variant, productId) {
     const loopPurchaseOptionsContainer = getLoopSubscriptionContainer(
         productId
     );
+
     const loopPurchaseOptions =
         loopPurchaseOptionsContainer.querySelectorAll(
             "input[name=loop_purchase_option]"
@@ -925,13 +927,16 @@ function applySettings({ productId }) {
  * @returns
  */
 function clickOnSellingPlanGroupContainer(event) {
+
     const container =
         event.target.closest(".loop-subscription-group") ||
         event.target.closest(".loop-one-time-purchase-option");
 
     if (!container) return;
-
+    
     const radio = container.querySelector('input[type="radio"]');
+
+
     const selectedPlanGroupId =
         window.loopProps[radio.dataset.productId]?.sellingPlanGroupId;
 
@@ -1033,11 +1038,16 @@ function updateSelectDropDownDefaultValues({
     const sellingPlanGroups =
         window.loopProps[productId].product.selling_plan_groups;
 
+
     if (!Array.isArray(sellingPlanGroups) || !sellingPlanGroups.length) {
         return;
     }
 
     sellingPlanGroups.forEach((spg) => {
+
+    console.log('initial execute', spg);
+    console.log('sellingPlanGroupId', sellingPlanGroupId);
+
         if (sellingPlanGroupId !== spg.id) {
             resetSelectDropdown(variant.id, spg.id);
         }
@@ -1126,6 +1136,7 @@ function changeInSellingPlanGroupLoopMobile(
 
 // on change of selling plan group
 function changeInSellingPlanGroupLoop(option) {
+
     let sellingPlanGroupId = option.target.dataset.id;
     let sellingPlanGroupName = option.target.dataset.name;
     let productId = option.target.dataset.productId;
@@ -1196,7 +1207,9 @@ function changeInSellingPlanGroupLoop(option) {
 }
 
 function changeInDeliveryOptionLoop(option) {
+    
     let sellingPlanId = option.target.value;
+
     let productId = option.target.dataset.productId;
     updateLoopProperties({ productId, sellingPlanId });
     updatePriceInParentElements({ productId });
@@ -1474,6 +1487,8 @@ function updateLoopProperties({
             hiddenInput.type = "hidden";
             hiddenInput.name = "selling_plan";
             hiddenInput.value = selectedSellingPlanId;
+
+
             form.appendChild(hiddenInput);
         });
     hideBundleSPG(productId);
@@ -1484,6 +1499,7 @@ function updateCartButtonText({ productId }) {
         document.querySelector(`[data-loop-product-id="${productId}"]`) ||
         document;
     const isOneTimeOrder = determineOneTimeOrder(productId);
+    console.log('is true', isOneTimeOrder);
     const addToCartButton = getAddToCartButton(parentElement);
     if (!addToCartButton) return;
 
@@ -1493,6 +1509,7 @@ function updateCartButtonText({ productId }) {
 
 function determineOneTimeOrder(productId) {
     const sellingPlanGroupId = window?.loopProps[productId]?.sellingPlanGroupId;
+    console.log('order', window?.loopProps[productId]);
     return (
         !sellingPlanGroupId || sellingPlanGroupId === "loop-one-time-purchase"
     );
@@ -1640,6 +1657,7 @@ function updateSellingPlanDescriptionElement(
     }
 }
 
+/* ------------------------------------------------- dev edinson comment*/
 function updatePriceInParentElements({ productId }) {
     const currentPath = getCurrentPath();
     const productHandle = window?.loopProps[productId]?.product?.handle;
@@ -1666,13 +1684,12 @@ function determinePrice(productId, variant) {
 }
 
 function updatePricesInUI(price) {
-    return; //uncomment this to enable parent price update in PDP
-    loopPriceSelectors.forEach((selector) => {
-        const priceElement = document.querySelector(selector);
-        if (priceElement) {
-            priceElement.innerHTML = `${price}`;
-        }
-    });
+  
+    const priceElement = document.querySelector('.price-subcription-custom');
+    if (priceElement) {
+        priceElement.innerHTML = `${price}`;
+    }
+
 }
 
 function updatePriceInUI({ productId }) {
@@ -2581,8 +2598,8 @@ async function dispatchLoopAddCartEvent(
 
   
   document.addEventListener('click', function(event) {
-    console.log('click--------');
    if (event.target.getAttribute('name') === 'Bottles') {
+
       document.querySelector('.onetimego').click();
       OneTimePurchaseClick()
     }

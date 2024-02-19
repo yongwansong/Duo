@@ -39,6 +39,10 @@
 		--product-color-lighter: {{ product_color_lighter.red }}, {{ product_color_lighter.green }}, {{ product_color_lighter.blue }};
     --product-color-solid: {{ section.settings.product_color }};
     }
+
+    .product-form__submit:hover {
+      background: {{ section.settings.product_color }};
+    }
   
   {%- endstyle -%}
 {%- endif -%}

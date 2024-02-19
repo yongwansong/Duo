@@ -120,7 +120,7 @@
               {%- when 'button' -%}
                 <div class="link_button-page">	
                     {%- if block.settings.button_label != blank -%}
-                      <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button-er custom_button  button--secondary" {{ block.shopify_attributes }}>
+                      <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button-er custom_button button button--primary  button--secondary" {{ block.shopify_attributes }}>
                         {{ block.settings.button_label | escape }}
                       </a>
                     {%- endif -%}

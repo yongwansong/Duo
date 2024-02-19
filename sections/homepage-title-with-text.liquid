@@ -1,12 +1,22 @@
 {%- style -%}
+{%- unless section.settings.none_margin -%}
   .section-heading {
     margin-top: 4rem;
     margin-bottom: 4rem;
   }
+
+
+{%- else -%}
+  .section-heading {
+    margin-top: 4rem;
+    margin-bottom: 0;
+  }
+{%- endunless -%}
+  
 {%- endstyle -%}
 <div class="page-width">
   <div class="homepage_title_txt">
-    <h2 class="title">{{ section.settings.title }}</h2>
+    <h2 class="title" style="text-align: {{ section.settings.select_align }}; margin-bottom: 0;">{{ section.settings.title }}</h2>
     <div class="homepage_desc">{{ section.settings.richtext | replace: 'award-winning', '<u>award-winning</u>' }}</div>
   </div>
 </div>
@@ -24,6 +34,29 @@
       "type": "richtext",
       "id": "richtext",
       "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "select_align",
+      "label": "Select align",
+      "options": [
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        }
+        
+      ],
+      "default": "center"
+    },
+    {
+      "type": "checkbox",
+      "id": "none_margin",
+      "label": "Margin none",
+      "default": false
     }
   ],
   "presets": [
