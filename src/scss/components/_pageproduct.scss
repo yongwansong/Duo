@@ -150,8 +150,8 @@
     }
 
     @media screen and (max-width: 700px) {
-      padding-left: 10px !important;
-      padding-right: 10px !important;
+      padding-left: 5px !important;
+      padding-right: 5px !important;
 
       .product__title {
         margin-top: 30px;
@@ -233,7 +233,7 @@
     variant-radios {
       .variant-field__price {
         font-family: 'OldschoolGrotesk-Medium';
-        padding: 14px;
+        padding: 10px;
         background-color: #fff;
       }
   
@@ -242,14 +242,47 @@
         flex-direction: column;
         margin-top: 14px;
 
+        input[type='radio']:checked+label .checkbox {
+          &::after {
+            content: "";
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: black;
+            display: block;
+            position: absolute;
+            bottom: 50%;
+            right: 50%;
+            transform: translate(50%, 50%);
+          }
+        }
+
         label {
           border-radius: 0;
           min-height: initial;
+          border-color: #000;
+          
 
           > span {
             display: flex;
             justify-content: space-between;
             position: relative;
+            align-items: center;
+
+            .variant-field__name {
+              display: flex;
+              align-items: center;
+              margin-top: 0;
+
+              .checkbox {
+                width: 28px;
+                height: 27px;
+                border: 1px solid;
+                border-radius: 50%;
+                margin-right: 8px;
+                position: relative;
+              }
+            }
 
             .variant-field__sale {
               display: flex;

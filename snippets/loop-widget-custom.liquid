@@ -341,7 +341,7 @@ span {
                               {% endif  %}
                             >
                             <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-value="{{value}}">
-                             {% comment %}  <span class="variant-field__label">
+                              {% comment %} <span class="variant-field__label">
                                 <span class="variant-field__image">
                                   {% case  product.title %}
                                     {% when 'Energy' %}
@@ -383,15 +383,18 @@ span {
                                     Save {{ discounted_amount }}%
                                   </span>
                                 {%- endif -%}
-                                {% comment %} <span class="variant-field__radio-icon"></span> {% endcomment %}
+                                 <span class="variant-field__radio-icon"></span> 
                                 
-                                {% comment %} {%- if variant.metafields.duo.variant_details != blank -%}
+                                 {%- if variant.metafields.duo.variant_details != blank -%}
                                   <span class="variant-field__details">{{ variant.metafields.duo.variant_details }}</span>
-                                {%- endif -%} {% endcomment %}
-                              </span> {% endcomment %}
+                                {%- endif -%} 
+                              </span>  {% endcomment %}
                              
                               <span class="variant-field__price">
-                                <span class="variant-field__name">{{ value }}</span>
+                                <span class="variant-field__name">
+                                  <div class="checkbox"></div>
+                                  {{ value }}
+                                </span>
                                 
                                 {%- if variant.compare_at_price > variant.price  -%}
                                   {%- assign discounted_amount = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | money_without_currency | times: 100 | round  -%}
@@ -400,7 +403,6 @@ span {
                                   </span>
                                 {%- endif -%}
                                 <div class="price-container">
-
                                   {%- if variant.compare_at_price > variant.price -%}
                                     <s>{{ variant.compare_at_price | money }}</s>
                                   {%- endif -%}

@@ -1361,24 +1361,6 @@ a.product__text {
 	flex-direction: column;
 	gap: 10px;
 }
-.variant-b.product-form__input.product-form__input--radio input[type='radio'][value="Single Bottle"]:checked+label{
-	--borders-color: #0C176A;
-}
-.variant-b.product-form__input.product-form__input--radio input[type='radio'][value="4 Bottles"]:checked+label .variant-field__price {
-	background-color: #F6F7FF;
-}
-.variant-b.product-form__input.product-form__input--radio input[type='radio'][value="2 Bottles"]:checked+label{
-	--borders-color: #70E6B8;
-}
-.variant-b.product-form__input.product-form__input--radio input[type='radio'][value="2 Bottles"]:checked+label .variant-field__price {
-	background-color: #DAF9EF;
-}
-.variant-b.product-form__input.product-form__input--radio input[type='radio'][value="4 Bottles"]:checked+label{
-	--borders-color: #8E92BA;
-}
-.variant-b.product-form__input.product-form__input--radio input[type='radio'][value="4 Bottles"]:checked+label .variant-field__price {
-	background-color: #EBEDFF;
-}
 
 
 .variant-b.product-form__input.product-form__input--radio .variant-field__label {
