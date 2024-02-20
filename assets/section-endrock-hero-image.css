@@ -162,6 +162,10 @@
   .section-endrock-hero-image .hero-banner__text p{
     font-size: 17px;
   }
+
+  .section-endrock-hero-image .hero-banner__buttons .custom_button{
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 999px) {
