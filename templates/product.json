@@ -356,6 +356,15 @@
         "layout": "text_first"
       }
     },
+    "homepage_title_with_text_gWAggc": {
+      "type": "homepage-title-with-text",
+      "settings": {
+        "title": "<p>Reviews<\/p>",
+        "richtext": "",
+        "select_align": "left",
+        "none_margin": true
+      }
+    },
     "1707343573639fd40e": {
       "type": "apps",
       "blocks": {
@@ -384,6 +393,7 @@
     "dual_section_Db4edk",
     "dual_section_c7rdPc",
     "dual_section_C4yyiR",
+    "homepage_title_with_text_gWAggc",
     "1707343573639fd40e"
   ]
 }
