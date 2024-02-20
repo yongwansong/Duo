@@ -144,6 +144,7 @@
     {% endfor %}
 
     @media (max-width: 767px){
+        
         #section--{{ section.id }}{
             padding-top: {{ section.settings.mobile_padding_top }}px;
             padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
@@ -151,19 +152,33 @@
         }
     }
 
-.section-endrock-hero-image .desktop_image img {
-  min-height: 350px;
+
+
+
+    @media (max-width: 1200px){
+.endrock-featured-collection__wrapper {
+    padding: 0!important;
+}
 }
 
-@media (min-width: 1000px) {
+
+
+@media (min-width: 1100px) {
+
+
+.title_info
+{
+
+  font-size: 50px!important;
+  line-height: 50px!important;
+
+}
   .endrock-featured-collection__wrapper {
     padding: 20px 90px 20px;
   }
 }
 
-.imagencontainer {
-  width: calc(25% - 23px);
-}
+
 .imagencard
 {
     width: 100%;
@@ -203,14 +218,14 @@
 {
     color: #000;
   font-family: Schnyder S;
-  font-size: 50px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 300;
-  line-height: 56px;
+  line-height: 28px;
   max-width: 100%;
   text-align: left;
   position: relative;
-  top: 20%;
+  top: 15%;
   padding: 15px;
 }
 
@@ -257,6 +272,10 @@ color: #000;
   color: black;
   line-height: 20px;
   padding: 10px;
+}
+
+.section-endrock-hero-image .hero-banner__text h2 {
+    font-family: OldschoolGrotesk-Regular;
 }
 
 </style>
@@ -354,6 +373,10 @@ color: #000;
 @media (max-width: 767px) {
   .imgmobile {
     display: block; 
+  }
+
+  .cardthree {
+    display: none!important; 
   }
 
   .imgpc {

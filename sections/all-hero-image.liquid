@@ -12,7 +12,7 @@
 }
 
 .section-endrock-hero-image .hero-banner__text h2 {
-
+  font-family:Schnyder-SLight!important ;
   margin: 140px 0 27px!important;
 }
     #section--{{ section.id }}{
@@ -26,6 +26,56 @@
             padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
         }
     }
+
+
+    @media (min-width: 1250px) {
+  .hero-banner__video-wrapper {
+    margin-top: -100px!important;
+  }
+}
+
+.section-endrock-hero-image .hero-banner__text h2 {
+  margin: 80px 0 30px !important;
+}
+
+
+@media (min-width: 1000px) {
+  .section-endrock-hero-image .mobile_image img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    min-height: 350px;
+  }
+}
+
+
+.section-endrock-hero-image .desktop_image {
+    position: relative;
+    min-height: 260px;
+}
+
+.section-endrock-hero-image .desktop_image img {
+
+    min-height: 240px;
+}
+
+@media (max-width: 767px) {
+  .section-endrock-hero-image .mobile_image img {
+    width: 100%;
+    object-fit: contain!important;
+    object-position: bottom;
+    min-height: 150px;
+    background: #ffdc6d;
+  }
+
+.section-endrock-hero-image .hero-banner__text h2 {
+    padding: 10px 5px 5px 5px !important;
+    font-size: 36px !important;
+}
+
+
+}
+
 </style>
 
 <div id="section--{{ section.id }}" class="section-endrock-hero-image {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">

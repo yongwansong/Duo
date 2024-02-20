@@ -17,8 +17,10 @@
   background: #CEF3FF;
   padding: 10px 60px;
   margin: 10px;
+  display: flex;
 }
 .columnr {
+  display: flex;
   padding: 10px 60px;
   margin: 10px;text-align: left;
 }
@@ -30,8 +32,9 @@
   max-width: fit-content;
   margin: 20px auto;
   display: block;
-  padding: 15px 30px;
+  padding: 10px 20px;
   font-family: OldschoolGrotesk-Regular;
+  text-decoration: none;
 }
 
 .title_info_ft {
@@ -96,15 +99,23 @@
     
     font-size: 32px!important;
     line-height: 40px!important;
-    padding-top: 70px!important;
+    padding-top: 0px!important;
 }
 
 .columnl {
-  background: #CEF3FF;
-  padding: 10px 0px;
-  margin: 5px 5px;
+  display: flex;
+    background: #CEF3FF;
+    padding: 10px 10px;
+    margin: 5px 1px;
     font-size: 10px;
-    letter-spacing: 0px;
+    letter-spacing: -0.2px;
+}
+.text_ft{
+  text-align: center;
+    padding-top: 5px;
+    margin: 3px -2px;
+    color: black;
+    font-weight: 600;
 }
 .columnsvgl {
     padding-top: 10px !important;
@@ -113,10 +124,12 @@
     padding-top: 10px !important;
 }
 .columnr {
+  display: flex;
   padding: 10px 0px;
-  margin: 5px 5px;
+  margin: 5px 0px;
     font-size: 10px;
-    letter-spacing: 0px;
+    letter-spacing: -0.2px;
+
 
 
 }
@@ -163,7 +176,10 @@
         {% for text in column1_texts %}
           <div  class="columnl"><svg  class="columnsvgl" width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M7.99996 15.2916L2.74996 10.0416C2.61268 9.90263 2.44918 9.7923 2.26894 9.717C2.0887 9.6417 1.8953 9.60293 1.69996 9.60293C1.50463 9.60293 1.31123 9.6417 1.13099 9.717C0.950749 9.7923 0.787247 9.90263 0.649963 10.0416C0.511003 10.1789 0.400676 10.3424 0.325377 10.5226C0.250077 10.7029 0.211304 10.8963 0.211304 11.0916C0.211304 11.2869 0.250077 11.4803 0.325377 11.6606C0.400676 11.8408 0.511003 12.0043 0.649963 12.1416L6.93496 18.4266C7.51996 19.0116 8.46496 19.0116 9.04996 18.4266L24.95 2.54159C25.0889 2.4043 25.1993 2.2408 25.2746 2.06056C25.3499 1.88032 25.3886 1.68693 25.3886 1.49159C25.3886 1.29625 25.3499 1.10286 25.2746 0.922616C25.1993 0.742375 25.0889 0.578873 24.95 0.441589C24.8127 0.302629 24.6492 0.192302 24.4689 0.117002C24.2887 0.0417029 24.0953 0.00292969 23.9 0.00292969C23.7046 0.00292969 23.5112 0.0417029 23.331 0.117002C23.1507 0.192302 22.9872 0.302629 22.85 0.441589L7.99996 15.2916Z" fill="#02996C"/>
-          </svg> {{ text }}</div>
+          </svg>  <div class="text_ft"> {{ text }}</div>
+          
+          
+          </div>
         {% endfor %}
       </ul>
     </div>
@@ -176,13 +192,15 @@
           <svg class="columnsvgr" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1.07999 0.575814C1.29092 0.365139 1.57686 0.246805 1.87499 0.246805C2.17311 0.246805 2.45905 0.365139 2.66999 0.575814L10.5 8.40581L18.33 0.575814C18.4675 0.427727 18.6424 0.319471 18.8363 0.262449C19.0301 0.205428 19.2358 0.201754 19.4316 0.251814C19.6274 0.301873 19.806 0.403814 19.9487 0.546895C20.0915 0.689976 20.1929 0.868899 20.2425 1.06481C20.2926 1.26038 20.2891 1.46584 20.2324 1.65958C20.1756 1.85333 20.0677 2.0282 19.92 2.16582L12.09 9.99582L19.92 17.8258C20.0681 17.9633 20.1763 18.1382 20.2334 18.3321C20.2904 18.526 20.294 18.7316 20.244 18.9274C20.1939 19.1232 20.092 19.3019 19.9489 19.4446C19.8058 19.5873 19.6269 19.6888 19.431 19.7383C19.2354 19.7884 19.03 19.7849 18.8362 19.7282C18.6425 19.6714 18.4676 19.5635 18.33 19.4158L10.5 11.5858L2.66999 19.4158C2.45659 19.6144 2.17452 19.7226 1.88304 19.7175C1.59157 19.7125 1.31339 19.5947 1.10699 19.3888C0.901122 19.1824 0.783289 18.9042 0.778254 18.6128C0.773218 18.3213 0.881373 18.0392 1.07999 17.8258L8.90999 9.99582L1.07999 2.16582C0.869311 1.95488 0.750977 1.66894 0.750977 1.37081C0.750977 1.07269 0.869311 0.786752 1.07999 0.575814Z" fill="#D74D4D"/>
           </svg>
-           {{ text }}</div>
+
+          <div class="text_ft"> {{ text }}</div>
+           </div>
         {% endfor %}
       </ul>
     </div>
   </div>
   <div class="custom-section-button">
-    <button class="buttom_feature">HOW IT WORKS</button>
+    <a href="https://duotoothpaste.com/pages/the-science" class="buttom_feature">HOW IT WORKS</a>
   </div>
 </div>
 </div>
