@@ -61,7 +61,7 @@
     border-radius: 0 !important;
   }
 
-  .loop-selling-plan-selector {
+  .loop-selling-plan-selector-style {
     width: auto !important;
     display: block !important;
     border-color: #000 !important;
@@ -113,7 +113,8 @@
       font-size: 14px;
       text-align: left;
       border-bottom: none;
-      margin-top: 30px;
+      margin-top: 16px;
+      line-height: 1.5;
     }
   }
 
@@ -209,7 +210,7 @@
 
       
     }
-    .loop-selling-plan-selector {
+    .loop-selling-plan-selector-style {
       width: 57% !important;
     }
 

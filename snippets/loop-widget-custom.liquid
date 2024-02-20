@@ -529,10 +529,25 @@ span {
                 <div class="aditional-info-order">
                   {{ 'products.subscription.additional_order_subscription' | t }} 
                 </div>
+
+                {% assign block_link = blocks | where: 'type', 'link_customization' %}
+                {%- for link in block_link -%}
+                  <div class="link-custom">
+                    <div class="icon">
+                      {% render 'icon-link-product' %}
+                    </div>
+                    <div class="text-link">
+                      {{ link.settings.link_custom }}
+                    </div>
+                  </div>
+                {%- endfor -%}
+                
+
                 <p class="aditional-info-subscription">
                   {{ 'products.subscription.cancel_info_subcription' | t }}
                 </p>
                 <div class="item_include">
+                  {% assign block_star = blocks | where: 'type', 'star_subcription' %}
                   {%- for block in block_star -%}
                     <div class="icon-info">
                       <div class="icon">{% render 'start-subscription' %}</div>
