@@ -54,4 +54,36 @@
       }
     }
   }
+
+  @media screen and (max-width: 1189px) {
+    &__container {
+      width: 60%;
+      padding-left: 90px;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    &__container {
+      width: 100%;
+      padding-left: 90px;
+      padding-right: 90px;
+    }
+  }
+
+  @media screen and (max-width: 700px) { 
+
+    &__container {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__logos-aditional {
+      right: 16px;
+      bottom: 410px
+    }
+  }
 }

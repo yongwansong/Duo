@@ -1,3 +1,11 @@
+<style>
+  {%- if section.settings.none_margin -%}
+    .spaced-section {
+      margin-top: 0;
+    }
+  {%- endif -%}
+</style>
+
 <div class="{% if section.settings.include_margins %}page-width{% endif %}">
   {%- for block in section.blocks -%}
     {% render block %}
@@ -15,6 +23,12 @@
       "id": "include_margins",
       "default": true,
       "label": "t:sections.apps.settings.include_margins.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "none_margin",
+      "default": false,
+      "label": "Margin top none"
     }
   ],
   "blocks": [

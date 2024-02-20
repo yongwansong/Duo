@@ -2,6 +2,11 @@
 
 {% include 'head-fonts' %}
 
+<style>
+  #shopify-section-{{ section.id }} {
+    background: #E2EBF2;
+  }
+</style>
 <div class="image-with-text image-with-text--full-width">
   <div class="image-with-text__grid grid grid--gapless grid--1-col grid--2-col-tablet gradient{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
     <div class="grid__item">
@@ -115,7 +120,7 @@
               {%- when 'button' -%}
                 <div class="link_button-page">	
                     {%- if block.settings.button_label != blank -%}
-                      <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button-er custom_button  button--secondary" {{ block.shopify_attributes }}>
+                      <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button-er custom_button button button--primary  button--secondary" {{ block.shopify_attributes }}>
                         {{ block.settings.button_label | escape }}
                       </a>
                     {%- endif -%}

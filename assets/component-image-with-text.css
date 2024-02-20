@@ -215,34 +215,6 @@ a.text_underline {
     max-width: 88%;
 }
 
-
-.image-with-text__content a.button--primary:before {
-  content: '';
-  border-top: 1px solid #000;
-  position: absolute;
-  z-index: 9999;
-  width: 40px;
-  right: 6px;
-  transform: translate(52px,16px);
-}
-
-.image-with-text__content a.button--primary:after {
-  content: '';
-  width: 5px; 
-  height: 5px; 
-  border-top: 1px solid #000;
-  border-right: 1px solid #000;
-  position:absolute;
-  z-index: 9999;
-  transform: rotate(45deg);
-  right: -46px;
-  top: 14px;
-}
-
-
-
-
-
 @media(max-width: 1350px) and (min-width: 1080px) {
   
   a.text_underline {
@@ -744,7 +716,7 @@ a.text_underline {
     }
   
   	.image-with-text__content.image-with-text__content--adapt {
-        padding: 5rem 0px 0px!important;
+        padding: 5rem 0px 0px;
     }
   
   	.image-with-text__text.rte {margin: auto;}

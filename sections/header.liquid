@@ -92,12 +92,10 @@
     }
   {% endif %} 
 
-  .oke-w-header {
-    display: none;
-  }
-  .oke-w-controls {
-    display: none;
-  }
+
+  /* reviews styles */
+
+
 </style>
 
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
@@ -582,34 +580,34 @@
               {%endfor%}
        </div> 
         <div class="second-div">
-			{%- if request.page_type == 'index' -%}
-				<h1 class="header__heading">
-			  {%- endif -%}
-				  <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-					  {%- liquid
-						  assign logo = section.settings.logo
-						  if template.name == 'product' and section.settings.pdp_logo != blank
-							  assign logo = section.settings.pdp_logo
-						  endif
-					  -%}
-					{%- if logo != blank -%}
-					  {%- assign image_size = section.settings.logo_width | append: 'x' -%}
-					  <img srcset="{{ logo | img_url: image_size }} 1x, {{ logo | img_url: image_size, scale: 2 }} 2x"
-						src="{{ logo | img_url: image_size }}"
-						loading="lazy"
-						class="header__heading-logo"
-						width="{{ logo.width }}"
-						height="{{ logo.height }}"
-						alt="{{ logo.alt | default: shop.name | escape }}"
-					  > 
-					{%- else -%}
-					  <span class="h2">{{ shop.name }}</span>
-					{%- endif -%}
-				  </a>
-			  {%- if request.page_type == 'index' -%}
-				</h1>
-			  {%- endif -%}
-          </div> 
+          {%- if request.page_type == 'index' -%}
+            <h1 class="header__heading">
+          {%- endif -%}
+            <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+              {%- liquid
+                assign logo = section.settings.logo
+                if template.name == 'product' and section.settings.pdp_logo != blank
+                  assign logo = section.settings.pdp_logo
+                endif
+              -%}
+            {%- if logo != blank -%}
+              {%- assign image_size = section.settings.logo_width | append: 'x' -%}
+                <img srcset="{{ logo | img_url: image_size }} 1x, {{ logo | img_url: image_size, scale: 2 }} 2x"
+                  src="{{ logo | img_url: image_size }}"
+                  loading="lazy"
+                  class="header__heading-logo"
+                  width="{{ logo.width }}"
+                  height="{{ logo.height }}"
+                  alt="{{ logo.alt | default: shop.name | escape }}"
+                > 
+            {%- else -%}
+              <span class="h2">{{ shop.name }}</span>
+            {%- endif -%}
+            </a>
+          {%- if request.page_type == 'index' -%}
+            </h1>
+          {%- endif -%}
+        </div> 
         <div class="third-div">
            
          <div class="header__icons">

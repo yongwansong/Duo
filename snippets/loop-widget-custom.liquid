@@ -30,7 +30,6 @@
 }
 
 .selectstyle{
- max-width: 100px;
  display: block;
  margin-left: auto;
 margin-right: auto;
@@ -65,10 +64,14 @@ span {
 }
   .switches-container {
     line-height: 1.5rem!important;
-    }
-   .switches-container label {
-    padding: 10px!important;
-}
+  }
+   .switches-container .onetimego {
+    padding-left: 0px!important;
+  }
+  .switches-container .subsgo {
+    padding-right: 0px!important;
+  }
+  
 }
 
 :root {
@@ -131,22 +134,7 @@ span {
   margin-top: 0px;
 }
 
-.switch div {
-  width: 100%;
-  text-align: center;
-  opacity: 0;
-  display: block;
-  transition: opacity 0.2s cubic-bezier(.77, 0, .175, 1) 0.125s;
-  will-change: opacity;
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-transform: uppercase;
-  font-weight: 500;
-  padding: 10px;
-  font-family: "OldschoolGrotesk-Medium";
-  letter-spacing: 1.6px;
-}
+
 
 .switches-container input:nth-of-type(1):checked~.switch-wrapper {
   transform: translateX(0%);
@@ -179,12 +167,6 @@ span {
 
 .loop-selling-plan-fieldset {
   border-width: 0px !important;
-}
-
-
-.button--primary:hover {
-  color: white !important;
-  background: #0C176A !important;
 }
 
 .loop-one-time-purchase-option {
@@ -226,6 +208,9 @@ span {
 
 
 {% if product.selling_plan_groups.size > 0 %}
+  <script>
+    console.log({{ product |  json }})
+  </script>
 
   {%- liquid
       assign current_variant = product.selected_or_first_available_variant | default: product.variants.first
@@ -235,7 +220,7 @@ span {
   </script>
   <div id="loop-subscription-container-{{product.id}}" class="loop-subscription-container loop-display-none">
       
-    <input type="hidden" name="selling_plan">
+    <input type="hidden" name="selling_plan" data-test value="test">
     <input name="loop_variant_id" class="loop-hidden">
     <fieldset
       id="loop-selling-plan-fieldset"
@@ -243,7 +228,25 @@ span {
     >
       <legend class="loop-selling-plan-fieldset-legend">Selling Plans</legend>
       {% unless product.requires_selling_plan %}
-        <div class="loop-one-time-purchase-option-position" id="loop-one-time-purchase-option-at-top">
+        
+
+
+        <div class="container">
+          <div class="switches-container">
+            <input type="radio" id="substimselect" name="switchPlan"  checked="checked" class="subcription"/>
+            <input type="radio" id="onetimeselect" name="switchPlan"   class="onetime" />
+            <label for="substimselect" class="subsgo"  ><span class="selectstyle">Subscribe & save</span></label>
+            <label for="onetimeselect" class="onetimego"  ><span class="selectstyle">One Time Purchase</span></label>
+            <div class="switch-wrapper">
+              <div class="switch">
+                <div  ><span class="selectstyle">Subscribe & save</span></div>
+                <div  > <span class="selectstyle">One Time Purchase</span></div>
+              </div>
+            </div>
+          </div>
+            <div class="legends">
+              <div class="legend-left">
+                <div class="loop-one-time-purchase-option-position" id="loop-one-time-purchase-option-at-top">
             <div class="loop-one-time-purchase-option">
                 <input type="radio" class="loop-one-time-purchase-option-radio" name="loop_purchase_option" id="loop-one-time-purchase-{{product.id}}" data-id="loop-one-time-purchase" data-product-id="{{ product.id }}" data-name="loop-one-time-purchase">
                 <label class="loop-one-time-purchase-option-label" for="loop-one-time-purchase-{{product.id}}">One time Purchase</label>
@@ -263,23 +266,6 @@ span {
                 </div>
             </div>
         </div>
-
-
-        <div class="container">
-          <div class="switches-container">
-            <input type="radio" id="onetimeselect" name="switchPlan"   checked="checked" />
-            <input type="radio" id="substimselect" name="switchPlan"  />
-            <label for="onetimeselect" class="onetimego"  ><span class="selectstyle">One Time Purchase</span></label>
-            <label for="substimselect" class="subsgo"  ><span class="selectstyle">Subscribe & save</span></label>
-            <div class="switch-wrapper">
-              <div class="switch">
-                <div  > <span class="selectstyle">One Time Purchase</span></div>
-                <div  ><span class="selectstyle">Subscribe & save</span></div>
-              </div>
-            </div>
-          </div>
-            <div class="legends">
-              <div class="legend-left">
                 <div class="variants_wrapper">
                   {%- unless product.has_only_default_variant -%}
                     <variant-radios
@@ -353,7 +339,7 @@ span {
                               {% endif  %}
                             >
                             <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-value="{{value}}">
-                              <span class="variant-field__label">
+                              {% comment %} <span class="variant-field__label">
                                 <span class="variant-field__image">
                                   {% case  product.title %}
                                     {% when 'Energy' %}
@@ -395,20 +381,31 @@ span {
                                     Save {{ discounted_amount }}%
                                   </span>
                                 {%- endif -%}
-                                {% comment %} <span class="variant-field__radio-icon"></span> {% endcomment %}
+                                 <span class="variant-field__radio-icon"></span> 
                                 
-                                {% comment %} {%- if variant.metafields.duo.variant_details != blank -%}
+                                 {%- if variant.metafields.duo.variant_details != blank -%}
                                   <span class="variant-field__details">{{ variant.metafields.duo.variant_details }}</span>
-                                {%- endif -%} {% endcomment %}
-                              </span>
+                                {%- endif -%} 
+                              </span>  {% endcomment %}
                              
                               <span class="variant-field__price">
-                                <span class="variant-field__name">{{ value }}</span>
+                                <span class="variant-field__name">
+                                  <div class="checkbox"></div>
+                                  {{ value }}
+                                </span>
                                 
-                                {%- if variant.compare_at_price > variant.price -%}
-                                  <s>{{ variant.compare_at_price | money }}</s>
+                                {%- if variant.compare_at_price > variant.price  -%}
+                                  {%- assign discounted_amount = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | money_without_currency | times: 100 | round  -%}
+                                  <span class="variant-field__sale" data-discounted="{{ discounted_amount }}">
+                                    Save {{ discounted_amount }}%
+                                  </span>
                                 {%- endif -%}
-                                <span>{{ variant.price | money }}</span>
+                                <div class="price-container">
+                                  {%- if variant.compare_at_price > variant.price -%}
+                                    <s>{{ variant.compare_at_price | money }}</s>
+                                  {%- endif -%}
+                                  <span>{{ variant.price | money }}</span>
+                                </div>
                               </span>
                             </label>
                         {%- endunless -%}
@@ -508,7 +505,8 @@ span {
                                     </div>
                                     <div class="price-first-variant">
                                       {% render 'price-custom-variant'
-                                        product: product
+                                        product: product,
+                                        is_subcription: true
                                       %}
                                     </div>
 
