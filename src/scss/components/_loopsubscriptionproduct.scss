@@ -163,6 +163,21 @@
         font-style: normal;
         font-weight: 400;
         line-height: 16px;
+
+        .price-subscription {
+          display: flex;
+          flex-direction: column;
+
+          .save-subscription {
+            color: #00497E;
+            text-align: right;
+            font-family: "OldschoolGrotesk-Regular";
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 14px;
+          }
+        }
       }
       .variant-field__sale {
         color: #00497E;
@@ -171,6 +186,8 @@
         font-weight: 500;
         line-height: 14px;
       }
+
+      
     }
 
     

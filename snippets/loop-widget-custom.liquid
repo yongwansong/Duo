@@ -208,9 +208,7 @@ span {
 
 
 {% if product.selling_plan_groups.size > 0 %}
-  <script>
-    console.log({{ product |  json }})
-  </script>
+
 
   {%- liquid
       assign current_variant = product.selected_or_first_available_variant | default: product.variants.first
@@ -247,28 +245,29 @@ span {
             <div class="legends">
               <div class="legend-left">
                 <div class="loop-one-time-purchase-option-position" id="loop-one-time-purchase-option-at-top">
-            <div class="loop-one-time-purchase-option">
-                <input type="radio" class="loop-one-time-purchase-option-radio" name="loop_purchase_option" id="loop-one-time-purchase-{{product.id}}" data-id="loop-one-time-purchase" data-product-id="{{ product.id }}" data-name="loop-one-time-purchase">
-                <label class="loop-one-time-purchase-option-label" for="loop-one-time-purchase-{{product.id}}">One time Purchase</label>
-            <div class="loop-subscription-group-discount-badge-onetime loop-display-none loop-subscription-group-discount-badge" id="loop-discount-badge-onetime">
+                  <div class="loop-one-time-purchase-option">
+                    <input type="radio" class="loop-one-time-purchase-option-radio" name="loop_purchase_option" id="loop-one-time-purchase-{{product.id}}" data-id="loop-one-time-purchase" data-product-id="{{ product.id }}" data-name="loop-one-time-purchase">
+                    <label class="loop-one-time-purchase-option-label" for="loop-one-time-purchase-{{product.id}}">One time Purchase</label>
+                    <div class="loop-subscription-group-discount-badge-onetime loop-display-none loop-subscription-group-discount-badge" id="loop-discount-badge-onetime">
+                    </div>
+                    <div class="loop-one-time-purchase-option-price-container">
+                        <div id="loop-price-one-time-original" class="loop-one-time-purchase-option-price-amount-original loop-display-none">
+                            {{ current_variant.price | money }}
+                        </div>
+                        <div id="loop-price-one-time" class="loop-one-time-purchase-option-price-amount">
+                            {{ current_variant.price | money }}
+                        </div>
+                    
+                        <div class="loop-one-time-purchase-option-price-quantity">
+                            each
+                        </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="loop-one-time-purchase-option-price-container">
-                    <div id="loop-price-one-time-original" class="loop-one-time-purchase-option-price-amount-original loop-display-none">
-                        {{ current_variant.price | money }}
-                    </div>
-                    <div id="loop-price-one-time" class="loop-one-time-purchase-option-price-amount">
-                        {{ current_variant.price | money }}
-                    </div>
-                
-                    <div class="loop-one-time-purchase-option-price-quantity">
-                        each
-                    </div>
-                </div>
-            </div>
-        </div>
+
                 <div class="variants_wrapper">
                   {%- unless product.has_only_default_variant -%}
-                    <variant-radios
+                  <variant-radios
                     class="no-js-hidden"
                     data-section="{{ section.id }}"
                     data-url="{{ product.url }}"
@@ -277,7 +276,7 @@ span {
                   {%- for option in product.options_with_values -%}
                       {% comment %}
                         // AB test Most Popular https://app.clickup.com/t/86dqr26c5
-                       <fieldset class="js product-form__input product-form__input--radio">
+                        <fieldset class="js product-form__input product-form__input--radio">
                       <legend class="form__label">{{ option.name }}:</legend>
                         {%- assign option_index = forloop.index0 -%}
                         {%- assign values = '' -%}
@@ -381,13 +380,13 @@ span {
                                     Save {{ discounted_amount }}%
                                   </span>
                                 {%- endif -%}
-                                 <span class="variant-field__radio-icon"></span> 
+                                  <span class="variant-field__radio-icon"></span> 
                                 
-                                 {%- if variant.metafields.duo.variant_details != blank -%}
+                                  {%- if variant.metafields.duo.variant_details != blank -%}
                                   <span class="variant-field__details">{{ variant.metafields.duo.variant_details }}</span>
                                 {%- endif -%} 
                               </span>  {% endcomment %}
-                             
+                              
                               <span class="variant-field__price">
                                 <span class="variant-field__name">
                                   <div class="checkbox"></div>
@@ -453,31 +452,32 @@ span {
                   </noscript>
                 </div>
               </div>
+
               <div class="legend-right">
-                {% for variant in product.variants %}
-                  <div id="loop-product-variant-{{ variant.id }}" class="container-subscription">
+               
+                  <div id="loop-product-variant-{{ current_variant.id }}" class="container-subscription">
                     {% assign selected_selling_plan_group = nil %}
                     {% for selling_plan_group in product.selling_plan_groups %}
                       {% unless selling_plan_group.app_id != "5284869" %}
                         <div id="loop-selling_plan_group-{{ selling_plan_group.id }}">
-                          {% for allocation in variant.selling_plan_allocations %}
+                          {% for allocation in current_variant.selling_plan_allocations %}
                             <div class="loop-selling-plan-allocation" id="loop-allocation-{{ allocation.selling_plan_group_id }}">
                               {% if selling_plan_group.id == allocation.selling_plan_group_id and selected_selling_plan_group != selling_plan_group.id %}
                                 {% assign selected_selling_plan_group = selling_plan_group.id %}
-                                <div class="loop-full-width loop-subscription-group loop-subscription-group-border-top" id="loop-{{variant.id}}-{{selling_plan_group.id}}">
-                                  <input type="radio" class="loop-subscription-group-radio" id="loop-radio-{{ variant.id }}{{selling_plan_group.id}}" name="loop_purchase_option" data-variant-id="{{variant.id}}"  data-product-id="{{product.id}}" data-id="{{selling_plan_group.id}}" data-name="{{selling_plan_group.name}}">
+                                <div class="loop-full-width loop-subscription-group loop-subscription-group-border-top" id="loop-{{current_variant.id}}-{{selling_plan_group.id}}">
+                                  <input type="radio" class="loop-subscription-group-radio" id="loop-radio-{{ current_variant.id }}{{selling_plan_group.id}}" name="loop_purchase_option" data-variant-id="{{current_variant.id}}"  data-product-id="{{product.id}}" data-id="{{selling_plan_group.id}}" data-name="{{selling_plan_group.name}}">
                                   <div class="loop-subscription-group-text">
-                                    <label class="loop-subscription-group-label" for="loop-radio-{{ variant.id }}{{selling_plan_group.id}}">
+                                    <label class="loop-subscription-group-label" for="loop-radio-{{ current_variant.id }}{{selling_plan_group.id}}">
                                         {{selling_plan_group.name}}
                                     </label>
-                                    <div class="loop-subscription-group-discount-badge loop-display-none" id="loop-discount-badge-{{ variant.id }}-{{selling_plan_group.id}}">
+                                    <div class="loop-subscription-group-discount-badge loop-display-none" id="loop-discount-badge-{{ current_variant.id }}-{{selling_plan_group.id}}">
                                     </div>
                                   </div>
                                   <div class="container-select-price">
                                     <div>
                                       <div class="select-quantity loop-subscription-group-selling-plans-container ">
                                         {{ 'products.subscription.select_quantity_label' | t }} 
-                                        <select name="select-quantity" id="select-quantity" class="loop-selling-plan-selector selector-custom">
+                                        <select name="select-quantity" data-product-id="{{ product.id }}" id="select-quantity" class="loop-selling-plan-selector-style selector-custom">
                                           <option value="1">number of bottles</option>
                                           <option value="1">1 bottle</option>
                                           <option value="2">2 bottle</option>
@@ -492,15 +492,15 @@ span {
                                         </select>
                                       </div>
                                         
-                                      <div class="loop-subscription-group-selling-plans-container loop-full-width" id="loop-selling-plan-container-{{variant.id}}-{{selling_plan_group.id}}">
-                                        <label class="loop-selling-plan-selector-label" for="loop-select-{{variant.id}}-{{selling_plan_group.id}}"> {{ selling_plan_group.selling_plans[0].options[0].name }}</label>
-                                        <div id="loop-selling-plan-first-delivery-options-{{variant.id}}-{{selling_plan_group.id}}" class="loop-display-none"> &nbsp;{{ selling_plan_group.selling_plans[0].options[0].value }} </div>
-                                        <select class="loop-full-width loop-selling-plan-selector selector-custom" id="loop-select-{{variant.id}}-{{selling_plan_group.id}}" data-position="{{ option.position }}" data-selling-plan-group-id="{{ selling_plan_group.id }}" data-product-id="{{product.id}}">
+                                      <div class="loop-subscription-group-selling-plans-container loop-full-width" id="loop-selling-plan-container-{{current_variant.id}}-{{selling_plan_group.id}}">
+                                        <label class="loop-selling-plan-selector-label" for="loop-select-{{current_variant.id}}-{{selling_plan_group.id}}"> {{ selling_plan_group.selling_plans[0].options[0].name }}</label>
+                                        <div id="loop-selling-plan-first-delivery-options-{{current_variant.id}}-{{selling_plan_group.id}}" class="loop-display-none"> &nbsp;{{ selling_plan_group.selling_plans[0].options[0].value }} </div>
+                                        <select class="loop-full-width loop-selling-plan-selector loop-selling-plan-selector-style selector-custom" id="loop-select-{{current_variant.id}}-{{selling_plan_group.id}}" data-position="{{ option.position }}" data-selling-plan-group-id="{{ selling_plan_group.id }}" data-product-id="{{product.id}}">
                                           {% for sp in selling_plan_group.selling_plans %}
                                           <option class="loop-selling-plan-selector-option" value="{{ sp.id }}">{{ sp.options[0].value }}</option>
                                           {% endfor %}
                                         </select>
-                                        <div class="loop-selling-plan-selector-description" id="loop-selling-plan-description-{{ variant.id }}-{{ selling_plan_group.id }}"></div>
+                                        <div class="loop-selling-plan-selector-description" id="loop-selling-plan-description-{{ current_variant.id }}-{{ selling_plan_group.id }}"></div>
                                       </div>
                                     </div>
                                     <div class="price-first-variant">
@@ -521,8 +521,7 @@ span {
                     {% break %}
                     {% endfor %}
                   </div>
-        
-                {% endfor %}     
+           
                 {% unless product.requires_selling_plan %}
                     <div class="loop-one-time-purchase-option-position" id="loop-one-time-purchase-option-at-bottom">
                     </div>
