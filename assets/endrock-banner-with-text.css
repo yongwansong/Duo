@@ -171,7 +171,9 @@
         font-weight: 400;
         line-height: 24px;
         margin: 0;
-        max-width: 260px;
+        max-width: 210px;
+        text-align: justify;
+        letter-spacing: 0;
     }
 
     .endrock-banner-with-text .text-decoration{
