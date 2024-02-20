@@ -177,9 +177,9 @@
     }
 
     .endrock-banner-with-text .text-decoration{
-        font-size: 40px;
+        font-size: 40px !important;
         line-height: 48px;
-        margin-bottom: 20px;
+        margin-bottom: 4px;
     }
 
     .endrock-banner-with-text .mobile-banner-with-text .decoration{
