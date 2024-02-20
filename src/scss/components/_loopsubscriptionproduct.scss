@@ -95,7 +95,7 @@
   }
 
   .legend-right {
-    .aditional-info-subscription {
+    .aditional-info-subscription, .aditional-info-order {
       margin: 0;
       text-align: right;
       color: #3F3F3F;
@@ -107,6 +107,12 @@
       border-bottom: 1px solid;
       margin-top: 12px;
       padding-bottom: 8px;
+    }
+
+    .aditional-info-order {
+      font-size: 14px;
+      text-align: left;
+      border-bottom: none;
     }
   }
 

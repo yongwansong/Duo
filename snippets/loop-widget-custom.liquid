@@ -476,19 +476,19 @@ span {
                                   <div class="container-select-price">
                                     <div>
                                       <div class="select-quantity loop-subscription-group-selling-plans-container ">
-                                        I would like 
+                                        {{ 'products.subscription.select_quantity_label' | t }} 
                                         <select name="select-quantity" id="select-quantity" class="loop-selling-plan-selector selector-custom">
                                           <option value="1">number of bottles</option>
-                                          <option value="1">1</option>
-                                          <option value="2">2</option>
-                                          <option value="3">3</option>
-                                          <option value="4">4</option>
-                                          <option value="5">5</option>
-                                          <option value="6">6</option>
-                                          <option value="7">7</option>
-                                          <option value="8">8</option>
-                                          <option value="9">9</option>
-                                          <option value="10">10</option>
+                                          <option value="1">1 bottle</option>
+                                          <option value="2">2 bottle</option>
+                                          <option value="3">3 bottle</option>
+                                          <option value="4">4 bottle</option>
+                                          <option value="5">5 bottle</option>
+                                          <option value="6">6 bottle</option>
+                                          <option value="7">7 bottle</option>
+                                          <option value="8">8 bottle</option>
+                                          <option value="9">9 bottle</option>
+                                          <option value="10">10 bottle</option>
                                         </select>
                                       </div>
                                         
@@ -527,7 +527,12 @@ span {
                     <div class="loop-one-time-purchase-option-position" id="loop-one-time-purchase-option-at-bottom">
                     </div>
                 {% endunless %}
-                <p class="aditional-info-subscription">Modify, Skip or Cancel Anytime!</p>
+                <div class="aditional-info-order">
+                  {{ 'products.subscription.additional_order_subscription' | t }} 
+                </div>
+                <p class="aditional-info-subscription">
+                  {{ 'products.subscription.cancel_info_subcription' | t }}
+                </p>
                 <div class="item_include">
                   {%- for block in block_star -%}
                     <div class="icon-info">
