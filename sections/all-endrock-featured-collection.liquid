@@ -261,86 +261,117 @@ color: #000;
 
 </style>
 
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
+
+
 <style>
-    /* Estilo opcional para ocultar el texto inicialmente */
-    .textoOculto {
-      display: none;
-      position: absolute;
-  z-index: 2;
+  .slick-slide .slide-content {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+  }
+
+  .slick-list {
+    margin: 0;
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    right: 10px;
+    background: #777;
+    border: none;
+    color: transparent;
+    width: 30px;
+    height: 30px;
+  }
+
+  .slick-prev { 
+    left: 10px; 
+  }
+
+  .slick-prev:before,
+  .slick-next:before { 
+    content: ">";
+    color: #fff;
+    font-size: 25px;
+  }
+
+  .slick-prev:before { 
+    content: "<";
+  }
+
+  .hover_image_ {
+    width: 100%;
+  }
+
+  .slick-slide img {
+  display: block;
   width: 100%;
-  height: 100%;
-    }
-
-
-    @media (min-width: 767px) {
-        .switch {
-        display: none !important
-    }
 }
-    /* Estilo para el switch con dos botones a la izquierda y derecha */
-    .switch {
-        display: flex;
-  align-items: center;
-  width: 29px;
-  height: 12px;
-  background-color: #f0f0f0;
-  border-radius: 17px;
+
+  .slick-dots {
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    right: 0;
+  }
+
+  .slick-dots li {
+    display: inline-block;
+  }
+
+  .slick-dots button { 
+    transition: 0.2s background-color ease-in-out 0s;
+    border: none;
+    padding: 0;
+    color: transparent;
+    width: 10px!important;
+    height: 10px!important;
+    background-color: #777;
+    margin-right: 5px;
+    border-radius: 50%; 
+  }
+
+  .slick-dots li.slick-active button { 
+    background-color: #000; 
+  }
+
+.imgmobile {
+  display: none; 
+}
+
+.imgpc {
+  display: block; 
+}
+
+@media (max-width: 767px) {
+  .imgmobile {
+    display: block; 
+  }
+
+  .imgpc {
+    display: none!important; 
+  }
+}
+
+.custom_product_image_ {
+  padding-bottom: 0% !important;
+  display: block;
+  position: relative;
   overflow: hidden;
-  position: absolute;
-  z-index: 3;
-  right: 0;
-  margin: 5px;
-    }
+}
 
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-      position: absolute;
-    }
 
-    .slider {
-      flex: 1;
-      height: 100%;
-      display: flex;
-      justify-content: space-between;
-      gap: 5px;
-    }
+</style>
 
-    .slider span {
-      flex: 1;
-      border-radius: 17px; /* Hace que el botón sea redondeado */
-      -webkit-transition: background-color 0.4s;
-      transition: background-color 0.4s;
-    }
 
-    .slider span:first-child {
-      background-color: black; /* Color inicial del botón izquierdo (negro) */
-    }
-
-    .slider span:last-child {
-      background-color: #808080; /* Color inicial del botón derecho (gris) */
-    }
-
-    .switch input:checked + .slider span:first-child {
-      background-color: #808080; /* Color del botón izquierdo cuando está activado (gris) */
-    }
-
-    .switch input:checked + .slider span:last-child {
-      background-color: black; /* Color del botón derecho cuando está activado (negro) */
-    }
-
-    /* Muestra u oculta el texto según el estado del switch */
-    .switch input:checked ~ .slider span:first-child ~ .textoOculto,
-    .switch input:not(:checked) ~ .slider span:last-child ~ .textoOculto {
-      display: block;
-    }
-
-    .switch input:checked ~ .slider span:last-child ~ .textoOculto,
-    .switch input:not(:checked) ~ .slider span:first-child ~ .textoOculto {
-      display: none;
-    }
-  </style>
 
 <div id="section--{{ section.id }}" class="{{ section.settings.id_section_pivot }}">
     <div class="endrock-featured-collection {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">
@@ -373,28 +404,40 @@ color: #000;
  
 
 
-
                         
                         <div class="product-list ">
+
+
+      
+
                                 {%- if block.settings.custom_product_image != blank -%}
-                                    <div class="custom_product_image" id="block--{{ block.id }}" style="padding-bottom: {{ 100 | divided_by: block.settings.custom_product_image.aspect_ratio }}%">
-                                        <a href="{{ endrock_featured_product.url }}">
-                                                                   <!-- Elemento 1 -->
-  <label class="switch">
-    <input type="checkbox" class="switchInput" onchange="toggleText(this)">
-    <div class="slider">
-      <span></span>
-      <span></span>
-    </div>
-  </label>
-  <div class="textoOculto"> <img src="{{ block.settings.hover_image | img_url: 'master' }}"
-  class="hover_image_"
-  alt="{{ block.settings.hover_image.alt }}"
-  loading="lazy"
-></div>
 
 
+                                    
 
+                                        
+                                    <div  id="block--{{ block.id }}" >
+
+                                    <div class="slick-carousel imgmobile">
+                                        <div class="slide-content"><img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
+                                          class="first_image"
+                                          alt="{{ block.settings.custom_product_image.alt }}"
+                                          loading="lazy"
+                                        ></div>
+                                        
+                                        <div class="slide-content"><img src="{{ block.settings.hover_image | img_url: 'master' }}"
+                                          class="hover_image_"
+                                          alt="{{ block.settings.hover_image.alt }}"
+                                          loading="lazy"
+                                        ></div>
+                                            
+                                        </div>
+
+
+                                        <a href="{{ endrock_featured_product.url }}" class="custom_product_image imgpc" style="padding-bottom: {{ 100 | divided_by: block.settings.custom_product_image.aspect_ratio }}%">
+
+
+                                        
                                             <img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
                                                 class="first_image"
                                                 alt="{{ block.settings.custom_product_image.alt }}"
@@ -580,12 +623,21 @@ color: #000;
     </div>
 </div>
 
+
+
 <script>
-    function toggleText(element) {
-      const textoOculto = element.parentElement.nextElementSibling;
-      textoOculto.style.display = textoOculto.style.display === 'none' || textoOculto.style.display === '' ? 'block' : 'none';
-    }
-  </script>
+  $().ready(function(){
+    $('.slick-carousel').slick({
+      arrows: false,
+      centerPadding: "0px",
+      dots: true,
+      slidesToShow: 1,
+      infinite: false
+    });
+  });
+</script>
+
+
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
 

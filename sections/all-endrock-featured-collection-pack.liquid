@@ -336,10 +336,10 @@ color: #000;
 .imagen-info-text
 {
     position: absolute;
-  height: 40%;
+  height: 38%;
   width: calc(23% - 23px);
   background: #A5E9FF;
-  top: 50%;
+  top: 48%;
   margin: 10px;
   font-size: 14px;
   font-weight: 500;
@@ -351,11 +351,11 @@ color: #000;
 }
 
 .media--transparent {
-  padding-bottom: 115%!important;
+  padding-bottom: 123%!important;
 }
 .custom_product_image {
 
-  padding-bottom: 115%!important;
+  padding-bottom: 123%!important;
 }
 .product-list_sw
 { width: 100%!important;}
@@ -500,8 +500,31 @@ padding: 0px;
                             {%- if block.settings.featured_product_two == blank -%}
                         <div class="product-list {% if section.settings.swipe_on_mobile %}swiper-slide{% endif %}">
                                 {%- if block.settings.custom_product_image != blank -%}
-                                    <div class="custom_product_image" id="block--{{ block.id }}" style="padding-bottom: {{ 100 | divided_by: block.settings.custom_product_image.aspect_ratio }}%">
-                                        <a href="{{ endrock_featured_product.url }}">
+                                  
+                                  
+                                   
+                                    <div  id="block--{{ block.id }}" >
+
+                                    <div class="slick-carousel imgmobile">
+                                        <div class="slide-content"><img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
+                                          class="first_image"
+                                          alt="{{ block.settings.custom_product_image.alt }}"
+                                          loading="lazy"
+                                        ></div>
+                                        
+                                        <div class="slide-content"><img src="{{ block.settings.hover_image | img_url: 'master' }}"
+                                          class="hover_image_"
+                                          alt="{{ block.settings.hover_image.alt }}"
+                                          loading="lazy"
+                                        ></div>
+                                            
+                                        </div>
+
+
+                                        <a href="{{ endrock_featured_product.url }}" class="custom_product_image imgpc" style="padding-bottom: {{ 100 | divided_by: block.settings.custom_product_image.aspect_ratio }}%">
+
+
+                                        
                                             <img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
                                                 class="first_image"
                                                 alt="{{ block.settings.custom_product_image.alt }}"
@@ -513,8 +536,9 @@ padding: 0px;
                                                 loading="lazy"
                                             >
                                         </a>
-                                    
+                                       
                                     </div>
+                                    
                                     
                                 {%- endif -%}
                                 
