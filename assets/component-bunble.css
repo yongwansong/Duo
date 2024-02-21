@@ -30,7 +30,9 @@ body {
 }
 
 
-
+.image-with-text {
+  display: flex;
+}
 
 .image-with-text:not(.color-scheme-background-1) {
   margin-bottom: 0rem!important;
@@ -93,8 +95,14 @@ body {
 }
 
 @media (max-width: 550px) {
+
+  .grid__item {
+    width: 100%!important;
+}
+
+
   .icon-with-text__wrapper {
-      padding-top: 140px!important;
+      padding-top: 10px!important;
       margin: 10px!important;
   }
 
@@ -102,6 +110,16 @@ body {
       display: block!important;
   }
 }
+
+.right-content .right-content__properties .property-list_wrapper:last-of-type {
+  margin: 0!important;
+}
+
+.why-duo_wrapper .left-content__heading {
+
+  max-width: 560px!important;
+}
+
 
 h2.image-with-text__heading.h3 {
   text-align: left;
@@ -112,7 +130,16 @@ h2.image-with-text__heading.h3 {
   line-height: 64px;
 }
 
+.image_banner_text{
+
+  display: flex;
+}
+
 @media screen and (min-width: 750px) {
+
+  
+
+
   .image-with-text__grid--reverse .image-with-text__content_ {
       margin-left: 15%;
       max-width: 560px;
@@ -408,9 +435,12 @@ h2.image-with-text__heading.h3 {
 
 .bg_product_ {
   background: #E2EBF2 !important;
-  padding: 10px;
+  padding: 0px;
   margin-top: -20px;
 }
+
+
+
 
 .product-with-text_content_ {
   max-width: 96%;
@@ -419,10 +449,10 @@ h2.image-with-text__heading.h3 {
 }
 
 .product-with-text-section .product-with-text-section_wrapper {
-  max-width: 97% !important;
+  max-width: 98% !important;
   background: white;
   padding: 30px;
-  margin: -10px auto 30px auto!important;
+  margin: -10px auto 0px auto!important;
   padding: 50px 15px;
 }
 
@@ -455,6 +485,10 @@ h2.image-with-text__heading.h3 {
 .text_info
   {
     padding: 10px;
+    position: absolute;
+    height: 100%;
+    overflow: scroll;
+    padding: 10px!important;
 }
 
 
@@ -557,7 +591,41 @@ h2.image-with-text__heading.h3 {
   margin-top: 0rem!important;
 }
 
+
+
+@media (max-width: 480px) {
+
+
+  .product-with-text-section .product-with-text-section_wrapper {
+    padding: 0 5px!important;
+  }
+
+  
+
+  .producto-leg {
+    display: inline-block!important;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.poduct-link {
+  color: #000;
+  text-align: right;
+  float: right;
+  display: block;
+  padding: 5px 0px;
+  text-decoration: underline;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+}
+
+
 @media (max-width: 767px) {
+
+
   .image-with-text__content > * + * {
       margin-bottom: 0px!important;
   }
