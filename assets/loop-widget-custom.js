@@ -1662,24 +1662,44 @@ function updateSellingPlanDescriptionElement(
     }
 }
 
-/* ------------------------------------------------- dev edinson comment*/
+/* -------- dev comment function*/
 
+/**
+ * Handles the change event of a select element. change variant and percentage subscription option
+ * @param {Event} event - The change event.
+ */
 const changeSelect = (event) => {
   
-  const inputQuantity = document.querySelector(".quantity__input");
+  const selectElement = event.target;
+  const selectVariantSubcription = selectElement.value;
 
-  inputQuantity.value = event.target.value;
-  const productId = event.target.dataset.productId;
 
-  changePriceSubcription(event.target.value, productId);
+  const selectedIndex = selectElement.selectedIndex;
+  const selectedOption = selectElement.options[selectedIndex]; 
+  const discount = selectedOption.dataset.discount;
+
+  const parent = event.target.closest('product-form');
+
+  const inputVariant = parent.querySelector('input[name="id"]');
+
+  const containerDiscount = parent.querySelector('.numer-discount');
+  const containerHidden = parent.querySelector('.discount-js');
+
+
+  containerDiscount.textContent = discount;
+  inputVariant.value = selectVariantSubcription;
+
+
+  if (discount) {
+    containerHidden.classList.remove('hidden');
+  } else {
+    containerHidden.classList.add('hidden');
+
+  }
+
 }
 
-const changePriceSubcription = (quantity, productId) => {
-    const variant = findSelectedVariantLoop(productId);
-    const price = determinePrice(productId, variant);
 
-    updatePricesInUI(price);
-}
 
 function updatePriceInParentElements({ productId }) {
     const currentPath = getCurrentPath();
@@ -1704,12 +1724,7 @@ function determinePrice(productId, variant) {
         window?.loopProps[productId]?.sellingPlanAllocation?.price;
 
     if (sellingPlanPrice) {
-        let quantity = document.querySelector('#select-quantity');
-
-        if (quantity) {
-            quantity = sellingPlanPrice * quantity.value;
-            return loopFormatMoney(quantity, true);
-        }
+   
         return loopFormatMoney(sellingPlanPrice, true);
     }
     
