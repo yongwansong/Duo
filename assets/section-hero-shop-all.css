@@ -2,6 +2,19 @@
     padding: 0!important;
 }
 
+.header {
+    background: #ffd761!important;
+}
+
+.endrock-newheader {
+    background: #ffd55c;
+}
+
+.endrock-header {
+    z-index: 3;
+    background-color: #ffd458;
+}
+
 #section--{{ section.id }} {
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -22,6 +35,7 @@
 
 .section-endrock-hero-image .hero-banner__text h2 {
     margin: 70px 0 30px !important;
+    font-family: Schnyder-SLight!important;
 }
 
 @media (min-width: 1000px) {
@@ -42,12 +56,20 @@
     min-height: 240px;
 }
 
+
+
 @media (max-width: 767px) {
+
+
+    .section-endrock-hero-image {
+        margin-top: -30px;
+    }
+
     .section-endrock-hero-image .mobile_image img {
         width: 100%;
         object-fit: contain!important;
         object-position: center;
-        min-height: 200px;
+        background: #ffd761;
     }
 
     .section-endrock-hero-image .hero-banner__text h2 {
@@ -94,7 +116,7 @@
 
 .title_info, .title_info2, .title_info3 {
     color: #000;
-    font-family: Schnyder S;
+    font-family: Schnyder-SLight!important;
 }
 
 .title_info {
@@ -134,19 +156,6 @@
     margin-top: 5px;
 }
 
-.imagen-info-text {
-    position: absolute;
-    height: 50%;
-    width: calc(23% - 23px);
-    background: #A5E9FF;
-    top: 40%;
-    margin: 10px;
-    font-size: 14px;
-    font-weight: 500;
-    color: black;
-    line-height: 20px;
-    padding: 10px;
-}
 
 .section-endrock-hero-image .hero-banner__text h2 {
     font-family: OldschoolGrotesk-Regular;
@@ -186,11 +195,11 @@
 .spansleep,
 .spanoriginal,
 .spanimmunity {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     display: block;
     border-radius: 50%;
-    margin: 4px auto 0px auto;
+    margin: -5px auto 0px auto;
     padding: 0px;
     z-index: -1;
     position: relative;
@@ -243,9 +252,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px 15px;
+    padding: 5px 20px;
     max-width: fit-content;
-    gap: 15px;
+    gap: 5px;
     margin: auto;
     overflow: auto;
 }
@@ -269,10 +278,11 @@
 }
 
 .shop-container {
-    max-width: 790px;
+    max-width: 750px;
     margin: auto;
     padding-top: 30px;
     font-family: OldschoolGrotesk-Regular;
+    padding-left: 5px;
 }
 
 .section-content {
@@ -297,7 +307,6 @@
     width: 100%;
     height: 100%;
     overflow-y: scroll; /* Enables vertical scrolling */
-    padding-right: 17px; /* Adjusts space for the possible scrollbar */
 }
 
 /* Specific Style for Webkit scrollbar (Chrome and Safari) */
@@ -311,6 +320,13 @@
 }
 
 @media (max-width: 767px) {
+
+    .shop-all {
+     
+        padding: 20px 20px!important;
+        
+    }
+
     .shop-all {
         gap: 0px!important;
         justify-content: normal!important;
@@ -333,10 +349,15 @@
     }
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 580px) {
+    .hover_image_ {
+        margin: 0px 2px;
+    }
+  
     .why-duo-mobile__media img {
         width: 100%;
-        height: 620px!important;
+        height: 300px!important;
         object-fit: cover!important;
         object-position: center!important;
     }
@@ -352,8 +373,7 @@
     }
 
     .section-endrock-hero-image .hero-banner__text h2 {
-        margin: 0 !important;
-        padding-top: 110px;
+        margin: 40px 0px 0px 0px!important;
     }
 
     .endrock-featured-collection__container {
@@ -370,7 +390,7 @@
 }
 
 .icon-with-text__wrapper .iwt-item {
-    gap: 18px!important;
+    gap: 30px!important;
 }
 
 .custom-section-columns {
@@ -391,6 +411,7 @@
     padding: 10px 60px;
     margin: 10px;
     display: flex;
+    height: 50px;
 }
 
 .columnr {
@@ -398,6 +419,7 @@
     padding: 10px 60px;
     margin: 10px;
     text-align: left;
+    height: 50px;
 }
 
 .buttom_feature {
@@ -488,7 +510,7 @@
     }
 
     .text_ft {
-        text-align: center;
+        text-align: left;
         padding-top: 5px;
         margin: 3px -2px;
         color: black;
@@ -501,6 +523,7 @@
 
     .columnsvgr {
         padding-top: 10px !important;
+        margin-left: 15px;
     }
 
     .columnr {
@@ -509,6 +532,7 @@
         margin: 5px 0px;
         font-size: 10px;
         letter-spacing: -0.2px;
+        line-height: 12px;
     }
 
     .img_title {
@@ -533,9 +557,16 @@
     }
 }
 
+
 @media (min-width: 1000px) {
+
+    .custom_product_image {
+        padding-bottom: 105%!important;
+    }
+
+    
     .endrock-featured-collection__wrapper {
-        padding: 50px 90px 20px;
+        padding: 50px 90px 20px!important;
     }
 
     .imagencontainer {
@@ -543,19 +574,73 @@
     }
 }
 
-@media (min-width: 481px) {
-    .imagen-info-text {
-        min-height: 190px;
-    }
-}
+
+
 
 .endrock-featured-collection__container {
     padding-top: 0px!important;
 }
 
+
+@media (max-width: 580px) {
+.imagencontainer {
+    width: calc(54% - 23px) !important;
+    max-height: 335px;
+}
+
+
+.image-info {
+    position: absolute;
+    height: 100%;
+    width: calc(54% - 23px)!important;
+    max-height: 46%;
+}
+
+.content.active {
+    display: block;
+    width: calc(51% - 15px)!important;
+    max-height: 280px!important;
+}
+
+.imagencontainerfinal {
+    width: calc(100% - 0px)!important;
+}
+
+.imagen-info-text {
+    margin: 10px!important;
+    font-size: 10px!important;
+    line-height: 14px!important;
+    padding: 10px!important;
+    bottom: 5px!important;
+    width: calc(98% - 10px) !important;
+}
+
+
+}
+
+.media--transparent {
+    padding-bottom: 100%;
+}
+
+.custom_product_image {
+    padding-bottom: 100%;
+}
+
+
+
 @media (max-width: 768px) {
-    .imagencontainerfinal {
-        width: calc(100% - 0px)!important;
+
+    .media--transparent {
+        padding-bottom: 124%!important;
+    }
+    
+    .custom_product_image {
+        padding-bottom: 124%!important;
+    }
+
+   
+    .custom-product_form {
+        margin-bottom: 10px!important;
     }
 
     .title_info {
@@ -580,37 +665,16 @@
         max-width: 100px!important;
     }
 
-    .imagencontainer {
-        width: calc(54% - 23px) !important;
-        max-height: 335px;
-    }
+  
 
-    .image-info {
-        position: absolute;
-        height: 100%;
-        width: calc(54% - 23px)!important;
-        max-height: 46%;
-    }
 
     .link_info {
         bottom: 40px!important;
     }
 
-    .content.active {
-        display: block;
-        width: calc(51% - 15px)!important;
-        max-height: 280px!important;
-    }
+ 
 
-    .imagen-info-text {
-        height: 20%!important;
-        top: 75%!important;
-        margin: 10px!important;
-        font-size: 10px!important;
-        line-height: 10px!important;
-        padding: 10px!important;
-        width: calc(96% - 10px) !important;
-    }
+ 
 
     .title_info3 {
         font-size: 20px !important;
@@ -621,8 +685,7 @@
     }
 
     .tabs {
-        gap: 3px!important;
-        font-size: 9px!important;
+        font-size: 8px!important;
         margin: 0px!important;
         letter-spacing: 0px;
     }
@@ -634,7 +697,7 @@
 
 .imagencontainer {
     width: calc(25% - 23px);
-    height: 90%;
+    height: 100%;
 }
 
 .imagencontainerfinal {
@@ -657,7 +720,7 @@
 }
 
 .link_info3 {
-    bottom: 10px;
+    bottom: 0px;
     position: absolute;
     margin-left: 0px;
     color: black;
@@ -680,58 +743,50 @@
 }
 
 .imagen-info-text {
-    position: absolute;
-    height: 40%;
+       position: absolute;
     width: calc(23% - 23px);
     background: #A5E9FF;
-    top: 40%;
-    margin: 10px;
+    margin: 0px;
     font-size: 14px;
     font-weight: 500;
     color: black;
     line-height: 20px;
     padding: 10px;
     font-family: OldschoolGrotesk-Regular;
-    width: calc(48% - 23px);
+    width: calc(49% - 23px);
+    bottom: 20px;
+    height: fit-content;
 }
 
-.media--transparent {
-    padding-bottom: 123%!important;
-}
 
-.custom_product_image {
-    padding-bottom: 123%!important;
-}
 
 .product-list_sw {
     width: 100%!important;
 }
 
-.custom-product_form {
-    margin-bottom: 5px;
-}
+
 
 .endrock-featured-collection .product_title {
-    font-size: 20px;
+    font-size: 22px!important;
+    line-height: 20px!important;
+    margin-bottom: 5px!important;
 }
 
 .tabs {
     display: flex;
     list-style: none;
     padding: 0;
-    gap: 10px;
+    gap: 0px;
     font-size: 12px;
     margin: 5px;
 }
 
 .tab {
-    flex: 1;
     text-align: center;
-    padding: 0px;
     color: black;
     cursor: pointer;
     font-weight: 600;
-    min-width: 22%;
+    min-width: 25%;
 }
 
 .content {
@@ -743,59 +798,12 @@
     width: calc(25% - 23px);
 }
 
-.spanenergy {
-    width: 20px;
-    height: 20px;
-    background: #FFC600;
-    display: block;
-    border-radius: 50%;
-    margin: 4px auto 0px auto;
-    padding: 0px;
-    z-index: -1;
-    position: relative;
-}
 
-.spansleep {
-    width: 20px;
-    height: 20px;
-    background: #C271D9;
-    display: block;
-    border-radius: 50%;
-    margin: 4px auto 0px auto;
-    padding: 0px;
-    z-index: -1;
-    position: relative;
-}
-
-.spanoriginal {
-    width: 20px;
-    height: 20px;
-    background: #00AADE;
-    display: block;
-    border-radius: 50%;
-    margin: 4px auto 0px auto;
-    padding: 0px;
-    z-index: -1;
-    position: relative;
-}
-
-.spanimmunity {
-    width: 20px;
-    height: 20px;
-    background: #6FCFB4;
-    display: block;
-    border-radius: 50%;
-    margin: 4px auto 0px auto;
-    padding: 0px;
-    z-index: -1;
-    position: relative;
-}
 
 .tabb {
     color: black;
     font-weight: 600;
-    padding: 0px;
-    min-width: 22%;
+    min-width: 25%;
     text-align: center;
 }
 
@@ -803,6 +811,36 @@
     font-size: 50px!important;
     margin: 30px 0px 22px!important;
 }
+
+
+@media (max-width: 767px){
+.property-description strong, .property-description p {
+    font-size: 14px!important;
+   
+}
+.property-list_wrapper {
+
+    gap: 40px!important;
+}
+
+.property-icon svg {
+    width: 50px!important;
+}
+
+.property-icon svg {
+    width: 50px!important;
+}
+
+
+#section--template--16434843353255__all-why-duo {
+    padding-top: 0!important;
+}
+
+
+}
+
+
+
 
 .right-content {
     position: absolute;
