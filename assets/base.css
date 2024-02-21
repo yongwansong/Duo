@@ -4901,6 +4901,12 @@ header {
 
 }
 
+@media (max-width: 767px){
+  .header {
+	padding: 15.5px 24px!important;
+  }
+}
+
 @media only screen and (min-width: 1250px){
   nav.header__inline-menu {
       display: inline-flex;
