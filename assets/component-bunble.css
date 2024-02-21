@@ -20,13 +20,21 @@ body {
 
   .icon-with-text__wrapper {
     justify-content: flex-start;
-    overflow: scroll;
   }
 
   .media > :not(.zoom):not(.deferred-media__poster-button), .media model-viewer {
     max-height: 350px!important;
   }
 
+}
+
+
+@media (max-width: 550px)
+{
+.multicolumn-images-text__text {
+    font-size: 14pt;
+    padding-top: 25px;
+}
 }
 
 
@@ -111,14 +119,7 @@ body {
   }
 }
 
-.right-content .right-content__properties .property-list_wrapper:last-of-type {
-  margin: 0!important;
-}
 
-.why-duo_wrapper .left-content__heading {
-
-  max-width: 560px!important;
-}
 
 
 h2.image-with-text__heading.h3 {
