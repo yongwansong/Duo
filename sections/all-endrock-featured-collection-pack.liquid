@@ -295,6 +295,8 @@
                                                 value="{{ endrock_featured_product.selected_or_first_available_variant.id }}"
                                                 disabled
                                             >
+
+                                            <input type="number" name="quantity" value="2" style="display: none;">
                                             <button
                                                 id="{{ product_form_id }}-submit"
                                                 type="submit"
@@ -445,6 +447,9 @@
                                                     value="{{ endrock_featured_product.selected_or_first_available_variant.id }}"
                                                     disabled
                                                 >
+
+                                                <input type="number" name="quantity" value="2" style="display: none;">
+
                                                 <button
                                                     id="{{ product_form_id }}-submit"
                                                     type="submit"
@@ -487,10 +492,10 @@
                                         {%- endif -%}
                                     </div>
                                     <ul class="tabs" data-tab="tab1">
-                                        <li class="tabb" ><span class="spanoriginal"></span>{{ block.settings.featured_product.title }}</li>
-                                        <li class="tab" data-tab="tab2"> <span class="spanimmunity"></span>{{ block.settings.featured_product_two.title }}</li>
-                                        <li class="tab" data-tab="tab3"><span class="spanenergy"></span>  {{ block.settings.featured_product_three.title }}</li>
-                                        <li class="tab" data-tab="tab4"><span class="spansleep"></span> {{ block.settings.featured_product_four.title }}</li>
+                                        <li class="tabb" ><span class="spanoriginal"></span>Original</li>
+                                        <li class="tab" data-tab="tab2"> <span class="spanimmunity"></span>Immunity</li>
+                                        <li class="tab" data-tab="tab3"><span class="spanenergy"></span> Energy</li>
+                                        <li class="tab" data-tab="tab4"><span class="spansleep"></span> Sleep</li>
                                       </ul>
                                     <a href="{{ endrock_featured_product.url }}">
     
@@ -606,6 +611,9 @@
                                                     value="{{ endrock_featured_product.selected_or_first_available_variant.id }}"
                                                     disabled
                                                 >
+
+                                                <input type="number" name="quantity" value="2" style="display: none;">
+
                                                 <button
                                                     id="{{ product_form_id }}-submit"
                                                     type="submit"
@@ -649,10 +657,10 @@
                                     </div>
 
                                     <ul class="tabs" data-tab="tab2">
-                                        <li class="tab" data-tab="tab1"><span class="spanoriginal"></span>{{ block.settings.featured_product.title }}</li>
-                                        <li class="tabb"> <span class="spanimmunity"></span>{{ block.settings.featured_product_two.title }}</li>
-                                        <li class="tab" data-tab="tab3"><span class="spanenergy"></span>  {{ block.settings.featured_product_three.title }}</li>
-                                        <li class="tab" data-tab="tab4"><span class="spansleep"></span> {{ block.settings.featured_product_four.title }}</li>
+                                        <li class="tab" data-tab="tab1"><span class="spanoriginal"></span>Original</li>
+                                        <li class="tabb"> <span class="spanimmunity"></span>Immunity</li>
+                                        <li class="tab" data-tab="tab3"><span class="spanenergy"></span> Energy</li>
+                                        <li class="tab" data-tab="tab4"><span class="spansleep"></span> Sleep</li>
                                       </ul>
                                     <a href="{{ endrock_featured_product.url }}">
     
@@ -767,6 +775,9 @@
                                                     value="{{ endrock_featured_product.selected_or_first_available_variant.id }}"
                                                     disabled
                                                 >
+
+                                                <input type="number" name="quantity" value="2" style="display: none;">
+
                                                 <button
                                                     id="{{ product_form_id }}-submit"
                                                     type="submit"
@@ -809,10 +820,10 @@
                                         {%- endif -%}
                                     </div>
                                     <ul class="tabs" data-tab="tab3">
-                                        <li class="tab" data-tab="tab1"><span class="spanoriginal"></span>{{ block.settings.featured_product.title }}</li>
-                                        <li class="tab"  data-tab="tab2"> <span class="spanimmunity"></span>{{ block.settings.featured_product_two.title }}</li>
-                                        <li class="tabb" ><span class="spanenergy"></span>  {{ block.settings.featured_product_three.title }}</li>
-                                        <li class="tab" data-tab="tab4"><span class="spansleep"></span> {{ block.settings.featured_product_four.title }}</li>
+                                        <li class="tab" data-tab="tab1"><span class="spanoriginal"></span>Original</li>
+                                        <li class="tab"  data-tab="tab2"> <span class="spanimmunity"></span>Immunity</li>
+                                        <li class="tabb" ><span class="spanenergy"></span> Energy</li>
+                                        <li class="tab" data-tab="tab4"><span class="spansleep"></span> Sleep</li>
                                       </ul>
                                     <a href="{{ endrock_featured_product.url }}">
     
@@ -925,6 +936,9 @@
                                                     value="{{ endrock_featured_product.selected_or_first_available_variant.id }}"
                                                     disabled
                                                 >
+
+                                                <input type="number" name="quantity" value="2" style="display: none;">
+
                                                 <button
                                                     id="{{ product_form_id }}-submit"
                                                     type="submit"
@@ -966,12 +980,13 @@
                                             </product-form>
                                         {%- endif -%}
                                     </div>
+                                    
 
                                     <ul class="tabs" data-tab="tab4">
-                                        <li class="tab" data-tab="tab1"><span class="spanoriginal"></span>{{ block.settings.featured_product.title }}</li>
-                                        <li class="tab"  data-tab="tab2"> <span class="spanimmunity"></span>{{ block.settings.featured_product_two.title }}</li>
-                                        <li class="tab" data-tab="tab3"><span class="spanenergy"></span>  {{ block.settings.featured_product_three.title }}</li>
-                                        <li class="tabb" ><span class="spansleep"></span> {{ block.settings.featured_product_four.title }}</li>
+                                        <li class="tab" data-tab="tab1"><span class="spanoriginal"></span>Original</li>
+                                        <li class="tab"  data-tab="tab2"> <span class="spanimmunity"></span>Immunity</li>
+                                        <li class="tab" data-tab="tab3"><span class="spanenergy"></span> Energy</li>
+                                        <li class="tabb" ><span class="spansleep"></span> Sleep</li>
                                       </ul>
                                     <a href="{{ endrock_featured_product.url }}">
     
