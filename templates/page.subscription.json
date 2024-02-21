@@ -38,7 +38,7 @@
       }
     },
     "icon-text": {
-      "type": "endrock-icon-with-text",
+      "type": "all-endrock-icon-with-text",
       "blocks": {
         "icon_X4mXVq": {
           "type": "icon",
