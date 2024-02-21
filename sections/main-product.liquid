@@ -488,13 +488,13 @@
   LOOP WIDGET CODE STARTS
 {% endcomment %}
 
-{% assign block_star = section.blocks | where: 'type', 'star_subcription' %}
+
 {% assign template_exists = false %}
 {% capture template_content %}
     {% render 'loop-subscriptions'
       type: 'product-widget',
       product: product,
-      block_star: block_star
+      blocks: section.blocks
     %}
 {% endcapture %}
 
@@ -504,7 +504,7 @@
 {% endif %}
 
 {% if template_exists %}
-  {% render 'loop-subscriptions', type: 'product-widget', product: product, block_star: block_star %}
+  {% render 'loop-subscriptions', type: 'product-widget', product: product, blocks: section.blocks %}
 {% endif %}
 {% comment %}
   LOOP WIDGET CODE ENDS
@@ -637,16 +637,7 @@
                   <p> {{ block.settings.returned_info }}</p>
                   <p> {{ block.settings.free_shipping_info }}</p>
                 </div>
-              {%- when 'link_customization' -%}
-                <div class="link-custom">
-                  <div class="icon">
-                    {% render 'icon-link-product' %}
-                  </div>
-                  <div class="text-link">
-                    {{ block.settings.link_custom }}
-                  </div>
-                </div>
-            
+              
               {%- endcase -%}
           {%- endfor -%}
               </div>

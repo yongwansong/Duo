@@ -50,7 +50,7 @@
         "link_customization_KqLxw6": {
           "type": "link_customization",
           "settings": {
-            "link_custom": "<p>Do you want to create your own Duo combination?<\/p>"
+            "link_custom": "<p><a href=\"https:\/\/duotoothpaste.com\/pages\/subscribe\" title=\"https:\/\/duotoothpaste.com\/pages\/subscribe\">Want to mix-and-match? create your custom routine<\/a><\/p>"
           }
         },
         "collapsible-row-0": {
@@ -356,6 +356,15 @@
         "layout": "text_first"
       }
     },
+    "homepage_title_with_text_gWAggc": {
+      "type": "homepage-title-with-text",
+      "settings": {
+        "title": "<p>Reviews<\/p>",
+        "richtext": "",
+        "select_align": "left",
+        "none_margin": true
+      }
+    },
     "1707343573639fd40e": {
       "type": "apps",
       "blocks": {
@@ -371,7 +380,8 @@
         "okendo_reviews_widget_kEk6pX"
       ],
       "settings": {
-        "include_margins": true
+        "include_margins": true,
+        "none_margin": true
       }
     }
   },
@@ -383,6 +393,7 @@
     "dual_section_Db4edk",
     "dual_section_c7rdPc",
     "dual_section_C4yyiR",
+    "homepage_title_with_text_gWAggc",
     "1707343573639fd40e"
   ]
 }
