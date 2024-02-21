@@ -29,18 +29,25 @@ body {
 }
 
 
+.img_text_ {
+  max-height: 700px;
+  object-fit: cover;
+  width: 100%;
+}
+
+
 @media (max-width: 550px)
 
 
 {
 
-  .img_text {
-    max-height: 300px;
+  .img_text_ {
+    max-height: 300px!important;
     object-fit: cover;
     width: 100%;
   }
 
-  
+
 .multicolumn-images-text__text {
     font-size: 14pt;
     padding-top: 25px;
