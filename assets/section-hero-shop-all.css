@@ -1,5 +1,810 @@
 .footer {
-    padding: 0!important;  
-    
+    padding: 0!important;
+}
 
+#section--{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+
+@media (max-width: 767px) {
+    #section--{{ section.id }} {
+        padding-top: {{ section.settings.mobile_padding_top }}px;
+        padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+    }
+}
+
+@media (min-width: 1250px) {
+    .hero-banner__video-wrapper {
+        margin-top: -100px!important;
+    }
+}
+
+.section-endrock-hero-image .hero-banner__text h2 {
+    margin: 70px 0 30px !important;
+}
+
+@media (min-width: 1000px) {
+    .section-endrock-hero-image .mobile_image img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        min-height: 350px;
+    }
+}
+
+.section-endrock-hero-image .desktop_image {
+    position: relative;
+    min-height: 260px;
+}
+
+.section-endrock-hero-image .desktop_image img {
+    min-height: 240px;
+}
+
+@media (max-width: 767px) {
+    .section-endrock-hero-image .mobile_image img {
+        width: 100%;
+        object-fit: contain!important;
+        object-position: center;
+        min-height: 200px;
+    }
+
+    .section-endrock-hero-image .hero-banner__text h2 {
+        padding: 10px 5px 5px 5px !important;
+        font-size: 36px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .endrock-featured-collection__wrapper {
+        padding: 0;
+    }
+}
+
+@media (min-width: 1100px) {
+    .title_info {
+        font-size: 50px!important;
+        line-height: 50px!important;
+    }
+
+    .endrock-featured-collection__wrapper {
+        padding: 20px 90px 20px;
+    }
+}
+
+.imagencard {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-info {
+    position: absolute;
+    height: 100%;
+    width: calc(25% - 23px);
+}
+
+.link_info, .link_info3 {
+    position: absolute;
+    color: black;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.title_info, .title_info2, .title_info3 {
+    color: #000;
+    font-family: Schnyder S;
+}
+
+.title_info {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px;
+    max-width: 100%;
+    text-align: left;
+    position: relative;
+    top: 15%;
+    padding: 15px;
+}
+
+.title_info2 {
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 41px;
+    max-width: 180px;
+    text-align: left;
+    position: relative;
+    top: 0%;
+    padding: 15px;
+    margin: 5px;
+}
+
+.title_info3 {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: left;
+    position: relative;
+    top: 0%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.imagen-info-text {
+    position: absolute;
+    height: 50%;
+    width: calc(23% - 23px);
+    background: #A5E9FF;
+    top: 40%;
+    margin: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    line-height: 20px;
+    padding: 10px;
+}
+
+.section-endrock-hero-image .hero-banner__text h2 {
+    font-family: OldschoolGrotesk-Regular;
+}
+
+/* Tabs Styles */
+.tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+    font-size: 12px;
+    margin: 5px;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 0px;
+    color: black;
+    cursor: pointer;
+    font-weight: 600;
+    min-width: 22%;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+    width: calc(25% - 23px);
+}
+
+/* Span Styles */
+.spanenergy,
+.spansleep,
+.spanoriginal,
+.spanimmunity {
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 50%;
+    margin: 4px auto 0px auto;
+    padding: 0px;
+    z-index: -1;
+    position: relative;
+}
+
+.spanenergy {
+    background: #FFC600;
+}
+
+.spansleep {
+    background: #C271D9;
+}
+
+.spanoriginal {
+    background: #00AADE;
+}
+
+.spanimmunity {
+    background: #6FCFB4;
+}
+
+/* Additional Styles */
+.tabb {
+    color: black;
+    font-weight: 600;
+    padding: 0px;
+    min-width: 22%;
+    text-align: center;
+}
+
+.why-duo_wrapper .left-content__heading {
+    font-size: 50px!important;
+    margin: 30px 0px 22px!important;
+}
+
+.right-content {
+    position: absolute;
+    top: 30%!important;
+}
+
+/* Scrollable Container Styles */
+.scrollable-container {
+    width: 300px;
+    height: 200px;
+    overflow: hidden; /* Hides the scroll bar */
+}
+
+/* Specific Styles for Scrollable Content */
+.shop-all {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 15px;
+    max-width: fit-content;
+    gap: 15px;
+    margin: auto;
+    overflow: auto;
+}
+
+.item {
+    cursor: pointer;
+    padding: 10px 25px 5px 25px;
+    border: 1px solid #000;
+    border-radius: 0px;
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    min-width: fit-content;
+    font-family: OldschoolGrotesk-Regular;
+    margin-left: 5px;
+}
+
+.endrock-featured-collection__container {
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.shop-container {
+    max-width: 790px;
+    margin: auto;
+    padding-top: 30px;
+    font-family: OldschoolGrotesk-Regular;
+}
+
+.section-content {
+    padding: 20px;
+    border: 2px solid #000;
+    margin-top: 20px;
+}
+
+.icon-with-text__wrapper .iwt-item__heading {
+    margin-left: 5px;
+}
+
+/* General Style for the Scrollable Container */
+.scrollable-container {
+    width: 300px;
+    height: 200px;
+    overflow: hidden; /* Hides the scroll bar */
+}
+
+/* Specific Styles for Scrollable Content */
+.shop-all {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll; /* Enables vertical scrolling */
+    padding-right: 17px; /* Adjusts space for the possible scrollbar */
+}
+
+/* Specific Style for Webkit scrollbar (Chrome and Safari) */
+.shop-all::-webkit-scrollbar {
+    width: 0; /* Hides the scrollbar in Webkit */
+}
+
+/* Specific Style for Webkit thumb scrollbar */
+.shop-all::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Makes the scrollbar thumb transparent in Webkit */
+}
+
+@media (max-width: 767px) {
+    .shop-all {
+        gap: 0px!important;
+        justify-content: normal!important;
+    }
+
+    .item {
+        cursor: pointer;
+        padding: 5px 10px!important;
+        border: 1px solid #000;
+        border-radius: 0px;
+        color: black;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 10px!important;
+    }
+
+    .section-endrock-hero-image .hero-banner__content {
+        position: absolute;
+        margin-top: 0px!important;
+    }
+}
+
+@media (max-width: 768px) {
+    .why-duo-mobile__media img {
+        width: 100%;
+        height: 620px!important;
+        object-fit: cover!important;
+        object-position: center!important;
+    }
+
+    .why-duo_wrapper .content-container {
+        padding-top: 80px;
+    }
+
+    .why-duo_wrapper {
+        padding-right: 0!important;
+        padding-left: 0!important;
+        background: #fee367!important;
+    }
+
+    .section-endrock-hero-image .hero-banner__text h2 {
+        margin: 0 !important;
+        padding-top: 110px;
+    }
+
+    .endrock-featured-collection__container {
+        padding: 0px !important;
+    }
+
+    .section-endrock-hero-image {
+        padding: 0px!important;
+    }
+}
+
+.hero-banner__text h2 {
+    margin: 0;
+}
+
+.icon-with-text__wrapper .iwt-item {
+    gap: 18px!important;
+}
+
+.custom-section-columns {
+    display: flex;
+    justify-content: center;
+    font-family: OldschoolGrotesk-Regular;
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.textitle {
+    text-align: center;
+}
+
+.columnl {
+    background: #CEF3FF;
+    padding: 10px 60px;
+    margin: 10px;
+    display: flex;
+}
+
+.columnr {
+    display: flex;
+    padding: 10px 60px;
+    margin: 10px;
+    text-align: left;
+}
+
+.buttom_feature {
+    background: black;
+    color: white;
+    border: none;
+    max-width: fit-content;
+    margin: 20px auto;
+    display: block;
+    padding: 10px 20px;
+    font-family: OldschoolGrotesk-Regular;
+    text-decoration: none;
+}
+
+.title_info_ft {
+    color: #000;
+    font-family: Schnyder S;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 60px;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    padding: 0px;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.text_info_ft {
+    padding: 20px 90px 20px;
+    font-family: OldschoolGrotesk-Regular;
+    color: #000;
+    text-align: center;
+}
+
+.textitler {
+    font-family: OldschoolGrotesk-Regular;
+    color: #000;
+    text-align: center;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.img_title {
+    max-width: 84px;
+    margin: auto;
+    display: block;
+}
+
+.columnsvgl {
+    padding-top: 5px;
+    margin-right: 15px;
+}
+
+.columnsvgr {
+    padding-top: 5px;
+    margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+    .text_info_ft {
+        padding: 20px 10px 20px;
+        font-family: OldschoolGrotesk-Regular;
+        color: #000;
+        text-align: center;
+    }
+
+    .content-wrapper {
+        margin-left: 0px!important;
+    }
+
+    .title_info_ft {
+        font-size: 32px!important;
+        line-height: 40px!important;
+        padding-top: 0px!important;
+    }
+
+    .columnl {
+        display: flex;
+        background: #CEF3FF;
+        padding: 10px 10px;
+        margin: 5px 1px;
+        font-size: 10px;
+        letter-spacing: -0.2px;
+    }
+
+    .text_ft {
+        text-align: center;
+        padding-top: 5px;
+        margin: 3px -2px;
+        color: black;
+        font-weight: 600;
+    }
+
+    .columnsvgl {
+        padding-top: 10px !important;
+    }
+
+    .columnsvgr {
+        padding-top: 10px !important;
+    }
+
+    .columnr {
+        display: flex;
+        padding: 10px 0px;
+        margin: 5px 0px;
+        font-size: 10px;
+        letter-spacing: -0.2px;
+    }
+
+    .img_title {
+        max-width: 50px!important;
+        margin: auto;
+        display: block;
+    }
+
+    .textitler {
+        font-family: OldschoolGrotesk-Regular;
+        color: #000;
+        text-align: center;
+        font-size: 16px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .ulcol {
+        margin: 10px 0;
+        padding: 0;
+        width: max-content;
+    }
+}
+
+@media (min-width: 1000px) {
+    .endrock-featured-collection__wrapper {
+        padding: 50px 90px 20px;
+    }
+
+    .imagencontainer {
+        height: 100%!important;
+    }
+}
+
+@media (min-width: 481px) {
+    .imagen-info-text {
+        min-height: 190px;
+    }
+}
+
+.endrock-featured-collection__container {
+    padding-top: 0px!important;
+}
+
+@media (max-width: 768px) {
+    .imagencontainerfinal {
+        width: calc(100% - 0px)!important;
+    }
+
+    .title_info {
+        font-size: 28px !important;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 32px !important;
+        max-width: 100%;
+        text-align: left;
+        position: relative;
+        top: 10% !important;
+        padding: 15px;
+    }
+
+    .cardthree {
+        width: calc(100% - 0px) !important;
+    }
+
+    .title_info2 {
+        font-size: 18px!important;
+        line-height: 22px!important;
+        max-width: 100px!important;
+    }
+
+    .imagencontainer {
+        width: calc(54% - 23px) !important;
+        max-height: 335px;
+    }
+
+    .image-info {
+        position: absolute;
+        height: 100%;
+        width: calc(54% - 23px)!important;
+        max-height: 46%;
+    }
+
+    .link_info {
+        bottom: 40px!important;
+    }
+
+    .content.active {
+        display: block;
+        width: calc(51% - 15px)!important;
+        max-height: 280px!important;
+    }
+
+    .imagen-info-text {
+        height: 20%!important;
+        top: 75%!important;
+        margin: 10px!important;
+        font-size: 10px!important;
+        line-height: 10px!important;
+        padding: 10px!important;
+        width: calc(96% - 10px) !important;
+    }
+
+    .title_info3 {
+        font-size: 20px !important;
+        line-height: 20px !important;
+        top: 0% !important;
+        margin-bottom: 5px !important;
+        margin-top: 5px !important;
+    }
+
+    .tabs {
+        gap: 3px!important;
+        font-size: 9px!important;
+        margin: 0px!important;
+        letter-spacing: 0px;
+    }
+
+    .icon-with-text__wrapper .iwt-item {
+        width: fit-content;
+    }
+}
+
+.imagencontainer {
+    width: calc(25% - 23px);
+    height: 90%;
+}
+
+.imagencontainerfinal {
+    width: calc(50% - 23px);
+}
+
+.imagencard {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.link_info {
+    bottom: 30px;
+    position: absolute;
+    margin-left: 30px;
+    color: black;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.link_info3 {
+    bottom: 10px;
+    position: absolute;
+    margin-left: 0px;
+    color: black;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.title_info3 {
+    color: #000;
+    font-family: Schnyder S;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: left;
+    position: relative;
+    top: 0%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.imagen-info-text {
+    position: absolute;
+    height: 40%;
+    width: calc(23% - 23px);
+    background: #A5E9FF;
+    top: 40%;
+    margin: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    line-height: 20px;
+    padding: 10px;
+    font-family: OldschoolGrotesk-Regular;
+    width: calc(48% - 23px);
+}
+
+.media--transparent {
+    padding-bottom: 123%!important;
+}
+
+.custom_product_image {
+    padding-bottom: 123%!important;
+}
+
+.product-list_sw {
+    width: 100%!important;
+}
+
+.custom-product_form {
+    margin-bottom: 5px;
+}
+
+.endrock-featured-collection .product_title {
+    font-size: 20px;
+}
+
+.tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+    font-size: 12px;
+    margin: 5px;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 0px;
+    color: black;
+    cursor: pointer;
+    font-weight: 600;
+    min-width: 22%;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+    width: calc(25% - 23px);
+}
+
+.spanenergy {
+    width: 20px;
+    height: 20px;
+    background: #FFC600;
+    display: block;
+    border-radius: 50%;
+    margin: 4px auto 0px auto;
+    padding: 0px;
+    z-index: -1;
+    position: relative;
+}
+
+.spansleep {
+    width: 20px;
+    height: 20px;
+    background: #C271D9;
+    display: block;
+    border-radius: 50%;
+    margin: 4px auto 0px auto;
+    padding: 0px;
+    z-index: -1;
+    position: relative;
+}
+
+.spanoriginal {
+    width: 20px;
+    height: 20px;
+    background: #00AADE;
+    display: block;
+    border-radius: 50%;
+    margin: 4px auto 0px auto;
+    padding: 0px;
+    z-index: -1;
+    position: relative;
+}
+
+.spanimmunity {
+    width: 20px;
+    height: 20px;
+    background: #6FCFB4;
+    display: block;
+    border-radius: 50%;
+    margin: 4px auto 0px auto;
+    padding: 0px;
+    z-index: -1;
+    position: relative;
+}
+
+.tabb {
+    color: black;
+    font-weight: 600;
+    padding: 0px;
+    min-width: 22%;
+    text-align: center;
+}
+
+.why-duo_wrapper .left-content__heading {
+    font-size: 50px!important;
+    margin: 30px 0px 22px!important;
+}
+
+.right-content {
+    position: absolute;
+    top: 30%!important;
 }
