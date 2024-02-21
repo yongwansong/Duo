@@ -445,7 +445,7 @@
       }
     },
     "endrock_icon_with_text_tTL9yd": {
-      "type": "endrock-icon-with-text",
+      "type": "all-endrock-icon-with-text",
       "blocks": {
         "icon_9wW3bz": {
           "type": "icon",
