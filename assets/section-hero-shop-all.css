@@ -28,6 +28,14 @@
 
 }
 
+
+@media (min-width: 768px) {
+    .icon-with-text__wrapper .swiper-slide {
+      margin-right: 15px;
+    }
+  }
+
+
 .right-content .right-content__properties .property-list_wrapper:last-of-type {
     margin: 0!important;
   }
@@ -410,8 +418,12 @@
 }
 
 .icon-with-text__wrapper .iwt-item {
-    gap: 25px!important;
+    gap: 10px!important;
 }
+
+.icon-with-text__wrapper .iwt-item__heading {
+    padding-top: 3px;
+  }
 
 .custom-section-columns {
     display: flex;
