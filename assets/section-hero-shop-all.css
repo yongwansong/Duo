@@ -28,6 +28,17 @@
 
 }
 
+.right-content .right-content__properties .property-list_wrapper:last-of-type {
+    margin: 0!important;
+  }
+  
+  .why-duo_wrapper .left-content__heading {
+  
+    max-width: 560px!important;
+  }
+
+  
+
 .section-endrock-hero-image .hero-banner__text h2 {
     margin: 70px 0 30px !important;
     font-family: Schnyder-SLight!important;
