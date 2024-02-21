@@ -3754,10 +3754,10 @@ section.shopify-section.feature-collection {
 	display: flex;
 	align-items: center;
 	padding: 14px 19px 11px;
-	/*      padding-bottom:15px; */
 	width: 100%;
 	background: #ffffff;
 	margin: 0 auto;
+    position: relative;
 }
 
 .first-div {
