@@ -3785,10 +3785,9 @@ section.shopify-section.feature-collection {
 }
 
 .second-div {
-	height: 80%;
-	text-align: center;
-	margin-right: 10%;
-	margin-left: auto;
+	position: absolute;
+    right: 50%;
+    transform: translateX(50%);
 }
 
 .third-div {
