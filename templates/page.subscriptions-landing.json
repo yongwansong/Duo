@@ -305,71 +305,36 @@
         "faq_VfK9ce": {
           "type": "faq",
           "settings": {
-            "title": "What’s a functional line of toothpaste?",
-            "description": "<p>We created Duo to make your mornings and nights better because we believe that brushing should be something to look forward to. For us, that means turning a banal routine into a holistic health ritual. We use all-natural, clean ingredients to activate the senses – smell, taste, and the feeling of fine foam (we love that you call it silky) – and we added botanical extracts (like pinches of sage, lavender, cinnamon, and peppermint) to enrich the experience.<\/p><p>And because we believe brushing should also help with what lies ahead (think hectic days, restful nights), we formulated Immunity, Energy and Sleep with delightful doses of vitamins and supplements that get absorbed into your system as you brush. See the question below “<em>Do I need to swallow my toothpaste?<\/em>” for how it works.<\/p>"
+            "title": "What’s nHa? And don’t I need fluoride?",
+            "description": "<p>We use a dentist-backed fluoride alternative called nano-hydroxyapatite (nHa). Exhaustive research over the past several decades has proven that nano-Hydroxyapatite is just as effective as fluoride at remineralizing teeth, while also whitening and reducing sensitivity.<\/p>"
           }
         },
         "faq_xBEwNe": {
           "type": "faq",
           "settings": {
-            "title": "Is the Original just normal toothpaste?",
-            "description": "<p>Short answer: it’s much more than that.<\/p><p>Our Original tablet has been crafted to be a higher quality toothpaste in step with the latest developments in dentistry and oral health. Our tablets feature nHa (see question on nHa below for more info) and we even included vitamins C & E for their antioxidant power: they both soothe and rejuvenate your gums and cheeks.<\/p><p>It’s also the base for all of our tablets so as you brush with one of the functional tablets, you’re not just safely and efficiently absorbing vitamins and supplements, you’re using a premium toothpaste. Your oral microbiome is the gateway to your gut and all major systems. That’s why in addition to doing all the “normal things,” we’ve enhanced our Original formula with vitamins, minerals, and botanical extracts that promote oral hydration and homeostasis.<\/p>"
+            "title": "Can I pause or cancel my subscription?",
+            "description": "<p>Yes, you can cancel or pause anytime by going into your subscription portal or by emailing us at friends@duotoothpaste.com.<\/p>"
           }
         },
         "faq_e6NQLc": {
           "type": "faq",
           "settings": {
-            "title": "What are toothpaste tablets?",
-            "description": "<p>Tablets are a breakthrough in oral care and we love them for many reasons...<\/p><p><strong>1.<\/strong> The environmental. Tablets allow us to deliver your toothpaste in recyclable glass bottles and biodegradable packaging. We don’t use plastic tubes that can only go in landfills.<\/p><p><strong>2.<\/strong> The convenient. No yucky paste on your sink or too-big tubes taken by TSA.<\/p><p><strong>3.<\/strong> The aesthetic. So pleasing to look at in your bathroom sanctuary!<\/p><p><strong>4.<\/strong> The practical. Tablet form means we know you’re getting the precise dose of functional supplements and vitamins in every tablet.<\/p>"
+            "title": "Will I receive bottles or refills in future orders?",
+            "description": "<p>Your first order of tablets will ship in apothecary-grade glass bottles. Refills will ship in compostable pouches.<\/p>"
           }
         },
         "faq_6bQaRf": {
           "type": "faq",
           "settings": {
-            "title": "Do the tablets foam?",
-            "description": "<p>We’re proud of our foam. Unlike traditional tube paste that often uses detergents and other sudsing agents found in soap that actually dry out your mouth, we use a soothing combination of natural ingredients to make our foam. It’s activated when combined with the saliva in your mouth and the water on your toothbrush plus the mechanical work of brushing.<\/p><p>The longer you brush the foamier it gets!<\/p>"
+            "title": "My bottle broke! How do I get a new one?",
+            "description": "<p><em>Do not include this Question on the list<\/em><\/p>"
           }
         },
         "faq_r3RWk4": {
           "type": "faq",
           "settings": {
-            "title": "How do you use Duo?",
-            "description": "<p>To brush with Duo, wet your toothbrush and pop in a tablet or two (if you want extra Energy, or extra thick foam, try a double!). Crunch down to break it up. If you feel bits, that’s fine, just start brushing. Our natural silk foam will build and reach its peak at about 30 seconds. Brush for at least two minutes. Spit. Rinse if you’d like.<\/p><p>Pro tip: We’ve heard from users that they keep all four bottles at their sink, travel with at least two, and keep Energy at the office for a pick-me-up. In short, do Duo however you do.<\/p>"
-          }
-        },
-        "faq_4X7apN": {
-          "type": "faq",
-          "settings": {
-            "title": "What makes Duo toothpaste sustainable?",
-            "description": "<p>Unlike traditional toothpaste tubes that can’t be recycled and end up in landfills, Duo toothpaste tablets come in glass bottles with aluminum caps that are completely recyclable and reusable.<\/p><p>The bottles come in mailers that are made from recycled materials and are 100% biodegradable and recyclable. The tablets themselves don’t require water to produce, which means no water-footprint.<\/p>"
-          }
-        },
-        "faq_Y7iMeU": {
-          "type": "faq",
-          "settings": {
-            "title": "Are Duo products FDA approved?",
-            "description": "<p>While the FDA does not directly approve dietary supplements, our products are manufactured in a facility that is certified by an independent auditor, UL Solutions, to be in accordance with the FDA’s current Good Manufacturing Practices (cGMP). UL Solutions certification is the gold standard in the dietary supplement industry and is trusted by top brands in the space. You can find out more about the certification by going to UL Solution’s website<a href=\"https:\/\/www.ul.com\/services\/current-good-manufacturing-practices-cgmp-audit-and-certification\" target=\"_blank\" title=\"https:\/\/www.ul.com\/services\/current-good-manufacturing-practices-cgmp-audit-and-certification\">here<\/a>.<\/p>"
-          }
-        },
-        "faq_X8aJaG": {
-          "type": "faq",
-          "settings": {
-            "title": "Why do the functional toothpastes cost more?",
-            "description": "<p>The costs reflect the added supplements and vitamins to our functional tablets (Immunity, Energy, Sleep).<\/p>"
-          }
-        },
-        "faq_TwhT6h": {
-          "type": "faq",
-          "settings": {
-            "title": "What's in your newsletter?",
-            "description": "<p>Our newsletter is the first place we’ll announce promotions and new products, and it’s an envelope full of joy. You’ll be amazed by how much you’ll learn about upgrading your routine and how much fun you’ll have brushing. Really, how much fun do you think you can have brushing? Check out @duotoothpaste on Instagram to get a hint.<\/p><p>Not signed up? You can always sign up at the bottom of any page in the footer!<\/p>"
-          }
-        },
-        "faq_znFTK6": {
-          "type": "faq",
-          "settings": {
-            "title": "How long does shipping take?",
-            "description": "<p>It takes 3-8 days for your tablets to arrive. Tracking numbers are sent when the product ships and please don’t hesitate to contact us with any issues or questions.<\/p>"
+            "title": "Will I receive bottles or refills in future orders?",
+            "description": "<p>Your first order of tablets will ship in apothecary-grade glass bottles. Refills will ship in compostable pouches.<\/p>"
           }
         }
       },
@@ -378,12 +343,7 @@
         "faq_xBEwNe",
         "faq_e6NQLc",
         "faq_6bQaRf",
-        "faq_r3RWk4",
-        "faq_4X7apN",
-        "faq_Y7iMeU",
-        "faq_X8aJaG",
-        "faq_TwhT6h",
-        "faq_znFTK6"
+        "faq_r3RWk4"
       ],
       "settings": {
         "padding_top": 50,
