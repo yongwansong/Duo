@@ -639,7 +639,7 @@ h2.image-with-text__heading.h3 {
 
 
   .image-with-text__content > * + * {
-      margin-bottom: 0px!important;
+      margin-bottom: 2rem!important;
   }
 
   .link_button-page_cta {
