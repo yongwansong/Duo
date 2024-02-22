@@ -811,9 +811,17 @@
 }
 
 
+@media (max-width: 768px) {
 
+    .endrock-featured-collection .product_title {
+        font-size:16px!important;
+        line-height: 16px!important;
+        margin-bottom: 3px!important;
+    }
+    
+}
 .endrock-featured-collection .product_title {
-    font-size: 20px!important;
+    font-size: 18px;
     line-height: 18px!important;
     margin-bottom: 3px!important;
 }
