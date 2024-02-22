@@ -7,7 +7,7 @@
    
   </div>
   <div class="grid_feature">
-    <div class="image-with-text__content image-with-text__content--{{ section.settings.height }}">
+    <div class="image-with-text_ image-with-text__content_bottom image-with-text__content--{{ section.settings.height }}">
       {%- for block in section.blocks -%}
         {% case block.type %}
           {%- when 'heading' -%}
@@ -33,7 +33,7 @@
             {%- when 'button' -%}
               {%- if block.settings.button_label != blank -%}
                 <div class="">
-                  <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="link_button-page_cta text_underline_{% if block.settings.button_style_secondary %} button--secondary{% else %} {% endif %}" {{ block.shopify_attributes }}>
+                  <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button-page_cta text_underline_{% if block.settings.button_style_secondary %} button--secondary{% else %} {% endif %}" {{ block.shopify_attributes }}>
                     {{ block.settings.button_label | escape }}
                   </a>
                 </div>

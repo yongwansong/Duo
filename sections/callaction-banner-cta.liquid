@@ -34,7 +34,7 @@
             {%- when 'button' -%}
               {%- if block.settings.button_label != blank -%}
                 <div class="">
-                  <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="link_button-page_cta text_underline_{% if block.settings.button_style_secondary %} button--secondary{% else %} {% endif %}" {{ block.shopify_attributes }}>
+                  <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="link_button-page_cta  link_button-page_cta text_underline_{% if block.settings.button_style_secondary %} button--secondary{% else %} {% endif %}" {{ block.shopify_attributes }}>
                     {{ block.settings.button_label | escape }}
                   </a>
                 </div>
