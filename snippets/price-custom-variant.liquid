@@ -1,9 +1,7 @@
 
 {% assign variant = product.selected_or_first_available_variant %}
 
-<script>
-  console.log({{ variant | json }})
-</script>
+
 <label for="{{ section.id }}" class="price-save-subscription">
   <span class="variant-field__price">
     {%- if is_subcription -%}

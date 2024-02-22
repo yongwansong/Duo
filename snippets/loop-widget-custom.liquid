@@ -401,7 +401,7 @@ span {
                                         <div id="loop-selling-plan-first-delivery-options-{{current_variant.id}}-{{selling_plan_group.id}}" class="loop-display-none"> &nbsp;{{ selling_plan_group.selling_plans[0].options[0].value }} </div>
                                         <select class="loop-full-width loop-selling-plan-selector loop-selling-plan-selector-style selector-custom" id="loop-select-{{current_variant.id}}-{{selling_plan_group.id}}" data-position="{{ option.position }}" data-selling-plan-group-id="{{ selling_plan_group.id }}" data-product-id="{{product.id}}">
                                           {% for sp in selling_plan_group.selling_plans %}
-                                          <option class="loop-selling-plan-selector-option" value="{{ sp.id }}">{{ sp.options[0].value }}</option>
+                                            <option class="loop-selling-plan-selector-option" value="{{ sp.id }}">{{ sp.options[0].value }}</option>
                                           {% endfor %}
                                         </select>
                                         <div class="loop-selling-plan-selector-description" id="loop-selling-plan-description-{{ current_variant.id }}-{{ selling_plan_group.id }}"></div>

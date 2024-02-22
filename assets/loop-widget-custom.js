@@ -1676,14 +1676,22 @@ const changeSelect = (event) => {
   const parent = event.target.closest('product-form');
 
   const inputVariant = parent.querySelector('input[name="id"]');
-
+  const priceContainer = parent.querySelector('.price-subcription-custom');
+  const productId = selectElement.dataset.productId;
+  
   inputVariant.value = selectVariantSubcription;
+
+  setTimeout(() => {
+      priceContainer.click();
+  },300)
+
 
 }
 
 
 
 function updatePriceInParentElements({ productId }) {
+
     const currentPath = getCurrentPath();
     const productHandle = window?.loopProps[productId]?.product?.handle;
 
@@ -1694,8 +1702,8 @@ function updatePriceInParentElements({ productId }) {
     const variant = findSelectedVariantLoop(productId);
     const { price, comparePrice } = determinePrice(productId, variant);
 
-    getSavedPriceLabel(productId);
 
+    getSavedPriceLabel(productId);
 
     loopPriceSelectors.push(`.loop-product-${productId}`);
     updatePricesInUI(price, comparePrice);
@@ -1731,7 +1739,6 @@ function determinePrice(productId, variant) {
 
 function updatePricesInUI(price, comparePrice) {
 
-    console.log('compare', comparePrice);
   
     const priceElement = document.querySelector('.price-subcription-custom');
     
