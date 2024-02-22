@@ -170,6 +170,12 @@
           display: flex;
           flex-direction: column;
 
+          .price-subcription-compare {
+            color: #b1b1b1;
+            font-size: 13px;
+            margin-bottom: 2px;
+          }
+
           .save-subscription {
             color: #00497E;
             text-align: right;

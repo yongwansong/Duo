@@ -1,21 +1,21 @@
 
 {% assign variant = product.selected_or_first_available_variant %}
 
+<script>
+  console.log({{ variant | json }})
+</script>
 <label for="{{ section.id }}" class="price-save-subscription">
   <span class="variant-field__price">
     {%- if is_subcription -%}
       <div class="price-subscription">
-        <span class="price-subcription-custom">{{ variant.selling_plan_allocations[0].price | money }}</span>
-        <span class="save-subscription hidden"></span>
-        {%- assign visible_percentage = false -%}
-        {%- if variant.compare_at_price > variant.price  -%}
-          {%- assign visible_percentage = true -%}
-
-          {%- assign discounted_amount = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | money_without_currency | times: 100 | round  -%}
+        {%- assign is_compare = false -%}
+        {%- if variant.selling_plan_allocations[0].compare_at_price > variant.selling_plan_allocations[0].price -%}
+          {%- assign is_compare = true -%}
         {%- endif -%}
-        <span class="variant-field__sale discount-js {% unless visible_percentage %} hidden {% endunless %}" data-discounted="{{ discounted_amount }}">
-          Save <p class="numer-discount">{{ discounted_amount }}</p>%
-        </span>
+        <s class="price-subcription-compare {% unless is_compare %} hidden {% endunless %}">{{ variant.selling_plan_allocations[0].compare_at_price }}</s>
+
+        <span class="price-subcription-custom">{{ variant.selling_plan_allocations[0].price | money }}</span>
+        <span class="save-subscription "></span>
       </div>     
     {%- else -%}
       <span>{{ variant.price | money }}</span>

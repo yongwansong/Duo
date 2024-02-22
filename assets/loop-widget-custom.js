@@ -1673,29 +1673,11 @@ const changeSelect = (event) => {
   const selectElement = event.target;
   const selectVariantSubcription = selectElement.value;
 
-
-  const selectedIndex = selectElement.selectedIndex;
-  const selectedOption = selectElement.options[selectedIndex]; 
-  const discount = selectedOption.dataset.discount;
-
   const parent = event.target.closest('product-form');
 
   const inputVariant = parent.querySelector('input[name="id"]');
 
-  const containerDiscount = parent.querySelector('.numer-discount');
-  const containerHidden = parent.querySelector('.discount-js');
-
-
-  containerDiscount.textContent = discount;
   inputVariant.value = selectVariantSubcription;
-
-
-  if (discount) {
-    containerHidden.classList.remove('hidden');
-  } else {
-    containerHidden.classList.add('hidden');
-
-  }
 
 }
 
@@ -1710,31 +1692,46 @@ function updatePriceInParentElements({ productId }) {
     }
 
     const variant = findSelectedVariantLoop(productId);
-    const price = determinePrice(productId, variant);
+    const { price, comparePrice } = determinePrice(productId, variant);
 
     getSavedPriceLabel(productId);
 
 
     loopPriceSelectors.push(`.loop-product-${productId}`);
-    updatePricesInUI(price);
+    updatePricesInUI(price, comparePrice);
 }
 
 function determinePrice(productId, variant) {
     const sellingPlanPrice =
         window?.loopProps[productId]?.sellingPlanAllocation?.price;
 
+    const comparePrice = window?.loopProps[productId]?.sellingPlanAllocation?.compare_at_price;
+
     if (sellingPlanPrice) {
+        if (comparePrice) {
+            return {
+                price: loopFormatMoney(sellingPlanPrice, true),
+                comparePrice: loopFormatMoney(comparePrice, true)
+            }
+        }
    
-        return loopFormatMoney(sellingPlanPrice, true);
+        return {
+            price: loopFormatMoney(sellingPlanPrice, true),
+            comparePrice: null
+        }
     }
     
-    
-    return loopFormatMoney(variant.price, true);
+    return {
+        price: loopFormatMoney(variant.price, true),
+        comparePrice: null
+    }
 }
 
 
 
-function updatePricesInUI(price) {
+function updatePricesInUI(price, comparePrice) {
+
+    console.log('compare', comparePrice);
   
     const priceElement = document.querySelector('.price-subcription-custom');
     
@@ -1742,6 +1739,14 @@ function updatePricesInUI(price) {
         priceElement.innerHTML = `${price}`;
     }
 
+    const containerCompare = document.querySelector('.price-subcription-compare');
+    if (comparePrice) {
+        containerCompare.classList.remove('hidden');
+        containerCompare.textContent = comparePrice;
+        return
+    } 
+
+    containerCompare.classList.add('hidden');
 
 }
 
