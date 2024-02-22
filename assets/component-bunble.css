@@ -999,6 +999,12 @@ h2.image-with-text__feat.h3 {
 }
 
 
+@media (max-width: 550px)
+{
+.multicolumn-images-text__text {
+    padding-top: 20px;
+}
+}
 
 .button-page_cta:hover {
   background: #fff;
