@@ -160,7 +160,7 @@ h2.image-with-text__heading.h3 {
 }
 
 .btnca {
-  color: #fff !important;
+  color: #000 !important;
   font-family: OldschoolGrotesk-Medium;
   font-weight: 400 !important;
   letter-spacing: -.24px;
@@ -183,7 +183,7 @@ h2.image-with-text__heading.h3 {
 .btnca:hover{
 
   background: black;
-  color:white:
+  color:white!important;
 }
 
 .banner__text {
@@ -862,10 +862,13 @@ h2.image-with-text__feat.h3 {
   max-width: fit-content !important;
   padding: 15px 30px;
   letter-spacing: 1px;
+  border: 2px solid black;
 }
 
 .link_button-page_cta:hover {
-  background: #c272db;
+  background: #fff;
+  color: #000 !important;
+  border: 2px solid black;
 }
 
 .grid_feature {

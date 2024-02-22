@@ -361,21 +361,21 @@
         "column_zcf9HJ": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Five_Star_Icon_f1d3ccb8-0e2d-4d24-859f-0e18d4288725.png",
+            "image": "shopify:\/\/shop_images\/Five_Star_Icon_1.png",
             "text": "<p><strong>Select Your Bottles. <\/strong>Mix and match your favorite formulas <\/p>"
           }
         },
         "column_B4RKNV": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9065316_mail_email_send_message_icon_1.png",
+            "image": "shopify:\/\/shop_images\/9065316_mail_email_send_message_icon_1_1.png",
             "text": "<p><strong>Choose How Often. <\/strong>Get delivery right when you need it.<\/p>"
           }
         },
         "column_8dM3jg": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Star_1.png",
+            "image": "shopify:\/\/shop_images\/Cancel_Icon_e69b9e50-ee79-47de-9b8d-0ebfe80ff244.png",
             "text": "<p><strong>Enjoy Your Custom Combo.<\/strong> Edit or cancel anytime.<\/p>"
           }
         }
