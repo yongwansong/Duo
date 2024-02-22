@@ -818,12 +818,22 @@
         line-height: 16px!important;
         margin-bottom: 3px!important;
     }
-    
+
+    .packtitle_
+    {
+        font-size:16px!important;
+    }
 }
 .endrock-featured-collection .product_title {
     font-size: 18px;
     line-height: 18px!important;
     margin-bottom: 3px!important;
+}
+
+.packtitle_
+{
+    font-size:18px;
+    line-height: 18px!important;
 }
 
 .endrock-featured-collection .title-with-price .product-price {
