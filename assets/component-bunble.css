@@ -167,7 +167,7 @@ h2.image-with-text__heading.h3 {
   padding: 12.972px 0 11px;
   gap: 9.979px;
   display: flex;
-  background: #000;
+  background: #73CCEA;
   max-width: 330px !important;
   line-height: 1;
   text-decoration: none;
@@ -182,8 +182,8 @@ h2.image-with-text__heading.h3 {
 
 .btnca:hover{
 
-  background: #73CCEA;
-  color:black
+  background: black;
+  color:white:
 }
 
 .banner__text {
@@ -499,7 +499,7 @@ h2.image-with-text__heading.h3 {
     padding: 10px;
     position: absolute;
     height: 100%;
-    overflow: scroll;
+    overflow: auto;
     padding: 10px!important;
 }
 
