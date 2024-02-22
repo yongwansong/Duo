@@ -50,7 +50,7 @@
         "link_customization_KqLxw6": {
           "type": "link_customization",
           "settings": {
-            "link_custom": "<p>Do you want to create your own Duo combination?<\/p>"
+            "link_custom": "<p><a href=\"https:\/\/duotoothpaste.com\/pages\/subscribe\" title=\"https:\/\/duotoothpaste.com\/pages\/subscribe\">Want to mix-and-match? create your custom routine<\/a><\/p>"
           }
         },
         "collapsible-row-0": {
@@ -180,6 +180,7 @@
         "title": "“What you brush \u2028with matters.”",
         "description": "<p>Tooth enamel cannot repair itself from within, which means your toothpaste has an important job to do. We packed Duo with proven ingredients like nHa to remineralize teeth and promote vibrant oral health. Developed by dentists, better for everyone.<\/p>",
         "background_image": "{{ product.metafields.banner.image_banner_product.value }}",
+        "background_image_mobil": "{{ product.metafields.mobil.image_banner_product_mobil.value }}",
         "aditional_logo_sign": "shopify:\/\/shop_images\/Artboard_1_4x_1.png",
         "sign_1": "Dr. Stevie Roberts, DMD",
         "sign_2": "Dr. Robert Johnson, DMD, MD"
@@ -355,6 +356,15 @@
         "layout": "text_first"
       }
     },
+    "homepage_title_with_text_gWAggc": {
+      "type": "homepage-title-with-text",
+      "settings": {
+        "title": "<p>Reviews<\/p>",
+        "richtext": "",
+        "select_align": "left",
+        "none_margin": true
+      }
+    },
     "1707343573639fd40e": {
       "type": "apps",
       "blocks": {
@@ -370,7 +380,8 @@
         "okendo_reviews_widget_kEk6pX"
       ],
       "settings": {
-        "include_margins": true
+        "include_margins": true,
+        "none_margin": true
       }
     }
   },
@@ -382,6 +393,7 @@
     "dual_section_Db4edk",
     "dual_section_c7rdPc",
     "dual_section_C4yyiR",
+    "homepage_title_with_text_gWAggc",
     "1707343573639fd40e"
   ]
 }

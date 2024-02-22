@@ -5,7 +5,7 @@
 
 
     .subsgo span, .onetimego span {
-      color: #000;
+      color: #000000;
       font-family: "OldschoolGrotesk-Regular";
       font-size: 16px;
       font-style: normal;
@@ -16,9 +16,38 @@
 
     .switch {
       background: #fff;
+
+      div {
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        display: block;
+        transition: opacity 0.2s cubic-bezier(.77, 0, .175, 1) 0.125s;
+        will-change: opacity;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 10px;
+        font-family: "OldschoolGrotesk-Medium";
+        letter-spacing: 1.6px;
+        color: #000000;
+      }
     }
 
-    
+    @media screen and (max-width: 700px) {
+      .subsgo span, .onetimego span {
+        font-size: 13px;
+      }
+      .switch {
+        div {
+          font-size: 13px;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
 
   }
 
@@ -32,7 +61,7 @@
     border-radius: 0 !important;
   }
 
-  .loop-selling-plan-selector {
+  .loop-selling-plan-selector-style {
     width: auto !important;
     display: block !important;
     border-color: #000 !important;
@@ -66,7 +95,7 @@
   }
 
   .legend-right {
-    .aditional-info-subscription {
+    .aditional-info-subscription, .aditional-info-order {
       margin: 0;
       text-align: right;
       color: #3F3F3F;
@@ -78,6 +107,14 @@
       border-bottom: 1px solid;
       margin-top: 12px;
       padding-bottom: 8px;
+    }
+
+    .aditional-info-order {
+      font-size: 14px;
+      text-align: left;
+      border-bottom: none;
+      margin-top: 16px;
+      line-height: 1.5;
     }
   }
 
@@ -128,6 +165,21 @@
         font-style: normal;
         font-weight: 400;
         line-height: 16px;
+
+        .price-subscription {
+          display: flex;
+          flex-direction: column;
+
+          .save-subscription {
+            color: #00497E;
+            text-align: right;
+            font-family: "OldschoolGrotesk-Regular";
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 14px;
+          }
+        }
       }
       .variant-field__sale {
         color: #00497E;
@@ -135,6 +187,43 @@
         font-style: normal;
         font-weight: 500;
         line-height: 14px;
+      }
+
+      
+    }
+
+    
+  }
+
+  
+  @media screen and (max-width: 700px) {
+
+    .container-select-price {
+      .loop-subscription-group-selling-plans-container  {
+        font-size: 12px;
+  
+        .selector-custom {
+          font-size: 12px !important;
+          margin-left: 4px !important;
+        }
+      }
+
+      
+    }
+    .loop-selling-plan-selector-style {
+      width: 57% !important;
+    }
+
+    .legend-right {
+      padding: 9px;
+
+      .item_include {
+        column-gap: 4px;
+        margin-top: 7px !important;
+
+        .text {
+          font-size: 7px;
+        }
       }
     }
   }

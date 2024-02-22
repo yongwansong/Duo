@@ -41,6 +41,12 @@
     width: 100%;
     border-bottom: 1px dashed black;
   }
+
+  @media screen and (max-width: 700px) {
+    .title, .content {
+      font-size: 12px;
+    }
+  }
 }
 
 .description-dorpdown {
@@ -78,6 +84,7 @@
     }
 
     .comparation-dropdown__list-suplement {
+      
       ul {
         li {
           border: 0.5px dashed #505050;
@@ -87,6 +94,7 @@
     }
 
     .comparation-dropdown__container-suplement {
+      width: 55%;
       color: #505050;
       font-family: "OldschoolGrotesk-Medium";
       font-size: 16px;
@@ -117,6 +125,24 @@
       }
     }
 
+    @media screen and (max-width: 700px) {
+      .comparation-dropdown__container-suplement {
+        font-size: 14px;
+      }
+      ul {
+        li {
+          font-size: 11px;
+          letter-spacing: normal;
+
+          svg {
+            margin-right: 5px;
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
+    }
+
     
   }
 .content-check {
@@ -140,6 +166,17 @@
     svg {
       margin-top: 0;
       margin-right: 8px;
+      min-width: 12px;
+    }
+
+    @media screen and (max-width: 700px) {
+      
+      font-size: 11px;
+      letter-spacing: normal;
+
+      svg {
+        margin-right: 4px;
+      }
     }
   }
 }

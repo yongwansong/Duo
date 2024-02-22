@@ -95,11 +95,18 @@
     }
 }
 
+@media (max-width: 950px){
+  .industry-icons_container .icons-wrapper{
+    gap: 35px!important;
+  }
+}
+
 @media (max-width: 767px) {
     .industry-icons_container{
         flex-wrap: wrap;
         justify-content: center;
         padding: 0 !important;
+        gap: 24px;
     }
 
     .industry-icons_container .mobile_heading{

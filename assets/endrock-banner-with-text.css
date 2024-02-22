@@ -8,6 +8,8 @@
     width: 100%;
     height: 100%;
     left: 0;
+    object-fit: cover;
+    object-position: center;
 }
 
 @media (max-width: 920px) {
@@ -101,7 +103,7 @@
 }
 
 .endrock-banner-with-text .text-wrapper a{
-    padding: 10px 57px;
+    padding: 12px 57px 10px;
     font-family: "OldschoolGrotesk-Medium";
     min-height: 0;
     line-height: 1;
@@ -152,10 +154,10 @@
     .endrock-banner-with-text .button-with-text{
         position: absolute;
         left: 24px;
-        bottom: 10%;
+        bottom: 16%;
     }
     .endrock-banner-with-text .button-with-text a{
-        padding: 11px 27px;
+        padding: 10px 36px;
     }
 
     .mobile-banner-with-text{
@@ -171,16 +173,19 @@
         font-weight: 400;
         line-height: 24px;
         margin: 0;
+        max-width: 210px;
+        text-align: justify;
+        letter-spacing: 0;
     }
 
     .endrock-banner-with-text .text-decoration{
-        font-size: 40px;
+        font-size: 40px !important;
         line-height: 48px;
-        margin-bottom: 20px;
+        margin-bottom: 4px;
     }
 
     .endrock-banner-with-text .mobile-banner-with-text .decoration{
-        margin-top: 51px;
+        margin-top: 11px;
         display: flex;
         flex-direction: column;
     }
@@ -193,5 +198,6 @@
         font-style: normal;
         font-weight: 500;
         line-height: 20px;
+      margin-top: 0;
     }
 }

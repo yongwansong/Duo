@@ -3,9 +3,22 @@
 
   .image-with-text {
     margin-bottom: 0px !important;
+
+    @media screen and (max-width: 700px) {
+      .image-with-text__grid {
+        display: flex;
+        flex-direction: column-reverse;
+
+        @media screen and (min-width: 580px) {
+          .grid__item {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 
-  .image-with-text__content {
+  .image-with-text__content.image-with-text__content--adapt {
     gap: 0;
     padding: 40px 96px;
 
@@ -103,7 +116,7 @@
         font-weight: 500;
         line-height: normal;
         letter-spacing: -.24px;
-        padding: 12.972px 0 11px;
+        padding: 12.972px 3px 11px;
         justify-content: center;
         align-items: center;
         gap: 9.979px;
@@ -112,6 +125,8 @@
         text-decoration: none;
         width: 40%;
         line-height: 1;
+        text-align: center;
+
       }
   
       .link-er {
@@ -123,6 +138,56 @@
         line-height: 24px;
         letter-spacing: -.18px;
         width: 50%;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      padding: 10px;
+      align-items: center;
+
+      .image-with-text__heading {
+        font-size: 40px;
+        padding: 0 45px;
+        
+        img {
+          display: none;
+        }
+      }
+
+      .image-with-text__text.rte { 
+        padding: 0 15px;
+      }
+
+      .product__accordion {
+        .description-dorpdown {
+          margin-left: 8px;
+          text-align: left;
+        }
+      }
+
+      .steps-container { 
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .item-step {
+          max-width: 128px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          p {
+            text-align: left;
+            font-size: 15px;
+          }
+        }
+      }
+
+      .link_button-page {
+        justify-content: center;
+
+        .button-er {
+          width: 70%;
+        }
       }
     }
     

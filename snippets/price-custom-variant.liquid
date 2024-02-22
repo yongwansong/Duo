@@ -1,5 +1,9 @@
 
 {% assign variant = product.selected_or_first_available_variant %}
+
+<script>
+  console.log({{ variant.product | json }})
+</script>
 <label for="{{ section.id }}" class="price-save-subscription">
 
   {%- if variant.compare_at_price > variant.price  -%}
@@ -9,7 +13,15 @@
     </span>
   {%- endif -%}
   <span class="variant-field__price">
-    <span>{{ variant.price | money }}</span>
+    {%- if is_subcription -%}
+      <div class="price-subscription">
+        <span class="price-subcription-custom">{{ variant.selling_plan_allocations[0].price | money }}</span>
+        <span class="save-subscription"></span>
+      </div>
+      
+    {%- else -%}
+      <span>{{ variant.price | money }}</span>
+    {%- endif -%}
 {% comment %}     {%- if variant.compare_at_price > variant.price -%}
       <s>{{ variant.compare_at_price | money }}</s>
     {%- endif -%} {% endcomment %}

@@ -63,7 +63,7 @@
     "button_label": "Subscribe"
   },
   "accessibility": {
-    "home": "Home",
+    "home": "Shop",
     "skip_to_text": "Skip to content",
     "skip_to_product_info": "Skip to product information",
     "close": "Close",
@@ -106,6 +106,11 @@
     "collection_title": "Your collection's name"
   },
   "products": {
+    "subscription": {
+      "additional_order_subscription": "Your subcription will include 1 glass printed bottle that holds 62 tablets + compostable refill pouches.",
+      "cancel_info_subcription": "Modify, Skip or Cancel Anytime!",
+      "select_quantity_label": "Send me"
+    },
     "product": {
       "add_to_cart": "Add to cart",
       "choose_options": "Choose options",

@@ -91,6 +91,7 @@ function setupDomListeners(productId) {
     }
 
     for (const option of sellingPlanGroupOptions) {
+
         option.addEventListener("click", clickOnSellingPlanGroupContainer);
     }
 
@@ -102,6 +103,10 @@ function setupDomListeners(productId) {
         option.addEventListener("change", changeInDeliveryOptionLoop);
     }
     log(`setup dom listeners complete for ${productId}`);
+
+
+    const selectQuantity = document.querySelector("#select-quantity");
+    selectQuantity.addEventListener("change", (e) => changeSelect(e))
 }
 
 /**
@@ -336,6 +341,7 @@ function defaultSelectFirstSellingPlanLoop(variant, productId) {
     const loopPurchaseOptionsContainer = getLoopSubscriptionContainer(
         productId
     );
+
     const loopPurchaseOptions =
         loopPurchaseOptionsContainer.querySelectorAll(
             "input[name=loop_purchase_option]"
@@ -925,13 +931,16 @@ function applySettings({ productId }) {
  * @returns
  */
 function clickOnSellingPlanGroupContainer(event) {
+
     const container =
         event.target.closest(".loop-subscription-group") ||
         event.target.closest(".loop-one-time-purchase-option");
 
     if (!container) return;
-
+    
     const radio = container.querySelector('input[type="radio"]');
+
+
     const selectedPlanGroupId =
         window.loopProps[radio.dataset.productId]?.sellingPlanGroupId;
 
@@ -997,7 +1006,7 @@ function defaultSelectOneTimePurchaseOption(variant, productId) {
 function loopInit({ productId, product, variantId }) {
     updateLoopProperties({ product, productId, variantId });
     const selectedVariant = findSelectedVariantLoop(productId, variantId);
-    toggleVariantDisplay(product, selectedVariant.id);
+    //toggleVariantDisplay(product, selectedVariant.id);
     checkVariantsSellingPlanAllocation(selectedVariant, productId);
     applyDefaultSelectionBasedOnSettings(selectedVariant, productId);
     applySettings({ productId });
@@ -1033,11 +1042,13 @@ function updateSelectDropDownDefaultValues({
     const sellingPlanGroups =
         window.loopProps[productId].product.selling_plan_groups;
 
+
     if (!Array.isArray(sellingPlanGroups) || !sellingPlanGroups.length) {
         return;
     }
 
     sellingPlanGroups.forEach((spg) => {
+
         if (sellingPlanGroupId !== spg.id) {
             resetSelectDropdown(variant.id, spg.id);
         }
@@ -1126,6 +1137,7 @@ function changeInSellingPlanGroupLoopMobile(
 
 // on change of selling plan group
 function changeInSellingPlanGroupLoop(option) {
+
     let sellingPlanGroupId = option.target.dataset.id;
     let sellingPlanGroupName = option.target.dataset.name;
     let productId = option.target.dataset.productId;
@@ -1164,6 +1176,7 @@ function changeInSellingPlanGroupLoop(option) {
     applyBundleDiscount(productId);
     checkAllowCheckoutIfBundle(productId);
 
+
     let removeElementId = ".loop-selected-selling-plan-group";
     let elements = getLoopSubscriptionContainer(productId).querySelectorAll(
         removeElementId
@@ -1196,7 +1209,9 @@ function changeInSellingPlanGroupLoop(option) {
 }
 
 function changeInDeliveryOptionLoop(option) {
+    
     let sellingPlanId = option.target.value;
+
     let productId = option.target.dataset.productId;
     updateLoopProperties({ productId, sellingPlanId });
     updatePriceInParentElements({ productId });
@@ -1205,6 +1220,7 @@ function changeInDeliveryOptionLoop(option) {
     updatePriceInUI({ productId });
     applyBundleDiscount(productId);
     checkAllowCheckoutIfBundle(productId);
+
 }
 
 // discount badge handling
@@ -1356,6 +1372,7 @@ function updateLoopProperties({
     let loopProperties = getLoopSubscriptionContainer(productId).querySelector(
         "#loop-selling-plan-fieldset"
     );
+
     if (variantId) {
         if (
             Number(variantId) !==
@@ -1474,6 +1491,8 @@ function updateLoopProperties({
             hiddenInput.type = "hidden";
             hiddenInput.name = "selling_plan";
             hiddenInput.value = selectedSellingPlanId;
+
+
             form.appendChild(hiddenInput);
         });
     hideBundleSPG(productId);
@@ -1591,16 +1610,19 @@ function formatPrice(price, moneyFormat, moneyWithoutCurrency) {
  * @param {} priceAdjustments
  * @returns
  */
-function getSavedPriceLabel(priceAdjustments) {
+function getSavedPriceLabel(productId) {
+
+    const priceAdjustments = window.loopProps[productId].sellingPlanPriceAdjustments;
     if (!Array.isArray(priceAdjustments) || !priceAdjustments.length) {
         return "";
     }
 
     const pa = priceAdjustments[0];
+    const containerPercentage = document.querySelector('.price-subscription .save-subscription');
     if (pa.value_type === "percentage") {
-        return `Save ${pa.value}%`;
+        containerPercentage.innerHTML = `Save ${pa.value}%`;
     } else {
-        return `Save ${loopFormatMoney(pa.value, true)}`;
+        containerPercentage.innerHTML = `Save ${loopFormatMoney(pa.value, true)}`;
     }
 }
 
@@ -1640,6 +1662,25 @@ function updateSellingPlanDescriptionElement(
     }
 }
 
+/* ------------------------------------------------- dev edinson comment*/
+
+const changeSelect = (event) => {
+  
+  const inputQuantity = document.querySelector(".quantity__input");
+
+  inputQuantity.value = event.target.value;
+  const productId = event.target.dataset.productId;
+
+  changePriceSubcription(event.target.value, productId);
+}
+
+const changePriceSubcription = (quantity, productId) => {
+    const variant = findSelectedVariantLoop(productId);
+    const price = determinePrice(productId, variant);
+
+    updatePricesInUI(price);
+}
+
 function updatePriceInParentElements({ productId }) {
     const currentPath = getCurrentPath();
     const productHandle = window?.loopProps[productId]?.product?.handle;
@@ -1651,6 +1692,9 @@ function updatePriceInParentElements({ productId }) {
     const variant = findSelectedVariantLoop(productId);
     const price = determinePrice(productId, variant);
 
+    getSavedPriceLabel(productId);
+
+
     loopPriceSelectors.push(`.loop-product-${productId}`);
     updatePricesInUI(price);
 }
@@ -1660,19 +1704,30 @@ function determinePrice(productId, variant) {
         window?.loopProps[productId]?.sellingPlanAllocation?.price;
 
     if (sellingPlanPrice) {
+        let quantity = document.querySelector('#select-quantity');
+
+        if (quantity) {
+            quantity = sellingPlanPrice * quantity.value;
+            return loopFormatMoney(quantity, true);
+        }
         return loopFormatMoney(sellingPlanPrice, true);
     }
+    
+    
     return loopFormatMoney(variant.price, true);
 }
 
+
+
 function updatePricesInUI(price) {
-    return; //uncomment this to enable parent price update in PDP
-    loopPriceSelectors.forEach((selector) => {
-        const priceElement = document.querySelector(selector);
-        if (priceElement) {
-            priceElement.innerHTML = `${price}`;
-        }
-    });
+  
+    const priceElement = document.querySelector('.price-subcription-custom');
+    
+    if (priceElement) {
+        priceElement.innerHTML = `${price}`;
+    }
+
+
 }
 
 function updatePriceInUI({ productId }) {
@@ -2582,6 +2637,7 @@ async function dispatchLoopAddCartEvent(
   
   document.addEventListener('click', function(event) {
    if (event.target.getAttribute('name') === 'Bottles') {
+
       document.querySelector('.onetimego').click();
       OneTimePurchaseClick()
     }
