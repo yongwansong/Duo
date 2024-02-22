@@ -216,10 +216,6 @@ h2.image-with-text__heading.h3 {
   overflow: auto;
 }
 
-/* Styles for non-mobile devices */
-.texto-superpuesto {
-  /* Styles for the "texto-superpuesto" class in general */
-}
 
 .switch {
   display: none; /* Hide the class on mobile devices */
@@ -331,6 +327,11 @@ h2.image-with-text__heading.h3 {
   }
 }
 
+.product-with-text_products {
+
+  column-gap: 20px!important;
+}
+
 .product-with-text-section .product-with-text-section_wrapper {
   max-width: 1180px!important;
 }
@@ -384,6 +385,7 @@ h2.image-with-text__heading.h3 {
   height: 100%;
   width: 100%;
   padding: 15px;
+  overflow: auto;
 }
 
 .text__product_item_title_ {
