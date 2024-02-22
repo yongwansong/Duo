@@ -235,7 +235,7 @@
         "image_card_one": "shopify:\/\/shop_images\/Rectangle_646.png",
         "card_one_title": "Let’s talk about nHa",
         "card_one_subtitle": "Learn more",
-        "card_link_one": "#",
+        "card_link_one": "https:\/\/duotoothpaste.com\/pages\/the-science",
         "card_two_title": "",
         "card_two_subtitle": "",
         "card_link_two": "",
@@ -340,7 +340,7 @@
         "image_card_two": "shopify:\/\/shop_images\/Rectangle_647.png",
         "card_two_title": "Want to customize your own bundle?",
         "card_two_subtitle": "Learn more",
-        "card_link_two": "",
+        "card_link_two": "https:\/\/duotoothpaste.com\/pages\/subscribe",
         "card_three_title": "",
         "card_three_subtitle": "",
         "card_link_three": ""
@@ -352,10 +352,10 @@
         "c9ce3ad8-d62f-4ed1-866a-6c32c3729406": {
           "type": "product",
           "settings": {
-            "featured_product": "original",
-            "featured_product_two": "immunity",
-            "featured_product_three": "energy",
-            "featured_product_four": "sleep",
+            "featured_product": "original-refill-pouch",
+            "featured_product_two": "immunity-refill-pouch",
+            "featured_product_three": "energy-refill-pouch",
+            "featured_product_four": "sleep-refill-package",
             "custom_product_image": "shopify:\/\/shop_images\/Rectangle_224_1.png",
             "custom_product_image2": "shopify:\/\/shop_images\/Immunity_1.png",
             "custom_product_image3": "shopify:\/\/shop_images\/Rectangle_224_2.png",
