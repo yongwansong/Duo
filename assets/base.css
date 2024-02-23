@@ -3676,7 +3676,7 @@ video.main-video.mobile {
 }
 button.cllctnadd {
 	background-color: transparent;
-	border: none;
+	border: none !important;
 }
 
 section.shopify-section.feature-collection {
