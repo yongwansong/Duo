@@ -114,27 +114,48 @@
     "colors": {
       "name": "Colors",
       "settings": {
-        "background": {
-          "label": "Background"
+        "colors_solid_button_labels": {
+          "label": "Solid button label",
+          "info": "Used as foreground color on accent colors."
         },
-        "background_gradient": {
-          "label": "Background gradient",
-          "info": "Background gradient replaces background where possible."
+        "colors_accent_1": {
+          "label": "Accent 1",
+          "info": "Used for solid button background."
         },
-        "text": {
-          "label": "Text"
+        "gradient_accent_1": {
+          "label": "Accent 1 gradient"
         },
-        "button_background": {
-          "label": "Solid button background"
+        "colors_accent_2": {
+          "label": "Accent 2"
         },
-        "button_label": {
-          "label": "Solid button label"
+        "gradient_accent_2": {
+          "label": "Accent 2 gradient"
         },
-        "secondary_button_label": {
-          "label": "Outline button"
+        "header__1": {
+          "content": "Primary colors"
         },
-        "shadow": {
-          "label": "Shadow"
+        "header__2": {
+          "content": "Secondary colors"
+        },
+        "colors_text": {
+          "label": "Text",
+          "info": "Used as foreground color on background colors."
+        },
+        "colors_outline_button_labels": {
+          "label": "Outline button",
+          "info": "Also used for text links."
+        },
+        "colors_background_1": {
+          "label": "Background 1"
+        },
+        "gradient_background_1": {
+          "label": "Background 1 gradient"
+        },
+        "colors_background_2": {
+          "label": "Background 2"
+        },
+        "gradient_background_2": {
+          "label": "Background 2 gradient"
         }
       }
     },
