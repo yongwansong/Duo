@@ -176,7 +176,6 @@ html.no-js .no-js-hidden {
 body .button--secondary{
 	border: none;
     box-shadow: none;
-	border-bottom: 1px solid #000000;
 	border-radius: 0;
     padding: 0 0 5px;
     min-height: 0;
@@ -5104,7 +5103,7 @@ header {
 }
 .quick-add__submit {
 	border-radius: 20px;
-	border: 1px solid #0c176a;
+	border: 1px solid #0c176a !important;
 	box-shadow: none !important;
 }
 .full-unstyled-link {
