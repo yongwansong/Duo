@@ -512,7 +512,10 @@
                       <input
                         type="hidden"
                         name="id"
+                        {% comment %}  
                         value="{{ product.selected_or_first_available_variant.id }}"
+                        {% endcomment %}
+                        value="{{ product.variants[1].id }}"
                         disabled
                       >
                       <div class="product-form__buttons">
@@ -566,9 +569,9 @@
                   </product-form>
                   {% comment %} {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
 
-                  {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities
-                    | where: 'pick_up_enabled', true
-                  -%}
+                    {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities
+                      | where: 'pick_up_enabled', true
+                    -%}
 
                   <pickup-availability
                     class="product__pickup-availabilities no-js-hidden"

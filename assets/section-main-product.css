@@ -924,7 +924,7 @@ a.product__text {
 		height: 100%;
 	}
 	.product-media__slides .slick-list .slick-slide .media>img{
-		object-fit: fill;
+		object-fit: contain;
 	}
 	.product-media__dots-wrapper{
 		min-height: 44.75px;

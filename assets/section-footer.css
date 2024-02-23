@@ -212,6 +212,10 @@ button.accordion:after{
   color: #000;
 }
 
+.klaviyo-form button{
+  width: 70% !important;
+}
+
 .footer-block__newsletter .ul-list{
   display: none;
 }

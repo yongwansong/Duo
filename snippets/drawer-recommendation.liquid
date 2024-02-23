@@ -1,122 +1,203 @@
+
+<script>
+  function incrementQuantity(element) {
+  var quantityInput = element.parentElement.querySelector('.quantity-input');
+  var currentValue = parseInt(quantityInput.value);
+  if (currentValue < 99) {
+    quantityInput.value = currentValue + 1;
+  }
+}
+
+function decrementQuantity(element) {
+  var quantityInput = element.parentElement.querySelector('.quantity-input');
+  var currentValue = parseInt(quantityInput.value);
+  if (currentValue > 1) {
+    quantityInput.value = currentValue - 1;
+  }
+}
+
+</script>
+
 {%- capture recommended_products -%}
 {%- liquid
-	assign products_in_cart = ''
-	for item in cart.items
-	  assign products_in_cart = products_in_cart | append: item.product.id
-	  unless forloop.last
-		assign products_in_cart = products_in_cart | append: ','
-	  endunless
-	endfor
-	assign products_in_cart = products_in_cart | split: ','
-  -%}
+assign products_in_cart = ''
+for item in cart.items
+  assign products_in_cart = products_in_cart | append: item.product.id
+  unless forloop.last
+  assign products_in_cart = products_in_cart | append: ','
+  endunless
+endfor
+assign products_in_cart = products_in_cart | split: ','
+-%}
+
+
+
+
+
+
+
+<div class="slider">
+<div class="slides">
   {%- for product in settings.cart_drawer_collection.products limit: 4 -%}
-	{% comment %} {%- assign product_id = product.id | append: '' -%}
-	{%- unless products_in_cart contains product_id -%}
-	{%- endunless -%} {% endcomment %}
-	  <li class="recommendation-product__wrapper">
-		<div class="recommendation-product__image">
-		  <img
-			srcset="
-			  {%- if product.featured_media.width >= 50 -%}{{ product.featured_media | img_url: '50x' }} 50w,{%- endif -%}
-			  {%- if product.featured_media.width >= 80 -%}{{ product.featured_media | img_url: '80x' }} 80w,{%- endif -%}
-			  {%- if product.featured_media.width >= 100 -%}{{ product.featured_media | img_url: '100x' }} 100w,{%- endif -%}
-			  {%- if product.featured_media.width >= 150 -%}{{ product.featured_media | img_url: '150x' }} 150w,{%- endif -%}
-			  {%- if product.featured_media.width >= 200 -%}{{ product.featured_media | img_url: '300x' }} 200w,{%- endif -%}
-			  {%- if product.featured_media.width >= 300 -%}{{ product.featured_media | img_url: '300x' }} 300w,{%- endif -%}
-			  {{ product.featured_media | img_url: 'master' }} {{ product.featured_media.width }}w
-			"
-			src="{{ product.featured_media | img_url: '100x' }}"
-			sizes="100x"
-			alt="{{ product.featured_media.alt | escape }}"
-			loading="lazy"
-			class="motion-reduce"
-			width="{{ product.featured_media.width }}"
-			height="{{ product.featured_media.height }}"
-		  >
-		</div>
-		<div class="recommendation-product__info">
-		  <h3 id="title-{{ section.id }}-{{ product.id }}">
-			<a href="{{ product.url | default: '#' }}" class="full-unstyled-link">
-			  {{ product.title }}
-			</a>
-		  </h3>
-		  {% render 'price-drawer', product: product, use_variant: true %}
-		</div>
-		<div class="recommendation-product__atc">
-		  {%- if product.selected_or_first_available_variant.available -%}
-			{%- assign product_form_id = 'quick-add-' | append: section.id | append: product.id -%}
-			<product-form data-cart-type="{{ settings.cart_type }}">
-			  {%- form 'product',
-				product,
-				id: product_form_id,
-				class: 'form',
-				novalidate: 'novalidate',
-				data-type: 'add-to-cart-form'
-			  -%}
-				<input
-				  type="hidden"
-				  name="id"
-				  value="{{ product.selected_or_first_available_variant.id }}"
-				  disabled
-				>
-				<button
-				  id="{{ product_form_id }}-submit"
-				  type="submit"
-				  name="add"
-				  class="quick-add__submit button button--secondary"
-				  aria-haspopup="dialog"
-				  aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}"
-				  aria-live="polite"
-				  {% if product.selected_or_first_available_variant.available == false %}
-					disabled
-				  {% endif %}
-				>
-				  <span>
-					{%- if product.selected_or_first_available_variant.available -%}
-					  <span class="text__with-icon">
-						{%- render 'icon-cart' -%}
-						Add
-					  </span>
-					{%- else -%}
-					  {{ 'products.product.sold_out' | t }}
-					{%- endif -%}
-				  </span>
-				  <span class="sold-out-message hidden">
-					{{ 'products.product.sold_out' | t }}
-				  </span>
-				  <div class="loading-overlay__spinner hidden">
-					<svg
-					  aria-hidden="true"
-					  focusable="false"
-					  role="presentation"
-					  class="spinner"
-					  viewBox="0 0 66 66"
-					  xmlns="http://www.w3.org/2000/svg"
-					>
-					  <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-					</svg>
-				  </div>
-				</button>
-			  {%- endform -%}
-			</product-form>
-		  {%- endif -%}
-		</div>
-	  </li>
-  {%- endfor -%}
+    {% comment %} {%- assign product_id = product.id | append: '' -%}
+    {%- unless products_in_cart contains product_id -%}
+    {%- endunless -%} {% endcomment %}
+      <li class="recommendation-product__wrapper slide">
+  
+      {%- if product.selected_or_first_available_variant.available -%}
+        {%- assign product_form_id = 'quick-add-' | append: section.id | append: product.id -%}
+        <product-form data-cart-type="{{ settings.cart_type }}">
+          {%- form 'product',
+          product,
+          id: product_form_id,
+          class: 'form formflex',
+          novalidate: 'novalidate',
+          data-type: 'add-to-cart-form'
+          -%}
+      <div class="recommendation-product__image">
+        <img
+        srcset="
+          {%- if product.featured_media.width >= 50 -%}{{ product.featured_media | img_url: '50x' }} 50w,{%- endif -%}
+          {%- if product.featured_media.width >= 80 -%}{{ product.featured_media | img_url: '80x' }} 80w,{%- endif -%}
+          {%- if product.featured_media.width >= 100 -%}{{ product.featured_media | img_url: '100x' }} 100w,{%- endif -%}
+          {%- if product.featured_media.width >= 150 -%}{{ product.featured_media | img_url: '150x' }} 150w,{%- endif -%}
+          {%- if product.featured_media.width >= 200 -%}{{ product.featured_media | img_url: '300x' }} 200w,{%- endif -%}
+          {%- if product.featured_media.width >= 300 -%}{{ product.featured_media | img_url: '300x' }} 300w,{%- endif -%}
+          {{ product.featured_media | img_url: 'master' }} {{ product.featured_media.width }}w
+        "
+        src="{{ product.featured_media | img_url: '100x' }}"
+        sizes="100x"
+        alt="{{ product.featured_media.alt | escape }}"
+        loading="lazy"
+        class="motion-reduce"
+        width="{{ product.featured_media.width }}"
+        height="{{ product.featured_media.height }}"
+        >
+      </div>
+      <div class="recommendation-product__info">
+        <h3 id="title-{{ section.id }}-{{ product.id }}">
+        <a href="{{ product.url | default: '#' }}" class="full-unstyled-link">
+          {{ product.title }}
+        </a>
+        </h3>
+        {% render 'price-drawer', product: product, use_variant: true %}
+  
+        <div class="quantity-controls"> 
+         
+        <input
+          type="hidden"
+          name="id"
+          value="{{ product.selected_or_first_available_variant.id }}"
+          disabled
+          >
+          <button type="button" class="quantity-control-btn" onclick="decrementQuantity(this)">-</button>
+          <input type="number" name="quantity" class="quantity-input quantity__input" value="1" min="1" max="99">
+          <button type="button" class="quantity-control-btn" onclick="incrementQuantity(this)">+</button>
+          </div>
+      </div>
+      <div class="recommendation-product__atc">
+  
+          <button
+            id="{{ product_form_id }}-submit"
+            type="submit"
+            name="add"
+            class="quick-add__submit button button--secondary"
+            aria-haspopup="dialog"
+            aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}"
+            aria-live="polite"
+            {% if product.selected_or_first_available_variant.available == false %}
+            disabled
+            {% endif %}
+          >
+            <span>
+            {%- if product.selected_or_first_available_variant.available -%}
+              <span class="text__with-icon">
+              Add
+              </span>
+            {%- else -%}
+              {{ 'products.product.sold_out' | t }}
+            {%- endif -%}
+            </span>
+            <span class="sold-out-message hidden">
+            {{ 'products.product.sold_out' | t }}
+            </span>
+            <div class="loading-overlay__spinner hidden">
+            
+            </div>
+          </button>
+  
+        {%- endform -%}
+  
+        </product-form>
+        {%- endif -%}
+      </div>
+      </li>
+    {%- endfor -%}
+  
+</div>
+
+<div class="slider-btn prev-btn" onclick="prevSlide()"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M21 10.5L13.5 18L21 25.5" stroke="#0C176A" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+<div class="slider-btn next-btn" onclick="nextSlide()"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M15 25.5L22.5 18L15 10.5" stroke="#0C176A" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></div>
+</div>
+
+<script>
+let currentIndex = 0;
+
+function prevSlide() {
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = document.querySelectorAll('.slide').length - 1;
+  }
+  updateSlider();
+}
+
+function nextSlide() {
+  if (currentIndex < document.querySelectorAll('.slide').length - 1) {
+    currentIndex++;
+  } else {
+    currentIndex = 0;
+  }
+  updateSlider();
+}
+
+function updateSlider() {
+  const slides = document.querySelector('.slides');
+  slides.style.transform = `translateX(${-currentIndex * 100}%)`;
+}
+</script>
+
+
+
+
+
+
+
+<div class="slider-container">
+<ul class="recommendation-slider">
+
+
+
+  </ul></div>
+
 {%- endcapture -%}
 {%- if recommended_products != empty -%}
-  <div class="cart-drawer__recommendation-wrapper">
-    <div class="cart-drawer__recommendation">
-      <h2 class="recommendation__heading">
-        {%- if cart == empty -%}
-          {{ settings.cart_drawer_collection_title_empty }}
-        {%- else -%}
-          {{ settings.cart_drawer_collection_title }}
-        {%- endif -%}
-      </h2>
-      <ul role="list">
-        {{ recommended_products }}
-      </ul>
-    </div>
+<div class="cart-drawer__recommendation-wrapper">
+  <div class="cart-drawer__recommendation">
+    <h2 class="recommendation__heading">
+      {%- if cart == empty -%}
+        {{ settings.cart_drawer_collection_title_empty }}
+      {%- else -%}
+        {{ settings.cart_drawer_collection_title }}
+      {%- endif -%}
+    </h2>
+    <ul role="list">
+      {{ recommended_products }}
+    </ul>
   </div>
+</div>
 {%- endif -%}

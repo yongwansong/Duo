@@ -376,6 +376,7 @@ section.accordion-Formulated button.accordion {
 	font-size: 20px;
 	display: inline-flex;
 	align-items: center;
+	background: white;
 }
 
 section.accordion-Formulated button.accordion p strong {

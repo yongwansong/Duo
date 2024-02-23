@@ -91,7 +91,6 @@ function setupDomListeners(productId) {
     }
 
     for (const option of sellingPlanGroupOptions) {
-
         option.addEventListener("click", clickOnSellingPlanGroupContainer);
     }
 
@@ -341,7 +340,6 @@ function defaultSelectFirstSellingPlanLoop(variant, productId) {
     const loopPurchaseOptionsContainer = getLoopSubscriptionContainer(
         productId
     );
-
     const loopPurchaseOptions =
         loopPurchaseOptionsContainer.querySelectorAll(
             "input[name=loop_purchase_option]"
@@ -931,7 +929,6 @@ function applySettings({ productId }) {
  * @returns
  */
 function clickOnSellingPlanGroupContainer(event) {
-
     const container =
         event.target.closest(".loop-subscription-group") ||
         event.target.closest(".loop-one-time-purchase-option");
@@ -1042,13 +1039,11 @@ function updateSelectDropDownDefaultValues({
     const sellingPlanGroups =
         window.loopProps[productId].product.selling_plan_groups;
 
-
     if (!Array.isArray(sellingPlanGroups) || !sellingPlanGroups.length) {
         return;
     }
 
     sellingPlanGroups.forEach((spg) => {
-
         if (sellingPlanGroupId !== spg.id) {
             resetSelectDropdown(variant.id, spg.id);
         }
@@ -1137,7 +1132,6 @@ function changeInSellingPlanGroupLoopMobile(
 
 // on change of selling plan group
 function changeInSellingPlanGroupLoop(option) {
-
     let sellingPlanGroupId = option.target.dataset.id;
     let sellingPlanGroupName = option.target.dataset.name;
     let productId = option.target.dataset.productId;
@@ -1175,7 +1169,6 @@ function changeInSellingPlanGroupLoop(option) {
     updatePriceInUI({ productId });
     applyBundleDiscount(productId);
     checkAllowCheckoutIfBundle(productId);
-
 
     let removeElementId = ".loop-selected-selling-plan-group";
     let elements = getLoopSubscriptionContainer(productId).querySelectorAll(
@@ -1220,7 +1213,6 @@ function changeInDeliveryOptionLoop(option) {
     updatePriceInUI({ productId });
     applyBundleDiscount(productId);
     checkAllowCheckoutIfBundle(productId);
-
 }
 
 // discount badge handling
@@ -1372,7 +1364,6 @@ function updateLoopProperties({
     let loopProperties = getLoopSubscriptionContainer(productId).querySelector(
         "#loop-selling-plan-fieldset"
     );
-
     if (variantId) {
         if (
             Number(variantId) !==
@@ -2637,7 +2628,6 @@ async function dispatchLoopAddCartEvent(
   
   document.addEventListener('click', function(event) {
    if (event.target.getAttribute('name') === 'Bottles') {
-
       document.querySelector('.onetimego').click();
       OneTimePurchaseClick()
     }
