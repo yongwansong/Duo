@@ -38,6 +38,14 @@
             "returned_info": "+ 100% Guaranteed - return for full refund if not satisfied",
             "free_shipping_info": "+ Free shipping on orders over $25"
           }
+        },
+        "order_by_message_gJbnCh": {
+          "type": "order-by-message",
+          "settings": {
+            "min_days": 5,
+            "max_days": 12,
+            "order_by_message": "Order today and receive by:"
+          }
         }
       },
       "block_order": [
@@ -46,7 +54,8 @@
         "180df9d7-f979-4be9-8420-83028105b17f",
         "description",
         "buy_buttons",
-        "options_shipping_Ct6xAB"
+        "options_shipping_Ct6xAB",
+        "order_by_message_gJbnCh"
       ],
       "settings": {
         "product_color": "{{ product.metafields.duo.product_color.value }}",
