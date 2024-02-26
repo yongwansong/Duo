@@ -929,15 +929,11 @@ function applySettings({ productId }) {
  * @returns
  */
 function clickOnSellingPlanGroupContainer(event) {
-<<<<<<< HEAD
-    const container =
-=======
 
     if (event.target.name === 'loop_purchase_option') {
         //code test change element price
      }     
         const container =
->>>>>>> feat/pdp-fixed-subcription
         event.target.closest(".loop-subscription-group") ||
         event.target.closest(".loop-one-time-purchase-option");
 
@@ -1141,11 +1137,6 @@ function changeInSellingPlanGroupLoopMobile(
 
 // on change of selling plan group
 function changeInSellingPlanGroupLoop(option) {
-<<<<<<< HEAD
-=======
-
-
->>>>>>> feat/pdp-fixed-subcription
     let sellingPlanGroupId = option.target.dataset.id;
     let sellingPlanGroupName = option.target.dataset.name;
     let productId = option.target.dataset.productId;
