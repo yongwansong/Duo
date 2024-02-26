@@ -46,6 +46,12 @@
             "max_days": 12,
             "order_by_message": "Order today and receive by:"
           }
+        },
+        "link_customization_9CMw3D": {
+          "type": "link_customization",
+          "settings": {
+            "link_custom": "<p><a href=\"https:\/\/duotoothpaste.com\/pages\/subscribe\" title=\"https:\/\/duotoothpaste.com\/pages\/subscribe\">Do you want to create your own Duo combination?<\/a><\/p>"
+          }
         }
       },
       "block_order": [
@@ -55,7 +61,8 @@
         "description",
         "buy_buttons",
         "options_shipping_Ct6xAB",
-        "order_by_message_gJbnCh"
+        "order_by_message_gJbnCh",
+        "link_customization_9CMw3D"
       ],
       "settings": {
         "product_color": "{{ product.metafields.duo.product_color.value }}",
