@@ -247,10 +247,29 @@
           "settings": {
             "heading": "Clean Ingredients"
           }
+        },
+        "text_DLFXXf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.dual.section_ingredients_description | metafield_tag }}<\/p>"
+          }
+        },
+        "collapsible_tab_EeCbxw": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "{{ product.metafields.dual.section_ingredients_question1.value }}",
+            "content": "<p>{{ product.metafields.dual.section_ingredients_response1 | metafield_tag }}<\/p>",
+            "content_comparation_duo": "",
+            "content_comparation_suplement": "",
+            "page": "",
+            "icon": "none"
+          }
         }
       },
       "block_order": [
-        "heading_k3U9N4"
+        "heading_k3U9N4",
+        "text_DLFXXf",
+        "collapsible_tab_EeCbxw"
       ],
       "settings": {
         "image": "{{ product.metafields.dual.section_ingredients_image.value }}",
