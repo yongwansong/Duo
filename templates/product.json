@@ -342,6 +342,25 @@
         "layout": "image_first"
       }
     },
+    "dual_section_teNBbL": {
+      "type": "dual-section",
+      "blocks": {
+        "heading_kbDME7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Plastic-free made easy"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kbDME7"
+      ],
+      "settings": {
+        "image": "{{ product.metafields.dual.section_offer_image.value }}",
+        "height": "adapt",
+        "layout": "text_first"
+      }
+    },
     "164078378666917a43": {
       "type": "apps",
       "blocks": {
@@ -382,6 +401,7 @@
     "image_banner_endrock_CXzanT",
     "dual_section_ULYBE8",
     "dual_section_8whqYN",
+    "dual_section_teNBbL",
     "164078378666917a43",
     "product-recommendations"
   ]
