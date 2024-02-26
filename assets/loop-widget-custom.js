@@ -929,7 +929,15 @@ function applySettings({ productId }) {
  * @returns
  */
 function clickOnSellingPlanGroupContainer(event) {
+<<<<<<< HEAD
     const container =
+=======
+
+    if (event.target.name === 'loop_purchase_option') {
+        //code test change element price
+     }     
+        const container =
+>>>>>>> feat/pdp-fixed-subcription
         event.target.closest(".loop-subscription-group") ||
         event.target.closest(".loop-one-time-purchase-option");
 
@@ -944,6 +952,7 @@ function clickOnSellingPlanGroupContainer(event) {
     if (radio?.dataset?.id !== selectedPlanGroupId) {
         radio.click();
     }
+    
 }
 
 // on variant change
@@ -1132,6 +1141,11 @@ function changeInSellingPlanGroupLoopMobile(
 
 // on change of selling plan group
 function changeInSellingPlanGroupLoop(option) {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> feat/pdp-fixed-subcription
     let sellingPlanGroupId = option.target.dataset.id;
     let sellingPlanGroupName = option.target.dataset.name;
     let productId = option.target.dataset.productId;
@@ -1596,6 +1610,20 @@ function formatPrice(price, moneyFormat, moneyWithoutCurrency) {
     return moneyFormat;
 }
 
+
+function calculatePercentageDifference(priceCompare, priceBase) {
+    // Convertir los valores a dólares
+    let price = priceCompare / 100;
+    let comparePrice = priceBase / 100;
+
+    // Calcular la diferencia y el porcentaje
+    let difference = price - comparePrice;
+    let percentageDifference = (difference / price) * 100;
+
+    // Redondear el resultado a 2 decimales
+    return percentageDifference.toFixed(0);
+}
+
 /**
  * saved price label in percentage/fixed value
  * @param {} priceAdjustments
@@ -1604,14 +1632,24 @@ function formatPrice(price, moneyFormat, moneyWithoutCurrency) {
 function getSavedPriceLabel(productId) {
 
     const priceAdjustments = window.loopProps[productId].sellingPlanPriceAdjustments;
+    const variant = window.loopProps[productId].variant;
+
     if (!Array.isArray(priceAdjustments) || !priceAdjustments.length) {
         return "";
     }
 
+    let percentajeVariant = 0;
+
+    if (variant.compare_at_price) {
+        percentajeVariant = calculatePercentageDifference(variant.compare_at_price, variant.price);
+    }
+
+
     const pa = priceAdjustments[0];
     const containerPercentage = document.querySelector('.price-subscription .save-subscription');
     if (pa.value_type === "percentage") {
-        containerPercentage.innerHTML = `Save ${pa.value}%`;
+        const totalPercentage = pa.value + Number(percentajeVariant);
+        containerPercentage.innerHTML = `Save ${totalPercentage}%`;
     } else {
         containerPercentage.innerHTML = `Save ${loopFormatMoney(pa.value, true)}`;
     }
@@ -1653,26 +1691,36 @@ function updateSellingPlanDescriptionElement(
     }
 }
 
-/* ------------------------------------------------- dev edinson comment*/
+/* -------- dev comment function*/
 
+/**
+ * Handles the change event of a select element. change variant and percentage subscription option
+ * @param {Event} event - The change event.
+ */
 const changeSelect = (event) => {
   
-  const inputQuantity = document.querySelector(".quantity__input");
+  const selectElement = event.target;
+  const selectVariantSubcription = selectElement.value;
 
-  inputQuantity.value = event.target.value;
-  const productId = event.target.dataset.productId;
+  const parent = event.target.closest('product-form');
 
-  changePriceSubcription(event.target.value, productId);
+  const inputVariant = parent.querySelector('input[name="id"]');
+  const priceContainer = parent.querySelector('.price-subcription-custom');
+  const productId = selectElement.dataset.productId;
+  
+  inputVariant.value = selectVariantSubcription;
+
+  setTimeout(() => {
+      priceContainer.click();
+  },300)
+
+
 }
 
-const changePriceSubcription = (quantity, productId) => {
-    const variant = findSelectedVariantLoop(productId);
-    const price = determinePrice(productId, variant);
 
-    updatePricesInUI(price);
-}
 
 function updatePriceInParentElements({ productId }) {
+
     const currentPath = getCurrentPath();
     const productHandle = window?.loopProps[productId]?.product?.handle;
 
@@ -1681,36 +1729,45 @@ function updatePriceInParentElements({ productId }) {
     }
 
     const variant = findSelectedVariantLoop(productId);
-    const price = determinePrice(productId, variant);
+    const { price, comparePrice } = determinePrice(productId, variant);
+
 
     getSavedPriceLabel(productId);
 
-
     loopPriceSelectors.push(`.loop-product-${productId}`);
-    updatePricesInUI(price);
+    updatePricesInUI(price, comparePrice);
 }
 
 function determinePrice(productId, variant) {
     const sellingPlanPrice =
         window?.loopProps[productId]?.sellingPlanAllocation?.price;
 
-    if (sellingPlanPrice) {
-        let quantity = document.querySelector('#select-quantity');
+    const comparePrice = window?.loopProps[productId]?.variant?.compare_at_price;
 
-        if (quantity) {
-            quantity = sellingPlanPrice * quantity.value;
-            return loopFormatMoney(quantity, true);
+    if (sellingPlanPrice) {
+        if (comparePrice) {
+            return {
+                price: loopFormatMoney(sellingPlanPrice, true),
+                comparePrice: loopFormatMoney(comparePrice, true)
+            }
         }
-        return loopFormatMoney(sellingPlanPrice, true);
+   
+        return {
+            price: loopFormatMoney(sellingPlanPrice, true),
+            comparePrice: window?.loopProps[productId]?.variant?.price
+        }
     }
     
-    
-    return loopFormatMoney(variant.price, true);
+    return {
+        price: loopFormatMoney(variant.price, true),
+        comparePrice: null
+    }
 }
 
 
 
-function updatePricesInUI(price) {
+function updatePricesInUI(price, comparePrice) {
+
   
     const priceElement = document.querySelector('.price-subcription-custom');
     
@@ -1718,6 +1775,14 @@ function updatePricesInUI(price) {
         priceElement.innerHTML = `${price}`;
     }
 
+    const containerCompare = document.querySelector('.price-subcription-compare');
+    if (comparePrice) {
+        containerCompare.classList.remove('hidden');
+        containerCompare.textContent = comparePrice;
+        return
+    } 
+
+    containerCompare.classList.add('hidden');
 
 }
 
@@ -2626,12 +2691,12 @@ async function dispatchLoopAddCartEvent(
   
 
   
-  document.addEventListener('click', function(event) {
+ /*  document.addEventListener('click', function(event) {
    if (event.target.getAttribute('name') === 'Bottles') {
       document.querySelector('.onetimego').click();
       OneTimePurchaseClick()
     }
-  });
+  }); */
         updateLegends();
       switchContainer.addEventListener('change', updateLegends);
   });
@@ -2639,6 +2704,7 @@ async function dispatchLoopAddCartEvent(
   
 
   function OneTimePurchaseClick() {
+
     document.querySelector('.loop-one-time-purchase-option-radio').click();
 
     const loopFullWidthElements = document.querySelectorAll('.loop-full-width');
