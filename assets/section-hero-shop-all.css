@@ -74,6 +74,12 @@
 
 @media (max-width: 767px) {
 
+    .hero-banner__video-wrapper {
+        margin-top: 15px!important;
+    }
+
+
+
     .spanenergy, .spansleep, .spanoriginal, .spanimmunity {
         width: 15px!important;
         height: 15px!important;
