@@ -239,6 +239,25 @@
         "sign_2": "Dr. Robert Johnson, DMD, MD"
       }
     },
+    "dual_section_ULYBE8": {
+      "type": "dual-section",
+      "blocks": {
+        "heading_k3U9N4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Clean Ingredients"
+          }
+        }
+      },
+      "block_order": [
+        "heading_k3U9N4"
+      ],
+      "settings": {
+        "image": "{{ product.metafields.dual.section_ingredients_image.value }}",
+        "height": "adapt",
+        "layout": "text_first"
+      }
+    },
     "164078378666917a43": {
       "type": "apps",
       "blocks": {
@@ -277,6 +296,7 @@
     "product-features",
     "icon_rows_endrock_cktCwG",
     "image_banner_endrock_CXzanT",
+    "dual_section_ULYBE8",
     "164078378666917a43",
     "product-recommendations"
   ]
