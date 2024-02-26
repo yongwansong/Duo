@@ -695,6 +695,11 @@
 
 @media (max-width: 768px) {
 
+
+    .custom_product_image img {
+        width: 99%!important;
+    }
+
     .media--transparent {
         padding-bottom: 121%!important;
     }
