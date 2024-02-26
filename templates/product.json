@@ -181,8 +181,9 @@
         "icon_QmGfp7": {
           "type": "icon",
           "settings": {
-            "heading": "Icon",
-            "row_icon_description": "<p>Lorem ipsum letto<\/p>"
+            "heading": "Dentist Created",
+            "row_icon_description": "",
+            "row_icon_image": "shopify:\/\/shop_images\/Caduceus.svg"
           }
         },
         "icon_UmNKFT": {
