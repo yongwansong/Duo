@@ -63,6 +63,17 @@
             "page": "",
             "icon": "none"
           }
+        },
+        "collapsible_tab_6PEUmx": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "{{ product.metafields.dropdown.dropdown_standard_comparation_title.value }}",
+            "content": "<p>{{ product.metafields.dropdown.dropdown_standard_comparation_description | metafield_tag }}<\/p>",
+            "content_comparation_duo": "<p>{{ product.metafields.dropdown.dropdown_standard_comparation_list_duo | metafield_tag }}<\/p>",
+            "content_comparation_suplement": "<p>{{ product.metafields.dropdown.dropdown_standard_comparation_list_suplement | metafield_tag }}<\/p>",
+            "page": "",
+            "icon": "none"
+          }
         }
       },
       "block_order": [
@@ -74,7 +85,8 @@
         "options_shipping_Ct6xAB",
         "order_by_message_gJbnCh",
         "link_customization_9CMw3D",
-        "collapsible_tab_hMVTKW"
+        "collapsible_tab_hMVTKW",
+        "collapsible_tab_6PEUmx"
       ],
       "settings": {
         "product_color": "{{ product.metafields.duo.product_color.value }}",
