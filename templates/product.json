@@ -74,6 +74,15 @@
             "page": "",
             "icon": "none"
           }
+        },
+        "star_subcription_Ky6TNJ": {
+          "type": "star_subcription",
+          "settings": {
+            "star1": "Stay consistent",
+            "star2": "Build healthy routine",
+            "star3": "Free Gifts",
+            "star4": "Exclusive Access"
+          }
         }
       },
       "block_order": [
@@ -86,7 +95,8 @@
         "order_by_message_gJbnCh",
         "link_customization_9CMw3D",
         "collapsible_tab_hMVTKW",
-        "collapsible_tab_6PEUmx"
+        "collapsible_tab_6PEUmx",
+        "star_subcription_Ky6TNJ"
       ],
       "settings": {
         "product_color": "{{ product.metafields.duo.product_color.value }}",
