@@ -370,6 +370,15 @@
         justify-content: normal!important;
     }
 
+    .endrock-featured-collection .products__heading.add-toCart {
+
+        margin: 0 2px;
+    }
+
+    .slick-slide img {
+      
+        padding: 0 2px!important;
+    }
     .item {
         cursor: pointer;
         padding: 14px 10px 10px 10px !important;
