@@ -123,8 +123,16 @@ h2.image-with-text__heading.h3 {
 
 @media (max-width: 550px) {
 
+  .link_color {
+    
+    font-size: 12px!important;
+  }
+
+
+
   .grid__item {
     width: 100%!important;
+    padding: 0;
 }
 
 
@@ -184,7 +192,7 @@ h2.image-with-text__heading.h3 {
   position: relative;
   width: 100%;
   max-width: fit-content !important;
-  padding: 15px 30px;
+  padding: 15px 30px 11px 30px;
   letter-spacing: 1px;
 }
 
@@ -316,9 +324,9 @@ h2.image-with-text__heading.h3 {
     display: none!important;
   }
   .product-with-text_content__text_des {
-      font-size: 12px!important;
+      font-size: 10px!important;
       color: #000;
-      line-height: 11px!important;
+      line-height: 16px!important;
   }
 
   .product-with-text_products .product-with-text__product_item {
@@ -353,6 +361,8 @@ h2.image-with-text__heading.h3 {
   display: block; 
   padding: 10px 5px;
   text-decoration: underline;
+  width: 100%;
+  text-align: right;
 }
 
 .poduct-leg-title {
@@ -641,7 +651,7 @@ h2.image-with-text__heading.h3 {
 
 .poduct-link {
   color: #000;
-  text-align: right;
+  text-align: left!important;
   float: right;
   display: block;
   padding: 5px 0px;
@@ -676,8 +686,13 @@ h2.image-with-text__heading.h3 {
 @media (max-width: 767px) {
 
 
+
+  .bg_call {
+    background: #e1ebf1;
+  }
+
   .image-with-text__content > * + * {
-      margin-bottom: 2rem!important;
+      margin-bottom: 0rem!important;
   }
 
   .link_button-page_cta {
@@ -695,8 +710,8 @@ h2.image-with-text__heading.h3 {
   }
 
   .page-width {
-      background-size: inherit!important;
-      background-position: center left!important;
+    background-size: contain !important;
+    background-position: bottom !important;
   }
 }
 
@@ -802,7 +817,7 @@ h2.image-with-text__heading.h3 {
 /* Call to Action in Lower Section */
 
 .image-with-text__content {
-  padding: 0!important;
+  padding:30px 0px 200px 0px !important;
   gap: 10px!important;
   margin-top: 40px;
 }
@@ -843,7 +858,7 @@ h2.image-with-text__heading.h3 {
   background-size: 100%;
   background-position: center left;
   min-height: 580px;
-  background-size: cover;
+  background-size: cover;background-color: #87e1ba;
 }
 
 @media screen and (min-width: 750px) {
@@ -928,7 +943,7 @@ h2.image-with-text__feat.h3 {
   position: relative;
   width: 100%;
   max-width: fit-content !important;
-  padding: 15px 30px;
+  padding: 15px 30px 10px 30px;
   letter-spacing: 1px;
   border: 2px solid black;
   margin: 0px 60px;
@@ -960,7 +975,7 @@ h2.image-with-text__feat.h3 {
   position: relative;
   width: 100%;
   max-width: fit-content !important;
-  padding: 15px 30px;
+  padding: 15px 30px 10px 30px;
   letter-spacing: 1px;
   border: 2px solid black;
   margin: 0;

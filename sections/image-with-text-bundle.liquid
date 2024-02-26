@@ -40,19 +40,21 @@
   
 }
 
+.text_banner
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 </style>
 <div class="image_banner_text">
-  <div class="grid__item">
+  <div class="grid__item text_banner">
     <div class="image-with-text__content_ image-with-text__content--{{ section.settings.height }}">
       {%- for block in section.blocks -%}
         {% case block.type %}
           {%- when 'heading' -%}
-            <h2 class="image-with-text__heading h1" {{ block.shopify_attributes }}>
-              {{ block.settings.heading | escape }}
-            </h2>
-         <h2 class="image-with-text__heading h2" {{ block.shopify_attributes }}>
-              {{ block.settings.heading2 | escape }}
-            </h2>
+       
          <h2 class="image-with-text__heading h3" {{ block.shopify_attributes }}>
               {{ block.settings.heading3 | escape }}
             </h2>
@@ -81,7 +83,7 @@
       
     </div>
   </div>
-    <div class="grid__item">
+<div class="grid__item">
       <div class="img_text" >
 
       <img class="img_text_" 

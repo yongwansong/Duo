@@ -129,7 +129,7 @@
         "column_YrBmeb": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_647.jpg",
+            "image": "shopify:\/\/shop_images\/subdcribe_img_from_1.jpg",
             "texttitle": "<p>Subscribe + Save<\/p>",
             "text": "<p>Up to 33% off when you put your delivery on auto-pilot. And as always, 100% satisfaction guaranteed.<\/p>"
           }
@@ -137,7 +137,7 @@
         "column_cTYPpd": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_648.jpg",
+            "image": "shopify:\/\/shop_images\/subdcribe_img_from2_1.jpg",
             "texttitle": "<p>Proven ingredients<\/p>",
             "text": "<p>Formulated by dentists with rigorously tested nHa and clean ingredients for optimal oral health.<\/p>"
           }
@@ -145,7 +145,7 @@
         "column_dXEyKT": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_649.jpg",
+            "image": "shopify:\/\/shop_images\/subdcribe_img_from3_1.jpg",
             "texttitle": "<p>Do it for the planet<\/p>",
             "text": "<p>Tablets arrive with recyclable glass bottles & compostable refill pouches.<\/p>"
           }
@@ -175,10 +175,10 @@
         "text_7MMBEW": {
           "type": "text",
           "settings": {
-            "text": "Pick number of bottles. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "text1": "<p><strong>Pick number of bottles.<\/strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <\/p>",
-            "text2": "<p><strong>Choose how often<\/strong>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <\/p>",
-            "text3": "<p><strong>Build your perfect combination. <\/strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <\/p>"
+            "text": "Punchy subheader here. Can go over two lines.",
+            "text1": "<p><strong>Select Your Bottles.<\/strong> Mix and match your favorite formulas<\/p>",
+            "text2": "<p><strong>Choose how often.<\/strong> Get delivery right when you need it.<\/p>",
+            "text3": "<p><strong>Enjoy Your Custom Combo.<\/strong> Edit or cancel anytime.<\/p>"
           }
         },
         "button_Lp4whH": {
@@ -361,21 +361,21 @@
         "column_zcf9HJ": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Five_Star_Icon_f1d3ccb8-0e2d-4d24-859f-0e18d4288725.png",
+            "image": "shopify:\/\/shop_images\/star_1.fw.png",
             "text": "<p><strong>Select Your Bottles. <\/strong>Mix and match your favorite formulas <\/p>"
           }
         },
         "column_B4RKNV": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9065316_mail_email_send_message_icon_1.png",
+            "image": "shopify:\/\/shop_images\/email2_.fw.png",
             "text": "<p><strong>Choose How Often. <\/strong>Get delivery right when you need it.<\/p>"
           }
         },
         "column_8dM3jg": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Star_1.png",
+            "image": "shopify:\/\/shop_images\/cancel_3.fw.png",
             "text": "<p><strong>Enjoy Your Custom Combo.<\/strong> Edit or cancel anytime.<\/p>"
           }
         }
