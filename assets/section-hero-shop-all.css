@@ -796,7 +796,7 @@
 }
 
 .link_info {
-    bottom: 30px;
+    bottom: 20px!important;
     position: absolute;
     margin-left: 30px;
     color: black;
