@@ -1,12 +1,39 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
+    <script src="https://cdn.intelligems.io/ec89d95127a2.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5GW2X6LN');</script>
+    <!-- End Google Tag Manager -->
+        
+    {% render 'replo-head' %}
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10984621771"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'AW-10984621771');
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
-
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    {% if template == 'index' %}
+      <meta name="theme-color" content="#8e8dc4">
+    {% elsif template == 'product' %}
+      <meta name="theme-color" content="{{product.metafields.my_fields.background_color}}">
+    {% endif %}
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
@@ -16,7 +43,11 @@
     {%- endunless -%}
 
     <title>
-      {{ page_title }}
+      {% if template == 'collection' %}
+        Shop tablets
+      {% else %}
+        {{ page_title }}
+      {% endif %}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
@@ -41,6 +72,15 @@
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+      assign body_header_light = settings.type_header_font | font_modify: 'weight', 300
+      assign body_header_normal = settings.type_header_font | font_modify: 'weight', 400
+      assign body_header_extra = settings.type_header_font | font_modify: 'weight', 800
+      assign body_header_black = settings.type_header_font | font_modify: 'weight', 900
+
+      assign body_tertiary_normal = settings.type_tertiary_font | font_modify: 'weight', 400
+      assign body_tertiary = settings.type_tertiary_font
+      assign body_quaternary_normal = settings.type_quaternary_font | font_modify: 'weight', 400
+      assign body_quaternary = settings.type_quaternary_font
     %}
 
     {% style %}
@@ -96,6 +136,7 @@
       } */
 
       :root {
+        --color-base-text: {{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }};
         --color-base-background-1: {{ settings.colors_background_1.red }}, {{ settings.colors_background_1.green }}, {{ settings.colors_background_1.blue }};
         --color-base-background-2: {{ settings.colors_background_2.red }}, {{ settings.colors_background_2.green }}, {{ settings.colors_background_2.blue }};
         --color-base-solid-button-labels: {{ settings.colors_solid_button_labels.red }}, {{ settings.colors_solid_button_labels.green }}, {{ settings.colors_solid_button_labels.blue }};
@@ -361,8 +402,21 @@
       }
     </script>
   </head>
-
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <style class="loop-style"> {% render 'loop-widget-custom.css.liquid' %} </style>
+  <body 
+    class="gradient template--{{ template.name }} 
+    {% unless template contains 'index' %}sub-bg{% endunless %} 
+    {% if template contains 'index' %} home_page{% endif %}
+    bg-main-color 
+    {% if collection.handle == 'all' %} collection_all{%endif %} 
+    {% if collection.handle == 'products' %} collection_all{% endif %} 
+    {% if template contains 'subscriptions-landing' %}subscriptions-landing-page {%endif %}
+    {% if template.name == 'product' %} template-product--{{ product.handle }}{% endif %}">
+    <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GW2X6LN"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
