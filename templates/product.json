@@ -159,6 +159,53 @@
         "product_color": "{{ product.metafields.duo.product_color.value }}"
       }
     },
+    "icon_rows_endrock_cktCwG": {
+      "type": "icon-rows-endrock",
+      "blocks": {
+        "icon_h4JcEk": {
+          "type": "icon",
+          "settings": {
+            "heading": "Vegan",
+            "row_icon_description": "",
+            "row_icon_image": "shopify:\/\/shop_images\/8073475_vegan_vegeterian_eco_sustainable_environment_icon_1.svg"
+          }
+        },
+        "icon_QmGfp7": {
+          "type": "icon",
+          "settings": {
+            "heading": "Icon",
+            "row_icon_description": "<p>Lorem ipsum letto<\/p>"
+          }
+        },
+        "icon_UmNKFT": {
+          "type": "icon",
+          "settings": {
+            "heading": "Icon",
+            "row_icon_description": "<p>Lorem ipsum letto<\/p>"
+          }
+        },
+        "icon_TPjqxk": {
+          "type": "icon",
+          "settings": {
+            "heading": "Icon",
+            "row_icon_description": "<p>Lorem ipsum letto<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "icon_h4JcEk",
+        "icon_QmGfp7",
+        "icon_UmNKFT",
+        "icon_TPjqxk"
+      ],
+      "settings": {
+        "heading": "",
+        "footer_text": "",
+        "slider_mobile": false,
+        "section_margin": false,
+        "width_section": "full-width"
+      }
+    },
     "164078378666917a43": {
       "type": "apps",
       "blocks": {
@@ -195,6 +242,7 @@
   "order": [
     "main",
     "product-features",
+    "icon_rows_endrock_cktCwG",
     "164078378666917a43",
     "product-recommendations"
   ]
