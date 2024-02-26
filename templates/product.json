@@ -11,7 +11,7 @@
         "subtitle": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text": "WHITENING TOOTHPASTE",
             "text_style": "subtitle"
           }
         },
@@ -32,20 +32,11 @@
             "show_dynamic_checkout": false
           }
         },
-        "7c0efd85-ff80-4479-8684-796aad9ce1fa": {
-          "type": "order-by-message",
-          "disabled": true,
+        "options_shipping_Ct6xAB": {
+          "type": "options_shipping",
           "settings": {
-            "min_days": 4,
-            "max_days": 10,
-            "order_by_message": "Order today and receive by:"
-          }
-        },
-        "9b788f9f-1118-4d44-a096-5d5fd2ad8fb3": {
-          "type": "text",
-          "settings": {
-            "text": "Free Shipping on Orders $25+",
-            "text_style": "subtitle"
+            "returned_info": "+ 100% Guaranteed - return for full refund if not satisfied",
+            "free_shipping_info": "+ Free shipping on orders over $25"
           }
         }
       },
@@ -55,8 +46,7 @@
         "180df9d7-f979-4be9-8420-83028105b17f",
         "description",
         "buy_buttons",
-        "7c0efd85-ff80-4479-8684-796aad9ce1fa",
-        "9b788f9f-1118-4d44-a096-5d5fd2ad8fb3"
+        "options_shipping_Ct6xAB"
       ],
       "settings": {
         "product_color": "{{ product.metafields.duo.product_color.value }}",
