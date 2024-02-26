@@ -282,38 +282,50 @@ span {
                           {%- assign value = variant.options[option_index] %}
                           {%- unless values contains value -%}
                             {%- assign values = values | join: ',' | append: ',' | append: value | split: ',' -%}
-                            <input
-                              type="radio"
-                              id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                              name="{{ option.name }}"
-                              value="{{ value | escape }}"
-                              form="{{ product_form_id }}"
-                              {% if forloop.index == '1' %}
-                                checked
-                              {% endif  %}
-                            >
-                            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-value="{{value}}">
-                            
-                              <span class="variant-field__price">
-                                <span class="variant-field__name">
-                                  <div class="checkbox"></div>
-                                  {{ value }}
-                                </span>
-                                
-                                {%- if variant.compare_at_price > variant.price  -%}
-                                  {%- assign discounted_amount = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | money_without_currency | times: 100 | round  -%}
-                                  <span class="variant-field__sale" data-discounted="{{ discounted_amount }}">
-                                    Save {{ discounted_amount }}%
+                            {%- assign is_subscription = true -%}
+                            {%- if variant.metafields.subscription.is_subscription.value == false -%}
+                              {%- assign is_subscription = false -%}
+                            {% endif %}
+
+                              <input
+                                type="radio"
+                                id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                                name="{{ option.name }}"
+                                data-id-variant=" {{ variant.id }}"
+                                value="{{ value | escape }}"
+                                form="{{ product_form_id }}"
+                                {% if forloop.index == 3 %}
+                                  checked
+                                {% endif  %}
+                                class="{% unless is_subscription == false %} hidden {% endunless %}"
+                              >
+                              <label
+                                for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                                data-value="{{value}}"
+                                class="{% unless is_subscription == false %} hidden {% endunless %}"
+                              >
+                              
+                                <span class="variant-field__price">
+                                  <span class="variant-field__name">
+                                    <div class="checkbox"></div>
+                                    {{ value }}
                                   </span>
-                                {%- endif -%}
-                                <div class="price-container">
-                                  {%- if variant.compare_at_price > variant.price -%}
-                                    <s>{{ variant.compare_at_price | money }}</s>
+                                  
+                                  {%- if variant.compare_at_price > variant.price  -%}
+                                    {%- assign discounted_amount = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | money_without_currency | times: 100 | round  -%}
+                                    <span class="variant-field__sale" data-discounted="{{ discounted_amount }}">
+                                      Save {{ discounted_amount }}%
+                                    </span>
                                   {%- endif -%}
-                                  <span>{{ variant.price | money }}</span>
-                                </div>
-                              </span>
-                            </label>
+                                  <div class="price-container">
+                                    {%- if variant.compare_at_price > variant.price -%}
+                                      <s>{{ variant.compare_at_price | money }}</s>
+                                    {%- endif -%}
+                                    <span>{{ variant.price | money }}</span>
+                                  </div>
+                                </span>
+                              </label>
+                            
                         {%- endunless -%}
                       {%- endfor -%}
                       </fieldset>
@@ -338,19 +350,19 @@ span {
                       form="{{ product_form_id }}"
                     >
                       {%- for variant in product.variants -%}
-                      <option
-                        {% if variant == product.selected_or_first_available_variant %}
-                        selected="selected"
-                        {% endif %}
-                        {% if variant.available == false %}
-                        disabled
-                        {% endif %}
-                        value="{{ variant.id }}"
-                      >
-                        {{ variant.title }}
-                        {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
-                        - {{ variant.price | money | strip_html }}
-                      </option>
+                        <option
+                          {% if variant == product.selected_or_first_available_variant %}
+                          selected="selected"
+                          {% endif %}
+                          {% if variant.available == false %}
+                          disabled
+                          {% endif %}
+                          value="{{ variant.id }}"
+                        >
+                          {{ variant.title }}
+                          {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                          - {{ variant.price | money | strip_html }}
+                        </option>
                       {%- endfor -%}
                     </select>
                     {% render 'icon-caret' %}
@@ -391,7 +403,9 @@ span {
                                               {%- assign discounted_amount = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | money_without_currency | times: 100 | round  -%}
               
                                             {%- endif -%}
-                                            <option value="{{ variant.id }}" data-discount="{{ discounted_amount }}"> {{ variant.title }}</option>
+                                            {%- if variant.metafields.subscription.is_subscription.value -%}
+                                              <option value="{{ variant.id }}" data-discount="{{ discounted_amount }}"> {{ variant.title }}</option>
+                                            {%- endif -%}
                                           {% endfor %}  
                                         </select>
                                       </div>

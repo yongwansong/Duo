@@ -932,7 +932,10 @@ function applySettings({ productId }) {
  */
 function clickOnSellingPlanGroupContainer(event) {
 
-    const container =
+    if (event.target.name === 'loop_purchase_option') {
+        //code test change element price
+     }     
+        const container =
         event.target.closest(".loop-subscription-group") ||
         event.target.closest(".loop-one-time-purchase-option");
 
@@ -947,6 +950,7 @@ function clickOnSellingPlanGroupContainer(event) {
     if (radio?.dataset?.id !== selectedPlanGroupId) {
         radio.click();
     }
+    
 }
 
 // on variant change
@@ -1137,6 +1141,7 @@ function changeInSellingPlanGroupLoopMobile(
 
 // on change of selling plan group
 function changeInSellingPlanGroupLoop(option) {
+
 
     let sellingPlanGroupId = option.target.dataset.id;
     let sellingPlanGroupName = option.target.dataset.name;
@@ -1605,6 +1610,20 @@ function formatPrice(price, moneyFormat, moneyWithoutCurrency) {
     return moneyFormat;
 }
 
+
+function calculatePercentageDifference(priceCompare, priceBase) {
+    // Convertir los valores a dólares
+    let price = priceCompare / 100;
+    let comparePrice = priceBase / 100;
+
+    // Calcular la diferencia y el porcentaje
+    let difference = price - comparePrice;
+    let percentageDifference = (difference / price) * 100;
+
+    // Redondear el resultado a 2 decimales
+    return percentageDifference.toFixed(0);
+}
+
 /**
  * saved price label in percentage/fixed value
  * @param {} priceAdjustments
@@ -1613,14 +1632,24 @@ function formatPrice(price, moneyFormat, moneyWithoutCurrency) {
 function getSavedPriceLabel(productId) {
 
     const priceAdjustments = window.loopProps[productId].sellingPlanPriceAdjustments;
+    const variant = window.loopProps[productId].variant;
+
     if (!Array.isArray(priceAdjustments) || !priceAdjustments.length) {
         return "";
     }
 
+    let percentajeVariant = 0;
+
+    if (variant.compare_at_price) {
+        percentajeVariant = calculatePercentageDifference(variant.compare_at_price, variant.price);
+    }
+
+
     const pa = priceAdjustments[0];
     const containerPercentage = document.querySelector('.price-subscription .save-subscription');
     if (pa.value_type === "percentage") {
-        containerPercentage.innerHTML = `Save ${pa.value}%`;
+        const totalPercentage = pa.value + Number(percentajeVariant);
+        containerPercentage.innerHTML = `Save ${totalPercentage}%`;
     } else {
         containerPercentage.innerHTML = `Save ${loopFormatMoney(pa.value, true)}`;
     }
@@ -1713,7 +1742,7 @@ function determinePrice(productId, variant) {
     const sellingPlanPrice =
         window?.loopProps[productId]?.sellingPlanAllocation?.price;
 
-    const comparePrice = window?.loopProps[productId]?.sellingPlanAllocation?.compare_at_price;
+    const comparePrice = window?.loopProps[productId]?.variant?.compare_at_price;
 
     if (sellingPlanPrice) {
         if (comparePrice) {
@@ -1725,7 +1754,7 @@ function determinePrice(productId, variant) {
    
         return {
             price: loopFormatMoney(sellingPlanPrice, true),
-            comparePrice: null
+            comparePrice: window?.loopProps[productId]?.variant?.price
         }
     }
     
@@ -2662,13 +2691,13 @@ async function dispatchLoopAddCartEvent(
   
 
   
-  document.addEventListener('click', function(event) {
+ /*  document.addEventListener('click', function(event) {
    if (event.target.getAttribute('name') === 'Bottles') {
 
       document.querySelector('.onetimego').click();
       OneTimePurchaseClick()
     }
-  });
+  }); */
         updateLegends();
       switchContainer.addEventListener('change', updateLegends);
   });
@@ -2676,6 +2705,7 @@ async function dispatchLoopAddCartEvent(
   
 
   function OneTimePurchaseClick() {
+
     document.querySelector('.loop-one-time-purchase-option-radio').click();
 
     const loopFullWidthElements = document.querySelectorAll('.loop-full-width');
