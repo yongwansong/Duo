@@ -52,6 +52,17 @@
           "settings": {
             "link_custom": "<p><a href=\"https:\/\/duotoothpaste.com\/pages\/subscribe\" title=\"https:\/\/duotoothpaste.com\/pages\/subscribe\">Do you want to create your own Duo combination?<\/a><\/p>"
           }
+        },
+        "collapsible_tab_hMVTKW": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "{{ product.metafields.dropdown.dropdown_table_title.value }}",
+            "content": "<p>{{ product.metafields.dropdown.dropdown_table_list | metafield_tag }}<\/p>",
+            "content_comparation_duo": "",
+            "content_comparation_suplement": "",
+            "page": "",
+            "icon": "check_mark"
+          }
         }
       },
       "block_order": [
@@ -62,7 +73,8 @@
         "buy_buttons",
         "options_shipping_Ct6xAB",
         "order_by_message_gJbnCh",
-        "link_customization_9CMw3D"
+        "link_customization_9CMw3D",
+        "collapsible_tab_hMVTKW"
       ],
       "settings": {
         "product_color": "{{ product.metafields.duo.product_color.value }}",
