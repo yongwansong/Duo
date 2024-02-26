@@ -284,6 +284,67 @@
     <script src="{{ 'swiper.min.js' | asset_url }}"></script>
     <script src="{{ 'slick.min.js' | asset_url }}"></script>
 
+    <!-- Hotjar Tracking Code for my site -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3447842, hjsv: 6 };
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+    <script
+      type="text/javascript"
+      id="loop-subscription-script"
+      defer
+    ></script>
+    <style class="loop-style">
+    </style>
+    {%- if request.path contains 'loop_subscriptions/bundle' -%}
+      {{ 'loop-bundle.css' | asset_url | stylesheet_tag }}
+      <script>
+        jQuery(document).ready(function ($) {
+          var checkExist = setInterval(function () {
+            if (
+              $('.loop .loop-products-available .loop-products-align .loop-card .loop-bundle-product-card-title').length
+            ) {
+              $('.loop .loop-products-available .loop-products-align .loop-card .loop-bundle-product-card-title').each(
+                function () {
+                  var text = $(this).text();
+                  var index = text.indexOf('-');
+                  if (index > 0) {
+                    $(this).text(text.substring(0, index));
+                  }
+                }
+              );
+              clearInterval(checkExist);
+            }
+          }, 100);
+          setTimeout(function () {
+            clearInterval(checkExist);
+          }, 10000);
+        });
+      </script>
+    {%- endif -%}
+  <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "jc8eki133m");
+    </script>
+  
+
+    <script type="text/javascript" id="loop-subscription-script" src="{{ 'loop-widget-custom.js' | asset_url }}"></script>
+
     {%- if settings.predictive_search_enabled -%}
       <link
         rel="stylesheet"
