@@ -176,14 +176,14 @@ h2.image-with-text__heading.h3 {
 }
 
 .btnca {
-  color: #000 !important;
+  color: #fff !important;
   font-family: OldschoolGrotesk-Medium;
   font-weight: 400 !important;
   letter-spacing: -.24px;
   padding: 12.972px 0 11px;
   gap: 9.979px;
   display: flex;
-  background: #73CCEA;
+  background: #00497E;
   max-width: 330px !important;
   line-height: 1;
   text-decoration: none;
@@ -194,6 +194,7 @@ h2.image-with-text__heading.h3 {
   max-width: fit-content !important;
   padding: 15px 30px 11px 30px;
   letter-spacing: 1px;
+  margin-left: 2px;
 }
 
 .btnca:hover{
@@ -335,9 +336,15 @@ h2.image-with-text__heading.h3 {
   }
 }
 
+.numbertxt
+{
+  margin-top: -5px;
+}
+
 .product-with-text_products {
 
   column-gap: 20px!important;
+  padding: 0 10px;
 }
 
 .product-with-text-section .product-with-text-section_wrapper {

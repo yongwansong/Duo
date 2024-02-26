@@ -22,9 +22,9 @@
            
            
             <div class="image-with-text__text rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
-            <div class="textfeat" {{ block.shopify_attributes }}><span Class="numbern">1</span>{{ block.settings.text1 }}</div>
-            <div class="textfeat" {{ block.shopify_attributes }}><span Class="numbern">2</span>{{ block.settings.text2 }}</div>
-            <div class="textfeat" {{ block.shopify_attributes }}><span Class="numbern">3</span>{{ block.settings.text3 }}</div>
+            <div class="textfeat" {{ block.shopify_attributes }}><span Class="numbern">1</span><div Class="numbertxt">{{ block.settings.text1 }}</div></div>
+            <div class="textfeat" {{ block.shopify_attributes }}><span Class="numbern">2</span><div Class="numbertxt">{{ block.settings.text2 }}</div></div>
+            <div class="textfeat" {{ block.shopify_attributes }}><span Class="numbern">3</span><div Class="numbertxt">{{ block.settings.text3 }}</div></div>
 
           {%- endcase -%}
       {%- endfor -%}
