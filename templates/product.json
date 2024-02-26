@@ -6,7 +6,6 @@
         "title": {
           "type": "title",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/nHa-Icon_K.svg"
           }
         },
         "subtitle": {
@@ -35,6 +34,7 @@
         },
         "7c0efd85-ff80-4479-8684-796aad9ce1fa": {
           "type": "order-by-message",
+          "disabled": true,
           "settings": {
             "min_days": 4,
             "max_days": 10,
