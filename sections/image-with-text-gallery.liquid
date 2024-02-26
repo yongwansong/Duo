@@ -1,0 +1,277 @@
+{{ 'section-image-with-text-gallery.css' | asset_url | stylesheet_tag }}
+
+<style>
+    #section--{{ section.id }}{
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+        background: {{ section.settings.bg_color }};
+    }
+
+    @media (max-width: 767px){
+        #section--{{ section.id }}{
+            padding-top: {{ section.settings.mobile_padding_top }}px;
+            padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+            background: transparent;
+        }
+    }
+</style>
+
+<div id="section--{{ section.id }}">
+    <div class="image-with-text__gallery {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">
+        <div class="image-with-text__gallery-container swiper-container">
+            <div class="gallery-wrapper swiper-wrapper">
+                {%- for block in section.blocks -%}
+                    <div class="gallery-list swiper-slide">
+                        {%- if block.settings.gallery_image != blank -%}
+                            <div class="gallery_image-wrapper only--desktop">
+                                <div class="gallery_image" style="padding-bottom: {{ 100 | divided_by: block.settings.gallery_image.aspect_ratio }}%">
+                                    <img
+                                        src="{{ block.settings.gallery_image | img_url: 'master' }}"
+                                        alt="{{ block.settings.gallery_image.alt }}"
+                                        loading="lazy"
+                                    >
+                                </div>
+                            </div>
+                        {%- endif -%}
+                        {%- if block.settings.gallery_mobile_image != blank -%}
+                            <div class="gallery_image-wrapper only--mobile">
+                                <div class="gallery_mobile_image">
+                                    <img
+                                        src="{{ block.settings.gallery_mobile_image | img_url: 'master' }}"
+                                        alt="{{ block.settings.gallery_mobile_image.alt }}"
+                                        loading="lazy"
+                                    >
+                                </div>
+                            </div>
+                        {%- endif -%}
+                        <div class="gallery-info">
+                            <div class="prefix-with-dots">
+                                <h3 class="prefix_heading">{{ block.settings.prefix_heading }}</h3>
+                                <div class="dots-wrapper">
+                                    {% for block in section.blocks %}
+                                        <span class="dot-item {% if forloop.first %}active{% endif %}" data-number="{{ forloop.index }}">{{ forloop.index }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            
+                            <h2 class="heading">{{ block.settings.heading | newline_to_br }}</h2>
+                            <div class="description only--desktop">{{ block.settings.description }}</div>
+                            <p class="mobile_description only--mobile">{{ block.settings.mobile_description }}</p>
+                            <a href="{{ block.settings.btn_link }}" class="button {{block.settings.btn_type}}">{{ block.settings.btn_label }}</a>
+                        </div>
+                    </div>
+                {%- endfor -%}
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-next__wrapper gallery_swiper_buttons">
+                <div class="swiper-button-next swiper_button-item"></div>
+            </div>
+            <div class="swiper-button-prev__wrapper gallery_swiper_buttons">
+                <div class="swiper-button-prev swiper_button-item"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const gallerySwiper = new Swiper('.image-with-text__gallery .swiper-container', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true, 
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '" data-index="'+(index + 1)+'">' + (index + 1) + "</span>";
+        },
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    }
+    
+});
+
+function handleFocus(e, i) {
+  gallerySwiper.slideTo(i);
+}
+
+const gallerySlides = document.querySelectorAll('.endrock-iamge-banner .swiper-container .swiper-slide');
+gallerySlides.forEach((slide, i) => slide.addEventListener('focusin', (e) => handleFocus(e, i)));
+
+document.querySelectorAll('.dots-wrapper').forEach(dotsWrapper => {
+    dotsWrapper.querySelectorAll('.dot-item').forEach(dot=> {
+        dot.addEventListener('click', function(){
+            document.querySelectorAll('.dot-item').forEach(element => {
+                element.classList.remove('active');
+            })
+
+            let number = dot.dataset.number;
+            document.querySelectorAll(`[data-number="${number}"]`).forEach(selectedDot => {
+                selectedDot.classList.add('active');
+            })
+            document.querySelector(`[data-index="${number}"]`).click();
+        })
+    })
+})
+
+document.querySelectorAll('.gallery_swiper_buttons .swiper_button-item').forEach(button => {
+    button.addEventListener('click', function(){
+        document.querySelectorAll('.dot-item').forEach(element => {
+            element.classList.remove('active');
+        })
+        let index = document.querySelector('.image-with-text__gallery .swiper-pagination-bullet-active').dataset.index;
+        document.querySelectorAll(`[data-number="${index}"]`).forEach(selectedDot => {
+            selectedDot.classList.add('active');
+        })
+    })
+})
+
+gallerySwiper.on('slideChange', function () {
+  let index = document.querySelector('.image-with-text__gallery .swiper-pagination-bullet-active').dataset.index;
+    document.querySelectorAll('.dots-wrapper').forEach(element =>{
+        element.querySelectorAll('.dot-item').forEach(item =>{
+            item.classList.remove('active');
+        })
+
+        document.querySelectorAll(`[data-number="${index}"]`).forEach(selectedDot => {
+            selectedDot.classList.add('active');
+        })
+    })
+});
+
+
+</script>
+
+{% schema %}
+    {
+        "name": "Endrock Gallery",
+        "class": "endrock-gallery",
+        "settings": [
+            {
+                "type": "range",
+                "id": "padding_top",
+                "label": "Padding Top",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "label": "Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "mobile_padding_top",
+                "label": "Mobile Padding Top",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "mobile_padding_bottom",
+                "label": "Mobile Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "checkbox",
+                "id": "full_width",
+                "label": "Full Width"
+            },
+            {
+                "type": "color",
+                "id": "bg_color",
+                "label": "Background Color"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "block",
+                "name": "block",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "gallery_image",
+                        "label": "Gallery Image"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "gallery_mobile_image",
+                        "label": "Gallery Mobile Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "prefix_heading",
+                        "label": "Prefix Heading"
+                    },
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "Heading"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "description",
+                        "label": "Description"
+                    },
+                    {
+                        "type": "text",
+                        "id": "mobile_description",
+                        "label": "Mobile Description"
+                    },
+                    {
+                        "type": "url",
+                        "id": "btn_link",
+                        "label": "Button Link"
+                    },
+                    {
+                        "type": "text",
+                        "id": "btn_label",
+                        "label": "Button Label"
+                    },
+                    {
+                        "type": "select",
+                        "id": "btn_type",
+                        "options": [
+                            {
+                            "value": "button--primary",
+                            "label": "Button Primary"
+                            },
+                            {
+                            "value": "button--secondary",
+                            "label": "Button Scrondary"
+                            }
+                        ],
+                        "default": "button--primary",
+                        "label": "Button Type"
+                    }
+                ]
+            }
+        ],
+
+        "presets":[
+            {
+                "name": "Endrock Gallery"
+            }
+        ]
+        
+    }
+{% endschema %}

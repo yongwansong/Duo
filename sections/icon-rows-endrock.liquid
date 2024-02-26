@@ -1,0 +1,163 @@
+{%- comment -%}
+  If you want to get different UI from our customization code.
+  You could change this properties:
+
+  - position_icons: Text orientation -> left | top
+  - slider_mobile: Mobile slider UI -> true | false
+
+{%- endcomment -%}
+
+<!-- eslint-disable max-len -->
+{% liquid
+  assign position_icons = 'top'
+  assign slider_mobile = section.settings.slider_mobile
+%}
+
+<div class="{{ section.settings.width_section }} page-width">
+  {% if section.settings.heading != blank %}
+    {{ section.settings.heading }}
+  {% endif %}
+
+  <div
+    class="flex row-icons__elements
+    {% if slider_mobile %} slider-mobile{% endif %}
+    "
+  >
+    {% for block in section.blocks %}
+      {% if block.settings.row_icon_image != blank %}
+        <div
+          class="row-icons__element {% if position_icons == 'left' %}position__left{% else %}position__top{% endif %}"
+        >
+            {% assign url = block.settings.row_icon_image | image_url
+            %}
+            {% render "render-image"
+              img_src: url,
+              alt: block.settings.row_icon_image,
+              width: "60",
+              height: "60"
+            %}
+
+          {% if block.settings.heading != blank or block.settings.row_icon_description != blank %}
+            <div class="row-icons__description">
+              {% if block.settings.heading != blank %}
+                <h3>
+                  {{ block.settings.heading }}
+                </h3>
+              {% endif %}
+
+              {% if block.settings.row_icon_description != blank %}
+                <div>{{ block.settings.row_icon_description }}</div>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  {% if section.settings.footer_text != blank %}
+    <h3 class="footer-description">
+      {{ section.settings.footer_text }}
+    </h3>
+  {% endif %}
+</div>
+
+{% if section.settings.section_margin %}
+  <div class="margin-section"></div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Row icons",
+    "class": "row-icons wrapper",
+    "tag": "div",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "heading",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "footer_text",
+        "label": "Footer description",
+        "default": "Doux pour la peaux, doux pour la planète"
+      },
+      {
+        "type": "checkbox",
+        "id": "slider_mobile",
+        "label": "Slider mobile ?",
+        "default": true,
+        "info": "switch the view in mobile between slide and grid"
+      },
+      {
+        "type": "checkbox",
+        "id": "section_margin",
+        "label": "Margin on section",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "width_section",
+        "label": "Width section",
+        "options": [
+          {
+            "value": "full-width",
+            "label": "Full width"
+          },
+          {
+            "value": "medium-width",
+            "label": "Medium"
+          }
+        ],
+        "default": "full-width"
+      }
+    ],
+    "max_blocks": 6,
+    "blocks": [
+      {
+        "name": "List items",
+        "type": "icon",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Title",
+            "default": "Icon"
+          },
+          {
+            "type": "richtext",
+            "id": "row_icon_description",
+            "label": "Description",
+            "default": "<p>Lorem ipsum letto</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "row_icon_image",
+            "info": "size: 80x80 px. Add file name (.svg)",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Row icons",
+        "blocks": [
+          {
+            "type": "icon"
+          },
+          {
+            "type": "icon"
+          },
+          {
+            "type": "icon"
+          },
+          {
+            "type": "icon"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

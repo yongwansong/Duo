@@ -102,6 +102,10 @@ function setupDomListeners(productId) {
         option.addEventListener("change", changeInDeliveryOptionLoop);
     }
     log(`setup dom listeners complete for ${productId}`);
+
+
+    const selectQuantity = document.querySelector("#select-quantity");
+    selectQuantity.addEventListener("change", (e) => changeSelect(e))
 }
 
 /**
@@ -925,19 +929,26 @@ function applySettings({ productId }) {
  * @returns
  */
 function clickOnSellingPlanGroupContainer(event) {
-    const container =
+
+    if (event.target.name === 'loop_purchase_option') {
+        //code test change element price
+     }     
+        const container =
         event.target.closest(".loop-subscription-group") ||
         event.target.closest(".loop-one-time-purchase-option");
 
     if (!container) return;
-
+    
     const radio = container.querySelector('input[type="radio"]');
+
+
     const selectedPlanGroupId =
         window.loopProps[radio.dataset.productId]?.sellingPlanGroupId;
 
     if (radio?.dataset?.id !== selectedPlanGroupId) {
         radio.click();
     }
+    
 }
 
 // on variant change
@@ -997,7 +1008,7 @@ function defaultSelectOneTimePurchaseOption(variant, productId) {
 function loopInit({ productId, product, variantId }) {
     updateLoopProperties({ product, productId, variantId });
     const selectedVariant = findSelectedVariantLoop(productId, variantId);
-    toggleVariantDisplay(product, selectedVariant.id);
+    //toggleVariantDisplay(product, selectedVariant.id);
     checkVariantsSellingPlanAllocation(selectedVariant, productId);
     applyDefaultSelectionBasedOnSettings(selectedVariant, productId);
     applySettings({ productId });
@@ -1196,7 +1207,9 @@ function changeInSellingPlanGroupLoop(option) {
 }
 
 function changeInDeliveryOptionLoop(option) {
+    
     let sellingPlanId = option.target.value;
+
     let productId = option.target.dataset.productId;
     updateLoopProperties({ productId, sellingPlanId });
     updatePriceInParentElements({ productId });
@@ -1474,6 +1487,8 @@ function updateLoopProperties({
             hiddenInput.type = "hidden";
             hiddenInput.name = "selling_plan";
             hiddenInput.value = selectedSellingPlanId;
+
+
             form.appendChild(hiddenInput);
         });
     hideBundleSPG(productId);
@@ -1586,21 +1601,48 @@ function formatPrice(price, moneyFormat, moneyWithoutCurrency) {
     return moneyFormat;
 }
 
+
+function calculatePercentageDifference(priceCompare, priceBase) {
+    // Convertir los valores a dólares
+    let price = priceCompare / 100;
+    let comparePrice = priceBase / 100;
+
+    // Calcular la diferencia y el porcentaje
+    let difference = price - comparePrice;
+    let percentageDifference = (difference / price) * 100;
+
+    // Redondear el resultado a 2 decimales
+    return percentageDifference.toFixed(0);
+}
+
 /**
  * saved price label in percentage/fixed value
  * @param {} priceAdjustments
  * @returns
  */
-function getSavedPriceLabel(priceAdjustments) {
+function getSavedPriceLabel(productId) {
+
+    const priceAdjustments = window.loopProps[productId].sellingPlanPriceAdjustments;
+    const variant = window.loopProps[productId].variant;
+
     if (!Array.isArray(priceAdjustments) || !priceAdjustments.length) {
         return "";
     }
 
+    let percentajeVariant = 0;
+
+    if (variant.compare_at_price) {
+        percentajeVariant = calculatePercentageDifference(variant.compare_at_price, variant.price);
+    }
+
+
     const pa = priceAdjustments[0];
+    const containerPercentage = document.querySelector('.price-subscription .save-subscription');
     if (pa.value_type === "percentage") {
-        return `Save ${pa.value}%`;
+        const totalPercentage = pa.value + Number(percentajeVariant);
+        containerPercentage.innerHTML = `Save ${totalPercentage}%`;
     } else {
-        return `Save ${loopFormatMoney(pa.value, true)}`;
+        containerPercentage.innerHTML = `Save ${loopFormatMoney(pa.value, true)}`;
     }
 }
 
@@ -1640,7 +1682,36 @@ function updateSellingPlanDescriptionElement(
     }
 }
 
+/* -------- dev comment function*/
+
+/**
+ * Handles the change event of a select element. change variant and percentage subscription option
+ * @param {Event} event - The change event.
+ */
+const changeSelect = (event) => {
+  
+  const selectElement = event.target;
+  const selectVariantSubcription = selectElement.value;
+
+  const parent = event.target.closest('product-form');
+
+  const inputVariant = parent.querySelector('input[name="id"]');
+  const priceContainer = parent.querySelector('.price-subcription-custom');
+  const productId = selectElement.dataset.productId;
+  
+  inputVariant.value = selectVariantSubcription;
+
+  setTimeout(() => {
+      priceContainer.click();
+  },300)
+
+
+}
+
+
+
 function updatePriceInParentElements({ productId }) {
+
     const currentPath = getCurrentPath();
     const productHandle = window?.loopProps[productId]?.product?.handle;
 
@@ -1649,30 +1720,62 @@ function updatePriceInParentElements({ productId }) {
     }
 
     const variant = findSelectedVariantLoop(productId);
-    const price = determinePrice(productId, variant);
+    const { price, comparePrice } = determinePrice(productId, variant);
+
+    console.log({ price, comparePrice });
+
+    getSavedPriceLabel(productId);
 
     loopPriceSelectors.push(`.loop-product-${productId}`);
-    updatePricesInUI(price);
+    updatePricesInUI(price, comparePrice);
 }
 
 function determinePrice(productId, variant) {
     const sellingPlanPrice =
         window?.loopProps[productId]?.sellingPlanAllocation?.price;
 
+    const comparePrice = window?.loopProps[productId]?.variant?.compare_at_price;
+
     if (sellingPlanPrice) {
-        return loopFormatMoney(sellingPlanPrice, true);
+        if (comparePrice) {
+            return {
+                price: loopFormatMoney(sellingPlanPrice, true),
+                comparePrice: loopFormatMoney(comparePrice, true)
+            }
+        }
+   
+        return {
+            price: loopFormatMoney(sellingPlanPrice, true),
+            comparePrice: loopFormatMoney(window?.loopProps[productId]?.variant?.price, true)
+        }
     }
-    return loopFormatMoney(variant.price, true);
+    
+    return {
+        price: loopFormatMoney(variant.price, true),
+        comparePrice: null
+    }
 }
 
-function updatePricesInUI(price) {
-    return; //uncomment this to enable parent price update in PDP
-    loopPriceSelectors.forEach((selector) => {
-        const priceElement = document.querySelector(selector);
-        if (priceElement) {
-            priceElement.innerHTML = `${price}`;
-        }
-    });
+
+
+function updatePricesInUI(price, comparePrice) {
+
+  
+    const priceElement = document.querySelector('.price-subcription-custom');
+    
+    if (priceElement) {
+        priceElement.innerHTML = `${price}`;
+    }
+
+    const containerCompare = document.querySelector('.price-subcription-compare');
+    if (comparePrice) {
+        containerCompare.classList.remove('hidden');
+        containerCompare.textContent = comparePrice;
+        return
+    } 
+
+    containerCompare.classList.add('hidden');
+
 }
 
 function updatePriceInUI({ productId }) {
@@ -2580,12 +2683,12 @@ async function dispatchLoopAddCartEvent(
   
 
   
-  document.addEventListener('click', function(event) {
+ /*  document.addEventListener('click', function(event) {
    if (event.target.getAttribute('name') === 'Bottles') {
       document.querySelector('.onetimego').click();
       OneTimePurchaseClick()
     }
-  });
+  }); */
         updateLegends();
       switchContainer.addEventListener('change', updateLegends);
   });
@@ -2593,6 +2696,7 @@ async function dispatchLoopAddCartEvent(
   
 
   function OneTimePurchaseClick() {
+
     document.querySelector('.loop-one-time-purchase-option-radio').click();
 
     const loopFullWidthElements = document.querySelectorAll('.loop-full-width');

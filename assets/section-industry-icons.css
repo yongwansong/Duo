@@ -1,0 +1,133 @@
+.industry-icons_container{
+    display: flex;
+    gap: 36px;
+    justify-content: space-between;
+    padding: 0 110px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+@media (min-width:1000px) {
+    .industry-icons_container{
+        padding: 0 104px;
+    }
+}
+
+@media (min-width:1250px) {
+    .industry-icons_container{
+        padding: 0 90px;
+    }
+}
+
+@media (min-width:1440px) {
+    .industry-icons_container{
+        padding: 0 140px;
+    }
+}
+
+@media (max-width: 920px) {
+    .industry-icons_container{
+        padding: 0 60px !important;
+    }
+}
+
+
+.icons-mobile__wrapper .icon-mobile__list img{
+    width: 100%;
+    height: 50px;
+    object-fit: contain;
+}
+
+.industry-icons_container .icons-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    justify-content: space-between;
+}
+
+.industry-icons_container p{
+    color: #000;
+    font-family: "Schnyder-SLight";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: -0.48px;
+    margin: 0;
+}
+
+@media (max-width: 1000px){
+  .industry-icons_container p{
+    font-size: 25px;
+  }
+}
+
+.industry-icons_container .icons-wrapper .icon-list img{
+    width: 100%;
+}
+
+.industry-icons_container .icons-wrapper .icon-list a{
+    display: block;
+    cursor: pointer;
+}
+
+.industry-icons_container .icons-wrapper .icon-list:first-of-type{
+    width: 108px;
+    height: auto;
+    object-fit: cover;
+}
+
+.industry-icons_container .icons-wrapper .icon-list:nth-child(2){
+  width: 92px;
+}
+
+.industry-icons_container .icons-wrapper .icon-list:nth-child(4){
+  width: 60px;
+}
+
+.industry-icons_container .icons-wrapper .icon-list:last-of-type{
+  width: 133px;
+}
+
+@media (max-width: 1200px) {
+    .industry-icons_container{
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 950px){
+  .industry-icons_container .icons-wrapper{
+    gap: 35px!important;
+  }
+}
+
+@media (max-width: 767px) {
+    .industry-icons_container{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 !important;
+        gap: 24px;
+    }
+
+    .industry-icons_container .mobile_heading{
+        color: #000;
+        font-family: 'Schnyder-SLight';
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 36px;
+        margin: 0 0 24px;
+    }
+
+    .industry-icons_container .icons-wrapper{
+        flex-wrap: wrap;
+    }
+
+    .industry-icons_container .icons-wrapper .icon-list{
+        width: 25%;
+    }
+
+    .industry-icons_container .heading{
+        margin-bottom: 30px;
+    }
+}

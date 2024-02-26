@@ -149,6 +149,7 @@ class QuantityInput extends HTMLElement {
 
   onButtonClick(event) {
     event.preventDefault();
+    console.log("changes QUANTITY");
     const previousValue = this.input.value;
 
     event.target.name === 'plus' ? this.input.stepUp() : this.input.stepDown();
@@ -405,7 +406,7 @@ class HeaderDrawer extends MenuDrawer {
   }
 
   openMenuDrawer(summaryElement) {
-    this.header = this.header || document.getElementById('shopify-section-header');
+    this.header = this.header || document.querySelector('.endrock-header');
     this.borderOffset = this.borderOffset || this.closest('.header-wrapper').classList.contains('header-wrapper--border-bottom') ? 1 : 0;
     document.documentElement.style.setProperty('--header-bottom-position', `${parseInt(this.header.getBoundingClientRect().bottom - this.borderOffset)}px`);
 

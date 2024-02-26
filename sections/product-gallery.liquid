@@ -1,0 +1,420 @@
+{{ 'section-product-gallery.css' | asset_url | stylesheet_tag }}
+
+<style>
+    #section--{{ section.id }}{
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    @media (max-width: 767px){
+        #section--{{ section.id }}{
+            padding-top: {{ section.settings.mobile_padding_top }}px;
+            padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+        }
+
+        {% for block in section.blocks %}
+            #block--{{ block.id }} .text-wrapper{
+                background: {{ block.settings.bg_color }};
+            }
+
+            #block--{{ block.id }} .mobile_button{
+                background: {{ block.settings.bg_color }};
+            }
+        {% endfor %}
+    }
+</style>
+
+<div id="section--{{ section.id }}">
+    <div class="product-gallery-wrapper {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">
+        <div class="swiper-container">
+            <!-- swiper slides -->
+            <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                    <div id="block--{{ block.id }}" class="product-wrapper swiper-slide">
+                        <div class="text-wrapper only--mobile">
+                            <div class="text-wrapper__container">
+                                <div class="heading">{{ block.settings.mobile_heading }}</div>
+                                <p class="description">{{ block.settings.mobile_description}}</p>
+                            </div>
+                        </div>
+                        {% if block.settings.image != blank %}
+                            <div class="image only--desktop" style="padding-bottom: {{ 100 | divided_by: block.settings.image.aspect_ratio }}%">
+                                <img
+                                    src="{{ block.settings.image | img_url: 'master' }}"
+                                    alt="{{ block.settings.image.alt }}"
+                                    loading="lazy"
+                                >
+                            </div>
+                        {% endif %}
+                        {% if block.settings.mobile_image != blank %}
+                            <div class="mobile_image only--mobile">
+                                <img
+                                    src="{{ block.settings.mobile_image | img_url: 'master' }}"
+                                    alt="{{ block.settings.mobile_image.alt }}"
+                                    loading="lazy"
+                                >
+
+                                <div class="product-info only--mobile {{ block.settings.product_info_position }} {{ block.settings.product_info_mobile_position }}">
+                                    {% assign product_card_product = block.settings.product %}
+                                    <div class="product-title">
+                                        <a href="{{ product_card_product.url }}">
+                                            <p>{{ product_card_product.title }}</p>
+                                            <p class="card metasubtitle-fp">{{ product_card_product.metafields.my_fields.feature_product_subtitle }}</p>
+                                        </a>
+                                    </div>
+                                    {%- if product_card_product.selected_or_first_available_variant.available -%}
+                                        {%- assign product_form_id = 'quick-add-' | append: section.id | append: product_card_product.id -%}
+                                        <product-form data-cart-type="{{ settings.cart_type }}">
+                                            {%- form 'product',
+                                                product_card_product,
+                                                id: product_form_id,
+                                                class: 'form',
+                                                novalidate: 'novalidate',
+                                                data-type: 'add-to-cart-form'
+                                            -%}
+                                            {% comment %} {% render 'loop-subscriptions' type: 'product-widget', product: product %} {% endcomment %}
+
+                                                <div class="{{ product_card_product.title| downcase }} products__heading">
+                                                    <input
+                                                        type="hidden"
+                                                        name="id"
+                                                        value="{{ product_card_product.selected_or_first_available_variant.id }}"
+                                                        disabled
+                                                    >
+                                                        
+                                                    <span class="product-price">{{ product_card_product.price | money | remove: '.00' }} | </span>
+                                                        <span class="add-to-cart-message">
+                                                        {%- if product_card_product.selected_or_first_available_variant.available -%}
+                                                            {{ 'products.product.add_to_cart' | t }}
+                                                        {%- else -%}
+                                                            {{ 'products.product.sold_out' | t }}
+                                                        {%- endif -%}
+                                                        </span>
+                                                        <span class="added-message hidden">Added</span>
+                                                        <span class="sold-out-message hidden">
+                                                        {{ 'products.product.sold_out' | t }}
+                                                        </span>
+                                                        <div class="loading-overlay__spinner hidden">
+                                                        <svg
+                                                            aria-hidden="true"
+                                                            focusable="false"
+                                                            role="presentation"
+                                                            class="spinner"
+                                                            viewBox="0 0 66 66"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                                        </svg>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            {%- endform -%}
+                                        </product-form>
+                                    {%- endif -%}
+                                </div>
+                            </div>
+                        {% endif %}
+                        <div class="mobile_button">
+                            <a class="button only--mobile {{ block.settings.btn_type }}" href="{{ block.settings.btn_link }}">{{ block.settings.btn_label }}</a>
+                        </div>
+                        <div class="text-wrapper only--desktop">
+                            <div class="text-wrapper__container">
+                                <div class="heading">{{ block.settings.heading }}</div>
+                                <div class="description">{{ block.settings.description | newline_to_br}}</div>
+                                <a class="button {{ block.settings.btn_type }}" href="{{ block.settings.btn_link }}">{{ block.settings.btn_label }}</a>
+                            </div>
+                        </div>
+                        <div class="product-info only--desktop {{ block.settings.product_info_position }} {{ block.settings.product_info_mobile_position }}">
+                            {% assign product_card_product = block.settings.product %}
+                            <div class="product-title">
+                                <a href="{{ product_card_product.url }}">
+                                    <p>{{ product_card_product.title }}</p>
+                                    <p class="card metasubtitle-fp">{{ product_card_product.metafields.my_fields.feature_product_subtitle }}</p>
+                                </a>
+                            </div>
+                            {%- if product_card_product.selected_or_first_available_variant.available -%}
+                                {%- assign product_form_id = 'quick-add-' | append: section.id | append: product_card_product.id -%}
+                                <product-form data-cart-type="{{ settings.cart_type }}">
+                                    {%- form 'product',
+                                        product_card_product,
+                                        id: product_form_id,
+                                        class: 'form',
+                                        novalidate: 'novalidate',
+                                        data-type: 'add-to-cart-form'
+                                    -%}
+                                    {% comment %} {% render 'loop-subscriptions' type: 'product-widget', product: product %} {% endcomment %}
+
+                                        <div class="{{ product_card_product.title| downcase }} products__heading">
+                                            <input
+                                                type="hidden"
+                                                name="id"
+                                                value="{{ product_card_product.selected_or_first_available_variant.id }}"
+                                                disabled
+                                            >
+                                                
+                                            <button
+                                                id="{{ product_form_id }}-submit"
+                                                type="submit"
+                                                name="add"
+                                                class="quick-add__submit cllctnadd"
+                                                aria-haspopup="dialog"
+                                                aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product_card_product.id }}"
+                                                aria-live="polite"
+                                                {% if product_card_product.selected_or_first_available_variant.available == false %}
+                                                disabled
+                                                {% endif %}
+                                            ><span class="product-price">{{ product_card_product.price | money | remove: '.00' }} | </span>
+                                                <span class="add-to-cart-message">
+                                                {%- if product_card_product.selected_or_first_available_variant.available -%}
+                                                    {{ 'products.product.add_to_cart' | t }}
+                                                {%- else -%}
+                                                    {{ 'products.product.sold_out' | t }}
+                                                {%- endif -%}
+                                                </span>
+                                                <span class="added-message hidden">Added</span>
+                                                <span class="sold-out-message hidden">
+                                                {{ 'products.product.sold_out' | t }}
+                                                </span>
+                                                <div class="loading-overlay__spinner hidden">
+                                                <svg
+                                                    aria-hidden="true"
+                                                    focusable="false"
+                                                    role="presentation"
+                                                    class="spinner"
+                                                    viewBox="0 0 66 66"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                                </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    {%- endform -%}
+                                </product-form>
+                            {%- endif -%}
+                        </div>
+                        
+                    </div>
+                {% endfor %}
+            </div>
+            <!-- next / prev arrows -->
+            <div class="swiper-button-wrapper">
+                <div class="swiper-button-next__wrapper swiper_buttons">
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper-button-prev__wrapper swiper_buttons">
+                   <div class="swiper-button-prev"></div>
+                </div>
+                
+            </div>
+            
+            <!-- !next / prev arrows -->
+
+            <!-- pagination dots -->
+            <div class="swiper-pagination"></div>
+            <!-- !pagination dots -->
+        </div>
+    </div>
+</div>
+
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+<script>
+    const swiper = new Swiper('.product-gallery-wrapper .swiper-container', {
+        direction: 'horizontal',
+        slidesPerView: 1,
+        loop: true,
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        },
+    });
+
+    function handleFocus(e, i) {
+    swiper.slideTo(i);
+    }
+
+    const slides = document.querySelectorAll('.product-gallery-wrapper .swiper-container .swiper-slide');
+    slides.forEach((slide, i) => slide.addEventListener('focusin', (e) => handleFocus(e, i)));
+</script>
+
+{% schema %}
+    {
+        "name": "product gallery",
+        "class": "product-gallery",
+        "settings": [
+             {
+                "type": "range",
+                "id": "padding_top",
+                "label": "Padding Top",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "label": "Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "mobile_padding_top",
+                "label": "Mobile Padding Top",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "mobile_padding_bottom",
+                "label": "Mobile Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "checkbox",
+                "id": "full_width",
+                "label": "Full Width"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "product",
+                "name": "product",
+                "settings": [
+                    {
+                        "type": "color",
+                        "id": "bg_color",
+                        "label": "Background Color"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "mobile_image",
+                        "label": "Mobile Image"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "heading",
+                        "label": "Heading"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "mobile_heading",
+                        "label": "Mobile Heading",
+                        "default": "<p>Heading</p>"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "description",
+                        "label": "Description",
+                        "default": "<p>Description</p>"
+                    },
+                    {
+                        "type": "text",
+                        "id": "mobile_description",
+                        "label": "Mobile Description"
+                    },
+                    {
+                        "type": "url",
+                        "id": "btn_link",
+                        "label": "Button Link"
+                    },
+                    {
+                        "type": "text",
+                        "id": "btn_label",
+                        "label": "Button Label",
+                        "default": "Button"
+                    },
+                    {
+                        "type": "select",
+                        "id": "btn_type",
+                        "options": [
+                            {
+                            "value": "button--primary",
+                            "label": "Button Primary"
+                            },
+                            {
+                            "value": "button--secondary",
+                            "label": "Button Scrondary"
+                            }
+                        ],
+                        "default": "button--primary",
+                        "label": "Button Type"
+                    },
+                    {
+                        "type": "product",
+                        "id": "product",
+                        "label": "Product"
+                    },
+                    {
+                        "type": "select",
+                        "id": "product_info_position",
+                        "options": [
+                            {
+                                "value": "top",
+                                "label": "Top"
+                            },
+                            {
+                                "value": "middle",
+                                "label": "Middle"
+                            },
+                            {
+                                "value": "bottom",
+                                "label": "Bottom"
+                            }
+                        ],
+                        "default": "middle",
+                        "label": "Product Info Position"
+                    },
+                    {
+                        "type": "select",
+                        "id": "product_info_mobile_position",
+                        "options": [
+                            {
+                                "value": "mobile_top",
+                                "label": "Top"
+                            },
+                            {
+                                "value": "mobile_middle",
+                                "label": "Middle"
+                            },
+                            {
+                                "value": "Mobile bottom",
+                                "label": "Bottom"
+                            }
+                        ],
+                        "default": "mobile_middle",
+                        "label": "Product Info Mobile Position"
+                    }
+                ]
+            }
+        ],
+        "presets":[
+            {
+                "name":"product gallery"
+            }
+        ]
+        
+    }
+{% endschema %}

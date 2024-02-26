@@ -1,0 +1,13 @@
+{% assign list_content = content | strip_html | split: '/'  %}
+<div class="content-table">
+  {% for item in list_content %}
+    {% assign title = item | split: '|' | first %}
+    {% assign content = item | split: '|' | last %}
+  <div class="table-rows">
+    <div class="title">{{ title }}</div>
+    <div class="dots"></div>
+    <div class="content">{{content}}</div>
+  </div>
+   
+  {% endfor %}
+</div>

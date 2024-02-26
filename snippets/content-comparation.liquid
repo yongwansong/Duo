@@ -1,0 +1,32 @@
+{% assign content_duo = block.settings.content_comparation_duo | strip_html %}
+{% assign content_suplement = block.settings.content_comparation_suplement | strip_html %}
+
+{% assign content_duo_list = content_duo | split: '/'  %}
+{% assign content_suplement_list = content_suplement | split: '/'  %}
+
+<div class="comparation-dropdown">
+  <div class="comparation-dropdown__container-duo">
+    {% render 'icon-duo' %}
+    <div class="comparation-dropdown__list-duo">
+      <ul>
+        {% for item in content_duo_list %}
+        <li>
+          {% render 'icon-check' %} {{ item }}
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="comparation-dropdown__container-suplement">
+    Standard Supplement Pills
+    <div class="comparation-dropdown__list-suplement">
+      <ul>
+        {% for item in content_suplement_list %}
+          <li>
+            {% render 'icon-list-none' %} {{ item }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

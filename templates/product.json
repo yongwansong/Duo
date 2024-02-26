@@ -6,51 +6,24 @@
         "title": {
           "type": "title",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/nHa-Icon_K.svg"
           }
         },
-        "subtitle": {
+        "caption": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text": "WHITENING TOOTHPASTE",
             "text_style": "subtitle"
           }
         },
-        "180df9d7-f979-4be9-8420-83028105b17f": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "okendo_star_rating_YWKTFH": {
+          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}"
-          }
-        },
-        "18db48ee-d83d-4c27-8017-7e8d97a2009b": {
-          "type": "social-proof-units",
-          "disabled": true,
-          "settings": {
-            "social_proof_msg": "250,000+ Tablets Sold Since Launch!"
           }
         },
         "description": {
           "type": "description",
           "settings": {
-          }
-        },
-        "ce90f502-2d3a-49ec-a41d-dd6ab562129c": {
-          "type": "pick_function",
-          "settings": {
-            "label": "Pick your function",
-            "products": [
-              "original",
-              "immunity",
-              "energy",
-              "sleep"
-            ],
-            "details": "<ul><li>100% guaranteed—return for full refund if not satisfied<\/li><li>Absorb vitamins and supplements as you brush<\/li><\/ul>"
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
           }
         },
         "buy_buttons": {
@@ -59,698 +32,368 @@
             "show_dynamic_checkout": false
           }
         },
-        "7c0efd85-ff80-4479-8684-796aad9ce1fa": {
+        "options_shipping_H4DGYX": {
+          "type": "options_shipping",
+          "settings": {
+            "returned_info": "+ 100% Guaranteed - return for full refund if not satisfied",
+            "free_shipping_info": "+ Free shipping on orders over $25"
+          }
+        },
+        "order_by_message_gFTdHq": {
           "type": "order-by-message",
           "settings": {
-            "min_days": 4,
-            "max_days": 10,
+            "min_days": 5,
+            "max_days": 12,
             "order_by_message": "Order today and receive by:"
           }
         },
-        "9b788f9f-1118-4d44-a096-5d5fd2ad8fb3": {
-          "type": "text",
+        "link_customization_KqLxw6": {
+          "type": "link_customization",
           "settings": {
-            "text": "Free Shipping on Orders $25+",
-            "text_style": "subtitle"
+            "link_custom": "<p><a href=\"https:\/\/duotoothpaste.com\/pages\/subscribe\" title=\"https:\/\/duotoothpaste.com\/pages\/subscribe\">Want to mix-and-match? create your custom routine<\/a><\/p>"
+          }
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "{{ product.metafields.dropdown.dropdown_table_title.value }}",
+            "content": "<p>{{ product.metafields.dropdown.dropdown_table_list | metafield_tag }}<\/p>",
+            "content_comparation_duo": "",
+            "content_comparation_suplement": "",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "{{ product.metafields.dropdown.dropdown_standard_comparation_title.value }}",
+            "content": "{{ product.metafields.dropdown.dropdown_standard_comparation_description | metafield_tag }}",
+            "content_comparation_duo": "<p>{{ product.metafields.dropdown.dropdown_standard_comparation_list_duo | metafield_tag }}<\/p>",
+            "content_comparation_suplement": "<p>{{ product.metafields.dropdown.dropdown_standard_comparation_list_suplement | metafield_tag }}<\/p>",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "star_subcription_jRcbqp": {
+          "type": "star_subcription",
+          "settings": {
+            "star1": "Stay consistent",
+            "star2": "Build healthy routine",
+            "star3": "Free Gifts",
+            "star4": "Exclusive Access"
           }
         }
       },
       "block_order": [
         "title",
-        "subtitle",
-        "180df9d7-f979-4be9-8420-83028105b17f",
-        "18db48ee-d83d-4c27-8017-7e8d97a2009b",
+        "caption",
+        "okendo_star_rating_YWKTFH",
         "description",
-        "ce90f502-2d3a-49ec-a41d-dd6ab562129c",
-        "variant_picker",
         "buy_buttons",
-        "7c0efd85-ff80-4479-8684-796aad9ce1fa",
-        "9b788f9f-1118-4d44-a096-5d5fd2ad8fb3"
+        "options_shipping_H4DGYX",
+        "order_by_message_gFTdHq",
+        "link_customization_KqLxw6",
+        "collapsible-row-0",
+        "collapsible-row-1",
+        "star_subcription_jRcbqp"
       ],
       "settings": {
         "product_color": "{{ product.metafields.duo.product_color.value }}",
-        "enable_sticky_info": false,
-        "hide_variants": false,
+        "enable_sticky_info": true,
+        "hide_variants": true,
         "enable_video_looping": false,
-        "product_cta": "<p><a href=\"\/pages\/subscribe\" title=\"Build A Bundle Savings\">Or customize your routine<\/a> and <br\/>save up to 33% with regular deliveries.<\/p>"
+        "product_cta": ""
       }
     },
-    "product-features": {
-      "type": "product-features",
+    "icon_rows_endrock_8hFeaR": {
+      "type": "icon-rows-endrock",
       "blocks": {
-        "remineralizing-nha": {
-          "type": "feature",
+        "icon_T3rcxk": {
+          "type": "icon",
           "settings": {
-            "text": "Remineralizing nHa"
+            "heading": "Vegan",
+            "row_icon_description": "",
+            "row_icon_image": "shopify:\/\/shop_images\/8073475_vegan_vegeterian_eco_sustainable_environment_icon_1.svg"
           }
         },
-        "cruelty-free": {
-          "type": "feature",
+        "icon_mgKz4P": {
+          "type": "icon",
           "settings": {
-            "text": "Cruelty-free"
+            "heading": "SLS-Free",
+            "row_icon_description": "",
+            "row_icon_image": "shopify:\/\/shop_images\/SLS_Free.svg"
           }
         },
-        "sls-free": {
-          "type": "feature",
+        "icon_DUTxUJ": {
+          "type": "icon",
           "settings": {
-            "text": "SLS-Free"
+            "heading": "Dentist Created",
+            "row_icon_description": "",
+            "row_icon_image": "shopify:\/\/shop_images\/Caduceus.svg"
           }
         },
-        "vegan": {
-          "type": "feature",
+        "icon_tBfrzf": {
+          "type": "icon",
           "settings": {
-            "text": "Vegan"
+            "heading": "Cruelty-free",
+            "row_icon_description": "",
+            "row_icon_image": "shopify:\/\/shop_images\/Rabbit.svg"
           }
         },
-        "gluten-free": {
-          "type": "feature",
+        "icon_zFdBqq": {
+          "type": "icon",
           "settings": {
-            "text": "Gluten-Free"
+            "heading": "Non-Toxic",
+            "row_icon_description": "",
+            "row_icon_image": "shopify:\/\/shop_images\/3365979_basil_bay_leaves_herbal_herbs_mint_icon_1.svg"
           }
         },
-        "natural-flavors": {
-          "type": "feature",
+        "icon_yNdEJH": {
+          "type": "icon",
           "settings": {
-            "text": "Natural Flavors"
+            "heading": "Fluoride-free",
+            "row_icon_description": "",
+            "row_icon_image": "shopify:\/\/shop_images\/Fluroid_Free_Icon_9f88b4cf-9282-43c9-bbfb-0f61f16f4ae9.svg"
           }
         }
       },
       "block_order": [
-        "remineralizing-nha",
-        "cruelty-free",
-        "sls-free",
-        "vegan",
-        "gluten-free",
-        "natural-flavors"
+        "icon_T3rcxk",
+        "icon_mgKz4P",
+        "icon_DUTxUJ",
+        "icon_tBfrzf",
+        "icon_zFdBqq",
+        "icon_yNdEJH"
       ],
       "settings": {
-        "product_color": "{{ product.metafields.duo.product_color.value }}"
+        "heading": "",
+        "footer_text": "",
+        "slider_mobile": false,
+        "section_margin": false,
+        "width_section": "full-width"
       }
     },
-    "b2ae0c61-85be-42ee-ae4f-4a4823d07ff9": {
-      "type": "pdp-image",
+    "image_banner_endrock_ANjnMy": {
+      "type": "image-banner-endrock",
       "settings": {
-        "display_desktop": false,
-        "display_mobile": true,
-        "mobile_image": "{{ product.metafields.pdp_banner.image_mobile.value }}"
+        "title": "“What you brush \u2028with matters.”",
+        "description": "<p>Tooth enamel cannot repair itself from within, which means your toothpaste has an important job to do. We packed Duo with proven ingredients like nHa to remineralize teeth and promote vibrant oral health. Developed by dentists, better for everyone.<\/p>",
+        "background_image": "{{ product.metafields.banner.image_banner_product.value }}",
+        "background_image_mobil": "{{ product.metafields.mobil.image_banner_product_mobil.value }}",
+        "aditional_logo_sign": "shopify:\/\/shop_images\/Artboard_1_4x_1.png",
+        "sign_1": "Dr. Stevie Roberts, DMD",
+        "sign_2": "Dr. Robert Johnson, DMD, MD"
       }
     },
-    "f1b40dbf-f78b-4a0d-b191-57c8a8b3e3a6": {
-      "type": "pdp-characteristics",
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "dual_section_Db4edk": {
+      "type": "dual-section",
       "blocks": {
-        "template--15849706225831__f1b40dbf-f78b-4a0d-b191-57c8a8b3e3a6-feature-1": {
-          "type": "feature",
+        "heading_PUXr4L": {
+          "type": "heading",
           "settings": {
-            "image": "{{ product.metafields.characteristics.icon_1.value }}",
-            "title": "Brightly whitens teeth",
-            "text": "<p>Strong enough to get out stains. Gentle enough to not strip enamel. <\/p>"
+            "heading": "Clean Ingredients"
           }
         },
-        "template--15849706225831__f1b40dbf-f78b-4a0d-b191-57c8a8b3e3a6-feature-2": {
-          "type": "feature",
-          "settings": {
-            "image": "{{ product.metafields.characteristics.icon_2.value }}",
-            "title": "Fights plaque and free radicals",
-            "text": "<p>Removes build-up, neutralizes acid, and promotes good bacteria.<\/p>"
-          }
-        },
-        "template--15849706225831__f1b40dbf-f78b-4a0d-b191-57c8a8b3e3a6-feature-3": {
-          "type": "feature",
-          "settings": {
-            "image": "{{ product.metafields.characteristics.icon_3.value }}",
-            "title": "Relieves sensitivity",
-            "text": "<p>Vitamins C + E soothe and restore gums, remineralizing nHa reduces sensitivity.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--15849706225831__f1b40dbf-f78b-4a0d-b191-57c8a8b3e3a6-feature-1",
-        "template--15849706225831__f1b40dbf-f78b-4a0d-b191-57c8a8b3e3a6-feature-2",
-        "template--15849706225831__f1b40dbf-f78b-4a0d-b191-57c8a8b3e3a6-feature-3"
-      ],
-      "settings": {
-        "title": "Dentist-formulated premium oral care"
-      }
-    },
-    "51e07666-fa16-4b7b-ba8e-2cd5d0751500": {
-      "type": "pdp-image",
-      "settings": {
-        "display_desktop": true,
-        "display_mobile": false,
-        "desktop_image": "{{ product.metafields.pdp_banner.image.value }}"
-      }
-    },
-    "652a72c8-b25e-42fc-b1ad-a77fb80b9972": {
-      "type": "features",
-      "blocks": {
-        "template--15849706225831__652a72c8-b25e-42fc-b1ad-a77fb80b9972-feature-1": {
-          "type": "feature",
-          "settings": {
-            "text": "naturally-whitening"
-          }
-        },
-        "template--15849706225831__652a72c8-b25e-42fc-b1ad-a77fb80b9972-feature-2": {
-          "type": "feature",
-          "settings": {
-            "text": "dentist-made"
-          }
-        },
-        "template--15849706225831__652a72c8-b25e-42fc-b1ad-a77fb80b9972-feature-3": {
-          "type": "feature",
-          "settings": {
-            "text": "earth-friendly"
-          }
-        },
-        "de90675f-9068-495c-a4ac-e816d3557618": {
-          "type": "feature",
-          "settings": {
-            "text": "travel-ready"
-          }
-        }
-      },
-      "block_order": [
-        "template--15849706225831__652a72c8-b25e-42fc-b1ad-a77fb80b9972-feature-1",
-        "template--15849706225831__652a72c8-b25e-42fc-b1ad-a77fb80b9972-feature-2",
-        "template--15849706225831__652a72c8-b25e-42fc-b1ad-a77fb80b9972-feature-3",
-        "de90675f-9068-495c-a4ac-e816d3557618"
-      ],
-      "settings": {
-        "background_color": "#00126b",
-        "text_color": "#ffffff"
-      }
-    },
-    "b4e54ff2-09ae-40af-acad-6e8d4b7c9b66": {
-      "type": "pdp-qualities",
-      "blocks": {
-        "001b2fb6-0fae-4970-8b56-17270701d548": {
-          "type": "column",
-          "settings": {
-            "icon": "{{ product.metafields.qualities.column_1_icon.value }}",
-            "text": "high bio-availability"
-          }
-        },
-        "cda1aa06-7144-4f2f-9862-fa607b059ae3": {
-          "type": "column",
-          "settings": {
-            "icon": "{{ product.metafields.qualities.column_2_icon.value }}",
-            "text": "absorbs efficiently"
-          }
-        },
-        "ce2efd4b-29c8-47d3-87fc-7ee7186d247a": {
-          "type": "column",
-          "settings": {
-            "icon": "{{ product.metafields.qualities.column_3_icon.value }}",
-            "text": "activates in minutes"
-          }
-        }
-      },
-      "block_order": [
-        "001b2fb6-0fae-4970-8b56-17270701d548",
-        "cda1aa06-7144-4f2f-9862-fa607b059ae3",
-        "ce2efd4b-29c8-47d3-87fc-7ee7186d247a"
-      ],
-      "settings": {
-        "icon": "{{ product.metafields.qualities.icon.value }}",
-        "heading": "vitamins & supplements \nabsorbed as you brush",
-        "description": "<p>Duo’s toothpaste tablets allow you to absorb essential vitamins and supplements directly into your system as you brush (plus, you can ditch those giant horse-pills!).<\/p>",
-        "bottom_description": ""
-      }
-    },
-    "1467ae28-a54c-413d-92f9-1613f101b096": {
-      "type": "how-it-works",
-      "blocks": {
-        "template--15849706225831__1467ae28-a54c-413d-92f9-1613f101b096-slide-1": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/crush.jpg",
-            "icon": "shopify:\/\/shop_images\/icon-crush-1.svg",
-            "title": "crush",
-            "text": "<p>Pop a tablet and <br\/>chew to break down.<\/p>"
-          }
-        },
-        "template--15849706225831__1467ae28-a54c-413d-92f9-1613f101b096-slide-2": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/brush.jpg",
-            "icon": "shopify:\/\/shop_images\/icon-brush-1.svg",
-            "title": "brush",
-            "text": "<p>Wet your toothbrush, and<br\/>brush to activate foam.<\/p>"
-          }
-        },
-        "template--15849706225831__1467ae28-a54c-413d-92f9-1613f101b096-slide-3": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/smile.jpg",
-            "icon": "shopify:\/\/shop_images\/icon-smile-1.svg",
-            "title": "smile",
-            "text": "<p>Rinse and smile.<br\/>No need to swallow.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--15849706225831__1467ae28-a54c-413d-92f9-1613f101b096-slide-1",
-        "template--15849706225831__1467ae28-a54c-413d-92f9-1613f101b096-slide-2",
-        "template--15849706225831__1467ae28-a54c-413d-92f9-1613f101b096-slide-3"
-      ],
-      "settings": {
-        "heading": "How to brush with Duo",
-        "background_color": "#eff2ff",
-        "text_color": "#000000",
-        "accent_color": "#00126b"
-      }
-    },
-    "21d644f7-9c97-4bf8-bed3-c9a01d255c55": {
-      "type": "pdp-attributes",
-      "blocks": {
-        "b65c4b46-a88b-46ca-8b7f-1b9365f67fec": {
-          "type": "item",
-          "settings": {
-            "icon": "{{ section.settings.product_to_be_added_to_cart.metafields.attributes.block_1_icon.value }}",
-            "title": "{{ section.settings.product_to_be_added_to_cart.metafields.attributes.block_1_title.value }}",
-            "text": "{{ section.settings.product_to_be_added_to_cart.metafields.attributes.block_1_description | metafield_tag }}"
-          }
-        },
-        "1868a819-a8a3-44eb-94c9-59861b0352b1": {
-          "type": "item",
-          "settings": {
-            "icon": "{{ section.settings.product_to_be_added_to_cart.metafields.attributes.block_2_icon.value }}",
-            "title": "{{ section.settings.product_to_be_added_to_cart.metafields.attributes.block_2_title.value }}",
-            "text": "{{ section.settings.product_to_be_added_to_cart.metafields.attributes.block_2_description | metafield_tag }}"
-          }
-        }
-      },
-      "block_order": [
-        "b65c4b46-a88b-46ca-8b7f-1b9365f67fec",
-        "1868a819-a8a3-44eb-94c9-59861b0352b1"
-      ],
-      "settings": {
-        "heading": "<p>{{ section.settings.product_to_be_added_to_cart.metafields.attributes.title | metafield_tag }}<\/p>",
-        "description": "{{ section.settings.product_to_be_added_to_cart.metafields.attributes.description | metafield_tag }}",
-        "image": "{{ section.settings.product_to_be_added_to_cart.metafields.attributes.background_image.value }}",
-        "enable_add_to_cart_button": true,
-        "product_to_be_added_to_cart": "{{ product }}",
-        "secondary_link_label": "Or build a custom subscription & save 33%",
-        "secondary_link_url": "https:\/\/duotoothpaste.com\/a\/loop_subscriptions\/bundle\/a975c058b85e458d93c1a86d4f0fe35e",
-        "product_color": "{{ section.settings.product_to_be_added_to_cart.metafields.duo.product_color.value }}"
-      }
-    },
-    "fed4c0f7-a6de-4294-aaeb-3a5e67408483": {
-      "type": "pdp-two-columns-richtext",
-      "blocks": {
-        "992b6196-f72e-46cf-99ec-9a3706c8e816": {
-          "type": "left_column",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/small_logo_ab97bda9-9945-47ad-8998-f07223e8f88e.png",
-            "content": "<ul><li>Includes beneficial vitamins & supplements to support your everyday health<\/li><li>Hydrating foam promotes a balanced oral microbiome<\/li><li>Contains botanical extracts and natural ingredients, including antioxidants and nHA<\/li><li>Plastic-free, mess-free, travel-friendly and designed for your bathroom sink<\/li><\/ul>"
-          }
-        },
-        "cdfcf401-a321-4cfc-bbbc-654b6e7025a0": {
-          "type": "right_column",
-          "settings": {
-            "heading": "Standard toothpaste",
-            "content": "<ul><li>No extra health benefit aside from standard oral care<\/li><li>Contains SLS, which dries your mouth and can lead to bad breath<\/li><li>Uses fillers, harsh cleaning agents, and other potentially toxic chemicals<\/li><li>Gunky paste in plastic tubes that can’t be recycled<\/li><\/ul>"
-          }
-        }
-      },
-      "block_order": [
-        "992b6196-f72e-46cf-99ec-9a3706c8e816",
-        "cdfcf401-a321-4cfc-bbbc-654b6e7025a0"
-      ],
-      "settings": {
-        "product_color": "{{ product.metafields.duo.product_color.value }}",
-        "secondary_color": "#eeebeb"
-      }
-    },
-    "1657014238700192d9": {
-      "type": "text-with-text-slider",
-      "blocks": {
-        "c9b41731-6266-4f37-92cb-0fb18d6b2ec8": {
+        "text_mN3DBR": {
           "type": "text",
           "settings": {
-            "text": "<p>Plenty of foamy action, leaving your teeth feeling clean, fresh and  polished all with the peace of mind of safe natural ingredients and a boosted benefit of vitamins and minerals. This is a tremendous product for all.<\/p>",
-            "author": "Kendra Melody, RDH"
+            "text": "{{ product.metafields.dual.section_ingredients_description | metafield_tag }}"
           }
         },
-        "165751574914143ff5-0": {
-          "type": "text",
+        "collapsible_tab_AieTix": {
+          "type": "collapsible_tab",
           "settings": {
-            "text": "<p>Duo is exciting for many reasons! nHA rebuilds, restores, and protects the enamel, while offering an alternative to traditional fluoride that also whitens and fights sensitivity.<\/p>",
-            "author": "Kelly Barbera, DMD"
+            "heading": "{{ product.metafields.dual.section_ingredients_question1.value }}",
+            "content": "{{ product.metafields.dual.section_ingredients_response1 | metafield_tag }}",
+            "content_comparation_duo": "",
+            "content_comparation_suplement": "",
+            "page": "",
+            "icon": "none"
           }
         },
-        "6a22e3cc-ba7c-45db-a0a4-e7bcf4abbd30": {
-          "type": "text",
+        "collapsible_tab_fp4GqX": {
+          "type": "collapsible_tab",
           "settings": {
-            "text": "<p>The Duo purpose of preventing cavities and sensitivity while simultaneously delivering functional ingredients through mucosal absorption is genius.<\/p>",
-            "author": "Hayley Sacks, DMD"
+            "heading": "{{ product.metafields.dual.section_ingredients_question2.value }}",
+            "content": "{{ product.metafields.dual.section_ingredients_response2 | metafield_tag }}",
+            "content_comparation_duo": "",
+            "content_comparation_suplement": "",
+            "page": "",
+            "icon": "none"
           }
         },
-        "64d2d7e6-f9a8-4bca-9b2d-74cfec5fd02a": {
-          "type": "text",
+        "collapsible_tab_XMamqm": {
+          "type": "collapsible_tab",
           "settings": {
-            "text": "<p>Duo has me excited about brushing again. Thanks to the caffeine and melatonin, I have consolidated my morning and evening routines.<\/p>",
-            "author": "C. Johnston, DMD"
+            "heading": "{{ product.metafields.dual.section_ingredients_question3.value }}",
+            "content": "{{ product.metafields.dual.section_ingredients_response3 | metafield_tag }}",
+            "content_comparation_duo": "",
+            "content_comparation_suplement": "",
+            "page": "",
+            "icon": "none"
           }
         },
-        "b81c2ae4-1538-4eda-b407-45ab2324aa9a": {
-          "type": "text",
+        "collapsible_tab_xLp9aC": {
+          "type": "collapsible_tab",
           "settings": {
-            "text": "<p>The addition of vitamins and minerals is a unique idea that feels so intuitive for oral health! I am excited that each blend benefits my patients in a unique way!<\/p>",
-            "author": "Samantha Ward, DMD"
-          }
-        },
-        "9472917c-287e-4c1e-b470-32cced48d959": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Duo’s tablets are a quick, easy, and refreshing way to strengthen AND whiten my teeth.<\/p>",
-            "author": "Abby Yazback, DMD"
+            "heading": "{{ product.metafields.dual.section_ingredients_question4.value }}",
+            "content": "{{ product.metafields.dual.section_ingredients_response4 | metafield_tag }}",
+            "content_comparation_duo": "",
+            "content_comparation_suplement": "",
+            "page": "",
+            "icon": "none"
           }
         }
       },
       "block_order": [
-        "c9b41731-6266-4f37-92cb-0fb18d6b2ec8",
-        "165751574914143ff5-0",
-        "6a22e3cc-ba7c-45db-a0a4-e7bcf4abbd30",
-        "64d2d7e6-f9a8-4bca-9b2d-74cfec5fd02a",
-        "b81c2ae4-1538-4eda-b407-45ab2324aa9a",
-        "9472917c-287e-4c1e-b470-32cced48d959"
-      ],
-      "custom_css": [
-        ".text-with-text-slider {background-color: #00126b; color: #fff;}"
+        "heading_PUXr4L",
+        "text_mN3DBR",
+        "collapsible_tab_AieTix",
+        "collapsible_tab_fp4GqX",
+        "collapsible_tab_XMamqm",
+        "collapsible_tab_xLp9aC"
       ],
       "settings": {
-        "icon": "shopify:\/\/shop_images\/Group_302.svg",
-        "image": "<p>Loved and recommended by other dentists. <\/p>",
-        "videoo": "",
+        "image": "{{ product.metafields.dual.section_ingredients_image.value }}",
         "height": "adapt",
-        "color_scheme": "accent-2",
+        "layout": "text_first"
+      }
+    },
+    "dual_section_c7rdPc": {
+      "type": "dual-section",
+      "blocks": {
+        "heading_Bx4JpP": {
+          "type": "heading",
+          "settings": {
+            "heading": "How to brush with Duo",
+            "icon_title": "shopify:\/\/shop_images\/Brushing_with_Duo_Icon_c2a9fa16-6759-46ab-8da7-08f7657a6777.svg"
+          }
+        },
+        "steps_mcdxHq": {
+          "type": "steps",
+          "settings": {
+            "title_step": "How to brush with Duo",
+            "step1": "Crush a tablet between your teeth",
+            "step2": "Wet your toothbrush",
+            "step3": "Brush to activate foam",
+            "step4": "Rinse and smile"
+          }
+        },
+        "button_AmLq7L": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "text_link_extra": "watch explainer video",
+            "link_extra": "shopify:\/\/products\/energy"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Bx4JpP",
+        "steps_mcdxHq",
+        "button_AmLq7L"
+      ],
+      "settings": {
+        "image": "{{ product.metafields.dual.section_steps_image.value }}",
+        "height": "adapt",
         "layout": "image_first"
       }
     },
-    "9db296d5-eb7d-4520-a73b-04396b392bee": {
-      "type": "multicolumn-text-images",
+    "dual_section_C4yyiR": {
+      "type": "dual-section",
       "blocks": {
-        "289f3d98-2430-406f-b47d-47e3724a1b05": {
-          "type": "column",
+        "heading_Fm9xfn": {
+          "type": "heading",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Energy_in_the_morning.jpg",
-            "text": "<p><a href=\"\/products\/energy\" title=\"Energy\"><strong>Energy<\/strong><\/a><strong> <\/strong>in the morning<\/p>"
+            "heading": "Plastic-free made easy"
           }
         },
-        "48e5580d-e6bc-4e03-9f5e-3fa77cb9d7da": {
-          "type": "column",
+        "text_ery7AF": {
+          "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Immunity_for_vit_D_levels.jpg",
-            "text": "<p><a href=\"\/products\/immunity\" title=\"Immunity\"><strong>Immunity<\/strong><\/a><strong> <\/strong>for vit D levels<\/p>"
+            "text": "{{ product.metafields.dual.section_offer_description | metafield_tag }}"
           }
         },
-        "4f56e8f3-94cb-4aaa-a70b-f60d90643207": {
-          "type": "column",
+        "button_aGdDgy": {
+          "type": "button",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Energy_Sleep_for_travel.jpg",
-            "text": "<p><a href=\"\/products\/energy\" title=\"Energy\"><strong>Energy<\/strong><\/a><strong> + <\/strong><a href=\"\/products\/sleep\" title=\"Sleep\"><strong>Sleep<\/strong><\/a> for travel<\/p>"
-          }
-        },
-        "588d10dd-ba00-475d-98a1-bbe399fbb3f0": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Sleep_routine_complete.jpg",
-            "text": "<p><a href=\"\/products\/sleep\" title=\"Sleep\"><strong>Sleep<\/strong><\/a><strong> <\/strong>routine complete<\/p>"
+            "button_label": "ORDER YOUR REFILL",
+            "button_link": "shopify:\/\/products\/energy",
+            "text_link_extra": "explore bundles",
+            "link_extra": "shopify:\/\/pages\/about-nha"
           }
         }
       },
       "block_order": [
-        "289f3d98-2430-406f-b47d-47e3724a1b05",
-        "48e5580d-e6bc-4e03-9f5e-3fa77cb9d7da",
-        "4f56e8f3-94cb-4aaa-a70b-f60d90643207",
-        "588d10dd-ba00-475d-98a1-bbe399fbb3f0"
+        "heading_Fm9xfn",
+        "text_ery7AF",
+        "button_aGdDgy"
       ],
       "settings": {
-        "heading": "find a variety for every moment",
-        "description": ""
+        "image": "{{ product.metafields.dual.section_offer_image.value }}",
+        "height": "adapt",
+        "layout": "text_first"
       }
     },
-    "1657521871ed130299": {
-      "type": "yellow-header",
+    "homepage_title_with_text_gWAggc": {
+      "type": "homepage-title-with-text",
       "settings": {
-        "txt": "#ffffff",
-        "text_color": "#000000",
-        "title1": "Shop all page",
-        "learnmore": "shopify:\/\/collections\/shop",
-        "desktop_font_size": 20,
-        "mobile_font_size": 20,
-        "small_mobile_font_size": 20,
-        "arrow_icon": true,
-        "underline": false,
-        "uppercase": false
+        "title": "<p>Reviews<\/p>",
+        "richtext": "",
+        "select_align": "left",
+        "none_margin": true
       }
     },
-    "7783633c-8acc-43b2-8f62-b61457fb04fb": {
-      "type": "yellow-header",
-      "settings": {
-        "txt": "#fecc41",
-        "text_color": "#000000",
-        "title1": "Or build a custom subscription & save 33%",
-        "learnmore": "https:\/\/duotoothpaste.com\/a\/loop_subscriptions\/bundle\/a975c058b85e458d93c1a86d4f0fe35e",
-        "desktop_font_size": 20,
-        "mobile_font_size": 18,
-        "small_mobile_font_size": 15,
-        "arrow_icon": false,
-        "underline": true,
-        "uppercase": false
-      }
-    },
-    "164078378666917a43": {
+    "1707343573639fd40e": {
       "type": "apps",
       "blocks": {
-        "8a332e55-959f-4538-a718-3ec9a058f237": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "okendo_reviews_widget_kEk6pX": {
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
-            "product": "{{ product }}",
+            "product": "{{product}}",
             "widget_type": "reviews_widget"
           }
         }
       },
       "block_order": [
-        "8a332e55-959f-4538-a718-3ec9a058f237"
+        "okendo_reviews_widget_kEk6pX"
       ],
       "settings": {
-        "include_margins": true
-      }
-    },
-    "16570127224068d5f7": {
-      "type": "talk_about_product",
-      "disabled": true,
-      "settings": {
-        "txt": "{{ product.metafields.my_fields.background_color.value }}",
-        "imgs": "{{ product.metafields.custom.about_image.value }}",
-        "title1": "Let’s talk about nHa.",
-        "txt1": "<p>Nano-Hydroxyapetite (nHa) is a dentist-backed, non-toxic flouride alternative that remineralizes your teeth and keeps them strong. It’s been used in Japanese toothpaste for decades and is highly effective in restoring and strengthening enamel.      <\/p>",
-        "about_image": "{{ product.metafields.custom.product_about_main_image.value }}",
-        "learnmore": "shopify:\/\/pages\/help"
-      }
-    },
-    "16570185386af0482e": {
-      "type": "talk_about_product_img",
-      "disabled": true,
-      "settings": {
-        "imgs": "{{ product.metafields.custom.brush_image.value }}",
-        "title1": "Brush. Absorb. Spit. Smile.",
-        "txt1": "<p>As you brush with one of our functional toothpastes, you’re not just perfectly polishing your pearly whites—you’re safely and efficiently absorbing nutrients and supplements through your tongue, cheeks, and gums via a process called mucosal absorption. No need to swallow.<\/p>",
-        "about_image": "shopify:\/\/shop_images\/Model2_Masked-neww.png",
-        "learnmore": "shopify:\/\/pages\/help"
-      }
-    },
-    "product-recommendations": {
-      "type": "product-recommendations",
-      "disabled": true,
-      "settings": {
-        "heading": "You may also like",
-        "image_ratio": "square",
-        "show_secondary_image": false,
-        "add_image_padding": false,
-        "show_image_outline": true,
-        "show_vendor": false,
-        "show_rating": false
-      }
-    },
-    "164058056634ff5662": {
-      "type": "badge-list",
-      "disabled": true,
-      "settings": {
-      }
-    },
-    "1641981948a041933c": {
-      "type": "image-with-multiple-text",
-      "disabled": true,
-      "settings": {
-        "title": "Remineralizes with nHa",
-        "paragraph": "nano-hydroxyapatite (nHA) is our non-toxic fluoride alternative that naturally and safely remineralizes tooth enamel.",
-        "title1": "Brightly whitens",
-        "paragraph1": "our whitening abrasives are strong enough to get out stains but gentle enough to not strip enamel - we believe in balance.",
-        "title2": "Fights plaque and free radicals",
-        "paragraph2": "removes build-up and neutralizes acid - this prevents bad bacteria from sticking and plaque from forming in the first place.",
-        "title3": "Relieves sensitivity",
-        "paragraph3": "our blend of vitamins C & E plus coconut oil derivative soothes and restores gum tissue, while nHa reduces tooth sensitivity.",
-        "title5": "Hello",
-        "paragraph5": ""
-      }
-    },
-    "1641972021db548570": {
-      "type": "image-banner",
-      "blocks": {
-        "1641972021b0a2a05a-0": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "medium"
-          }
-        },
-        "1641972021b0a2a05a-1": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": ""
-          }
-        },
-        "1641972021b0a2a05a-2": {
-          "type": "buttons",
-          "disabled": true,
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "1641972021b0a2a05a-0",
-        "1641972021b0a2a05a-1",
-        "1641972021b0a2a05a-2"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify:\/\/shop_images\/baseline_neutral_scene_16x9_01eeb325-798f-4c6b-a32b-18fba72e2f6d.jpg",
-        "image_height": "medium",
-        "adapt_height_first_image": false,
-        "desktop_text_box_position": "center",
-        "show_text_box": true,
-        "image_overlay_opacity": 0,
-        "color_scheme": "background-1",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
-    "1644902450300a88ca": {
-      "type": "banner-image",
-      "disabled": true,
-      "settings": {
-        "heading": ""
-      }
-    },
-    "16405835405ec1be77": {
-      "type": "testimonial",
-      "blocks": {
-        "b20849b8-f035-42f4-9f56-0b8d081f4093": {
-          "type": "Testimonial",
-          "settings": {
-            "left_content": "",
-            "description": "After seeing the results — naturally rebuilding tooth structure, all while being non-toxic and completely natural — I now recommend nHa to all of my patients… and I pick Duo because it’s the best. My patients love it so much that they brush longer and more frequently. That’s a lot of wins for me as a dentist.”",
-            "authorename": "- Stevie Roberts, D.D.S. (Kirkland Smiles, Seattle, Wa.)"
-          }
-        },
-        "1522af57-9290-496e-a94a-9966ffbfb2ec": {
-          "type": "Testimonial",
-          "settings": {
-            "left_content": "",
-            "description": "After seeing the results — naturally rebuilding tooth structure, all while being non-toxic and completely natural — I now recommend nHa to all of my patients… and I pick Duo because it’s the best. My patients love it so much that they brush longer and more frequently. That’s a lot of wins for me as a dentist.”",
-            "authorename": "- Stevie Roberts, D.D.S. (Kirkland Smiles, Seattle, Wa.)"
-          }
-        }
-      },
-      "block_order": [
-        "b20849b8-f035-42f4-9f56-0b8d081f4093",
-        "1522af57-9290-496e-a94a-9966ffbfb2ec"
-      ],
-      "disabled": true,
-      "settings": {
-        "left_content": "Made by a dentist duo. Loved and recommended by other dentists."
-      }
-    },
-    "1642574639a91db6e2": {
-      "type": "rich-text",
-      "blocks": {
-        "164257463916220ca0-0": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "164257463916220ca0-1": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        },
-        "164257463916220ca0-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop all",
-            "button_link": "shopify:\/\/collections\/all",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "164257463916220ca0-0",
-        "164257463916220ca0-1",
-        "164257463916220ca0-2"
-      ],
-      "disabled": true,
-      "settings": {
-        "color_scheme": "background-1",
-        "full_width": true
-      }
-    },
-    "c2b02396-0139-4a48-aa04-0b6b6a709ba3": {
-      "type": "floating-product",
-      "settings": {
-        "ab_test": true
+        "include_margins": true,
+        "none_margin": true
       }
     }
   },
   "order": [
     "main",
-    "product-features",
-    "b2ae0c61-85be-42ee-ae4f-4a4823d07ff9",
-    "f1b40dbf-f78b-4a0d-b191-57c8a8b3e3a6",
-    "51e07666-fa16-4b7b-ba8e-2cd5d0751500",
-    "652a72c8-b25e-42fc-b1ad-a77fb80b9972",
-    "b4e54ff2-09ae-40af-acad-6e8d4b7c9b66",
-    "1467ae28-a54c-413d-92f9-1613f101b096",
-    "21d644f7-9c97-4bf8-bed3-c9a01d255c55",
-    "fed4c0f7-a6de-4294-aaeb-3a5e67408483",
-    "1657014238700192d9",
-    "9db296d5-eb7d-4520-a73b-04396b392bee",
-    "1657521871ed130299",
-    "7783633c-8acc-43b2-8f62-b61457fb04fb",
-    "164078378666917a43",
-    "16570127224068d5f7",
-    "16570185386af0482e",
-    "product-recommendations",
-    "164058056634ff5662",
-    "1641981948a041933c",
-    "1641972021db548570",
-    "1644902450300a88ca",
-    "16405835405ec1be77",
-    "1642574639a91db6e2",
-    "c2b02396-0139-4a48-aa04-0b6b6a709ba3"
+    "icon_rows_endrock_8hFeaR",
+    "image_banner_endrock_ANjnMy",
+    "related-products",
+    "dual_section_Db4edk",
+    "dual_section_c7rdPc",
+    "dual_section_C4yyiR",
+    "homepage_title_with_text_gWAggc",
+    "1707343573639fd40e"
   ]
 }

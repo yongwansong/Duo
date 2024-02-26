@@ -1,0 +1,232 @@
+@media (min-width: 768px) {
+    .endrock-featured-collection .products_wrapper{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .endrock-featured-collection .products_wrapper .product-list{
+        width: calc( 25% - 23px );
+    }
+}
+
+.endrock-featured-collection .products_wrapper .product-list a{
+    text-decoration: none;
+}
+
+.endrock-featured-collection .hover_image{
+    display: none;
+}
+
+.custom_product_image:hover .hover_image{
+    display: block;
+}
+
+.custom_product_image:hover .product_info{
+    display: block;
+}
+
+.custom_product_image:hover .first_image{
+    display: none;
+}
+
+.custom_product_image{
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.custom_product_image img{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.custom_product_image .product_info p {
+    font-family: "OldschoolGrotesk-regular";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px;
+    margin: 0;
+}
+
+.custom_product_image .product_info p strong{
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+.custom_product_image .product_info{
+    display: none;
+}
+
+.endrock-featured-collection__container{
+    background-color: #ffffff;
+}
+.endrock-featured-collection__wrapper{
+    margin: 0 auto;
+    padding: 69px 110px 87px;
+}
+
+@media (min-width:1000px) {
+    .endrock-featured-collection__wrapper{
+        padding: 69px 104px 87px;
+    }
+}
+
+@media (min-width:1250px) {
+    .endrock-featured-collection__wrapper{
+        padding: 69px 90px 87px;
+    }
+}
+
+@media (min-width:1440px) {
+    .endrock-featured-collection__wrapper{
+        padding: 69px 140px 87px;
+    }
+}
+
+.endrock-featured-collection .heading{
+    color: #000;
+    font-family: "OldschoolGrotesk-Regular";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 430;
+    line-height: 60px; /* 125% */
+    letter-spacing: -0.72px;
+    margin: 0 0 35px;
+}
+
+.endrock-featured-collection .products__heading.add-toCart{
+    text-align: center;
+    font-family: "OldschoolGrotesk-Medium";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 560;
+    line-height: 28px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    background: #181818;
+    border: none;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+}
+
+.endrock-featured-collection .products__heading.add-toCart svg .path{
+    stroke: #ffffff;
+}
+
+.endrock-featured-collection .add-toCart span{
+    color: #ffffff;
+    padding: 12.972px 32.93px 11px;
+    line-height: 1;
+}
+
+.custom-product_form{
+    margin-bottom: 16px;
+}
+
+.endrock-featured-collection .product_title{
+    margin: 0px;
+    color: #000;
+    font-family: "OldschoolGrotesk-Medium";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.endrock-featured-collection .product_property{
+    color: #000;
+    font-family: "OldschoolGrotesk-Regular";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 430;
+    line-height: 28px; /* 200% */
+    letter-spacing: -0.21px;
+    margin: 0;
+}
+
+.endrock-featured-collection .title-with-price{
+    display: flex;
+    justify-content: space-between;
+}
+
+.endrock-featured-collection .title-with-price .product-price{
+    color: #000;
+    text-align: center;
+    font-family: "OldschoolGrotesk-Regular";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 430;
+    line-height: 28px;
+    letter-spacing: -0.27px;
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .endrock-featured-collection__wrapper{
+        padding: 69px 60px 87px
+    }
+}
+
+@media (max-width: 767px) {
+    .endrock-featured-collection .products_wrapper:not(.swiper-wrapper) .product-list{
+        width: calc( 50% - 12px );
+        margin-bottom: 32px;
+    }
+
+    .endrock-featured-collection__wrapper{
+        padding: 0;
+    }
+
+    .endrock-featured-collection .hover_image{
+        display: none!important;
+    }
+
+    .custom_product_image .product_info{
+        display: none!important;
+    }
+
+    .custom_product_image img{
+        display: block!important;
+    }
+
+    .endrock-featured-collection .products_wrapper:not(.swiper-wrapper){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .endrock-featured-collection .product_title{
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .endrock-featured-collection .product_property{
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .endrock-featured-collection .heading{
+        line-height: 48px;
+        margin-bottom: 16px;
+        font-family: "OldschoolGrotesk-Regular";
+    }
+
+    .custom-product_form{
+        margin-bottom: 16px;
+    }
+
+    .endrock-featured-collection .add-toCart span{
+        padding: 8px;
+    }
+
+    .endrock-featured-collection__container{
+        background-color: transparent;
+    }
+}

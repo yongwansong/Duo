@@ -1,0 +1,183 @@
+{{'endrock-banner-with-text.css' | asset_url| stylesheet_tag}}
+
+<style>
+    #section--{{section.id }}{
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    @media (max-width: 767px){
+        #section--{{section.id }}{
+            padding-top: {{ section.settings.mobile_padding_top }}px;
+            padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+        }
+
+        .endrock-banner-with-text .text-wrapper{
+            background: {{ section.settings.bg_color }};
+        }
+    }
+</style>
+
+<div id="section--{{section.id }}" class="endrock-banner-with-text {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">
+    <div class="banner-with-text only--desktop" style="padding-bottom: {{ 100 | divided_by: section.settings.banner.aspect_ratio }}%">
+        {%- if section.settings.banner != blank -%}
+            <img src="{{section.settings.banner | img_url: 'master' }}" alt="{{ block.settings.banner.alt }}" loading="lazy">
+        {%- endif -%}
+        <div class="text-wrapper">
+            <h2>{{section.settings.heading | newline_to_br}}</h2>
+            <div class="text-des">{{ section.settings.description}}</div>
+            <div class="decoration">
+                <span class="text-decoration">{{section.settings.decoration}}</span>
+                <p class="text-info">{{section.settings.info}}</p>
+            </div>
+            <a href="{{section.settings.btn_link}}" class="button {{ section.settings.btn_type }}">{{section.settings.btn_text}}</a>
+        </div>
+    </div>
+    <div class="mobile-banner-with-text only--mobile">
+        <div class="text-wrapper">
+            <h2>{{section.settings.heading | newline_to_br}}</h2>
+            <p class="text-des">{{ section.settings.mobile_description}}</p>
+        </div>
+        <div class="iamge-with-text">
+            {%- if section.settings.mobile_banner != blank -%}
+                <img src="{{section.settings.mobile_banner | img_url: 'master' }}" alt="{{ block.settings.mobile_banner.alt }}" loading="lazy">
+            {%- endif -%}
+            <div class="button-with-text">
+                <div class="decoration">
+                    <span class="text-decoration">{{section.settings.decoration}}</span>
+                    <p class="text-info">{{section.settings.info}}</p>
+                     <a href="{{section.settings.btn_link}}" class="button {{ section.settings.btn_type }}">{{section.settings.btn_text}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "endrock banner with text",
+        "class": "endrock-banner-with-text",
+        "settings": [
+            {
+                "type": "range",
+                "id": "padding_top",
+                "label": "Padding Top",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "label": "Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "mobile_padding_top",
+                "label": "Mobile Padding Top",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "mobile_padding_bottom",
+                "label": "Mobile Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "unit": "px",
+                "step": 5,
+                "default": 50
+            },
+            {
+                "type": "checkbox",
+                "id": "full_width",
+                "label": "Full Width"
+            },
+            {
+                "type": "color",
+                "id": "bg_color",
+                "label": "Background Color"
+            },
+            {
+                "type": "image_picker",
+                "id": "banner",
+                "label": "Banner"
+            },
+            {
+                "type": "image_picker",
+                "id": "mobile_banner",
+                "label": "Mobile Banner"
+            },
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading",
+                "default": "Text" 
+            },
+            {
+                "type": "richtext",
+                "id": "description",
+                "label": "Description",
+                "default": "<p>Text</p>"
+            },
+            {
+                "type": "text",
+                "id": "mobile_description",
+                "label": "Mobile Description"
+            },
+            {
+                "type": "text",
+                "id": "decoration",
+                "label": "Decoration"
+            },
+            {
+                "type": "text",
+                "id": "info",
+                "label": "Information",
+                "default": "Text"
+            },
+            {
+                "type": "url",
+                "id": "btn_link",
+                "label": "button_link"
+            },
+            {
+                "type": "text",
+                "id": "btn_text",
+                "label": "button_text",
+                "default": "Text"
+            },
+            {
+                "type": "select",
+                "id": "btn_type",
+                "options": [
+                    {
+                    "value": "button--primary",
+                    "label": "Button Primary"
+                    },
+                    {
+                    "value": "button--secondary",
+                    "label": "Button Scrondary"
+                    }
+                ],
+                "default": "button--primary",
+                "label": "Button Type"
+            }
+        ],
+        "presets":[
+            {
+                "name": "endrock-banner-with-text"
+            }
+        ]        
+    }
+{% endschema %}

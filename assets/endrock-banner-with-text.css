@@ -1,0 +1,203 @@
+.endrock-banner-with-text .banner-with-text{
+    position: relative;
+    height: 0;
+}
+.endrock-banner-with-text .banner-with-text img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 920px) {
+    .endrock-banner-with-text .banner-with-text{
+        padding-bottom: 54.53125% !important;
+    }
+    .endrock-banner-with-text .text-decoration{
+        font-size: 64px!important;
+    }
+}
+
+.endrock-banner-with-text .text-wrapper{
+    position: absolute;
+    left: 145px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (min-width:1000px) {
+    .endrock-banner-with-text .text-wrapper{
+        left: 137px;
+    }
+}
+
+@media (min-width:1250px) {
+    .endrock-banner-with-text .text-wrapper{
+        left: 144px;
+    }
+}
+
+@media (min-width:1440px) {
+    .endrock-banner-with-text .text-wrapper{
+        left: 194px;
+    }
+}
+.endrock-banner-with-text .text-wrapper h2{
+    padding-top: 0;
+    flex-shrink: 0;
+    color: #070606;
+    font-family: "Schnyder-SLight";
+    font-size: 56px;
+    font-style: normal;
+    line-height: 58px;
+    margin-top: 0;
+    margin-bottom: 29px;
+}
+.endrock-banner-with-text .text-wrapper .text-des p{
+    color: #000;
+    font-family: 'OldschoolGrotesk-Regular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 390;
+    line-height: 24px;
+    margin: 0 0 39px;
+}
+
+@media (max-width: 1000px){
+  .endrock-banner-with-text .text-wrapper .text-des p{
+    font-size: 12px;
+  }
+
+  .endrock-banner-with-text .text-decoration{
+    font-size: 55px!important;
+  }
+}
+.endrock-banner-with-text .text-decoration{
+    color: #000;
+    font-family: "Schnyder-SLight";
+    font-size: 84px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 58px;
+
+}
+.endrock-banner-with-text .text-wrapper .text-info{
+    color: #000;
+    width: 151px;
+    font-family: "OldschoolGrotesk-Medium";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 560;
+    line-height: 24px;
+    margin: 0px;
+}
+.endrock-banner-with-text .text-wrapper .decoration{
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    align-items: center;
+   margin-bottom: 37px;
+}
+
+.endrock-banner-with-text .text-wrapper a{
+    padding: 12px 57px 10px;
+    font-family: "OldschoolGrotesk-Medium";
+    min-height: 0;
+    line-height: 1;
+}
+
+@media (max-width: 1200px) {
+    .endrock-banner-with-text .text-wrapper{
+        left: 85px;
+    }
+}
+@media (max-width:1000px) {
+    .endrock-banner-with-text .text-wrapper h2{
+        font-size: 36px;
+        line-height: 38px;
+    }
+}
+@media (max-width: 767px) {
+    .endrock-banner-with-text .text-wrapper{
+        position: absolute;
+        transform: unset;
+        z-index: 1;
+        left: 24px;
+        top: 40px;
+        bottom: unset;
+    }
+
+    .endrock-banner-with-text .text-wrapper h2{
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 11px;
+    }
+
+    .endrock-banner-with-text .text-wrapper .text-des p{
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .endrock-banner-with-text .iamge-with-text{
+        position: relative;
+    }
+
+    .endrock-banner-with-text .iamge-with-text img{
+        width: 100%;
+        height: auto;
+        display: flex;
+    }
+
+    .endrock-banner-with-text .button-with-text{
+        position: absolute;
+        left: 24px;
+        bottom: 16%;
+    }
+    .endrock-banner-with-text .button-with-text a{
+        padding: 10px 36px;
+    }
+
+    .mobile-banner-with-text{
+        flex-direction: column;
+        position: relative;
+    }
+
+    .endrock-banner-with-text .text-wrapper p.text-des{
+        color: #000;
+        font-family: 'OldschoolGrotesk-Regular';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        margin: 0;
+        max-width: 210px;
+        text-align: justify;
+        letter-spacing: 0;
+    }
+
+    .endrock-banner-with-text .text-decoration{
+        font-size: 40px !important;
+        line-height: 48px;
+        margin-bottom: 4px;
+    }
+
+    .endrock-banner-with-text .mobile-banner-with-text .decoration{
+        margin-top: 11px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .endrock-banner-with-text .mobile-banner-with-text .text-info{
+        color: #000;
+        width: 181px;
+        font-family: "OldschoolGrotesk-Regular";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+      margin-top: 0;
+    }
+}

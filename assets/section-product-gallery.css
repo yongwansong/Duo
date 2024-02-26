@@ -1,0 +1,377 @@
+.product-gallery-wrapper .product-wrapper img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.product-gallery-wrapper .product-wrapper{
+    position: relative;
+}
+
+.product-gallery-wrapper .product-wrapper .image{
+    position: relative;
+    height: 0;
+}
+
+@media (max-width: 920px) {
+    .product-gallery-wrapper .product-wrapper .image{
+        padding-bottom: 54.540645% !important;
+    }
+}
+
+.product-gallery-wrapper .product-wrapper .text-wrapper{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 117px;
+    max-width: 440px;
+}
+
+
+@media (min-width: 768px) {
+    .product-gallery-wrapper .product-wrapper .text-wrapper{
+        left: 70px;
+    }
+
+    .product-gallery-wrapper .product-info{
+        right: 70px !important;
+    }
+}
+
+
+@media (min-width: 1250px) {
+    .product-gallery-wrapper .product-wrapper .text-wrapper{
+        left: 110px;
+    }
+
+    .product-gallery-wrapper .product-info{
+        right: 110px !important;
+    }
+}
+
+@media (min-width: 1440px) {
+    .product-gallery-wrapper .product-wrapper .text-wrapper{
+        left: 140px;
+    }
+
+    .product-gallery-wrapper .product-info{
+        right: 140px !important;
+    }
+}
+
+
+
+.product-gallery-wrapper .product-wrapper .text-wrapper .heading p{
+    color: #000;
+    font-family: "Schnyder-SLight";
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 60px;
+    margin: 0 0 23px;
+}
+
+.product-gallery-wrapper .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0;
+}
+
+.product-gallery-wrapper .product-wrapper .button{
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    font-family: "OldschoolGrotesk-Medium";
+    min-height: 0;
+    line-height: 1;
+    color: #ffffff;
+    background: #000;
+}
+
+.product-gallery-wrapper .product-wrapper .button:hover{
+  color: #000;
+}
+
+.product-gallery-wrapper .product-wrapper .description p{
+    color: #000;
+    font-family: "OldschoolGrotesk-Regular";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    margin: 0 0 32px;
+}
+
+@media (max-width: 1100px){
+  .product-gallery-wrapper .product-wrapper .description p{
+    font-size: 14px;
+  }
+}
+
+.product-gallery-wrapper .product-info{
+    position: absolute;
+    right: 117px;
+    max-width: 230px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-gallery-wrapper .product-info.middle{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.product-gallery-wrapper .product-info.bottom{
+    bottom: 50px;
+}
+
+.product-gallery-wrapper .product-info.top{
+    top: 20px;
+}
+
+.product-gallery-wrapper .product-info .product-title{
+    padding: 8px 0 7px 14px;
+    background: #ffffff;
+}
+
+.product-gallery-wrapper .product-info .product-title a{
+  text-decoration: none;
+}
+
+.product-gallery-wrapper .product-info .product-title p{
+    margin: 0;
+    color: #000000;
+    font-family: "OldschoolGrotesk-Medium";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.product-gallery-wrapper .product-info .product-title p.card.metasubtitle-fp{
+    margin: 0;
+    color: #000000;
+    font-family: "OldschoolGrotesk-Regular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 430;
+    line-height: 28px;
+    letter-spacing: -0.24px;
+    text-align: left;
+}
+
+.product-gallery-wrapper product-form .products__heading{
+    background: #181818;
+    text-align: center;
+    margin-top: 7.17px;
+}
+
+.product-gallery-wrapper product-form .quick-add__submit{
+    color: #FFF;
+    text-align: center;
+    font-family: "OldschoolGrotesk-Regular";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 560;
+    line-height: 28px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.product-gallery-wrapper product-form .products__heading:hover{
+  color: #000;
+  background: #fff;
+  transition: 1s;
+}
+
+.product-gallery-wrapper product-form .products__heading:hover *{
+  color: #000;
+}
+
+.product-gallery-wrapper .loading-overlay__spinner svg .path{
+    stroke: #ffffff;
+}
+
+.product-gallery-wrapper .products__heading .product-price{
+    color: #FFF;
+    text-align: center;
+    font-family: "OldschoolGrotesk-Regular";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 560;
+    line-height: 28px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.product-gallery-wrapper .swiper-button-next, .product-gallery-wrapper .swiper-button-prev{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='51' height='51' viewBox='0 0 51 51' fill='none'%3E%3Cpath d='M50.6405 25.078C50.6405 38.7899 39.516 49.9059 25.7929 49.9059C12.0698 49.9059 0.945312 38.7899 0.945312 25.078C0.945312 11.366 12.0698 0.25 25.7929 0.25C39.516 0.25 50.6405 11.366 50.6405 25.078Z' stroke='black' stroke-width='0.5'/%3E%3Cpath d='M36.782 25.0069C36.9773 24.8116 36.9773 24.495 36.782 24.2998L33.6001 21.1178C33.4048 20.9225 33.0882 20.9225 32.893 21.1178C32.6977 21.3131 32.6977 21.6296 32.893 21.8249L35.7214 24.6533L32.893 27.4817C32.6977 27.677 32.6977 27.9936 32.893 28.1889C33.0882 28.3841 33.4048 28.3841 33.6001 28.1889L36.782 25.0069ZM14.3086 25.1533L36.4285 25.1533L36.4285 24.1533L14.3086 24.1533L14.3086 25.1533Z' fill='black'/%3E%3C/svg%3E");
+    background-size: 50px 50px;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    left: unset;
+    right: unset;
+}
+
+.product-gallery-wrapper .swiper-button-prev{
+    transform: rotate(180deg);
+}
+
+.swiper_buttons{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+.swiper-button-next__wrapper{
+    right: 2%;
+}
+
+.swiper-button-prev__wrapper{
+    left: 2%;
+}
+
+.product-gallery-wrapper .swiper-pagination-bullet{
+    background: #262222;
+    height: 3px;
+    border-radius: 0;
+    width: 25%;
+}
+
+.product-gallery-wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background-color: #000000;
+}
+
+.product-gallery-wrapper .swiper-container{
+    padding: 0;
+}
+
+@media (max-width: 767px) {
+    .product-gallery-wrapper .product-wrapper .text-wrapper{
+        position: absolute;
+        top: 52px;
+        max-width: 100%;
+        background: transparent;
+        z-index: 1;
+        right: 50px;
+        left: 30px;
+        transform: unset;
+    }
+
+    .mobile_button{
+        text-align: center;
+        position: absolute;
+        bottom: 35px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 230px;
+        width: 100%;
+    }
+
+    .product-gallery-wrapper .product-info{
+        position: absolute;
+    }
+
+    .product-gallery-wrapper .product-info.mobile_middle{
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: unset;
+    }
+
+    .product-gallery-wrapper .product-wrapper .button{
+        border: none;
+        box-shadow: unset;
+        padding-top: 13px;
+    }
+
+    .product-gallery-wrapper .swiper-button-wrapper{
+        gap: 16px;
+        display: none;
+    }
+
+    .product-gallery-wrapper .swiper-button-next, .product-gallery-wrapper .swiper-button-prev{
+        background-size: 48px 48px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .product-gallery-wrapper .product-wrapper .text-wrapper .heading{
+        margin: 0;
+    }
+
+    .product-gallery-wrapper .product-wrapper .text-wrapper .heading p{
+        color: #000;
+        font-family: "Schnyder-SLight";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 36px;
+        margin: 0;
+        margin-bottom: 16px;
+    }
+
+    .product-gallery-wrapper .product-wrapper .text-wrapper .description{
+        color: #000;
+        font-family: "OldschoolGrotesk-Regular";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0;
+    }
+
+    .product-gallery-wrapper .product-wrapper{
+        margin: 0;
+    }
+
+    .product-gallery-wrapper .product-wrapper img{
+        position: relative;
+        object-fit: cover;
+    }
+
+    .product-gallery-wrapper .product-wrapper .description p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .product-gallery-wrapper .swiper-pagination-bullet{
+        width: 50%;
+    }
+
+    .product-gallery-wrapper product-form .products__heading{
+        display: none;
+    }
+
+    .product-gallery-wrapper .product-wrapper .mobile_image{
+        position: relative;
+    }
+
+    .product-gallery-wrapper .product-info{
+        left: 0;
+        max-width: unset;
+        width: fit-content;
+    }
+
+    .product-gallery-wrapper .product-info .product-title p{
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 8px;
+    }
+
+    .product-gallery-wrapper .product-info .product-title p.card.metasubtitle-fp{
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .product-gallery-wrapper .product-info .product-title{
+        padding: 12px 12px 12px 34px;
+        text-align: right;
+    }
+}
