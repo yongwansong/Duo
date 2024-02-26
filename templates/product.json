@@ -170,6 +170,14 @@
             "row_icon_image": "shopify:\/\/shop_images\/8073475_vegan_vegeterian_eco_sustainable_environment_icon_1.svg"
           }
         },
+        "icon_EDqj8i": {
+          "type": "icon",
+          "settings": {
+            "heading": "SLS-Free",
+            "row_icon_description": "",
+            "row_icon_image": "shopify:\/\/shop_images\/SLS_Free.svg"
+          }
+        },
         "icon_QmGfp7": {
           "type": "icon",
           "settings": {
@@ -194,6 +202,7 @@
       },
       "block_order": [
         "icon_h4JcEk",
+        "icon_EDqj8i",
         "icon_QmGfp7",
         "icon_UmNKFT",
         "icon_TPjqxk"
