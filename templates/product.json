@@ -350,10 +350,17 @@
           "settings": {
             "heading": "Plastic-free made easy"
           }
+        },
+        "text_rAKDPA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.dual.section_offer_description | metafield_tag }}<\/p>"
+          }
         }
       },
       "block_order": [
-        "heading_kbDME7"
+        "heading_kbDME7",
+        "text_rAKDPA"
       ],
       "settings": {
         "image": "{{ product.metafields.dual.section_offer_image.value }}",
