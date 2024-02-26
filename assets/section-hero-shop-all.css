@@ -6,6 +6,13 @@
     background: #ffd761!important;
 }
 
+@media (max-width: 480px) {
+    .header {
+              padding: 15px 36px 15px 24px !important;
+    }
+  }
+
+
 .endrock-newheader {
     background: #ffd55c;
 }
@@ -707,10 +714,11 @@
 
 
 @media (max-width: 768px) {
+    .header__icons {
+        margin-right: 15px;
+      }
 
-    .page-width {
-        padding: 0 15px !important;
-    }
+  
     .custom_product_image img {
         width: 99%!important;
     }
@@ -870,15 +878,16 @@
   align-items: center;
     }
 }
+
+
 .endrock-featured-collection .product_title {
-    font-size: 18px;
     line-height: 18px!important;
     margin-bottom: 3px!important;
 }
 
 .packtitle_
 {
-    font-size:18px;
+    font-size:16px!important;
     line-height: 18px!important;
 }
 
