@@ -1722,6 +1722,7 @@ function updatePriceInParentElements({ productId }) {
     const variant = findSelectedVariantLoop(productId);
     const { price, comparePrice } = determinePrice(productId, variant);
 
+    console.log({ price, comparePrice });
 
     getSavedPriceLabel(productId);
 
@@ -1745,7 +1746,7 @@ function determinePrice(productId, variant) {
    
         return {
             price: loopFormatMoney(sellingPlanPrice, true),
-            comparePrice: window?.loopProps[productId]?.variant?.price
+            comparePrice: loopFormatMoney(window?.loopProps[productId]?.variant?.price, true)
         }
     }
     
