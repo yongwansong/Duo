@@ -378,6 +378,15 @@
         "layout": "text_first"
       }
     },
+    "homepage_title_with_text_zH8a4C": {
+      "type": "homepage-title-with-text",
+      "settings": {
+        "title": "<p>Reviews<\/p>",
+        "richtext": "",
+        "select_align": "left",
+        "none_margin": true
+      }
+    },
     "164078378666917a43": {
       "type": "apps",
       "blocks": {
@@ -394,7 +403,7 @@
       ],
       "settings": {
         "include_margins": true,
-        "none_margin": false
+        "none_margin": true
       }
     },
     "product-recommendations": {
@@ -419,6 +428,7 @@
     "dual_section_ULYBE8",
     "dual_section_8whqYN",
     "dual_section_teNBbL",
+    "homepage_title_with_text_zH8a4C",
     "164078378666917a43",
     "product-recommendations"
   ]
