@@ -356,11 +356,21 @@
           "settings": {
             "text": "<p>{{ product.metafields.dual.section_offer_description | metafield_tag }}<\/p>"
           }
+        },
+        "button_7UAxPN": {
+          "type": "button",
+          "settings": {
+            "button_label": "ORDER YOUR REFILL",
+            "button_link": "shopify:\/\/products\/energy",
+            "text_link_extra": "explore bundles",
+            "link_extra": "shopify:\/\/pages\/about"
+          }
         }
       },
       "block_order": [
         "heading_kbDME7",
-        "text_rAKDPA"
+        "text_rAKDPA",
+        "button_7UAxPN"
       ],
       "settings": {
         "image": "{{ product.metafields.dual.section_offer_image.value }}",
