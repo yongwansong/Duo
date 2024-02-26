@@ -320,11 +320,21 @@
             "step3": "Brush to activate foam",
             "step4": "Rinse and smile"
           }
+        },
+        "button_P3R4nx": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "text_link_extra": "watch explainer video",
+            "link_extra": "shopify:\/\/products\/energy"
+          }
         }
       },
       "block_order": [
         "heading_LtabmV",
-        "steps_BRdRnY"
+        "steps_BRdRnY",
+        "button_P3R4nx"
       ],
       "settings": {
         "image": "{{ product.metafields.dual.section_steps_image.value }}",
