@@ -264,12 +264,24 @@
             "page": "",
             "icon": "none"
           }
+        },
+        "collapsible_tab_jNY7E6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "{{ product.metafields.dual.section_ingredients_question2.value }}",
+            "content": "<p>{{ product.metafields.dual.section_ingredients_response2 | metafield_tag }}<\/p>",
+            "content_comparation_duo": "",
+            "content_comparation_suplement": "",
+            "page": "",
+            "icon": "none"
+          }
         }
       },
       "block_order": [
         "heading_k3U9N4",
         "text_DLFXXf",
-        "collapsible_tab_EeCbxw"
+        "collapsible_tab_EeCbxw",
+        "collapsible_tab_jNY7E6"
       ],
       "settings": {
         "image": "{{ product.metafields.dual.section_ingredients_image.value }}",
