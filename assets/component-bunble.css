@@ -495,6 +495,20 @@ h2.image-with-text__heading.h3 {
   padding: 50px 15px;
 }
 
+
+@media (max-width: 760px) {
+  .grid__item {
+
+    width: 100%!important;
+    max-width: 100%!important;
+  
+  }
+
+  }
+
+
+
+
 @media screen and (min-width: 1251px)
 {
 .page-width {
@@ -834,6 +848,13 @@ h2.image-with-text__heading.h3 {
 }
 
 
+
+.multicolumn-images-text__image img {
+  min-height: 480px;
+  object-fit: cover;
+}
+
+
 @media (min-width: 750px) {
 
 
@@ -843,7 +864,7 @@ h2.image-with-text__heading.h3 {
 }
 
   .image-with-text__text.rte {
-        max-width: 30%!important;
+        max-width: 50%!important;
 }
 
   .page-width {
