@@ -58,11 +58,7 @@
                 {{
                   block.settings.image
                   | image_url: width: 920
-                  | image_tag:
-                    widths: '140, 190, 240, 340, 390, 440, 490, 540, 640, 740, 920',
-                    width: 920,
-                    sizes: sizes,
-                    loading: 'lazy'
+                  | image_tag: width: 920, loading: 'lazy'
                 }}
               </div>
             {%- endif -%}

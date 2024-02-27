@@ -566,7 +566,7 @@ h2.image-with-text__heading.h3 {
 @media screen and (min-width: 750px){
 
 .grid--2-col-tablet .grid__item {
-    width: calc(60% - 0.5rem);
+    width: calc(50% - 0.5rem);
 }
 
 }
