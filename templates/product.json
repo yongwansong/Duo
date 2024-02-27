@@ -323,6 +323,7 @@
         },
         "button_P3R4nx": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "",
             "button_link": "",
@@ -359,6 +360,7 @@
         },
         "button_7UAxPN": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "ORDER YOUR REFILL",
             "button_link": "shopify:\/\/products\/energy",

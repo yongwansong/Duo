@@ -344,13 +344,7 @@
         a.appendChild(r);
       })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
-    <script
-      type="text/javascript"
-      id="loop-subscription-script"
-      defer
-    ></script>
-    <style class="loop-style">
-    </style>
+
     {%- if request.path contains 'loop_subscriptions/bundle' -%}
       {{ 'loop-bundle.css' | asset_url | stylesheet_tag }}
       <script>
@@ -387,8 +381,6 @@
     </script>
   
 
-    <script type="text/javascript" id="loop-subscription-script" src="{{ 'loop-widget-custom.js' | asset_url }}"></script>
-
     {%- if settings.predictive_search_enabled -%}
       <link
         rel="stylesheet"
@@ -405,7 +397,6 @@
       }
     </script>
   </head>
-  <style class="loop-style"> {% render 'loop-widget-custom.css.liquid' %} </style>
   <body 
     class="gradient template--{{ template.name }} 
     {% unless template contains 'index' %}sub-bg{% endunless %} 
