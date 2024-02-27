@@ -8,14 +8,14 @@
           "settings": {
           }
         },
-        "caption": {
+        "subtitle": {
           "type": "text",
           "settings": {
             "text": "WHITENING TOOTHPASTE",
             "text_style": "subtitle"
           }
         },
-        "okendo_star_rating_YWKTFH": {
+        "180df9d7-f979-4be9-8420-83028105b17f": {
           "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}"
@@ -32,14 +32,14 @@
             "show_dynamic_checkout": false
           }
         },
-        "options_shipping_H4DGYX": {
+        "options_shipping_Ct6xAB": {
           "type": "options_shipping",
           "settings": {
             "returned_info": "+ 100% Guaranteed - return for full refund if not satisfied",
             "free_shipping_info": "+ Free shipping on orders over $25"
           }
         },
-        "order_by_message_gFTdHq": {
+        "order_by_message_gJbnCh": {
           "type": "order-by-message",
           "settings": {
             "min_days": 5,
@@ -47,13 +47,13 @@
             "order_by_message": "Order today and receive by:"
           }
         },
-        "link_customization_KqLxw6": {
+        "link_customization_9CMw3D": {
           "type": "link_customization",
           "settings": {
-            "link_custom": "<p><a href=\"https:\/\/duotoothpaste.com\/pages\/subscribe\" title=\"https:\/\/duotoothpaste.com\/pages\/subscribe\">Want to mix-and-match? create your custom routine<\/a><\/p>"
+            "link_custom": "<p><a href=\"https:\/\/duotoothpaste.com\/pages\/subscribe\" title=\"https:\/\/duotoothpaste.com\/pages\/subscribe\">Do you want to create your own Duo combination?<\/a><\/p>"
           }
         },
-        "collapsible-row-0": {
+        "collapsible_tab_hMVTKW": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "{{ product.metafields.dropdown.dropdown_table_title.value }}",
@@ -64,18 +64,18 @@
             "icon": "none"
           }
         },
-        "collapsible-row-1": {
+        "collapsible_tab_6PEUmx": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "{{ product.metafields.dropdown.dropdown_standard_comparation_title.value }}",
-            "content": "{{ product.metafields.dropdown.dropdown_standard_comparation_description | metafield_tag }}",
+            "content": "<p>{{ product.metafields.dropdown.dropdown_standard_comparation_description | metafield_tag }}<\/p>",
             "content_comparation_duo": "<p>{{ product.metafields.dropdown.dropdown_standard_comparation_list_duo | metafield_tag }}<\/p>",
             "content_comparation_suplement": "<p>{{ product.metafields.dropdown.dropdown_standard_comparation_list_suplement | metafield_tag }}<\/p>",
             "page": "",
             "icon": "none"
           }
         },
-        "star_subcription_jRcbqp": {
+        "star_subcription_Ky6TNJ": {
           "type": "star_subcription",
           "settings": {
             "star1": "Stay consistent",
@@ -87,29 +87,82 @@
       },
       "block_order": [
         "title",
-        "caption",
-        "okendo_star_rating_YWKTFH",
+        "subtitle",
+        "180df9d7-f979-4be9-8420-83028105b17f",
         "description",
         "buy_buttons",
-        "options_shipping_H4DGYX",
-        "order_by_message_gFTdHq",
-        "link_customization_KqLxw6",
-        "collapsible-row-0",
-        "collapsible-row-1",
-        "star_subcription_jRcbqp"
+        "options_shipping_Ct6xAB",
+        "order_by_message_gJbnCh",
+        "link_customization_9CMw3D",
+        "collapsible_tab_hMVTKW",
+        "collapsible_tab_6PEUmx",
+        "star_subcription_Ky6TNJ"
       ],
       "settings": {
         "product_color": "{{ product.metafields.duo.product_color.value }}",
-        "enable_sticky_info": true,
-        "hide_variants": true,
+        "enable_sticky_info": false,
+        "hide_variants": false,
         "enable_video_looping": false,
         "product_cta": ""
       }
     },
-    "icon_rows_endrock_8hFeaR": {
+    "product-features": {
+      "type": "product-features",
+      "blocks": {
+        "remineralizing-nha": {
+          "type": "feature",
+          "settings": {
+            "text": "Remineralizing nHa"
+          }
+        },
+        "cruelty-free": {
+          "type": "feature",
+          "settings": {
+            "text": "Cruelty-free"
+          }
+        },
+        "sls-free": {
+          "type": "feature",
+          "settings": {
+            "text": "SLS-Free"
+          }
+        },
+        "vegan": {
+          "type": "feature",
+          "settings": {
+            "text": "Vegan"
+          }
+        },
+        "gluten-free": {
+          "type": "feature",
+          "settings": {
+            "text": "Gluten-Free"
+          }
+        },
+        "natural-flavors": {
+          "type": "feature",
+          "settings": {
+            "text": "Natural Flavors"
+          }
+        }
+      },
+      "block_order": [
+        "remineralizing-nha",
+        "cruelty-free",
+        "sls-free",
+        "vegan",
+        "gluten-free",
+        "natural-flavors"
+      ],
+      "disabled": true,
+      "settings": {
+        "product_color": "{{ product.metafields.duo.product_color.value }}"
+      }
+    },
+    "icon_rows_endrock_cktCwG": {
       "type": "icon-rows-endrock",
       "blocks": {
-        "icon_T3rcxk": {
+        "icon_h4JcEk": {
           "type": "icon",
           "settings": {
             "heading": "Vegan",
@@ -117,7 +170,7 @@
             "row_icon_image": "shopify:\/\/shop_images\/8073475_vegan_vegeterian_eco_sustainable_environment_icon_1.svg"
           }
         },
-        "icon_mgKz4P": {
+        "icon_EDqj8i": {
           "type": "icon",
           "settings": {
             "heading": "SLS-Free",
@@ -125,7 +178,7 @@
             "row_icon_image": "shopify:\/\/shop_images\/SLS_Free.svg"
           }
         },
-        "icon_DUTxUJ": {
+        "icon_QmGfp7": {
           "type": "icon",
           "settings": {
             "heading": "Dentist Created",
@@ -133,7 +186,7 @@
             "row_icon_image": "shopify:\/\/shop_images\/Caduceus.svg"
           }
         },
-        "icon_tBfrzf": {
+        "icon_UmNKFT": {
           "type": "icon",
           "settings": {
             "heading": "Cruelty-free",
@@ -141,7 +194,7 @@
             "row_icon_image": "shopify:\/\/shop_images\/Rabbit.svg"
           }
         },
-        "icon_zFdBqq": {
+        "icon_TPjqxk": {
           "type": "icon",
           "settings": {
             "heading": "Non-Toxic",
@@ -149,7 +202,7 @@
             "row_icon_image": "shopify:\/\/shop_images\/3365979_basil_bay_leaves_herbal_herbs_mint_icon_1.svg"
           }
         },
-        "icon_yNdEJH": {
+        "icon_ipMY6k": {
           "type": "icon",
           "settings": {
             "heading": "Fluoride-free",
@@ -159,12 +212,12 @@
         }
       },
       "block_order": [
-        "icon_T3rcxk",
-        "icon_mgKz4P",
-        "icon_DUTxUJ",
-        "icon_tBfrzf",
-        "icon_zFdBqq",
-        "icon_yNdEJH"
+        "icon_h4JcEk",
+        "icon_EDqj8i",
+        "icon_QmGfp7",
+        "icon_UmNKFT",
+        "icon_TPjqxk",
+        "icon_ipMY6k"
       ],
       "settings": {
         "heading": "",
@@ -174,7 +227,7 @@
         "width_section": "full-width"
       }
     },
-    "image_banner_endrock_ANjnMy": {
+    "image_banner_endrock_CXzanT": {
       "type": "image-banner-endrock",
       "settings": {
         "title": "“What you brush \u2028with matters.”",
@@ -186,78 +239,48 @@
         "sign_2": "Dr. Robert Johnson, DMD, MD"
       }
     },
-    "related-products": {
-      "type": "related-products",
-      "disabled": true,
-      "settings": {
-        "heading": "You may also like",
-        "heading_size": "h2",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28
-      }
-    },
-    "dual_section_Db4edk": {
+    "dual_section_ULYBE8": {
       "type": "dual-section",
       "blocks": {
-        "heading_PUXr4L": {
+        "heading_k3U9N4": {
           "type": "heading",
           "settings": {
             "heading": "Clean Ingredients"
           }
         },
-        "text_mN3DBR": {
+        "text_DLFXXf": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.dual.section_ingredients_description | metafield_tag }}"
+            "text": "<p>{{ product.metafields.dual.section_ingredients_description | metafield_tag }}<\/p>"
           }
         },
-        "collapsible_tab_AieTix": {
+        "collapsible_tab_EeCbxw": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "{{ product.metafields.dual.section_ingredients_question1.value }}",
-            "content": "{{ product.metafields.dual.section_ingredients_response1 | metafield_tag }}",
+            "content": "<p>{{ product.metafields.dual.section_ingredients_response1 | metafield_tag }}<\/p>",
             "content_comparation_duo": "",
             "content_comparation_suplement": "",
             "page": "",
             "icon": "none"
           }
         },
-        "collapsible_tab_fp4GqX": {
+        "collapsible_tab_jNY7E6": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "{{ product.metafields.dual.section_ingredients_question2.value }}",
-            "content": "{{ product.metafields.dual.section_ingredients_response2 | metafield_tag }}",
+            "content": "<p>{{ product.metafields.dual.section_ingredients_response2 | metafield_tag }}<\/p>",
             "content_comparation_duo": "",
             "content_comparation_suplement": "",
             "page": "",
             "icon": "none"
           }
         },
-        "collapsible_tab_XMamqm": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "{{ product.metafields.dual.section_ingredients_question3.value }}",
-            "content": "{{ product.metafields.dual.section_ingredients_response3 | metafield_tag }}",
-            "content_comparation_duo": "",
-            "content_comparation_suplement": "",
-            "page": "",
-            "icon": "none"
-          }
-        },
-        "collapsible_tab_xLp9aC": {
+        "collapsible_tab_eGRmbi": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "{{ product.metafields.dual.section_ingredients_question4.value }}",
-            "content": "{{ product.metafields.dual.section_ingredients_response4 | metafield_tag }}",
+            "content": "<p>{{ product.metafields.dual.section_ingredients_response4 | metafield_tag }}<\/p>",
             "content_comparation_duo": "",
             "content_comparation_suplement": "",
             "page": "",
@@ -266,12 +289,11 @@
         }
       },
       "block_order": [
-        "heading_PUXr4L",
-        "text_mN3DBR",
-        "collapsible_tab_AieTix",
-        "collapsible_tab_fp4GqX",
-        "collapsible_tab_XMamqm",
-        "collapsible_tab_xLp9aC"
+        "heading_k3U9N4",
+        "text_DLFXXf",
+        "collapsible_tab_EeCbxw",
+        "collapsible_tab_jNY7E6",
+        "collapsible_tab_eGRmbi"
       ],
       "settings": {
         "image": "{{ product.metafields.dual.section_ingredients_image.value }}",
@@ -279,27 +301,27 @@
         "layout": "text_first"
       }
     },
-    "dual_section_c7rdPc": {
+    "dual_section_8whqYN": {
       "type": "dual-section",
       "blocks": {
-        "heading_Bx4JpP": {
+        "heading_LtabmV": {
           "type": "heading",
           "settings": {
             "heading": "How to brush with Duo",
             "icon_title": "shopify:\/\/shop_images\/Brushing_with_Duo_Icon_c2a9fa16-6759-46ab-8da7-08f7657a6777.svg"
           }
         },
-        "steps_mcdxHq": {
+        "steps_BRdRnY": {
           "type": "steps",
           "settings": {
-            "title_step": "How to brush with Duo",
+            "title_step": "How to brush with D",
             "step1": "Crush a tablet between your teeth",
             "step2": "Wet your toothbrush",
             "step3": "Brush to activate foam",
             "step4": "Rinse and smile"
           }
         },
-        "button_AmLq7L": {
+        "button_P3R4nx": {
           "type": "button",
           "settings": {
             "button_label": "",
@@ -310,9 +332,9 @@
         }
       },
       "block_order": [
-        "heading_Bx4JpP",
-        "steps_mcdxHq",
-        "button_AmLq7L"
+        "heading_LtabmV",
+        "steps_BRdRnY",
+        "button_P3R4nx"
       ],
       "settings": {
         "image": "{{ product.metafields.dual.section_steps_image.value }}",
@@ -320,35 +342,35 @@
         "layout": "image_first"
       }
     },
-    "dual_section_C4yyiR": {
+    "dual_section_teNBbL": {
       "type": "dual-section",
       "blocks": {
-        "heading_Fm9xfn": {
+        "heading_kbDME7": {
           "type": "heading",
           "settings": {
             "heading": "Plastic-free made easy"
           }
         },
-        "text_ery7AF": {
+        "text_rAKDPA": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.dual.section_offer_description | metafield_tag }}"
+            "text": "<p>{{ product.metafields.dual.section_offer_description | metafield_tag }}<\/p>"
           }
         },
-        "button_aGdDgy": {
+        "button_7UAxPN": {
           "type": "button",
           "settings": {
             "button_label": "ORDER YOUR REFILL",
             "button_link": "shopify:\/\/products\/energy",
             "text_link_extra": "explore bundles",
-            "link_extra": "shopify:\/\/pages\/about-nha"
+            "link_extra": "shopify:\/\/pages\/build-bundle"
           }
         }
       },
       "block_order": [
-        "heading_Fm9xfn",
-        "text_ery7AF",
-        "button_aGdDgy"
+        "heading_kbDME7",
+        "text_rAKDPA",
+        "button_7UAxPN"
       ],
       "settings": {
         "image": "{{ product.metafields.dual.section_offer_image.value }}",
@@ -356,7 +378,7 @@
         "layout": "text_first"
       }
     },
-    "homepage_title_with_text_gWAggc": {
+    "homepage_title_with_text_zH8a4C": {
       "type": "homepage-title-with-text",
       "settings": {
         "title": "<p>Reviews<\/p>",
@@ -365,35 +387,49 @@
         "none_margin": true
       }
     },
-    "1707343573639fd40e": {
+    "164078378666917a43": {
       "type": "apps",
       "blocks": {
-        "okendo_reviews_widget_kEk6pX": {
+        "8a332e55-959f-4538-a718-3ec9a058f237": {
           "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
-            "product": "{{product}}",
+            "product": "{{ product }}",
             "widget_type": "reviews_widget"
           }
         }
       },
       "block_order": [
-        "okendo_reviews_widget_kEk6pX"
+        "8a332e55-959f-4538-a718-3ec9a058f237"
       ],
       "settings": {
         "include_margins": true,
         "none_margin": true
       }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
     }
   },
   "order": [
     "main",
-    "icon_rows_endrock_8hFeaR",
-    "image_banner_endrock_ANjnMy",
-    "related-products",
-    "dual_section_Db4edk",
-    "dual_section_c7rdPc",
-    "dual_section_C4yyiR",
-    "homepage_title_with_text_gWAggc",
-    "1707343573639fd40e"
+    "product-features",
+    "icon_rows_endrock_cktCwG",
+    "image_banner_endrock_CXzanT",
+    "dual_section_ULYBE8",
+    "dual_section_8whqYN",
+    "dual_section_teNBbL",
+    "homepage_title_with_text_zH8a4C",
+    "164078378666917a43",
+    "product-recommendations"
   ]
 }
