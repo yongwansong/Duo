@@ -1,6 +1,14 @@
 {
   "current": {
     "logo_width": 90,
+    "favicon": "shopify:\/\/shop_images\/DuoAvatar_Blue.png",
+    "colors_solid_button_labels": "#FFFFFF",
+    "colors_accent_1": "#121212",
+    "colors_accent_2": "#00126b",
+    "colors_text": "#121212",
+    "colors_outline_button_labels": "#121212",
+    "colors_background_1": "#FFFFFF",
+    "colors_background_2": "#F3F3F3",
     "type_header_font": "poppins_n5",
     "heading_scale": 100,
     "type_body_font": "poppins_n4",
@@ -95,22 +103,23 @@
     "sale_badge_color_scheme": "scheme-5",
     "sold_out_badge_color_scheme": "scheme-3",
     "social_facebook_link": "",
-    "social_instagram_link": "",
-    "social_youtube_link": "",
-    "social_tiktok_link": "",
-    "social_twitter_link": "",
-    "social_snapchat_link": "",
-    "social_pinterest_link": "",
-    "social_tumblr_link": "",
-    "social_vimeo_link": "",
-    "predictive_search_enabled": true,
-    "predictive_search_show_vendor": false,
-    "predictive_search_show_price": false,
-    "currency_code_enabled": true,
-    "cart_type": "notification",
-    "show_vendor": false,
-    "show_cart_note": false,
-    "cart_drawer_collection": "",
+    "social_instagram_link": "http:\/\/instagram.com\/duotoothpaste",
+    "social_tiktok_link": "https:\/\/www.tiktok.com\/@duotoothpaste",
+    "cart_type": "drawer",
+    "show_cart_note": true,
+    "cart_drawer_collection": "shop",
+    "cart_drawer_collection_title": "Want to add more Duo?",
+    "gamification_free_gift": "travel-set-free-gift",
+    "first_goal_image": "shopify:\/\/shop_images\/Frame_11422.png",
+    "second_goal_image": "shopify:\/\/shop_images\/Frame_11423.png",
+    "third_goal_image": "shopify:\/\/shop_images\/Frame_11421.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Duo-Logo-Tagline_Gray_Bold_UPDATED.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "medium",
+    "checkout_sidebar_background_color": "#eef1ff",
+    "checkout_accent_color": "#185bb9",
+    "checkout_button_color": "#00126b",
+    "cart_drawer_collection_heading_empty": "Recommended for you",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -135,62 +144,11 @@
         "settings": {
           "show_preview_data": true
         }
-      }
-    },
-    "color_schemes": {
-      "scheme-1": {
-        "settings": {
-          "background": "#ffffff",
-          "background_gradient": "",
-          "text": "#121212",
-          "button": "#121212",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
-        }
       },
-      "scheme-2": {
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
         "settings": {
-          "background": "#f3f3f3",
-          "background_gradient": "",
-          "text": "#121212",
-          "button": "#121212",
-          "button_label": "#f3f3f3",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
-        }
-      },
-      "scheme-3": {
-        "settings": {
-          "background": "#242833",
-          "background_gradient": "",
-          "text": "#ffffff",
-          "button": "#ffffff",
-          "button_label": "#000000",
-          "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
-        }
-      },
-      "scheme-4": {
-        "settings": {
-          "background": "#121212",
-          "background_gradient": "",
-          "text": "#ffffff",
-          "button": "#ffffff",
-          "button_label": "#121212",
-          "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
-        }
-      },
-      "scheme-5": {
-        "settings": {
-          "background": "#334fb4",
-          "background_gradient": "",
-          "text": "#ffffff",
-          "button": "#ffffff",
-          "button_label": "#334fb4",
-          "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
         }
       }
     }
@@ -198,63 +156,13 @@
   "presets": {
     "Default": {
       "logo_width": 90,
-      "color_schemes": {
-        "scheme-1": {
-          "settings": {
-            "background": "#FFFFFF",
-            "background_gradient": "",
-            "text": "#121212",
-            "button": "#121212",
-            "button_label": "#FFFFFF",
-            "secondary_button_label": "#121212",
-            "shadow": "#121212"
-          }
-        },
-        "scheme-2": {
-          "settings": {
-            "background": "#F3F3F3",
-            "background_gradient": "",
-            "text": "#121212",
-            "button": "#121212",
-            "button_label": "#F3F3F3",
-            "secondary_button_label": "#121212",
-            "shadow": "#121212"
-          }
-        },
-        "scheme-3": {
-          "settings": {
-            "background": "#242833",
-            "background_gradient": "",
-            "text": "#FFFFFF",
-            "button": "#FFFFFF",
-            "button_label": "#000000",
-            "secondary_button_label": "#FFFFFF",
-            "shadow": "#121212"
-          }
-        },
-        "scheme-4": {
-          "settings": {
-            "background": "#121212",
-            "background_gradient": "",
-            "text": "#FFFFFF",
-            "button": "#FFFFFF",
-            "button_label": "#121212",
-            "secondary_button_label": "#FFFFFF",
-            "shadow": "#121212"
-          }
-        },
-        "scheme-5": {
-          "settings": {
-            "background": "#334FB4",
-            "background_gradient": "",
-            "text": "#FFFFFF",
-            "button": "#FFFFFF",
-            "button_label": "#334FB4",
-            "secondary_button_label": "#FFFFFF",
-            "shadow": "#121212"
-          }
-        }
-      },
+      "colors_solid_button_labels": "#FFFFFF",
+      "colors_accent_1": "#121212",
+      "colors_accent_2": "#334FB4",
+      "colors_text": "#121212",
+      "colors_outline_button_labels": "#121212",
+      "colors_background_1": "#FFFFFF",
+      "colors_background_2": "#F3F3F3",
       "type_header_font": "assistant_n4",
       "heading_scale": 100,
       "type_body_font": "assistant_n4",

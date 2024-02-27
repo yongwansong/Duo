@@ -212,6 +212,10 @@ button.accordion:after{
   color: #000;
 }
 
+.klaviyo-form button{
+  width: 70% !important;
+}
+
 .footer-block__newsletter .ul-list{
   display: none;
 }
@@ -588,7 +592,6 @@ noscript .localization-selector.link {
 }
 
 .footer-block__details-content li a{
-  color: #000000 !important;
   font-family: "OldschoolGrotesk-Regular";
   font-size: 14px;
   font-style: normal;
@@ -623,7 +626,7 @@ noscript .localization-selector.link {
 
 .footer-block__details-content .list-menu__item--link,
 .copyright__content a {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
 }
 
 .footer-block__details-content .list-menu__item--active {
@@ -773,6 +776,38 @@ button.accordion.is-open:after {
 
 }
 
+.footer-block__newsletter [data-testid="form-component"]{
+  flex: unset !important;
+}
+
+.footer-block__newsletter [data-testid="form-component"] button{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='9' viewBox='0 0 24 9' fill='none'%3E%3Cpath d='M23.3536 4.85355C23.5488 4.65829 23.5488 4.34171 23.3536 4.14645L20.1716 0.964466C19.9763 0.769204 19.6597 0.769204 19.4645 0.964466C19.2692 1.15973 19.2692 1.47631 19.4645 1.67157L22.2929 4.5L19.4645 7.32843C19.2692 7.52369 19.2692 7.84027 19.4645 8.03553C19.6597 8.2308 19.9763 8.2308 20.1716 8.03553L23.3536 4.85355ZM0 5H23V4H0V5Z' fill='black'/%3E%3C/svg%3E") !important;
+  background-color: #ffffff!important;
+  background-repeat: no-repeat!important;
+  background-position: center!important;
+  height: 100%!important;
+}
+
+.footer-block__newsletter [data-testid="form-component"] input{
+    box-sizing: border-box;
+    border-radius: 0px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    font-family: "Hanken Grotesk", Geneva, Tahoma, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    letter-spacing: 0px;
+    background-color: rgb(255, 255, 255)!important;
+    border: none!important;
+    border-bottom: 1px solid #000!important;
+    padding: 10px 0!important;
+    box-shadow: unset!important;
+}
+
+.footer-block__newsletter [data-testid=form-component]:first-of-type{
+    width: 94%;
+}
+
 @media (max-width:768px) {
   .accordion-content{
     max-height: 0;
@@ -782,6 +817,18 @@ button.accordion.is-open:after {
   }
   button.accordion:nth-child(3):after{
     display: none;
+  }
+
+  .footer-block__newsletter [data-testid=form-component]:first-of-type{
+    width: 100%;
+  }
+
+  .footer-block__newsletter [data-testid=form-component]:last-of-type{
+    width: 10%;
+    position: absolute !important;
+    right: 0;
+    height: 100%;
+    bottom: 1px;
   }
 }
 

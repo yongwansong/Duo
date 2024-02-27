@@ -488,13 +488,13 @@
   LOOP WIDGET CODE STARTS
 {% endcomment %}
 
-{% assign block_star = section.blocks | where: 'type', 'star_subcription' %}
+
 {% assign template_exists = false %}
 {% capture template_content %}
     {% render 'loop-subscriptions'
       type: 'product-widget',
       product: product,
-      block_star: block_star
+      blocks: section.blocks
     %}
 {% endcapture %}
 
@@ -504,7 +504,7 @@
 {% endif %}
 
 {% if template_exists %}
-  {% render 'loop-subscriptions', type: 'product-widget', product: product, block_star: block_star %}
+  {% render 'loop-subscriptions', type: 'product-widget', product: product, blocks: section.blocks %}
 {% endif %}
 {% comment %}
   LOOP WIDGET CODE ENDS
@@ -512,7 +512,10 @@
                       <input
                         type="hidden"
                         name="id"
+                        {% comment %}  
                         value="{{ product.selected_or_first_available_variant.id }}"
+                        {% endcomment %}
+                        value="{{ product.variants[1].id }}"
                         disabled
                       >
                       <div class="product-form__buttons">
@@ -566,9 +569,9 @@
                   </product-form>
                   {% comment %} {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
 
-                  {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities
-                    | where: 'pick_up_enabled', true
-                  -%}
+                    {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities
+                      | where: 'pick_up_enabled', true
+                    -%}
 
                   <pickup-availability
                     class="product__pickup-availabilities no-js-hidden"
@@ -637,16 +640,7 @@
                   <p> {{ block.settings.returned_info }}</p>
                   <p> {{ block.settings.free_shipping_info }}</p>
                 </div>
-              {%- when 'link_customization' -%}
-                <div class="link-custom">
-                  <div class="icon">
-                    {% render 'icon-link-product' %}
-                  </div>
-                  <div class="text-link">
-                    {{ block.settings.link_custom }}
-                  </div>
-                </div>
-            
+              
               {%- endcase -%}
           {%- endfor -%}
               </div>

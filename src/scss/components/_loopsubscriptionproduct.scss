@@ -61,7 +61,7 @@
     border-radius: 0 !important;
   }
 
-  .loop-selling-plan-selector {
+  .loop-selling-plan-selector-style {
     width: auto !important;
     display: block !important;
     border-color: #000 !important;
@@ -113,6 +113,8 @@
       font-size: 14px;
       text-align: left;
       border-bottom: none;
+      margin-top: 16px;
+      line-height: 1.5;
     }
   }
 
@@ -163,6 +165,27 @@
         font-style: normal;
         font-weight: 400;
         line-height: 16px;
+
+        .price-subscription {
+          display: flex;
+          flex-direction: column;
+
+          .price-subcription-compare {
+            color: #b1b1b1;
+            font-size: 13px;
+            margin-bottom: 2px;
+          }
+
+          .save-subscription {
+            color: #00497E;
+            text-align: right;
+            font-family: "OldschoolGrotesk-Regular";
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 14px;
+          }
+        }
       }
       .variant-field__sale {
         color: #00497E;
@@ -170,7 +193,13 @@
         font-style: normal;
         font-weight: 500;
         line-height: 14px;
+
+        p {
+          display: inline;
+        }
       }
+
+      
     }
 
     
@@ -191,7 +220,7 @@
 
       
     }
-    .loop-selling-plan-selector {
+    .loop-selling-plan-selector-style {
       width: 57% !important;
     }
 
