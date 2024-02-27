@@ -341,6 +341,10 @@
   .cart-drawer .cart__checkout-button {
 	max-width: none;
   }
+
+  .cart-drawer .cart__checkout-button:hover{
+	color: #fff;
+  }
   
   .drawer__footer .cart__dynamic-checkout-buttons {
 	max-width: 100%;
