@@ -567,11 +567,11 @@ h2.image-with-text__heading.h3 {
   }
 }
 
-@media screen and (min-width: 750px) {
+@media (min-width: 750px) {
   .titlemain {
       position: absolute;
       text-align: left;
-      max-width: 27%;
+      max-width: 30%;
       text-align: justify;
       padding: 15px 30px!important;
   }
@@ -696,6 +696,21 @@ color:#000
 }
 
 
+@media (min-width:1400px) {
+ 
+  .titlemain {
+    padding: 40px 30px !important;
+  }
+
+  
+  .texttitle {
+  
+    font-size: 50px!important;
+    line-height: 50px;
+  
+  }
+
+}
 @media (max-width:1100px) {
 .img_text_ {
   max-height: 480px!important;
