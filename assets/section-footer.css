@@ -592,7 +592,6 @@ noscript .localization-selector.link {
 }
 
 .footer-block__details-content li a{
-  color: #000000 !important;
   font-family: "OldschoolGrotesk-Regular";
   font-size: 14px;
   font-style: normal;
@@ -627,7 +626,7 @@ noscript .localization-selector.link {
 
 .footer-block__details-content .list-menu__item--link,
 .copyright__content a {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
 }
 
 .footer-block__details-content .list-menu__item--active {
