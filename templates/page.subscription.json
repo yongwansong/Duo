@@ -31,7 +31,7 @@
         "button_HCmp9t"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Duo_Product-0947.jpg",
+        "image": "shopify:\/\/shop_images\/Header_Section_1.jpg",
         "videoo": "",
         "height": "adapt",
         "layout": "text_first"
@@ -129,7 +129,7 @@
         "column_YrBmeb": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Duo_Product-0891.jpg",
+            "image": "shopify:\/\/shop_images\/subdcribe_img_from_1.jpg",
             "texttitle": "<p>Subscribe + Save<\/p>",
             "text": "<p>Up to 33% off when you put your delivery on auto-pilot. And as always, 100% satisfaction guaranteed.<\/p>"
           }
@@ -137,7 +137,7 @@
         "column_cTYPpd": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Duo_Product-0749.jpg",
+            "image": "shopify:\/\/shop_images\/subdcribe_img_from2_1.jpg",
             "texttitle": "<p>Proven ingredients<\/p>",
             "text": "<p>Formulated by dentists with rigorously tested nHa and clean ingredients for optimal oral health.<\/p>"
           }
@@ -145,7 +145,7 @@
         "column_dXEyKT": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Duo_Product-0905.jpg",
+            "image": "shopify:\/\/shop_images\/subdcribe_img_from3_1.jpg",
             "texttitle": "<p>Do it for the planet<\/p>",
             "text": "<p>Tablets arrive with recyclable glass bottles & compostable refill pouches.<\/p>"
           }
