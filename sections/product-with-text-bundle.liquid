@@ -69,9 +69,13 @@
        &.slick-active button { background-color: #000; }
     }
   }
+
+  
 </style>
 
 <script>
+
+  
   function toggleText(element) {
     const textoOculto = element.parentElement.nextElementSibling;
     textoOculto.style.display = textoOculto.style.display === 'none' || textoOculto.style.display === '' ? 'block' : 'none';
@@ -79,6 +83,28 @@
     textoOculto.style.zIndex = '1';
     textoOculto.style.height = '100%';
   }
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var toggleLink = document.getElementById("toggleLink");
+  var productItem = document.querySelector(".product-with-text__product_item--{{ block.settings.title | handle }}");
+
+  // Inicialmente oculta el elemento
+  productItem.style.display = "none";
+
+  // Maneja el evento de clic
+  toggleLink.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    // Cambia la visibilidad del elemento
+    if (productItem.style.display === "none") {
+      productItem.style.display = "block";
+    } else {
+      productItem.style.display = "none";
+    }
+  });
+});
 </script>
 
 
@@ -97,7 +123,7 @@
         centerPadding: "0px",
         dots: true,
         slidesToShow: 1,
-        infinite: false
+        infinite: false,
       });
     });
   </script>
@@ -172,7 +198,9 @@
           
         </div>
 
-        <div class="contenedor-imagen">
+        <div class="contenedor-imagen contenedor-imagen--{{ block.settings.title | handle }}" 
+        onmouseover="{{ block.settings.title | handle }}_toggleTexto();" 
+        onmouseout="{{ block.settings.title | handle }}_toggleTexto();">
           <!-- Elemento 1 -->
   <label class="switch">
     <input type="checkbox" class="switchInput" onchange="toggleText(this)">
@@ -242,8 +270,33 @@
          
           </div>
 
-          <div class="poduct-link"> 
-            <a class="link_color" href="{{ block.settings.button_link}}">Learn More</a>
+
+          <script>
+            function {{ block.settings.title | handle }}_toggleTexto() {
+    var elementos = document.getElementsByClassName("product-with-text__product_item--{{ block.settings.title | handle }}");
+    for (var i = 0; i < elementos.length; i++) {
+      // Alternar la visibilidad directamente
+      elementos[i].style.display = (elementos[i].style.display === "" || elementos[i].style.display === "none") ? "block" : "none";
+    }
+  }
+
+  function {{ block.settings.title | handle }}_toggleHover(isHovered) {
+    var elementos = document.getElementsByClassName("contenedor-imagen--{{ block.settings.title | handle }}");
+    for (var i = 0; i < elementos.length; i++) {
+      // Aplicar estilos de hover según el valor de isHovered
+      elementos[i].style.backgroundColor = isHovered ? "" : "";
+      // Puedes agregar más estilos según sea necesario
+    }
+  }
+          </script>
+          
+
+
+          <div class="poduct-link link_link"> 
+            <a class="link_link" href="#" 
+            onclick="{{ block.settings.title | handle }}_toggleTexto(); return false;" 
+            onmouseover="{{ block.settings.title | handle }}_toggleHover(true);" 
+            onmouseout="{{ block.settings.title | handle }}_toggleHover(false);">Learn More</a>
             
           </div>
           </div>

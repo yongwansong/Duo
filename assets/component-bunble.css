@@ -448,23 +448,27 @@ h2.image-with-text__heading.h3 {
   background-color: #73CCEA!important;
   border: none!important;
   height: 100%;
+  position: absolute;
   
 }
 
 .product-with-text__product_item--immunity {
   background-color: #D8FAE9!important;
   height: 100%;
+  position: absolute;
  
 }
 
 .product-with-text__product_item--energy {
   background-color: #FECC41!important;
   height: 100%;
+  position: absolute;
   
 }
 
 .product-with-text__product_item--sleep {
   background-color: #E9BEF6!important;height: 100%;
+  position: absolute;
   
 }
 
@@ -652,17 +656,25 @@ h2.image-with-text__heading.h3 {
   margin-top: 0rem!important;
 }
 
+.link_link{
+    
+color:#000
+
+}
 
 
 @media (max-width: 480px) {
-
+  .link_link{
+    
+    display: none!important;
+    
+    }
 
   .product-with-text-section .product-with-text-section_wrapper {
     padding: 0 5px!important;
   }
 
   
-
   .producto-leg {
     display: inline-block!important;
     line-height: 1;
