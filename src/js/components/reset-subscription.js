@@ -20,6 +20,7 @@ const selectDefault = (e) => {
 
   // If there are radio buttons, click the first one to set it as default
   if (radios.length > 0) {
+    console.log('ejecurta');
     radios[0].click();
   } 
 }
