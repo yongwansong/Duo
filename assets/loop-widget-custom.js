@@ -938,6 +938,7 @@ function clickOnSellingPlanGroupContainer(event) {
         event.target.closest(".loop-one-time-purchase-option");
 
     if (!container) return;
+
     
     const radio = container.querySelector('input[type="radio"]');
 
@@ -945,8 +946,9 @@ function clickOnSellingPlanGroupContainer(event) {
     const selectedPlanGroupId =
         window.loopProps[radio.dataset.productId]?.sellingPlanGroupId;
 
-    if (radio?.dataset?.id !== selectedPlanGroupId) {
-        radio.click();
+
+        if (radio?.dataset?.id !== selectedPlanGroupId) {
+            radio.click();
     }
     
 }
@@ -1011,7 +1013,7 @@ function loopInit({ productId, product, variantId }) {
     //toggleVariantDisplay(product, selectedVariant.id);
     checkVariantsSellingPlanAllocation(selectedVariant, productId);
     applyDefaultSelectionBasedOnSettings(selectedVariant, productId);
-    applySettings({ productId });
+    //applySettings({ productId });
 }
 
 function toggleVariantDisplay(product, selectedVariantId) {
@@ -1697,14 +1699,16 @@ const changeSelect = (event) => {
 
   const inputVariant = parent.querySelector('input[name="id"]');
   const priceContainer = parent.querySelector('.price-subcription-custom');
+  const sellingPlanSelect = parent.querySelector('.loop-selling-plan-selector');
+  sellingPlanSelect.selectedIndex = 0;
+
   const productId = selectElement.dataset.productId;
   
   inputVariant.value = selectVariantSubcription;
 
   setTimeout(() => {
       priceContainer.click();
-  },300)
-
+  },300);
 
 }
 
@@ -1721,8 +1725,6 @@ function updatePriceInParentElements({ productId }) {
 
     const variant = findSelectedVariantLoop(productId);
     const { price, comparePrice } = determinePrice(productId, variant);
-
-    console.log({ price, comparePrice });
 
     getSavedPriceLabel(productId);
 
