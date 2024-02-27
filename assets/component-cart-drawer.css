@@ -343,7 +343,8 @@
   }
 
   .cart-drawer .cart__checkout-button:hover{
-	color: #fff;
+	color: #000;
+    background: #fff;
   }
   
   .drawer__footer .cart__dynamic-checkout-buttons {
