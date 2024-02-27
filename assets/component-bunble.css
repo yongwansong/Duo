@@ -663,7 +663,7 @@ color:#000
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 777px) {
   .link_link{
     
     display: none!important;
