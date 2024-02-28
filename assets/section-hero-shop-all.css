@@ -277,7 +277,6 @@
 }
 
 .right-content {
-    position: absolute;
     top: 30%!important;
 }
 
@@ -969,9 +968,3 @@
 }
 
 
-
-
-.right-content {
-    position: absolute;
-    top: 30%!important;
-}

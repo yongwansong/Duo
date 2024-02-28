@@ -149,7 +149,7 @@
           "type": "product",
           "settings": {
             "featured_product": "original",
-            "custom_product_image": "shopify:\/\/shop_images\/Day_Night_Bundle.png",
+            "custom_product_image": "shopify:\/\/shop_images\/day_night_bundle.jpg",
             "hover_image": "shopify:\/\/shop_images\/Night_Bundle.jpg",
             "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
             "info_1_top_position": "27%",
@@ -172,7 +172,7 @@
           "type": "product",
           "settings": {
             "featured_product": "energy",
-            "custom_product_image": "shopify:\/\/shop_images\/Rectangle_226_1.png",
+            "custom_product_image": "shopify:\/\/shop_images\/better_bundle.jpg",
             "hover_image": "shopify:\/\/shop_images\/better_you_bundle.png",
             "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
             "info_1_top_position": "8%",
@@ -195,7 +195,7 @@
           "type": "product",
           "settings": {
             "featured_product": "sleep",
-            "custom_product_image": "shopify:\/\/shop_images\/Rectangle_227_1.png",
+            "custom_product_image": "shopify:\/\/shop_images\/360_bundle.jpg",
             "hover_image": "shopify:\/\/shop_images\/360_bundle.png",
             "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
             "info_1_top_position": "7%",
@@ -251,7 +251,7 @@
           "type": "product",
           "settings": {
             "featured_product": "original",
-            "custom_product_image": "shopify:\/\/shop_images\/Rectangle_226_2.png",
+            "custom_product_image": "shopify:\/\/shop_images\/original_x2_1a460404-3879-42b5-822c-85bbff2f1de7.jpg",
             "hover_image": "shopify:\/\/shop_images\/Hover_state_-_Original.png",
             "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
             "info_1_top_position": "27%",
@@ -274,7 +274,7 @@
           "type": "product",
           "settings": {
             "featured_product": "energy",
-            "custom_product_image": "shopify:\/\/shop_images\/Rectangle_225_2.png",
+            "custom_product_image": "shopify:\/\/shop_images\/original_x3_48a8ab87-5eb9-4a86-95cc-4bdbcb8d82d1.jpg",
             "hover_image": "shopify:\/\/shop_images\/original_3.png",
             "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
             "info_1_top_position": "8%",
@@ -297,7 +297,7 @@
           "type": "product",
           "settings": {
             "featured_product": "sleep",
-            "custom_product_image": "shopify:\/\/shop_images\/Rectangle_226_3.png",
+            "custom_product_image": "shopify:\/\/shop_images\/immunity_x3_f6c1577f-717d-430c-ac87-2a50d85cddef.jpg",
             "hover_image": "shopify:\/\/shop_images\/original_imminity_2.png",
             "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
             "info_1_top_position": "7%",
@@ -356,7 +356,7 @@
             "featured_product_two": "immunity-refill-pouch",
             "featured_product_three": "energy-refill-pouch",
             "featured_product_four": "sleep-refill-package",
-            "custom_product_image": "shopify:\/\/shop_images\/Rectangle_224_1.png",
+            "custom_product_image": "shopify:\/\/shop_images\/Frame_11485.png",
             "custom_product_image2": "shopify:\/\/shop_images\/Immunity_1.png",
             "custom_product_image3": "shopify:\/\/shop_images\/Rectangle_224_2.png",
             "custom_product_image4": "shopify:\/\/shop_images\/Sleep_1f55a569-8ef5-4bb8-a16e-d610ab4cb406.png",
@@ -384,7 +384,7 @@
             "featured_product_two": "",
             "featured_product_three": "",
             "featured_product_four": "",
-            "custom_product_image": "shopify:\/\/shop_images\/Rectangle_225_3.png",
+            "custom_product_image": "shopify:\/\/shop_images\/sleep_energy.jpg",
             "hover_image": "shopify:\/\/shop_images\/sleep-energy-2-w.png",
             "info_1": "",
             "info_1_top_position": "",
