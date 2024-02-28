@@ -1452,6 +1452,10 @@ deferred-media {
 	position: relative;
 }
 
+body{
+	font-family: "OldschoolGrotesk-Regular";
+}
+
 .share-button details {
 	width: fit-content;
 }
