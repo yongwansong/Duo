@@ -36,12 +36,16 @@ body {
 
 
 @media (max-width: 550px)
-
+{
 h2.image-with-text__heading.h3 {
 
-  font-size: 55px;
+  font-size: 42px!important;
   line-height: 70px;
+  width: 100%;
+    display: block !important;
+    text-align: center!important;
 
+}
 }
 
 
@@ -151,7 +155,7 @@ h2.image-with-text__heading.h3 {
 h2.image-with-text__heading.h3 {
   text-align: left;
   font-family: OldschoolGrotesk-Regular!important;
-  font-size: 70px!important;
+  font-size: 70px;
   font-style: normal;
   font-weight: 400;
   line-height: 64px;
@@ -326,7 +330,7 @@ h2.image-with-text__heading.h3 {
 
   .image-with-text__grid_ {
     margin-left: 0!important;
-    margin-right: 7.5%;
+    margin-right: 0!important;
   }
 
 
@@ -796,7 +800,7 @@ color:#000
 
   .page-width {
     background-size: contain !important;
-    background-position: bottom !important;
+    background-position: right 40px bottom 0px !important;
   }
 }
 
@@ -954,6 +958,23 @@ color:#000
   background-size: cover;
 }
 
+
+@media (max-width: 750px) {
+  
+
+  ::selection {
+    background-color: rgba(var(--color-foreground),.2);
+  
+  }
+  elemento {
+    background-image: url('//duotoothpaste.com/cdn/shop/files/913aff283359fadbab810f9ecb468a92.jpg?v=1707271271');
+  
+  }
+  .image-with-text_feat {
+    background-size: contain !important;
+    background-position: right -90px bottom -20px !important;
+  }
+}
 .image-with-text_feat {
   background-position: top;
   background-size: cover;
