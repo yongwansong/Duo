@@ -919,9 +919,20 @@ color:#000
 }
 
 
+
+@media (max-width:790px) {
+
+
+  
+  .grid_feature {
+    text-align: center!important;
+}
+
+}
 @media (min-width: 750px) {
 
 
+  
   .grid_feature {
     max-width: 540px;
     margin-right: 50px;

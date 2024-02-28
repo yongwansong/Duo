@@ -322,25 +322,17 @@
             "title": "Will I receive bottles or refills in future orders?",
             "description": "<p>Your first order of tablets will ship in apothecary-grade glass bottles. Refills will ship in compostable pouches.<\/p>"
           }
-        },
-        "faq_6bQaRf": {
-          "type": "faq",
-          "settings": {
-            "title": "My bottle broke! How do I get a new one?",
-            "description": "<p><em>Do not include this Question on the list<\/em><\/p>"
-          }
         }
       },
       "block_order": [
         "faq_VfK9ce",
         "faq_xBEwNe",
-        "faq_e6NQLc",
-        "faq_6bQaRf"
+        "faq_e6NQLc"
       ],
       "settings": {
         "padding_top": 50,
         "padding_bottom": 50,
-        "mobile_padding_top": 50,
+        "mobile_padding_top": 40,
         "mobile_padding_bottom": 50,
         "full_width": false,
         "bg_color": "",
