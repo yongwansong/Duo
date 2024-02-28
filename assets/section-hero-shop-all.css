@@ -240,7 +240,7 @@
     height: 18px;
     display: block;
     border-radius: 50%;
-    margin: -5px auto 0px auto;
+    margin: 5px auto 0px auto;
     padding: 0px;
     z-index: -1;
     position: relative;
@@ -300,7 +300,7 @@
 }
 .original.products__heading.add-toCart:hover {
     color: #fff;
-    background:#C271D9;
+    background:#00aade;
    
   }
 
@@ -689,6 +689,7 @@
 
 .imagencontainerfinal {
     width: calc(100% - 0px)!important;
+    margin-top: 30px;
 }
 
 .imagen-info-text {
@@ -881,14 +882,17 @@
 
 
 .endrock-featured-collection .product_title {
-    line-height: 18px!important;
+    line-height: 12px!important;
     margin-bottom: 0px!important;
 }
 
-.packtitle_
-{
-    font-size:16px!important;
-    line-height: 18px!important;
+
+.packtitle_ {
+    font-size: 16px;
+    line-height: 18px !important;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
 }
 
 
@@ -906,8 +910,9 @@
     list-style: none;
     padding: 0;
     gap: 0px;
-    font-size: 12px;
+    font-size: 10px;
     margin: 5px;
+    margin-top: -10px;
 }
 
 .tab {
@@ -916,6 +921,7 @@
     cursor: pointer;
     font-weight: 600;
     min-width: 25%;
+    margin-top: -5px;
 }
 
 .content {
@@ -934,6 +940,7 @@
     font-weight: 600;
     min-width: 25%;
     text-align: center;
+    margin-top: -5px;
 }
 
 .why-duo_wrapper .left-content__heading {
