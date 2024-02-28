@@ -10,19 +10,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Function to set the default radio button selection
+
+
 const selectDefault = (e) => {
+  const parent = e.target.closest('.container');
 
-   // Find the closest parent container element
-   const parent = e.target.closest('.container');
-
-  // Find all radio buttons inside the parent container
   const radios = parent.querySelectorAll('variant-radios input[type="radio"]');
 
-  // If there are radio buttons, click the first one to set it as default
-  if (radios.length > 0) {
-    console.log('ejecurta');
-    radios[0].click();
-  } 
+  const selectDefault = document.querySelector("#select-quantity");
+
+  const dataSelectMetafieldToFind = selectDefault.dataset.selectMetafield
+
+  const options = selectDefault.querySelectorAll('option');
+
+  let positionToClick = -1; 
+  options.forEach((option, index) => {
+    if (option.value === dataSelectMetafieldToFind) {
+      option.selected = true;
+      positionToClick = index;
+    }
+  });
+
+  if (positionToClick !== -1) {
+    radios[positionToClick].click();
+    return;
+  }
+
+  radios[0].click();
 }
 
 const selectOneTimePurchace = (e) => {
@@ -31,7 +45,7 @@ const selectOneTimePurchace = (e) => {
   const radios = parent.querySelectorAll('variant-radios input[type="radio"]');
 
   if (radios.length > 0) {
-    radios[3].click();
+    radios[4].click();
   }
 }
 

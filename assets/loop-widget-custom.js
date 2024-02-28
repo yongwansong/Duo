@@ -192,8 +192,13 @@ function showLoopPurchaseOptionsLabel(productId) {
 
 function initializeLoopUI(productData) {
     let variantId = getVariantIdFromURL(productData.variants);
+    const selectVariantSubcription = document.querySelector('#select-quantity');
     if (!variantId) {
         variantId = getFirstAvailableVariantVariantId(productData.id);
+    }
+    //if metafield configure this get variant id default init
+    if (selectVariantSubcription.dataset.selectMetafield) {
+        variantId = selectVariantSubcription.dataset.selectMetafield;
     }
     loopInit({ productId: productData.id, product: productData, variantId });
 }
@@ -209,6 +214,7 @@ function getVariantIdFromURL(variants) {
 
 function getFirstAvailableVariantVariantId(productId) {
     const productData = getProductData(productId);
+
     const v = productData?.variants.find((v) => v.available);
     const variantId = v?.id;
     return variantId;
@@ -1153,8 +1159,12 @@ function changeInSellingPlanGroupLoop(option) {
         variant.selling_plan_allocations.filter(
             (spa) => spa.selling_plan_group_id === sellingPlanGroupId
         ) || [];
+
+    const lastSellingPlan = sellingPlans.length - 1;
+    const sellingPlanSelect = document.querySelector('.loop-selling-plan-selector');
+    sellingPlanSelect.selectedIndex = lastSellingPlan;
     let sellingPlan =
-        sellingPlans && sellingPlans.length ? sellingPlans[0] : {};
+        sellingPlans && sellingPlans.length ? sellingPlans[lastSellingPlan] : {};
     let sellingPlanId = sellingPlan.selling_plan_id;
     updateLoopProperties({
         productId,
@@ -1164,6 +1174,8 @@ function changeInSellingPlanGroupLoop(option) {
         sellingPlanId,
         sellingPlan,
     });
+    console.log('sellingPlan', sellingPlan);
+
     updateSelectDropDownDefaultValues({
         productId,
         variant,
@@ -1699,9 +1711,7 @@ const changeSelect = (event) => {
 
   const inputVariant = parent.querySelector('input[name="id"]');
   const priceContainer = parent.querySelector('.price-subcription-custom');
-  const sellingPlanSelect = parent.querySelector('.loop-selling-plan-selector');
-  sellingPlanSelect.selectedIndex = 0;
-
+  
   const productId = selectElement.dataset.productId;
   
   inputVariant.value = selectVariantSubcription;

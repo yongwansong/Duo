@@ -483,38 +483,46 @@
                     -%}
 
 
-                                      {% comment %}
-  DO NOT modify this source code
-  LOOP WIDGET CODE STARTS
-{% endcomment %}
+                      {% comment %}
+                        DO NOT modify this source code
+                        LOOP WIDGET CODE STARTS
+                      {% endcomment %}
 
 
-{% assign template_exists = false %}
-{% capture template_content %}
-    {% render 'loop-subscriptions'
-      type: 'product-widget',
-      product: product,
-      blocks: section.blocks
-    %}
-{% endcapture %}
+                      {% assign template_exists = false %}
+                      {% capture template_content %}
+                          {% render 'loop-subscriptions'
+                            type: 'product-widget',
+                            product: product,
+                            blocks: section.blocks
+                          %}
+                      {% endcapture %}
 
 
-{% if template_content contains 'Rendering loop-subscriptions' %}
-  {% assign template_exists = true %}
-{% endif %}
+                      {% if template_content contains 'Rendering loop-subscriptions' %}
+                        {% assign template_exists = true %}
+                      {% endif %}
 
-{% if template_exists %}
-  {% render 'loop-subscriptions', type: 'product-widget', product: product, blocks: section.blocks %}
-{% endif %}
-{% comment %}
-  LOOP WIDGET CODE ENDS
-{% endcomment %}
+                      {% if template_exists %}
+                        {% render 'loop-subscriptions', type: 'product-widget', product: product, blocks: section.blocks %}
+                      {% endif %}
+                      {% comment %}
+                        LOOP WIDGET CODE ENDS
+                      {% endcomment %}
+
+                      {%- assign variant_default = product.selected_or_first_available_variant.id -%}
+                      {%- for variant_metafield in product.variants -%}
+                        {%- if variant_metafield.metafields.select.subscription_default.value -%}
+                          {%- assign variant_default = variant_metafield.id -%}
+                        {%- endif -%}
+                      {%- endfor -%}
                       <input
                         type="hidden"
                         name="id"
-                        value="{{ product.selected_or_first_available_variant.id }}"
+                        value="{{ variant_default }}"
                         disabled
                       >
+                      
                       <div class="product-form__buttons">
                         <button
                           type="submit"
