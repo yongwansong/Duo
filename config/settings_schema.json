@@ -1499,6 +1499,12 @@
       },
       {
         "type": "text",
+        "id": "gamification_second_discount",
+        "label": "Gamification Second Discount Code",
+        "default": "5OFFGAMIFICATION"
+      },
+      {
+        "type": "text",
         "id": "gamification_discount",
         "label": "Gamification Discount Code",
         "default": "10OFFGAMIFICATION"
