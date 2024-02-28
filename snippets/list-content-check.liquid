@@ -1,0 +1,9 @@
+{% assign list = content | split: '/' %}
+
+<div class="content-check">
+  {% for item in list %}
+    <div class="content-check--item">
+      {% render 'icon-check' %} {{ item }}
+    </div>
+  {% endfor %}
+</div>

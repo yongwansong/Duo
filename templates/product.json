@@ -3,45 +3,22 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
           }
         },
-        "caption": {
+        "subtitle": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text": "WHITENING TOOTHPASTE",
             "text_style": "subtitle"
           }
         },
-        "price": {
-          "type": "price",
+        "180df9d7-f979-4be9-8420-83028105b17f": {
+          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true
+            "product": "{{product}}"
           }
         },
         "description": {
@@ -49,154 +26,412 @@
           "settings": {
           }
         },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
+        "buy_buttons": {
+          "type": "buy_buttons",
           "settings": {
-            "heading": "Materials",
-            "content": "",
-            "page": "",
-            "icon": "leather"
+            "show_dynamic_checkout": false
           }
         },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
+        "options_shipping_Ct6xAB": {
+          "type": "options_shipping",
           "settings": {
-            "heading": "Shipping & Returns",
-            "content": "",
-            "page": "",
-            "icon": "truck"
+            "returned_info": "+ 100% Guaranteed - return for full refund if not satisfied",
+            "free_shipping_info": "+ Free shipping on orders over $20"
           }
         },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
+        "order_by_message_gJbnCh": {
+          "type": "order-by-message",
           "settings": {
-            "heading": "Dimensions",
-            "content": "",
-            "page": "",
-            "icon": "ruler"
+            "min_days": 5,
+            "max_days": 12,
+            "order_by_message": "Order today and receive by:"
           }
         },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
+        "link_customization_9CMw3D": {
+          "type": "link_customization",
           "settings": {
-            "heading": "Care Instructions",
-            "content": "",
-            "page": "",
-            "icon": "heart"
+            "link_custom": "<p><a href=\"https:\/\/duotoothpaste.com\/pages\/subscribe\" title=\"https:\/\/duotoothpaste.com\/pages\/subscribe\">Do you want to create your own Duo combination?<\/a><\/p>"
           }
         },
-        "share": {
-          "type": "share",
+        "collapsible_tab_hMVTKW": {
+          "type": "collapsible_tab",
           "settings": {
-            "share_label": "Share"
+            "heading": "{{ product.metafields.dropdown.dropdown_table_title.value }}",
+            "content": "<p>{{ product.metafields.dropdown.dropdown_table_list | metafield_tag }}<\/p>",
+            "content_comparation_duo": "",
+            "content_comparation_suplement": "",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "collapsible_tab_6PEUmx": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "{{ product.metafields.dropdown.dropdown_standard_comparation_title.value }}",
+            "content": "<p>{{ product.metafields.dropdown.dropdown_standard_comparation_description | metafield_tag }}<\/p>",
+            "content_comparation_duo": "<p>{{ product.metafields.dropdown.dropdown_standard_comparation_list_duo | metafield_tag }}<\/p>",
+            "content_comparation_suplement": "<p>{{ product.metafields.dropdown.dropdown_standard_comparation_list_suplement | metafield_tag }}<\/p>",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "star_subcription_Ky6TNJ": {
+          "type": "star_subcription",
+          "settings": {
+            "star1": "Stay consistent",
+            "star2": "Build healthy routine",
+            "star3": "Free Gifts",
+            "star4": "Exclusive Access"
           }
         }
       },
       "block_order": [
-        "vendor",
         "title",
-        "caption",
-        "price",
-        "variant_picker",
-        "quantity_selector",
-        "buy_buttons",
+        "subtitle",
+        "180df9d7-f979-4be9-8420-83028105b17f",
         "description",
-        "collapsible-row-0",
-        "collapsible-row-1",
-        "collapsible-row-2",
-        "collapsible-row-3",
-        "share"
+        "buy_buttons",
+        "options_shipping_Ct6xAB",
+        "order_by_message_gJbnCh",
+        "link_customization_9CMw3D",
+        "collapsible_tab_hMVTKW",
+        "collapsible_tab_6PEUmx",
+        "star_subcription_Ky6TNJ"
       ],
       "settings": {
-        "enable_sticky_info": true,
-        "hide_variants": true,
-        "enable_video_looping": false
+        "product_color": "{{ product.metafields.duo.product_color.value }}",
+        "enable_sticky_info": false,
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "product_cta": ""
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
+    "product-features": {
+      "type": "product-features",
       "blocks": {
-        "image-with-text-0": {
-          "type": "heading",
+        "remineralizing-nha": {
+          "type": "feature",
           "settings": {
-            "heading": "Image with text"
+            "text": "Remineralizing nHa"
           }
         },
-        "image-with-text-1": {
-          "type": "text",
+        "cruelty-free": {
+          "type": "feature",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            "text": "Cruelty-free"
+          }
+        },
+        "sls-free": {
+          "type": "feature",
+          "settings": {
+            "text": "SLS-Free"
+          }
+        },
+        "vegan": {
+          "type": "feature",
+          "settings": {
+            "text": "Vegan"
+          }
+        },
+        "gluten-free": {
+          "type": "feature",
+          "settings": {
+            "text": "Gluten-Free"
+          }
+        },
+        "natural-flavors": {
+          "type": "feature",
+          "settings": {
+            "text": "Natural Flavors"
           }
         }
       },
       "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
+        "remineralizing-nha",
+        "cruelty-free",
+        "sls-free",
+        "vegan",
+        "gluten-free",
+        "natural-flavors"
+      ],
+      "disabled": true,
+      "settings": {
+        "product_color": "{{ product.metafields.duo.product_color.value }}"
+      }
+    },
+    "icon_rows_endrock_cktCwG": {
+      "type": "icon-rows-endrock",
+      "blocks": {
+        "icon_h4JcEk": {
+          "type": "icon",
+          "settings": {
+            "heading": "Vegan",
+            "row_icon_description": "",
+            "row_icon_image": "shopify:\/\/shop_images\/8073475_vegan_vegeterian_eco_sustainable_environment_icon_1.svg"
+          }
+        },
+        "icon_EDqj8i": {
+          "type": "icon",
+          "settings": {
+            "heading": "SLS-Free",
+            "row_icon_description": "",
+            "row_icon_image": "shopify:\/\/shop_images\/SLS_Free.svg"
+          }
+        },
+        "icon_QmGfp7": {
+          "type": "icon",
+          "settings": {
+            "heading": "Dentist Created",
+            "row_icon_description": "",
+            "row_icon_image": "shopify:\/\/shop_images\/Caduceus.svg"
+          }
+        },
+        "icon_UmNKFT": {
+          "type": "icon",
+          "settings": {
+            "heading": "Cruelty-free",
+            "row_icon_description": "",
+            "row_icon_image": "shopify:\/\/shop_images\/Rabbit.svg"
+          }
+        },
+        "icon_TPjqxk": {
+          "type": "icon",
+          "settings": {
+            "heading": "Non-Toxic",
+            "row_icon_description": "",
+            "row_icon_image": "shopify:\/\/shop_images\/3365979_basil_bay_leaves_herbal_herbs_mint_icon_1.svg"
+          }
+        },
+        "icon_ipMY6k": {
+          "type": "icon",
+          "settings": {
+            "heading": "Fluoride-free",
+            "row_icon_description": "",
+            "row_icon_image": "shopify:\/\/shop_images\/Fluroid_Free_Icon_9f88b4cf-9282-43c9-bbfb-0f61f16f4ae9.svg"
+          }
+        }
+      },
+      "block_order": [
+        "icon_h4JcEk",
+        "icon_EDqj8i",
+        "icon_QmGfp7",
+        "icon_UmNKFT",
+        "icon_TPjqxk",
+        "icon_ipMY6k"
       ],
       "settings": {
-        "height": "small",
-        "color_scheme": "scheme-2",
+        "heading": "",
+        "footer_text": "",
+        "slider_mobile": false,
+        "section_margin": false,
+        "width_section": "full-width"
+      }
+    },
+    "image_banner_endrock_CXzanT": {
+      "type": "image-banner-endrock",
+      "settings": {
+        "title": "“What you brush \u2028with matters.”",
+        "description": "<p>Tooth enamel cannot repair itself from within, which means your toothpaste has an important job to do. We packed Duo with proven ingredients like nHa to remineralize teeth and promote vibrant oral health. Developed by dentists, better for everyone.<\/p>",
+        "background_image": "{{ product.metafields.banner.image_banner_product.value }}",
+        "background_image_mobil": "{{ product.metafields.mobil.image_banner_product_mobil.value }}",
+        "aditional_logo_sign": "shopify:\/\/shop_images\/Artboard_1_4x_1.png",
+        "sign_1": "Dr. Stevie Roberts, DMD",
+        "sign_2": "Dr. Robert Johnson, DMD, MD"
+      }
+    },
+    "dual_section_ULYBE8": {
+      "type": "dual-section",
+      "blocks": {
+        "heading_k3U9N4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Clean Ingredients"
+          }
+        },
+        "text_DLFXXf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.dual.section_ingredients_description | metafield_tag }}<\/p>"
+          }
+        },
+        "collapsible_tab_EeCbxw": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "{{ product.metafields.dual.section_ingredients_question1.value }}",
+            "content": "<p>{{ product.metafields.dual.section_ingredients_response1 | metafield_tag }}<\/p>",
+            "content_comparation_duo": "",
+            "content_comparation_suplement": "",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "collapsible_tab_jNY7E6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "{{ product.metafields.dual.section_ingredients_question2.value }}",
+            "content": "<p>{{ product.metafields.dual.section_ingredients_response2 | metafield_tag }}<\/p>",
+            "content_comparation_duo": "",
+            "content_comparation_suplement": "",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "collapsible_tab_eGRmbi": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "{{ product.metafields.dual.section_ingredients_question4.value }}",
+            "content": "<p>{{ product.metafields.dual.section_ingredients_response4 | metafield_tag }}<\/p>",
+            "content_comparation_duo": "",
+            "content_comparation_suplement": "",
+            "page": "",
+            "icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_k3U9N4",
+        "text_DLFXXf",
+        "collapsible_tab_EeCbxw",
+        "collapsible_tab_jNY7E6",
+        "collapsible_tab_eGRmbi"
+      ],
+      "settings": {
+        "image": "{{ product.metafields.dual.section_ingredients_image.value }}",
+        "height": "adapt",
         "layout": "text_first"
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
+    "dual_section_8whqYN": {
+      "type": "dual-section",
       "blocks": {
-        "column-0": {
-          "type": "column",
+        "heading_LtabmV": {
+          "type": "heading",
           "settings": {
-            "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "heading": "How to brush with Duo",
+            "icon_title": "shopify:\/\/shop_images\/Brushing_with_Duo_Icon_c2a9fa16-6759-46ab-8da7-08f7657a6777.svg"
           }
         },
-        "column-1": {
-          "type": "column",
+        "steps_BRdRnY": {
+          "type": "steps",
           "settings": {
-            "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "title_step": "How to brush with D",
+            "step1": "Crush a tablet between your teeth",
+            "step2": "Wet your toothbrush",
+            "step3": "Brush to activate foam",
+            "step4": "Rinse and smile"
+          }
+        },
+        "button_P3R4nx": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "text_link_extra": "watch explainer video",
+            "link_extra": "shopify:\/\/products\/energy"
           }
         }
       },
       "block_order": [
-        "column-0",
-        "column-1"
+        "heading_LtabmV",
+        "steps_BRdRnY",
+        "button_P3R4nx"
       ],
       "settings": {
-        "title": "",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false
+        "image": "{{ product.metafields.dual.section_steps_image.value }}",
+        "height": "adapt",
+        "layout": "image_first"
       }
     },
-    "related-products": {
-      "type": "related-products",
+    "dual_section_teNBbL": {
+      "type": "dual-section",
+      "blocks": {
+        "heading_kbDME7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Plastic-free made easy"
+          }
+        },
+        "text_rAKDPA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.dual.section_offer_description | metafield_tag }}<\/p>"
+          }
+        },
+        "button_7UAxPN": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "ORDER YOUR REFILL",
+            "button_link": "shopify:\/\/products\/energy",
+            "text_link_extra": "explore bundles",
+            "link_extra": "shopify:\/\/pages\/build-bundle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kbDME7",
+        "text_rAKDPA",
+        "button_7UAxPN"
+      ],
+      "settings": {
+        "image": "{{ product.metafields.dual.section_offer_image.value }}",
+        "height": "adapt",
+        "layout": "text_first"
+      }
+    },
+    "homepage_title_with_text_zH8a4C": {
+      "type": "homepage-title-with-text",
+      "settings": {
+        "title": "<p>Reviews<\/p>",
+        "richtext": "",
+        "select_align": "left",
+        "none_margin": true
+      }
+    },
+    "164078378666917a43": {
+      "type": "apps",
+      "blocks": {
+        "8a332e55-959f-4538-a718-3ec9a058f237": {
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{ product }}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "8a332e55-959f-4538-a718-3ec9a058f237"
+      ],
+      "settings": {
+        "include_margins": true,
+        "none_margin": true
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
-        "heading_size": "h2",
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
         "image_ratio": "square",
-        "show_secondary_image": true,
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
         "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28
+        "show_rating": false
       }
     }
   },
   "order": [
     "main",
-    "image-with-text",
-    "multicolumn",
-    "related-products"
+    "product-features",
+    "icon_rows_endrock_cktCwG",
+    "image_banner_endrock_CXzanT",
+    "dual_section_ULYBE8",
+    "dual_section_8whqYN",
+    "dual_section_teNBbL",
+    "homepage_title_with_text_zH8a4C",
+    "164078378666917a43",
+    "product-recommendations"
   ]
 }

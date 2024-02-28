@@ -1,0 +1,539 @@
+{% comment %}
+	LOOP SUBSCRIPTIONS (https://apps.shopify.com/loop-subscriptions)
+
+  DO NOT modify source code of this file because
+	It is automatically generated from LOOP SUBSCRIPTIONS WIDGET DESIGN
+	If you need to make change, please do it using our standard widget design settings or create a custom widget design in LOOP SUBSCRIPTIONS app.
+{% endcomment %}
+
+<script type="text/javascript" id="loop-subscription-script" src="{{ 'loop-widget-custom.js' | asset_url }}"></script>
+<style class="loop-style"> {% render 'loop-widget-custom.css.liquid' %} </style>
+
+<style scoped>
+  .row__item {
+    display: flex;
+     width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+  }
+
+.product-form__wrapper
+{
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 1100px) {
+.switches-container
+{
+  line-height: 1.5rem!important;
+}
+
+.selectstyle{
+ display: block;
+ margin-left: auto;
+margin-right: auto;
+
+} }
+
+@media only screen and (max-width: 768px) {
+.row__item {
+    flex-wrap: wrap;
+    justify-content: space-between;
+      padding: 10px;
+  }
+  
+span {
+    margin-block-start: 0.3em;
+    margin-block-end: 0.3em;
+}
+
+
+.item_include {
+    flex: 0 0 48%;
+    margin: 0px!important;
+  }
+
+  .item_include {
+  margin-right: 5px!important;
+   font-size: 12px!important;
+}
+
+  .svgico {
+    padding-top: 3px!important;
+}
+  .switches-container {
+    line-height: 1.5rem!important;
+  }
+   .switches-container .onetimego {
+    padding-left: 0px!important;
+  }
+  .switches-container .subsgo {
+    padding-right: 0px!important;
+  }
+  
+}
+
+:root {
+  --switches-bg-color: white;
+  --switches-label-color: #4C4C4C;
+  --switch-text-color: white;
+}
+.svgico{
+    margin-right: 5px;
+  margin-left: 5px;
+}
+.loop-subscription-container {
+  margin-top: -30px;
+}
+
+.switches-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  padding: 0;
+  background: var(--switches-bg-color);
+  line-height: 2.5rem;
+  border-radius: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.switches-container input {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+}
+
+.switches-container label {
+  width: 50%;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  color: var(--switches-label-color);
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.switch-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  padding: 0rem;
+  z-index: 1;
+  transition: transform 0.5s cubic-bezier(.77, 0, .175, 1);
+}
+
+.switch {
+  border-radius: 3rem;
+  height: 100%;
+  margin-top: 0px;
+}
+
+
+
+.switches-container input:nth-of-type(1):checked~.switch-wrapper {
+  transform: translateX(0%);
+}
+
+.switches-container input:nth-of-type(2):checked~.switch-wrapper {
+  transform: translateX(100%);
+}
+
+.switches-container input:nth-of-type(1):checked~.switch-wrapper .switch div:nth-of-type(1) {
+  opacity: 1;
+}
+.switches-container input:nth-of-type(1):checked~.switch-wrapper .switch {
+  border-bottom: 2px solid;
+  border-radius: 0;
+}
+
+.switches-container input:nth-of-type(2):checked~.switch-wrapper .switch div:nth-of-type(2) {
+  opacity: 1;
+}
+
+.switches-container input:nth-of-type(2):checked~.switch-wrapper .switch {
+  border-bottom: 2px solid;
+  border-radius: 0;
+}
+
+.loop-subscription-group {
+  border-width: 0px !important;
+}
+
+.loop-selling-plan-fieldset {
+  border-width: 0px !important;
+}
+
+.loop-one-time-purchase-option {
+  display: none;
+}
+
+.loop-subscription-group-radio {
+  display: none;
+}
+
+.loop-subscription-group-text {
+  display: none;
+}
+
+
+.item_include {
+  font-size: 14px;
+  margin-right: 5px;
+  margin-left: 5px;
+  line-height: 1;
+}
+
+
+.includerow {
+  width: fit-content !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: -15px;
+  display: block !important;
+}
+
+.loop-subscription-group {
+  padding: 0 !important;
+}
+</style>
+
+
+
+
+
+{% if product.selling_plan_groups.size > 0 %}
+
+
+  {%- liquid
+      assign current_variant = product.selected_or_first_available_variant | default: product.variants.first
+  -%}
+  <script class="loopProductQuickJson-{{ product.id }}" type="application/json">
+  {{ product | json }}
+  </script>
+  <div id="loop-subscription-container-{{product.id}}" class="loop-subscription-container loop-display-none">
+      
+    <input type="hidden" name="selling_plan" data-test value="test">
+    <input name="loop_variant_id" class="loop-hidden">
+    <fieldset
+      id="loop-selling-plan-fieldset"
+      class="loop-selling-plan-fieldset loop-display-none"
+    >
+      <legend class="loop-selling-plan-fieldset-legend">Selling Plans</legend>
+      {% unless product.requires_selling_plan %}
+        
+
+
+        <div class="container">
+          <div class="switches-container">
+            <input type="radio" id="substimselect" name="switchPlan"  checked="checked" class="subcription"/>
+            <input type="radio" id="onetimeselect" name="switchPlan"   class="onetime" />
+            <label for="substimselect" class="subsgo"  ><span class="selectstyle">Subscribe & save</span></label>
+            <label for="onetimeselect" class="onetimego"  ><span class="selectstyle">One Time Purchase</span></label>
+            <div class="switch-wrapper">
+              <div class="switch">
+                <div  ><span class="selectstyle">Subscribe & save</span></div>
+                <div  > <span class="selectstyle">One Time Purchase</span></div>
+              </div>
+            </div>
+          </div>
+            <div class="legends">
+              <div class="legend-left">
+                <div class="loop-one-time-purchase-option-position" id="loop-one-time-purchase-option-at-top">
+                  <div class="loop-one-time-purchase-option">
+                    <input type="radio" class="loop-one-time-purchase-option-radio" name="loop_purchase_option" id="loop-one-time-purchase-{{product.id}}" data-id="loop-one-time-purchase" data-product-id="{{ product.id }}" data-name="loop-one-time-purchase">
+                    <label class="loop-one-time-purchase-option-label" for="loop-one-time-purchase-{{product.id}}">One time Purchase</label>
+                    <div class="loop-subscription-group-discount-badge-onetime loop-display-none loop-subscription-group-discount-badge" id="loop-discount-badge-onetime">
+                    </div>
+                    <div class="loop-one-time-purchase-option-price-container">
+                        <div id="loop-price-one-time-original" class="loop-one-time-purchase-option-price-amount-original loop-display-none">
+                            {{ current_variant.price | money }}
+                        </div>
+                        <div id="loop-price-one-time" class="loop-one-time-purchase-option-price-amount">
+                            {{ current_variant.price | money }}
+                        </div>
+                    
+                        <div class="loop-one-time-purchase-option-price-quantity">
+                            each
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="variants_wrapper">
+                  {%- unless product.has_only_default_variant -%}
+                  <variant-radios
+                    class="no-js-hidden"
+                    data-section="{{ section.id }}"
+                    data-url="{{ product.url }}"
+                    {{ block.shopify_attributes }}
+                  >
+                  {%- for option in product.options_with_values -%}
+                    <fieldset class="js product-form__input product-form__input--radio variant-b">
+                      <legend class="form__label">{{ option.name }}:</legend>
+                        {%- assign option_index = forloop.index0 -%}
+                        {%- assign values = '' -%}
+                        {%- for variant in product.variants -%}
+                          {%- assign value = variant.options[option_index] %}
+                          {%- unless values contains value -%}
+                            {%- assign values = values | join: ',' | append: ',' | append: value | split: ',' -%}
+                            {%- assign is_subscription = true -%}
+                            {%- if variant.metafields.subscription.is_subscription.value == false -%}
+                              {%- assign is_subscription = false -%}
+                            {% endif %}
+
+                              <input
+                                type="radio"
+                                id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                                name="{{ option.name }}"
+                                data-id-variant=" {{ variant.id }}"
+                                value="{{ value | escape }}"
+                                form="{{ product_form_id }}"
+                                {% if forloop.index == 3 %}
+                                  checked
+                                {% endif  %}
+                                class="{% unless is_subscription == false %} hidden {% endunless %}"
+                              >
+                              <label
+                                for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                                data-value="{{value}}"
+                                class="{% unless is_subscription == false %} hidden {% endunless %}"
+                              >
+                              
+                                <span class="variant-field__price">
+                                  <span class="variant-field__name">
+                                    <div class="checkbox"></div>
+                                    {{ value }}
+                                  </span>
+                                  
+                                  {%- if variant.compare_at_price > variant.price  -%}
+                                    {%- assign discounted_amount = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | money_without_currency | times: 100 | round  -%}
+                                    <span class="variant-field__sale" data-discounted="{{ discounted_amount }}">
+                                      Save {{ discounted_amount }}%
+                                    </span>
+                                  {%- endif -%}
+                                  <div class="price-container">
+                                    {%- if variant.compare_at_price > variant.price -%}
+                                      <s>{{ variant.compare_at_price | money }}</s>
+                                    {%- endif -%}
+                                    <span>{{ variant.price | money }}</span>
+                                  </div>
+                                </span>
+                              </label>
+                            
+                        {%- endunless -%}
+                      {%- endfor -%}
+                      </fieldset>
+                  {%- endfor -%}
+                  <script type="application/json">
+                    {{ product.variants | json }}
+                  </script>
+                  </variant-radios>
+            
+        
+                  {%- endunless -%}
+                  <noscript class="product-form__noscript-wrapper-{{ section.id }}">
+                  <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+                    <label class="form__label" for="Variants-{{ section.id }}">
+                    {{- 'products.product.product_variants' | t -}}
+                    </label>
+                    <div class="select">
+                    <select
+                      name="id"
+                      id="Variants-{{ section.id }}"
+                      class="select__select"
+                      form="{{ product_form_id }}"
+                    >
+                      {%- for variant in product.variants -%}
+                        <option
+                          {% if variant == product.selected_or_first_available_variant %}
+                          selected="selected"
+                          {% endif %}
+                          {% if variant.available == false %}
+                          disabled
+                          {% endif %}
+                          value="{{ variant.id }}"
+                        >
+                          {{ variant.title }}
+                          {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                          - {{ variant.price | money | strip_html }}
+                        </option>
+                      {%- endfor -%}
+                    </select>
+                    {% render 'icon-caret' %}
+                    </div>
+                  </div>
+                  </noscript>
+                </div>
+              </div>
+
+              <div class="legend-right">
+               
+                  <div id="loop-product-variant-{{ current_variant.id }}" class="container-subscription">
+                    {% assign selected_selling_plan_group = nil %}
+                    {% for selling_plan_group in product.selling_plan_groups %}
+                      {% unless selling_plan_group.app_id != "5284869" %}
+                        <div id="loop-selling_plan_group-{{ selling_plan_group.id }}">
+                          {% for allocation in current_variant.selling_plan_allocations %}
+                            <div class="loop-selling-plan-allocation" id="loop-allocation-{{ allocation.selling_plan_group_id }}">
+                              {% if selling_plan_group.id == allocation.selling_plan_group_id and selected_selling_plan_group != selling_plan_group.id %}
+                                {% assign selected_selling_plan_group = selling_plan_group.id %}
+                                <div class="loop-full-width loop-subscription-group loop-subscription-group-border-top" id="loop-{{current_variant.id}}-{{selling_plan_group.id}}">
+                                  <input type="radio" class="loop-subscription-group-radio" id="loop-radio-{{ current_variant.id }}{{selling_plan_group.id}}" name="loop_purchase_option" data-variant-id="{{current_variant.id}}"  data-product-id="{{product.id}}" data-id="{{selling_plan_group.id}}" data-name="{{selling_plan_group.name}}">
+                                  <div class="loop-subscription-group-text">
+                                    <label class="loop-subscription-group-label" for="loop-radio-{{ current_variant.id }}{{selling_plan_group.id}}">
+                                        {{selling_plan_group.name}}
+                                    </label>
+                                    <div class="loop-subscription-group-discount-badge loop-display-none" id="loop-discount-badge-{{ current_variant.id }}-{{selling_plan_group.id}}">
+                                    </div>
+                                  </div>
+                                  <div class="container-select-price">
+                                    <div>
+                                      <div class="select-quantity loop-subscription-group-selling-plans-container ">
+                                        {{ 'products.subscription.select_quantity_label' | t }} 
+                                        <select name="select-quantity" data-product-id="{{ product.id }}" id="select-quantity" class="loop-selling-plan-selector-style selector-custom">
+                                          {%- for variant in product.variants -%}
+                                            {%- assign discounted_amount = null -%}
+                                            {%- if variant.compare_at_price > variant.price  -%}
+                                              {%- assign discounted_amount = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | money_without_currency | times: 100 | round  -%}
+              
+                                            {%- endif -%}
+                                            {%- if variant.metafields.subscription.is_subscription.value -%}
+                                              <option value="{{ variant.id }}" data-discount="{{ discounted_amount }}"> {{ variant.title }}</option>
+                                            {%- endif -%}
+                                          {% endfor %}  
+                                        </select>
+                                      </div>
+                                        
+                                      <div class="loop-subscription-group-selling-plans-container loop-full-width" id="loop-selling-plan-container-{{current_variant.id}}-{{selling_plan_group.id}}">
+                                        <label class="loop-selling-plan-selector-label" for="loop-select-{{current_variant.id}}-{{selling_plan_group.id}}"> {{ selling_plan_group.selling_plans[0].options[0].name }}</label>
+                                        <div id="loop-selling-plan-first-delivery-options-{{current_variant.id}}-{{selling_plan_group.id}}" class="loop-display-none"> &nbsp;{{ selling_plan_group.selling_plans[0].options[0].value }} </div>
+                                        <select class="loop-full-width loop-selling-plan-selector loop-selling-plan-selector-style selector-custom" id="loop-select-{{current_variant.id}}-{{selling_plan_group.id}}" data-position="{{ option.position }}" data-selling-plan-group-id="{{ selling_plan_group.id }}" data-product-id="{{product.id}}">
+                                          {% for sp in selling_plan_group.selling_plans %}
+                                            <option class="loop-selling-plan-selector-option" value="{{ sp.id }}">{{ sp.options[0].value }}</option>
+                                          {% endfor %}
+                                        </select>
+                                        <div class="loop-selling-plan-selector-description" id="loop-selling-plan-description-{{ current_variant.id }}-{{ selling_plan_group.id }}"></div>
+                                      </div>
+                                    </div>
+                                    <div class="price-first-variant">
+                                      {% render 'price-custom-variant'
+                                        product: product,
+                                        is_subcription: true
+                                      %}
+                                    </div>
+
+                                  </div>
+                                  
+                                </div>
+                              {% endif %}
+                            </div>
+                          {% endfor %}
+                        </div>
+                      {% endunless %}
+                    {% break %}
+                    {% endfor %}
+                  </div>
+           
+                {% unless product.requires_selling_plan %}
+                    <div class="loop-one-time-purchase-option-position" id="loop-one-time-purchase-option-at-bottom">
+                    </div>
+                {% endunless %}
+                <div class="aditional-info-order">
+                  {{ 'products.subscription.additional_order_subscription' | t }} 
+                </div>
+
+                {% assign block_link = blocks | where: 'type', 'link_customization' %}
+                {%- for link in block_link -%}
+                  <div class="link-custom">
+                    <div class="icon">
+                      {% render 'icon-link-product' %}
+                    </div>
+                    <div class="text-link">
+                      {{ link.settings.link_custom }}
+                    </div>
+                  </div>
+                {%- endfor -%}
+                
+
+                <p class="aditional-info-subscription">
+                  {{ 'products.subscription.cancel_info_subcription' | t }}
+                </p>
+                <div class="item_include">
+                  {% assign block_star = blocks | where: 'type', 'star_subcription' %}
+                  {%- for block in block_star -%}
+                    <div class="icon-info">
+                      <div class="icon">{% render 'start-subscription' %}</div>
+                      <div class="text">{{  block.settings.star1 }}</div>
+                    </div>
+                    <div class="icon-info">
+                      <div class="icon">{% render 'start-subscription' %}</div>
+                      <div class="text">{{  block.settings.star2 }}</div>
+                    </div>
+                    <div class="icon-info">
+                      <div class="icon">{% render 'start-subscription' %}</div>
+                      <div class="text">{{  block.settings.star3 }}</div>
+                    </div>
+                    <div class="icon-info">
+                      <div class="icon">{% render 'start-subscription' %}</div>
+                      <div class="text">{{  block.settings.star4 }}</div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+        </div>
+      {% endunless %}
+
+    </fieldset>
+    
+    <div class="loop-tooltip loop-display-none" id="loop-tooltip">
+      <div class="loop-tooltip-image">
+        <svg
+            width="18"
+            height="18"
+            viewBox="0 0 90 90"
+            xmlns="http://www.w3.org/2000/svg"
+            id="loop-tooltip-image-svg"
+        >
+          <path d="M45 0C20.1827 0 0 20.1827 0 45C0 69.8173 20.1827 90 45 90C69.8173 90 90 69.8174 90 45C90.0056 44.6025 89.9322 44.2078 89.7839 43.8389C89.6357 43.47 89.4156 43.1342 89.1365 42.8511C88.8573 42.568 88.5247 42.3432 88.158 42.1897C87.7912 42.0363 87.3976 41.9573 87 41.9573C86.6024 41.9573 86.2088 42.0363 85.842 42.1897C85.4753 42.3432 85.1427 42.568 84.8635 42.8511C84.5844 43.1342 84.3643 43.47 84.2161 43.8389C84.0678 44.2078 83.9944 44.6025 84 45C84 66.5748 66.5747 84 45 84C23.4253 84 6 66.5747 6 45C6 23.4254 23.4253 6 45 6C56.1538 6 66.3012 10.5882 73.4375 18H65.4062C65.0087 17.9944 64.614 18.0678 64.2451 18.2161C63.8762 18.3643 63.5405 18.5844 63.2573 18.8635C62.9742 19.1427 62.7494 19.4753 62.596 19.842C62.4425 20.2088 62.3635 20.6024 62.3635 21C62.3635 21.3976 62.4425 21.7912 62.596 22.158C62.7494 22.5247 62.9742 22.8573 63.2573 23.1365C63.5405 23.4156 63.8762 23.6357 64.2451 23.7839C64.614 23.9322 65.0087 24.0056 65.4062 24H79.8125C80.6081 23.9999 81.3711 23.6838 81.9337 23.1212C82.4963 22.5586 82.8124 21.7956 82.8125 21V6.59375C82.821 6.18925 82.7476 5.78722 82.5966 5.41183C82.4457 5.03644 82.2205 4.69545 81.9344 4.40936C81.6483 4.12327 81.3073 3.898 80.9319 3.7471C80.5565 3.5962 80.1545 3.52277 79.75 3.53125C79.356 3.53941 78.9675 3.62511 78.6067 3.78344C78.2458 3.94177 77.9197 4.16963 77.6469 4.45402C77.3741 4.73841 77.16 5.07375 77.0168 5.44089C76.8737 5.80803 76.8042 6.19977 76.8125 6.59375V12.875C68.6156 4.86282 57.3081 0 45 0ZM43.75 20.75C43.356 20.7582 42.9675 20.8439 42.6067 21.0022C42.2458 21.1605 41.9197 21.3884 41.6469 21.6728C41.3741 21.9572 41.16 22.2925 41.0168 22.6596C40.8737 23.0268 40.8042 23.4185 40.8125 23.8125V47.375C40.8116 47.7693 40.8883 48.16 41.0385 48.5246C41.1886 48.8892 41.4092 49.2207 41.6875 49.5L54.0938 61.9375C54.6573 62.5011 55.4217 62.8177 56.2188 62.8177C57.0158 62.8177 57.7802 62.5011 58.3438 61.9375C58.9073 61.3739 59.224 60.6095 59.224 59.8125C59.224 59.0155 58.9073 58.2511 58.3438 57.6875L46.8125 46.1875V23.8125C46.821 23.408 46.7476 23.006 46.5966 22.6306C46.4457 22.2552 46.2205 21.9142 45.9344 21.6281C45.6483 21.342 45.3073 21.1168 44.9319 20.9658C44.5565 20.8149 44.1545 20.7415 43.75 20.75Z"></path>
+        </svg>
+      </div>
+      <div id="loop-tooltip-label" class="loop-tooltip-label">
+      </div>
+      <div class="loop-tooltiptext">
+        <div class="loop-container-arrow loop-container-arrow--tl">&#8205;</div>
+        <p id="loop-tooltip-description" class="loop-tooltip-description">
+        </p>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+      // **** DON'T EDIT THIS CODE BLOCK ****//
+      var sellingPlanEle = document.querySelector("input[name=selling_plan]");
+      var d1 = document.createElement("div");
+      d1.setAttribute("id", "loop-price-money-format");
+      d1.setAttribute("class", "loop-hidden");
+      d1.innerHTML = '{{ 000 | money }} each';
+  
+      var d2 = document.createElement("div");
+      d2.setAttribute("id", "loop-price-money_without_currency-format")
+      d2.setAttribute("class", "loop-hidden")
+      d2.innerHTML = '{{ 000 | money_without_currency }}';
+      
+      sellingPlanEle.after(d2);
+      sellingPlanEle.after(d1);
+  // **** DON'T EDIT THIS CODE BLOCK ****//
+  </script>
+  <script type="text/javascript" defer>
+      window.addEventListener("DOMContentLoaded", (event) => {
+          main({{ product.id }});
+      });
+  </script>
+{%- endif -%}
+    
+    

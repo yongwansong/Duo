@@ -82,6 +82,28 @@
     margin: 0 0 40px;
 }
 
+@media(max-width: 1120px){
+  .image-with-text__gallery-container .gallery-info .description p{
+    font-size:12px;
+  }
+}
+
+@media(max-width: 1000px){
+  .image-with-text__gallery-container .gallery-info .description p{
+    font-size:10px;
+  }
+}
+
+@media(max-width: 800px){
+  .image-with-text__gallery-container .gallery-info .description p{
+    font-size:9px;
+  }
+
+  .image-with-text__gallery-container .gallery_image{
+    padding-bottom: 127% !important;
+  }
+}
+
 .image-with-text__gallery-container .gallery-info a{
     width: fit-content;
     font-family: "OldschoolGrotesk-Medium";

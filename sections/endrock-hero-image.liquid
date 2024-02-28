@@ -80,18 +80,20 @@
     
   <div class="hero-banner__content">
     <div class="hero-banner__text">
-      {%- if section.settings.heading != blank -%}
-        <h2>{{ section.settings.heading | newline_to_br }}</h2>
-      {%- endif -%}
-      {%- if section.settings.subheading != blank -%}
-        <p>{{ section.settings.subheading }}</p>
-      {%- endif -%}
+      <a href="{{ section.settings.text_link }}" class="text-wrapper">
+        {%- if section.settings.heading != blank -%}
+          <h2>{{ section.settings.heading | newline_to_br }}</h2>
+        {%- endif -%}
+        {%- if section.settings.subheading != blank -%}
+          <p>{{ section.settings.subheading }}</p>
+        {%- endif -%}
+      </a>
     </div>
     <div class="hero-banner__buttons">
         {% if section.settings.button_link_1 != blank %}
           <a
             href="{{ section.settings.button_link_1 }}"
-            class="custom_button {% if section.settings.button_style_text_link %} button--primary{% else %} button--secondary{% endif %}"
+            class="custom_button button button--primary {% if section.settings.button_style_text_link %} button--primary{% else %} button--secondary{% endif %}"
           >
             {{- section.settings.button_label_1 -}}
           </a>
@@ -240,6 +242,11 @@
       "id": "subheading",
       "label": "Subheading",
       "default": "get the toothpaste tablet that does both"
+    },
+    {
+      "type": "url",
+      "id": "text_link",
+      "label": "Text Link"
     },
     {
       "type": "paragraph",

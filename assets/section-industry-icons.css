@@ -27,7 +27,7 @@
 
 @media (max-width: 920px) {
     .industry-icons_container{
-        padding: 0 37px !important;
+        padding: 0 60px !important;
     }
 }
 
@@ -54,6 +54,12 @@
     line-height: 36px;
     letter-spacing: -0.48px;
     margin: 0;
+}
+
+@media (max-width: 1000px){
+  .industry-icons_container p{
+    font-size: 25px;
+  }
 }
 
 .industry-icons_container .icons-wrapper .icon-list img{
@@ -89,11 +95,18 @@
     }
 }
 
+@media (max-width: 950px){
+  .industry-icons_container .icons-wrapper{
+    gap: 35px!important;
+  }
+}
+
 @media (max-width: 767px) {
     .industry-icons_container{
         flex-wrap: wrap;
         justify-content: center;
         padding: 0 !important;
+        gap: 24px;
     }
 
     .industry-icons_container .mobile_heading{

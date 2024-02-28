@@ -9,13 +9,14 @@
         "mobile_padding_bottom": 0,
         "full_width": true,
         "video": "",
-        "desktop_image": "shopify:\/\/shop_images\/new-hp-banner.png",
-        "mobile_image": "shopify:\/\/shop_images\/Duo-Brand_Shoot-Edited-585_1_3c146333-05d6-4246-8ae5-a09cd6c430ea.png",
+        "desktop_image": "shopify:\/\/shop_images\/Hero_2880x1600_1.png",
+        "mobile_image": "shopify:\/\/shop_images\/Hero_mobile_375x360px.png",
         "videomobile": "",
         "heading": "The Future <br>of Brushing",
         "subheading": "Better toothpaste tablets for oral<br> and systemic health",
+        "text_link": "shopify:\/\/pages\/about",
         "button_label_1": "SHOP NOW",
-        "button_link_1": "#",
+        "button_link_1": "shopify:\/\/collections\/shop-all",
         "button_style_text_link": false,
         "button_label_2": "What makes us different?",
         "button_link_2": "shopify:\/\/pages\/the-science",
@@ -113,7 +114,7 @@
             "mobile_heading": "<p>Leave the<br\/>paste behind<\/p>",
             "description": "<p>Plastic-free for the planet.<br\/>Science-backed ingredients infused with <br\/>vitamins & supplements for whole body support.<\/p>",
             "mobile_description": "Plastic-free for the planet. \u2028Science-backed ingredients infused with vitamins & supplements for whole body support.",
-            "btn_link": "shopify:\/\/collections\/all",
+            "btn_link": "shopify:\/\/collections\/shop-all",
             "btn_label": "SHOP BEST SELLERS",
             "btn_type": "button--primary",
             "product": "immunity",
@@ -131,7 +132,7 @@
             "mobile_heading": "<p>Bundle<br\/>and Save<\/p>",
             "description": "<p>Start your plastic-free routine (for less) <br\/>with bundled jars and compostable <br\/>refills.<\/p>",
             "mobile_description": "Start your plastic-free routine (for less) with bundled jars and compostable refills.",
-            "btn_link": "shopify:\/\/pages\/build-bundle",
+            "btn_link": "shopify:\/\/collections\/shop-all",
             "btn_label": "SHOP BUNDLES",
             "btn_type": "button--primary",
             "product": "original",
@@ -211,7 +212,7 @@
         "bg_color": "#e2ebf2",
         "full_width": true,
         "image": "shopify:\/\/shop_images\/Christine_Landing_Page_Imagex3_1.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/Christine_Landing_Page_Imagex3_1.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/WhyDuo_mobile_375x275px.png",
         "heading": "Why Duo?",
         "description": "<p>Better-for-you \u2028<br\/>toothpaste tablets<\/p>",
         "mobile_description": "<p>Better-for-you toothpaste tablets<\/p>"
@@ -322,7 +323,7 @@
       "settings": {
         "heading": "Shop Duo",
         "padding_top": 0,
-        "padding_bottom": 0,
+        "padding_bottom": 25,
         "mobile_padding_top": 65,
         "mobile_padding_bottom": 30,
         "full_width": false,
@@ -360,8 +361,8 @@
         "2a886c05-b4af-4c45-9e63-b5c839e4512e"
       ],
       "settings": {
-        "padding_top": 50,
-        "padding_bottom": 25,
+        "padding_top": 0,
+        "padding_bottom": 0,
         "mobile_padding_top": 0,
         "mobile_padding_bottom": 0,
         "full_width": true,
@@ -369,7 +370,6 @@
         "image": "shopify:\/\/shop_images\/Duo_Product-0951-Edit_1x3_ad58752e-6926-4556-bee3-05ec2cda26d1.jpg",
         "mobile_image": "shopify:\/\/shop_images\/Duo_Product-0951-Edit_1_e107c082-f5e8-4f34-836e-c7d47e44a70f.png",
         "enable_swiper": true,
-        "image_height": "medium",
         "adapt_height_first_image": false,
         "desktop_text_box_position": "center",
         "show_text_box": false,
@@ -412,7 +412,7 @@
         "bg_color": "#e2ebf2",
         "heading": "<p>Developed<br\/>by Dentists<\/p>",
         "description": "<p>Good oral health impacts all major systems in the body. Duo tablets are created by experts, rigorously tested, and vetted by the industry.<\/p>",
-        "btn_link": "#",
+        "btn_link": "shopify:\/\/pages\/about",
         "btn_label": "Meet the Duo Team"
       }
     },
@@ -479,8 +479,8 @@
         "1c7234a7-4c5b-494b-a568-585736638b9e": {
           "type": "block",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Rectangle_206.png",
-            "gallery_mobile_image": "shopify:\/\/shop_images\/Rectangle_206_ea22ff99-4c6d-4d50-853c-1bea4d35cd25.png",
+            "gallery_image": "shopify:\/\/shop_images\/Duo_Difference_1_1920px_x_2060.jpg",
+            "gallery_mobile_image": "shopify:\/\/shop_images\/duodifference_1_375x376_5589ed9e-f049-40b6-a20f-8ae14ea0fcbb.png",
             "prefix_heading": "THE DUO DIFFERENCE",
             "heading": "Game-changing <br>ingredients",
             "description": "<p>Nano-hydroxyapatite, or nHa, is the dentist-backed fluoride<br\/> alternative in Duo that remineralizes enamel, removes plaque, <br\/>whitens, and blocks sensitivity.<br\/><\/p>",
@@ -493,8 +493,8 @@
         "51128ef4-7019-4c92-a175-f792404b2788": {
           "type": "block",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Carousel2x3.jpg",
-            "gallery_mobile_image": "shopify:\/\/shop_images\/Carousel2x3.jpg",
+            "gallery_image": "shopify:\/\/shop_images\/Duo_Difference_2v_1920px_x_2060.jpg",
+            "gallery_mobile_image": "shopify:\/\/shop_images\/duodifference_2_375x376_29b628d6-8caf-406f-b183-9aa66545b0e7.png",
             "prefix_heading": "THE DUO DIFFERENCE",
             "heading": "About mucosal<br>absorption",
             "description": "<p>Our mouths absorb nutrients directly into the bloodstream.<br\/> That’s the key to the efficient bio-availability of the vitamins<br\/> and supplements in Duo, added for convenience and health.<\/p>",
@@ -507,8 +507,8 @@
         "bc7d4a03-40b1-4823-b5db-87adb7560001": {
           "type": "block",
           "settings": {
-            "gallery_image": "shopify:\/\/shop_images\/Carousel3x3.png",
-            "gallery_mobile_image": "shopify:\/\/shop_images\/Carousel3x3.png",
+            "gallery_image": "shopify:\/\/shop_images\/Duo_Difference_3_1920px_x_2060_copy.jpg",
+            "gallery_mobile_image": "shopify:\/\/shop_images\/duodifference_3_375x376_c40525a6-c67d-4901-bfc0-d3470f83143a.png",
             "prefix_heading": "THE DUO DIFFERENCE",
             "heading": "Balancing the oral<br>microbiome",
             "description": "<p>The mouth is the gateway to whole-body health. Duo is<br\/> packed with science-backed ingredients to support and<br\/> nourish the oral microbiome, preventing systemic diseases.<\/p>",
@@ -542,14 +542,14 @@
         "mobile_padding_bottom": 0,
         "full_width": true,
         "bg_color": "rgba(0,0,0,0)",
-        "banner": "shopify:\/\/shop_images\/Rectangle_209.png",
-        "mobile_banner": "shopify:\/\/shop_images\/Better_for_Planet.png",
+        "banner": "shopify:\/\/shop_images\/Plastic_Free_Imagex3_631b3895-9b8f-4df2-b8e8-718aa88d5a7e.jpg",
+        "mobile_banner": "shopify:\/\/shop_images\/BetterForPlanet_mobile_375x570_faecb901-cf6d-4fd4-b950-8290627c7840.png",
         "heading": "Better for you <br>and the planet",
         "description": "<p>A plastic-free upgrade to your daily routine that actually <br\/>makes a difference. Duo is delivered in apothecary-<br\/>grade, recyclable glass bottles with compostable refill <br\/>pouches. It’s the future of toothpaste and better for us all.<\/p>",
         "mobile_description": "A plastic-free upgrade to your daily routine that actually makes a difference. Duo is delivered in apothecary-grade, recyclable glass bottles with compostable refill pouches. It’s the future of toothpaste and better for us all.",
         "decoration": "500 yrs",
         "info": "to break down a single plastic toothpaste tube",
-        "btn_link": "#",
+        "btn_link": "shopify:\/\/collections\/shop",
         "btn_text": "SHOP NOW",
         "btn_type": "button--primary"
       }
@@ -591,6 +591,20 @@
             "title": "How do subscriptions work?",
             "description": "<p>TBD<\/p>"
           }
+        },
+        "faq_8cUT3V": {
+          "type": "faq",
+          "settings": {
+            "title": "Where is Duo made?",
+            "description": "<p>Duo tablets are manufactured using vegan ingredients in an FDA-registered facility in New York State. Our manufacturing facility is cGMP-certified and every Duo tablet is meticulously screened for quality and safety.<\/p>"
+          }
+        },
+        "faq_BcwXLj": {
+          "type": "faq",
+          "settings": {
+            "title": "How do subscriptions work?",
+            "description": "<p>Select your bottles and frequency—we’ll do the rest! Subscribing saves you up to 33% and reduces your carbon footprint with consolidated shipments. After your first delivery, refills will arrive in compostable pouches. You can pause, skip, or cancel anytime.<br\/><\/p>"
+          }
         }
       },
       "block_order": [
@@ -598,7 +612,9 @@
         "de2db3cc-17cb-4ae0-97cf-4fa10946c87b",
         "0aa23874-da30-4faa-8e42-92f0a81aed60",
         "c9e8788f-2914-414d-a291-d4105d6e9ff5",
-        "e176f464-1697-47e1-9612-4b6c1d5ce4f5"
+        "e176f464-1697-47e1-9612-4b6c1d5ce4f5",
+        "faq_8cUT3V",
+        "faq_BcwXLj"
       ],
       "settings": {
         "padding_top": 90,

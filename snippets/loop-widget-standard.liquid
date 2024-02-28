@@ -5,14 +5,13 @@
 	It is automatically generated from LOOP SUBSCRIPTIONS WIDGET DESIGN
 	If you need to make change, please do it using our standard widget design settings or create a custom widget design in LOOP SUBSCRIPTIONS app.
 {% endcomment %}
-
 {% if product.selling_plan_groups.size > 0 %}
 
 {%- liquid
-        assign current_variant = product.selected_or_first_available_variant | default: product.variants.first
+    assign current_variant = product.selected_or_first_available_variant | default: product.variants.first
 -%}
 <script class="loopProductQuickJson-{{ product.id }}" type="application/json">
-    {{ product | json }}
+{{ product | json }}
 </script>
 <div id="loop-subscription-container-{{product.id}}" class="loop-subscription-container loop-display-none">
     <input type="hidden" name="selling_plan">
@@ -28,10 +27,16 @@
             <div class="loop-one-time-purchase-option">
                 <input type="radio" class="loop-one-time-purchase-option-radio" name="loop_purchase_option" id="loop-one-time-purchase-{{product.id}}" data-id="loop-one-time-purchase" data-product-id="{{ product.id }}" data-name="loop-one-time-purchase">
                 <label class="loop-one-time-purchase-option-label" for="loop-one-time-purchase-{{product.id}}">One time Purchase</label>
+            <div class="loop-subscription-group-discount-badge-onetime loop-display-none loop-subscription-group-discount-badge" id="loop-discount-badge-onetime">
+                </div>
                 <div class="loop-one-time-purchase-option-price-container">
+                    <div id="loop-price-one-time-original" class="loop-one-time-purchase-option-price-amount-original loop-display-none">
+                        {{ current_variant.price | money }}
+                    </div>
                     <div id="loop-price-one-time" class="loop-one-time-purchase-option-price-amount">
                         {{ current_variant.price | money }}
                     </div>
+                
                     <div class="loop-one-time-purchase-option-price-quantity">
                         each
                     </div>
@@ -59,10 +64,13 @@
                                             </div>
                                         </div>
                                         <div class="loop-subscription-group-price-container">
+                                            <div id="loop-price-original-{{ variant.id }}-{{ selling_plan_group.id }}" class="loop-subscription-group-price-amount-original loop-display-none">
+                                                {{ current_variant.price | money }}
+                                            </div>
                                             <div id="loop-price-{{ variant.id }}-{{ selling_plan_group.id }}" class="loop-subscription-group-price-amount">
                                                 {{ current_variant.price | money }}
                                             </div>
-                                                <div class="loop-subscription-group-price-quantity">
+                                            <div class="loop-subscription-group-price-quantity">
                                                     each
                                             </div>
                                         </div>
@@ -130,14 +138,8 @@
 // **** DON'T EDIT THIS CODE BLOCK ****//
 </script>
 <script type="text/javascript" defer>
-    //setTimeout(() => {
-    //    setupListeners("{{ product.id }}");
-    //    getLoopSettingsData("{{ product.id }}");
-    //}, 500);
-
     window.addEventListener("DOMContentLoaded", (event) => {
-        setupListeners("{{ product.id }}");
-        getLoopSettingsData("{{ product.id }}");
+        main({{ product.id }});
     });
 </script>
 {%- endif -%}

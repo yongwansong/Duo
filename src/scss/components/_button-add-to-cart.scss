@@ -1,0 +1,26 @@
+.product-form__buttons {
+  .button--primary {
+    background: #181818;
+   
+    border-radius: 0;
+    padding: 0;
+    height: 34.819px;
+    min-height: 100%;
+
+    span {
+      color: #FFF;
+      text-align: center;
+      font-family: "OldschoolGrotesk-Medium";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 28px; /* 200% */
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5px;
+    }
+  }
+}

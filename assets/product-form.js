@@ -52,7 +52,35 @@ if (!customElements.get('product-form')) {
 						this.error = true;
 						return;
 					} else if (this.dataset.cartType == 'page') {
-						window.location = window.routes.cart_url;
+						//gamification goals on cart page
+						fetch(`${routes.cart_url}.js`, {
+							method: 'GET'
+						})
+						.then((response) => response.json())
+						.then((response) => {
+							//first goal
+							const ifExists = response.items.find((element) => element.id === window.freeGiftId)
+							if (response.original_total_price >= window.freeGiftGoal && !ifExists) {
+								this.addGiftPage(window.freeGiftId)
+							} else {
+								window.location = window.routes.cart_url;
+							}
+							//second goal
+							const ifDiscount = response.items.find((element) => {
+								const getDiscount = element.discounts.find((discount) => discount.title === window.discountCode)
+								return getDiscount
+							})
+							if (response.original_total_price >= window.discountGoal && !ifDiscount) {
+								fetch(`/discount/${window.discountCode}`).then(() => {
+									window.location = window.routes.cart_url;
+								})
+							} else {
+								window.location = window.routes.cart_url;
+							}
+						})
+						.catch((error) => {
+							console.error('Error:', error);
+						});
 						return;
 					}
 
@@ -74,6 +102,7 @@ if (!customElements.get('product-form')) {
 							productPrice.classList.remove('hidden');
 						}, 1500);
 					}
+					
 					const quickAddModal = this.closest('quick-add-modal');
 					if (quickAddModal) {
 						document.body.addEventListener('modalClosed', () => {
@@ -83,6 +112,36 @@ if (!customElements.get('product-form')) {
 					} else {
 						this.cart.renderContents(response);
 					}
+					//gamification goals
+					fetch(`${routes.cart_url}.js`, {
+						method: 'GET'
+					})
+					.then((response) => response.json())
+					.then((response) => {
+						//first gamification goal
+						const ifExists = response.items.find((element) => element.id === window.freeGiftId)
+
+						if (response.original_total_price >= window.freeGiftGoal && !ifExists) {
+							this.addGiftSidecart(window.freeGiftId)
+						}
+						//second gamification goal
+						const ifDiscount = response.items.find((element) => {
+							const getDiscount = element.discounts.find((discount) => discount.title === window.discountCode)
+							return getDiscount
+						})
+						if (response.original_total_price >= window.discountGoal && !ifDiscount) {
+							fetch(`/discount/${window.discountCode}`).then(() => {
+								if(window.location.pathname === "/cart") {
+									window.location = window.routes.cart_url;
+								} else {
+									this.refreshSideCart()
+								}
+							})
+						}
+					})
+					.catch((error) => {
+						console.error('Error:', error);
+					});					
 				})
 				.catch((e) => {
 					console.error(e);
@@ -93,6 +152,64 @@ if (!customElements.get('product-form')) {
 					if (!this.error) this.submitButton.removeAttribute('aria-disabled');
 					this.querySelector('.loading-overlay__spinner').classList.add('hidden');
 				});
+		}
+
+		addGiftPage(giftId) {
+			const config = fetchConfig('javascript');
+			config.headers['X-Requested-With'] = 'XMLHttpRequest';
+			delete config.headers['Content-Type'];
+			const formData = new FormData();
+			formData.append('id', giftId);
+			formData.append('quantity', 1);
+			config.body = formData;
+			
+			fetch(`${routes.cart_add_url}`, config)
+			.then((response) => response.json())
+			.then((response) => {
+				window.location = window.routes.cart_url;
+			})
+			.catch((e) => {
+				console.error(e);
+			})
+		}
+
+		addGiftSidecart(giftId) {
+			const config = fetchConfig('javascript');
+			config.headers['X-Requested-With'] = 'XMLHttpRequest';
+			delete config.headers['Content-Type'];
+			
+			const formData = new FormData();
+			formData.append('id', giftId);
+			formData.append('quantity', 1);
+			formData.append('sections', this.cart.getSectionsToRender().map((section) => section.id));
+			formData.append('sections_url', window.location.pathname);
+			config.body = formData;
+			
+			fetch(`${routes.cart_add_url}`, config)
+			.then((response) => response.json())
+			.then((response) => {
+				this.cart.renderContents(response);
+			})
+			.catch((e) => {
+				console.error(e);
+			})
+		}
+
+		refreshSideCart(){
+			const cartDrawer = document.querySelector('cart-drawer');
+			if (cartDrawer) {
+				const innerCart = cartDrawer.querySelector('.drawer__inner');
+				fetch(window.Shopify.routes.root+"?section_id=cart-drawer")
+				.then((response) => {
+					return response.text();
+				}).then((response) => { 
+					const parser = new DOMParser(),
+					dom = parser.parseFromString(response, "text/html"),
+					domCartDrawer = dom.querySelector('cart-drawer'),
+					domInnerCart = domCartDrawer.querySelector('.drawer__inner');
+					innerCart.innerHTML = domInnerCart.innerHTML
+				});
+			}
 		}
 
 		handleErrorMessage(errorMessage = false) {

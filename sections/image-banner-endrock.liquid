@@ -1,0 +1,93 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    background-image: url('{{ section.settings.background_image |  image_url: width: 1800 }}'); 
+  }
+
+  @media screen and (max-width: 700px) { 
+    #shopify-section-{{ section.id }} {
+      background-image: url('{{ section.settings.background_image_mobil |  image_url: width: 400 }}'); 
+      height: 937px;
+    }
+  }
+</style>
+
+<div class="image-banner-product__container">
+  <div class="image-banner-product__title">
+    {{ section.settings.title }}
+  </div>
+  
+  <div class="image-banner-product__description">
+    {{ section.settings.description }}
+  </div>
+  
+  <div class="image-banner-product__logos-aditional">
+    {% assign image_asign = section.settings.aditional_logo_sign |  image_url: width: 600  %}
+    {% render 'render-image'
+      img_src: image_asign,
+      alt: "Image sign",
+      size: "400 500 600",
+      width: "345",
+      height: "110"
+    %}
+    <div class="text-sign">
+      <p class="sing-one">
+        {{ section.settings.sign_1 }}
+      </p>
+      <p class="sing-two">
+        {{ section.settings.sign_2 }}
+      </p>
+    </div>
+   
+  </div>
+</div>
+
+ 
+{% schema %}
+  {
+    "name": "Image banner product",
+    "class": "image-banner-product",
+    "tag": "div",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description"
+      },
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background image"
+      },
+      {
+        "type": "image_picker",
+        "id": "background_image_mobil",
+        "label": "Background image mobil"
+      },
+      {
+        "type": "image_picker",
+        "id": "aditional_logo_sign",
+        "label": "Logo image sign"
+      },
+      {
+        "type": "text",
+        "id": "sign_1",
+        "label": "Sign one"
+      },
+      {
+        "type": "text",
+        "id": "sign_2",
+        "label": "Sign two"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image banner product"
+      }
+    ]
+  }
+{% endschema %}

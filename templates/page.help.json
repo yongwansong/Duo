@@ -1,0 +1,334 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "1658308828c1e2823b": {
+      "type": "about-full-banner",
+      "disabled": true,
+      "settings": {
+        "hero_Heading": "",
+        "hero_img": "shopify:\/\/shop_images\/about-bnrr.png",
+        "hero_img_mobile": "shopify:\/\/shop_images\/Group_416.png"
+      }
+    },
+    "f9e23ace-3800-4511-baaf-27fe071c0431": {
+      "type": "image-banner",
+      "blocks": {
+        "template--15836966125735__f9e23ace-3800-4511-baaf-27fe071c0431-text-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Here are the three most common questions we get from talking to all of you. Scroll down to see more FAQs, read our 100% guarantee or to contact us."
+          }
+        },
+        "template--15836966125735__f9e23ace-3800-4511-baaf-27fe071c0431-heading-1": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "FAQs + contact",
+            "heading_size": "large"
+          }
+        },
+        "template--15836966125735__f9e23ace-3800-4511-baaf-27fe071c0431-buttons-1": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "FAQs",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Contact",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15836966125735__f9e23ace-3800-4511-baaf-27fe071c0431-text-1",
+        "template--15836966125735__f9e23ace-3800-4511-baaf-27fe071c0431-heading-1",
+        "template--15836966125735__f9e23ace-3800-4511-baaf-27fe071c0431-buttons-1"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h1 {font-color: black;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Frame_135_2x_6c2d1cd4-7b40-43f4-a231-1c8497df2192.png",
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_text_box_position": "center",
+        "show_text_box": false,
+        "image_overlay_opacity": 0,
+        "color_scheme": "background-2",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "a1ac37ca-70e5-44e3-898d-ddd0192df3e5": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15836966125735__a1ac37ca-70e5-44e3-898d-ddd0192df3e5-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "FAQs + Contact",
+            "heading_size": "h0"
+          }
+        },
+        "template--15836966125735__a1ac37ca-70e5-44e3-898d-ddd0192df3e5-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>We start with a How-To-Duo video and then the three most common questions we get from talking to you. <\/h3><h3>Scroll down to see <strong>more FAQs<\/strong>, read our <strong>100% guarantee<\/strong> or to <strong>contact us<\/strong>. <\/h3>"
+          }
+        },
+        "template--15836966125735__a1ac37ca-70e5-44e3-898d-ddd0192df3e5-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15836966125735__a1ac37ca-70e5-44e3-898d-ddd0192df3e5-heading-1",
+        "template--15836966125735__a1ac37ca-70e5-44e3-898d-ddd0192df3e5-text-1",
+        "template--15836966125735__a1ac37ca-70e5-44e3-898d-ddd0192df3e5-button-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true
+      }
+    },
+    "a79f53a7-a4c6-4199-b494-e0fd5db3ef75": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "How to Brush with Duo",
+        "cover_image": "shopify:\/\/shop_images\/dui-362_Large_864e3e07-2454-4b12-9ed9-bb9f5f251d3d.png",
+        "video_url": "",
+        "description": "",
+        "full_width": false
+      }
+    },
+    "baf7b0d5-b6f0-47c0-8187-548af8d916ca": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>.embed-container { position: relative; margin-left:10%; margin-right:10%;margin-bottom: -15%; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 80%; }<\/style><div class='embed-container'><iframe src='https:\/\/www.youtube.com\/embed\/LfOxs-dj2cI?rel=0' frameborder='0' allowfullscreen><\/iframe><\/div>"
+      }
+    },
+    "e577f95a-36a7-4f25-94d4-7ab4c099b668": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--15836966125735__e577f95a-36a7-4f25-94d4-7ab4c099b668-column-1": {
+          "type": "column",
+          "settings": {
+            "title": "1. Do I need to swallow? How does it work?",
+            "text": "<p>Nope! Supplements like vitamin D, vitamin B12, melatonin, and caffeine are absorbed into your system when they come into contact with the tissues in your mouth. This is called mucosal absorption. When you brush your teeth with Duo tablets, these supplements pass through your oral membrane and quickly reach your system.  <\/p><p><\/p><p><\/p><h4>Selected studies:<\/h4><ul><li><h5><a href=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/28052884\/\" target=\"_blank\" title=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/28052884\/\">Vitamin B12 <\/a><\/h5><\/li><li><h5><a href=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/31548595\/\" title=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/31548595\/\">Vitamin D3<\/a><\/h5><\/li><li><h5><a href=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/29368182\/\" target=\"_blank\" title=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/29368182\/\">Caffeine <\/a><\/h5><\/li><li><h5><a href=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/24665831\/\" target=\"_blank\" title=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/24665831\/\">Melatonin<\/a> <\/h5><\/li><\/ul>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--15836966125735__e577f95a-36a7-4f25-94d4-7ab4c099b668-column-3": {
+          "type": "column",
+          "settings": {
+            "title": "2. Who are the dentists behind the tablets?",
+            "text": "<p>Duo was formulated by two of the four co-founders, dentists Stevie Ames Roberts, DMD and Robert (“Bobby”) Johnson, DMD, MD. Stevie and Bobby met in dental school at Tufts University in Boston, where they realized they were both children of dentists who happily had more in common than a love of teeth. Now married, they live in Seattle where Stevie practices dentistry and Bobby is completing his residency in oral and maxillofacial surgery at the University of Washington.<\/p><h4>Learn more:<\/h4><ul><li><h5><a href=\"https:\/\/duotoothpaste.com\/pages\/about\" title=\"https:\/\/duotoothpaste.com\/pages\/about\">About page<\/a><\/h5><\/li><li><h5><a href=\"https:\/\/www.dentistekirkland.com\/\" title=\"https:\/\/www.dentistekirkland.com\/\">Dentiste (Stevie's practice in Seattle)<\/a><\/h5><\/li><\/ul>",
+            "link_label": "",
+            "link": "https:\/\/duotoothpaste.com\/pages\/about"
+          }
+        },
+        "template--15836966125735__e577f95a-36a7-4f25-94d4-7ab4c099b668-column-2": {
+          "type": "column",
+          "settings": {
+            "title": "3. What's nHa? And don't I need Fluoride?",
+            "text": "<p>We use a dentist-backed fluoride alternative called nano-hydroxyapatite (nHa), the natural mineral in your teeth and bones that combines with calcium and phosphate to make them strong. Exhaustive research over the past several decades has proven that nano-Hydroxyapatite is just as effective as fluoride at remineralizing teeth, while also whitening them and reducing sensitivity. <\/p><h4>Selected studies:<\/h4><ul><li><h5><a href=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/25506416\/\" target=\"_blank\" title=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/25506416\/\">Nano-hydroxyapatite and its applications in preventive, restorative and regenerative dentistry: a review of literature<\/a><\/h5><\/li><li><h5><a href=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/30683113\/\" target=\"_blank\" title=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/30683113\/\">Enamel remineralization and repair results of Biomimetic Hydroxyapatite toothpaste on deciduous teeth: an effective option to fluoride toothpaste<\/a><\/h5><\/li><\/ul>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15836966125735__e577f95a-36a7-4f25-94d4-7ab4c099b668-column-1",
+        "template--15836966125735__e577f95a-36a7-4f25-94d4-7ab4c099b668-column-3",
+        "template--15836966125735__e577f95a-36a7-4f25-94d4-7ab4c099b668-column-2"
+      ],
+      "settings": {
+        "add_cls": "",
+        "title": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
+    "1658408388be7cff0b": {
+      "type": "yellow-header",
+      "settings": {
+        "txt": "#fecc41",
+        "text_color": "#000000",
+        "title1": "Shop all tablets",
+        "learnmore": "shopify:\/\/collections\/shop",
+        "desktop_font_size": 20,
+        "mobile_font_size": 20,
+        "small_mobile_font_size": 20,
+        "arrow_icon": true,
+        "underline": false,
+        "uppercase": false
+      }
+    },
+    "1658308325abb042fe": {
+      "type": "about-faq",
+      "blocks": {
+        "a876b53e-c6d5-4d0e-a78a-c5a0190f3a98": {
+          "type": "text",
+          "settings": {
+            "Heading": "<p><strong>What’s a functional line of toothpaste?<\/strong><\/p>",
+            "text": "<p>We created Duo to make your mornings and nights better because we believe that brushing should be something to look forward to. For us, that means turning a banal routine into a holistic health ritual. We use all-natural, clean ingredients to activate the senses – smell, taste, and the feeling of fine foam (we love that you call it silky) – and we added botanical extracts (like pinches of sage, lavender, cinnamon, and peppermint) to enrich the experience. <\/p><p><\/p><p>And because we believe brushing should also help with what lies ahead (think hectic days, restful nights), we formulated Immunity, Energy and Sleep with delightful doses of vitamins and supplements that get absorbed into your system as you brush. See the question below “<em>Do I need to swallow my toothpaste?<\/em>” for how it works.<\/p>"
+          }
+        },
+        "084c9d9e-e892-4fd5-9174-055bbdca88d1": {
+          "type": "text",
+          "settings": {
+            "Heading": "<p><strong>Is the Original just normal toothpaste? <\/strong><\/p>",
+            "text": "<p>Short answer: it’s much more than that.<\/p><p>Our Original tablet has been crafted to be a higher quality toothpaste in step with the latest developments in dentistry and oral health. Our tablets feature nHa (see question on nHa below for more info) and we even included vitamins C & E for their antioxidant power: they both soothe and rejuvenate your gums and cheeks.<\/p><p>It’s also the base for all of our tablets so as you brush with one of the functional tablets, you’re not just safely and efficiently absorbing vitamins and supplements, you’re using a premium toothpaste. Your oral microbiome is the gateway to your gut and all major systems. That’s why in addition to doing all the “normal things,” we’ve enhanced our Original formula with vitamins, minerals, and botanical extracts that promote oral hydration and homeostasis. <\/p>"
+          }
+        },
+        "650bdb78-459e-49a8-aedf-7a0920f63747": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "Heading": "<p><strong>What’s nano-hydroxyapatite (nHa) and don’t I need fluoride?<\/strong><\/p>",
+            "text": "<p>We use a dentist-backed fluoride alternative called nano-hydroxyapatite (nHa), the natural mineral in your teeth and bones that combines with calcium and phosphate to make them strong.<\/p><p><\/p><p>The enamel in your teeth is the hardest structure in your body made up of hydroxyapatite, calcium, and phosphate BUT it also cannot repair itself alone. Nano-Hydroxyapatite and fluoride both repair your teeth by remineralizing damaged enamel and becoming incorporated into your teeth. Exhaustive research over the past several decades has proven that nano-Hydroxyapatite is just as effective as fluoride at remineralizing teeth, while also whitening them and reducing sensitivity. <\/p><p>Looking to do a deeper dive into nHa? Please reach out. We would love to chat and send you seemingly endless sources of level 1 evidence (meta analysis, systemic reviews, and randomized-controlled trials). We are very passionate about nHa, in case you couldn’t tell.<\/p><p><\/p><p><strong>Selected studies:<\/strong><\/p><p>- <a href=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/25506416\/\" target=\"_blank\" title=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/25506416\/\">Nano-hydroxyapatite and its applications in preventive, restorative and regenerative dentistry: a review of literature<\/a><\/p><p><\/p><p>- <a href=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/22403978\/\" target=\"_blank\" title=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/22403978\/\">Remineralization of early caries by a nano-hydroxyapatite dentifrice<\/a><\/p><p><\/p><p>- <a href=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/30683113\/\" target=\"_blank\" title=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/30683113\/\">Enamel remineralization and repair results of Biomimetic Hydroxyapatite toothpaste on deciduous teeth: an effective option to fluoride toothpaste<\/a><\/p>"
+          }
+        },
+        "1e69c1cf-1893-4810-aa16-3ccdf5da5db3": {
+          "type": "text",
+          "settings": {
+            "Heading": "<p><strong>What are toothpaste tablets?<\/strong><\/p>",
+            "text": "<p>Tablets are a breakthrough in oral care and we love them for many reasons...<\/p><p><\/p><p><strong>1.<\/strong> The environmental. Tablets allow us to deliver your toothpaste in recyclable glass bottles and biodegradable packaging. We don’t use plastic tubes that can only go in landfills.<\/p><p><\/p><p><strong>2.<\/strong> The convenient. No yucky paste on your sink or too-big tubes taken by TSA.<\/p><p><\/p><p><strong>3.<\/strong> The aesthetic. So pleasing to look at in your bathroom sanctuary!<\/p><p><\/p><p><strong>4.<\/strong> The practical. Tablet form means we know you’re getting the precise dose of functional supplements and vitamins in every tablet.<\/p>"
+          }
+        },
+        "242cc436-7655-46ac-aa00-2a45e3971098": {
+          "type": "text",
+          "settings": {
+            "Heading": "<p><strong>Do the tablets foam?<\/strong><\/p>",
+            "text": "<p>We’re proud of our foam. Unlike traditional tube paste that often uses detergents and other sudsing agents found in soap that actually dry out your mouth, we use a soothing combination of natural ingredients to make our foam. It’s activated when combined with the saliva in your mouth and the water on your toothbrush plus the mechanical work of brushing. <\/p><p><\/p><p>The longer you brush the foamier it gets!<\/p>"
+          }
+        },
+        "c7e2d3d7-9be2-439a-bac9-b926e36ed62c": {
+          "type": "text",
+          "settings": {
+            "Heading": "<p><strong>How do you use Duo?<\/strong><\/p>",
+            "text": "<p>To brush with Duo, wet your toothbrush and pop in a tablet or two (if you want extra Energy, or extra thick foam, try a double!). Crunch down to break it up. If you feel bits, that’s fine, just start brushing. Our natural silk foam will build and reach its peak at about 30 seconds. Brush for at least two minutes. Spit. Rinse if you’d like. <\/p><p><\/p><p>Pro tip: We’ve heard from users that they keep all four bottles at their sink, travel with at least two, and keep Energy at the office for a pick-me-up. In short, do Duo however you do. <\/p>"
+          }
+        },
+        "be4995fc-268d-4d66-96a3-df55a9e2c0bc": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "Heading": "<p><strong>Do I need to swallow? How does it work? And what’s mucosal absorption? <\/strong><\/p>",
+            "text": "<p>Nope! Supplements like vitamin D, vitamin B12, melatonin, and caffeine are absorbed into your system when they come into contact with the tissues in your mouth. This is called mucosal absorption. When you brush your teeth with Duo tablets, these supplements pass through your oral membrane and quickly reach your system.  <\/p><p><\/p><p>Brushing, it turns out, is an incredibly efficient delivery mechanism. In fact, it means supplements bypass difficult and potentially uncomfortable absorption in the gastrointestinal tract and go straight to the bloodstream. It’s why you feel the caffeine in Energy almost right away!<\/p><p><\/p><p>That being said, if you do accidentally swallow some toothpaste, don’t worry. We only use clean ingredients that are entirely safe for consumption.<\/p><p><\/p><p><strong>Selected studies:<\/strong><\/p><p><a href=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/28052884\/\" target=\"_blank\" title=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/28052884\/\"><strong>Vitamin B12<\/strong><\/a><\/p><p><\/p><p><a href=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/31548595\/\" title=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/31548595\/\"><strong>Vitamin D3<\/strong><\/a><\/p><p><\/p><p><a href=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/29368182\/\" target=\"_blank\" title=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/29368182\/\"><strong>Caffeine<\/strong><\/a><\/p><p><\/p><p><a href=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/24665831\/\" target=\"_blank\" title=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/24665831\/\"><strong>Melatonin<\/strong><\/a><strong> <\/strong><\/p>"
+          }
+        },
+        "68b56f50-8574-4b3d-af0f-ace4a648e2a7": {
+          "type": "text",
+          "settings": {
+            "Heading": "<p><strong>What makes Duo toothpaste sustainable?<\/strong><\/p>",
+            "text": "<p>Unlike traditional toothpaste tubes that can’t be recycled and end up in landfills, Duo toothpaste tablets come in glass bottles with aluminum caps that are completely recyclable and reusable. <\/p><p><\/p><p>The bottles come in mailers that are made from recycled materials and are 100% biodegradable and recyclable. The tablets themselves don’t require water to produce, which means no water-footprint.<\/p>"
+          }
+        },
+        "e46e41a6-0420-4edc-bb4c-fea031cde81a": {
+          "type": "text",
+          "settings": {
+            "Heading": "<p><strong>Are Duo products FDA approved?<\/strong><\/p>",
+            "text": "<p>While the FDA does not directly approve dietary supplements, our products are manufactured in a facility that is certified by an independent auditor, UL Solutions, to be in accordance with the FDA’s current Good Manufacturing Practices (cGMP). UL Solutions certification is the gold standard in the dietary supplement industry and is trusted by top brands in the space. You can find out more about the certification by going to UL Solution’s website <a href=\"https:\/\/www.ul.com\/services\/current-good-manufacturing-practices-cgmp-audit-and-certification\" target=\"_blank\" title=\"https:\/\/www.ul.com\/services\/current-good-manufacturing-practices-cgmp-audit-and-certification\">here<\/a>. <\/p>"
+          }
+        },
+        "4a3f1294-22e7-4116-9e14-5107d00302a3": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "Heading": "<p><strong>Who are the dentists behind the tablets?<\/strong><\/p>",
+            "text": "<p>Duo Dentaceuicals were formulated by two of the four co-founders, dentists Stevie Ames Roberts, DMD and Robert (“Bobby”) Johnson, DMD, MD.<\/p><p>Dr. Stevie is from Philadelphia, PA, where she attended the University of Pennsylvania and Dr. Bobby is from Seattle, WA, where he attended the University of Washington. Stevie and Bobby met in dental school at Tufts University in Boston, where they realized they were both children of dentists who happily had more in common than a love of teeth. Now married, they live in Seattle where Stevie practices dentistry and Bobby is completing his residency in oral and maxillofacial surgery at the University of Washington.<\/p>"
+          }
+        },
+        "3de96022-2309-4b1c-b3a9-1707ea17bbe1": {
+          "type": "text",
+          "settings": {
+            "Heading": "<p><strong>Why do the functional toothpastes cost more?<\/strong><\/p>",
+            "text": "<p>The costs reflect the added supplements and vitamins to our functional tablets (Immunity, Energy, Sleep). <\/p>"
+          }
+        },
+        "afce90d7-9a5b-4efd-9691-d14d6778d53c": {
+          "type": "text",
+          "settings": {
+            "Heading": "<p><strong>What's in your newsletter?<\/strong><\/p>",
+            "text": "<p>Our newsletter is the first place we’ll announce promotions and new products, and it’s an envelope full of joy. You’ll be amazed by how much you’ll learn about upgrading your routine and how much fun you’ll have brushing. Really, how much fun do you think you can have brushing? Check out @duotoothpaste on Instagram to get a hint. <\/p><p><\/p><p>Not signed up? You can always sign up at the bottom of any page in the footer! <\/p><p><\/p>"
+          }
+        },
+        "eac19306-0f83-4e47-9863-a4df904fa232": {
+          "type": "text",
+          "settings": {
+            "Heading": "<p><strong>How long does shipping take?<\/strong><\/p>",
+            "text": "<p>It takes 3-8 days for your tablets to arrive. Tracking numbers are sent when the product ships and please don’t hesitate to contact us with any issues or questions.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "a876b53e-c6d5-4d0e-a78a-c5a0190f3a98",
+        "084c9d9e-e892-4fd5-9174-055bbdca88d1",
+        "650bdb78-459e-49a8-aedf-7a0920f63747",
+        "1e69c1cf-1893-4810-aa16-3ccdf5da5db3",
+        "242cc436-7655-46ac-aa00-2a45e3971098",
+        "c7e2d3d7-9be2-439a-bac9-b926e36ed62c",
+        "be4995fc-268d-4d66-96a3-df55a9e2c0bc",
+        "68b56f50-8574-4b3d-af0f-ace4a648e2a7",
+        "e46e41a6-0420-4edc-bb4c-fea031cde81a",
+        "4a3f1294-22e7-4116-9e14-5107d00302a3",
+        "3de96022-2309-4b1c-b3a9-1707ea17bbe1",
+        "afce90d7-9a5b-4efd-9691-d14d6778d53c",
+        "eac19306-0f83-4e47-9863-a4df904fa232"
+      ],
+      "settings": {
+        "hero_Heading": "<p><strong>More <\/strong><\/p><p><strong>questions? <\/strong><\/p><p><strong>We’ve got <\/strong><\/p><p><strong>answers.<\/strong><\/p>",
+        "hero_Heading_mobile": "<p><strong>More questions? <\/strong><\/p><p><strong>We’ve got answers.<\/strong><\/p>",
+        "hero_Heading-bottom": "<p><strong>Our 100% <br\/>guarantee <\/strong><\/p>",
+        "bottom_content": "<p>We created Duo to make your mornings and nights—or whenver you brush your teeth—better. <\/p><p>If we didn’t meet your expectations for any reason, we’ll give you a 100% refund. All you have to do is email returns@duotoothpaste.com and we’ll send you instructuctions on how to send back your product and receive a refund.<\/p><p>See full policy <a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">here<\/a>.<\/p>"
+      }
+    },
+    "16583230732c1e46aa": {
+      "type": "about-contact",
+      "settings": {
+        "contact_title": "Contact us",
+        "contact_text": "<p>Have an unanswered question? Want to share some <\/p><p>feedback? We’d love to hear from you.<\/p>",
+        "contact_link_Name": "<p>e-mail<\/p>",
+        "email_name": "friends@duotoothpaste.com",
+        "contact_Link": "mailto:friends@duotoothpaste.com",
+        "social_link_Name": "<p>instagram<\/p>",
+        "social_Link": "<p><a href=\"https:\/\/instagram.com\/duotoothpaste\" target=\"_blank\" title=\"https:\/\/instagram.com\/duotoothpaste\">@duotoothpaste<\/a><\/p>",
+        "contact_link_Name2": "<p>media inquiries<\/p>",
+        "contact_Link2_name": "media@duotoothpaste.com",
+        "contact_Link2": "mailto:media@duotoothpaste.com"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1658308828c1e2823b",
+    "f9e23ace-3800-4511-baaf-27fe071c0431",
+    "a1ac37ca-70e5-44e3-898d-ddd0192df3e5",
+    "a79f53a7-a4c6-4199-b494-e0fd5db3ef75",
+    "baf7b0d5-b6f0-47c0-8187-548af8d916ca",
+    "e577f95a-36a7-4f25-94d4-7ab4c099b668",
+    "1658408388be7cff0b",
+    "1658308325abb042fe",
+    "16583230732c1e46aa"
+  ]
+}

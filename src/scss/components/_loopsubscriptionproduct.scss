@@ -1,0 +1,241 @@
+.loop-subscription-container {
+  .switches-container {
+    border-bottom: 1px solid;
+    border-radius: 0;
+
+
+    .subsgo span, .onetimego span {
+      color: #000000;
+      font-family: "OldschoolGrotesk-Regular";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+
+    .switch {
+      background: #fff;
+
+      div {
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        display: block;
+        transition: opacity 0.2s cubic-bezier(.77, 0, .175, 1) 0.125s;
+        will-change: opacity;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 10px;
+        font-family: "OldschoolGrotesk-Medium";
+        letter-spacing: 1.6px;
+        color: #000000;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      .subsgo span, .onetimego span {
+        font-size: 13px;
+      }
+      .switch {
+        div {
+          font-size: 13px;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+
+  }
+
+  .legend-right {
+    padding: 17px;
+    border: 1px solid;
+    margin-top: 16px;
+  }
+
+  .loop-selling-plan-fieldset {
+    border-radius: 0 !important;
+  }
+
+  .loop-selling-plan-selector-style {
+    width: auto !important;
+    display: block !important;
+    border-color: #000 !important;
+    border-width: 1px !important;
+    margin: 0 0 0 12px !important;
+    padding: 0.5em 2.5em 0.5em 0.7em !important;
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%),
+      linear-gradient(to right, #ccc, #ccc);
+    background-position: calc(100% - 20px) calc(1em), calc(100% - 15px) calc(1em),
+      calc(100% - 2.5em) 0.5em;
+    background-size: 5px 5px, 5px 5px, 0px 1.5em;
+    background-repeat: no-repeat;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-style: dotted;
+    border-radius: 0 !important;
+  }
+
+  .selector-custom {
+    color: #746F6F;
+    font-family: "OldschoolGrotesk-Regular";
+    font-size: 14px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: 0.7px;
+  }
+
+  .legend-right {
+    .aditional-info-subscription, .aditional-info-order {
+      margin: 0;
+      text-align: right;
+      color: #3F3F3F;
+      font-family: "OldschoolGrotesk-Regular";
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 14px;
+      border-bottom: 1px solid;
+      margin-top: 12px;
+      padding-bottom: 8px;
+    }
+
+    .aditional-info-order {
+      font-size: 14px;
+      text-align: left;
+      border-bottom: none;
+      margin-top: 16px;
+      line-height: 1.5;
+    }
+  }
+
+  .item_include {
+    display: flex;
+    margin-top: 10px;
+    column-gap: 6px;
+  }
+
+  .icon-info {
+    display: flex;
+    align-items: center;
+    
+    .icon {
+      display: flex;
+    }
+    .text {
+      line-height: normal;
+      color: #000;
+      font-family: "OldschoolGrotesk-Regular";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      margin-top: 3px;
+      margin-left: 4px;
+    }
+  }
+
+  .container-select-price {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .price-save-subscription {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      span {
+        line-height: normal;
+        font-family: "OldschoolGrotesk-Regular";
+
+      }
+
+      .variant-field__price {
+        color: #000;
+        text-align: right;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+
+        .price-subscription {
+          display: flex;
+          flex-direction: column;
+
+          .price-subcription-compare {
+            color: #b1b1b1;
+            font-size: 13px;
+            margin-bottom: 2px;
+          }
+
+          .save-subscription {
+            color: #00497E;
+            text-align: right;
+            font-family: "OldschoolGrotesk-Regular";
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 14px;
+          }
+        }
+      }
+      .variant-field__sale {
+        color: #00497E;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 14px;
+
+        p {
+          display: inline;
+        }
+      }
+
+      
+    }
+
+    
+  }
+
+  
+  @media screen and (max-width: 700px) {
+
+    .container-select-price {
+      .loop-subscription-group-selling-plans-container  {
+        font-size: 12px;
+  
+        .selector-custom {
+          font-size: 12px !important;
+          margin-left: 4px !important;
+        }
+      }
+
+      
+    }
+    .loop-selling-plan-selector-style {
+      width: 57% !important;
+    }
+
+    .legend-right {
+      padding: 9px;
+
+      .item_include {
+        column-gap: 4px;
+        margin-top: 7px !important;
+
+        .text {
+          font-size: 7px;
+        }
+      }
+    }
+  }
+    
+}
