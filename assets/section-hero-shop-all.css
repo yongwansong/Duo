@@ -6,9 +6,18 @@
     background: #ffd761!important;
 }
 
+
+@media (max-width: 768px){
+.page-width {
+    padding: 0 15px !important;
+}
+}
+
+
 @media (max-width: 480px) {
     .header {
               padding: 15px 36px 15px 24px !important;
+              border-bottom: 0px solid #000000;
     }
   }
 
@@ -75,7 +84,12 @@
 
 .section-endrock-hero-image .desktop_image img {
     min-height: 240px;
+    background: rgb(255,212,88);
+    background: rgb(255,212,88);
+    background: radial-gradient(circle, rgba(255,212,88,0.67128849830948) 0%, rgba(255,212,88,1) 35%, rgba(255,212,88,1) 100%); 
+
 }
+
 
 
 

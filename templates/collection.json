@@ -9,8 +9,8 @@
         "mobile_padding_bottom": 0,
         "full_width": true,
         "video": "",
-        "desktop_image": "shopify:\/\/shop_images\/Duo_Product-0868_2.png",
-        "mobile_image": "shopify:\/\/shop_images\/Duo_Product-0868_2.png",
+        "desktop_image": "shopify:\/\/shop_images\/duotool.png",
+        "mobile_image": "shopify:\/\/shop_images\/duotool.png",
         "videomobile": "",
         "heading": "Shop all",
         "subheading": "",
@@ -148,7 +148,7 @@
         "767ba903-3399-4e8f-8696-8b77e4c621cb": {
           "type": "product",
           "settings": {
-            "featured_product": "original",
+            "featured_product": "day-night-bundle",
             "custom_product_image": "shopify:\/\/shop_images\/day_night_bundle.jpg",
             "hover_image": "shopify:\/\/shop_images\/Night_Bundle.jpg",
             "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
