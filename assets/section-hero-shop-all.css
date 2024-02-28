@@ -29,7 +29,7 @@
     }
 
     .imagencontainer {
-        width: calc(25% - 40px)!important;
+        width: calc(25% - 25px) !important;
     }
 
 
@@ -412,6 +412,7 @@
     .section-endrock-hero-image .hero-banner__content {
         position: absolute;
         margin-top: 0px!important;
+        background: transparent
     }
 }
 
@@ -881,7 +882,7 @@
 
 .endrock-featured-collection .product_title {
     line-height: 18px!important;
-    margin-bottom: 3px!important;
+    margin-bottom: 0px!important;
 }
 
 .packtitle_
@@ -966,5 +967,38 @@
 
 
 }
+.add-to-cart-{
+    color: #fff;font-size: 15px;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    text-transform: uppercase;cursor: pointer;
+}
 
+@media  (max-width: 767px) {
+    .add-to-cart- {
+      font-size: 13px !important;
+    }
+  }
+.add-to-cart-:hover{
+    color: #000000;
+}
 
+  .btnwhite {
+
+  background: black;
+  text-align: center;   border: 2px solid black;
+}
+
+button.cllctnadd {
+    width: 100%;
+
+}
+.btnwhite:hover {
+
+    background: rgb(255, 255, 255);
+    text-align: center;
+    color: #000;
+  }
+  
+  

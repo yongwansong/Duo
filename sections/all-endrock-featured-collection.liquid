@@ -413,7 +413,7 @@
                                             -%}
                                             {% comment %} {% render 'loop-subscriptions' type: 'product-widget', product: product %} {% endcomment %}
 
-                                            <div class="{{ endrock_featured_product.title| downcase }} products__heading add-toCart">
+                                            <div class="btnwhite products__heading add-toCart_">
                                             <input
                                                 type="hidden"
                                                 name="id"
@@ -424,7 +424,7 @@
                                                 id="{{ product_form_id }}-submit"
                                                 type="submit"
                                                 name="add"
-                                                class="quick-add__submit cllctnadd"
+                                                class="add-to-cart- cllctnadd"
                                                 aria-haspopup="dialog"
                                                 aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ endrock_featured_product.id }}"
                                                 aria-live="polite"
@@ -432,7 +432,7 @@
                                                 disabled
                                                 {% endif %}
                                             >
-                                                <span class="add-to-cart-message">
+                                                <span class="">
                                                 {%- if endrock_featured_product.selected_or_first_available_variant.available -%}
                                                     {{ 'products.product.add_to_cart' | t }}
                                                 {%- else -%}
