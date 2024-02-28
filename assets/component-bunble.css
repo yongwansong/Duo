@@ -1003,7 +1003,12 @@ color:#000
   min-height: 600px;
 }
 
+.call_feat{
 
+  background: rgb(132,221,185);
+  background: linear-gradient(90deg, rgba(132,221,185,1) 0%, rgba(141,225,191,1) 35%, rgba(162,236,203,1) 100%); 
+  
+}
 @media screen and (min-width: 750px) {
   .image-with-text__grid--reverse .image-with-text__content {
       margin-left: auto;
