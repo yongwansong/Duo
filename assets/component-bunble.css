@@ -35,8 +35,18 @@ body {
 }
 
 
+
 @media (max-width: 550px)
+
+
 {
+
+  .slick-slide .slide-content
+{
+  margin: 1px!important;
+}
+
+
 h2.image-with-text__heading.h3 {
 
   font-size: 42px!important;
