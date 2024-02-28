@@ -13,6 +13,10 @@
     align-items: center;
 }
 
+.icon-with-text__wrapper .swiper-slide .iwt-item__icon{
+  line-height: 1;
+}
+
 @media (max-width: 1100px){
   .icon-with-text__wrapper .iwt-item{
     gap: 11px;
