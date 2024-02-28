@@ -495,7 +495,7 @@ h2.image-with-text__heading.h3 {
 }
 
 .contenedor-imagen:hover .texto-superpuesto {
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .bg_product_ {
