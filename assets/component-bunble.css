@@ -10,6 +10,13 @@ body {
 
 
 @media (max-width: 767px) {
+
+
+  .image_banner_text {
+    padding-top: 60px!important;
+  }
+
+  
   .icon-with-text__wrapper {
     gap: 20px!important;
   }
@@ -162,9 +169,7 @@ h2.image-with-text__heading.h3 {
 
 @media (max-width: 550px){
 
-  .image_banner_text {
-    padding-top: 60px!important;
-  }
+
 
 
 
