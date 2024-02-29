@@ -6,6 +6,10 @@
 	--loop-bundle-image-border-radius: 0!important;
 	--loop-product-card-image-height: auto!important;
 }
+
+footer .footer {
+  padding-bottom:300px;
+}
 body .loop {
 	font-family: var(--loop-ff-400);
 }
