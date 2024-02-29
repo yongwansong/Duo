@@ -37,6 +37,7 @@ body .loop .loop-btn.loop-btn-outline,
 body .loop .loop-card-footer .loop-btn{
 	border: .1rem solid var(--loop-bundle-outline-button-text-color);
     border-radius: 0px;
+    background-color: #fff;
 }
 
 body .loop-btn-selected {
