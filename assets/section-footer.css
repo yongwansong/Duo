@@ -827,7 +827,6 @@ button.accordion.is-open:after {
     right: 0;
     height: 100%;
     bottom: 1px;
-    border-bottom: 1px solid #000000;
   }
 }
 
