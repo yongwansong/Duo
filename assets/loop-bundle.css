@@ -86,7 +86,7 @@ body .loop #loop-background > .loop-container{
 body .loop-bundle-header-wrapper {
 	/*background-image: url(https://cdn.shopify.com/s/files/1/0553/3233/9879/files/RepeatingBG_Halftone_MBL.png?v=1667283908);*/
 	text-align: center;
-	/*padding: 3rem 2.5rem;*/
+	padding: 3rem 2.5rem;
     background-color: #E2EBF2;
 }
 body .loop .loop-bundle-image-container-wrapper{
