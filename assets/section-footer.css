@@ -824,8 +824,6 @@ button.accordion.is-open:after {
   }
 
   .footer-block__newsletter [data-testid=form-component]:last-of-type{
-    width: 10%;
-    position: absolute !important;
     right: 0;
     height: 100%;
     bottom: 1px;
