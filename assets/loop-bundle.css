@@ -7,7 +7,9 @@
 	--loop-product-card-image-height: auto!important;
 }
 
-
+footer {
+  padding-bottom:120px;
+}
 body .loop {
 	font-family: var(--loop-ff-400);
 }
