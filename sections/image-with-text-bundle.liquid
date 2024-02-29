@@ -1,9 +1,8 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 {{ 'component-bunble.css' | asset_url | stylesheet_tag }}
 
-<style> .image-with-text__content_
+<style>
 
-/* Estilos generales */
 
 .image_banner_text {
   display: flex;
@@ -32,14 +31,6 @@
 
 
 
-.image-with-text__content_ {
-  margin: 10%;
-}
-
-.swiper-container {
-  
-}
-
 .text_banner
 {
   display: flex;
@@ -66,7 +57,7 @@
         {%- endcase -%}
       {%- endfor -%}
       
-      <div class="link_section">
+      <div class="link_section_">
       {%- for block in section.blocks -%}
         {% case block.type %}
           {%- when 'button' -%}
