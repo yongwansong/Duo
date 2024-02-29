@@ -22,9 +22,10 @@
                 {% for block in section.blocks %}
                     <div class="iwt-item swiper-slide">
                         
-                        {%- if block.settings.icon != blank -%}
-                            <div class="iwt-item__icon">{{ block.settings.icon }}</div>
-                        {%- endif -%}
+                    {%- if block.settings.icon != blank -%}
+                        <div class="iwt-item__icon">{{ block.settings.icon }}</div>
+                    {%- endif -%}
+                        
                         <span class="iwt-item__heading">{{ block.settings.heading }}</span>
                     </div>
                 {% endfor %}
@@ -37,10 +38,10 @@
     if(window.screen.width < 767){
         const iconsSwiper = new Swiper('.endrock-icon-with-text .endrock-icon-with-text-wrapper', {
             direction: 'horizontal',
-            slidesPerView:2,
+            slidesPerView:3,
             loop: true,
             loopedSlides: 2,
-            speed: 1000,
+            speed: 7000,
             autoplay: {
                 delay: 0,
             },

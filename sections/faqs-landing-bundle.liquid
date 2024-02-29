@@ -1,4 +1,4 @@
-{{ 'section-endrock-icon-with-text.css' | asset_url | stylesheet_tag }}
+{{ 'section-endrock-faq.css' | asset_url | stylesheet_tag }}
 
 <style>
     #section--{{ section.id }}{
@@ -13,52 +13,37 @@
             padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
         }
     }
+    .bgfaqs{
+
+    background: #e2ebf2;
+    }
 </style>
 
-<div id="section--{{ section.id }}">
-    <div class="endrock-icon-with-text {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">
-        <div class="swiper-container endrock-icon-with-text-wrapper">
-            <div class="swiper-wrapper icon-with-text__wrapper">
-                {% for block in section.blocks %}
-                    <div class="iwt-item swiper-slide">
-                        <span class="iwt-item__heading">{{ block.settings.heading }}</span>
-                        {%- if block.settings.icon != blank -%}
-                            <div class="iwt-item__icon">{{ block.settings.icon }}</div>
-                        {%- endif -%}
+<div id="section--{{ section.id }}" class="bgfaqs">
+    <div class="endrock-faq {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">
+        <div class="faq-container">
+            <h2 class="heading">{{ section.settings.heading }}</h2>
+            <div class="faq-wrapper">
+                {%- for block in section.blocks -%}
+                    <div class="faq-drawer">
+                        <input class="faq-drawer__trigger" id="faq-drawer--{{ block.id }}" type="checkbox" />
+                        <label class="faq-drawer__title" for="faq-drawer--{{ block.id }}">{{ block.settings.title }}</label>
+                        <div class="faq-drawer__content-wrapper">
+                            <div class="faq-drawer__content">
+                                {{ block.settings.description }}
+                            </div>
+                        </div>
                     </div>
-                {% endfor %}
+                {%- endfor -%}
             </div>
         </div>
     </div>
 </div>
 
-<script>
-    if(window.innerWidth < 767){
-        const iconsSwiper = new Swiper('.endrock-icon-with-text .endrock-icon-with-text-wrapper', {
-            direction: 'horizontal',
-            slidesPerView:2,
-            loop: true,
-            loopedSlides: 2,
-            speed: 1000,
-            autoplay: {
-                delay: 0,
-            },
-            Infinity:true
-        });
-
-        function handleFocus(e, i) {
-            iconsSwiper.slideTo(i);
-        }
-
-        const iconsSliders = document.querySelectorAll('.endrock-icon-with-text .swiper-container .swiper-slide');
-        iconsSliders.forEach((slide, i) => slide.addEventListener('focusin', (e) => handleFocus(e, i)));
-    }
-</script>
-
 {% schema %}
     {
-        "name": "Endrock Icon With Text",
-        "class": "endrock-icon-with-text",
+        "name": "endrock-faq",
+        "class": "Endrock Faq",
         "settings": [
             {
                 "type": "range",
@@ -104,29 +89,40 @@
                 "type": "checkbox",
                 "id": "full_width",
                 "label": "Full Width"
+            },
+            {
+                "type": "color",
+                "id": "bg_color",
+                "label": "Background Color"
+            },
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading"
             }
         ],
         "blocks": [
             {
-                "type": "icon",
-                "name": "Icon With Text",
+                "type": "faq",
+                "name": "faq",
                 "settings": [
                     {
                         "type": "text",
-                        "id": "heading",
-                        "label": "Heading"
+                        "id": "title",
+                        "label": "Title"
                     },
                     {
-                        "type": "html",
-                        "id": "icon",
-                        "label": "Icon"
+                        "type": "richtext",
+                        "id": "description",
+                        "label": "Description"
                     }
                 ]
             }
         ],
+
         "presets":[
             {
-                "name":"Endrock Icon With Text"
+                "name": "Endrock Faq"
             }
         ]
         

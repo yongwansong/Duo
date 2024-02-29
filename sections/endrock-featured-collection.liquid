@@ -162,26 +162,26 @@
                         {%- for block in section.blocks limit: section.settings.products_to_show -%}
                             {%- assign endrock_featured_product = block.settings.featured_product -%}
                             {%- assign featured_media_aspect_ratio = endrock_featured_product.featured_media.aspect_ratio -%}
-                            <div class="product-list {% if section.settings.swipe_on_mobile %}swiper-slide{% endif %}">
+                            <div class="product-list  {% if section.settings.swipe_on_mobile %}swiper-slide{% endif %}">
                                 {%- if block.settings.custom_product_image != blank -%}
                                     <div class="custom_product_image" id="block--{{ block.id }}" style="padding-bottom: {{ 100 | divided_by: block.settings.custom_product_image.aspect_ratio }}%">
-                                        <a href="{{  endrock_featured_product.url }}">
+                                      <a href="{{  endrock_featured_product.url }}">
                                         <img
-                                            src="{{ block.settings.custom_product_image | img_url: 'master' }}"
-                                            class="first_image"
-                                            alt="{{ block.settings.custom_product_image.alt }}"
-                                            loading="lazy"
-                                        >
+                                          src="{{ block.settings.custom_product_image | img_url: 'master' }}"
+                                          class="first_image"
+                                          alt="{{ block.settings.custom_product_image.alt }}"
+                                          loading="lazy"
+                                        />
                                         <img
-                                            src="{{ block.settings.hover_image | img_url: 'master' }}"
-                                            class="hover_image"
-                                            alt="{{ block.settings.hover_image.alt }}"
-                                            loading="lazy"
-                                        >
-                                        </a>
-                                        <div class="product_info_1 product_info">{{ block.settings.info_1 }}</div>
-                                        <div class="product_info_2 product_info">{{ block.settings.info_2 }}</div>
-                                        <div class="product_info_3 product_info">{{ block.settings.info_3 }}</div>
+                                          src="{{ block.settings.hover_image | img_url: 'master' }}"
+                                          class="hover_image"
+                                          alt="{{ block.settings.hover_image.alt }}"
+                                          loading="lazy"
+                                        />
+                                      </a>
+                                      <div class="product_info_1 product_info">{{ block.settings.info_1 }}</div>
+                                      <div class="product_info_2 product_info">{{ block.settings.info_2 }}</div>
+                                      <div class="product_info_3 product_info">{{ block.settings.info_3 }}</div>
                                     </div>
                                 {%- endif -%}
                                 
@@ -236,6 +236,13 @@
 
                                 <div class="custom-product_form">
                                     {%- if endrock_featured_product.selected_or_first_available_variant.available -%}
+                                      {%- assign variant_current = endrock_featured_product.selected_or_first_available_variant -%}
+                                      {%- for variant_metafield in endrock_featured_product.variants -%}
+                                        {%- if variant_metafield.metafields.variant.select_default_card_product.value -%}
+                                          {%- assign variant_current = variant_metafield -%}
+                                        {%- endif -%}
+                                      {%- endfor -%}
+
                                         {%- assign product_form_id = 'quick-add-' | append: section.id | append: endrock_featured_product.id -%}
                                         <product-form data-cart-type="{{ settings.cart_type }}">
                                             {%- form 'product',
@@ -251,7 +258,7 @@
                                             <input
                                                 type="hidden"
                                                 name="id"
-                                                value="{{ endrock_featured_product.selected_or_first_available_variant.id }}"
+                                                value="{{ variant_current.id }}"
                                                 disabled
                                             >
                                             <button

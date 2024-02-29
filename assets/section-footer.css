@@ -799,7 +799,6 @@ button.accordion.is-open:after {
     letter-spacing: 0px;
     background-color: rgb(255, 255, 255)!important;
     border: none!important;
-    border-bottom: 1px solid #000!important;
     padding: 10px 0!important;
     box-shadow: unset!important;
 }
@@ -824,12 +823,14 @@ button.accordion.is-open:after {
   }
 
   .footer-block__newsletter [data-testid=form-component]:last-of-type{
-    width: 10%;
-    position: absolute !important;
     right: 0;
     height: 100%;
     bottom: 1px;
   }
+}
+
+.footer-block__newsletter [data-testid="form-row"]{
+  border-bottom: 1px solid #000000!important;
 }
 
 @media (max-width:1000px) {
