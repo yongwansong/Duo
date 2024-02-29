@@ -222,12 +222,12 @@ body .loop .loop-selected-products .loop-image-product-sm {
 	height: 80px;
 	width: 80px;
 	overflow: hidden;
-	border-radius: 50%;
+	/*border-radius: 50%;*/
 }
 body .loop .loop-selected-products .loop-image-product-sm img {
 	height: 200%;
 	width: 200%;
-	border-radius: 50%;
+	/*border-radius: 50%;*/
 }
 body .loop .loop-selected-product-card {
 	box-shadow: none;
