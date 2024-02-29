@@ -788,7 +788,7 @@ button.accordion.is-open:after {
   height: 100%!important;
 }
 
-.footer-block__newsletter [data-testid="form-component"]{
+.footer-block__newsletter [data-testid="form-row"]{
   border-bottom: 1px solid #000000!important;
 }
 
