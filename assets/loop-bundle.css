@@ -1,8 +1,8 @@
 /* Typography */
 :root{
-	--loop-ff-400: var(--font-body-family);
-	--loop-ff-500: var(--font-body-family);
-	--loop-ff-800: var(--font-body-family);
+	--loop-ff-400: Schnyder-SLight;
+	--loop-ff-500: Schnyder-SLight;
+	--loop-ff-800: Schnyder-SLight;
 	--loop-bundle-image-border-radius: 0!important;
 	--loop-product-card-image-height: auto!important;
 }
