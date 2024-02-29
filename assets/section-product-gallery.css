@@ -256,7 +256,7 @@
 @media (max-width: 767px) {
     .product-gallery-wrapper .product-wrapper .text-wrapper{
         position: absolute;
-        top: 52px;
+        top: 42px;
         max-width: 100%;
         background: transparent;
         z-index: 1;
