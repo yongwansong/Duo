@@ -60,6 +60,7 @@ body {
   width: 100%;
   margin-top: -40px;
   object-fit: cover;
+  margin-bottom: -10px;
 }
 
 
@@ -292,7 +293,7 @@ h2.image-with-text__heading.h3 {
 
 .endrock-icon-with-text
 {
-  margin-top: -5px;
+  margin-top: 0px;
   background: white;
 }
 /* CSS for Featured Product Images */
