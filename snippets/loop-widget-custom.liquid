@@ -209,9 +209,16 @@ span {
 {% if product.selling_plan_groups.size > 0 %}
 
 
-  {%- liquid
-      assign current_variant = product.selected_or_first_available_variant | default: product.variants.first
-  -%}
+ 
+
+
+  {%- assign current_variant = product.selected_or_first_available_variant | default: product.variants.first -%}
+
+  {%- for variant_metafield in product.variants -%}
+    {%- if variant_metafield.metafields.select.subscription_default.value -%}
+      {%- assign current_variant = variant_metafield -%}
+    {%- endif -%}
+  {%- endfor -%}
   <script class="loopProductQuickJson-{{ product.id }}" type="application/json">
   {{ product | json }}
   </script>
@@ -395,7 +402,15 @@ span {
                                     <div>
                                       <div class="select-quantity loop-subscription-group-selling-plans-container ">
                                         {{ 'products.subscription.select_quantity_label' | t }} 
-                                        <select name="select-quantity" data-product-id="{{ product.id }}" id="select-quantity" class="loop-selling-plan-selector-style selector-custom">
+
+                                        {%- assign variant_default = product.selected_or_first_available_variant.id -%}
+                                        {%- for variant_metafield in product.variants -%}
+                                          {%- if variant_metafield.metafields.select.subscription_default.value -%}
+                                            {%- assign variant_default = variant_metafield -%}
+                                          {%- endif -%}
+                                        {%- endfor -%}
+
+                                        <select data-select-metafield="{{ variant_default.id }}" name="select-quantity" data-product-id="{{ product.id }}" id="select-quantity" class="loop-selling-plan-selector-style selector-custom">
                                           {%- for variant in product.variants -%}
                                             {%- assign discounted_amount = null -%}
                                             {%- if variant.compare_at_price > variant.price  -%}
@@ -403,7 +418,7 @@ span {
               
                                             {%- endif -%}
                                             {%- if variant.metafields.subscription.is_subscription.value -%}
-                                              <option value="{{ variant.id }}" data-discount="{{ discounted_amount }}"> {{ variant.title }}</option>
+                                              <option value="{{ variant.id }}" data-discount="{{ discounted_amount }}" {%  if variant.metafields.select.subscription_default.value %} selected {% endif %}> {{ variant.title }}</option>
                                             {%- endif -%}
                                           {% endfor %}  
                                         </select>
@@ -414,7 +429,7 @@ span {
                                         <div id="loop-selling-plan-first-delivery-options-{{current_variant.id}}-{{selling_plan_group.id}}" class="loop-display-none"> &nbsp;{{ selling_plan_group.selling_plans[0].options[0].value }} </div>
                                         <select class="loop-full-width loop-selling-plan-selector loop-selling-plan-selector-style selector-custom" id="loop-select-{{current_variant.id}}-{{selling_plan_group.id}}" data-position="{{ option.position }}" data-selling-plan-group-id="{{ selling_plan_group.id }}" data-product-id="{{product.id}}">
                                           {% for sp in selling_plan_group.selling_plans %}
-                                            <option class="loop-selling-plan-selector-option" value="{{ sp.id }}">{{ sp.options[0].value }}</option>
+                                            <option class="loop-selling-plan-selector-option" value="{{ sp.id }}" {%- if forloop.last -%} selected {%- endif -%}>{{ sp.options[0].value }}</option>
                                           {% endfor %}
                                         </select>
                                         <div class="loop-selling-plan-selector-description" id="loop-selling-plan-description-{{ current_variant.id }}-{{ selling_plan_group.id }}"></div>

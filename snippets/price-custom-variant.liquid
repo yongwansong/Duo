@@ -1,6 +1,10 @@
 
 {% assign variant = product.selected_or_first_available_variant %}
-
+{%- for variant_metafield in product.variants -%}
+  {%- if variant_metafield.metafields.select.subscription_default.value -%}
+    {%- assign variant = variant_metafield -%}
+  {%- endif -%}
+{%- endfor -%}
 
 <label for="{{ section.id }}" class="price-save-subscription">
   <span class="variant-field__price">
