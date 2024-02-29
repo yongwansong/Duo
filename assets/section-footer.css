@@ -788,6 +788,10 @@ button.accordion.is-open:after {
   height: 100%!important;
 }
 
+.footer-block__newsletter [data-testid="form-component"]{
+  border-bottom: 1px solid #000000!important;
+}
+
 .footer-block__newsletter [data-testid="form-component"] input{
     box-sizing: border-box;
     border-radius: 0px;
