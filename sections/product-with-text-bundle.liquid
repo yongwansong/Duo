@@ -1,0 +1,394 @@
+{{ 'product-with-text.css' | asset_url | stylesheet_tag }}
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
+
+
+<style>
+  .slick-slide .slide-content {
+    margin: 0;
+    padding: 0px;
+    background: #fff;
+   
+  }
+
+  .slick-list {
+    margin: 0px 0px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    right: 10px;
+    background: #777;
+    border: none;
+    color: transparent;
+    width: 30px;
+    height: 30px;
+
+    &:before { 
+      content: ">"; 
+      color: #fff; 
+      font-size: 25px;
+    }
+  }
+
+  .slick-prev { 
+    left: 10px; 
+    &:before { content: "<"; }
+  }
+
+  .slick-dots {
+    list-style: none;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  right: 0;
+  
+
+    li {
+      display: inline-block;
+
+      button { 
+        transition: 0.2s background-color ease-in-out 0s;
+        border: none;
+        padding: 0;
+        color: transparent;
+
+        width: 10px;
+        height: 10px;
+        background-color: #777;
+        margin-right: 5px;
+        border-radius: 50%; 
+      }
+
+       &.slick-active button { background-color: #000; }
+    }
+  }
+
+  
+</style>
+
+<script>
+
+  
+  function toggleText(element) {
+    const textoOculto = element.parentElement.nextElementSibling;
+    textoOculto.style.display = textoOculto.style.display === 'none' || textoOculto.style.display === '' ? 'block' : 'none';
+    textoOculto.style.position = 'absolute';
+    textoOculto.style.zIndex = '1';
+    textoOculto.style.height = '100%';
+  }
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var toggleLink = document.getElementById("toggleLink");
+  var productItem = document.querySelector(".product-with-text__product_item--{{ block.settings.title | handle }}");
+
+  // Inicialmente oculta el elemento
+  productItem.style.display = "none";
+
+  // Maneja el evento de clic
+  toggleLink.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    // Cambia la visibilidad del elemento
+    if (productItem.style.display === "none") {
+      productItem.style.display = "block";
+    } else {
+      productItem.style.display = "none";
+    }
+  });
+});
+</script>
+
+
+{%- if section.settings.section_bg_color != blank -%}
+  {% style %}
+    #shopify-section-{{ section.id }}{
+     background-color: {{ section.settings.section_bg_color }};
+    }
+  {% endstyle %}
+{%- endif -%}
+<div class="bg_product_"> 
+  <script>
+    $().ready(function(){
+      $('.slick-carousel').slick({
+        arrows: false,
+        centerPadding: "0px",
+        dots: true,
+        slidesToShow: 1,
+        infinite: false
+      });
+    });
+  </script>
+
+{%- if section.settings.section_bg_color != blank -%}
+  {% style %}
+    #shopify-section-{{ section.id }}{
+     background-color: {{ section.settings.section_bg_color }};
+    }
+  {% endstyle %}
+{%- endif -%}
+<div class="bg_product_"> 
+
+<div class="product-with-text-section_wrapper" id="better_living">
+  <div class="product-with-text_content_">
+    {% if section.settings.title != blank %}
+      <div class="product-with-text_content__title_">
+        {{ section.settings.title }}
+      </div>
+    {% endif %}
+    {% if section.settings.text != blank %}
+      <div class="product-with-text_content__text_">
+        {{ section.settings.text }}
+      </div>
+    {% endif %}
+    {% if section.settings.sub_title != blank %}
+      <div class="product-with-text_content__sub_title" >
+        {{ section.settings.sub_title }}
+      </div>
+    {% endif %}
+    <div class="product-with-text_products">
+      {% assign counter = 0 %}
+      {%- for block in section.blocks -%}
+        {%- assign counter = counter | plus: 1 -%}
+        <div class="product-with-text__product_item ">
+    
+         
+        <div class="slick-carousel">
+
+        
+          <div>
+            <div class="slide-content"> {% if block.settings.product_image != blank %}
+            <img
+              src="{{ block.settings.product_image | image_url: width: 500 }}"
+              alt="{{ block.settings.product_image.alt }}"
+              width="500"
+              height="{{ 500 | divided_by: block.settings.product_image.aspect_ratio | ceil }}"
+              loading="lazy"
+            >
+        {% endif %}
+</div></div>
+          <div><div class="">
+
+
+          <div class="text_info slide-content product-with-text__product_item--{{ block.settings.title | handle }}">
+            <div class="text__product_item_title_">
+              {{ block.settings.title }}
+            </div>
+          
+          
+            <div class="product-with-text_content__text_sub">
+              {{ block.settings.sub_title_pop }}
+            </div>
+          
+            <div class="product-with-text_content__text_des">
+              {{ block.settings.text_pop }}
+            </div>
+          </div></div>
+          
+          </div>
+            
+          
+        </div>
+
+        <div class="contenedor-imagen">
+          <!-- Elemento 1 -->
+  <label class="switch">
+    <input type="checkbox" class="switchInput" onchange="toggleText(this)">
+    <div class="slider">
+      <span></span>
+      <span></span>
+    </div>
+  </label>
+  <div class="textoOculto product-with-text__product_item--{{ block.settings.title | handle }}">
+    
+  
+  <div class="text__product_item_title_">
+    {{ block.settings.title }}
+  </div>
+
+
+  <div class="product-with-text_content__text_sub">
+    {{ block.settings.sub_title_pop }}
+  </div>
+
+  <div class="product-with-text_content__text_des">
+    {{ block.settings.text_pop }}
+  </div>
+
+</div>
+
+        {% if block.settings.product_image != blank %}
+              <img
+                src="{{ block.settings.product_image | image_url: width: 500 }}"
+                alt="{{ block.settings.product_image.alt }}"
+                width="500"
+                height="{{ 500 | divided_by: block.settings.product_image.aspect_ratio | ceil }}"
+                loading="lazy"
+              >
+          {% endif %}
+
+          <div class="texto-superpuesto product-with-text__product_item--{{ block.settings.title | handle }}">
+            <div class="text__product_item_title_">
+              {{ block.settings.title }}
+            </div>
+
+
+            <div class="product-with-text_content__text_sub">
+              {{ block.settings.sub_title_pop }}
+            </div>
+
+            <div class="product-with-text_content__text_des">
+              {{ block.settings.text_pop }}
+            </div>
+          
+ 
+
+          
+          </div>
+         </div>
+
+
+   <!-- Elemento 1 -->
+  
+         <div class="producto-leg">
+          <div class="poduct-leg-title">
+          {% if block.settings.title != blank %}
+            <div class="text__product_item_title">
+              {{ block.settings.title }}
+            </div>
+          {% endif %}
+         
+          </div>
+
+
+          <script>
+            function {{ block.settings.title | handle }}_toggleTexto() {
+              var elementos = document.getElementsByClassName("product-with-text__product_item--{{ block.settings.title | handle }}");
+              for (var i = 0; i < elementos.length; i++) {
+                // Alternar la visibilidad directamente
+                elementos[i].style.display = (elementos[i].style.display === "" || elementos[i].style.display === "none") ? "block" : "none";
+              }
+            }
+          </script>
+          
+
+
+          <div class="poduct-link"> 
+            <a  class="link_link" href="#" onclick="{{ block.settings.title | handle }}_toggleTexto(); return false;">Learn More</a>
+            
+          </div>
+          </div>
+          {% if block.settings.sub_title != blank %}
+            <div class="text__product_item_sub_title">
+              {{ block.settings.sub_title }}
+            </div>
+          {% endif %}
+
+
+
+        </div>
+        {% comment %} Popup {% endcomment %}
+      
+      {%- endfor -%}
+    </div>
+   
+  </div>
+</div>
+
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Products with text",
+  "class": "product-with-text-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Section background color",
+      "default": "#00126B"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "label": "Sub title"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_icon1",
+      "label": "Bottom icon1"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_icon2",
+      "label": "Bottom icon2"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Services",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "product_image",
+          "label": "Product image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "sub_title",
+          "label": "Sub title"
+        },
+        {
+          "type": "text",
+          "id": "sub_title_pop",
+          "label": "Sub title pop"
+        },
+        {
+          "type": "text",
+          "id": "text_pop",
+          "label": "Text pop"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+        }
+      
+        
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Products with text"
+    }
+  ]
+}
+{% endschema %}
+

@@ -1,0 +1,123 @@
+{{ 'section-multicolumn-images-text.css' | asset_url | stylesheet_tag }}
+
+<div class="multicolumn-images-text__wrapper center">
+  <div class="page-width">
+    {%- if section.settings.icon != blank -%}
+      <div class="multicolumn-images-text__icon">
+        {%- assign icon_alt = section.settings.icon.alt | default: section.settings.heading | escape -%}
+        {{
+          section.settings.icon
+          | image_url: width: 120
+          | image_tag: widths: '120, 240, 360', height: 120, width: 120, alt: icon_alt, sizes: '120px', loading: 'lazy'
+        }}
+      </div>
+    {%- endif -%}
+    {%- if section.settings.heading != blank -%}
+      <h2 class="multicolumn-images-text__heading">{{ section.settings.heading | newline_to_br }}</h2>
+    {%- endif -%}
+    {%- if section.settings.description -%}
+      <div class="multicolumn-images-text__description rte">
+        {{ section.settings.description }}
+      </div>
+    {%- endif -%}
+    {%- if section.blocks.size > 0 -%}
+      {%- liquid
+        assign grid_columns = 'grid--1-col'
+        if section.blocks.size == 2
+          assign grid_columns = 'grid--2-col'
+        elsif section.blocks.size == 3
+          assign grid_columns = 'grid--1-col grid--2-col-tablet'
+        elsif section.blocks.size >= 4
+          assign grid_columns = 'grid--2-col grid--4-col-tablet'
+        endif
+      -%}
+      <div class="multicolumn-images-text__row grid grid--gapless {{ grid_columns }}">
+        {%- for block in section.blocks -%}
+          <div class="grid__item">
+
+          <div class="titlemain">    
+            {%- if block.settings.texttitle != blank -%}
+              <div class="multicolumn-images-text__text_ rte texttitle">
+                {{ block.settings.texttitle }}
+              </div>
+            {%- endif -%}
+            {%- if block.settings.text != blank -%}
+              <div class="multicolumn-images-text__text_ rte textdes">
+                {{ block.settings.text }}
+              </div>
+            {%- endif -%}
+          </div> 
+            {%- if block.settings.image != blank -%}
+              {%- liquid
+                assign cols = section.blocks.size | at_most: 4
+                assign gap = 30 | times: cols | minus: 30
+                assign width = 920 | minus: gap | divided_by: cols
+              -%}
+              {%- capture sizes -%}(min-width: 920px) {{ width }}px, (min-width: 750px) calc( ( 100vw - ( {{ gap }}px + 10rem ) ) / {{ cols }} ), {% if section.blocks.size == 2 or section.blocks.size >= 4 %}calc( ( 100vw - 6rem ) / 2 ){% else %}calc( 100vw - 3rem){% endif %}{%- endcapture -%}
+              <div class="multicolumn-images-text__image">
+                {{
+                  block.settings.image
+                  | image_url: width: 920
+                  | image_tag: width: 920, loading: 'lazy'
+                }}
+              </div>
+            {%- endif -%}
+             </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Multicolumn images & text",
+  "class": "section-multicolumn-images-text",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "Icon"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "vitamins & supplements \nabsorbed as you brush"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Column",
+      "type": "column",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "texttitle",
+          "label": "Texttitle"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multicolumn images & text"
+    }
+  ]
+}
+{% endschema %}

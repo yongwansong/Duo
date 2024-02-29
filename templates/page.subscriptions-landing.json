@@ -1,605 +1,378 @@
 {
   "sections": {
-    "2f4c3b0f-e8f1-4fea-8851-34d6dc3f2f8d": {
-      "type": "store-message",
-      "settings": {
-        "text": "<p>Free shipping for all subscriptions.<\/p>",
-        "background_color": "#00126b",
-        "text_color": "#ffffff"
-      }
-    },
-    "02200e95-3f6f-4ed5-a149-6e1fa306a8d6": {
-      "type": "main-banner-image-text",
+    "banner": {
+      "type": "image-with-text-bundle",
       "blocks": {
-        "template--15806529732775__02200e95-3f6f-4ed5-a149-6e1fa306a8d6-168296332749933071-0": {
+        "heading_7BRbEk": {
           "type": "heading",
           "settings": {
-            "heading": "Build your routine + save."
+            "heading": "",
+            "heading2": "",
+            "heading3": "Build Your Routine"
           }
         },
-        "template--15806529732775__02200e95-3f6f-4ed5-a149-6e1fa306a8d6-168296332749933071-1": {
+        "text_z3VUgR": {
           "type": "text",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/icon1.png",
-            "text": "Save up to 33% with regular deliveries while minimizing your carbon footprint"
+            "text": "Save up to 33% and minimize your carbon footprint when you build a custom bundle of toothpaste tablets."
           }
         },
-        "e91d2189-1013-4e58-b043-ea0e9e93a71e": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/earth.svg",
-            "text": "Recyclable glass bottles &amp; then compostable refill packets."
-          }
-        },
-        "fd942a4b-6ce8-45ef-bbca-9be2a2d57314": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/10686eba260a5f524d42990feea8d2f5.svg",
-            "text": "Formulated by a pair of dentists with clean ingredients and premium supplements."
-          }
-        },
-        "1057577b-7a17-46a7-bd3a-d1ee2957f0c4": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/smil.svg",
-            "text": "100% guaranteed— return for a full refund if you’re not satisfied."
-          }
-        },
-        "template--15806529732775__02200e95-3f6f-4ed5-a149-6e1fa306a8d6-168296332749933071-2": {
+        "button_HCmp9t": {
           "type": "button",
           "settings": {
-            "button_label": "BUILD YOUR SUBSCRIPTION",
+            "button_label": "I’M READY TO BUILD IT",
             "button_link": "https:\/\/duotoothpaste.com\/a\/loop_subscriptions\/bundle\/a975c058b85e458d93c1a86d4f0fe35e"
           }
         }
       },
       "block_order": [
-        "template--15806529732775__02200e95-3f6f-4ed5-a149-6e1fa306a8d6-168296332749933071-0",
-        "template--15806529732775__02200e95-3f6f-4ed5-a149-6e1fa306a8d6-168296332749933071-1",
-        "e91d2189-1013-4e58-b043-ea0e9e93a71e",
-        "fd942a4b-6ce8-45ef-bbca-9be2a2d57314",
-        "1057577b-7a17-46a7-bd3a-d1ee2957f0c4",
-        "template--15806529732775__02200e95-3f6f-4ed5-a149-6e1fa306a8d6-168296332749933071-2"
+        "heading_7BRbEk",
+        "text_z3VUgR",
+        "button_HCmp9t"
       ],
       "settings": {
-        "section_bg_color": "#eef1ff",
-        "image": "shopify:\/\/shop_images\/due-bg-transparent.png",
-        "height": "adapt",
-        "layout": "image_first"
-      }
-    },
-    "4189d7ea-5f80-4e84-8716-10dc241ab496": {
-      "type": "our-services",
-      "blocks": {
-        "template--15806529732775__4189d7ea-5f80-4e84-8716-10dc241ab496-1682967589d91b0447-0": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/All-natural.png",
-            "title": "All-natural",
-            "url": ""
-          }
-        },
-        "d9b95b2c-5b1f-4387-8255-79177a1bca19": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/dentis_made.png",
-            "title": "Dentist-made",
-            "url": ""
-          }
-        },
-        "98a7d336-2cf1-4dea-9647-7edc6b14da66": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/earth.svg",
-            "title": "Earth-friendly",
-            "url": ""
-          }
-        },
-        "6d5327e2-0a38-4a92-b47f-d7142fccbfe2": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/travel.png",
-            "title": "Travel-ready",
-            "url": ""
-          }
-        },
-        "b3ea86c3-7f2f-4e41-beb5-e81b2f023e8e": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/10686eba260a5f524d42990feea8d2f5.svg",
-            "title": "Whitening",
-            "url": ""
-          }
-        },
-        "a4dfd1bc-6394-472a-86ab-ec812a2fc4fa": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/All-natural.png",
-            "title": "All-natural",
-            "url": ""
-          }
-        },
-        "e63f9528-0db4-4a62-8d20-0ce607457fcd": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/dentis_made.png",
-            "title": "Dentist-made",
-            "url": ""
-          }
-        },
-        "10270ac4-d27e-45a5-8b43-b509bc16de56": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/earth.svg",
-            "title": "Earth-friendly",
-            "url": ""
-          }
-        },
-        "f12b89bd-6b34-4de2-9b1c-4345b2f74232": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/travel.png",
-            "title": "Travel-ready",
-            "url": ""
-          }
-        },
-        "519c9b95-1714-4bdf-ba93-1abd0ebc213c": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/10686eba260a5f524d42990feea8d2f5.svg",
-            "title": "Whitening",
-            "url": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--15806529732775__4189d7ea-5f80-4e84-8716-10dc241ab496-1682967589d91b0447-0",
-        "d9b95b2c-5b1f-4387-8255-79177a1bca19",
-        "98a7d336-2cf1-4dea-9647-7edc6b14da66",
-        "6d5327e2-0a38-4a92-b47f-d7142fccbfe2",
-        "b3ea86c3-7f2f-4e41-beb5-e81b2f023e8e",
-        "a4dfd1bc-6394-472a-86ab-ec812a2fc4fa",
-        "e63f9528-0db4-4a62-8d20-0ce607457fcd",
-        "10270ac4-d27e-45a5-8b43-b509bc16de56",
-        "f12b89bd-6b34-4de2-9b1c-4345b2f74232",
-        "519c9b95-1714-4bdf-ba93-1abd0ebc213c"
-      ],
-      "settings": {
-        "section_bg_color": "#fecc41"
-      }
-    },
-    "47646abe-8d86-4542-9a69-aa79ecb7290b": {
-      "type": "slider-landing-page",
-      "blocks": {
-        "template--15806529732775__47646abe-8d86-4542-9a69-aa79ecb7290b-16829750278a54969e-0": {
-          "type": "text",
-          "settings": {
-            "heading": "How it works",
-            "image": "shopify:\/\/shop_images\/how-it-works-bottles.png",
-            "numbers": "1\/3",
-            "title": "Pick Number of Bottles",
-            "text": "<p>Each bottle has 62 tablets – a <strong>1-month supply<\/strong> when you brush twice a day.<br\/><br\/><strong>Save 33% when you pick 4 or more bottles.<\/strong><\/p>",
-            "bottom_icon": "shopify:\/\/shop_images\/slider_Icon_1.svg",
-            "slider_bottom_title": "Duo Tip:",
-            "slider_bottom_text": "<p>Add additional bottles if you want more supplements or you brush more than 2x\/day<\/p>"
-          }
-        },
-        "4352b752-3a68-4915-a518-8a39e28493f6": {
-          "type": "text",
-          "settings": {
-            "heading": "How it works",
-            "image": "shopify:\/\/shop_images\/how-it-works-how-often.png",
-            "numbers": "2\/3",
-            "title": "Select  How Often",
-            "text": "<p>Delivery every 2 or 4 months. Pause, skip or cancel anytime. <br\/><br\/>Refills come in compostable pouches, after your first delivery. Or you can select new bottles.<\/p>",
-            "bottom_icon": "shopify:\/\/shop_images\/slider_Icon_1.svg",
-            "slider_bottom_title": "Why not every month?",
-            "slider_bottom_text": "<p>By not delivering every month, we cut down on our carbon footprint.<\/p>"
-          }
-        },
-        "f1e5308c-1a45-4058-acde-461fbef7c5f3": {
-          "type": "text",
-          "settings": {
-            "heading": "How it works",
-            "image": "shopify:\/\/shop_images\/how-it-works-combo.png",
-            "numbers": "3\/3",
-            "title": "Choose  Your Combo",
-            "text": "<p>Choose from Original, Immunity, Energy and Sleep. (<a href=\"#better_living\" title=\"#better_living\">Learn more<\/a>) <br\/><br\/>Add, subtract or swap out anytime<\/p>",
-            "bottom_icon": "shopify:\/\/shop_images\/slider_Icon_1.svg",
-            "slider_bottom_title": "Duo Tip:",
-            "slider_bottom_text": "<p>Add additional bottles if you want more supplements or you brush more than 2x\/day<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--15806529732775__47646abe-8d86-4542-9a69-aa79ecb7290b-16829750278a54969e-0",
-        "4352b752-3a68-4915-a518-8a39e28493f6",
-        "f1e5308c-1a45-4058-acde-461fbef7c5f3"
-      ],
-      "settings": {
-        "section_bg_color": "#dff2fe",
-        "autorotate": false,
-        "autorotate_speed": 3
-      }
-    },
-    "786a1b47-cb44-46da-9480-0844890ed962": {
-      "type": "guaranteed-section",
-      "settings": {
-        "section_bg_color": "#00126b",
-        "button_text": "Build Your Subscription",
-        "button_url": "https:\/\/duotoothpaste.com\/a\/loop_subscriptions\/bundle\/a975c058b85e458d93c1a86d4f0fe35e",
-        "text": "100% guaranteed. Pause, skip or cancel anytime.",
-        "icon": "shopify:\/\/shop_images\/596bb0b7973d7cdb04e5b95c4d4812f8.svg"
-      }
-    },
-    "404b666a-434a-435b-8fdb-ee1fe54e3ad2": {
-      "type": "guaranteed-section",
-      "disabled": true,
-      "settings": {
-        "section_bg_color": "#00126b",
-        "button_text": "BUILD YOUR SUBSCRIPTION",
-        "button_url": "#",
-        "text": "100% guaranteed. Pause, skip or cancel anytime."
-      }
-    },
-    "dc9b14f3-6ff6-4c99-a9b0-f965d0ae8380": {
-      "type": "product-with-text",
-      "blocks": {
-        "b881d140-a5ac-47d8-ab3e-27a4ea9f4fb7": {
-          "type": "text",
-          "settings": {
-            "product_image": "shopify:\/\/shop_images\/Group_307.jpg",
-            "title": "Original",
-            "sub_title": "nHa + antioxidants",
-            "popup_image1": "shopify:\/\/shop_images\/popup1_image1.png",
-            "popup_image2": "shopify:\/\/shop_images\/popup1_image2.png"
-          }
-        },
-        "af9d7bd1-6dca-4280-9253-5809d29024b4": {
-          "type": "text",
-          "settings": {
-            "product_image": "shopify:\/\/shop_images\/Group_308.jpg",
-            "title": "Immunity",
-            "sub_title": "vitamins D + B12",
-            "popup_image1": "shopify:\/\/shop_images\/popup2_image1.png",
-            "popup_image2": "shopify:\/\/shop_images\/popup2_image2.png",
-            "popup_image3": "shopify:\/\/shop_images\/popup2_image3.png"
-          }
-        },
-        "f9607061-ef25-4b5a-aea7-d1f0d3b2400a": {
-          "type": "text",
-          "settings": {
-            "product_image": "shopify:\/\/shop_images\/Group_309.jpg",
-            "title": "Energy",
-            "sub_title": "caffeine + B12",
-            "popup_image1": "shopify:\/\/shop_images\/popup3_image1.png",
-            "popup_image2": "shopify:\/\/shop_images\/popup3_image2.png",
-            "popup_image3": "shopify:\/\/shop_images\/popup3_image3.png"
-          }
-        },
-        "f51cb6a0-c146-4513-aa2b-48ee7e24c8c6": {
-          "type": "text",
-          "settings": {
-            "product_image": "shopify:\/\/shop_images\/Group_310.jpg",
-            "title": "Sleep",
-            "sub_title": "melatonin + L-theanine",
-            "popup_image1": "shopify:\/\/shop_images\/popup4_image1.png",
-            "popup_image2": "shopify:\/\/shop_images\/popup4_image2.png",
-            "popup_image3": "shopify:\/\/shop_images\/popup4_image3.png"
-          }
-        }
-      },
-      "block_order": [
-        "b881d140-a5ac-47d8-ab3e-27a4ea9f4fb7",
-        "af9d7bd1-6dca-4280-9253-5809d29024b4",
-        "f9607061-ef25-4b5a-aea7-d1f0d3b2400a",
-        "f51cb6a0-c146-4513-aa2b-48ee7e24c8c6"
-      ],
-      "settings": {
-        "section_bg_color": "rgba(0,0,0,0)",
-        "title": "better living through toothpaste",
-        "text": "<p>Mix and match from our <span style=\"text-decoration:underline\">award-winning<\/span> family of functional toothpaste tablets to customize your daily Duo. Formulated by two dentists using the best clean ingredients, each variety has its own flavor profile and unique benefits.<\/p>",
-        "sub_title": "Learn more by clicking on a bottle below"
-      }
-    },
-    "14fcf1d1-ba1d-4530-8bf3-237e967f2645": {
-      "type": "info-icons-with-text",
-      "blocks": {
-        "32e3ada9-5cde-4e18-8462-8c37c6b975b9": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/slider_Icon_1.svg",
-            "title": "Brightly whitens teeth",
-            "text": "<p>Strong enough to get out stains. Gentle enough to not strip enamel. <\/p>",
-            "name": ""
-          }
-        },
-        "465d29d0-b9bf-490b-94b9-7030405507fa": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/Frame.svg",
-            "title": "Vitamins and\nsupplements",
-            "text": "<p>Vitamins and supplements are absorbed while you brush.<\/p>",
-            "name": ""
-          }
-        },
-        "5b38250a-3ad7-4485-a300-fa9e3bb24df7": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/ToothIcon2.svg",
-            "title": "Relieves\nsensitivity",
-            "text": "<p>Vitamins C + E soothe and restore gums, nHa reduces sensitivity.<\/p>",
-            "name": ""
-          }
-        },
-        "1a89c564-8652-47b3-9b36-df6fe346925b": {
-          "type": "text",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/FlexIcon.svg",
-            "title": "Fights plaque\nand free radicals",
-            "text": "<p>Removes build-up, neutralizes acid, and promotes good bacteria.<\/p>",
-            "name": ""
-          }
-        }
-      },
-      "block_order": [
-        "32e3ada9-5cde-4e18-8462-8c37c6b975b9",
-        "465d29d0-b9bf-490b-94b9-7030405507fa",
-        "5b38250a-3ad7-4485-a300-fa9e3bb24df7",
-        "1a89c564-8652-47b3-9b36-df6fe346925b"
-      ],
-      "settings": {
-        "section_bg_color": "#d9f3fe",
-        "title": ""
-      }
-    },
-    "165751574971a9f672": {
-      "type": "text-with-text-slider",
-      "blocks": {
-        "c9b41731-6266-4f37-92cb-0fb18d6b2ec8": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Plenty of foamy action, leaving your teeth feeling clean, fresh and  polished all with the peace of mind of safe natural ingredients and a boosted benefit of vitamins and minerals. This is a tremendous product for all.<\/p>",
-            "author": "Kendra Melody, RDH"
-          }
-        },
-        "165751574914143ff5-0": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Duo is exciting for many reasons! nHA rebuilds, restores, and protects the enamel, while offering an alternative to traditional fluoride that also whitens and fights sensitivity.<\/p>",
-            "author": "Kelly Barbera, DMD"
-          }
-        },
-        "6a22e3cc-ba7c-45db-a0a4-e7bcf4abbd30": {
-          "type": "text",
-          "settings": {
-            "text": "<p>The Duo purpose of preventing cavities and sensitivity while simultaneously delivering functional ingredients through mucosal absorption is genius.<\/p>",
-            "author": "Hayley Sacks, DMD"
-          }
-        },
-        "64d2d7e6-f9a8-4bca-9b2d-74cfec5fd02a": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Duo has me excited about brushing again. Thanks to the caffeine and melatonin, I have consolidated my morning and evening routines.<\/p>",
-            "author": "C. Johnston, DMD"
-          }
-        },
-        "b81c2ae4-1538-4eda-b407-45ab2324aa9a": {
-          "type": "text",
-          "settings": {
-            "text": "<p>The addition of vitamins and minerals is a unique idea that feels so intuitive for oral health! I am excited that each blend benefits my patients in a unique way!<\/p>",
-            "author": "Samantha Ward, DMD"
-          }
-        },
-        "9472917c-287e-4c1e-b470-32cced48d959": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Duo’s tablets are a quick, easy, and refreshing way to strengthen AND whiten my teeth.<\/p>",
-            "author": "Abby Yazback, DMD"
-          }
-        }
-      },
-      "block_order": [
-        "c9b41731-6266-4f37-92cb-0fb18d6b2ec8",
-        "165751574914143ff5-0",
-        "6a22e3cc-ba7c-45db-a0a4-e7bcf4abbd30",
-        "64d2d7e6-f9a8-4bca-9b2d-74cfec5fd02a",
-        "b81c2ae4-1538-4eda-b407-45ab2324aa9a",
-        "9472917c-287e-4c1e-b470-32cced48d959"
-      ],
-      "settings": {
-        "icon": "shopify:\/\/shop_images\/Group_302.svg",
-        "image": "<p>Loved and<br\/>recommended by<br\/>other dentists.<\/p>",
+        "image": "shopify:\/\/shop_images\/Header_Section_1.jpg",
         "videoo": "",
         "height": "adapt",
-        "color_scheme": "accent-2",
-        "layout": "image_first"
+        "layout": "text_first"
       }
     },
-    "0289457f-3b98-43fd-8fa0-a74d5bbf17c0": {
-      "type": "featured-bundles",
+    "icon-text": {
+      "type": "all-endrock-icon-with-text",
       "blocks": {
-        "b29cd6b5-d50a-4993-831a-b7c0ef628a36": {
-          "type": "bundle",
+        "icon_X4mXVq": {
+          "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/prod_thumb1.jpg",
-            "title": "Original + Immunity Duo",
-            "description": "<p>2 total bottles<br\/>Delivered every 2 months<\/p>",
-            "price_before_discount": "$31.50",
-            "price_after_discount": "$25.20",
-            "button_text": "Shop now",
-            "url": ""
+            "heading": "Vegan",
+            "icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"14\" height=\"14\" viewbox=\"0 0 14 14\" fill=\"none\">\n  <circle cx=\"7\" cy=\"7\" r=\"7\" fill=\"#00ABE0\"><\/circle>\n<\/svg>"
           }
         },
-        "8651b5a2-befa-4a27-8731-07467ae4dfd3": {
-          "type": "bundle",
+        "icon_GphyPE": {
+          "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/prod_thumb2.jpg",
-            "title": "Energy + Sleep Duo",
-            "description": "<p>2 total bottles<br\/>Delivered every 2 months<\/p>",
-            "price_before_discount": "$36",
-            "price_after_discount": "$28.20",
-            "button_text": "Shop now",
-            "url": "https:\/\/duotoothpaste.com\/a\/loop_subscriptions\/bundle\/a975c058b85e458d93c1a86d4f0fe35e"
+            "heading": "Non-Toxic",
+            "icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"14\" height=\"14\" viewbox=\"0 0 14 14\" fill=\"none\">\n  <circle cx=\"7\" cy=\"7\" r=\"7\" fill=\"#00ABE0\"><\/circle>\n<\/svg>"
           }
         },
-        "ab7c4b57-60e3-4bd3-b9b6-afd2849aa35b": {
-          "type": "bundle",
+        "icon_aYDMx9": {
+          "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/prod_thumb3.jpg",
-            "title": "The Duo Quatro Variety Pack",
-            "description": "<p>4 total bottles<br\/>Delivered every 4 months<\/p>",
-            "price_before_discount": "$67.50",
-            "price_after_discount": "$45",
-            "button_text": "Shop now",
-            "url": "https:\/\/duotoothpaste.com\/a\/loop_subscriptions\/bundle\/a975c058b85e458d93c1a86d4f0fe35e"
+            "heading": "SLS-Free",
+            "icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"14\" height=\"14\" viewbox=\"0 0 14 14\" fill=\"none\">\n  <circle cx=\"7\" cy=\"7\" r=\"7\" fill=\"#00ABE0\"><\/circle>\n<\/svg>"
+          }
+        },
+        "icon_6wCrtV": {
+          "type": "icon",
+          "settings": {
+            "heading": "Dentist Created",
+            "icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"14\" height=\"14\" viewbox=\"0 0 14 14\" fill=\"none\">\n  <circle cx=\"7\" cy=\"7\" r=\"7\" fill=\"#00ABE0\"><\/circle>\n<\/svg>"
+          }
+        },
+        "icon_XRFM7a": {
+          "type": "icon",
+          "settings": {
+            "heading": "Cruelty-Free",
+            "icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"14\" height=\"14\" viewbox=\"0 0 14 14\" fill=\"none\">\n  <circle cx=\"7\" cy=\"7\" r=\"7\" fill=\"#00ABE0\"><\/circle>\n<\/svg>"
+          }
+        },
+        "icon_p3wVxK": {
+          "type": "icon",
+          "settings": {
+            "heading": "Fluoride-free",
+            "icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"14\" height=\"14\" viewbox=\"0 0 14 14\" fill=\"none\">\n  <circle cx=\"7\" cy=\"7\" r=\"7\" fill=\"#00ABE0\"><\/circle>\n<\/svg>"
+          }
+        },
+        "icon_PpyNcX": {
+          "type": "icon",
+          "settings": {
+            "heading": "Plastic-free",
+            "icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"14\" height=\"14\" viewbox=\"0 0 14 14\" fill=\"none\">\n  <circle cx=\"7\" cy=\"7\" r=\"7\" fill=\"#00ABE0\"><\/circle>\n<\/svg>"
+          }
+        },
+        "icon_KBXLTY": {
+          "type": "icon",
+          "settings": {
+            "heading": "Made in NY",
+            "icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"14\" height=\"14\" viewbox=\"0 0 14 14\" fill=\"none\">\n  <circle cx=\"7\" cy=\"7\" r=\"7\" fill=\"#00ABE0\"><\/circle>\n<\/svg>"
           }
         }
       },
       "block_order": [
-        "b29cd6b5-d50a-4993-831a-b7c0ef628a36",
-        "8651b5a2-befa-4a27-8731-07467ae4dfd3",
-        "ab7c4b57-60e3-4bd3-b9b6-afd2849aa35b"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "Popular subscription picks",
-        "description": "<p>Shop our most popular bundles.<\/p>"
-      }
-    },
-    "a3c0a2ef-325b-46c3-b541-141a0b105a2c": {
-      "type": "faqs-landing",
-      "blocks": {
-        "8b6ac183-ff0b-44bd-9950-a798d9fadcf8": {
-          "type": "text",
-          "settings": {
-            "Heading": "<p>Why are tablets better than regular toothpaste?<\/p>",
-            "text": "<p>Regular toothpaste is an environmental killer: 500 billion plastic toothpaste tubes end up in landfills each year. Tablets are the multitasking, planet-friendly upgrade. Free from sneaky ingredients and drying SLS foaming agents, our tablets come in glass bottles and compostable refill packets and are made with clean formulas that deliver whole-body benefits.<\/p>"
-          }
-        },
-        "1e516fbe-2fe7-42ab-ab1e-4327f6d21c07": {
-          "type": "text",
-          "settings": {
-            "Heading": "<p>How is Duo's subscription different?<\/p>",
-            "text": "<p>Duo is best experienced by mixing and matching the varieties that serve your health and wellness goals. As you find the routine that works best for you, you can customize your bundle by swapping out products. If you need refills for the guest bathroom, you can always add to your delivery.<\/p>"
-          }
-        },
-        "5895afb3-c518-4f07-8f4d-fbc14183d203": {
-          "type": "text",
-          "settings": {
-            "Heading": "<p>What's the return and cancellation policy?<\/p>",
-            "text": "<p>We created Duo to make your mornings and nights - or whenever you brush your teeth - better. If we don't meet your expectations for any reason, we'll give you a 100% refund. All you have to do is email returns@duotoothpaste.com and we'll send you instructions on how to send back your product and receive a refund. You can pause, skip, or cancel your subscription at any time. We'll email you before your next shipment is processed so you'll never have any surprises.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "8b6ac183-ff0b-44bd-9950-a798d9fadcf8",
-        "1e516fbe-2fe7-42ab-ab1e-4327f6d21c07",
-        "5895afb3-c518-4f07-8f4d-fbc14183d203"
+        "icon_X4mXVq",
+        "icon_GphyPE",
+        "icon_aYDMx9",
+        "icon_6wCrtV",
+        "icon_XRFM7a",
+        "icon_p3wVxK",
+        "icon_PpyNcX",
+        "icon_KBXLTY"
       ],
       "settings": {
-        "section_bg_color": "#00126b",
-        "hero_Heading": "FAQ",
-        "see_all_faq": "See all FAQs",
-        "see_all_faq_link": "shopify:\/\/pages\/help"
-      }
-    },
-    "ec185da6-83bc-4e0f-bd42-36101b731fd1": {
-      "type": "text-with-image",
-      "settings": {
-        "section_background_color": "#9bd9ff",
-        "image": "shopify:\/\/shop_images\/immunity_color_hand_1x1_1_1_24dadb1f-feba-4178-b406-e287e15fe987.png",
-        "image_position_desktop": "order__2",
-        "icon": "shopify:\/\/shop_images\/Group_352.png",
-        "title": "Let’s talk about nHa.",
-        "text": "<p>Nano-Hydorxyapatite (nHA) is a non-toxic fluoride alternative that remineralizes your teeth and keeps them strong. It's quickly becoming the first-choice ingredient for dentists and patients alike for restoring and strengthening enamel, while also naturally whitening and treating sensitivity at the source.<\/p>",
-        "text_box_position_vertical": "middle",
-        "text_allignment": "center",
-        "image_position_mobile": "mobile_order__2",
-        "mobile_text_allignment": "center"
-      }
-    },
-    "165752148158d58046": {
-      "type": "yellow-header",
-      "settings": {
-        "txt": "#fecc41",
-        "title1": "Shop all page",
-        "learnmore": "shopify:\/\/collections\/shop"
-      }
-    },
-    "2062527a-b37d-4b95-a369-4e542ee5500b": {
-      "type": "rich-text",
-      "blocks": {
-        "template--15806529732775__2062527a-b37d-4b95-a369-4e542ee5500b-16832106000bafc3dc-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "we love our #duodiehard community",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "template--15806529732775__2062527a-b37d-4b95-a369-4e542ee5500b-16832106000bafc3dc-0"
-      ],
-      "disabled": true,
-      "settings": {
-        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0,
         "full_width": true
       }
     },
-    "04261b30-c625-459c-8924-0a526b868f04": {
-      "type": "section-heading",
-      "settings": {
-        "section_bg_color": "#ffffff",
-        "title": "<p>we love our <em>#duodiehard community<\/em><\/p>"
-      }
-    },
-    "1658542003ac523a3b": {
-      "type": "apps",
+    "multicolumn": {
+      "type": "multicolumn-text-images-bundle",
       "blocks": {
-        "36019252-c91b-43f0-8fd8-771d3d859a1b": {
-          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-carousel\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "disabled": true,
+        "column_YrBmeb": {
+          "type": "column",
           "settings": {
-            "show_heading": false,
-            "heading": "",
-            "badge_link": "",
-            "product": ""
+            "image": "shopify:\/\/shop_images\/subdcribe_img_from_1.jpg",
+            "texttitle": "<p>Subscribe + Save<\/p>",
+            "text": "<p>Up to 33% off when you put your delivery on auto-pilot. And as always, 100% satisfaction guaranteed.<\/p>"
           }
         },
-        "b4924327-6b4a-4fdf-abcb-fbf9ab7fd7f2": {
-          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "column_cTYPpd": {
+          "type": "column",
           "settings": {
-            "product": "",
-            "widget_type": "reviews_widget"
+            "image": "shopify:\/\/shop_images\/subdcribe_img_from2_1.jpg",
+            "texttitle": "<p>Proven ingredients<\/p>",
+            "text": "<p>Formulated by dentists with rigorously tested nHa and clean ingredients for optimal oral health.<\/p>"
+          }
+        },
+        "column_dXEyKT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/subdcribe_img_from3_1.jpg",
+            "texttitle": "<p>Plastic-free<\/p>",
+            "text": "<p>Tablets arrive in apothecary-grade glass bottles with compostable refill pouches. <\/p>"
           }
         }
       },
       "block_order": [
-        "36019252-c91b-43f0-8fd8-771d3d859a1b",
-        "b4924327-6b4a-4fdf-abcb-fbf9ab7fd7f2"
+        "column_YrBmeb",
+        "column_cTYPpd",
+        "column_dXEyKT"
       ],
       "settings": {
-        "include_margins": true
+        "heading": "",
+        "description": ""
+      }
+    },
+    "banner-cta": {
+      "type": "callaction-banner-cta",
+      "blocks": {
+        "heading_YBbPJU": {
+          "type": "heading",
+          "settings": {
+            "heading3": "How it works"
+          }
+        },
+        "text_7MMBEW": {
+          "type": "text",
+          "settings": {
+            "text": "Customize the routine of your dreams.",
+            "text1": "<p><strong>Select Your Bottles.<\/strong> Mix and match your favorite formulas<\/p>",
+            "text2": "<p><strong>Choose how often.<\/strong> Get delivery right when you need it.<\/p>",
+            "text3": "<p><strong>Enjoy Your Custom Combo.<\/strong> Edit or cancel anytime.<\/p>"
+          }
+        },
+        "button_Lp4whH": {
+          "type": "button",
+          "settings": {
+            "button_label": "BUILD MY ROUTINE",
+            "button_link": "https:\/\/duotoothpaste.com\/a\/loop_subscriptions\/bundle\/a975c058b85e458d93c1a86d4f0fe35e"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YBbPJU",
+        "text_7MMBEW",
+        "button_Lp4whH"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/0885c799152c8b08d4eb281cc3112bd2.jpg",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "image_first"
+      }
+    },
+    "product-bundle": {
+      "type": "product-with-text-bundle",
+      "blocks": {
+        "text_m376VK": {
+          "type": "text",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/Rectangle_224.png",
+            "title": "Original",
+            "sub_title": "nha + antioxidants",
+            "sub_title_pop": "whitening toothpaste",
+            "text_pop": "Our signature formula crafted for optimal oral and whole-body health. Packed with rigorously tested clean ingredients including nHa (a naturally remineralizing fluoride alternative), vitamins C + E,  and botanical extracts proven to balance the oral microbiome. Original is the core formula for all Duo tablets—supporting systemic wellness while you brush.",
+            "button_link": "https:\/\/duotoothpaste.com\/a\/loop_subscriptions\/bundle\/a975c058b85e458d93c1a86d4f0fe35e"
+          }
+        },
+        "text_FDz8dV": {
+          "type": "text",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/Rectangle_225.png",
+            "title": "Energy",
+            "sub_title": "caffeine + vitamin B12",
+            "sub_title_pop": "whitening toothpaste",
+            "text_pop": "Brush your way to a better morning with Duo tablets for mood and metabolism support. We topped off our signature oral microbiome-balancing tablets with a perfectly portioned dose of caffeine (10mg), vitamin B12 (6mcg), and L-theanine (2.5mg) to invigorate your system. A feel-good start to the day.",
+            "button_link": "https:\/\/duotoothpaste.com\/a\/loop_subscriptions\/bundle\/a975c058b85e458d93c1a86d4f0fe35e"
+          }
+        },
+        "text_VQQMaQ": {
+          "type": "text",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/Rectangle_226.png",
+            "title": "Sleep",
+            "sub_title": "melatonin + L-theanine",
+            "sub_title_pop": "whitening toothpaste",
+            "text_pop": "Prepare for a great night’s sleep with Duo tablets for relaxation and rest. We topped off our signature oral microbiome-balancing tablets with a perfectly portioned dose of melatonin (1.5mg), L-theanine (2.5mg), and lavender to regulate circadian rhythms, ease stress, and ready your system for nourishing rest.",
+            "button_link": "https:\/\/duotoothpaste.com\/a\/loop_subscriptions\/bundle\/a975c058b85e458d93c1a86d4f0fe35e"
+          }
+        },
+        "text_zynzVk": {
+          "type": "text",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/Rectangle_227.png",
+            "title": "Immunity",
+            "sub_title": "vitamin D + B12",
+            "sub_title_pop": "whitening toothpaste",
+            "text_pop": "Greet the day with confidence with Duo tablets for vitality and immune support. We topped off our signature oral microbiome-balancing tablets with a perfectly portioned dose of vitamin D3 (30mcg) and vitamin B12 (6mcg) to bolster the body’s defenses and lift mood. Consider it your sunshine on a cloudy day.",
+            "button_link": "https:\/\/duotoothpaste.com\/a\/loop_subscriptions\/bundle\/a975c058b85e458d93c1a86d4f0fe35e"
+          }
+        }
+      },
+      "block_order": [
+        "text_m376VK",
+        "text_FDz8dV",
+        "text_VQQMaQ",
+        "text_zynzVk"
+      ],
+      "settings": {
+        "section_bg_color": "#e2ebf2",
+        "title": "Better Living Through Toothpaste",
+        "text": "<p>Whitening toothpaste tablets formulated by two dentists using the best clean ingredients, each one has its own flavor profile and unique benefits.<\/p>",
+        "sub_title": ""
+      }
+    },
+    "banner-cta-text": {
+      "type": "banner-cta-text-bundle",
+      "blocks": {
+        "heading_TW9bRq": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading2": "",
+            "heading3": "Your upgraded plastic-free routine"
+          }
+        },
+        "text_6nmLzt": {
+          "type": "text",
+          "settings": {
+            "text": "A better routine for you and the earth. Save up to 33% with auto-ship refills of your Duo favorites, delivered in compostable pouches right on time."
+          }
+        },
+        "button_QXt6xw": {
+          "type": "button",
+          "settings": {
+            "button_label": "LET’S GET STARTED",
+            "button_link": "https:\/\/duotoothpaste.com\/a\/loop_subscriptions\/bundle\/a975c058b85e458d93c1a86d4f0fe35e"
+          }
+        }
+      },
+      "block_order": [
+        "heading_TW9bRq",
+        "text_6nmLzt",
+        "button_QXt6xw"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/sobre_duo.fw.png",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "image_first"
+      }
+    },
+    "faqs-landing": {
+      "type": "faqs-landing-bundle",
+      "blocks": {
+        "faq_VfK9ce": {
+          "type": "faq",
+          "settings": {
+            "title": "What’s nHa? And don’t I need fluoride?",
+            "description": "<p>We use a dentist-backed fluoride alternative called nano-hydroxyapatite (nHa). Exhaustive research over the past several decades has proven that nano-Hydroxyapatite is just as effective as fluoride at remineralizing teeth, while also whitening and reducing sensitivity.<\/p>"
+          }
+        },
+        "faq_xBEwNe": {
+          "type": "faq",
+          "settings": {
+            "title": "Can I pause or cancel my subscription?",
+            "description": "<p>Yes, you can cancel or pause anytime by going into your subscription portal or by emailing us at friends@duotoothpaste.com.<\/p>"
+          }
+        },
+        "faq_e6NQLc": {
+          "type": "faq",
+          "settings": {
+            "title": "Will I receive bottles or refills in future orders?",
+            "description": "<p>Your first order of tablets will ship in apothecary-grade glass bottles. Refills will ship in compostable pouches.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_VfK9ce",
+        "faq_xBEwNe",
+        "faq_e6NQLc"
+      ],
+      "settings": {
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "mobile_padding_top": 40,
+        "mobile_padding_bottom": 50,
+        "full_width": false,
+        "bg_color": "",
+        "heading": "FAQs"
+      }
+    },
+    "feature": {
+      "type": "multicolumn-text-images-feature",
+      "blocks": {
+        "column_zcf9HJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/star_1.fw.png",
+            "text": "<p><strong>100% Satisfaction Guarantee <\/strong>. Or  your money back<\/p>"
+          }
+        },
+        "column_B4RKNV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/email2_.fw.png",
+            "text": "<p><strong>Free shipping for subscribers<\/strong>. Every order, every time.<\/p>"
+          }
+        },
+        "column_8dM3jg": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cancel_3.fw.png",
+            "text": "<p><strong>Pause or cancel anytime<\/strong>.  If your plans change, ours can too.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_zcf9HJ",
+        "column_B4RKNV",
+        "column_8dM3jg"
+      ],
+      "settings": {
+        "heading": "",
+        "description": ""
       }
     }
   },
   "order": [
-    "2f4c3b0f-e8f1-4fea-8851-34d6dc3f2f8d",
-    "02200e95-3f6f-4ed5-a149-6e1fa306a8d6",
-    "4189d7ea-5f80-4e84-8716-10dc241ab496",
-    "47646abe-8d86-4542-9a69-aa79ecb7290b",
-    "786a1b47-cb44-46da-9480-0844890ed962",
-    "404b666a-434a-435b-8fdb-ee1fe54e3ad2",
-    "dc9b14f3-6ff6-4c99-a9b0-f965d0ae8380",
-    "14fcf1d1-ba1d-4530-8bf3-237e967f2645",
-    "165751574971a9f672",
-    "0289457f-3b98-43fd-8fa0-a74d5bbf17c0",
-    "a3c0a2ef-325b-46c3-b541-141a0b105a2c",
-    "ec185da6-83bc-4e0f-bd42-36101b731fd1",
-    "165752148158d58046",
-    "2062527a-b37d-4b95-a369-4e542ee5500b",
-    "04261b30-c625-459c-8924-0a526b868f04",
-    "1658542003ac523a3b"
+    "banner",
+    "icon-text",
+    "multicolumn",
+    "banner-cta",
+    "product-bundle",
+    "banner-cta-text",
+    "faqs-landing",
+    "feature"
   ]
 }
