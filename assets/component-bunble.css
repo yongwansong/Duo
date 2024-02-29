@@ -29,9 +29,10 @@ body {
 
 
 .img_text_ {
-  max-height: 600px;
-  object-fit: cover;
+  max-height: 850px;
   width: 100%;
+  margin-top: -40px;
+  object-fit: cover;
 }
 
 
@@ -54,7 +55,7 @@ h2.image-with-text__heading.h3 {
   width: 100%;
     display: block !important;
     text-align: center!important;
-    max-width: 380px;
+    max-width: 380px!important;
 }
 }
 
@@ -160,6 +161,13 @@ h2.image-with-text__heading.h3 {
 }
 
 @media (max-width: 550px){
+
+  .image_banner_text {
+    padding-top: 60px!important;
+  }
+
+
+
   .banner__text {
     text-align: center!important;
  
@@ -174,17 +182,19 @@ h2.image-with-text__heading.h3 {
 
 h2.image-with-text__heading.h3 {
   text-align: left;
-  font-family: OldschoolGrotesk-Regular!important;
-  font-size: 70px!important;
+  font-family: OldschoolGrotesk-Regular !important;
+  font-size: 72px !important;
   font-style: normal;
   font-weight: 400;
   line-height: 64px;
+  max-width: 500px;
  
 }
 
 .image_banner_text{
 
   display: flex;
+  background: #E2EBF2;
 }
 
 @media screen and (min-width: 750px) {
@@ -207,7 +217,7 @@ h2.image-with-text__heading.h3 {
   padding: 12.972px 0 11px;
   gap: 9.979px;
   display: flex;
-  background: #00497E;
+  background: #000;
   max-width: 330px !important;
   line-height: 1;
   text-decoration: none;
@@ -223,20 +233,21 @@ h2.image-with-text__heading.h3 {
 
 .btnca:hover{
 
-  background: black;
+  background: #00497E;
   color:white!important;
 }
 
 .banner__text {
   color: #000;
   text-align: left;
-  font-family: OldschoolGrotesk-Regular;
-  font-size: 20px;
+  font-family: OldschoolGrotesk-regular;
+  font-size: 19.5px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 27px;
+  font-weight: 300;
+  line-height: 30px;
   margin: 5px 3px 40px;
   max-width: 460px !important;
+  letter-spacing: 1px;
 }
 
 .endrock-icon-with-text
@@ -388,7 +399,7 @@ h2.image-with-text__heading.h3 {
 }
 
 .product-with-text_content__text_ {
-  padding: 0 10px;
+  padding: 0px 10px 30px 10px;
   color: black;
   max-width: 630px;
 }
@@ -651,10 +662,10 @@ h2.image-with-text__heading.h3 {
 .textdes {
   color: #000;
   font-family: OldschoolGrotesk-Regular;
-  font-size: 15px !important;
+  font-size: 16px !important;
   font-style: normal;
   font-weight: 400;
-  line-height: 27px;
+  line-height: 26px;
 }
 
 .texttitle {
@@ -1033,11 +1044,11 @@ h2.image-with-text__feat.h3 {
   line-height: 56px;
   color: #000;
   font-family: Schnyder-SLight;
-  font-size: 64px;
+  font-size: 56px;
   font-style: normal;
   font-weight: 300;
-  line-height: 60px;
-  max-width: 420px;
+  line-height: 58px;
+  max-width: 380px;
 }
 
 .image-with-text__feat.rte {
@@ -1045,8 +1056,9 @@ h2.image-with-text__feat.h3 {
   max-width: 100%;
   color: black;
   font-size: 14px;
-  line-height: 1.3;
-  margin: 15px 0px;
+  line-height: 24px;
+  margin: 20px 0px;
+  font-weight: 400;
 }
 
 .image-with-text__grid {
@@ -1172,6 +1184,12 @@ h2.image-with-text__feat.h3 {
 
 
 .grid_feature {
-  max-width: 490px;
+  max-width: 450px;
   padding-top: 70px;
+}
+
+.header-wrapper {
+  position: absolute!important;
+  background:transparent!important;
+  width: 100%;
 }

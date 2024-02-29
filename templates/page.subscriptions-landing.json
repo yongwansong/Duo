@@ -14,7 +14,7 @@
         "text_z3VUgR": {
           "type": "text",
           "settings": {
-            "text": "Create a custom bundle from our award-winning family of functional toothpaste tablets. Save up to 33% while minimizing your carbon footprint."
+            "text": "Save up to 33% and minimize your carbon footprint when you build a custom bundle of toothpaste tablets."
           }
         },
         "button_HCmp9t": {
@@ -138,8 +138,8 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/subdcribe_img_from3_1.jpg",
-            "texttitle": "<p>Do it for the planet<\/p>",
-            "text": "<p>Tablets arrive with recyclable glass bottles & compostable refill pouches.<\/p>"
+            "texttitle": "<p>Plastic-free<\/p>",
+            "text": "<p>Tablets arrive in apothecary-grade glass bottles with compostable refill pouches. <\/p>"
           }
         }
       },
@@ -268,7 +268,7 @@
         "text_6nmLzt": {
           "type": "text",
           "settings": {
-            "text": "A plastic-free upgrade to your daily routine that actually makes a difference. Duo is delivered in apothecary-grade, recyclable glass bottles with compostable refill pouches. It’s the future of toothpaste and better for us all."
+            "text": "A better routine for you and the earth. Save up to 33% with auto-ship refills of your Duo favorites, delivered in compostable pouches right on time."
           }
         },
         "button_QXt6xw": {
@@ -338,21 +338,21 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/star_1.fw.png",
-            "text": "<p><strong>Select Your Bottles. <\/strong>Mix and match your favorite formulas <\/p>"
+            "text": "<p><strong>100% Satisfaction Guarantee <\/strong>. Or  your money back<\/p>"
           }
         },
         "column_B4RKNV": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/email2_.fw.png",
-            "text": "<p><strong>Choose How Often. <\/strong>Get delivery right when you need it.<\/p>"
+            "text": "<p><strong>Free shipping for subscribers<\/strong>. Every order, every time.<\/p>"
           }
         },
         "column_8dM3jg": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/cancel_3.fw.png",
-            "text": "<p><strong>Enjoy Your Custom Combo.<\/strong> Edit or cancel anytime.<\/p>"
+            "text": "<p><strong>Pause or cancel anytime<\/strong>.  If your plans change, ours can too.<\/p>"
           }
         }
       },
