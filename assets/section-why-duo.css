@@ -16,6 +16,18 @@
     position: relative;
 }
 
+.contents-wrapper .left-content{
+  width: 30%;
+}
+
+.contents-wrapper .center-content{
+  width: 40%;
+}
+
+.contents-wrapper .right-content{
+  width: 30%;
+}
+
 
 @media (min-width: 1000px) {
     .why-duo_wrapper .contents-wrapper{
