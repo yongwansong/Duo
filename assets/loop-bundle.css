@@ -97,7 +97,7 @@ body .loop-bundle-header-wrapper {
     /*background-color: #E2EBF2;*/
 }
 body .loop .loop-bundle-image-container-wrapper{
-	/*margin-bottom: 3.2rem;*/
+  margin-bottom: 3.2rem;
 }
 body .loop .loop-bundle-image-container-wrapper .loop-h1{
 	font-size: 3.8rem;
