@@ -799,7 +799,6 @@ button.accordion.is-open:after {
     letter-spacing: 0px;
     background-color: rgb(255, 255, 255)!important;
     border: none!important;
-    border-bottom: 1px solid #000!important;
     padding: 10px 0!important;
     box-shadow: unset!important;
 }
