@@ -40,9 +40,8 @@ body .loop .loop-card-footer .loop-btn{
     background-color: #fff;
 }
 
-body .loop-btn-selected {
+body .loop-btn-selected, loop-btn-add-to-cart {
       border-radius: 0px;
-
 }
 body .loop .loop-btn-size-md {
     padding: .65rem 2.4rem;
