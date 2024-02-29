@@ -7,9 +7,6 @@
 	--loop-product-card-image-height: auto!important;
 }
 
-.footer {
-  padding-bottom:500px !important;
-}
 
 body .loop {
 	font-family: var(--loop-ff-400);
