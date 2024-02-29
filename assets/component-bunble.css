@@ -675,7 +675,7 @@ h2.image-with-text__heading.h3 {
   .titlemain {
       position: absolute;
       text-align: left;
-      max-width: 30%;
+      max-width: 28%;
       text-align: justify;
       padding: 15px 30px!important;
   }
