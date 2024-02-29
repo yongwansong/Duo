@@ -36,6 +36,7 @@ body .loop .loop-form-input {
 body .loop .loop-btn.loop-btn-outline,
 body .loop .loop-card-footer .loop-btn{
 	border: .2rem solid var(--loop-bundle-outline-button-text-color);
+    border-radius: 0px;
 }
 body .loop .loop-btn-size-md {
     /*padding: .65rem 2.4rem;*/
