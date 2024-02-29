@@ -399,7 +399,7 @@ body .loop .loop-bundle-footer .loop-display-selected-products>.mb-1:after {
 		row-gap: 1rem;
 	}
 	body .loop #__next {
-		padding-bottom: 330px
+		/*padding-bottom: 330px*/
 	}
 }
 
