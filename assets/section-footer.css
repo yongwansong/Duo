@@ -830,10 +830,6 @@ button.accordion.is-open:after {
   }
 }
 
-.footer-block__newsletter [data-testid="form-row"]{
-  border-bottom: 1px solid #000000!important;
-}
-
 @media (max-width:1000px) {
   .newsletter-form__field-wrapper .field{
     flex-direction: column;
@@ -855,6 +851,12 @@ button.accordion.is-open:after {
   .footer__content-top{
     padding: 0px 24px 32px!important
   }
+
+  
+  .footer-block__newsletter [data-testid="form-row"]{
+    border-bottom: 1px solid #000000!important;
+  }
+
 
   .footer__blocks-wrapper{
     flex-direction: column;
