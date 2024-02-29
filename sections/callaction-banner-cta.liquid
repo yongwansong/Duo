@@ -9,13 +9,8 @@
       {%- for block in section.blocks -%}
         {% case block.type %}
           {%- when 'heading' -%}
-            <h2 class="image-with-text__heading h1" {{ block.shopify_attributes }}>
-              {{ block.settings.heading | escape }}
-            </h2>
-            <h2 class="image-with-text__heading h2" {{ block.shopify_attributes }}>
-              {{ block.settings.heading2 | escape }}
-            </h2>
-            <h2 class="image-with-text__heading h3" {{ block.shopify_attributes }}>
+          
+            <h2 class="image-with-text-heading h3" {{ block.shopify_attributes }}>
               {{ block.settings.heading3 | escape }}
             </h2>
           {%- when 'text' -%}
@@ -139,18 +134,7 @@
       "name": "t:sections.image-with-text.blocks.heading.name",
       "limit": 1,
       "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "default": "Image with text",
-          "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
-        },
-		{
-          "type": "text",
-          "id": "heading2",
-          "default": "Image with text",
-          "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
-        },
+
 		{
           "type": "text",
           "id": "heading3",
