@@ -8,8 +8,9 @@
 }
 
 .footer {
-  padding-bottom:500px;
+  padding-bottom:500px !important;
 }
+
 body .loop {
 	font-family: var(--loop-ff-400);
 }
