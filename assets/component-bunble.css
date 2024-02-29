@@ -1245,8 +1245,16 @@ h2.image-with-text__feat.h3 {
   padding-top: 70px;
 }
 
+@media (min-width: 750px) {
+
+
+  .header-wrapper {
+    background:transparent!important;
+  }
+}
+
+
 .header-wrapper {
   position: absolute!important;
-  background:transparent!important;
   width: 100%;
 }
