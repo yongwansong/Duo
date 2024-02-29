@@ -8,8 +8,9 @@
 }
 
 .footer {
-  margin-bottom:300px;
+  margin-bottom:120px;
 }
+
 body .loop {
 	font-family: var(--loop-ff-400);
 }
@@ -418,6 +419,9 @@ body .loop .loop-bundle-footer .loop-display-selected-products>.mb-1:after {
 	:root{
 		--loop-bundle-number-of-cards-mobile-view: 1!important;
 	}
+    .footer {
+  margin-bottom:220px;
+}
 }
 
 /*Drawer*/
