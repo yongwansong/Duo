@@ -1109,7 +1109,7 @@ h2.image-with-text__feat.h3 {
   max-width: 330px !important;
   line-height: 1;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   text-align: right;
   position: relative;
   width: 100%;
@@ -1117,11 +1117,11 @@ h2.image-with-text__feat.h3 {
   padding: 15px 20px 10px 20px;
   letter-spacing: 1px;
   border: 2px solid black;
-  margin: 0px 15px;
+  margin: 0px 60px;
 }
 
 .link_section {
-  margin-top: 2rem!important;
+  margin-top: 5rem!important;
   margin-bottom: 5rem;
 }
 
