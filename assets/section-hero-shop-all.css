@@ -22,14 +22,15 @@
 @media (max-width: 767px){
     .item2 {
         cursor: pointer;
-        padding: 14px 10px 10px !important;
+        padding: 14px 20px 10px !important;
         border: 1px solid #000;
         border-radius: 0;
         color: #000;
         font-weight: 600;
         text-transform: uppercase;
         font-size: 10px !important;
-        min-width: max-content;
+        width: 120px;
+        text-align: center;
 
     }
 }
@@ -486,13 +487,15 @@
     }
     .item {
         cursor: pointer;
-        padding: 14px 10px 10px 10px !important;
+        padding: 14px 20px 10px!important;
         border: 1px solid #000;
         border-radius: 0px;
         color: black;
         font-weight: 600;
         text-transform: uppercase;
         font-size: 10px!important;
+        width: 120px;
+        text-align: center;
     }
 
     .section-endrock-hero-image .hero-banner__content {
