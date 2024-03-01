@@ -17,17 +17,8 @@
 }
 
 .contents-wrapper .left-content{
-  width: 30%;
+  width: 100%;
 }
-
-.contents-wrapper .center-content{
-  width: 40%;
-}
-
-.contents-wrapper .right-content{
-  width: 30%;
-}
-
 
 @media (min-width: 1000px) {
     .why-duo_wrapper .contents-wrapper{
@@ -73,7 +64,17 @@
   }
 }
 
+.header-content{
+    flex-direction: column;
+    gap: 0 !important;
+    padding: 10px 0!important
+}
 
+.left-content__properties-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+}
 
 .why-duo_wrapper .left-content__heading{
     color: #000;
@@ -82,7 +83,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 56px;
-    margin: 0 0 22px;
+    margin: 0 0 12px;
 }
 
 .why-duo_wrapper .left-content__description p{
@@ -93,17 +94,38 @@
     font-weight: 390;
     line-height: 32px;
     letter-spacing: -0.36px;
-    margin: 0 0 87px;
+    margin: 0;
     max-width: 250px;
 }
 
 .property-list_wrapper{
     display: flex;
     gap: 20px;
+    padding: 35px 0;
 }
 
 .left-content__properties .property-list_wrapper{
     margin-bottom: 61px;
+}
+
+.property-list_wrapper:nth-child(4){
+    margin-left: 33px;
+}
+
+.property-list_wrapper:nth-child(7){
+    margin-left: 51px;
+}
+
+.property-list_wrapper:nth-child(3){
+    margin-left: 27px;
+}
+
+.property-list_wrapper:nth-child(6){
+    margin-left: 42px;
+}
+
+.property-list_wrapper:nth-child(9){
+    margin-left: 47px;
 }
 
 .property-description p{
@@ -226,7 +248,12 @@
     }
 
     .property-list_wrapper{
-        margin-bottom: 32px;
+        margin: 0 0 32px !important;
+        padding: 0;
+    }
+
+    .empty_content{
+        margin: 0!important;
     }
 
     .property-list_wrapper:last-of-type{
@@ -235,6 +262,31 @@
 
     .property-list_wrapper .property-description{
         width: calc( 100% - 52px );
+    }
+
+    .property-list_wrapper:nth-child(2){
+        order: 3;
+    }
+
+    .property-list_wrapper:nth-child(3){
+        order: 1;
+    }
+
+    .property-list_wrapper:nth-child(5){
+        order: 4;
+    }
+
+    .property-list_wrapper:nth-child(6){
+        order: 2;
+    }
+
+    .property-list_wrapper:nth-child(8){
+        order: 5;
+    }
+
+    .only--mobile .content-wrapper{
+        display: flex;
+        flex-direction: column;
     }
 
     .why-duo-mobile__media img{
@@ -294,4 +346,5 @@
         line-height: 16px;
         font-family: "OldschoolGrotesk-Regular";
     }
+
 }

@@ -26,7 +26,7 @@
                 <div class="left-content__description">{{ section.settings.mobile_description }}</div>
                 <div class="content-wrapper">
                     {% for block in section.blocks %}
-                        <div class="property-list_wrapper">
+                        <div class="property-list_wrapper {% if block.settings.property_icon == blank %}empty_content{%  endif %}">
                             <div class="property-icon">{{ block.settings.property_icon }}</div>
                             <div class="property-description {% if block.settings.property_description_margin %}enable_margin{% endif %}">{{ block.settings.property_description }}</div>
                         </div>
@@ -54,33 +54,22 @@
             <div class="contents-wrapper">
               <div class="left-content only--desktop">
                   <div class="left-content__properties-wrapper">
-                      <h2 class="left-content__heading">{{ section.settings.heading }}</h2>
-                      <div class="left-content__description">{{ section.settings.description }}</div>
-                      <div class="left-content__properties">
-                          {% for block in section.blocks %}
-                              {% if block.type == 'left' %}
-                                  <div class="property-list_wrapper">
-                                      <div class="property-icon">{{ block.settings.property_icon }}</div>
-                                      <div class="property-description {% if block.settings.property_description_margin %}enable_margin{% endif %}">{{ block.settings.property_description }}</div>
-                                  </div>
-                              {% endif %}
-                          {% endfor %}
-                      </div>
-                  </div>
-              </div>
-              <div class="center-content"></div>
-              <div class="right-content only--desktop">
-                <div class="right-content__properties">
+                    <div class="property-list_wrapper header-content">
+                        <h2 class="left-content__heading">{{ section.settings.heading }}</h2>
+                        <div class="left-content__description">{{ section.settings.description }}</div>
+                    </div>
                     {% for block in section.blocks %}
-                        {% if block.type == 'right' %}
+                        {% if block.settings.property_description != blank %}
                             <div class="property-list_wrapper">
                                 <div class="property-icon">{{ block.settings.property_icon }}</div>
                                 <div class="property-description {% if block.settings.property_description_margin %}enable_margin{% endif %}">{{ block.settings.property_description }}</div>
                             </div>
+                        {% else %}
+                              <div class="empty_content"></div>  
                         {% endif %}
                     {% endfor %}
-                </div>
-            </div>
+                  </div>
+              </div>
             </div>
         </div>
     </div>
@@ -157,7 +146,7 @@
                 "label": "Heading"
             },
             {
-                "type": "richtext",
+                "type": "html",
                 "id": "description",
                 "label": "Description"
             },
@@ -169,29 +158,8 @@
         ],
         "blocks": [
             {
-                "type": "left",
-                "name": "Left Content",
-                "settings": [   
-                    {
-                        "type": "html",
-                        "id": "property_icon",
-                        "label": "Property Icon"
-                    },
-                    {
-                        "type": "richtext",
-                        "id": "property_description",
-                        "label": "Property Description"
-                    },
-                    {
-                        "type": "checkbox",
-                        "id": "property_description_margin",
-                        "label": "Property Description Margin"
-                    }
-                ]
-            },
-            {
-                "type": "right",
-                "name": "Right Content",
+                "type": "block",
+                "name": "Content",
                 "settings": [   
                     {
                         "type": "html",
