@@ -1,0 +1,46 @@
+
+<script>
+
+function scrollToSection(section) {
+  const elements = document.querySelectorAll("." + section);
+  if (elements.length > 0) {
+    const offset = -110;
+    window.scrollTo({
+      top: elements[0].offsetTop + offset,
+      behavior: "smooth"
+    });
+  }
+}
+
+function handleItemClick(section) {
+  scrollToSection(section);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".item");
+  items.forEach(function (item) {
+    item.addEventListener("click", function () {
+      const section = item.getAttribute("data-section");
+      handleItemClick(section);
+    });
+  });
+});
+
+</script>
+
+<div class="endrock-featured-collection__container">
+  <h3 class="shop-container cardthree">
+    Filter By
+  </h3>
+  <section id="all" class="shop-all all">
+
+    <!-- Agrega el contenido de tu sección Shop All aquí -->
+    <div class="item" data-section="all">Shop all</div>
+    <div class="item" data-section="singles">Singles</div>
+    <div class="item" data-section="bundles">Bundles<br><span class="spanpivot">Coming soon</span></div>
+    <div class="item" data-section="starter-pack">Starter Pack<br><span class="spanpivot">Coming soon</span></div>
+    <div class="item" data-section="singles">Best sellers</div>
+
+    <!-- Agrega más elementos según tus necesidades -->
+  </section>
+</div>
