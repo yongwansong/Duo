@@ -450,6 +450,7 @@ cart-drawer.is-empty .cart-drawer__recommendation{
 .recommendation-product__wrapper {
 	display: flex;
 	align-items: center;
+    border-radius: 0;
 }
 .recommendation-product__wrapper + .recommendation-product__wrapper {
 	margin-top: 1rem;
