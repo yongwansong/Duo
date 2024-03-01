@@ -4,8 +4,8 @@
 
 .spanpivot{
 
-    font-size: 10px;
-    margin: -3px 0 -5px;
+    font-size: 9px;
+    margin: 0px 0 -5px;
     padding: 0;
     display: block;
     text-align: center;
@@ -14,15 +14,33 @@
 
 
 .itemtemp{
-    margin-top: 10px;
+    margin-top: 11px;
 }
 
+
+
+@media (max-width: 767px){
+    .item2 {
+        cursor: pointer;
+        padding: 14px 10px 10px !important;
+        border: 1px solid #000;
+        border-radius: 0;
+        color: #000;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 10px !important;
+        min-width: 130px!important;
+        text-align: center;
+
+    }
+}
 
 .item2 {
     cursor: pointer;
     padding: 10px 25px 5px;
-    border: 1px solid #a9a9a9;
+    border: 1px solid #000;
     border-radius: 0;
+    color: #000;
     font-weight: 600;
     text-transform: uppercase;
     min-width: fit-content;
@@ -30,7 +48,6 @@
     margin-left: 5px;
     height: fit-content;
     line-height: 1;
-    display: block ruby;
   }
 
 .colorgray{
@@ -472,13 +489,15 @@
     }
     .item {
         cursor: pointer;
-        padding: 14px 10px 10px 10px !important;
+        padding: 14px 20px 10px!important;
         border: 1px solid #000;
         border-radius: 0px;
         color: black;
         font-weight: 600;
         text-transform: uppercase;
         font-size: 10px!important;
+        min-width: 130px!important;
+        text-align: center;
     }
 
     .section-endrock-hero-image .hero-banner__content {
