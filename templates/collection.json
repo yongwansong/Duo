@@ -530,9 +530,9 @@
         "title_in_middle": "The science of mucosal absorption",
         "rich_text": "<p>As part of its central role in the digestive system, the mouth is full of blood capillaries and absorbent tissue that actively extract nutrients and distribute them around the body. Many medications and supplements use this method of delivery because of its efficiency and ease.<\/p><p>As you brush, the functional vitamins and supplements in Duo cross the permeable membrane inside your mouth and absorb directly into your system.<\/p>",
         "column1_image": "shopify:\/\/shop_images\/small_logo1.png",
-        "column1_texts": "done while brushing,easy and efficient,rapid uptake,delicious natural flavors,calories don't absorb :)",
+        "column1_texts": "done while brushing,easy and efficient,rapid uptake,",
         "column2_title": "Regular Old Pills",
-        "column2_texts": "uncomfortable to swallow,difficult gastrointestinal digestion,delayed delivery,fillers and artificial coloring,sugar and calories",
+        "column2_texts": "uncomfortable to swallow,difficult gastrointestinal digestion,delayed delivery,",
         "button_text": "Click me"
       }
     },
@@ -691,6 +691,5 @@
     "all-feature-duo",
     "endrock_icon_with_text_tTL9yd",
     "all-why-duo"
-    
   ]
 }
