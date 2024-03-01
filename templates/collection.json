@@ -220,6 +220,7 @@
         "c9ce3ad8-d62f-4ed1-866a-6c32c3729406",
         "51bf7b6e-4df4-46f1-95cc-af4735742f17"
       ],
+      "disabled": true,
       "settings": {
         "heading": "",
         "id_section_pivot": "bundles",
@@ -249,6 +250,7 @@
       "blocks": {
         "767ba903-3399-4e8f-8696-8b77e4c621cb": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "featured_product": "original",
             "custom_product_image": "shopify:\/\/shop_images\/original_x2_1a460404-3879-42b5-822c-85bbff2f1de7.jpg",
@@ -272,6 +274,7 @@
         },
         "c9ce3ad8-d62f-4ed1-866a-6c32c3729406": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "featured_product": "energy",
             "custom_product_image": "shopify:\/\/shop_images\/original_x3_48a8ab87-5eb9-4a86-95cc-4bdbcb8d82d1.jpg",
@@ -295,6 +298,7 @@
         },
         "51bf7b6e-4df4-46f1-95cc-af4735742f17": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "featured_product": "sleep",
             "custom_product_image": "shopify:\/\/shop_images\/immunity_x3_f6c1577f-717d-430c-ac87-2a50d85cddef.jpg",
@@ -337,7 +341,6 @@
         "card_one_title": "",
         "card_one_subtitle": "",
         "card_link_one": "",
-        "image_card_two": "shopify:\/\/shop_images\/Rectangle_647.png",
         "card_two_title": "Want to customize your own bundle?",
         "card_two_subtitle": "Learn more",
         "card_link_two": "https:\/\/duotoothpaste.com\/pages\/subscribe",
@@ -346,8 +349,8 @@
         "card_link_three": ""
       }
     },
-    "all-feat-coll-four": {
-      "type": "all-endrock-featured-collection-pack",
+    "all-feat-coll-index": {
+      "type": "all-endrock-featured-collection-index",
       "blocks": {
         "c9ce3ad8-d62f-4ed1-866a-6c32c3729406": {
           "type": "product",
@@ -379,6 +382,95 @@
         },
         "product_7h9bEq": {
           "type": "product",
+          "settings": {
+            "featured_product": "immunity",
+            "featured_product_two": "",
+            "featured_product_three": "",
+            "featured_product_four": "",
+            "custom_product_image": "shopify:\/\/shop_images\/sleep_energy.jpg",
+            "hover_image": "shopify:\/\/shop_images\/sleep-energy-2-w.png",
+            "info_1": "",
+            "info_1_top_position": "",
+            "info_1_right_position": "",
+            "info_1_left_position": "",
+            "info_1_bottom_position": "",
+            "info_2": "",
+            "info_2_top_position": "",
+            "info_2_right_position": "",
+            "info_2_left_position": "",
+            "info_2_bottom_position": "",
+            "info_3": "",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "",
+            "info_3_bottom_position": ""
+          }
+        }
+      },
+      "block_order": [
+        "c9ce3ad8-d62f-4ed1-866a-6c32c3729406",
+        "product_7h9bEq"
+      ],
+      "settings": {
+        "heading": "",
+        "id_section_pivot": "toothbrushes",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0,
+        "full_width": false,
+        "bg_color": "#ffffff",
+        "products_to_show": 2,
+        "swipe_on_mobile": false,
+        "show_secondary_image": true,
+        "image_card_one": "shopify:\/\/shop_images\/Rectangle_646.png",
+        "card_one_title": "Let’s talk about nHa",
+        "card_one_subtitle": "Learn More",
+        "card_link_one": "https:\/\/duotoothpaste.com\/pages\/the-science",
+        "image_card_two": "shopify:\/\/shop_images\/Rectangle_647.png",
+        "card_two_title": "Want to customize your own bundle?",
+        "card_two_subtitle": "",
+        "card_link_two": "https:\/\/duotoothpaste.com\/pages\/subscribe",
+        "card_three_title": "Mucosal Absorption",
+        "card_three_subtitle": "Our mouths absorb nutrients directly into the bloodstream. That’s the key to the efficient bio-availability of the vitamins and supplements in Duo, added for convenience and health.",
+        "card_link_three": "#feature-footer"
+      }
+    },
+    "all-feat-coll-four": {
+      "type": "all-endrock-featured-collection-pack",
+      "blocks": {
+        "c9ce3ad8-d62f-4ed1-866a-6c32c3729406": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "featured_product": "original-refill-pouch",
+            "featured_product_two": "immunity-refill-pouch",
+            "featured_product_three": "energy-refill-pouch",
+            "featured_product_four": "sleep-refill-package",
+            "custom_product_image": "shopify:\/\/shop_images\/Frame_11485.png",
+            "custom_product_image2": "shopify:\/\/shop_images\/Immunity_1.png",
+            "custom_product_image3": "shopify:\/\/shop_images\/Rectangle_224_2.png",
+            "custom_product_image4": "shopify:\/\/shop_images\/Sleep_1f55a569-8ef5-4bb8-a16e-d610ab4cb406.png",
+            "info_1": "<p>nHa whitens + <br\/>soothes sensitivity<\/p>",
+            "info_1_top_position": "8%",
+            "info_1_right_position": "",
+            "info_1_left_position": "7%",
+            "info_1_bottom_position": "",
+            "info_2": "<p>Vitamins C + E <br\/>for oral health<\/p>",
+            "info_2_top_position": "33%",
+            "info_2_right_position": "",
+            "info_2_left_position": "7%",
+            "info_2_bottom_position": "",
+            "info_3": "<p><strong>Caffeine <\/strong>+ \u2028<br\/>vitamin B12 + \u2028<br\/>L-theanine \u2028<br\/>for vitality and mood<\/p>",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "7%",
+            "info_3_bottom_position": "26%"
+          }
+        },
+        "product_7h9bEq": {
+          "type": "product",
+          "disabled": true,
           "settings": {
             "featured_product": "immunity",
             "featured_product_two": "",
@@ -592,9 +684,11 @@
     "all-hero-img",
     "all-pivot",
     "all-feat-coll-one",
-    "all-feat-coll-two",
-    "all-feat-coll-three",
+   
+    "all-feat-coll-index",
     "all-feat-coll-four",
+     "all-feat-coll-two",
+    "all-feat-coll-three",
     "all-feature-duo",
     "endrock_icon_with_text_tTL9yd",
     "all-why-duo"
