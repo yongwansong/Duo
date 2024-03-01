@@ -4,8 +4,8 @@
 
 .spanpivot{
 
-    font-size: 10px;
-    margin: -3px 0 -5px;
+    font-size: 9px;
+    margin: 0px 0 -5px;
     padding: 0;
     display: block;
     text-align: center;
@@ -14,9 +14,25 @@
 
 
 .itemtemp{
-    margin-top: 10px;
+    margin-top: 11px;
 }
 
+
+
+@media (max-width: 767px){
+    .item2 {
+        cursor: pointer;
+        padding: 14px 10px 10px !important;
+        border: 1px solid #000;
+        border-radius: 0;
+        color: #000;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 10px !important;
+        min-width: max-content;
+
+    }
+}
 
 .item2 {
     cursor: pointer;
@@ -25,7 +41,6 @@
     border-radius: 0;
     font-weight: 600;
     text-transform: uppercase;
-    min-width: fit-content;
     font-family: OldschoolGrotesk-Regular;
     margin-left: 5px;
     height: fit-content;
