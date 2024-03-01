@@ -69,13 +69,14 @@
   
   .drawer.active .drawer__inner {
 	transform: translateX(0);
+	border: none;
   }
   
   .drawer__header {
 	position: relative;
 	background-color: rgb(var(--color-background));
 	padding: 0.5rem 0;
-	display: flex;
+	display: none;
 	justify-content: space-between;
 	align-items: center;
   }
@@ -485,9 +486,8 @@ cart-drawer.is-empty .cart-drawer__recommendation{
 	text-transform: uppercase;
 	font-weight: 600;
 	border-width: 2px;
-	border-radius: 0;
-    background: #000;
-    color: #fff;
+	border-radius: 30px;
+    background: #fff;
 }
 
 .recommendation-product__atc .button:hover{
@@ -503,7 +503,7 @@ cart-drawer.is-empty .cart-drawer__recommendation{
 	align-items: center;
 	gap: 5px;
 	line-height: 1;
-	color: #fff;
+	color: #000;
 }
 .recommendation-product__atc .text__with-icon .icon{
 	width: 18px;
@@ -527,7 +527,7 @@ cart-drawer.is-empty .cart-drawer__recommendation{
 	background-color: rgb(var(--color-background));
 	transition: transform var(--duration-default) ease;
 	transform: translateX(100%);
-	border-bottom: 1px solid #232323;
+	border: none;
 }
 .drawer.active .drawer__scroll-text {
     transform: translateX(0);

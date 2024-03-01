@@ -177,8 +177,6 @@ cart-items {
 
 .cart__checkout-button {
   max-width: 36rem;
-  border-radius: 0;
-  background: #000;
 }
 
 .cart__ctas {
