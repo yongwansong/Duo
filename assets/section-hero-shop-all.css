@@ -22,14 +22,14 @@
 @media (max-width: 767px){
     .item2 {
         cursor: pointer;
-        padding: 14px 20px 10px !important;
+        padding: 14px 10px 10px !important;
         border: 1px solid #000;
         border-radius: 0;
         color: #000;
         font-weight: 600;
         text-transform: uppercase;
         font-size: 10px !important;
-        width: 120px;
+        min-width: 130px!important;
         text-align: center;
 
     }
@@ -38,10 +38,12 @@
 .item2 {
     cursor: pointer;
     padding: 10px 25px 5px;
-    border: 1px solid #a9a9a9;
+    border: 1px solid #000;
     border-radius: 0;
+    color: #000;
     font-weight: 600;
     text-transform: uppercase;
+    min-width: fit-content;
     font-family: OldschoolGrotesk-Regular;
     margin-left: 5px;
     height: fit-content;
@@ -494,7 +496,7 @@
         font-weight: 600;
         text-transform: uppercase;
         font-size: 10px!important;
-        width: 120px;
+        min-width: 130px!important;
         text-align: center;
     }
 
