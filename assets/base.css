@@ -493,7 +493,7 @@ h5,
 .h3,
 .h4,
 .h5 {
-	font-family: var(--font-heading-family);
+	font-family: "OldschoolGrotesk-Regular";
 	font-style: var(--font-heading-style);
 	font-weight: var(--font-heading-weight);
 	color: rgb(var(--color-foreground));
@@ -1452,6 +1452,10 @@ deferred-media {
 	position: relative;
 }
 
+body{
+	font-family: "OldschoolGrotesk-Regular";
+}
+
 .share-button details {
 	width: fit-content;
 }
@@ -2123,7 +2127,9 @@ input[type='checkbox'] {
 
 .header__heading-logo {
 	width: 80px;
-	height: auto;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
 }
 
 @media screen and (max-width: 989px) {

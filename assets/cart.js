@@ -62,10 +62,66 @@ class CartItems extends HTMLElement {
 				//first gamification goal
 				setTimeout(() => {
 					const ifExists = parsedState.items.find((element) => element.id === window.freeGiftId)
-					if (parsedState.original_total_price >= window.freeGiftGoal) {
+					if (parsedState.original_total_price >= window.freeGiftGoal && parsedState.original_total_price < window.discountGoal) {
 						if(!ifExists) {
-							this.addGift(window.freeGiftId);
+							// this.addGift(window.freeGiftId);
 						}
+						
+						const firstIfDiscount = parsedState.items.find((element) => {
+							console.log(element, 'element');
+							const firstGetDiscount = element.discounts.find((discount) => discount.title === window.firstDiscountCode)
+							return firstGetDiscount
+						})
+						if (parsedState.original_total_price >= window.freeGiftGoal) {
+							if(!firstIfDiscount) {
+								fetch(`/discount/${window.firstDiscountCode}`).then(() => {
+									if(window.location.pathname === "/cart") {
+										window.location = window.routes.cart_url;
+									} else {
+										this.refreshSideCart();
+									}
+								})
+							}
+						}else {
+							if (firstIfDiscount) {
+								fetch(`/discount/clear`).then(() => {
+									if(window.location.pathname === "/cart") {
+										window.location = window.routes.cart_url;
+									} else {
+										this.refreshSideCart();
+									}
+								})
+							}
+						}
+					} else if(parsedState.original_total_price >= window.discountGoal){
+						setTimeout(() => {
+							const ifDiscount = parsedState.items.find((element) => {
+								console.log(element, 'secelement')
+								const getDiscount = element.discounts.find((discount) => discount.title === window.discountCode)
+								return getDiscount
+							})
+							if (parsedState.original_total_price >= window.discountGoal) {
+								if(!ifDiscount) {
+									fetch(`/discount/${window.discountCode}`).then(() => {
+										if(window.location.pathname === "/cart") {
+											window.location = window.routes.cart_url;
+										} else {
+											this.refreshSideCart();
+										}
+									})
+								}
+							}else {
+								if (ifDiscount) {
+									fetch(`/discount/clear`).then(() => {
+										if(window.location.pathname === "/cart") {
+											window.location = window.routes.cart_url;
+										} else {
+											this.refreshSideCart();
+										}
+									})
+								}
+							}
+						}, 500)
 					} else {
 						if (ifExists) {
 							const lineItem = document.querySelector(".cart-item[data-is-gift='true']").getAttribute("id")
@@ -75,33 +131,6 @@ class CartItems extends HTMLElement {
 					}
 				}, 200)
 				//second gamification goal
-				setTimeout(() => {
-					const ifDiscount = parsedState.items.find((element) => {
-						const getDiscount = element.discounts.find((discount) => discount.title === window.discountCode)
-						return getDiscount
-					})
-					if (parsedState.original_total_price >= window.discountGoal) {
-						if(!ifDiscount) {
-							fetch(`/discount/${window.discountCode}`).then(() => {
-								if(window.location.pathname === "/cart") {
-									window.location = window.routes.cart_url;
-								} else {
-									this.refreshSideCart();
-								}
-							})
-						}
-					}else {
-						if (ifDiscount) {
-							fetch(`/discount/clear`).then(() => {
-								if(window.location.pathname === "/cart") {
-									window.location = window.routes.cart_url;
-								} else {
-									this.refreshSideCart();
-								}
-							})
-						}
-					}
-				}, 500)
 				
 				this.classList.toggle('is-empty', parsedState.item_count === 0);
 				const cartDrawerWrapper = document.querySelector('cart-drawer');
@@ -144,32 +173,32 @@ class CartItems extends HTMLElement {
 			});
 	}
 
-	addGift(giftId) {
-		const config = fetchConfig('javascript');
-		config.headers['X-Requested-With'] = 'XMLHttpRequest';
-		delete config.headers['Content-Type'];
-		const cartRender = document.querySelector('cart-notification') || document.querySelector('cart-drawer') || document.querySelector('cart-items');
+	// addGift(giftId) {
+	// 	const config = fetchConfig('javascript');
+	// 	config.headers['X-Requested-With'] = 'XMLHttpRequest';
+	// 	delete config.headers['Content-Type'];
+	// 	const cartRender = document.querySelector('cart-notification') || document.querySelector('cart-drawer') || document.querySelector('cart-items');
 		
-		const formData = new FormData();
-		formData.append('id', giftId);
-		formData.append('quantity', 1);
-		formData.append('sections', cartRender.getSectionsToRender().map((section) => section.id));
-		formData.append('sections_url', window.location.pathname);
-		config.body = formData;
+	// 	const formData = new FormData();
+	// 	formData.append('id', giftId);
+	// 	formData.append('quantity', 1);
+	// 	formData.append('sections', cartRender.getSectionsToRender().map((section) => section.id));
+	// 	formData.append('sections_url', window.location.pathname);
+	// 	config.body = formData;
 		
-		fetch(`${routes.cart_add_url}`, config)
-		.then((response) => response.json())
-		.then((response) => {
-			if(window.location.pathname === "/cart") {
-				window.location = window.routes.cart_url;
-			} else {
-				cartRender.renderContents(response);
-			}
-		})
-		.catch((e) => {
-			console.error(e);
-		})
-	}
+	// 	fetch(`${routes.cart_add_url}`, config)
+	// 	.then((response) => response.json())
+	// 	.then((response) => {
+	// 		if(window.location.pathname === "/cart") {
+	// 			window.location = window.routes.cart_url;
+	// 		} else {
+	// 			cartRender.renderContents(response);
+	// 		}
+	// 	})
+	// 	.catch((e) => {
+	// 		console.error(e);
+	// 	})
+	// }
 	
 	updateLiveRegions(line, itemCount) {
 		if (this.currentItemCount === itemCount) {

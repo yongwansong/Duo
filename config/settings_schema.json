@@ -33,7 +33,7 @@
       }
     ]
   },
- {
+  {
     "name": "t:settings_schema.colors.name",
     "settings": [
       {
@@ -1496,6 +1496,12 @@
         "type": "product",
         "id": "gamification_free_gift",
         "label": "Gamification Free Gift"
+      },
+      {
+        "type": "text",
+        "id": "gamification_second_discount",
+        "label": "Gamification Second Discount Code",
+        "default": "5OFFGAMIFICATION"
       },
       {
         "type": "text",

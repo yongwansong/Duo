@@ -26,7 +26,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="theme-color" content="">
+    <meta name="theme-color" content="#e0eaf2">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
     {% if template == 'index' %}
@@ -41,6 +41,9 @@
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <title>
       {% if template == 'collection' %}
@@ -483,6 +486,8 @@
       window.freeGiftId = {{ settings.gamification_free_gift.selected_or_first_available_variant.id }}
       window.discountGoal = {{ settings.third_goal_price | times: 100 }}
       window.discountCode = "{{ settings.gamification_discount }}"
+      window.firstDiscountCode = "{{ settings.gamification_second_discount }}"
+      console.log(window.firstDiscountCode, window.freeGiftGoal, 'secondDiscountCode');
     </script>
 
     {%- if settings.predictive_search_enabled -%}
