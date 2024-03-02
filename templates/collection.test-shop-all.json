@@ -24,7 +24,6 @@
     },
     "all-pivot": {
       "type": "all-filter-pivot",
-      "disabled": true,
       "settings": {
       }
     },
@@ -132,7 +131,7 @@
       ],
       "settings": {
         "heading": "",
-        "padding_top": 10,
+        "padding_top": 0,
         "padding_bottom": 0,
         "mobile_padding_top": 0,
         "mobile_padding_bottom": 0,
@@ -221,7 +220,6 @@
         "c9ce3ad8-d62f-4ed1-866a-6c32c3729406",
         "51bf7b6e-4df4-46f1-95cc-af4735742f17"
       ],
-      "disabled": true,
       "settings": {
         "heading": "",
         "id_section_pivot": "bundles",
@@ -324,7 +322,6 @@
         "c9ce3ad8-d62f-4ed1-866a-6c32c3729406",
         "51bf7b6e-4df4-46f1-95cc-af4735742f17"
       ],
-      "disabled": true,
       "settings": {
         "heading": "",
         "id_section_pivot": "starter-pack",
@@ -382,7 +379,6 @@
         },
         "product_7h9bEq": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "featured_product": "immunity",
             "featured_product_two": "",
@@ -419,7 +415,7 @@
         "heading": "",
         "id_section_pivot": "toothbrushes",
         "padding_top": 0,
-        "padding_bottom": 25,
+        "padding_bottom": 0,
         "mobile_padding_top": 0,
         "mobile_padding_bottom": 0,
         "full_width": false,
@@ -433,6 +429,7 @@
         "card_two_title": "",
         "card_two_subtitle": "",
         "card_link_two": "",
+        "image_card_three": "shopify:\/\/shop_images\/Rectangle_649_1.png",
         "card_three_title": "Mucosal Absorption",
         "card_three_subtitle": "Our mouths absorb nutrients directly into the bloodstream. That’s the key to the efficient bio-availability of the vitamins and supplements in Duo, added for convenience and health.",
         "card_link_three": "#feature-footer"
@@ -500,7 +497,6 @@
         "c9ce3ad8-d62f-4ed1-866a-6c32c3729406",
         "product_7h9bEq"
       ],
-      "disabled": true,
       "settings": {
         "heading": "",
         "id_section_pivot": "toothbrushes",
@@ -527,7 +523,6 @@
     },
     "all-feature-duo": {
       "type": "all-feature-footer",
-      "disabled": true,
       "settings": {
         "title_in_middle": "The science of mucosal absorption",
         "rich_text": "<p>As part of its central role in the digestive system, the mouth is full of blood capillaries and absorbent tissue that actively extract nutrients and distribute them around the body. Many medications and supplements use this method of delivery because of its efficiency and ease.<\/p><p>As you brush, the functional vitamins and supplements in Duo cross the permeable membrane inside your mouth and absorb directly into your system.<\/p>",
@@ -608,9 +603,8 @@
         "icon_ywCMTx",
         "icon_jn4AFP"
       ],
-      "disabled": true,
       "settings": {
-        "padding_top": 10,
+        "padding_top": 0,
         "padding_bottom": 0,
         "mobile_padding_top": 0,
         "mobile_padding_bottom": 0,
@@ -632,7 +626,6 @@
       "block_order": [
         "block_TPhEVH"
       ],
-      "disabled": true,
       "settings": {
         "padding_top": 0,
         "padding_bottom": 0,
