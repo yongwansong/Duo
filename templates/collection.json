@@ -526,7 +526,6 @@
     },
     "all-feature-duo": {
       "type": "all-feature-footer",
-      "disabled": true,
       "settings": {
         "title_in_middle": "The science of mucosal absorption",
         "rich_text": "<p>As part of its central role in the digestive system, the mouth is full of blood capillaries and absorbent tissue that actively extract nutrients and distribute them around the body. Many medications and supplements use this method of delivery because of its efficiency and ease.<\/p><p>As you brush, the functional vitamins and supplements in Duo cross the permeable membrane inside your mouth and absorb directly into your system.<\/p>",
