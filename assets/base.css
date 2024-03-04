@@ -2779,7 +2779,6 @@ img.singleimage {
 }
 
 a.button.button--primary, .button.button-custom.button--primary {
-	transition: 1s;
 	border: 1px solid #000;
 	border-radius: 0;
 	font-size: 15.055px;
