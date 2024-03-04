@@ -263,14 +263,6 @@ body .button--secondary{
 	}
 }
 
-.newheader{
-  background-color: #E2EBF2;
-}
-
-.shopify-section-header-hidden .newheader{
-  background-color: transparent;
-}
-
 .shopify-section-header-hidden .header-wrapper{
    background-color: transparent !important;
 }
@@ -1328,7 +1320,6 @@ deferred-media {
 	border: 0.1rem solid transparent;
 	border-radius: 100px;
 	background-color: rgba(var(--color-button), var(--alpha-button-background));
-	box-shadow: 0 0 0 0.2rem rgba(var(--button-shadow-color), var(--alpha-button-border));
 	color: rgb(var(--color-button-text));
 	min-width: 12rem;
 	min-height: 4.5rem;
@@ -2011,40 +2002,7 @@ input[type='checkbox'] {
 }
 
 /* section-header */
-.endrock-header {
-	z-index: 3;
-    background-color: #E2EBF2
-}
 
-.shopify-section-header-sticky {
-	position: sticky;
-	top: 35px;
-}
-
-@media screen and (max-width: 768px) {
-	.shopify-section-header-sticky.homepage-color {
-		background-color: #8787BD;	
-	}	
-}
-
-.shopify-section-header-hidden {
-	/* transform: translateY(-100%); */
-	top: 0px;
-    background: transparent;
-}
-
-#shopify-section-header.animate {
-	transition: transform 0.15s ease-out;
-}
-
-/* Main Header Layout */
-.header-wrapper {
-	display: block;
-	position: relative;
-	background: #E2EBF4 !important;
-	border: none !important;
-    margin-top: 18px
-}
 
 .header-wrapper--border-bottom {
 	border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
@@ -2817,27 +2775,25 @@ img.singleimage {
 }
 
 
-a.button.button--primary {
+a.button.button--primary, .button.button-custom.button--primary {
 	transition: 1s;
 	border: 1px solid #000;
 	border-radius: 0;
 	font-size: 15.055px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 1.505px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: 1.505px;
 	padding: 12.972px 21px 11px;
-    background-color: #000;
-    color: #fff;
+	background-color: #000;
+	color: #fff;
 }
 
-a.button.button--primary:hover{
-  color: #000!important;
-}
-
-a.button.button--primary:hover {
+a.button.button--primary:hover, .button.button-custom.button--primary:hover {
 	background-color: #fff !important;
-	border: 1px solid #fff !important;
+	border: 2px solid #000000 !important;
+  color: #000!important;
+	
 }
 
 ul.scroolcls li {
@@ -5102,7 +5058,7 @@ header {
 .text__with-icon {
 	color: #0c176a;
 	text-align: center;
-	font-family: Poppins;
+	font-family: "OldschoolGrotesk-Regular";
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 600;
