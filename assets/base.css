@@ -174,7 +174,7 @@ html.no-js .no-js-hidden {
 }
 
 body .button--secondary{
-	border: none;
+	border: 1px solid;
     box-shadow: none;
 	border-radius: 0;
     padding: 0 0 5px;

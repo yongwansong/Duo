@@ -486,7 +486,7 @@ cart-drawer.is-empty .cart-drawer__recommendation{
 	font-size: 1.2rem;
 	text-transform: uppercase;
 	font-weight: 600;
-	border-width: 2px;
+	border-width: 1px;
   background: #fff;
 }
 
