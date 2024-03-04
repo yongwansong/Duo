@@ -116,19 +116,21 @@
     border: none !important;
       margin-top: 18px
   }
-
-  @media screen and (max-width: 1250px) {
     .endrock-header {
       z-index: 3;
-      background-color: #E2EBF4;
     }
 
-    .endrock-header .newheader {
+    
+  @media screen and (max-width: 1250px) {
+    .endrock-header , .endrock-header .newheader {
       background-color: #E2EBF4;
     }
   }
 
   @media screen and (min-width: 1251px) {
+    .endrock-header:not(.shopify-section-header-sticky) , .endrock-header:not(.shopify-section-header-sticky) .newheader {
+      background-color: #E2EBF4;
+    }
     
     {%  if template.name == 'product' %}
 

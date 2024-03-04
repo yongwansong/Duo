@@ -270,7 +270,13 @@
 
                                 <div class="custom-product_form">
                                     {%- if endrock_featured_product.selected_or_first_available_variant.available -%}
-                                        {%- assign product_form_id = 'quick-add-' | append: section.id | append: endrock_featured_product.id -%}
+                                        {%- assign variant_current = endrock_featured_product.selected_or_first_available_variant -%}
+                                        {%- for variant_metafield in endrock_featured_product.variants -%}
+                                            {%- if variant_metafield.metafields.variant.select_default_card_product.value -%}
+                                                {%- assign variant_current = variant_metafield -%}
+                                            {%- endif -%}
+                                        {%- endfor -%}
+                                        {%- assign product_form_id = 'quick-add-' | append: section.id | append: variant_current.id -%}
                                         <product-form data-cart-type="{{ settings.cart_type }}">
                                             {%- form 'product',
                                                 endrock_featured_product,
@@ -281,11 +287,11 @@
                                             -%}
                                             {% comment %} {% render 'loop-subscriptions' type: 'product-widget', product: product %} {% endcomment %}
 
-                                            <div class="{{ endrock_featured_product.title| downcase }} products__heading add-toCart">
+                                            <div class="{{ variant_current.title| downcase }} products__heading add-toCart">
                                             <input
                                                 type="hidden"
                                                 name="id"
-                                                value="{{ endrock_featured_product.selected_or_first_available_variant.id }}"
+                                                value="{{ variant_current.id }}"
                                                 disabled
                                             >
                                             <button
@@ -294,14 +300,14 @@
                                                 name="add"
                                                 class="quick-add__submit cllctnadd"
                                                 aria-haspopup="dialog"
-                                                aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ endrock_featured_product.id }}"
+                                                aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ variant_current.id }}"
                                                 aria-live="polite"
-                                                {% if endrock_featured_product.selected_or_first_available_variant.available == false %}
+                                                {% if variant_current.available == false %}
                                                 disabled
                                                 {% endif %}
                                             >
                                                 <span class="add-to-cart-message">
-                                                {%- if endrock_featured_product.selected_or_first_available_variant.available -%}
+                                                {%- if variant_current.available -%}
                                                     {{ 'products.product.add_to_cart' | t }}
                                                 {%- else -%}
                                                     {{ 'products.product.sold_out' | t }}
