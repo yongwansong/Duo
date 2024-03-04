@@ -2774,6 +2774,9 @@ img.singleimage {
 	margin-bottom: 0.5em;
 }
 
+.button.button-custom {
+	text-transform: uppercase;
+}
 
 a.button.button--primary, .button.button-custom.button--primary {
 	transition: 1s;
@@ -2789,10 +2792,16 @@ a.button.button--primary, .button.button-custom.button--primary {
 	color: #fff;
 }
 
-a.button.button--primary:hover, .button.button-custom.button--primary:hover {
+a.button.button--primary:hover {
 	background-color: #fff !important;
 	border: 2px solid #000000 !important;
-  color: #000!important;
+  color: #000 !important;
+}
+
+.button.button-custom.button--primary:hover {
+	background-color: #fff;
+	border: 2px solid #000000 ;
+  color: #000;
 	
 }
 
@@ -3680,7 +3689,7 @@ section.shopify-section.feature-collection {
 	position: relative;
 }
 
-.original.products__heading.add-toCart:hover {
+/* .original.products__heading.add-toCart:hover {
 	background-color: #4CBAFE;
 	cursor: pointer !important;
 	color: #000;
@@ -3710,7 +3719,7 @@ section.shopify-section.feature-collection {
 	color: #000;
 	transition: 0.7s;
 	border: none;
-}
+} */
 
 .subnewhader {
 	display: flex;
@@ -5066,7 +5075,7 @@ header {
 }
 .quick-add__submit {
 	border-radius: 20px;
-	border: 1px solid #0c176a !important;
+	border: 1px solid #0c176a ;
 	box-shadow: none !important;
 }
 .full-unstyled-link {
