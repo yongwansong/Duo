@@ -257,7 +257,7 @@
                 </nav>
                 <div class="menu-drawer__utility-links">
                   {%- if shop.customer_accounts_enabled -%}
-                    <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__account link focus-inset h5">
+                    <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}https://duotoothpaste.com/a/loop_subscriptions/get-subscription-link{%- endif -%}" class="menu-drawer__account link focus-inset h5">
                       {% render 'icon-account' %}
                       {%- liquid
                         if customer
@@ -588,7 +588,7 @@
       {%- if shop.customer_accounts_enabled -%}
 
               
-      <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset">
+      <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}https://duotoothpaste.com/a/loop_subscriptions/get-subscription-link{%- endif -%}" class="header__icon header__icon--account link focus-inset">
           {% render 'icon-account' %}
           <span class="visually-hidden">
             {%- liquid
@@ -806,7 +806,7 @@
 
       {%- if shop.customer_accounts_enabled -%}
              
-      <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
+      <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}https://duotoothpaste.com/a/loop_subscriptions/get-subscription-link{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
           {% render 'icon-account' %}
           <span class="visually-hidden">
             {%- liquid
