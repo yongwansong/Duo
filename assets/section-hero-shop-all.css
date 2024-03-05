@@ -780,21 +780,13 @@
 
 
 
+
+
 @media (max-width:1000px) {
 
     .product-list_ {
         width: calc(50% - 12px);
         margin-bottom: 32px;
-    }
-
-    .button--full-width {
-
-        width: 99%!important;
-    }
- 
-    .slick-slide img {
-        display: block;
-        width: 99%!important;
     }
 
 
