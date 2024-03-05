@@ -2,7 +2,12 @@
   "sections": {
     "main": {
       "type": "main-login",
+      "custom_css": [
+        ".button{border-radius: 0px; }"
+      ],
       "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
