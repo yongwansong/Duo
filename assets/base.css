@@ -1327,6 +1327,9 @@ deferred-media {
 	-webkit-appearance: none;
 	appearance: none;
 	outline-offset: 0.1rem;
+	min-height: 0;
+    line-height: 1 !important;
+    border-radius: 0;
 }
 .button:not(.button--secondary, .button--tertiary):hover,
 .shopify-challenge__button:not(.button--secondary, .button--tertiary):hover,
@@ -3350,14 +3353,14 @@ span.rebuy-cart__flyout-item-property-value {
 }
 
 .rebuy-cart__flyout-recommendations {
-	background: #EFF2FF !important;
+	background: #e3ebf2 !important;
 	/*     background: linear-gradient(99.22deg, #CBFFED 0%, rgba(203, 255, 237, 0.25) 100%)  !important; */
 	border-color: transparent !important;
 }
 
 .upsellheading {
 	padding-left: 20px;
-	background: #EFF2FF;
+	background: #e3ebf2;
 	width: 100%;
 	padding-top: 1.5rem;
 }
@@ -4917,7 +4920,7 @@ header {
 }
 
 .shopify-policy__container .image-with-text .text{
-	background: #0C176A;
+	background: #000000;
     width: 50%;
     display: flex;
     justify-content: center;
@@ -5064,7 +5067,7 @@ header {
 	line-height: 20px;
 }
 .text__with-icon {
-	color: #0c176a;
+	color: #000000;
 	text-align: center;
 	font-family: "OldschoolGrotesk-Regular";
 	font-size: 14px;
@@ -5074,7 +5077,7 @@ header {
 }
 .quick-add__submit {
 	border-radius: 20px;
-	border: 1px solid #0c176a ;
+	border: 1px solid #000000 ;
 	box-shadow: none !important;
 }
 .full-unstyled-link {
@@ -5099,7 +5102,7 @@ header {
 	height: 72px !important;
 	justify-content: center;
 	align-items: center;
-	border-radius: 8px !important;
+	border-radius: 0 !important;
 	border: none !important;
 }
 .recommendation-product__wrapper {
