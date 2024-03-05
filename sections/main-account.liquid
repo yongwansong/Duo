@@ -24,7 +24,6 @@
       {{ 'customer.log_out' | t }}
     </a>
   </div>
-{% render 'loop-subscriptions', type: 'customer-portal-link' %}
 
   <div>
     <div>
@@ -47,6 +46,8 @@
                 <th id="ColumnTotal" scope="col" role="columnheader">{{ 'customer.orders.total' | t }}</th>
               </tr>
             </thead>
+{% render 'loop-subscriptions', type: 'customer-portal-link' %}
+            
             <tbody role="rowgroup">
               {%- for order in customer.orders -%}
                 <tr role="row">
