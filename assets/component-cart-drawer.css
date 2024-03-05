@@ -415,6 +415,7 @@
 cart-drawer.is-empty .drawer__footer, cart-drawer.is-empty cart-drawer-items{
 	display: none;
 }
+
 .cart-drawer__recommendation-wrapper{
 	background: #EFF2FF;
 	margin-left: -1.5rem;
