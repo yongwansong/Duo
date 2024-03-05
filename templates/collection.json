@@ -219,14 +219,14 @@
         "image_card_one": "shopify:\/\/shop_images\/Rectangle_646.png",
         "card_one_title": "Let’s talk about nHa",
         "card_one_subtitle": "Learn More",
-        "card_link_one": "https:\/\/duotoothpaste.com\/pages\/science#mucosal",
+        "card_link_one": "https:\/\/duotoothpaste.com\/pages\/science",
         "image_card_two": "shopify:\/\/shop_images\/Rectangle_647.png",
         "card_two_title": "Want to customize your own bundle?",
         "card_two_subtitle": "Learn More",
         "card_link_two": "https:\/\/duotoothpaste.com\/pages\/subscribe",
         "card_three_title": "Mucosal Absorption",
         "card_three_subtitle": "Our mouths absorb nutrients directly into the bloodstream. That’s the key to the efficient bio-availability of the vitamins and supplements in Duo, added for convenience and health.",
-        "card_link_three": "#feature-footer"
+        "card_link_three": "https:\/\/duotoothpaste.com\/pages\/science#mucosal"
       }
     },
     "all-feat-coll-four": {
@@ -314,7 +314,7 @@
         "image_card_three": "shopify:\/\/shop_images\/Rectangle_649_1.png",
         "card_three_title": "Mucosal Absorption",
         "card_three_subtitle": "Our mouths absorb nutrients directly into the bloodstream. That’s the key to the efficient bio-availability of the vitamins and supplements in Duo, added for convenience and health.",
-        "card_link_three": "#feature-footer"
+        "card_link_three": "https:\/\/duotoothpaste.com\/pages\/science#mucosal"
       }
     },
     "all-feat-coll-two": {
@@ -524,7 +524,6 @@
         "card_link_three": ""
       }
     },
- 
     "endrock_icon_with_text_tTL9yd": {
       "type": "all-endrock-icon-with-text",
       "blocks": {

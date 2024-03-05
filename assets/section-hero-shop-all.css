@@ -13,6 +13,15 @@
 }
 
 
+.endrock-header, .endrock-header .newheader {
+    background-color: #ffd761;
+}
+.shopify-section-header-hidden .header-wrapper {
+    background-color: transparent !important;
+}
+
+
+
 .itemtemp{
     margin-top: 11px;
 }
@@ -234,10 +243,10 @@
 }
 
 .title_info {
-    font-size: 28px;
+    font-size:64px;
     font-style: normal;
     font-weight: 300;
-    line-height: 28px;
+    line-height: 64px;
     max-width: 100%;
     text-align: left;
     position: relative;
@@ -246,10 +255,10 @@
 }
 
 .title_info2 {
-    font-size: 29px;
+    font-size: 36px;
     font-style: normal;
     font-weight: 300;
-    line-height: 41px;
+    line-height: 42px;
     max-width: 180px;
     text-align: left;
     position: relative;
@@ -784,6 +793,7 @@
 
 .imagencontainer {
     width: calc(50% - 10px) !important;
+    margin-bottom: 30px;
 }
 
 
@@ -847,7 +857,7 @@
     }
 
     .title_info {
-        font-size: 36px !important;
+        font-size: 30px !important;
         font-style: normal;
         font-weight: 300;
         line-height: 36px !important;
@@ -868,7 +878,7 @@
 
 
     .link_info {
-        bottom: 40px!important;
+        bottom: 20px!important;
     }
 
  
@@ -896,11 +906,10 @@
 
 .imagencontainer {
     width: calc(25% - 10px);
-    min-height: 290px;
 }
 
 .imagencontainerfinal {
-    width: calc(50% - 23px);
+    width: calc(50% - 10px);
 }
 
 .imagencard {
@@ -910,7 +919,7 @@
 }
 
 .link_info {
-    bottom: 10%!important;
+    bottom: 40px!important;
     position: absolute;
     margin-left: 30px;
     color: black;
@@ -951,7 +960,7 @@
     line-height: 20px;
     padding: 10px;
     font-family: OldschoolGrotesk-Regular;
-    width: calc(100% - 20px);
+    width: calc(49% - 20px);
     bottom: 20px;
 }
 

@@ -184,17 +184,27 @@
                                     <div  id="block--{{ block.id }}" >
 
                                     <div class="slick-carousel imgmobile">
-                                        <div class="slide-content"><img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
+                                        <div class="slide-content">
+                                            
+                                        <a href="{{ endrock_featured_product.url }}">
+                                            
+                                        <img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
                                           class="first_image"
                                           alt="{{ block.settings.custom_product_image.alt }}"
                                           loading="lazy"
-                                        ></div>
+                                        >  </a></div>
                                         
-                                        <div class="slide-content"><img src="{{ block.settings.hover_image | img_url: 'master' }}"
+                                        <div class="slide-content">
+                                            
+                                        <a href="{{ endrock_featured_product.url }}">
+                                            <img src="{{ block.settings.hover_image | img_url: 'master' }}"
                                           class="hover_image_"
                                           alt="{{ block.settings.hover_image.alt }}"
                                           loading="lazy"
-                                        ></div>
+                                        > 
+                                        </a>
+                                        
+                                        </div>
                                             
                                         </div>
 
