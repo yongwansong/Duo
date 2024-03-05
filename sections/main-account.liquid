@@ -90,7 +90,6 @@
         {%- else -%}
           <p>{{ 'customer.orders.none' | t }}</p>
         {%- endif -%}
-{% render'loop-subscriptions', type: 'customer-portal-link' %}
 
         {%- if paginate.pages > 1 -%}
           {%- if paginate.parts.size > 0 -%}
