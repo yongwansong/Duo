@@ -15,8 +15,7 @@
     <div>
       <h2>{{ 'customer.orders.title' | t }}</h2>
       
-
-
+{% render 'loop-subscriptions', type: 'customer-portal-link' %}
 {% paginate customer.orders by 20 %}
         {%- if customer.orders.size > 0 -%}
           <table role="table" class="order-history">
@@ -60,7 +59,6 @@
                   >
                     {{ order.financial_status_label }}
                   </td>
-                  
                   <td
                     headers="RowOrder ColumnFulfillment"
                     role="cell"
@@ -126,7 +124,6 @@
         {%- endif -%}
       {% endpaginate %}
     </div>
-{% render 'loop-subscriptions', type: 'customer-portal-link'%}
 
     <div>
       <h2>{{ 'customer.account.details' | t }}</h2>
