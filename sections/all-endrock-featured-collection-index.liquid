@@ -312,9 +312,9 @@
                                           loading="lazy"
                                         ></div>
                                         
-                                        <div class="slide-content"><img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
+                                        <div class="slide-content"><img src="{{ block.settings.hover_image | img_url: 'master' }}"
                                           class="hover_image_"
-                                          alt="{{ block.settings.custom_product_image.alt }}"
+                                          alt="{{ block.settings.hover_image.alt }}"
                                           loading="lazy"
                                         ></div>
                                             
@@ -493,7 +493,7 @@
                                 
                             
                                 {%- if block.settings.featured_product_two != blank -%}
-                            <div class="product-list_ product-list_sw {% if section.settings.swipe_on_mobile %}swiper-slide{% endif %}">
+                            <div class="product-list2 product-list_sw {% if section.settings.swipe_on_mobile %}swiper-slide{% endif %}">
                                     {%- if block.settings.custom_product_image != blank -%}
                                         <div class="custom_product_image" id="block--{{ block.id }}" style="padding-bottom: {{ 100 | divided_by: block.settings.custom_product_image.aspect_ratio }}%">
                                             <a href="{{ endrock_featured_product.url }}">
@@ -666,9 +666,9 @@
                                                     alt="{{ block.settings.custom_product_image2.alt }}"
                                                     loading="lazy"
                                                 >
-                                                <img src="{{ block.settings.custom_product_image2 | img_url: 'master' }}"
+                                                <img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
                                                     class="hover_image"
-                                                    alt="{{ block.settings.custom_product_image2.alt }}"
+                                                    alt="{{ block.settings.custom_product_image.alt }}"
                                                     loading="lazy"
                                                 >
                                             </a>
@@ -830,9 +830,9 @@
                                                     alt="{{ block.settings.custom_product_image3.alt }}"
                                                     loading="lazy"
                                                 >
-                                                <img src="{{ block.settings.custom_product_image3 | img_url: 'master' }}"
+                                                <img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
                                                     class="hover_image"
-                                                    alt="{{ block.settings.custom_product_image3.alt }}"
+                                                    alt="{{ block.settings.custom_product_image.alt }}"
                                                     loading="lazy"
                                                 >
                                             </a>
@@ -991,9 +991,9 @@
                                                     alt="{{ block.settings.custom_product_image4.alt }}"
                                                     loading="lazy"
                                                 >
-                                                <img src="{{ block.settings.custom_product_image4 | img_url: 'master' }}"
+                                                <img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
                                                     class="hover_image"
-                                                    alt="{{ block.settings.custom_product_image4.alt }}"
+                                                    alt="{{ block.settings.custom_product_image.alt }}"
                                                     loading="lazy"
                                                 >
                                             </a>
@@ -1181,7 +1181,6 @@
 
 
                         {%- if section.settings.image_card_three -%}
-                            <div class="  imagencontainerfinal">
 
                             <div class="image-info2">
 
@@ -1195,11 +1194,9 @@
                             </div>
                                 <img class="imagencard" src="{{ section.settings.image_card_three | img_url: 'master' }}" alt="{{ section.settings.card_three_title }}">
                                
-                            </div>   </div>
+                            </div>  
 
-                            <div class="imagencontainer">
-
-                            </div>
+                       
 
                         {%- endif -%}
 

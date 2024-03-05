@@ -847,10 +847,10 @@
     }
 
     .title_info {
-        font-size: 28px !important;
+        font-size: 36px !important;
         font-style: normal;
         font-weight: 300;
-        line-height: 32px !important;
+        line-height: 36px !important;
         max-width: 100%;
         text-align: left;
         position: relative;
@@ -885,7 +885,7 @@
 
     .tabs {
         font-size: 8px!important;
-        margin: 0px!important;
+        margin: 5px 0px!important;
         letter-spacing: 0px;
     }
 
@@ -896,7 +896,7 @@
 
 .imagencontainer {
     width: calc(25% - 10px);
-    height: 100%;
+    min-height: 290px;
 }
 
 .imagencontainerfinal {
@@ -942,18 +942,17 @@
 }
 
 .imagen-info-text {
-       position: absolute;
-    background: #A5E9FF;
-    margin: 0px;
+    position: absolute;
+    background: #a5e9ff;
+    margin: 10px;
     font-size: 14px;
     font-weight: 500;
-    color: black;
+    color: #000;
     line-height: 20px;
     padding: 10px;
     font-family: OldschoolGrotesk-Regular;
-    width: calc(49% - 23px);
+    width: calc(100% - 20px);
     bottom: 20px;
-    height: fit-content;
 }
 
 
@@ -1006,12 +1005,34 @@
       }
 
 
+}
+
+a.button.button--primary, .button.button-custom.button--primary {
+    border: 0px solid #000;
+    border-radius: 0;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -.015em;
+    background-color: #000;
+    color: #fff;
+    min-height: 30px !important;
+    font-family: inherit;
+
+}
+
+.endrock-featured-collection .add-toCart span
+{
+    padding: 14px;
+}
+
 .endrock-featured-collection .product_title {
     line-height: 18px!important;
     margin-bottom: 0px!important;
     font-size: 20px!important;
 }
-}
+
 
 .packtitle_ {
     font-size: 16px;
