@@ -16,8 +16,10 @@
 }
 
 .customer button {
-  margin: 2rem 0 1.5rem; 
-  border-radius:40px;
+  margin: 2rem 0 1.5rem;
+  border-radius: 0;
+  line-height: 1;
+  min-height: 0;
 }
 
 
