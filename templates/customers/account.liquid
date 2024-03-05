@@ -1,4 +1,5 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
+{% render 'loop-subscriptions', type: 'customer-portal-link'%}
 
 <div class="customer account">
   <div>
@@ -15,7 +16,6 @@
     <div>
       <h2>{{ 'customer.orders.title' | t }}</h2>
       
-{% render 'loop-subscriptions', type: 'customer-portal-link'%}
 
 
 {% paginate customer.orders by 20 %}
