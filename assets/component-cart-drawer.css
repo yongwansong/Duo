@@ -421,7 +421,6 @@ cart-drawer.is-empty .drawer__footer, cart-drawer.is-empty cart-drawer-items{
 	margin-right: -1.5rem;
 	padding-left: .5rem;
 	padding-right: .5rem;
-    margin-top: 30px;
 
 }
 .cart-drawer__recommendation{
@@ -483,13 +482,12 @@ cart-drawer.is-empty .cart-drawer__recommendation{
 .recommendation-product__atc .button{
 	padding: 0.5rem 1.5rem .3rem;
 	min-width: 0;
-    min-height: 3.5rem;
+  min-height: 3.5rem;
 	font-size: 1.2rem;
 	text-transform: uppercase;
 	font-weight: 600;
-	border-width: 2px;
-	border-radius: 30px;
-    background: #fff;
+	border-width: 1px;
+  background: #fff;
 }
 
 .recommendation-product__atc .button:hover{

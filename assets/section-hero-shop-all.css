@@ -54,11 +54,6 @@
 
 }
 
-.header-wrapper
-{
-    background: #ffd761!important;
-}
-
 @media (min-width: 768px){
 
     
@@ -83,15 +78,6 @@
     }
   }
 
-
-.endrock-newheader {
-    background: #ffd55c;
-}
-
-.endrock-header {
-    z-index: 3;
-    background-color: #ffd458;
-}
 
 
 @media (min-width: 1250px) {

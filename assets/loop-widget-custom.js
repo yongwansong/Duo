@@ -1517,7 +1517,7 @@ function updateCartButtonText({ productId }) {
     if (!addToCartButton) return;
 
     const buttonText = getButtonText(isOneTimeOrder, productId);
-    updateButtonInnerHTML(addToCartButton, buttonText);
+    //updateButtonInnerHTML(addToCartButton, buttonText);
 }
 
 function determineOneTimeOrder(productId) {

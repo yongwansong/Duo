@@ -31,11 +31,6 @@ assign products_in_cart = products_in_cart | split: ','
 -%}
 
 
-
-
-
-
-
 <div class="slider">
 <div class="slides">
   {%- for product in settings.cart_drawer_collection.products limit: 4 -%}
@@ -45,92 +40,98 @@ assign products_in_cart = products_in_cart | split: ','
       <li class="recommendation-product__wrapper slide">
   
       {%- if product.selected_or_first_available_variant.available -%}
-        {%- assign product_form_id = 'quick-add-' | append: section.id | append: product.id -%}
+        {%- assign variant_current = product.selected_or_first_available_variant -%}
+        {%- for variant_metafield in product.variants -%}
+          {%- if variant_metafield.metafields.variant.select_default_card_product.value -%}
+            {%- assign variant_current = variant_metafield -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- assign product_form_id = 'quick-add-' | append: section.id | append: variant_current.id -%}
         <product-form data-cart-type="{{ settings.cart_type }}">
           {%- form 'product',
-          product,
-          id: product_form_id,
-          class: 'form formflex',
-          novalidate: 'novalidate',
-          data-type: 'add-to-cart-form'
-          -%}
-      <div class="recommendation-product__image">
-        <img
-        srcset="
-          {%- if product.featured_media.width >= 50 -%}{{ product.featured_media | img_url: '50x' }} 50w,{%- endif -%}
-          {%- if product.featured_media.width >= 80 -%}{{ product.featured_media | img_url: '80x' }} 80w,{%- endif -%}
-          {%- if product.featured_media.width >= 100 -%}{{ product.featured_media | img_url: '100x' }} 100w,{%- endif -%}
-          {%- if product.featured_media.width >= 150 -%}{{ product.featured_media | img_url: '150x' }} 150w,{%- endif -%}
-          {%- if product.featured_media.width >= 200 -%}{{ product.featured_media | img_url: '300x' }} 200w,{%- endif -%}
-          {%- if product.featured_media.width >= 300 -%}{{ product.featured_media | img_url: '300x' }} 300w,{%- endif -%}
-          {{ product.featured_media | img_url: 'master' }} {{ product.featured_media.width }}w
-        "
-        src="{{ product.featured_media | img_url: '100x' }}"
-        sizes="100x"
-        alt="{{ product.featured_media.alt | escape }}"
-        loading="lazy"
-        class="motion-reduce"
-        width="{{ product.featured_media.width }}"
-        height="{{ product.featured_media.height }}"
-        >
-      </div>
-      <div class="recommendation-product__info">
-        <h3 id="title-{{ section.id }}-{{ product.id }}">
-        <a href="{{ product.url | default: '#' }}" class="full-unstyled-link">
-          {{ product.title }}
-        </a>
-        </h3>
-        {% render 'price-drawer', product: product, use_variant: true %}
-  
-        <div class="quantity-controls"> 
-         
-        <input
-          type="hidden"
-          name="id"
-          value="{{ product.selected_or_first_available_variant.id }}"
-          disabled
-          >
-          <button type="button" class="quantity-control-btn" onclick="decrementQuantity(this)">-</button>
-          <input type="number" name="quantity" class="quantity-input quantity__input" value="1" min="1" max="99">
-          <button type="button" class="quantity-control-btn" onclick="incrementQuantity(this)">+</button>
-          </div>
-      </div>
-      <div class="recommendation-product__atc">
-  
-          <button
-            id="{{ product_form_id }}-submit"
-            type="submit"
-            name="add"
-            class="quick-add__submit button button--secondary"
-            aria-haspopup="dialog"
-            aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}"
-            aria-live="polite"
-            {% if product.selected_or_first_available_variant.available == false %}
-            disabled
-            {% endif %}
-          >
-            <span>
-            {%- if product.selected_or_first_available_variant.available -%}
-              <span class="text__with-icon">
-              Add
-              </span>
-            {%- else -%}
-              {{ 'products.product.sold_out' | t }}
-            {%- endif -%}
-            </span>
-            <span class="sold-out-message hidden">
-            {{ 'products.product.sold_out' | t }}
-            </span>
-            <div class="loading-overlay__spinner hidden">
-            
+            product,
+            id: product_form_id,
+            class: 'form formflex',
+            novalidate: 'novalidate',
+            data-type: 'add-to-cart-form'
+            -%}
+            <div class="recommendation-product__image">
+              <img
+              srcset="
+                {%- if product.featured_media.width >= 50 -%}{{ product.featured_media | img_url: '50x' }} 50w,{%- endif -%}
+                {%- if product.featured_media.width >= 80 -%}{{ product.featured_media | img_url: '80x' }} 80w,{%- endif -%}
+                {%- if product.featured_media.width >= 100 -%}{{ product.featured_media | img_url: '100x' }} 100w,{%- endif -%}
+                {%- if product.featured_media.width >= 150 -%}{{ product.featured_media | img_url: '150x' }} 150w,{%- endif -%}
+                {%- if product.featured_media.width >= 200 -%}{{ product.featured_media | img_url: '300x' }} 200w,{%- endif -%}
+                {%- if product.featured_media.width >= 300 -%}{{ product.featured_media | img_url: '300x' }} 300w,{%- endif -%}
+                {{ product.featured_media | img_url: 'master' }} {{ product.featured_media.width }}w
+              "
+              src="{{ product.featured_media | img_url: '100x' }}"
+              sizes="100x"
+              alt="{{ product.featured_media.alt | escape }}"
+              loading="lazy"
+              class="motion-reduce"
+              width="{{ product.featured_media.width }}"
+              height="{{ product.featured_media.height }}"
+              >
             </div>
-          </button>
-  
-        {%- endform -%}
-  
+            <div class="recommendation-product__info">
+              <h3 id="title-{{ section.id }}-{{ variant_current.id }}">
+              <a href="{{ variant_current.url | default: '#' }}" class="full-unstyled-link">
+                {{ product.title }}
+              </a>
+              </h3>
+              {% render 'price-drawer', product: variant_current, use_variant: false %}
+        
+              <div class="quantity-controls"> 
+              
+              <input
+                type="hidden"
+                name="id"
+                value="{{ variant_current.id }}"
+                disabled
+                >
+                <button type="button" class="quantity-control-btn" onclick="decrementQuantity(this)">-</button>
+                <input type="number" name="quantity" class="quantity-input quantity__input" value="1" min="1" max="99">
+                <button type="button" class="quantity-control-btn" onclick="incrementQuantity(this)">+</button>
+                </div>
+            </div>
+            <div class="recommendation-product__atc">
+        
+                <button
+                  id="{{ product_form_id }}-submit"
+                  type="submit"
+                  name="add"
+                  class="quick-add__submit button button--secondary"
+                  aria-haspopup="dialog"
+                  aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ variant_current.id }}"
+                  aria-live="polite"
+                  {% if variant_current.available == false %}
+                  disabled
+                  {% endif %}
+                >
+                  <span>
+                    {%- if variant_current.available -%}
+                      <span class="text__with-icon">
+                      Add
+                      </span>
+                    {%- else -%}
+                      {{ 'products.product.sold_out' | t }}
+                    {%- endif -%}
+                  </span>
+                  <span class="sold-out-message hidden">
+                    {{ 'products.product.sold_out' | t }}
+                  </span>
+                  <div class="loading-overlay__spinner hidden">
+                  </div>
+                </button>
+        
+
+            </div>
+          {%- endform -%}
         </product-form>
         {%- endif -%}
-      </div>
       </li>
     {%- endfor -%}
   

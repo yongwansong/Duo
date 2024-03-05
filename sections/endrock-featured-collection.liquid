@@ -235,6 +235,14 @@
                                 {% endif %}
 
                                 <div class="custom-product_form">
+
+                                    <style>
+                                        .button.button-custom.button--primary.product-{{ endrock_featured_product.title | handleize }}:hover {
+                                            background: {{ endrock_featured_product.metafields.duo.product_color  }};
+                                            color: white;
+                                            border: 0px;
+                                        }
+                                    </style>
                                     {%- if endrock_featured_product.selected_or_first_available_variant.available -%}
                                       {%- assign variant_current = endrock_featured_product.selected_or_first_available_variant -%}
                                       {%- for variant_metafield in endrock_featured_product.variants -%}
@@ -254,7 +262,6 @@
                                             -%}
                                             {% comment %} {% render 'loop-subscriptions' type: 'product-widget', product: product %} {% endcomment %}
 
-                                            <div class="{{ endrock_featured_product.title| downcase }} products__heading add-toCart">
                                             <input
                                                 type="hidden"
                                                 name="id"
@@ -265,7 +272,7 @@
                                                 id="{{ product_form_id }}-submit"
                                                 type="submit"
                                                 name="add"
-                                                class="quick-add__submit cllctnadd"
+                                                class="quick-add__submit button button--full-width button-custom button--primary  product-{{ endrock_featured_product.title | handleize }}"
                                                 aria-haspopup="dialog"
                                                 aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ endrock_featured_product.id }}"
                                                 aria-live="polite"
@@ -297,7 +304,6 @@
                                                 </svg>
                                                 </div>
                                             </button>
-                                            </div>
                                         {%- endform -%}
                                         </product-form>
                                     {%- endif -%}
