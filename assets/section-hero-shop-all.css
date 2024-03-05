@@ -787,6 +787,10 @@
         margin-bottom: 32px;
     }
 
+    .button--full-width {
+
+        width: 99%!important;
+    }
  
     .slick-slide img {
         display: block;
