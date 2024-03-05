@@ -478,7 +478,7 @@
 
     .slick-slide img {
       
-        padding: 0px 0px 0px 3px!important;
+        padding: 0px 0px 0px 0px!important;
     }
     .item {
         cursor: pointer;
@@ -815,9 +815,10 @@
     margin: 10px!important;
     font-size: 10px!important;
     line-height: 14px!important;
-    padding: 10px!important;
-    bottom: 5px!important;
-    width: calc(49% - 10px);
+    padding: 15px!important;
+    width: calc(98% - 0px) !important;
+    bottom: 20px;
+    margin: 0px 5px !important;
 }
 
 
@@ -982,7 +983,7 @@
 
     .packtitle_
     {
-        font-size:12px!important;
+        font-size:11px!important;
     }
 
     .title-with-price{
