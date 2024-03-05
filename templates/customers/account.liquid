@@ -1,5 +1,4 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
-{% render 'loop-subscriptions', type: 'customer-portal-link'%}
 
 <div class="customer account">
   <div>
@@ -61,6 +60,8 @@
                   >
                     {{ order.financial_status_label }}
                   </td>
+{% render 'loop-subscriptions', type: 'customer-portal-link'%}
+                  
                   <td
                     headers="RowOrder ColumnFulfillment"
                     role="cell"
