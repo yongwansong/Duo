@@ -779,7 +779,11 @@
 }
 
 
+.endrock-featured-collection .products__heading.add-toCart {
 
+    margin: 0 !important;
+
+}
 
 
 @media (max-width:1000px) {
@@ -847,7 +851,7 @@
     }
     
     .custom_product_image {
-        padding-bottom: 121%!important;
+        padding-bottom: 126%!important;
     }
 
    
