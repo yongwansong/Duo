@@ -68,6 +68,7 @@
     
     .imagencontainerfinal {
         margin: 0 25%;
+        width: 100%;
       }
 }
 
@@ -136,6 +137,16 @@
 }
 
 @media (min-width: 1000px) {
+
+    .title_info2 {
+        font-size: 28px!important;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 36px!important;
+     
+    }
+
+
     .section-endrock-hero-image .mobile_image img {
         width: 100%;
         object-fit: cover;
@@ -207,10 +218,10 @@
     }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1000px) {
     .title_info {
-        font-size: 50px!important;
-        line-height: 50px!important;
+        font-size: 46px!important;
+        line-height: 46px!important;
     }
 
     .endrock-featured-collection__wrapper {
@@ -243,23 +254,23 @@
 }
 
 .title_info {
-    font-size: 42px;
+    font-size: 64px;
     font-style: normal;
     font-weight: 300;
-    line-height: 46px;
+    line-height: 68px;
     max-width: 100%;
     text-align: left;
     position: relative;
-    top: 15%;
+    top: 10%;
     padding: 15px;
 }
 
 
 .title_info2 {
-    font-size: 30px;
+    font-size: 36px;
     font-style: normal;
     font-weight: 300;
-    line-height: 36px;
+    line-height: 46px;
     max-width: 180px;
     text-align: left;
     position: relative;
@@ -739,10 +750,38 @@
     }
 }
 
+.imagen-info-text {
+    position: absolute;
+    background: #a5e9ff;
+    margin: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    line-height: 20px;
+    padding: 10px;
+    font-family: OldschoolGrotesk-Regular;
+    width: calc(50% - 22px);
+    bottom: 45px;
+}
+
+
+
 
 @media (min-width: 1000px) {
 
-    
+    .imagen-info-text {
+        position: absolute;
+        background: #a5e9ff;
+        margin: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #000;
+        line-height: 20px;
+        padding: 10px;
+        font-family: OldschoolGrotesk-Regular;
+        width: calc(50% - 20px) !important;
+        bottom: 10px!important;
+    }
 
     .custom_product_image {
         padding-bottom: 126%!important;
@@ -820,8 +859,8 @@
     font-size: 10px!important;
     line-height: 14px!important;
     padding: 15px!important;
-    bottom: 20px;
     margin: 0px 5px !important;
+    width: calc(50% - 10px);
 }
 
 
@@ -837,7 +876,7 @@
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 580px) {
     .header__icons {
         margin-right: 15px;
       }
@@ -913,7 +952,7 @@
 }
 
 .imagencontainerfinal {
-    width: calc(50% - 10px);
+
 }
 
 .imagencard {
@@ -954,19 +993,7 @@
     margin-top: 15px;
 }
 
-.imagen-info-text {
-    position: absolute;
-    background: #a5e9ff;
-    margin: 10px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #000;
-    line-height: 20px;
-    padding: 10px;
-    font-family: OldschoolGrotesk-Regular;
-    width: calc(49% - 20px);
-    bottom: 20px;
-}
+
 
 
 
@@ -975,13 +1002,18 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 580px) {
 
     .endrock-featured-collection .product_title {
-        line-height: 12px !important;
+        line-height: 20px!important;
+        margin-bottom: 0px!important;
+        font-size: 28px;
+    }
+    
+
+    .endrock-featured-collection .product_title {
   margin-bottom: 3px !important;
   margin-top: 3px !important;
-  font-size: 14px!important;
     }
 
     .packtitle_
@@ -1040,15 +1072,11 @@ a.button.button--primary, .button.button-custom.button--primary {
     padding: 14px;
 }
 
-.endrock-featured-collection .product_title {
-    line-height: 18px!important;
-    margin-bottom: 0px!important;
-    font-size: 20px!important;
-}
+
 
 
 .packtitle_ {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 18px !important;
     padding: 0;
     margin: 0;
