@@ -35,9 +35,25 @@
 }
 
 @media (max-width: 920px) {
+
+
+
+    .why-duo_wrapper .left-content__heading {
+        font-size: 36px !important;
+        margin: 30px 20px 22px !important;
+        max-width: 400px !important;
+        line-height: 42px !important;
+      }
+
+
     .why-duo_wrapper .left-content{
-        left: 37px;
+        left: 25px;
     }
+
+    .right-content {
+      
+        right: 25px!important;
+      }
 
     .why-duo_wrapper .left-content__description p{
         margin-bottom: 37px;
@@ -140,6 +156,8 @@
 }
 
 @media (max-width:767px) {
+
+    
     .content-wrapper{
         margin-bottom: 11px;
         margin-left: 30px;

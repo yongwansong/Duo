@@ -219,14 +219,14 @@
         "image_card_one": "shopify:\/\/shop_images\/Rectangle_646.png",
         "card_one_title": "Let’s talk about nHa",
         "card_one_subtitle": "Learn More",
-        "card_link_one": "https:\/\/duotoothpaste.com\/pages\/the-science",
+        "card_link_one": "https:\/\/duotoothpaste.com\/pages\/science",
         "image_card_two": "shopify:\/\/shop_images\/Rectangle_647.png",
         "card_two_title": "Want to customize your own bundle?",
         "card_two_subtitle": "Learn More",
         "card_link_two": "https:\/\/duotoothpaste.com\/pages\/subscribe",
         "card_three_title": "Mucosal Absorption",
         "card_three_subtitle": "Our mouths absorb nutrients directly into the bloodstream. That’s the key to the efficient bio-availability of the vitamins and supplements in Duo, added for convenience and health.",
-        "card_link_three": "#feature-footer"
+        "card_link_three": "https:\/\/duotoothpaste.com\/pages\/science#mucosal"
       }
     },
     "all-feat-coll-four": {
@@ -314,7 +314,7 @@
         "image_card_three": "shopify:\/\/shop_images\/Rectangle_649_1.png",
         "card_three_title": "Mucosal Absorption",
         "card_three_subtitle": "Our mouths absorb nutrients directly into the bloodstream. That’s the key to the efficient bio-availability of the vitamins and supplements in Duo, added for convenience and health.",
-        "card_link_three": "#feature-footer"
+        "card_link_three": "https:\/\/duotoothpaste.com\/pages\/science#mucosal"
       }
     },
     "all-feat-coll-two": {
@@ -524,19 +524,6 @@
         "card_link_three": ""
       }
     },
-    "all-feature-duo": {
-      "type": "all-feature-footer",
-      "disabled": true,
-      "settings": {
-        "title_in_middle": "The science of mucosal absorption",
-        "rich_text": "<p>As part of its central role in the digestive system, the mouth is full of blood capillaries and absorbent tissue that actively extract nutrients and distribute them around the body. Many medications and supplements use this method of delivery because of its efficiency and ease.<\/p><p>As you brush, the functional vitamins and supplements in Duo cross the permeable membrane inside your mouth and absorb directly into your system.<\/p>",
-        "column1_image": "shopify:\/\/shop_images\/small_logo1.png",
-        "column1_texts": "Done while brushing,Easy and efficient,Rapid uptake,",
-        "column2_title": "Regular Old Pills",
-        "column2_texts": "Uncomfortable to swallow,Difficult gastrointestinal digestion,Delayed delivery,",
-        "button_text": "Click me"
-      }
-    },
     "endrock_icon_with_text_tTL9yd": {
       "type": "all-endrock-icon-with-text",
       "blocks": {
@@ -689,7 +676,6 @@
     "all-feat-coll-four",
     "all-feat-coll-two",
     "all-feat-coll-three",
-    "all-feature-duo",
     "endrock_icon_with_text_tTL9yd",
     "all-why-duo"
   ]
