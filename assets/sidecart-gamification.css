@@ -1,8 +1,9 @@
 .cart-drawer__gamification {
-    padding: 10px 20px 25px;
-    background-color: rgb(var(--color-base-background-1));
+    padding: 10px 20px;
+    background-color: #e2ebf2;
     margin-left: -1.5rem;
     margin-right: -1.5rem;
+    margin-bottom: 25px 
 }
 
 .gamification-title {
