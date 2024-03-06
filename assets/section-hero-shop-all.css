@@ -783,7 +783,142 @@
     padding-bottom: 100%;
 }
 
+.imagencontainer {
+    width: calc(25% - 10px);
+    height: 100%;
+}
 
+.imagencontainerfinal {
+    width: calc(50% - 23px);
+}
+
+.imagencard {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.link_info {
+    bottom: 20px!important;
+    position: absolute;
+    margin-left: 30px;
+    color: black;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.link_info3 {
+    bottom: 0px;
+    position: absolute;
+    margin-left: 0px;
+    color: black;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.title_info3 {
+    color: #000;
+    font-family: Schnyder S;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: left;
+    position: relative;
+    top: 0%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.imagen-info-text {
+       position: absolute;
+    width: calc(23% - 23px);
+    background: #A5E9FF;
+    margin: 0px;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    line-height: 20px;
+    padding: 10px;
+    font-family: OldschoolGrotesk-Regular;
+    width: calc(49% - 23px);
+    bottom: 20px;
+    height: fit-content;
+}
+
+
+
+.product-list_sw {
+    width: 100%!important;
+}
+
+
+@media (max-width: 768px) {
+
+    .endrock-featured-collection .product_title {
+        line-height: 12px !important;
+        margin-bottom: 3px !important;
+        margin-top: 3px !important;
+        font-size: 14px!important;
+    }
+
+    .packtitle_
+    {
+        font-size:12px!important;
+    }
+
+    .title-with-price{
+
+        display: flex;
+  justify-content: center;
+  align-items: center;
+    }
+}
+
+
+.endrock-featured-collection .product_title {
+    margin-bottom: 0px!important;
+}
+
+
+.packtitle_ {
+    font-size: 16px;
+    line-height: 18px !important;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+}
+
+
+
+.endrock-featured-collection .title-with-price .product-price {
+
+    font-size: 20px!important;
+    line-height: 18px!important;
+ 
+    margin: 0;
+  }
+
+.tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 0px;
+    font-size: 10px;
+    margin: 5px;
+    margin-top: -10px;
+}
+
+
+@media (max-width: 1024px) {
+    .tabs{
+        font-size: 8px;
+    }
+
+    .link_info{
+        bottom: 40px !important;
+    }
+}
 
 @media (max-width: 768px) {
     .header__icons {
@@ -860,132 +995,6 @@
     }
 }
 
-.imagencontainer {
-    width: calc(25% - 10px);
-    height: 100%;
-}
-
-.imagencontainerfinal {
-    width: calc(50% - 23px);
-}
-
-.imagencard {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.link_info {
-    bottom: 20px!important;
-    position: absolute;
-    margin-left: 30px;
-    color: black;
-    font-weight: 600;
-    line-height: 30px;
-}
-
-.link_info3 {
-    bottom: 0px;
-    position: absolute;
-    margin-left: 0px;
-    color: black;
-    font-weight: 600;
-    line-height: 30px;
-}
-
-.title_info3 {
-    color: #000;
-    font-family: Schnyder S;
-    font-size: 29px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 20px;
-    text-align: left;
-    position: relative;
-    top: 0%;
-    margin-bottom: 15px;
-    margin-top: 15px;
-}
-
-.imagen-info-text {
-       position: absolute;
-    width: calc(23% - 23px);
-    background: #A5E9FF;
-    margin: 0px;
-    font-size: 14px;
-    font-weight: 500;
-    color: black;
-    line-height: 20px;
-    padding: 10px;
-    font-family: OldschoolGrotesk-Regular;
-    width: calc(49% - 23px);
-    bottom: 20px;
-    height: fit-content;
-}
-
-
-
-.product-list_sw {
-    width: 100%!important;
-}
-
-
-@media (max-width: 768px) {
-
-    .endrock-featured-collection .product_title {
-        line-height: 12px !important;
-  margin-bottom: 3px !important;
-  margin-top: 3px !important;
-  font-size: 14px!important;
-    }
-
-    .packtitle_
-    {
-        font-size:12px!important;
-    }
-
-    .title-with-price{
-
-        display: flex;
-  justify-content: center;
-  align-items: center;
-    }
-}
-
-
-.endrock-featured-collection .product_title {
-    line-height: 12px!important;
-    margin-bottom: 0px!important;
-}
-
-
-.packtitle_ {
-    font-size: 16px;
-    line-height: 18px !important;
-    padding: 0;
-    margin: 0;
-    font-weight: 600;
-}
-
-
-
-.endrock-featured-collection .title-with-price .product-price {
-
-    font-size: 20px!important;
-    line-height: 18px!important;
- 
-    margin: 0;
-  }
-
-.tabs {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    gap: 0px;
-    font-size: 10px;
-    margin: 5px;
-    margin-top: -10px;
-}
 
 .tab {
     text-align: center;
