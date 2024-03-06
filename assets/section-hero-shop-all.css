@@ -243,16 +243,17 @@
 }
 
 .title_info {
-    font-size:64px;
+    font-size: 42px;
     font-style: normal;
     font-weight: 300;
-    line-height: 64px;
+    line-height: 46px;
     max-width: 100%;
     text-align: left;
     position: relative;
     top: 15%;
     padding: 15px;
 }
+
 
 .title_info2 {
     font-size: 30px;
@@ -782,7 +783,7 @@
 .endrock-featured-collection .products__heading.add-toCart {
 
     margin: 0 !important;
-
+    padding: 0;
 }
 
 
@@ -851,7 +852,7 @@
     }
     
     .custom_product_image {
-        padding-bottom: 126%!important;
+        padding-bottom: 121%!important;
     }
 
    
