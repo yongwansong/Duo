@@ -4316,6 +4316,10 @@ header {
 		min-height: 100% !important;
 	}
 
+	.button.button-custom{
+		padding: 8px !important;
+	}
+
     .header{
       border-bottom: 0.5px solid #000000;
     }
