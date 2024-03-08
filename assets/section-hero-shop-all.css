@@ -13,6 +13,15 @@
 }
 
 
+.endrock-header, .endrock-header .newheader {
+    background-color: #ffd761;
+}
+.shopify-section-header-hidden .header-wrapper {
+    background-color: transparent !important;
+}
+
+
+
 .itemtemp{
     margin-top: 11px;
 }
@@ -47,7 +56,7 @@
     color: #000;
     font-weight: 600;
     text-transform: uppercase;
-    min-width: fit-content;
+    min-width: max-content;
     font-family: OldschoolGrotesk-Regular;
     margin-left: 5px;
     height: fit-content;
@@ -60,11 +69,12 @@
 
 }
 
-@media (min-width: 768px){
+@media (min-width: 480px){
 
     
     .imagencontainerfinal {
         margin: 0 25%;
+        width: 100%;
       }
 }
 
@@ -125,6 +135,16 @@
 }
 
 @media (min-width: 1000px) {
+
+    .title_info2 {
+        font-size: 28px!important;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 36px!important;
+     
+    }
+
+
     .section-endrock-hero-image .mobile_image img {
         width: 100%;
         object-fit: cover;
@@ -196,10 +216,10 @@
     }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1000px) {
     .title_info {
-        font-size: 50px!important;
-        line-height: 50px!important;
+        font-size: 46px!important;
+        line-height: 46px!important;
     }
 
     .endrock-featured-collection__wrapper {
@@ -232,22 +252,23 @@
 }
 
 .title_info {
-    font-size: 28px;
+    font-size: 64px;
     font-style: normal;
     font-weight: 300;
-    line-height: 28px;
+    line-height: 68px;
     max-width: 100%;
     text-align: left;
     position: relative;
-    top: 15%;
+    top: 10%;
     padding: 15px;
 }
 
+
 .title_info2 {
-    font-size: 29px;
+    font-size: 36px;
     font-style: normal;
     font-weight: 300;
-    line-height: 41px;
+    line-height: 46px;
     max-width: 180px;
     text-align: left;
     position: relative;
@@ -467,7 +488,7 @@
 
     .slick-slide img {
       
-        padding: 0px 0px 0px 3px!important;
+        padding: 0px 0px 0px 0px!important;
     }
     .item {
         cursor: pointer;
@@ -490,7 +511,23 @@
 }
 
 
-@media (max-width: 580px) {
+@media (max-width: 480px) {
+
+
+    .imagencontainerfinal {
+        width: calc(100% - 0px)!important;
+        padding-top: 10px;
+    }
+
+
+    
+    .title_info2 {
+        font-size: 24px!important;
+        line-height: 26px!important;
+        max-width: 120px!important;
+    }
+
+
     .hover_image_ {
         margin: 0px 0px;
     }
@@ -625,7 +662,31 @@
     margin-right: 15px;
 }
 
+
+@media (max-width:1000px) {
+
+    
+    .columnr {
+        display: flex;
+        padding: 10px 0;
+        margin: 5px 0;
+        font-size: 10px;
+        letter-spacing: -.2px;
+        line-height: 15px;
+    }
+
+.columnl {
+    display: flex;
+    background: #CEF3FF;
+    padding: 10px 10px;
+    margin: 5px 1px;
+    font-size: 10px;
+    letter-spacing: -0.2px;
+}}
+
 @media (max-width: 768px) {
+
+    
     .text_info_ft {
         padding: 20px 10px 20px;
         font-family: OldschoolGrotesk-Regular;
@@ -643,14 +704,7 @@
         padding-top: 0px!important;
     }
 
-    .columnl {
-        display: flex;
-        background: #CEF3FF;
-        padding: 10px 10px;
-        margin: 5px 1px;
-        font-size: 10px;
-        letter-spacing: -0.2px;
-    }
+  
 
     .text_ft {
         text-align: left;
@@ -669,14 +723,7 @@
         margin-left: 15px;
     }
 
-    .columnr {
-        display: flex;
-        padding: 10px 0;
-        margin: 5px 0;
-        font-size: 10px;
-        letter-spacing: -.2px;
-        line-height: 15px;
-    }
+  
 
     .img_title {
         max-width: 50px!important;
@@ -700,11 +747,41 @@
     }
 }
 
+.imagen-info-text {
+    position: absolute;
+    background: #a5e9ff;
+    margin: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    line-height: 20px;
+    padding: 10px;
+    font-family: OldschoolGrotesk-Regular;
+    width: calc(50% - 22px);
+    bottom: 45px;
+}
+
+
+
 
 @media (min-width: 1000px) {
 
+    .imagen-info-text {
+        position: absolute;
+        background: #a5e9ff;
+        margin: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #000;
+        line-height: 20px;
+        padding: 10px;
+        font-family: OldschoolGrotesk-Regular;
+        width: calc(50% - 20px) !important;
+        bottom: 10px!important;
+    }
+
     .custom_product_image {
-        padding-bottom: 115%!important;
+        padding-bottom: 126%!important;
     }
 
     
@@ -739,10 +816,24 @@
 }
 
 
-@media (max-width: 580px) {
+.endrock-featured-collection .products__heading.add-toCart {
+
+    margin: 0 !important;
+    padding: 0;
+}
+
+
+@media (max-width:1000px) {
+
+    .product-list_ {
+        width: calc(50% - 12px);
+        margin-bottom: 32px;
+    }
+
+
 .imagencontainer {
-    width: calc(54% - 23px) !important;
-    max-height: 335px;
+    width: calc(50% - 10px) !important;
+    margin-bottom: 30px;
 }
 
 
@@ -758,18 +849,15 @@
     width: calc(51% - 15px)!important;
 }
 
-.imagencontainerfinal {
-    width: calc(100% - 0px)!important;
-    padding-top: 10px;
-}
+
 
 .imagen-info-text {
     margin: 10px!important;
     font-size: 10px!important;
     line-height: 14px!important;
-    padding: 10px!important;
-    bottom: 5px!important;
-    width: calc(98% - 10px) !important;
+    padding: 15px!important;
+    margin: 0px 5px !important;
+    width: calc(50% - 10px);
 }
 
 
@@ -780,7 +868,7 @@
 }
 
 .custom_product_image {
-    padding-bottom: 100%;
+    padding-bottom: 126% !important;
 }
 
 .imagencontainer {
@@ -920,7 +1008,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 580px) {
     .header__icons {
         margin-right: 15px;
       }
@@ -944,10 +1032,10 @@
     }
 
     .title_info {
-        font-size: 28px !important;
+        font-size: 30px !important;
         font-style: normal;
         font-weight: 300;
-        line-height: 32px !important;
+        line-height: 36px !important;
         max-width: 100%;
         text-align: left;
         position: relative;
@@ -959,17 +1047,13 @@
         width: calc(100% - 0px) !important;
     }
 
-    .title_info2 {
-        font-size: 18px!important;
-        line-height: 22px!important;
-        max-width: 100px!important;
-    }
+   
 
   
 
 
     .link_info {
-        bottom: 40px!important;
+        bottom: 20px!important;
     }
 
  
@@ -986,7 +1070,7 @@
 
     .tabs {
         font-size: 8px!important;
-        margin: 0px!important;
+        margin: 5px 0px!important;
         letter-spacing: 0px;
     }
 
