@@ -200,6 +200,14 @@ span {
 .loop-subscription-group {
   padding: 0 !important;
 }
+
+.onetimego[disabled] {
+  opacity: 0.3;
+}
+.out-stock {
+  font-size: 10px !important;
+  display: inline-block;
+}
 </style>
 
 
@@ -238,13 +246,19 @@ span {
         <div class="container">
           <div class="switches-container">
             <input type="radio" id="substimselect" name="switchPlan"  checked="checked" class="subcription"/>
-            <input type="radio" id="onetimeselect" name="switchPlan"   class="onetime" />
+            <input type="radio" id="onetimeselect" name="switchPlan"   class="onetime" {% if disabled_one_time %} disabled {% endif %}/>
+
             <label for="substimselect" class="subsgo"  ><span class="selectstyle">Subscribe & save</span></label>
-            <label for="onetimeselect" class="onetimego"  ><span class="selectstyle">One Time Purchase</span></label>
+            <label data-label-onetime for="onetimeselect" class="onetimego" {% if disabled_one_time %} disabled {% endif %} >
+              <span class="selectstyle">One Time Purchase</span>
+              {% if disabled_one_time %}
+                <span class="out-stock">(out of stock)</span>
+              {% endif %}
+            </label>
             <div class="switch-wrapper">
               <div class="switch">
                 <div  ><span class="selectstyle">Subscribe & save</span></div>
-                <div  > <span class="selectstyle">One Time Purchase</span></div>
+                <div  > <span class="selectstyle">One Time Purchase  </span></div>
               </div>
             </div>
           </div>
