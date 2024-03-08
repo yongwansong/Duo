@@ -504,7 +504,12 @@
                       {% endif %}
 
                       {% if template_exists %}
-                        {% render 'loop-subscriptions', type: 'product-widget', product: product, blocks: section.blocks %}
+                        {% render 'loop-subscriptions'
+                          type: 'product-widget',
+                          product: product,
+                          blocks: section.blocks
+                          disabled_one_time: product.metafields.onetime.disabled_one_tieme_pusrchase.value
+                      %}
                       {% endif %}
                       {% comment %}
                         LOOP WIDGET CODE ENDS
