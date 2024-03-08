@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Add a click event listener to the selectQuantity element
   selectQuantity.addEventListener("click", (e) => selectDefault(e));
-  selectQuantityOnTime.addEventListener("click", (e) => selectOneTimePurchace(e));
+  if (!selectQuantityOnTime.hasAttribute('disabled')) {
+    selectQuantityOnTime.addEventListener("click", (e) => selectOneTimePurchace(e));
+  }
 });
 
 // Function to set the default radio button selection
