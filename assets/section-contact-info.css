@@ -34,7 +34,7 @@
     overflow-wrap: break-word;
     text-align-last: right;
     font-family: "OldschoolGrotesk-Regular";
-    width: 35%;
+    width: 33%;
 }
 
 .contact-info__item a{
@@ -45,7 +45,7 @@
     text-align-last: left;
     color: #000;
     font-family: "OldschoolGrotesk-ExtraLight";
-    width: 65%;
+    width: 68%;
 }
 
 .contact-info__wrapper{
