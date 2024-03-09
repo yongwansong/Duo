@@ -100,6 +100,9 @@ assign products_in_cart = products_in_cart | split: ','
             <div class="recommendation-product__atc">
         
                 <button
+                  {% if product.metafields.onetime.disabled_one_tieme_pusrchase.value %}
+                    disabled
+                  {% endif %}
                   id="{{ product_form_id }}-submit"
                   type="submit"
                   name="add"
