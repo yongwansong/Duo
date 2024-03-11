@@ -5,30 +5,29 @@
 
 
 .page-container{
-min-width:100%;
+  min-width:100%;
   width: 100%;
   overflow-X: hidden;
-  font-family:"Poppins";
+  font-family:"OldschoolGrotesk-Regular";
   margin:0px;
-
 }
 
 .container {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .banner_1:after {
-    content: "";
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    transform: translate(-58px, -54px);
-    background-image: url("https://cdn.shopify.com/s/files/1/0553/3233/9879/files/nHa-Icon_K.svg?v=1688252355");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-  	z-index: 1;
-    padding: 50px;
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  transform: translate(-58px, -54px);
+  background-image: url("https://cdn.shopify.com/s/files/1/0553/3233/9879/files/nHa-Icon_K.svg?v=1688252355");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: 1;
+  padding: 50px;
 }
 
 
@@ -38,14 +37,14 @@ min-width:100%;
 
 .duo-banner_content {
     width: 100%;
-      margin:0px;
+    margin:0px;
 
 }
 
 .banner_1 {
     width: 100%;
     position: relative;
-      margin:0px;
+    margin:0px;
 
 }
 
@@ -83,7 +82,7 @@ min-width:100%;
 }
 
 .page-heading h2.headings {
-    font-family: "Poppins";
+    font-family: "OldschoolGrotesk-Medium";
     font-style: normal;
     font-weight: 600;
     font-size: 46.6667px;
@@ -91,31 +90,34 @@ min-width:100%;
 }
 
 .item-list {
-    height:100%
-    display: inline-block;
 
-    margin-right: 15px;
-    margin-bottom: 10px;
+  height:100%;
+  display: inline-block;
+
+  margin-right: 15px;
+  margin-bottom: 10px;
 
 
 }
 .text-section button.item-list {
     
-    font-family: "Poppins";
-    font-weight: 500;
-    font-size: 20px;
-    text-decoration:none;
-    color: #000000;
-    
-    display: inline-block;
-    padding: 6px 15px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 77.834px;
-    border: 2px solid #000;
-    cursor: pointer;
-    transition: 0.5s;
-    background-color:transparent ;
+  font-family: "OldschoolGrotesk-Regular";
+
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration:none;
+  color: #000000;
+  
+  display: inline-block;
+  padding: 6px 15px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 77.834px;
+  border: 2px solid #000;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color:transparent ;
+  line-height: 1.5;
 }
 
 
@@ -349,7 +351,7 @@ img.image-item {
 /* Text-Section Start */
 
 .block-details h2.image__heading{
-    font-family: "Poppins";
+    font-family: "OldschoolGrotesk-Medium";
     font-style: normal;
     font-weight: 600;
     font-size: 48px;
@@ -357,7 +359,7 @@ img.image-item {
 }
 
 .block-details .image-content p{
-    
+    font-family: 'OldschoolGrotesk-Regular';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -512,7 +514,7 @@ img.image-item {
       position: absolute;
       width: 120%;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      z-index: 4;
+      z-index: 2;
       top: 4rem;
       max-width: 55rem;
       margin-left:-100px;
@@ -578,7 +580,7 @@ img.image-item {
 
 .ingredients-list-section {
     width: calc(80% - 2rem);
-    background-color: #F0F4F7;
+    background-color: #E2EBF4;
   	display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -596,7 +598,7 @@ ul.ingrediants-lists {
 }
 
 li.item_list-link .ingredients_link.btn-link{
-    font-family:"Poppins";
+    font-family:"OldschoolGrotesk-Regular";
     margin: 8px 0;
     display: inline-block;    
     padding: 0px 0;
@@ -617,6 +619,7 @@ li.item_list-link .ingredients_link.btn-link span.link_text{
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
+    font-family: 'OldschoolGrotesk-Regular';
 }
 
 .ingredients_link.btn-link:hover {
@@ -1343,7 +1346,7 @@ p.disclaimer_para  {
 
 .list_mobile button.item-list {
     
-    font-family: "Poppins";
+    font-family: "OldschoolGrotesk-Regular";
     font-weight: 500;
     text-decoration:none;
     color: #000000;
@@ -1451,15 +1454,16 @@ span.flavor_title {
   .para_span{
     padding-top:3px;
     padding-bottom:3px;
-  font-size: 14px;
-  display: block;
+    font-size: 14px;
+    display: block;
 
-  line-height:20px;
+    line-height:20px;
   }
 
-    .block-details p.image_sub-heading{
-   width:100%;
-}
+  .block-details p.image_sub-heading {
+    width:100%;
+  }
+
   
   .text-width_image.page-width {
       padding: 0px;

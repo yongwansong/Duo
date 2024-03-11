@@ -1,0 +1,1 @@
+{"version":3,"file":"endrock.style-ingredients.css","mappings":"AACE,8BACE","sources":["webpack://duo/./src/scss/components/_page-ingredients.scss"],"sourcesContent":[".ingredient-custom {\n  &__container {\n    background: red;\n  }\n}"],"names":[],"sourceRoot":""}
