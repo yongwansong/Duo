@@ -2792,6 +2792,7 @@ a.button.button--primary, .button.button-custom.button--primary {
 	padding: 12.972px 21px 11px;
 	background-color: #000;
 	color: #fff;
+	border: 2px solid #000000 !important;
 }
 
 a.button.button--primary:hover {
@@ -3691,37 +3692,62 @@ section.shopify-section.feature-collection {
 	position: relative;
 }
 
-/* .original.products__heading.add-toCart:hover {
-	background-color: #4CBAFE;
-	cursor: pointer !important;
-	color: #000;
-	transition: 0.7s;
-	border: none;
+.products__heading.add-toCart .button-custom{
+	padding: 0;
 }
 
-.immunity.products__heading.add-toCart:hover {
-	background-color: #48EBBC;
-	cursor: pointer !important;
-	color: #000;
-	transition: 0.7s;
-	border: none;
+.original.products__heading.add-toCart:hover {
+    background-color: #4cbafe;
+    cursor: pointer !important;
+    color: #000;
+    transition: .7s;
+    border: none;
+}
+
+.bundle.products__heading.add-toCart:hover{
+	background-color: #feb42f;
+    cursor: pointer !important;
+    color: #000;
+    transition: .7s;
+    border: none;
+}
+
+.products__heading.add-toCart .button.button-custom.button--primary{
+	border: 0 !important;
+}
+
+.products__heading.add-toCart .button.button-custom.button--primary:hover{
+	background-color: inherit;
+    color: #000;
+}
+
+a.collection-warapper__item{
+	text-decoration: none;
 }
 
 .energy.products__heading.add-toCart:hover {
-	background-color: #FEB42F;
-	cursor: pointer !important;
-	color: #000;
-	transition: 0.7s;
-	border: none;
+    background-color: #feb42f;
+    cursor: pointer !important;
+    color: #000;
+    transition: .7s;
+    border: none;
 }
 
 .sleep.products__heading.add-toCart:hover {
-	background-color: #BE73D5;
-	cursor: pointer !important;
-	color: #000;
-	transition: 0.7s;
-	border: none;
-} */
+    background-color: #be73d5;
+    cursor: pointer !important;
+    color: #000;
+    transition: .7s;
+    border: none;
+}
+
+.immunity.products__heading.add-toCart:hover {
+    background-color: #48ebbc;
+    cursor: pointer !important;
+    color: #000;
+    transition: .7s;
+    border: none;
+}
 
 .subnewhader {
 	display: flex;

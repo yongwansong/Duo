@@ -390,11 +390,6 @@
     margin: auto;
     overflow: auto;
 }
-.original.products__heading.add-toCart:hover {
-    color: #fff;
-    background:#00aade;
-   
-  }
 
 
 .item {
@@ -789,9 +784,6 @@
         padding: 50px 90px 20px!important;
     }
 
-    .imagencontainer {
-        height: 100%!important;
-    }
 }
 
 
@@ -873,7 +865,6 @@
 
 .imagencontainer {
     width: calc(25% - 10px);
-    height: 100%;
 }
 
 .imagencontainerfinal {
@@ -887,7 +878,7 @@
 }
 
 .link_info {
-    bottom: 20px!important;
+    bottom: 0!important;
     position: absolute;
     margin-left: 30px;
     color: black;

@@ -261,7 +261,7 @@
                                                 data-type: 'add-to-cart-form'
                                             -%}
                                             {% comment %} {% render 'loop-subscriptions' type: 'product-widget', product: product %} {% endcomment %}
-
+                                            <div class="{{ endrock_featured_product.title| downcase }} products__heading add-toCart">
                                             <input
                                                 type="hidden"
                                                 name="id"
@@ -273,6 +273,7 @@
                                                 variant_current: variant_current,
                                                 product: endrock_featured_product
                                            -%}
+                                            </div>
                                         {%- endform -%}
                                         </product-form>
                                     {%- endif -%}

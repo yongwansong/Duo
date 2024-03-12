@@ -315,7 +315,7 @@
                                             -%}
                                             {% comment %} {% render 'loop-subscriptions' type: 'product-widget', product: product %} {% endcomment %}
 
-                                            <div class="btnwhite products__heading add-toCart_">
+                                            <div class="{{ endrock_featured_product.title| downcase }} products__heading add-toCart">
                                             <input
                                                 type="hidden"
                                                 name="id"
