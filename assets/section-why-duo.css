@@ -313,6 +313,14 @@
         padding: 0;
     }
 
+    .property-list_wrapper{
+        padding:0 !important;
+    }
+
+    .imagencontainerfinal{
+        margin: 0!important;
+    }
+
     .empty_content{
         margin: 0!important;
     }
