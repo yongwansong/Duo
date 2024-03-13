@@ -837,7 +837,6 @@
     position: absolute;
     height: 100%;
     width: calc(50% - 10px)!important;
-    max-height: 45%;
 }
 
 .content.active {

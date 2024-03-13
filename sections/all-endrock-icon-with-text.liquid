@@ -33,7 +33,7 @@
 </div>
 
 <script>
-    if(window.innerWidth < 767){
+    if(window.innerWidth < 1000){
         const iconsSwiper = new Swiper('.endrock-icon-with-text .endrock-icon-with-text-wrapper', {
             direction: 'horizontal',
             slidesPerView:2,
@@ -43,7 +43,17 @@
             autoplay: {
                 delay: 0,
             },
-            Infinity:true
+            Infinity:true,
+            breakpoints: {
+                // when window width is >= 320px
+                768: {
+                slidesPerView: 2,
+                },
+                // when window width is >= 480px
+                1024: {
+                slidesPerView: 4,
+                spaceBetween: 40
+                }
         });
 
         function handleFocus(e, i) {
