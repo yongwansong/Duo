@@ -822,6 +822,10 @@
         margin-bottom: 32px;
     }
 
+    .imagen-info-text{
+        left: 0;
+    }
+
 
 .imagencontainer {
     width: calc(50% - 10px) !important;
