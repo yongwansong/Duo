@@ -5,12 +5,6 @@
       "settings": {
       }
     },
-    "form": {
-      "type": "contact-form",
-      "settings": {
-        "heading": ""
-      }
-    },
     "contact_info_QtHEJK": {
       "type": "contact-info",
       "blocks": {
@@ -53,11 +47,17 @@
         "bg_color": "#e2ebf2",
         "title": "<p>Have an unanswered question? Want to share some feedback? We’d love to hear from you.<\/p>"
       }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": ""
+      }
     }
   },
   "order": [
     "main",
-    "form",
-    "contact_info_QtHEJK"
+    "contact_info_QtHEJK",
+    "form"
   ]
 }
