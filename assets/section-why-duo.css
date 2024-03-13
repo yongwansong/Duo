@@ -300,6 +300,10 @@
         padding: 20px 0 0 !important;
     }
 
+    .imagen-info-text{
+        left: 0;
+    }
+
 }
 
 @media (max-width:767px) {
