@@ -845,7 +845,7 @@
 }
 
 .imagencontainerfinal{
-    width: calc(100% - 23px);
+    width: calc(100% - 23px)!important;
     margin: 0 15%;
 }
 
@@ -855,7 +855,7 @@
     line-height: 14px!important;
     padding: 15px!important;
     margin: 0px 5px !important;
-    width: calc(50% - 10px);
+    width: fit-content!important;
 }
 
 
