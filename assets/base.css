@@ -3704,6 +3704,10 @@ section.shopify-section.feature-collection {
     border: none;
 }
 
+.bundle:not(.disabled).products__heading.add-toCart{
+	border: 2px solid black !important;
+}
+
 .bundle:not(.disabled).products__heading.add-toCart:hover{
 	background: #fff;
     color: #000 !important;
