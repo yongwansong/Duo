@@ -3696,7 +3696,7 @@ section.shopify-section.feature-collection {
 	padding: 0;
 }
 
-.original.products__heading.add-toCart:hover {
+.original:not(.disabled).products__heading.add-toCart:hover {
     background-color: #4cbafe;
     cursor: pointer !important;
     color: #000;
@@ -3717,7 +3717,7 @@ a.collection-warapper__item{
 	text-decoration: none;
 }
 
-.energy.products__heading.add-toCart:hover {
+.energy:not(.disabled).products__heading.add-toCart:hover {
     background-color: #feb42f;
     cursor: pointer !important;
     color: #000;
@@ -3725,7 +3725,7 @@ a.collection-warapper__item{
     border: none;
 }
 
-.sleep.products__heading.add-toCart:hover {
+.sleep:not(.disabled).products__heading.add-toCart:hover {
     background-color: #be73d5;
     cursor: pointer !important;
     color: #000;
@@ -3733,7 +3733,7 @@ a.collection-warapper__item{
     border: none;
 }
 
-.immunity.products__heading.add-toCart:hover {
+.immunity:not(.disabled).products__heading.add-toCart:hover {
     background-color: #48ebbc;
     cursor: pointer !important;
     color: #000;

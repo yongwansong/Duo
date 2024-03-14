@@ -743,7 +743,7 @@
 }
 
 .imagen-info-text {
-    position: absolute;
+    position: relative;
     background: #a5e9ff;
     margin: 10px;
     font-size: 14px;
@@ -754,6 +754,7 @@
     font-family: OldschoolGrotesk-Regular;
     width: calc(50% - 22px);
     bottom: 45px;
+    width: 100% !important;
 }
 
 

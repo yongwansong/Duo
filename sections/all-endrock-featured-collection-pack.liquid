@@ -288,7 +288,7 @@
                                             -%}
                                             {% comment %} {% render 'loop-subscriptions' type: 'product-widget', product: product %} {% endcomment %}
 
-                                            <div class="{{ endrock_featured_product.title| downcase }} products__heading add-toCart">
+                                            <div class="{{ endrock_featured_product.title| downcase }} products__heading add-toCart {% if endrock_featured_product.metafields.onetime.disabled_one_tieme_pusrchase.value %}disabled{% endif %}">
                                             <input
                                                 type="hidden"
                                                 name="id"
@@ -441,7 +441,7 @@
                                                 -%}
                                                 {% comment %} {% render 'loop-subscriptions' type: 'product-widget', product: product %} {% endcomment %}
     
-                                                <div class="{{ endrock_featured_product.title| downcase }} products__heading add-toCart">
+                                               <div class="{{ endrock_featured_product.title| downcase }} products__heading add-toCart {% if endrock_featured_product.metafields.onetime.disabled_one_tieme_pusrchase.value %}disabled{% endif %}">
                                                 <input
                                                     type="hidden"
                                                     name="id"

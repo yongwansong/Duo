@@ -273,9 +273,9 @@ h2.image-with-text__heading.h3 {
 }
 
 .btnca:hover{
-
-  background: #00497E;
-  color:white!important;
+  background: #fff;
+  color: #000 !important;
+  border: 2px solid black !important;
 }
 
 .banner__text {

@@ -178,6 +178,16 @@
     }
 }
 
+@media (max-width: 1000px){
+    .endrock-featured-collection .product_title{
+        font-size: 20px !important;
+    }
+
+    .packtitle_{
+        font-size: 20px !important;
+    }
+}
+
 @media (max-width: 767px) {
     .endrock-featured-collection .products_wrapper:not(.swiper-wrapper) .product-list{
         width: calc( 50% - 12px );
