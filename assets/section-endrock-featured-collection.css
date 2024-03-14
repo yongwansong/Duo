@@ -95,7 +95,7 @@
 
 @media (max-width:768px) {
     .endrock-featured-collection__wrapper{
-        padding: 69px 20px 87px
+        padding: 69px 20px 87px!important;
     }
 }
 
