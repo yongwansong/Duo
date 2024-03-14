@@ -3710,7 +3710,7 @@ section.shopify-section.feature-collection {
     border: 2px solid black !important;
 }
 
-.bundle:not(.disabled).products__heading.add-toCart:hover .add-toCart span{
+.bundle:not(.disabled).products__heading.add-toCart:hover .add-to-cart-message{
 	color: #000;
 }
 
