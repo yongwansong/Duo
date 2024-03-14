@@ -755,6 +755,7 @@
     width: calc(50% - 22px);
     bottom: 45px;
     width: 100% !important;
+    width: 100%!important;
 }
 
 
@@ -850,7 +851,7 @@
 }
 
 .imagencontainerfinal{
-    width: calc(100% - 23px)!important;
+    width: 100%!important;
     margin: 0 15%;
 }
 
@@ -879,7 +880,7 @@
 }
 
 .imagencontainerfinal {
-    width: calc(50% - 23px);
+    width: 100%!important;
 }
 
 .imagencard {

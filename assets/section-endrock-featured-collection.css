@@ -95,7 +95,7 @@
 
 @media (max-width:768px) {
     .endrock-featured-collection__wrapper{
-        padding: 69px 20px 87px!important;
+        padding: 49px 20px 87px!important;
     }
 }
 
@@ -123,7 +123,7 @@
     background: #181818;
     border: none;
     border-radius: 0;
-    width: auto;
+    width: 100%!important;
     height: auto;
 }
 
