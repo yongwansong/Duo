@@ -213,6 +213,7 @@ a.text_underline {
     position: relative;
     width: 100%;
     max-width: 88%;
+    border: 2px solid black !important;
 }
 
 @media(max-width: 1350px) and (min-width: 1080px) {
