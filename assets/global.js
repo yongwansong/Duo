@@ -744,10 +744,4 @@ class VariantRadios extends VariantSelects {
 
 customElements.define('variant-radios', VariantRadios);
 
-var backButton = document.querySelector('.back_button');
-  backButton.addEventListener('click', function(){
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  })
+
