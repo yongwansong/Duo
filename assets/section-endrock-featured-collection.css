@@ -93,12 +93,6 @@
     }
 }
 
-@media (max-width:768px) {
-    .endrock-featured-collection__wrapper{
-        padding: 20px!important;
-    }
-}
-
 
 .endrock-featured-collection .heading{
     color: #000;

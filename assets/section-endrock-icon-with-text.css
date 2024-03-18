@@ -67,8 +67,14 @@
     gap: 5px !important;
   }
 
+  .icon-with-text__wrapper .swiper-slide{
+    margin-right: 5px;
+    justify-content: center;
+  }
+
   .icon-with-text__wrapper .iwt-item__heading{
-    font-size: 10px!important
+    font-size: 10px!important;
+    line-height: 14px;
   }
 }
 

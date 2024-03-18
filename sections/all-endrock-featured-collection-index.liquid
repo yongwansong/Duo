@@ -674,7 +674,7 @@
                             <div class="product-list_ product-list_sw {% if section.settings.swipe_on_mobile %}swiper-slide{% endif %}">
                                     {%- if block.settings.custom_product_image != blank -%}
                                         <div class="custom_product_image" id="block--{{ block.id }}" style="padding-bottom: {{ 100 | divided_by: block.settings.custom_product_image.aspect_ratio }}%">
-                                            <a href="{{ endrock_featured_product.url }}">
+                                            <a href="{{ endrock_featured_product.url }}" class="collection-warapper__item">
                                                 <img src="{{ block.settings.custom_product_image2 | img_url: 'master' }}"
                                                     class="first_image"
                                                     alt="{{ block.settings.custom_product_image2.alt }}"
@@ -811,7 +811,7 @@
                                         <li class="tab" data-tab="tab3"><span class="spanenergy"></span> Energy</li>
                                         <li class="tab" data-tab="tab4"><span class="spansleep"></span> Sleep</li>
                                       </ul>
-                                    <a href="{{ endrock_featured_product.url }}">
+                                    <a href="{{ endrock_featured_product.url }}" class="collection-warapper__item">
     
                                     
                                         <div class="title-with-price">
@@ -974,7 +974,7 @@
                                         <li class="tabb" ><span class="spanenergy"></span> Energy</li>
                                         <li class="tab" data-tab="tab4"><span class="spansleep"></span> Sleep</li>
                                       </ul>
-                                    <a href="{{ endrock_featured_product.url }}">
+                                    <a href="{{ endrock_featured_product.url }}" class="collection-warapper__item">
     
                                     
                                         <div class="title-with-price">
@@ -1137,7 +1137,7 @@
                                         <li class="tab" data-tab="tab3"><span class="spanenergy"></span> Energy</li>
                                         <li class="tabb" ><span class="spansleep"></span> Sleep</li>
                                       </ul>
-                                    <a href="{{ endrock_featured_product.url }}">
+                                    <a href="{{ endrock_featured_product.url }}" class="collection-warapper__item">
     
                                     
                                         <div class="title-with-price">

@@ -363,6 +363,10 @@
     text-align: center;
 }
 
+.content.active .tabb span{
+    border: 2px solid #000000;
+}
+
 .why-duo_wrapper .left-content__heading {
     font-size: 50px!important;
     margin: 30px 0px 22px!important;
