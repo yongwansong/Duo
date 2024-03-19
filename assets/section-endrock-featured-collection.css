@@ -93,6 +93,7 @@
     }
 }
 
+
 .endrock-featured-collection .heading{
     color: #000;
     font-family: "OldschoolGrotesk-Regular";
@@ -116,7 +117,7 @@
     background: #181818;
     border: none;
     border-radius: 0;
-    width: auto;
+    width: 100%!important;
     height: auto;
 }
 
@@ -175,6 +176,16 @@
 @media (max-width: 1200px) {
     .endrock-featured-collection__wrapper{
         padding: 69px 60px 87px
+    }
+}
+
+@media (max-width: 1000px){
+    .endrock-featured-collection .product_title{
+        font-size: 20px !important;
+    }
+
+    .packtitle_{
+        font-size: 20px !important;
     }
 }
 

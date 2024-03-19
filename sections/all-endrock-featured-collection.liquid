@@ -158,7 +158,7 @@
 
 <div id="section--{{ section.id }}" class="{{ section.settings.id_section_pivot }}">
     <div class="endrock-featured-collection {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">
-        <div class="endrock-featured-collection__container_">
+        <div class="endrock-featured-collection__container">
             <div class="endrock-featured-collection__wrapper_">
                 <h2 class="heading">{{ section.settings.heading }}</h2>
                 <div class="swiper-container">
@@ -315,7 +315,7 @@
                                             -%}
                                             {% comment %} {% render 'loop-subscriptions' type: 'product-widget', product: product %} {% endcomment %}
 
-                                            <div class="btnwhite products__heading add-toCart_">
+                                            <div class="{{ endrock_featured_product.title| downcase }} products__heading add-toCart {% if endrock_featured_product.metafields.onetime.disabled_one_tieme_pusrchase.value %}disabled{% endif %}">
                                             <input
                                                 type="hidden"
                                                 name="id"
