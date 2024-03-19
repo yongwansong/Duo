@@ -14,7 +14,7 @@
 
 
 .endrock-header, .endrock-header .newheader {
-    background-color: #ffd761;
+    background-color: transparent;
 }
 .shopify-section-header-hidden .header-wrapper {
     background-color: transparent !important;
