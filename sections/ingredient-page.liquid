@@ -74,7 +74,7 @@ html{
           <div class="block-details">
             <div class="wrapper">
               <div class="image-division">
-                <img src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/baseline_flavor.jpg?v=1645865792" alt="" class="image-item">
+                <img src="{{  section.settings.image_original |  image_url: width: 700  }}" alt="" class="image-item">
               </div>
             </div>
             <div class="image-content">
@@ -337,7 +337,7 @@ html{
               <div class="block-details">
                   <div class="wrapper">
                       <div class="image-division">
-                          <img src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/immunity_flavor.jpg?v=1645865793" alt="" class="image-item">
+                          <img src="{{  section.settings.image_inmmunity |  image_url: width: 700  }}" alt="" class="image-item">
                       </div>
                   </div>
                   <div class="image-content">
@@ -633,7 +633,7 @@ html{
             <div class="block-details">
                 <div class="wrapper">
                     <div class="image-division">
-                        <img src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/energy_flavor.jpg?v=1645865792" alt="" class="image-item">
+                        <img src="{{  section.settings.image_energy |  image_url: width: 700  }}" alt="" class="image-item">
                     </div>
                 </div>
                 <div class="image-content">
@@ -939,7 +939,7 @@ html{
             <div class="block-details">
                 <div class="wrapper">
                     <div class="image-division">
-                        <img src="https://cdn.shopify.com/s/files/1/0553/3233/9879/files/sleep_flavor.jpg?v=1645865792" alt="" class="image-item">
+                        <img src="{{  section.settings.image_sleep |  image_url: width: 700  }}" alt="" class="image-item">
                     </div>
                 </div>
                 <div class="image-content">
@@ -1447,21 +1447,41 @@ html{
   "tag": "section",
   "class": "ingredient ingredient-custom",
     "settings": [
+        {
+            "type": "image_picker",
+            "id": "image_original",
+            "label": "Image original"
+        },
      {
         "id": "link",
         "type": "url",
         "label": "Base Line Button link"
       },
+        {
+            "type": "image_picker",
+            "id": "image_inmmunity",
+            "label": "Image immunity"
+        },
       {
         "id": "Immunity_link",
         "type": "url",
         "label": "Immunity Button link"
       },
+        {
+            "type": "image_picker",
+            "id": "image_energy",
+            "label": "Image energy"
+        },
        {
         "id": "energy_link",
         "type": "url",
         "label": "Energy Button link"
       },
+        {
+            "type": "image_picker",
+            "id": "image_sleep",
+            "label": "Image sleep"
+        },
        {
         "id": "sleep_link",
         "type": "url",

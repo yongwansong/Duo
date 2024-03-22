@@ -348,6 +348,11 @@ img.image-item {
     object-fit: cover;
 }
 
+img.image-item {
+    object-position: 0;
+    min-width: 100%;
+  }
+
 /* Text-Section Start */
 
 .block-details h2.image__heading{
@@ -447,10 +452,10 @@ img.image-item {
       padding: 1rem 5rem;
   }
 
-  img.image-item {
+  /* img.image-item {
       object-position: -400px;
       min-width: 145rem;
-  }  
+  }   */
 
 
 }
@@ -462,10 +467,10 @@ img.image-item {
       padding-bottom: 60rem;
   }
 
-  img.image-item {
+  /* img.image-item {
       object-position: -400px;
       min-width: 145rem;
-  }
+  } */
 
 }
 
@@ -481,10 +486,10 @@ img.image-item {
   font-style:italic;
 }
 
-  img.image-item {
+  /* img.image-item {
       object-position: -400px;
       min-width: 145rem;
-  }
+  } */
 
 }
 
@@ -493,11 +498,6 @@ img.image-item {
 
   .image-division {
       padding-bottom: 60rem;
-  }
-
-  img.image-item {
-      object-position: -400px;
-      min-width: 145rem;
   }
 
 }
@@ -996,10 +996,10 @@ p.disclaimer_para  {
       min-width: 122rem;
   }
   
-  img.image-item {
+  /* img.image-item {
       object-position: -435px;
       min-width: 136rem;
-  }
+  } */
   
   .image-division {
       padding-bottom: 55rem;
@@ -1026,10 +1026,10 @@ p.disclaimer_para  {
       padding: 48px;
   }
   
-  img.image-item {
+  /* img.image-item {
       object-position: -435px;
       min-width: 136rem;
-  }
+  } */
   
   .image-division {
       padding-bottom: 55rem;
@@ -1070,10 +1070,10 @@ p.disclaimer_para  {
       padding: 45px;
   }
   
-  img.image-item {
+  /* img.image-item {
       object-position: -420px;
       min-width: 126rem;
-  }
+  } */
   
   .image-division {
       padding-bottom: 50rem;
@@ -1131,10 +1131,10 @@ p.disclaimer_para  {
       font-size: 24.9874px;
   }
   
-  img.image-item {
+  /* img.image-item {
       object-position: -385px;
       min-width: 116rem;
-  }
+  } */
   
   .image-division {
       padding-bottom: 45rem;
@@ -1193,10 +1193,10 @@ p.disclaimer_para  {
       font-size: 22.9874px;
   }
   
-  img.image-item {
+ /*  img.image-item {
       object-position: -402px;
       min-width: 118rem;
-  }
+  } */
   
   .image-division {
       padding-bottom: 45rem;
@@ -1254,10 +1254,10 @@ p.disclaimer_para  {
       font-size: 20.9874px;
   }
   
-  img.image-item {
+  /* img.image-item {
       object-position: -375px;
       min-width: 114rem;
-  }
+  } */
   
   .image-division {
       padding-bottom: 40rem;
@@ -1470,10 +1470,10 @@ span.flavor_title {
       margin: 2.5rem 0px 2.2rem;
   }
   
-img.image-item{
+/* img.image-item{
       object-position: -15rem;
       min-width: 68rem;
-  }
+  } */
   
 
   
