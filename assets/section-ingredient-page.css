@@ -1349,7 +1349,7 @@ p.disclaimer_para  {
     color: #000000;
     
     padding: 6px 15px;
-    border-radius: 77.834px;
+    border-radius: 0px;
     border: 2px solid #000;
     cursor: pointer;
     transition: 0.5s;
