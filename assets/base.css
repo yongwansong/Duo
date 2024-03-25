@@ -157,6 +157,10 @@
 	display: none !important;
 }
 
+body{
+  font-family: OldschoolGrotesk-Regular;
+}
+
 html.no-js .no-js:not(html) {
 	display: block !important;
 }
