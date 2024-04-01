@@ -261,49 +261,19 @@
                                                 data-type: 'add-to-cart-form'
                                             -%}
                                             {% comment %} {% render 'loop-subscriptions' type: 'product-widget', product: product %} {% endcomment %}
-
+                                            <div class="{{ endrock_featured_product.title| downcase }} products__heading add-toCart {% if endrock_featured_product.metafields.onetime.disabled_one_tieme_pusrchase.value %}disabled{% endif %}">
                                             <input
                                                 type="hidden"
                                                 name="id"
                                                 value="{{ variant_current.id }}"
                                                 disabled
                                             >
-                                            <button
-                                                id="{{ product_form_id }}-submit"
-                                                type="submit"
-                                                name="add"
-                                                class="quick-add__submit button button--full-width button-custom button--primary  product-{{ endrock_featured_product.title | handleize }}"
-                                                aria-haspopup="dialog"
-                                                aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ endrock_featured_product.id }}"
-                                                aria-live="polite"
-                                                {% if endrock_featured_product.selected_or_first_available_variant.available == false %}
-                                                disabled
-                                                {% endif %}
-                                            >
-                                                <span class="add-to-cart-message">
-                                                {%- if endrock_featured_product.selected_or_first_available_variant.available -%}
-                                                    {{ 'products.product.add_to_cart' | t }}
-                                                {%- else -%}
-                                                    {{ 'products.product.sold_out' | t }}
-                                                {%- endif -%}
-                                                </span>
-                                                <span class="added-message hidden">Added</span>
-                                                <span class="sold-out-message hidden">
-                                                {{ 'products.product.sold_out' | t }}
-                                                </span>
-                                                <div class="loading-overlay__spinner hidden">
-                                                <svg
-                                                    aria-hidden="true"
-                                                    focusable="false"
-                                                    role="presentation"
-                                                    class="spinner"
-                                                    viewBox="0 0 66 66"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                                                </svg>
-                                                </div>
-                                            </button>
+                                            {%- render 'button-add-to-cart'
+                                                product_form_id: product_form_id,
+                                                variant_current: variant_current,
+                                                product: endrock_featured_product
+                                           -%}
+                                            </div>
                                         {%- endform -%}
                                         </product-form>
                                     {%- endif -%}

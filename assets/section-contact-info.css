@@ -1,0 +1,76 @@
+.contact-info{
+    text-align: center;
+}
+
+.contact-info .title{
+    margin: 0 auto;
+    max-width: 720px;
+}
+
+.contact-info .title p{
+    font-size: 24px;
+    align-self: stretch;
+    flex-basis: auto;
+    text-align: center;
+    flex-shrink: 0;
+    font-weight: 400;
+    line-height: 28px;
+    overflow-wrap: break-word;
+    text-align-last: center;
+    margin: 0 0 46px;
+}
+
+.contact-info__item{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-info__item .heading{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    overflow-wrap: break-word;
+    text-align-last: right;
+    font-family: "OldschoolGrotesk-Regular";
+    width: 33%;
+}
+
+
+.contact-info__item a{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    overflow-wrap: break-word;
+    text-align-last: left;
+    color: #000;
+    font-family: "OldschoolGrotesk-ExtraLight";
+    width: 68%;
+}
+
+.contact-info__wrapper{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    .contact-info .title p{
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .contact-info__item a{
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .contact-info__item .heading{
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .contact-info .title p{
+        margin-bottom: 25px;
+    }
+}

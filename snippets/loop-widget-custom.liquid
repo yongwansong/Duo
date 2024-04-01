@@ -200,6 +200,14 @@ span {
 .loop-subscription-group {
   padding: 0 !important;
 }
+
+.onetimego[disabled] {
+  opacity: 0.3;
+}
+.out-stock {
+  font-size: 10px !important;
+  display: inline-block;
+}
 </style>
 
 
@@ -238,145 +246,154 @@ span {
         <div class="container">
           <div class="switches-container">
             <input type="radio" id="substimselect" name="switchPlan"  checked="checked" class="subcription"/>
-            <input type="radio" id="onetimeselect" name="switchPlan"   class="onetime" />
+            <input type="radio" id="onetimeselect" name="switchPlan"   class="onetime" {% if disabled_one_time %} disabled {% endif %}/>
+
             <label for="substimselect" class="subsgo"  ><span class="selectstyle">Subscribe & save</span></label>
-            <label for="onetimeselect" class="onetimego"  ><span class="selectstyle">One Time Purchase</span></label>
+            <label data-label-onetime for="onetimeselect" class="onetimego" {% if disabled_one_time %} disabled {% endif %} >
+              <span class="selectstyle">One Time Purchase</span>
+              {% if disabled_one_time %}
+                <span class="out-stock">(out of stock)</span>
+              {% endif %}
+            </label>
             <div class="switch-wrapper">
               <div class="switch">
                 <div  ><span class="selectstyle">Subscribe & save</span></div>
-                <div  > <span class="selectstyle">One Time Purchase</span></div>
+                <div  > <span class="selectstyle">One Time Purchase  </span></div>
               </div>
             </div>
           </div>
             <div class="legends">
-              <div class="legend-left">
-                <div class="loop-one-time-purchase-option-position" id="loop-one-time-purchase-option-at-top">
-                  <div class="loop-one-time-purchase-option">
-                    <input type="radio" class="loop-one-time-purchase-option-radio" name="loop_purchase_option" id="loop-one-time-purchase-{{product.id}}" data-id="loop-one-time-purchase" data-product-id="{{ product.id }}" data-name="loop-one-time-purchase">
-                    <label class="loop-one-time-purchase-option-label" for="loop-one-time-purchase-{{product.id}}">One time Purchase</label>
-                    <div class="loop-subscription-group-discount-badge-onetime loop-display-none loop-subscription-group-discount-badge" id="loop-discount-badge-onetime">
-                    </div>
-                    <div class="loop-one-time-purchase-option-price-container">
-                        <div id="loop-price-one-time-original" class="loop-one-time-purchase-option-price-amount-original loop-display-none">
-                            {{ current_variant.price | money }}
-                        </div>
-                        <div id="loop-price-one-time" class="loop-one-time-purchase-option-price-amount">
-                            {{ current_variant.price | money }}
-                        </div>
-                    
-                        <div class="loop-one-time-purchase-option-price-quantity">
-                            each
-                        </div>
+              {% unless disabled_one_time %}
+                <div class="legend-left">
+                  <div class="loop-one-time-purchase-option-position" id="loop-one-time-purchase-option-at-top">
+                    <div class="loop-one-time-purchase-option">
+                      <input type="radio" class="loop-one-time-purchase-option-radio" name="loop_purchase_option" id="loop-one-time-purchase-{{product.id}}" data-id="loop-one-time-purchase" data-product-id="{{ product.id }}" data-name="loop-one-time-purchase">
+                      <label class="loop-one-time-purchase-option-label" for="loop-one-time-purchase-{{product.id}}">One time Purchase</label>
+                      <div class="loop-subscription-group-discount-badge-onetime loop-display-none loop-subscription-group-discount-badge" id="loop-discount-badge-onetime">
+                      </div>
+                      <div class="loop-one-time-purchase-option-price-container">
+                          <div id="loop-price-one-time-original" class="loop-one-time-purchase-option-price-amount-original loop-display-none">
+                              {{ current_variant.price | money }}
+                          </div>
+                          <div id="loop-price-one-time" class="loop-one-time-purchase-option-price-amount">
+                              {{ current_variant.price | money }}
+                          </div>
+                      
+                          <div class="loop-one-time-purchase-option-price-quantity">
+                              each
+                          </div>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="variants_wrapper">
-                  {%- unless product.has_only_default_variant -%}
-                  <variant-radios
-                    class="no-js-hidden"
-                    data-section="{{ section.id }}"
-                    data-url="{{ product.url }}"
-                    {{ block.shopify_attributes }}
-                  >
-                  {%- for option in product.options_with_values -%}
-                    <fieldset class="js product-form__input product-form__input--radio variant-b">
-                      <legend class="form__label">{{ option.name }}:</legend>
-                        {%- assign option_index = forloop.index0 -%}
-                        {%- assign values = '' -%}
-                        {%- for variant in product.variants -%}
-                          {%- assign value = variant.options[option_index] %}
-                          {%- unless values contains value -%}
-                            {%- assign values = values | join: ',' | append: ',' | append: value | split: ',' -%}
-                            {%- assign is_subscription = true -%}
-                            {%- if variant.metafields.subscription.is_subscription.value == false -%}
-                              {%- assign is_subscription = false -%}
-                            {% endif %}
-
-                              <input
-                                type="radio"
-                                id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                                name="{{ option.name }}"
-                                data-id-variant=" {{ variant.id }}"
-                                value="{{ value | escape }}"
-                                form="{{ product_form_id }}"
-                                {% if forloop.index == 3 %}
-                                  checked
-                                {% endif  %}
-                                class="{% unless is_subscription == false %} hidden {% endunless %}"
-                              >
-                              <label
-                                for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                                data-value="{{value}}"
-                                class="{% unless is_subscription == false %} hidden {% endunless %}"
-                              >
-                              
-                                <span class="variant-field__price">
-                                  <span class="variant-field__name">
-                                    <div class="checkbox"></div>
-                                    {{ value }}
-                                  </span>
-                                  
-                                  {%- if variant.compare_at_price > variant.price  -%}
-                                    {%- assign discounted_amount = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | money_without_currency | times: 100 | round  -%}
-                                    <span class="variant-field__sale" data-discounted="{{ discounted_amount }}">
-                                      Save {{ discounted_amount }}%
-                                    </span>
-                                  {%- endif -%}
-                                  <div class="price-container">
-                                    {%- if variant.compare_at_price > variant.price -%}
-                                      <s>{{ variant.compare_at_price | money }}</s>
-                                    {%- endif -%}
-                                    <span>{{ variant.price | money }}</span>
-                                  </div>
-                                </span>
-                              </label>
-                            
-                        {%- endunless -%}
-                      {%- endfor -%}
-                      </fieldset>
-                  {%- endfor -%}
-                  <script type="application/json">
-                    {{ product.variants | json }}
-                  </script>
-                  </variant-radios>
-            
-        
-                  {%- endunless -%}
-                  <noscript class="product-form__noscript-wrapper-{{ section.id }}">
-                  <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
-                    <label class="form__label" for="Variants-{{ section.id }}">
-                    {{- 'products.product.product_variants' | t -}}
-                    </label>
-                    <div class="select">
-                    <select
-                      name="id"
-                      id="Variants-{{ section.id }}"
-                      class="select__select"
-                      form="{{ product_form_id }}"
+                  <div class="variants_wrapper">
+                    {%- unless product.has_only_default_variant -%}
+                    <variant-radios
+                      class="no-js-hidden"
+                      data-section="{{ section.id }}"
+                      data-url="{{ product.url }}"
+                      {{ block.shopify_attributes }}
                     >
-                      {%- for variant in product.variants -%}
-                        <option
-                          {% if variant == product.selected_or_first_available_variant %}
-                          selected="selected"
-                          {% endif %}
-                          {% if variant.available == false %}
-                          disabled
-                          {% endif %}
-                          value="{{ variant.id }}"
-                        >
-                          {{ variant.title }}
-                          {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
-                          - {{ variant.price | money | strip_html }}
-                        </option>
-                      {%- endfor -%}
-                    </select>
-                    {% render 'icon-caret' %}
+                    {%- for option in product.options_with_values -%}
+                      <fieldset class="js product-form__input product-form__input--radio variant-b">
+                        <legend class="form__label">{{ option.name }}:</legend>
+                          {%- assign option_index = forloop.index0 -%}
+                          {%- assign values = '' -%}
+                          {%- for variant in product.variants -%}
+                            {%- assign value = variant.options[option_index] %}
+                            {%- unless values contains value -%}
+                              {%- assign values = values | join: ',' | append: ',' | append: value | split: ',' -%}
+                              {%- assign is_subscription = true -%}
+                              {%- if variant.metafields.subscription.is_subscription.value == false -%}
+                                {%- assign is_subscription = false -%}
+                              {% endif %}
+
+                                <input
+                                  type="radio"
+                                  id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                                  name="{{ option.name }}"
+                                  data-id-variant=" {{ variant.id }}"
+                                  value="{{ value | escape }}"
+                                  form="{{ product_form_id }}"
+                                  {% if forloop.index == 3 %}
+                                    checked
+                                  {% endif  %}
+                                  class="{% unless is_subscription == false %} hidden {% endunless %}"
+                                >
+                                <label
+                                  for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                                  data-value="{{value}}"
+                                  class="{% unless is_subscription == false %} hidden {% endunless %}"
+                                >
+                                
+                                  <span class="variant-field__price">
+                                    <span class="variant-field__name">
+                                      <div class="checkbox"></div>
+                                      {{ value }}
+                                    </span>
+                                    
+                                    {%- if variant.compare_at_price > variant.price  -%}
+                                      {%- assign discounted_amount = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | money_without_currency | times: 100 | round  -%}
+                                      <span class="variant-field__sale" data-discounted="{{ discounted_amount }}">
+                                        Save {{ discounted_amount }}%
+                                      </span>
+                                    {%- endif -%}
+                                    <div class="price-container">
+                                      {%- if variant.compare_at_price > variant.price -%}
+                                        <s>{{ variant.compare_at_price | money }}</s>
+                                      {%- endif -%}
+                                      <span>{{ variant.price | money }}</span>
+                                    </div>
+                                  </span>
+                                </label>
+                              
+                          {%- endunless -%}
+                        {%- endfor -%}
+                        </fieldset>
+                    {%- endfor -%}
+                    <script type="application/json">
+                      {{ product.variants | json }}
+                    </script>
+                    </variant-radios>
+              
+          
+                    {%- endunless -%}
+                    <noscript class="product-form__noscript-wrapper-{{ section.id }}">
+                    <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+                      <label class="form__label" for="Variants-{{ section.id }}">
+                      {{- 'products.product.product_variants' | t -}}
+                      </label>
+                      <div class="select">
+                      <select
+                        name="id"
+                        id="Variants-{{ section.id }}"
+                        class="select__select"
+                        form="{{ product_form_id }}"
+                      >
+                        {%- for variant in product.variants -%}
+                          <option
+                            {% if variant == product.selected_or_first_available_variant %}
+                            selected="selected"
+                            {% endif %}
+                            {% if variant.available == false %}
+                            disabled
+                            {% endif %}
+                            value="{{ variant.id }}"
+                          >
+                            {{ variant.title }}
+                            {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                            - {{ variant.price | money | strip_html }}
+                          </option>
+                        {%- endfor -%}
+                      </select>
+                      {% render 'icon-caret' %}
+                      </div>
                     </div>
+                    </noscript>
                   </div>
-                  </noscript>
                 </div>
-              </div>
+              {% endunless %}
+              
 
               <div class="legend-right">
                

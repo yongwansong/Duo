@@ -76,7 +76,6 @@
 	position: relative;
 	background-color: rgb(var(--color-background));
 	padding: 0.5rem 0;
-	display: none;
 	justify-content: space-between;
 	align-items: center;
   }
@@ -391,6 +390,7 @@
 	margin-right: -1rem;
 	padding-left: 2rem;
 	padding-right: 2rem;
+	background-color: rgb(var(--color-base-background-1));
   }
   cart-drawer-items::-webkit-scrollbar,
   .cart-drawer__recommendation::-webkit-scrollbar {
@@ -415,8 +415,9 @@
 cart-drawer.is-empty .drawer__footer, cart-drawer.is-empty cart-drawer-items{
 	display: none;
 }
+
 .cart-drawer__recommendation-wrapper{
-	background: #EFF2FF;
+	background: #e2ebf2;
 	margin-left: -1.5rem;
 	margin-right: -1.5rem;
 	padding-left: .5rem;

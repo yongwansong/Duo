@@ -7,7 +7,7 @@
     "colors_accent_2": "#000000",
     "colors_text": "#121212",
     "colors_outline_button_labels": "#121212",
-    "colors_background_1": "#FFFFFF",
+    "colors_background_1": "#ffffff",
     "colors_background_2": "#F3F3F3",
     "type_header_font": "poppins_n5",
     "heading_scale": 100,
@@ -110,6 +110,8 @@
     "cart_drawer_collection": "shop",
     "cart_drawer_collection_title": "Want to add more Duo?",
     "gamification_free_gift": "",
+    "gamification_second_discount": "5OFF",
+    "gamification_discount": "10OFF",
     "second_goal_name": "5% Off",
     "first_goal_image": "shopify:\/\/shop_images\/Frame_11422_22ca4087-1d37-41d4-a278-7a18f9b6e837.png",
     "second_goal_image": "shopify:\/\/shop_images\/Frame_11423_1ed56f29-23cd-4a55-9e75-597287bf1658.png",
@@ -150,6 +152,20 @@
         "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
+        }
+      },
+      "15683396631634586217": {
+        "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": false,
+        "settings": {
+          "button_color": "#000000",
+          "secondary_color": "#FFFFFF",
+          "ternary_color": "#6A6A6A",
+          "button_icon": "chat_bubble",
+          "button_text": "no_text",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "lowest",
+          "greeting_message": ""
         }
       }
     }
