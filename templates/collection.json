@@ -143,6 +143,118 @@
         "show_secondary_image": false
       }
     },
+    "all_endrock_featured_collection_index_AatP6R": {
+      "type": "all-endrock-featured-collection-index",
+      "blocks": {
+        "product_G79TDn": {
+          "type": "product",
+          "settings": {
+            "featured_product": "original-immunity",
+            "featured_product_two": "",
+            "featured_product_three": "",
+            "featured_product_four": "",
+            "custom_product_image": "shopify:\/\/shop_images\/Original_Immunity_defddec9-9e50-4f62-9708-07436da0c3f6.jpg",
+            "hover_image": "shopify:\/\/shop_images\/Hover_state_-_Original_1a163711-7154-458e-b3c1-e10bb87c06b8.png",
+            "info_1": "",
+            "info_1_top_position": "",
+            "info_1_right_position": "",
+            "info_1_left_position": "",
+            "info_1_bottom_position": "",
+            "info_2": "",
+            "info_2_top_position": "",
+            "info_2_right_position": "",
+            "info_2_left_position": "",
+            "info_2_bottom_position": "",
+            "info_3": "",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "",
+            "info_3_bottom_position": ""
+          }
+        },
+        "product_kPJtfh": {
+          "type": "product",
+          "settings": {
+            "featured_product": "original-3",
+            "featured_product_two": "",
+            "featured_product_three": "",
+            "featured_product_four": "",
+            "custom_product_image": "shopify:\/\/shop_images\/Original_3_e6d6e346-bbe1-488a-ba9c-c5c4bdee7db2.jpg",
+            "hover_image": "shopify:\/\/shop_images\/Hover_state_-_Original_ca4e68e1-9e40-4a70-b383-925d2382ad71.png",
+            "info_1": "",
+            "info_1_top_position": "",
+            "info_1_right_position": "",
+            "info_1_left_position": "",
+            "info_1_bottom_position": "",
+            "info_2": "",
+            "info_2_top_position": "",
+            "info_2_right_position": "",
+            "info_2_left_position": "",
+            "info_2_bottom_position": "",
+            "info_3": "",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "",
+            "info_3_bottom_position": ""
+          }
+        },
+        "product_xyA7mG": {
+          "type": "product",
+          "settings": {
+            "featured_product": "immunity-3",
+            "featured_product_two": "",
+            "featured_product_three": "",
+            "featured_product_four": "",
+            "custom_product_image": "shopify:\/\/shop_images\/Immunity_3_35575cb4-c60a-42b3-a39c-f45d54bb1e7f.jpg",
+            "hover_image": "shopify:\/\/shop_images\/Hover_state_-_Original_0f494e3c-66ba-42d9-8ab7-80ee65de603e.png",
+            "info_1": "",
+            "info_1_top_position": "",
+            "info_1_right_position": "",
+            "info_1_left_position": "",
+            "info_1_bottom_position": "",
+            "info_2": "",
+            "info_2_top_position": "",
+            "info_2_right_position": "",
+            "info_2_left_position": "",
+            "info_2_bottom_position": "",
+            "info_3": "",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "",
+            "info_3_bottom_position": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_G79TDn",
+        "product_kPJtfh",
+        "product_xyA7mG"
+      ],
+      "settings": {
+        "heading": "",
+        "id_section_pivot": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "mobile_padding_top": 50,
+        "mobile_padding_bottom": 50,
+        "full_width": false,
+        "bg_color": "",
+        "products_to_show": 4,
+        "swipe_on_mobile": false,
+        "show_secondary_image": false,
+        "card_one_title": "",
+        "card_one_subtitle": "",
+        "card_link_one": "",
+        "image_card_two": "shopify:\/\/shop_images\/Rectangle_647.png",
+        "card_two_title": "Want to customize your own bundle?",
+        "card_two_subtitle": "Learn More",
+        "card_link_two": "https:\/\/duotoothpaste.com\/pages\/subscribe",
+        "card_three_title": "",
+        "card_three_subtitle": "",
+        "card_link_three": "",
+        "compostable_refill": false
+      }
+    },
     "all-feat-coll-index": {
       "type": "all-endrock-featured-collection-index",
       "blocks": {
@@ -582,6 +694,113 @@
         "card_link_three": ""
       }
     },
+    "all_endrock_featured_collection_index_pFD8Kd": {
+      "type": "all-endrock-featured-collection-index",
+      "blocks": {
+        "product_EdFTAy": {
+          "type": "product",
+          "settings": {
+            "featured_product": "sleep-energy-2",
+            "featured_product_two": "",
+            "featured_product_three": "",
+            "featured_product_four": "",
+            "custom_product_image": "shopify:\/\/shop_images\/Sleep_Energy_860683c7-8159-4020-a9bf-6f3d21319009.jpg",
+            "hover_image": "shopify:\/\/shop_images\/sleep-energy-2-w.png",
+            "info_1": "",
+            "info_1_top_position": "",
+            "info_1_right_position": "",
+            "info_1_left_position": "",
+            "info_1_bottom_position": "",
+            "info_2": "",
+            "info_2_top_position": "",
+            "info_2_right_position": "",
+            "info_2_left_position": "",
+            "info_2_bottom_position": "",
+            "info_3": "",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "",
+            "info_3_bottom_position": ""
+          }
+        },
+        "product_Vt3wQ4": {
+          "type": "product",
+          "settings": {
+            "featured_product": "original-refill-pouch",
+            "featured_product_two": "immunity-refill-pouch",
+            "featured_product_three": "energy-refill-pouch",
+            "featured_product_four": "sleep-refill-package",
+            "info_1": "",
+            "info_1_top_position": "",
+            "info_1_right_position": "",
+            "info_1_left_position": "",
+            "info_1_bottom_position": "",
+            "info_2": "",
+            "info_2_top_position": "",
+            "info_2_right_position": "",
+            "info_2_left_position": "",
+            "info_2_bottom_position": "",
+            "info_3": "",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "",
+            "info_3_bottom_position": ""
+          }
+        },
+        "product_T99DxT": {
+          "type": "product",
+          "settings": {
+            "featured_product": "",
+            "featured_product_two": "",
+            "featured_product_three": "",
+            "featured_product_four": "",
+            "info_1": "",
+            "info_1_top_position": "",
+            "info_1_right_position": "",
+            "info_1_left_position": "",
+            "info_1_bottom_position": "",
+            "info_2": "",
+            "info_2_top_position": "",
+            "info_2_right_position": "",
+            "info_2_left_position": "",
+            "info_2_bottom_position": "",
+            "info_3": "",
+            "info_3_top_position": "",
+            "info_3_right_position": "",
+            "info_3_left_position": "",
+            "info_3_bottom_position": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_EdFTAy",
+        "product_Vt3wQ4",
+        "product_T99DxT"
+      ],
+      "settings": {
+        "heading": "",
+        "id_section_pivot": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "mobile_padding_top": 50,
+        "mobile_padding_bottom": 50,
+        "full_width": false,
+        "bg_color": "",
+        "products_to_show": 4,
+        "swipe_on_mobile": false,
+        "show_secondary_image": false,
+        "card_one_title": "",
+        "card_one_subtitle": "",
+        "card_link_one": "",
+        "card_two_title": "",
+        "card_two_subtitle": "",
+        "card_link_two": "",
+        "card_three_title": "",
+        "card_three_subtitle": "",
+        "card_link_three": "",
+        "compostable_refill": true
+      }
+    },
     "endrock_icon_with_text_tTL9yd": {
       "type": "all-endrock-icon-with-text",
       "blocks": {
@@ -751,130 +970,19 @@
         "description": "",
         "mobile_description": "<p>Better-for-you toothpaste tablets<\/p>"
       }
-    },
-    "all_endrock_featured_collection_index_AatP6R": {
-      "type": "all-endrock-featured-collection-index",
-      "blocks": {
-        "product_G79TDn": {
-          "type": "product",
-          "settings": {
-            "featured_product": "original-immunity",
-            "featured_product_two": "",
-            "featured_product_three": "",
-            "featured_product_four": "",
-            "custom_product_image": "shopify:\/\/shop_images\/Original_Immunity_defddec9-9e50-4f62-9708-07436da0c3f6.jpg",
-            "hover_image": "shopify:\/\/shop_images\/Hover_state_-_Original_1a163711-7154-458e-b3c1-e10bb87c06b8.png",
-            "info_1": "",
-            "info_1_top_position": "",
-            "info_1_right_position": "",
-            "info_1_left_position": "",
-            "info_1_bottom_position": "",
-            "info_2": "",
-            "info_2_top_position": "",
-            "info_2_right_position": "",
-            "info_2_left_position": "",
-            "info_2_bottom_position": "",
-            "info_3": "",
-            "info_3_top_position": "",
-            "info_3_right_position": "",
-            "info_3_left_position": "",
-            "info_3_bottom_position": ""
-          }
-        },
-        "product_kPJtfh": {
-          "type": "product",
-          "settings": {
-            "featured_product": "original-3",
-            "featured_product_two": "",
-            "featured_product_three": "",
-            "featured_product_four": "",
-            "custom_product_image": "shopify:\/\/shop_images\/Original_3_e6d6e346-bbe1-488a-ba9c-c5c4bdee7db2.jpg",
-            "hover_image": "shopify:\/\/shop_images\/Hover_state_-_Original_ca4e68e1-9e40-4a70-b383-925d2382ad71.png",
-            "info_1": "",
-            "info_1_top_position": "",
-            "info_1_right_position": "",
-            "info_1_left_position": "",
-            "info_1_bottom_position": "",
-            "info_2": "",
-            "info_2_top_position": "",
-            "info_2_right_position": "",
-            "info_2_left_position": "",
-            "info_2_bottom_position": "",
-            "info_3": "",
-            "info_3_top_position": "",
-            "info_3_right_position": "",
-            "info_3_left_position": "",
-            "info_3_bottom_position": ""
-          }
-        },
-        "product_xyA7mG": {
-          "type": "product",
-          "settings": {
-            "featured_product": "immunity-3",
-            "featured_product_two": "",
-            "featured_product_three": "",
-            "featured_product_four": "",
-            "custom_product_image": "shopify:\/\/shop_images\/Immunity_3_35575cb4-c60a-42b3-a39c-f45d54bb1e7f.jpg",
-            "hover_image": "shopify:\/\/shop_images\/Hover_state_-_Original_0f494e3c-66ba-42d9-8ab7-80ee65de603e.png",
-            "info_1": "",
-            "info_1_top_position": "",
-            "info_1_right_position": "",
-            "info_1_left_position": "",
-            "info_1_bottom_position": "",
-            "info_2": "",
-            "info_2_top_position": "",
-            "info_2_right_position": "",
-            "info_2_left_position": "",
-            "info_2_bottom_position": "",
-            "info_3": "",
-            "info_3_top_position": "",
-            "info_3_right_position": "",
-            "info_3_left_position": "",
-            "info_3_bottom_position": ""
-          }
-        }
-      },
-      "block_order": [
-        "product_G79TDn",
-        "product_kPJtfh",
-        "product_xyA7mG"
-      ],
-      "settings": {
-        "heading": "",
-        "id_section_pivot": "",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "mobile_padding_top": 50,
-        "mobile_padding_bottom": 50,
-        "full_width": false,
-        "bg_color": "",
-        "products_to_show": 4,
-        "swipe_on_mobile": false,
-        "show_secondary_image": false,
-        "card_one_title": "",
-        "card_one_subtitle": "",
-        "card_link_one": "",
-        "image_card_two": "shopify:\/\/shop_images\/Rectangle_647.png",
-        "card_two_title": "Want to customize your own bundle?",
-        "card_two_subtitle": "Learn More",
-        "card_link_two": "https:\/\/duotoothpaste.com\/pages\/subscribe",
-        "card_three_title": "",
-        "card_three_subtitle": "",
-        "card_link_three": "",
-        "compostable_refill": false
-      }
     }
   },
   "order": [
     "all-hero-img",
     "all-pivot",
     "all-feat-coll-one",
+    "all_endrock_featured_collection_index_AatP6R",
     "all-feat-coll-index",
     "all-feat-coll-four",
     "all-feat-coll-two",
     "all-feat-coll-three",
+    "all_endrock_featured_collection_index_pFD8Kd",
     "endrock_icon_with_text_tTL9yd",
-    "why_duo_nky88P",
-    "all_endrock_featured_collection_index_AatP6R"
+    "why_duo_nky88P"
   ]
 }
