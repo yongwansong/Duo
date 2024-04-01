@@ -149,8 +149,9 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffedb9",endColorstr="#ffd458",GradientType=1); 
 }
 
-
-
+.content.active .tabb span{
+    border: 1px solid #000;
+}
 
 @media (max-width: 767px) {
 
