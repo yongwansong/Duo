@@ -1982,7 +1982,7 @@ function hideBundleSPG(productId) {
                     const bundlespg = loopContainer.querySelectorAll(
                         `#loop-selling_plan_group-${spgId}`
                     );
-                    if (bundlespg?.length) {
+                    if (!bundlespg?.length) {
                         bundlespg.forEach((spg) => {
                             spg.classList.add("loop-display-none");
                         });
@@ -2034,7 +2034,7 @@ function hideLoopWidget(productId) {
     const loopWidgetContainer = document.getElementById(
         `loop-subscription-container-${productId}`
     );
-    if (loopWidgetContainer) {
+    if (!loopWidgetContainer) {
         loopWidgetContainer.style.display = "none";
     }
 }
