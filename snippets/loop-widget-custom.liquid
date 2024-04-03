@@ -415,7 +415,7 @@ span {
                                     <div class="loop-subscription-group-discount-badge loop-display-none" id="loop-discount-badge-{{ current_variant.id }}-{{selling_plan_group.id}}">
                                     </div>
                                   </div>
-                                  <div class="container-select-price">
+                                  <div class="container-select-price {% if product.variants.size == 1 %}select_disabled{% endif %}">
                                     <div>
                                       <div class="select-quantity loop-subscription-group-selling-plans-container ">
                                         {{ 'products.subscription.select_quantity_label' | t }} 
@@ -427,7 +427,7 @@ span {
                                           {%- endif -%}
                                         {%- endfor -%}
 
-                                        <select data-select-metafield="{{ variant_default.id }}" name="select-quantity" data-product-id="{{ product.id }}" id="select-quantity" class="loop-selling-plan-selector-style selector-custom {{ product.variants.size }}">
+                                        <select data-select-metafield="{{ variant_default.id }}" name="select-quantity" data-product-id="{{ product.id }}" id="select-quantity" class="loop-selling-plan-selector-style selector-custom">
                                           {%- for variant in product.variants -%}
                                             {%- assign discounted_amount = null -%}
                                             {%- if variant.compare_at_price > variant.price  -%}
