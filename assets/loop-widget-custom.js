@@ -1977,6 +1977,7 @@ function hideBundleSPG(productId) {
         const loopContainer = getLoopSubscriptionContainer(productId);
         if (loopContainer) {
             const bspgs = loopProps["bundleSPGS"];
+            console.log(bspgs, 'bspgs');
             if (bspgs?.length) {
                 bspgs.forEach((spgId) => {
                     const bundlespg = loopContainer.querySelectorAll(
