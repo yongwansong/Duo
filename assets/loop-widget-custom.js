@@ -1977,12 +1977,13 @@ function hideBundleSPG(productId) {
         const loopContainer = getLoopSubscriptionContainer(productId);
         if (loopContainer) {
             const bspgs = loopProps["bundleSPGS"];
-            if (!bspgs?.length) {
+            console.log(bspgs, 'bspgs');
+            if (bspgs?.length) {
                 bspgs.forEach((spgId) => {
                     const bundlespg = loopContainer.querySelectorAll(
                         `#loop-selling_plan_group-${spgId}`
                     );
-                    if (bundlespg?.length) {
+                    if (!bundlespg?.length) {
                         bundlespg.forEach((spg) => {
                             spg.classList.add("loop-display-none");
                         });
