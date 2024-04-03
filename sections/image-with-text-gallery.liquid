@@ -63,7 +63,7 @@
                 {%- endfor -%}
             </div>
             <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination iwt-gallery"></div>
             
             <!-- If we need navigation buttons -->
             <div class="swiper-button-next__wrapper gallery_swiper_buttons">
@@ -113,7 +113,7 @@ document.querySelectorAll('.dots-wrapper').forEach(dotsWrapper => {
             document.querySelectorAll(`[data-number="${number}"]`).forEach(selectedDot => {
                 selectedDot.classList.add('active');
             })
-            document.querySelector(`[data-index="${number}"]`).click();
+            document.querySelector(`.iwt-gallery [data-index="${number}"]`).click();
         })
     })
 })

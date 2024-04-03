@@ -244,7 +244,7 @@
   display: block; 
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1100px) {
   .imgmobile {
     display: block; 
   }
@@ -271,7 +271,7 @@
 
 <div id="section--{{ section.id }}" class="{{ section.settings.id_section_pivot }}">
     <div class="endrock-featured-collection {% if section.settings.full_width %}full-width{% else %}page-width{% endif %}">
-        <div class="endrock-featured-collection__container_">
+        <div class="endrock-featured-collection__container">
             <div class="endrock-featured-collection__wrapper">
                 <h2 class="heading">{{ section.settings.heading }}</h2>
                 <div class="swiper-container">
@@ -306,17 +306,31 @@
                                     <div  id="block--{{ block.id }}" >
 
                                     <div class="slick-carousel imgmobile">
-                                        <div class="slide-content"><img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
+                                        <div class="slide-content">
+                                            
+                                        <a href="{{ endrock_featured_product.url }}">
+
+                                        <img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
                                           class="first_image"
                                           alt="{{ block.settings.custom_product_image.alt }}"
                                           loading="lazy"
-                                        ></div>
+                                        >
                                         
-                                        <div class="slide-content"><img src="{{ block.settings.hover_image | img_url: 'master' }}"
+                                        </a>
+                                        
+                                        </div>
+                                        
+                                        <div class="slide-content">
+                                            
+                                        <a href="{{ endrock_featured_product.url }}">
+                                            
+                                        <img src="{{ block.settings.hover_image | img_url: 'master' }}"
                                           class="hover_image_"
                                           alt="{{ block.settings.hover_image.alt }}"
                                           loading="lazy"
-                                        ></div>
+                                        >
+                                        </a>
+                                        </div>
                                             
                                         </div>
 
@@ -659,18 +673,18 @@
                                 
                             
                                 {%- if block.settings.featured_product_two != blank -%}
-                            <div class="product-list product-list_sw {% if section.settings.swipe_on_mobile %}swiper-slide{% endif %}">
+                            <div class="product-list_ product-list_sw {% if section.settings.swipe_on_mobile %}swiper-slide{% endif %}">
                                     {%- if block.settings.custom_product_image != blank -%}
                                         <div class="custom_product_image" id="block--{{ block.id }}" style="padding-bottom: {{ 100 | divided_by: block.settings.custom_product_image.aspect_ratio }}%">
-                                            <a href="{{ endrock_featured_product.url }}">
+                                            <a href="{{ endrock_featured_product.url }}" class="collection-warapper__item">
                                                 <img src="{{ block.settings.custom_product_image2 | img_url: 'master' }}"
                                                     class="first_image"
                                                     alt="{{ block.settings.custom_product_image2.alt }}"
                                                     loading="lazy"
                                                 >
-                                                <img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
+                                                <img src="{{ block.settings.custom_product_image2 | img_url: 'master' }}"
                                                     class="hover_image"
-                                                    alt="{{ block.settings.custom_product_image.alt }}"
+                                                    alt="{{ block.settings.custom_product_image2.alt }}"
                                                     loading="lazy"
                                                 >
                                             </a>
@@ -799,7 +813,7 @@
                                         <li class="tab" data-tab="tab3"><span class="spanenergy"></span> Energy</li>
                                         <li class="tab" data-tab="tab4"><span class="spansleep"></span> Sleep</li>
                                       </ul>
-                                    <a href="{{ endrock_featured_product.url }}">
+                                    <a href="{{ endrock_featured_product.url }}" class="collection-warapper__item">
     
                                     
                                         <div class="title-with-price">
@@ -823,7 +837,7 @@
                                 
                             
                                 {%- if block.settings.featured_product_three != blank -%}
-                            <div class="product-list product-list_sw {% if section.settings.swipe_on_mobile %}swiper-slide{% endif %}">
+                            <div class="product-list_ product-list_sw {% if section.settings.swipe_on_mobile %}swiper-slide{% endif %}">
                                     {%- if block.settings.custom_product_image != blank -%}
                                         <div class="custom_product_image" id="block--{{ block.id }}" style="padding-bottom: {{ 100 | divided_by: block.settings.custom_product_image.aspect_ratio }}%">
                                             <a href="{{ endrock_featured_product.url }}">
@@ -832,9 +846,9 @@
                                                     alt="{{ block.settings.custom_product_image3.alt }}"
                                                     loading="lazy"
                                                 >
-                                                <img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
+                                                <img src="{{ block.settings.custom_product_image3 | img_url: 'master' }}"
                                                     class="hover_image"
-                                                    alt="{{ block.settings.custom_product_image.alt }}"
+                                                    alt="{{ block.settings.custom_product_image3.alt }}"
                                                     loading="lazy"
                                                 >
                                             </a>
@@ -962,7 +976,7 @@
                                         <li class="tabb" ><span class="spanenergy"></span> Energy</li>
                                         <li class="tab" data-tab="tab4"><span class="spansleep"></span> Sleep</li>
                                       </ul>
-                                    <a href="{{ endrock_featured_product.url }}">
+                                    <a href="{{ endrock_featured_product.url }}" class="collection-warapper__item">
     
                                     
                                         <div class="title-with-price">
@@ -984,7 +998,7 @@
                                 
                             
                                 {%- if block.settings.featured_product_four != blank -%}
-                            <div class="product-list product-list_sw {% if section.settings.swipe_on_mobile %}swiper-slide{% endif %}">
+                            <div class="product-list_ product-list_sw {% if section.settings.swipe_on_mobile %}swiper-slide{% endif %}">
                                     {%- if block.settings.custom_product_image != blank -%}
                                         <div class="custom_product_image" id="block--{{ block.id }}" style="padding-bottom: {{ 100 | divided_by: block.settings.custom_product_image.aspect_ratio }}%">
                                             <a href="{{ endrock_featured_product.url }}">
@@ -993,9 +1007,9 @@
                                                     alt="{{ block.settings.custom_product_image4.alt }}"
                                                     loading="lazy"
                                                 >
-                                                <img src="{{ block.settings.custom_product_image | img_url: 'master' }}"
+                                                <img src="{{ block.settings.custom_product_image4 | img_url: 'master' }}"
                                                     class="hover_image"
-                                                    alt="{{ block.settings.custom_product_image.alt }}"
+                                                    alt="{{ block.settings.custom_product_image4.alt }}"
                                                     loading="lazy"
                                                 >
                                             </a>
@@ -1052,8 +1066,8 @@
                                             {%- endif -%}
                                         </div>
                                     {% endif %}
-    
-                                    
+
+
                                     <div class="custom-product_form">
                                         {%- if endrock_featured_product.selected_or_first_available_variant.available -%}
                                             {%- assign product_form_id = 'quick-add-' | append: section.id | append: endrock_featured_product.id -%}
@@ -1126,7 +1140,7 @@
                                         <li class="tab" data-tab="tab3"><span class="spanenergy"></span> Energy</li>
                                         <li class="tabb" ><span class="spansleep"></span> Sleep</li>
                                       </ul>
-                                    <a href="{{ endrock_featured_product.url }}">
+                                    <a href="{{ endrock_featured_product.url }}" class="collection-warapper__item">
     
                                     
                                         <div class="title-with-price">
@@ -1184,7 +1198,6 @@
 
 
                         {%- if section.settings.image_card_three -%}
-                            <div class="  imagencontainerfinal">
 
                             <div class="image-info2">
 
@@ -1198,11 +1211,9 @@
                             </div>
                                 <img class="imagencard" src="{{ section.settings.image_card_three | img_url: 'master' }}" alt="{{ section.settings.card_three_title }}">
                                
-                            </div>   </div>
+                            </div>  
 
-                            <div class="imagencontainer">
-
-                            </div>
+                       
 
                         {%- endif -%}
 

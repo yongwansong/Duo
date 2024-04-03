@@ -1501,13 +1501,13 @@
         "type": "text",
         "id": "gamification_second_discount",
         "label": "Gamification Second Discount Code",
-        "default": "5OFFGAMIFICATION"
+        "default": "5OFF"
       },
       {
         "type": "text",
         "id": "gamification_discount",
         "label": "Gamification Discount Code",
-        "default": "10OFFGAMIFICATION"
+        "default": "10OFF"
       },
       {
         "type": "text",
