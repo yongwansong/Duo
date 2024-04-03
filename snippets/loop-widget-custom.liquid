@@ -427,7 +427,7 @@ span {
                                           {%- endif -%}
                                         {%- endfor -%}
 
-                                        <select data-select-metafield="{{ variant_default.id }}" name="select-quantity" data-product-id="{{ product.id }}" id="select-quantity" class="loop-selling-plan-selector-style selector-custom">
+                                        <select data-select-metafield="{{ variant_default.id }}" name="select-quantity" data-product-id="{{ product.id }}" id="select-quantity" class="loop-selling-plan-selector-style selector-custom" {% if product.variants.size == 1 %}disabled{% endif %}>
                                           {%- for variant in product.variants -%}
                                             {%- assign discounted_amount = null -%}
                                             {%- if variant.compare_at_price > variant.price  -%}
