@@ -136,6 +136,19 @@
         "settings": {
           "color_scheme": "scheme-1"
         }
+      },
+      "ingredient-page": {
+        "type": "ingredient-page",
+        "settings": {
+          "image_original": "shopify:\/\/shop_images\/Ingredients_Original_horizontal.jpg",
+          "link": "",
+          "image_inmmunity": "shopify:\/\/shop_images\/Ingredients_Immunity_horizontal.jpg",
+          "Immunity_link": "",
+          "image_energy": "shopify:\/\/shop_images\/Ingredients_Energy_horizontal.jpg",
+          "energy_link": "",
+          "image_sleep": "shopify:\/\/shop_images\/Ingredients_Sleep_horizontal.jpg",
+          "sleep_link": ""
+        }
       }
     },
     "content_for_index": [

@@ -12,6 +12,7 @@ const TS_DIR = path.resolve(__dirname, "../../src/ts");
 
 const entry = {
   "endrock.styles-product": SASS_DIR + "/products.scss",
+  "endrock.style-ingredients": SASS_DIR + "/ingredientspage.scss",
   "endrock.scripts-product": JS_DIR + "/products.js"
 };
 

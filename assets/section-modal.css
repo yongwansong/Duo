@@ -100,9 +100,8 @@
 
 h2.heading_0 {
     margin: 0px;
-      margin-top: 7px;
-
-    font-family: "Gotham";
+    margin-top: 7px;
+    font-family: "OldschoolGrotesk-Medium";
     font-style: normal;
     font-weight: 600;
     font-size: 23px;
@@ -115,7 +114,7 @@ h4.sub__heading_0 {
       margin: 0px;
 
 
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OldschoolGrotesk-Regular', sans-serif;
     font-style: italic;
     font-weight: 500;
     font-size: 14px;
@@ -129,6 +128,7 @@ h4.sub__heading_0 {
 }
 
 span.sub_block {
+    font-family: "OldschoolGrotesk-Medium";
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -173,7 +173,7 @@ a.item__link span {
 
 h3.title_0 {
     margin: 0px;
-    font-family: "Lora";
+    font-family: "OldschoolGrotesk-Regular";
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -191,6 +191,8 @@ h5.sub_title {
 }
 
 h5.sub_title span{
+    font-family: 'OldschoolGrotesk-Medium';
+    letter-spacing: normal;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -282,6 +284,7 @@ li.item_list-link:last-child .ingredients_link.btn-link span.link_text {
 }
 
 .supplement_title h3.box_title {
+    font-family: 'OldschoolGrotesk-Medium';
     margin: 0px;
     font-style: normal;
     font-weight: 600;
@@ -289,6 +292,7 @@ li.item_list-link:last-child .ingredients_link.btn-link span.link_text {
     line-height: 28px;
     color: #000000;
   	text-transform: capitalize;
+    letter-spacing: normal;
 }
 /******** IMMUNITY MODAL CSS END *********/
 
