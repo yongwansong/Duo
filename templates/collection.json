@@ -147,7 +147,6 @@
       "blocks": {
         "c9ce3ad8-d62f-4ed1-866a-6c32c3729406": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "featured_product": "original-refill-pouch",
             "featured_product_two": "immunity-refill-pouch",
@@ -176,7 +175,6 @@
         },
         "product_7h9bEq": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "featured_product": "day-night-bundle",
             "featured_product_two": "",
