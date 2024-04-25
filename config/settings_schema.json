@@ -1511,6 +1511,23 @@
       },
       {
         "type": "text",
+        "id": "default_discount_code",
+        "label": "Default Discount Code"
+      },
+      {
+        "type": "checkbox",
+        "id": "over_second_discount",
+        "label": "Higher than first discount(5%)",
+        "default":true
+      },
+      {
+        "type": "checkbox",
+        "id": "over_third_discount",
+        "label": "Higher than second discount(10%)",
+        "default":false
+      },
+      {
+        "type": "text",
         "id": "first_goal_name",
         "label": "First Goal Name",
         "default": "Free Shipping"

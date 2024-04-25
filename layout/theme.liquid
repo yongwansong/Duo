@@ -487,7 +487,10 @@
       window.discountGoal = {{ settings.third_goal_price | times: 100 }}
       window.discountCode = "{{ settings.gamification_discount }}"
       window.firstDiscountCode = "{{ settings.gamification_second_discount }}"
-      console.log(window.firstDiscountCode, window.freeGiftGoal, 'secondDiscountCode');
+      window.defaultDiscountCode = "{{ settings.default_discount_code }}"
+      window.checkOverSecondDiscount = "{{ settings.over_second_discount }}"
+      window.checkOverThirdDiscount = "{{ settings.over_third_discount }}"
+      console.log(checkOverSecondDiscount, checkOverThirdDiscount, 'secondDiscountCode');
     </script>
 
     {%- if settings.predictive_search_enabled -%}

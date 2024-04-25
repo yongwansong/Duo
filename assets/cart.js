@@ -74,7 +74,14 @@ class CartItems extends HTMLElement {
 						})
 						if (parsedState.original_total_price >= window.freeGiftGoal) {
 							if(!firstIfDiscount) {
-								fetch(`/discount/${window.firstDiscountCode}`).then(() => {
+								let secondDiscountCode = '';
+								if(window.defaultDiscountCode && (window.checkOverSecondDiscount == 'true')){
+									secondDiscountCode = window.defaultDiscountCode
+								}else{
+									secondDiscountCode = window.firstDiscountCode
+								}
+								console.log(secondDiscountCode, 'window.defaultDiscountCode');
+								fetch(`/discount/${secondDiscountCode}`).then(() => {
 									if(window.location.pathname === "/cart") {
 										window.location = window.routes.cart_url;
 									} else {
@@ -102,7 +109,14 @@ class CartItems extends HTMLElement {
 							})
 							if (parsedState.original_total_price >= window.discountGoal) {
 								if(!ifDiscount) {
-									fetch(`/discount/${window.discountCode}`).then(() => {
+									let thirdDiscountCode = '';
+									if(window.defaultDiscountCode && (window.checkOverThirdDiscount == 'true')){
+										thirdDiscountCode = window.defaultDiscountCode
+									}else{
+										thirdDiscountCode = window.discountCode
+									}
+								console.log(thirdDiscountCode, 'thirdDiscountCode');
+									fetch(`/discount/${thirdDiscountCode}`).then(() => {
 										if(window.location.pathname === "/cart") {
 											window.location = window.routes.cart_url;
 										} else {

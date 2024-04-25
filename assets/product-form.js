@@ -8,7 +8,7 @@ if (!customElements.get('product-form')) {
 			this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
 			this.cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer') || document.querySelector('cart-items');;
 			this.submitButton = this.querySelector('[type="submit"]');
-			if (document.querySelector('cart-drawer')) this.submitButton.setAttribute('aria-haspopup', 'dialog');
+			if (document.querySelector('cart-drawer')) this.submitButton?.setAttribute('aria-haspopup', 'dialog');
 			
 			if ( typeof CartItems !== 'undefined' && this.cart instanceof CartItems ) this.dataset.cartType = 'page';
 			
@@ -67,7 +67,13 @@ if (!customElements.get('product-form')) {
 									return firstGetDiscount
 								})
 								if (response.original_total_price >= window.freeGiftGoal && !firstIfDiscount) {
-									fetch(`/discount/${window.firstDiscountCode}`).then(() => {
+									let secondDiscountCode = '';
+									if(window.defaultDiscountCode && (window.checkOverSecondDiscount == 'true')){
+										secondDiscountCode = window.defaultDiscountCode
+									}else{
+										secondDiscountCode = window.firstDiscountCode
+									}
+									fetch(`/discount/${secondDiscountCode}`).then(() => {
 										if(window.location.pathname === "/cart") {
 											window.location = window.routes.cart_url;
 										} else {
@@ -81,8 +87,14 @@ if (!customElements.get('product-form')) {
 									const getDiscount = element.discounts.find((discount) => discount.title === window.discountCode)
 									return getDiscount
 								})
+								let thirdDiscountCode = '';
+								if(window.defaultDiscountCode && (window.checkOverThirdDiscount == 'true')){
+									thirdDiscountCode = window.defaultDiscountCode
+								}else{
+									thirdDiscountCode = window.discountCode
+								}
 								if (response.original_total_price >= window.discountGoal && !ifDiscount) {
-									fetch(`/discount/${window.discountCode}`).then(() => {
+									fetch(`/discount/${thirdDiscountCode}`).then(() => {
 										window.location = window.routes.cart_url;
 									})
 								} else {
@@ -103,7 +115,7 @@ if (!customElements.get('product-form')) {
 
 					const addedMessage = this.submitButton.querySelector('.added-message');
 					const atcMessage = this.submitButton.querySelector('.add-to-cart-message');
-					const productPrice = this.submitButton.querySelector('.product-price');
+					const productPrice = this.submitButton?.querySelector('.product-price');
 					if (addedMessage && atcMessage) {
 						this.submitButton.querySelectorAll('span').forEach((span) => {
 							span.classList.add('hidden');
@@ -114,7 +126,7 @@ if (!customElements.get('product-form')) {
 								span.classList.add('hidden');
 							});
 							atcMessage.classList.remove('hidden');
-							productPrice.classList.remove('hidden');
+							productPrice?.classList.remove('hidden');
 						}, 1500);
 					}
 					
@@ -142,8 +154,16 @@ if (!customElements.get('product-form')) {
 								const firstGetDiscount = element.discounts.find((discount) => discount.title === window.firstDiscountCode)
 								return firstGetDiscount
 							})
+							console.log(window.checkOverSecondDiscount, 'htetete');
 							if (response.original_total_price >= window.freeGiftGoal && !firstIfDiscount) {
-								fetch(`/discount/${window.firstDiscountCode}`).then(() => {
+								let secondDiscountCode = '';
+								if(window.defaultDiscountCode && (window.checkOverSecondDiscount == 'true')){
+									secondDiscountCode = window.defaultDiscountCode
+								}else{
+									secondDiscountCode = window.firstDiscountCode
+								}
+								console.log(secondDiscountCode, 'window.defaultDiscountCode');
+								fetch(`/discount/${secondDiscountCode}`).then(() => {
 									if(window.location.pathname === "/cart") {
 										window.location = window.routes.cart_url;
 									} else {
@@ -158,7 +178,14 @@ if (!customElements.get('product-form')) {
 								return getDiscount
 							})
 							if (response.original_total_price >= window.discountGoal && !ifDiscount) {
-								fetch(`/discount/${window.discountCode}`).then(() => {
+								let thirdDiscountCode = '';
+								if(window.defaultDiscountCode && (window.checkOverThirdDiscount == 'true')){
+									thirdDiscountCode = window.defaultDiscountCode
+								}else{
+									thirdDiscountCode = window.discountCode
+								}
+								console.log(thirdDiscountCode, 'thirdDiscountCode');
+								fetch(`/discount/${thirdDiscountCode}`).then(() => {
 									if(window.location.pathname === "/cart") {
 										window.location = window.routes.cart_url;
 									} else {
