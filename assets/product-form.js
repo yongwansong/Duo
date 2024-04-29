@@ -73,7 +73,7 @@ if (!customElements.get('product-form')) {
 									}else{
 										secondDiscountCode = window.firstDiscountCode
 									}
-									fetch(`/discount/${secondDiscountCode}`).then(() => {
+									fetch(`/discount/5OFF/&discount=EARTH20`).then(() => {
 										if(window.location.pathname === "/cart") {
 											window.location = window.routes.cart_url;
 										} else {
@@ -95,7 +95,11 @@ if (!customElements.get('product-form')) {
 								}
 								if (response.original_total_price >= window.discountGoal && !ifDiscount) {
 									fetch(`/discount/${thirdDiscountCode}`).then(() => {
-										window.location = window.routes.cart_url;
+										if(window.location.pathname === "/cart") {
+											window.location = window.routes.cart_url;
+										} else {
+											this.refreshSideCart()
+										}
 									})
 								} else {
 									window.location = window.routes.cart_url;
